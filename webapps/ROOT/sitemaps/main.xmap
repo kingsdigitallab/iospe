@@ -78,7 +78,7 @@
 
       <map:match pattern="facet-search/*/*/*/*/">
         <map:generate src="empty:empty" />
-        <map:transform src="../stylesheets/local/solr/get-facets-query.xsl">
+        <map:transform src="../stylesheets/solr/get-facets-query.xsl">
           <map:parameter name="lang" value="{1}" />
           <map:parameter name="min-year" value="{2}" />
           <map:parameter name="max-year" value="{3}" />
@@ -140,7 +140,7 @@
       <map:match pattern="indices/index-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
+          <map:part src="cocoon://_i:nternal/metadata/files.xml" />
           <!-- Determine first available letters -->
           <map:part element="attested"
             src="cocoon:/getFirstLetter/attested:*" />
@@ -938,7 +938,7 @@
     <map:pipeline internal-only="true">
       <map:match pattern="views/*/*/*">
         <map:generate src="cocoon:/stripNameDate/{2}"/>
-        <map:transform src="../stylesheets/local/example-p5-xslt/start-edition.xsl">
+        <map:transform src="../stylesheets/example-p5-xslt/start-edition.xsl">
           <map:parameter name="edition-type" value="{1}" />
           <map:parameter name="leiden-style" value="iospe" />
           <map:parameter name="verse-lines" value="{3}" />
@@ -948,13 +948,13 @@
 
       <map:match pattern="stripNameDate/*">
         <map:generate src="xml/content/inscriptions/{1}"/>
-        <map:transform src="../stylesheets/local/epidoc-views/stripNameDate.xsl"/>
+        <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
 
       <map:match pattern="v_epidoc/*">
         <map:generate src="xml/content/inscriptions/{1}"/>
-        <map:transform src="../stylesheets/local/epidoc-views/epidoc.xsl"/>
+        <map:transform src="../stylesheets/epidoc-views/epidoc.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
 
