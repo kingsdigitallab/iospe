@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Плита с крестом</title>
+            <title xml:lang="en">Slab with a cross</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz039</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>89/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>89/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc4">
+                     <seg xml:lang="ru">Демонстративная надпись.</seg>
+                     <seg xml:lang="en">Demonstrative.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m4">песчаник.</material>
+                           <material xml:lang="en">Sandstone.</material>
+                           <p xml:lang="ru">Плита треугольной формы. На лицевой стороне изображение латинского креста с апицированными концами. Обломан слева.</p>
+                           <p xml:lang="en">Triangular slab. On the front: depiction of a Latin cross with apicized ends. Broken on the left.</p>
+                           <dimensions>
+                              <height>30,0</height>
+                              <width>27,0</width>
+                              <depth>17,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">По сторонам от нижнего рукава креста.</seg>
+                           <seg xml:lang="en">On either side of the lower arm of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, омега замкнутая, прямоугольная.</seg>
+                        <seg xml:lang="en">Lapidary style. Alpha with broken crossbar; closed, rectangular omega. </seg>
+                        <height unit="cm">5,5–6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0501" notAfter="0700" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">VI–VII вв.</seg>
+                        <seg xml:lang="en">VI–VII centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-10-01" who="AL">small corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">character corrected</change>
+         <change when="2012-05-14" who="AG">several lines translated</change>
+         <change when="2012-04-18" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">date corrected</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-18" who="AG">updated, 1 line translated, small corrections</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Альфа, омега.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Alpha, omega.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Назначение камня неясно. Относительно формулы см. IV.3.C.d. Прямоугольная форма омеги характерна скорее для VI–VII вв. (ср. № 23).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The use of the stone is unclear. On the formula, see IV.3.C.d. Rectangular omega is characteristic of the VI-VII centuries (cf. No. 23).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἄλφα">Α</w> <w lemma="ὠμέγα">Ω</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

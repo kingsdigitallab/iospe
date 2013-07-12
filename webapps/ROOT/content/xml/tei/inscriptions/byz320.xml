@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие неизвестного (прошение Димитрия)</title>
+            <title xml:lang="en">Gravestone of an unknown (invocation of Demetrios)</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz320</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>ГИМ</repository>
+                    <idno>7740, <!--#Журавлев--></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Historical Museum</repository>
+                      <idno>7740, <!--#Журавлев--></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="#doc2 #doc3">
+                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="1">Funerary inscription.</seg>
+                     <seg xml:lang="ru" n="2">Инвокативная надпись.</seg>
+                     <seg xml:lang="en" n="2">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon2">Плитка.</objectType>
+                           <objectType xml:lang="en">Small panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконесский мрамор.</material>
+                            <material xml:lang="en">Proconnesian marble.</material>
+                           <p xml:lang="ru">Плитка отшлифована с обеих сторон. Разбит на части, сохранилось 2 фрагмента.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>13,0</height>
+                              <width>9,5</width>
+                              <depth>2,0</depth>
+                           </dimensions>
+                           <dimensions>
+                              <height>12,0</height>
+                              <width>11,5</width>
+                              <depth>2,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы апицированные, вырезаны между линеек. Альфа с заостренной петлей, дельта с удлиненной вверх правой гастой и горизонталью, эпсилон, тета, омикрон и сигма миндалевидные, мю с наклонными гастами и укороченной центральными гастами, ипсилон У-образный. Знаки сокращения.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">1,5–1,7.</height>
+                     </handNote>
+                     <handNote n="2">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>, буквы минускульные. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">0,5–0,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p050">
+                        <seg xml:lang="ru">Таматарха<certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Tamatarcha<certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate cert="low" n="1" notBefore="0912" notAfter="0912" evidence="указание-надписи">
+                        <seg xml:lang="ru">912 г.</seg>
+                        <seg xml:lang="en">912 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p050">
+                        <seg xml:lang="ru">Таматарха<certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Tamatarcha<certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="0801" notAfter="1100" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IX–XI вв.</seg>
+                        <seg xml:lang="en">IX–XI centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2005-01">Январь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-01">January 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found" n="1">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Краснодарский край.</placeName>
+                        <rs type="circumstances">До 1896 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Krasnodar region.</placeName>
+                        <rs type="circumstances">Before 1896.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="found" n="2">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Краснодарский край.</placeName>
+                        <rs type="circumstances">До 1896 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Krasnodar region.</placeName>
+                        <rs type="circumstances">Before 1896.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en">Moscow, Russian.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-05-02" who="ΝG">inscription updated</change>
+         <change when="2013-04-26" who="AG">inscription updated</change>
+          <change when="2013-03-06" who="NG">corrected Greek lemmata</change>
+         <change when="2012-09-05" who="AG">small corrections, several lines translated, apparatus corrected, lemma added</change>
+         <change when="2012-09-03" who="AL">checked metadata</change>
+         <change when="2012-08-23" who="AL">checked metadata, tagged bibliography</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-28" who="AFS">adding metadata and tagging greek text</change>
+         <change when="2012-03-05" who="AG">corrections, several lines translated, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!-- Сборник --><ptr target="b0132"/>, <biblScope>105.2</biblScope></bibl>               
+                <bibl n="2"><!--Виноградов 2006--><ptr target="b0046"/>, 295–96, № <biblScope>5</biblScope></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Сборник--><ptr target="b0132"/>, <biblScope>95.2</biblScope></bibl>
+               <bibl n="2"><!--Виноградов 2006--><ptr target="b0046"/>, 295–96, № <biblScope>6</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="1">
+             <p>
+               <app loc="2-6"><rdg resp="b0132">θ[εοῦ ...] βαντζο[...] τοῦ δεκα[...] δε γεναμ[...] λόγου</rdg></app>
+               <app loc="8"> <rdg resp="b0132 b0046">ὥρ(ᾳ) ., ἰνδ.</rdg></app>--&gt;
+                <app loc="9"> <rdg resp="b0132 b0046">ςυ[...</rdg></app>--&gt;
+            </p>
+         </div>
+         <div type="apparatus" n="2">
+             <p>
+               <app loc="2"> <rdg resp="b0132">Διμίτρ(ιον)</rdg></app>--&gt;
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Здесь лежит раб Божий …, сын …ванца, … декан этого … ставший … Иоанна Богослова. Скончался 25 июля (?), в субботу, в 15 индикт, в 6420 (?) году от сотворения мира.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Спаси, Спасе, раба Твоего Димитрия.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Here lies a servant of God..., son of ... [...]bantzos, deacon of this... who has become... John Theologian. He died on the 25th of July (?),
+               Saturday, in the 15th indiction, in the year 6420 (?) since the creation of the world.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Save, o Savior, your servant Dimitros.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Согласно Латышеву, фр. 1 происходит из коллекции Е. Е. Люценко, а согласно описи ГИМ 
+                   (оп. 305/IV) — из коллекции А. М. Подшивалова. Демонстрировалась на выставке 
+                   «Из варяг в греки» (21.05.1996). Поскольку фрагменты 1 и 2 представляют собой части одной 
+                   надписи (на это указывает тождество палеографии и, прежде всего, уникальной формы мю, 
+                   толщина плиток, высота букв и др.), то, возможно, это разногласие связано с 2 фрагментами. 
+                   Происхождение фрагмента 1 неизвестно: он попал в частную коллекцию и оттуда в ГИМ; 
+                   фрагмент 2 найден на Кубани и сразу поступил в Исторический музей. Латышев пришел к идее 
+                   объединения фрагментов, но его от нее отговорили А. Н. Щукарев и А. В. Орешников.</p>
+                <p> Примечательна маленькая толщина камня: это была вставка в стену над могилой 
+                    (см. комм. к № 287). После разрушения стены она была вторично использована для 
+                    инвокативного граффито: сохранились две части камня, а значит, можно предположить, что 
+                    надпись 2 была вполнена еще на целой плите.</p>
+                <p> 1–2. Относительно формулы см. IV.3.F.d.  </p>
+                <p> 2–3. После слов «раб Божий» шло, естественно, имя покойного. Однако лакуна в строке 2 
+                    слишком большая для того, чтобы к нему относилось βαντζου в начале строки 3 — 
+                    следовательно, эти буквы, не могущие быть ничем иным кроме части имени, относятся к 
+                    родовому имени или патронимику. Первое, впрочем, встречается в средневизантийской 
+                    эпиграфике Северного Причерноморья лишь однажды (№ 66, 915 г.); вероятность второго 
+                    подтверждает форма окончания — возможно, отца покойного звали 
+                    Иванец (это имя зафиксировано, например, в московской берестяной грамоте № 2 XIV в.).  </p>
+                <p> 3–6. Идущее перед формулой «скончался» λόγου является, видимо, частью какого-то эпитета: 
+                    из обозначений святых самый частый — θεολόγος, а лакуна в строке 4 не позволяет 
+                    реконструировать никого другого, кроме Иоанна Богослова (все это восстановление, конечно, 
+                    крайне гипотетично). Предшествующее ему «ставший» означает, по всей видимости, что 
+                    усопший (менее вероятно, его отец) стал каким-то клириком храма или монастыря св. 
+                    Иоанна Богослова, находившегося где-то на Кубани. В этом случае его прежний статус 
+                    декана (согласно PHI7 Database, в христианских надписях деканы упоминаются 18 раз) 
+                    должен обозначать, скорее всего, должность ответственного за погребения (Lampe, s.v., 2), 
+                    видимо, при том храме, где он и был похоронен. Судя по развитой церковной терминологии, 
+                    это должен быть епископский центр, т.е. Таматарха.</p>
+                <p> 6. Относительно формулы см. IV.3.F.f.  </p>
+                <p>7–9. По подробности датировки данная надпись близка к другим средневизантийским надгробиям 
+                    (№ 282, 767 г.; № 322, 819 г.; № 229, 906 г.); к последнему она также крайне близка по палеографии. 
+                    Это сходство покажется неслучайным, если принять во внимание, что автором и, вероятно, резчиком 
+                    партенитской эпитафии был «Николай, монах и пресвитер из Воспора». Возможные годы кончины 
+                    (15 индикт) в промежутке между 891 и 992 гг. — 896–897, 911–912, 926–927, 941–942, 956–957, 971–972 
+                    и 986–987 гг. (о соотношении годов от сотворения мира и от Р.Х. в средневизантийское время см. комм. 
+                    к IV. 4. D) В них 25 число месяца приходилось на субботу в следующие дни: 25 декабря 896 г., 25 июня 
+                    897 г., 25 апреля и 25 июля 912 г., 25 ноября 926 г., 25 августа 927 г., 25 сентября и 25 декабря 941 г., 
+                    25 июня 942 г., 25 октября 956 г., 25 апреля и 25 июля 957 г., 25 ноября 971 г., 25 мая 972 г., 
+                    25 декабря 986 г. и 25 июня 987 г. В лакуне для названия месяца остается ок. 5 букв. Если здесь 
+                    стояло Μαΐῳ, то 25 мая приходилось на субботу только в 972 г. Если же — Ἰουνίο или Ἰουλίο, то тогда 
+                    возможны такие даты: 25 июня 897 г., 25 июля 912 г., 25 июня 942 г., 25 июля 957 г. и 25 июня 987 г. 
+                    В силу близости данной надписи к № 229 (906 г.) следует предпочесть первые две, а учитывая размер 
+                    лакуны в обозначении года, вариант ςυκ´, т.е. 912 г. Отметим уникальную в Северном Причерноморье 
+                    датировку «от сотворения мира», а не «от Адама» (см. комм. к № 229 и Виноградов 2008).  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Надпись 2 представляет собой типичное прошение. Относительно формулы см. IV.3.E.c, 
+                   относительно имени Димитрий — комм. к № 82. Минускульные формы букв в ней еще не проявляют 
+                   признаков шрифта XII–XIII вв.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>E.E. Lyutsenko Podshivalv Kuban <!--A.N. Shchukarev--> A.V. Oreshnikov <!--Ivanets Ivanetz?--> Tamatarcha</p>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><g type="stauros"/> <w lemma="ἐνθάδε">Ἐνθάδε</w> <w lemma="κατάκειμαι"><supplied reason="lost">κατάκειται</supplied></w> 
+                  <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦ<lb n="2" break="no"/>λος</w> <w lemma="ὁ">τοῦ</w> 
+                  <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr><unclear>ῦ</unclear></abbr></expan></w>
+                  <w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="δεῖνα"><supplied reason="lost">δεῖνα</supplied></w>
+                  <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w> <persName type="attested" ref="#person417"><name>Ἰ<lb n="3" break="no"/>βάντζο<unclear>υ</unclear></name></persName> <note>?</note>, 
+                  <w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
+                  <w lemma="ναός"><supplied reason="lost">ναοῦ</supplied></w> <note>e.g.</note> <w lemma="οὗτος"><supplied reason="lost">τού</supplied><lb n="4" break="no"/>του</w> <note>?</note> <w lemma="δεκανός">δεκα<supplied reason="lost">νός</supplied></w>, 
+                  <gap reason="illegible" quantity="3" unit="character"/>
+                  <lb n="5"/><w lemma="δέ">δὲ</w> <w lemma="γίγνομαι">γενάμ<supplied reason="lost">ενος</supplied></w>
+                  <persName type="divine" key="stjohntheologos"><name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννου</ex></expan></name> 
+                  <w lemma="ὁ">τοῦ</w> <w>θεο<lb n="6" break="no"/>λόγου</w></persName> <note>?</note>.
+                  <w lemma="τελειόω">Ἐτ<supplied reason="lost">ελειώθη</supplied></w> <date><w lemma="μήν">μηνὶ</w>
+                  <lb n="7"/><rs type="month" ref="iul"><w lemma="Ἰούλιος"><supplied reason="lost">Ἰουλίο</supplied></w></rs> <note>?</note> <num value="25">κε</num>, 
+                     <w lemma="ἡμέρα">ἱμέρᾳ</w> <w lemma="Σάββατον">σα<supplied reason="lost">ββάτῳ</supplied></w>,
+                  <lb n="8"/><w lemma="ὥρα"><expan><abbr>ὥρ</abbr><ex>ᾳ</ex></expan></w>
+                     <num><gap reason="lost" quantity="1" unit="character"/></num>, 
+                     <w lemma="ἰνδικτιών"><expan><abbr><supplied reason="lost">ἰν</supplied>δη</abbr><ex>κτιῶνι</ex></expan></w>
+                     <num value="15">ιε</num>, <w lemma="ἀπό">ἀπὸ</w> <w lemma="κτίσις"><supplied reason="lost">κτίσε</supplied><lb n="9" break="no"/><supplied reason="lost">ως</supplied></w>
+                     <w lemma="κόσμος"><supplied reason="lost">κό</supplied>σμου</w> 
+                     <num value="6420">ςυ<supplied reason="lost" cert="low">κ</supplied></num> <w lemma="ἔτος">ἔτους</w></date>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="σώζω">Σόσε</w>, <w lemma="σωτήρ">σωτήρ</w>, <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ὸν</ex></expan></w>
+                  <lb n="2"/><w lemma="δοῦλος">δοῦλόν</w> <w lemma="σύ">σου</w> 
+                  <persName type="attested" ref="#person420"><name nymRef="Δημήτριος"><expan><abbr>Δίμιτρ</abbr><ex>ον</ex></expan></name></persName>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

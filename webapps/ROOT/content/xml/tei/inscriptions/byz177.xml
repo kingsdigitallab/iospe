@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надпись над иконой Богородицы<certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Inscription over the icon of the Virgin <certainty cert="low" locus="value" match=".."/></title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz177</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc7">
+                     <seg xml:lang="ru">Подпись к изображению.</seg>
+                     <seg xml:lang="en">Image-related inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon21">Арочка.</objectType>
+                           <objectType xml:lang="en">Small arch.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Мягкий известняк.</material>
+                           <material xml:lang="en">Soft limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефные бортики. Обломан со всех сторон, сохранилось 2 фрагмента.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">Между бортиков.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">Между бортиков.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы рельефные, апицированные и маньеризованные. Тета с перекладиной внизу, мю с Т-образной средней 
+                           частью, ро прямоугольное.</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1401" notAfter="1500" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">XV в.</seg>
+                        <seg xml:lang="en">XV century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found" n="3:  — 2">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1913–1914 гг., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Базилика или дворец (?).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1913-1914, excavations of R.Ch. Leper.</rs>
+                        <rs type="context">Basilica or palace (?).</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-13" who="AG">corrections, several lines translated, tags added</change>
+          <change when="2012-06-12" who="AL">text tagging checked, bibliography and original date tagged, editor tag inserted</change>
+          <change when="2012-03-19" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1918b--><ptr target="b0157"/>,  20–21, № <biblScope>5</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app><rdg resp="b0157">Θ(εό)ς</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… Матерь Божья…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... Mother of God...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Латышев читал по фотографии слово Θ(εό)ς, однако она не показывает ни теты, ни титла. 
+                Вероятней всего, здесь был какой-то эпитет Богородицы или собственно имя Θεοτόκος.</p>
+                <p>Судя по форме, данный памятник представляет собой обрамление какого-то предмета с 
+                    полукруглым верхом — скорее всего, иконы Богородицы из какого-то храма. По своей форме 
+                    шрифт относится к феодоритской эпиграфике XV в. В 1913 г. Лепер производил раскопки в 
+                    базилике и дворце, поэтому данная надпись, скорее всего, происходит из одного из этих мест.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Leper</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="fragment" n="2">
+               <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ος</w>
+                  <persName type="divine" key="maria"><w lemma="μήτηρ"><expan><abbr>Μ</abbr><ex>ήτη</ex><abbr>ρ</abbr></expan></w> 
+                   <w lemma="θεός">Θ<supplied reason="lost">εοῦ</supplied></w></persName>
+                  <gap reason="lost" extent="unknown" unit="character"/><orig>Η</orig><gap reason="lost" extent="unknown" unit="character"/>
+            </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

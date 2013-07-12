@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие неизвестного</title>
+            <title xml:lang="en">Gravestone of an unknown</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz128</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рамка. Обломан слева и сверху.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Witin a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, буквы частично прокрашены черной краской. Мю с Y-образной серединой.</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate notBefore="1347" notAfter="1347" evidence="указание-надписи">
+                        <seg xml:lang="ru">1347 г.</seg>
+                        <seg xml:lang="en">1347 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Высокое.</placeName>
+                        <rs type="circumstances">1967 г., сельскохозяйственные работы.</rs>
+                        <rs type="context">В 4 км от Ашага-Керменчика, храм св. Иоанна Предтечи (?).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">1967, agricultural works.</rs>
+                        <rs type="context">4 km from Ashag-Kermenchik, church of St. John the Baptist (?).</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">small corrections</change>
+         <change when="2012-05-30" who="AG">editor added</change>
+         <change when="2012-05-29" who="AG">small correction</change>
+         <change when="2012-04-30" who="AG">several lines translated</change>
+         <change when="2012-03-07" who="AG">corrections in metadata, tagged, tags in the greek text corrected</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… .. ноября 9856 (?) года.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... of November, in the year 9856 (?).</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Сведения о надписи и ее фото взяты из работы: Чореф 1969, 9. Чореф читал в надписи только 
+                число года без последней цифры.</p>
+                <p> По мнению Чорефа, вполне вероятно, камень происходит с того же кладбища, которое 
+                    отмечали А.Л. Бертье-Делагард и А.И. Маркевич (ср. № 122, 123), т.е. является надгробной.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Choref</p>
+             <p>Choref A.L. Bertye-Delagard A.I. Markevich</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>τ</orig>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΥΜ</orig><gap reason="illegible" quantity="6" unit="character"/>
+               <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ἐν"><supplied reason="lost">ἐ</supplied>ν</w> <date><w lemma="μήν">μ<supplied reason="lost">ην</supplied>ὴ</w>
+                  <rs type="month" ref="nou"><w lemma="Νοέμβριος">Νω<lb n="4" break="no"/><supplied reason="lost">εβρίῳ</supplied></w></rs> <supplied reason="lost"><w lemma="εἰς">εἰς</w> <w lemma="ὁ">τὰ</w></supplied> <num><gap reason="illegible" quantity="2" unit="character"/></num> <supplied reason="lost"><w lemma="ἔτος">ἔτους</w></supplied> <num value="9856"><supplied reason="lost">ς</supplied>ωνς</num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

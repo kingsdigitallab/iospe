@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Анастасия, Марии и И…ды</title>
+            <title xml:lang="en">Gravestone of Anastasios, Maria and I...de</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz062</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4144</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4144</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="#doc4 #doc2">
+                     <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
+                     <seg xml:lang="en" n="1">Demonstrative.</seg>
+                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="2">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Местный известняк.</material>
+                           <material xml:lang="en">Local limestone.</material>
+                           <p xml:lang="ru">Плита в виде латинского креста с расширяющимися рукавами и выступом наверху. Сколы внизу; камень сильно выветрен.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>67,0</height>
+                              <width>31,0</width>
+                              <depth>18,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">Левый и правый рукав креста.</seg>
+                           <seg xml:lang="en">Left and right arm of the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">Все рукава креста, кроме нижнего, и перекрестье.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">1,5–2,0.</height>
+                     </handNote>
+                     <handNote n="2">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, эпсилон и сигма лунарные, ипсилон У- и V-образный.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">1,5–2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003" n="1">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="0501" notAfter="0600" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                     <origPlace ref="origPlace.xml#p003" n="2">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="0501" notAfter="0600" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1907 г., раскопки К. К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Некрополь у Карантинной бухты, склеп № 2281.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1907, excavations of  K. K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="context">Necropolis by the Karantinnaya bay, vault no. 2281.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sebastopol, Ukrraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-22" who="AG">translation of 'context' corrected</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2011-07-12" who="AG">1 line corrected, apparatus marked up</change>
+         <change when="2011-05-18" who="AG">restored instead of the corrupted one</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Латышев 1908--><ptr target="b0149"/>,  28–29, № <biblScope>22</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="2">
+            <p>
+               <app loc="2"><rdg resp="b0149">δούλον Σου</rdg></app> 
+               <app loc="3"><rdg resp="b0149">Ἀναστάσιον</rdg></app> 
+               <app loc="4-6"><rdg resp="b0149">....ας.η....ὅστις.......συ[νβ]ήου...</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Альфа, омега.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Господи, упокой раба Божьего Анастасия, <supplied reason="lost">М</supplied>арию и <supplied reason="lost">Т</supplied>а<supplied reason="lost">и</supplied>с, супругу Симона.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Alpha, omega.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Lord, grant rest to the servant of God Anastasios, to Maria, and to Thais, the wife of Simon.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Камень найден в засыпи склепа (Косцюшко-Валюжинич 1911, 52). Очевидно, что здесь мы имеем дело с семейным погребением. Видимо, под камнем были погребены жена поставившего памятник и его родственники.</p>
+                <p> О формуле см. IV.3.C.d.</p>
+                <p> Относительно надгробий в форме креста см. комм. к № 61.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1–2. О формуле см. IV.3.F.b. Дополнение в ней в виде «раба Божьего», а не обычного «раба Твоего», встречается только в аттической надписи IG III, 3536. </p>
+                <p> 3–6. Имена в генетиве вм. аккузатива появились, вероятно, под влиянием предшествующего θεοῦ. Имя Анастасий хорошо засвидетельствовано в 
+                   христианском календаре (Delehaye 1902, 161, 281, 413; 56); там же, а также в византийской эпиграфике Северного Причерноморья известны и 
+                   христианские имена Симон (см. комм. к № 194) и Мария (№ 215 и 222). Имя Таис в христианской эпиграфике встречается лишь однажды, в 
+                   Сиракузах (Ferrua 1941, 235, № 129).</p>
+                <p> 6. Надпись, видимо, не закончена.</p>
+                <p> По шрифту данной надписи близок № 60, а альфе надписи 1 — № 60. О надгробиях в форме креста см. комм. к № 61.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p></p>
+                <p>Northern Coast of Black Sea Syracuse</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="ἄλφα">Α</w> <w lemma="ὠμέγα"><unclear>Ω</unclear></w>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος">Κύριε</w></persName>,
+                  <w lemma="Ἀναπαύω">ἀνάπαυσο<supplied reason="lost">ν</supplied></w>
+                  <lb n="2"/><w lemma="ὁ"><supplied reason="lost">τὸν</supplied></w> <w lemma="δοῦλος">δοῦλον</w>
+                  <w lemma="ὁ">τοῦ</w>
+                  <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr><supplied reason="lost">ῦ</supplied></abbr></expan></w>
+                  <lb n="3"/><persName type="attested" ref="#person47"><name nymRef="Ἀναστάσιος">Ἀ<unclear>ν</unclear>αστασίου</name></persName>,
+                  <lb n="4"/><persName type="attested" ref="#person48"><name nymRef="Μαρία"><supplied reason="lost">Μ</supplied><unclear>α</unclear>ρήας</name></persName>
+                  <w lemma="καί"><unclear>κ</unclear>αὶ</w>
+                  <lb n="5"/><persName type="attested" ref="#person49"><name><supplied reason="lost">Θ</supplied><unclear>α</unclear><supplied reason="lost">ΐ</supplied>δος</name></persName>,
+                  <w lemma=" ἡ">τῖς</w> <persName type="attested" ref="#person50"><name nymRef="Σίμων">Συ<unclear>μ</unclear><lb n="6" break="no"/>όνου</name></persName> <w lemma="συμβία">συ<unclear>μβ</unclear>ήου</w>,
+                  <w lemma="ὁ">τοῦ</w>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надпись на гербе</title>
+            <title xml:lang="en">Inscription on a coat of arms</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz325</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru">Неизвестен.</material>
+                           <material xml:lang="en">Unknown.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение герба Генуи и герба консула (?) (лев, идущий вправо, со звездой в правой лапе) и латинская надпись внизу. Состояние Неизвестно.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На гербе Генуи, в углах между рукавами креста (?).</seg>
+                           <seg xml:lang="en">On the coat of arms of Genova, in corners between the arms of the cross (?).</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита<certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Kalamita<certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate notBefore="1434" notAfter="1434" precision="low" evidence="исторический-контекст">
+                        <seg xml:lang="ru">Ок. 1434 г.</seg>
+                        <seg xml:lang="en">Circa 1434.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Инкерман.</placeName>
+                        <rs type="circumstances">Неизвестны</rs>
+                        <rs type="context">Неизвестен</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-04-17" who="ΝG">Greek lemmata corrected</change>
+          <change when="2013-02-13" who="AG">repository corrected</change>
+         <change when="2012-09-24" who="AG">key added</change>
+         <change when="2012-09-11" who="AG">several lines translated</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata and bibliography</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-05" who="AG">tags tidied, bibliography, apparatus and the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Oderico 1792--><ptr target="b0344"/>,  212. Tav. <biblScope>XV</biblScope></bibl>
+               <bibl n="1.1"><!--Сборник --><ptr target="b0132"/>, <biblScope>42</biblScope></bibl>
+               <bibl n="1.2"><!--Латышев 1901--><ptr target="b0138"/>, <biblScope>76</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+                 <app loc="2"><rdg resp="b0344">“tolte”</rdg> <!--<rdg resp="???????">πὰ (i.e. (ἐ)πάνω</rdg>--> <!--Papapadopoulo-Krameus apud Latyshev 1901--></app> 
+                 <app loc="2"><rdg resp="b0344">“di Kirma”</rdg></app> 
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Гербы генуэзцев в крепости Инкерман.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>The coats of arms of the Genoese of the Inkirman fortress.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> На свидетельство Одерико впервые обратил внимание Мурзакевич 1837, 61. Учитывая неясное происхождение надписи, можно предположить, что 
+               греческая надпись первоначально находилась под изображением гербов и лишь потом была механически перенесена Одорико или его предшественником 
+               на герб (соображение Д. Фейсселя, высказанное в частной беседе). С другой стороны, подписи по-гречески к западным гербам известны в поздневизантийской 
+               эпиграфике: Feissel, Philippidis-Braat 1985, 86 (Патры, 1426 г.) и CIG IV, 8774 (Эльбасан, 1358–1388), причем последняя с тем же словом σημάδια.  </p>
+                <p> Лев со звездой в лапе Одерико в генуэзской эпиграфике не был знаком — можно предположить, что на самом деле это был другой предмет, 
+                   например, лилия. Судя по историческому контексту, генуэзская надпись в Инкермане могла появиться только в 1434 г., во время генуэзского захвата 
+                   феодоритской Каламиты флотом Карло Ломеллино.</p>
+                <p> 1–2. Аккузатив вместо gen. possesivus см. в № 229.</p>
+                <p>3–4. По-видимому, Одерико производил ΠΑΥΣ от παύομαι, откуда перевод “tolte”, т.е. “взятые”. А.И. Пападопуло-Керамевс предложил в Латышев 1901 
+                   возможность сохранить чтение оригинала в начале С. 2 (см. крит. апп.), однако не слишком удачную.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Murzakevich Inkerman Kalamita</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="part">
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="1"/><w lemma="ὁ">Τὰ</w> <w lemma="σημάδιον">σιμά<lb n="2" break="no"/>δια</w>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="1"/><w lemma="ὁ"><choice><corr>τ<corr>οῦ</corr>ς</corr><sic>ΤΙΣ</sic></choice></w>
+                     <placeName type="ethnic" key="genova"><w lemma="Γενουβέζος">Γενου<lb n="2" break="no"/>βέζους</w></placeName>,
+                  </ab>
+               </div>
+               </div>
+            <div type="textpart" subtype="part">
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="3"/><w lemma="ὁ"><choice><corr><corr>τ</corr>ὰ</corr><sic>ΠΑ</sic></choice></w> <w lemma="εἰς">ὐς</w> <w lemma="ὁ">τὸ</w>
+                     <lb n="4"/><w lemma="κάστρον">κάστρο</w>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="3"/><placeName key="inkerman">Ἰνκιρμά<supplied reason="lost">ν</supplied><lb n="4" break="no"/>ης</placeName>
+                  </ab>
+               </div>
+               </div>        
+         </div>
+      </body>
+   </text>
+</TEI>

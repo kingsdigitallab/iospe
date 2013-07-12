@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Строительная надпись на темплоне</title>
+            <title xml:lang="en">Building inscriptin on a templon</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz191</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon15">Колонка.</objectType>
+                           <objectType xml:lang="en">Colonnette.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Вырубленная в скале фигурная колонка алтарной преграды. Сохранился целиком.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>3,5</height>
+                              <width>11,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На балясине.</seg>
+                           <seg xml:lang="en">On the baluster.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>. Альфа с петлей, эпсилон удлинен по вертикали, ипсилон У-образный.</seg>
+                        <seg xml:lang="en">Graffito. Alpha with a loop, epsilon elongated, ypsilon Y-shaped.</seg>
+                        <height unit="cm">1,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p024">
+                        <seg xml:lang="ru">Тепе-Кермен.</seg>
+                        <seg xml:lang="en">Tepe-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="medium" evidence="архитектурный-контекст">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XV centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-09">сентябрь 1999</date>, <date when="2007-09"> сентябрь 2007</date>, <date when="2009-09"> сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-09">September 1999</date>, <date when="2007-09">September 2007</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Тепе-Кермен.</placeName>
+                        <rs type="circumstances">1999 г., обследования А. Ю. Виноградова.</rs>
+                        <rs type="context">«храм с ризницей», алтарная преграда, левая сторона.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Tepe-Kermen.</placeName>
+                        <rs type="circumstances">1999, survey of A.Yu. Vinogradov.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">in situ.</seg>
+                     <seg xml:lang="en">in situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2013-02-13" who="AG">repository corrected</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-06-19" who="AL">editor tag inserted</change>
+         <change when="2012-06-18" who="AG">corrections, several lines translated</change>
+          <change when="2012-04-17" who="AL">original date tagged, bibliography tagged, translated a line</change>
+          <change when="2012-03-26" who="AFS">tagged Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Виноградов 2002--><ptr target="b0041"/>,  <biblScope>56</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Освящен храм.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>The church was sanctified.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1. Обычный глагол ἀνακαινίζω имеет в византийский период техническое значение «освящать» (см. Lampe, 399). Поэтому речь может об 
+               освящении храма, а не об обновлении старого (ср. Виноградов 2002, 56). С другой стороны, употребленный здесь глагол ἐγκαινίζω единственный 
+               раз в Северном Причерноморье употреблен в № 10 в значении «обновлять». Следует отметить отсутствие аугмента (ср. IG XII,5 712,58).</p>
+                <p>По архитектуре и литургическому устройству храм датируется XIV–XV вв. (см. Виноградов, Гайдуков, Желтов 2005, 76)</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Vinogradov Gaydukov Zheltov</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/> <g type="stauros"/> <w>Ἐνκενυάσθη</w>
+               <lb n="2"/><w lemma="ὁ">ὁ</w> <w>ναός</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

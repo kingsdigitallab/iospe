@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие Иканисы <certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Gravestone of Ekanesa <certainty cert="low" locus="value" match=".."/></title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz130</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="1">Funerary inscription.</seg>
+                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="2">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефный крест и рамка. Обломан сверху, буквы стерты.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>31,0</height>
+                              <width>28,5</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">В левом нижнем углу.</seg>
+                           <seg xml:lang="en">In the lower left corner.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">В правом нижнем углу.</seg>
+                           <seg xml:lang="en">In the lower right corner.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, мю в т.ч. минускульное. Лигатура мю-йота.</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p011">
+                        <seg xml:lang="ru">Фот-Сала.</seg>
+                        <seg xml:lang="en">Fot-Sala.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="1291" notAfter="1292" evidence="указание-надписи">
+                        <seg xml:lang="ru">1291–1292 гг.</seg>
+                        <seg xml:lang="en">1291–1292 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p011">
+                        <seg xml:lang="ru">Фот-Сала.</seg>
+                        <seg xml:lang="en">Fot-Sala.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="1291" notAfter="1382" precision="medium" evidence="указание-надписи">
+                        <seg xml:lang="ru">1291–1382 гг.</seg>
+                        <seg xml:lang="en">1291–1382 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Голубинка.</placeName>
+                        <rs type="circumstances">1914 г., обследования М.И. Скубетова.</rs>
+                        <rs type="context">В 1,5 км к северо-востоку, местность Дживизлик, урочище Кильсе-баир, храм, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Golubinka.</placeName>
+                        <rs type="circumstances">1914, survey of M.I. Skubetov.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-30" who="AG">small correction, editor added</change>
+         <change when="2012-05-29" who="AG">small corrections</change>
+         <change when="2012-04-30" who="AG">several lines translated, small corrections</change>
+         <change when="2012-03-07" who="AG">tags corrected, metadata corrected, bibliography and apparatus tagged</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!--Латышев 1916--><ptr target="b0155"/>, 3–4, № 4, рис. <biblScope>4</biblScope></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Латышев 1916--><ptr target="b0155"/>, 3–4, № 4, рис. <biblScope>4</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="1">
+             <p>
+               <app loc="3-7"><lem>Ηκανησα ... ςω.´</lem><rdg resp="b0155"/></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Поч<supplied reason="lost">ила</supplied>. Почила раба Божья Иканиса (?), дочь То<gap reason="ellipsis"/>, в 6800 году.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p><expan><abbr>Почил</abbr><ex>а</ex></expan>…</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Fell asleep. Fell asleep: a servant of God, Ekanesa (?), daughter of To..., in the year 6800.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep...</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Надпись издана Латышевым по рисунку и эстампажам Скубетова. В настоящее время на 
+                   кладбище надписей не обнаруживается (любезное сообщение С. В. Харитонова).</p>
+                <p> 1–3. Относительно формулы см. IV.3.F.e.  </p>
+                <p> 3–4. Имя восстанавливается предположительно (ср. Икуманиса в № 131 отсюда же).  </p>
+                <p> 4–5. Относительно сбивки в падежах ср. № 131.  </p>
+                <p>7. На рисунке в конце строки после омеги не отмечено ни одной буквы. </p>
+            </div>
+            <div type="textpart" n="2">
+               <p>В надписи было около 6 строк. </p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Latyshev Skubetov S.V. Kharitonov</p>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκη<supplied reason="lost">μίθι</supplied></w>
+                  <lb n="2"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκημίθι</w> <w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δ<supplied reason="lost">ού</supplied>
+                     <lb n="3" break="no"/><supplied reason="lost">λη</supplied></w> <w lemma="ὁ"><expan><abbr>τ</abbr><ex>οῦ</ex></expan></w> 
+                  <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> 
+                  <persName type="attested" ref="#person169"><name nymRef="Ἠκανησα"><unclear>Ἠ</unclear>κα<unclear>ν</unclear><lb n="4" break="no"/><unclear>ησ</unclear>α</name></persName> <note>(?)</note> <w lemma="θυγάτηρ"><unclear>θυ</unclear>γατέ<lb n="5" break="no"/><unclear>ρα</unclear></w> <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w> <persName type="attested" ref="#person170"><name><seg part="I">Το</seg><gap reason="illegible" quantity="3" unit="character"/></name></persName>
+                  <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><w part="Y">α</w><gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="7"/><date><w lemma="ἔτος"><unclear>ἔ</unclear>τ<unclear>ου</unclear><supplied reason="lost">ς</supplied></w> <num value="6800"><unclear>ς</unclear>ω</num></date>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκημίθι</w>
+                  <lb n="2"/><gap reason="lost" extent="unknown" unit="line"/>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

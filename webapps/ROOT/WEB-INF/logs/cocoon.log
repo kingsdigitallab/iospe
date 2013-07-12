@@ -1,0 +1,319 @@
+INFO  (2013-07-12) 12:20.04:608 [access] (Unknown-URI) Unknown-Thread/CocoonServlet: Reloading from: file:/vagrant/webapps/ROOT/WEB-INF/cocoon.xconf
+INFO  (2013-07-12) 12:20.05:944 [core.runnable] (Unknown-URI) Unknown-Thread/DefaultRunnableManager: ThreadPool named "default" created with maximum queue-size=2147483647,max-pool-size=5,min-pool-size=5,priority=5,isDaemon=false,keep-alive-time-ms=60000,block-policy="ABORT",shutdown-wait-time-ms=-1
+INFO  (2013-07-12) 12:20.05:949 [core.runnable] (Unknown-URI) Unknown-Thread/DefaultRunnableManager: ThreadPool named "daemon" created with no queue,max-pool-size=2147483647,min-pool-size=1,priority=5,isDaemon=true,keep-alive-time-ms=60000,block-policy=ABORT,shutdown-wait-time-ms=-1
+INFO  (2013-07-12) 12:20.06:218 [core.store] (Unknown-URI) Unknown-Thread/EHDefaultStore: EHCache cache "cocoon-ehcache-1" initialized
+WARN  (2013-07-12) 12:20.06:247 [core.language.java] (Unknown-URI) Unknown-Thread/JavaLanguage: Attempted to retrieve directory listing of non-directory /usr/java/packages/lib/ext
+INFO  (2013-07-12) 12:20.51:229 [core.manager] (/index.html) qtp1540953142-13/CacheImpl: Caching new response for PK_G-file-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../stylesheets/defaults.xsl
+ERROR (2013-07-12) 12:20.51:359 [sitemap.handled-errors] (/index.html) qtp1540953142-13/ErrorHandlerHelper: Unable to get transformer handler for file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/stylesheets/local/default.xsl
+	at <map:serialize type="xhtml"> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:774:39
+	at <map:transform> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:769:60
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+java.io.FileNotFoundException: /vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/stylesheets/local/default.xsl (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.apache.excalibur.source.impl.FileSource.getInputStream(FileSource.java:153)
+	at org.apache.cocoon.components.xslt.TraxProcessor.sourceToSAX(TraxProcessor.java:308)
+	at org.apache.cocoon.components.xslt.TraxProcessor.getTransformerHandlerAndValidity(TraxProcessor.java:241)
+	at org.apache.cocoon.transformation.TraxTransformer.setup(TraxTransformer.java:331)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.setupPipeline(AbstractProcessingPipeline.java:398)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.preparePipeline(AbstractProcessingPipeline.java:501)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.process(AbstractProcessingPipeline.java:453)
+	at org.apache.cocoon.components.treeprocessor.sitemap.SerializeNode.invoke(SerializeNode.java:144)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MountNode.invoke(MountNode.java:118)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MountNode.invoke(MountNode.java:118)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MountNode.invoke(MountNode.java:118)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:699)
+	at org.apache.cocoon.servlet.CocoonServlet.service(CocoonServlet.java:1154)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:698)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:505)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:138)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:564)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1094)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:432)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1028)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:258)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:445)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:267)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:224)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:358)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:601)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:532)
+	at java.lang.Thread.run(Thread.java:722)
+INFO  (2013-07-12) 12:20.51:367 [sitemap] (/index.html) qtp1540953142-13/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:20.52:066 [access] (/index.html) qtp1540953142-13/CocoonServlet: 'index.html' Processed by Apache Cocoon 2.1.11 in 1.837 seconds.
+ERROR (2013-07-12) 12:20.52:156 [sitemap.handled-errors] (/scripts/main.js) qtp1540953142-14/ErrorHandlerHelper: No pipeline matched request: scripts/main.js
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+ERROR (2013-07-12) 12:20.52:157 [sitemap.handled-errors] (/styles/main.css) qtp1540953142-15/ErrorHandlerHelper: No pipeline matched request: styles/main.css
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:20.52:159 [sitemap] (/scripts/main.js) qtp1540953142-14/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:20.52:159 [sitemap] (/styles/main.css) qtp1540953142-15/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:20.52:199 [access] (/styles/main.css) qtp1540953142-15/CocoonServlet: 'styles/main.css' Processed by Apache Cocoon 2.1.11 in 53 milliseconds.
+INFO  (2013-07-12) 12:20.52:200 [access] (/scripts/main.js) qtp1540953142-14/CocoonServlet: 'scripts/main.js' Processed by Apache Cocoon 2.1.11 in 54 milliseconds.
+ERROR (2013-07-12) 12:20.52:332 [sitemap.handled-errors] (/favicon.ico) qtp1540953142-16/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:20.52:340 [sitemap] (/favicon.ico) qtp1540953142-16/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:20.52:352 [access] (/favicon.ico) qtp1540953142-16/CocoonServlet: 'favicon.ico' Processed by Apache Cocoon 2.1.11 in 25 milliseconds.
+ERROR (2013-07-12) 12:24.01:446 [sitemap.handled-errors] (/index.html) qtp1540953142-18/ErrorHandlerHelper: Unable to get transformer handler for file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/stylesheets/defaults.xsl
+	at <map:serialize type="xhtml"> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:774:39
+	at <map:transform> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:769:55
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+java.io.FileNotFoundException: /vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/stylesheets/defaults.xsl (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.apache.excalibur.source.impl.FileSource.getInputStream(FileSource.java:153)
+	at org.apache.cocoon.components.xslt.TraxProcessor.sourceToSAX(TraxProcessor.java:308)
+	at org.apache.cocoon.components.xslt.TraxProcessor.getTransformerHandlerAndValidity(TraxProcessor.java:241)
+	at org.apache.cocoon.transformation.TraxTransformer.setup(TraxTransformer.java:331)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.setupPipeline(AbstractProcessingPipeline.java:398)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.preparePipeline(AbstractProcessingPipeline.java:501)
+	at org.apache.cocoon.components.pipeline.AbstractProcessingPipeline.process(AbstractProcessingPipeline.java:453)
+	at org.apache.cocoon.components.treeprocessor.sitemap.SerializeNode.invoke(SerializeNode.java:144)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MountNode.invoke(MountNode.java:118)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MountNode.invoke(MountNode.java:118)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MountNode.invoke(MountNode.java:118)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:47)
+	at org.apache.cocoon.components.treeprocessor.sitemap.MatchNode.invoke(MatchNode.java:108)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelineNode.invoke(PipelineNode.java:143)
+	at org.apache.cocoon.components.treeprocessor.AbstractParentProcessingNode.invokeNodes(AbstractParentProcessingNode.java:69)
+	at org.apache.cocoon.components.treeprocessor.sitemap.PipelinesNode.invoke(PipelinesNode.java:93)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:235)
+	at org.apache.cocoon.components.treeprocessor.ConcreteTreeProcessor.process(ConcreteTreeProcessor.java:177)
+	at org.apache.cocoon.components.treeprocessor.TreeProcessor.process(TreeProcessor.java:254)
+	at org.apache.cocoon.Cocoon.process(Cocoon.java:699)
+	at org.apache.cocoon.servlet.CocoonServlet.service(CocoonServlet.java:1154)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:698)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:505)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:138)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:564)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:213)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1094)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:432)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:175)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1028)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:136)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:258)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:445)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:267)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:224)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:358)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:601)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:532)
+	at java.lang.Thread.run(Thread.java:722)
+INFO  (2013-07-12) 12:24.01:449 [sitemap] (/index.html) qtp1540953142-18/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:24.01:462 [access] (/index.html) qtp1540953142-18/CocoonServlet: 'index.html' Processed by Apache Cocoon 2.1.11 in 122 milliseconds.
+ERROR (2013-07-12) 12:24.01:554 [sitemap.handled-errors] (/styles/main.css) qtp1540953142-19/ErrorHandlerHelper: No pipeline matched request: styles/main.css
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:24.01:555 [sitemap] (/styles/main.css) qtp1540953142-19/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+ERROR (2013-07-12) 12:24.01:556 [sitemap.handled-errors] (/scripts/main.js) qtp1540953142-20/ErrorHandlerHelper: No pipeline matched request: scripts/main.js
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:24.01:562 [sitemap] (/scripts/main.js) qtp1540953142-20/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:24.01:581 [access] (/styles/main.css) qtp1540953142-19/CocoonServlet: 'styles/main.css' Processed by Apache Cocoon 2.1.11 in 35 milliseconds.
+INFO  (2013-07-12) 12:24.01:582 [access] (/scripts/main.js) qtp1540953142-20/CocoonServlet: 'scripts/main.js' Processed by Apache Cocoon 2.1.11 in 34 milliseconds.
+ERROR (2013-07-12) 12:24.01:731 [sitemap.handled-errors] (/favicon.ico) qtp1540953142-13/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:24.01:736 [sitemap] (/favicon.ico) qtp1540953142-13/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:24.01:747 [access] (/favicon.ico) qtp1540953142-13/CocoonServlet: 'favicon.ico' Processed by Apache Cocoon 2.1.11 in 21 milliseconds.
+INFO  (2013-07-12) 12:25.54:188 [core.manager] (/index.html) qtp1540953142-18/CacheImpl: Caching new response for PK_G-file-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../assets/menu/main.xml_T-saxon-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../stylesheets/menu/normalise-menu.xsl
+ERROR (2013-07-12) 12:25.54:189 [sitemap.handled-errors] (/index.html) qtp1540953142-18/ErrorHandlerHelper: No pipeline matched request: _internal/metadata/files.xml
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+	at <map:serialize type="xhtml"> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:774:39
+	at <map:transform> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:769:58
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:25.54:191 [sitemap] (/index.html) qtp1540953142-18/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:25.54:205 [access] (/index.html) qtp1540953142-18/CocoonServlet: 'index.html' Processed by Apache Cocoon 2.1.11 in 284 milliseconds.
+ERROR (2013-07-12) 12:25.54:288 [sitemap.handled-errors] (/styles/main.css) qtp1540953142-20/ErrorHandlerHelper: No pipeline matched request: styles/main.css
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:25.54:290 [sitemap] (/styles/main.css) qtp1540953142-20/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+ERROR (2013-07-12) 12:25.54:288 [sitemap.handled-errors] (/scripts/main.js) qtp1540953142-19/ErrorHandlerHelper: No pipeline matched request: scripts/main.js
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:25.54:291 [sitemap] (/scripts/main.js) qtp1540953142-19/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:25.54:313 [access] (/styles/main.css) qtp1540953142-20/CocoonServlet: 'styles/main.css' Processed by Apache Cocoon 2.1.11 in 31 milliseconds.
+INFO  (2013-07-12) 12:25.54:315 [access] (/scripts/main.js) qtp1540953142-19/CocoonServlet: 'scripts/main.js' Processed by Apache Cocoon 2.1.11 in 33 milliseconds.
+INFO  (2013-07-12) 12:31.35:341 [core.manager] (/index.html) qtp1540953142-14/CacheImpl: Removing cached response for PK_G-file-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../stylesheets/defaults.xsl
+INFO  (2013-07-12) 12:31.35:378 [core.manager] (/index.html) qtp1540953142-14/CacheImpl: Caching new response for PK_G-file-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../stylesheets/defaults.xsl
+INFO  (2013-07-12) 12:31.35:478 [core.manager] (/index.html) qtp1540953142-14/CacheImpl: Removing cached response for PK_G-file-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../assets/menu/main.xml_T-saxon-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../stylesheets/menu/normalise-menu.xsl
+INFO  (2013-07-12) 12:31.35:539 [core.manager] (/index.html) qtp1540953142-14/CacheImpl: Caching new response for PK_G-file-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../assets/menu/main.xml_T-saxon-file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../stylesheets/menu/normalise-menu.xsl
+ERROR (2013-07-12) 12:31.35:539 [sitemap.handled-errors] (/index.html) qtp1540953142-14/ErrorHandlerHelper: No pipeline matched request: _internal/metadata/files.xml
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+	at <map:serialize type="xhtml"> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:774:39
+	at <map:transform> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:769:58
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.35:541 [sitemap] (/index.html) qtp1540953142-14/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.35:558 [access] (/index.html) qtp1540953142-14/CocoonServlet: 'index.html' Processed by Apache Cocoon 2.1.11 in 244 milliseconds.
+ERROR (2013-07-12) 12:31.35:642 [sitemap.handled-errors] (/scripts/main.js) qtp1540953142-16/ErrorHandlerHelper: No pipeline matched request: scripts/main.js
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+ERROR (2013-07-12) 12:31.35:643 [sitemap.handled-errors] (/styles/main.css) qtp1540953142-17/ErrorHandlerHelper: No pipeline matched request: styles/main.css
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.35:645 [sitemap] (/styles/main.css) qtp1540953142-17/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.35:644 [sitemap] (/scripts/main.js) qtp1540953142-16/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.35:662 [access] (/styles/main.css) qtp1540953142-17/CocoonServlet: 'styles/main.css' Processed by Apache Cocoon 2.1.11 in 26 milliseconds.
+INFO  (2013-07-12) 12:31.35:662 [access] (/scripts/main.js) qtp1540953142-16/CocoonServlet: 'scripts/main.js' Processed by Apache Cocoon 2.1.11 in 26 milliseconds.
+ERROR (2013-07-12) 12:31.35:797 [sitemap.handled-errors] (/favicon.ico) qtp1540953142-18/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.35:798 [sitemap] (/favicon.ico) qtp1540953142-18/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.35:823 [access] (/favicon.ico) qtp1540953142-18/CocoonServlet: 'favicon.ico' Processed by Apache Cocoon 2.1.11 in 30 milliseconds.
+ERROR (2013-07-12) 12:31.36:495 [sitemap.handled-errors] (/index.html) qtp1540953142-20/ErrorHandlerHelper: No pipeline matched request: _internal/metadata/files.xml
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+	at <map:serialize type="xhtml"> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:774:39
+	at <map:transform> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:769:58
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.36:497 [sitemap] (/index.html) qtp1540953142-20/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.36:523 [access] (/index.html) qtp1540953142-20/CocoonServlet: 'index.html' Processed by Apache Cocoon 2.1.11 in 55 milliseconds.
+ERROR (2013-07-12) 12:31.36:604 [sitemap.handled-errors] (/scripts/main.js) qtp1540953142-13/ErrorHandlerHelper: No pipeline matched request: scripts/main.js
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.36:606 [sitemap] (/scripts/main.js) qtp1540953142-13/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+ERROR (2013-07-12) 12:31.36:605 [sitemap.handled-errors] (/styles/main.css) qtp1540953142-19/ErrorHandlerHelper: No pipeline matched request: styles/main.css
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.36:609 [sitemap] (/styles/main.css) qtp1540953142-19/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.36:628 [access] (/styles/main.css) qtp1540953142-19/CocoonServlet: 'styles/main.css' Processed by Apache Cocoon 2.1.11 in 41 milliseconds.
+INFO  (2013-07-12) 12:31.36:629 [access] (/scripts/main.js) qtp1540953142-13/CocoonServlet: 'scripts/main.js' Processed by Apache Cocoon 2.1.11 in 41 milliseconds.
+ERROR (2013-07-12) 12:31.36:749 [sitemap.handled-errors] (/favicon.ico) qtp1540953142-15/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:31.36:750 [sitemap] (/favicon.ico) qtp1540953142-15/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:31.36:761 [access] (/favicon.ico) qtp1540953142-15/CocoonServlet: 'favicon.ico' Processed by Apache Cocoon 2.1.11 in 16 milliseconds.
+ERROR (2013-07-12) 12:32.45:857 [sitemap.handled-errors] (/index.html) qtp1540953142-17/ErrorHandlerHelper: No pipeline matched request: _internal/metadata/files.xml
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+	at <map:serialize type="xhtml"> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:774:39
+	at <map:transform> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/../../sitemaps/main.xmap:769:58
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:32.45:859 [sitemap] (/index.html) qtp1540953142-17/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:32.45:873 [access] (/index.html) qtp1540953142-17/CocoonServlet: 'index.html' Processed by Apache Cocoon 2.1.11 in 38 milliseconds.
+ERROR (2013-07-12) 12:32.45:957 [sitemap.handled-errors] (/styles/main.css) qtp1540953142-20/ErrorHandlerHelper: No pipeline matched request: styles/main.css
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:32.45:959 [sitemap] (/styles/main.css) qtp1540953142-20/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+ERROR (2013-07-12) 12:32.45:957 [sitemap.handled-errors] (/scripts/main.js) qtp1540953142-18/ErrorHandlerHelper: No pipeline matched request: scripts/main.js
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:32.45:960 [sitemap] (/scripts/main.js) qtp1540953142-18/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:32.45:976 [access] (/styles/main.css) qtp1540953142-20/CocoonServlet: 'styles/main.css' Processed by Apache Cocoon 2.1.11 in 25 milliseconds.
+INFO  (2013-07-12) 12:32.45:978 [access] (/scripts/main.js) qtp1540953142-18/CocoonServlet: 'scripts/main.js' Processed by Apache Cocoon 2.1.11 in 27 milliseconds.
+ERROR (2013-07-12) 12:32.46:114 [sitemap.handled-errors] (/favicon.ico) qtp1540953142-19/ErrorHandlerHelper: No pipeline matched request: favicon.ico
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/../kiln/sitemaps/main.xmap:140:86
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemaps/config.xmap:41:36
+	at <map:mount> - file:///vagrant/webapps/ROOT/sitemap.xmap:610:59
+INFO  (2013-07-12) 12:32.46:115 [sitemap] (/favicon.ico) qtp1540953142-19/HandleErrorsNode: Processing handle-errors at <map:handle-errors> - file:///vagrant/webapps/ROOT/sitemap.xmap:625:26
+INFO  (2013-07-12) 12:32.46:126 [access] (/favicon.ico) qtp1540953142-19/CocoonServlet: 'favicon.ico' Processed by Apache Cocoon 2.1.11 in 20 milliseconds.

@@ -1,0 +1,337 @@
+/***
+
+IOSPE Stylesheet
+
+***/
+
+/* STRUCTURAL ELEMENTS */
+
+
+html {margin:0; padding:0}
+
+#gw{margin:0 auto}
+body{font:13px/1.231 arial,helvetica,clean,sans-serif}
+#cs,#hs{overflow:hidden;/*position:relative*/}
+#cs {position: relative;}
+
+
+/* BANNER */
+
+#bs, #bsr{/*background: url(../i/bs.png) repeat-x scroll 0 0 transparent;*/height:158px; background: #356a94;}
+#bs .gx, #brs .gx{height:140px;position:absolute;text-indent:-5000px;top:0}
+#bs .gx1,#bsr .gx1{background:url(../i/bs.gx1.png);height:158px;right:0;top:0;width:528px}
+#bs h3,#bsr h3{background:url(../i/bs.h3x.png) no-repeat scroll 0 0 transparent;height:158px;position:absolute;text-indent:-5000px;width:1035px;z-index:10}
+#bs h3 a,#bsr h3 a {background:url(../i/griffin.png) no-repeat scroll 0 0 transparent; width: 195px; height: 143px; position: absolute; left:-10px; top:50px;}
+#bs h4{background:url(../i/bs.h4.en.png) no-repeat scroll 0 0 transparent;height:92px;position:absolute;text-indent:-5000px;width:486px;z-index:10; top: 58px; right: 0;}
+#bsr h4{background:url(../i/bs.h4.ru.png) no-repeat scroll 0 0 transparent;height:92px;position:absolute;text-indent:-5000px;width:505px;z-index:10; top: 58px; right: 0;}
+
+/* MAIN CONTENT */
+
+#cs p {color: #333; font-size: 93%; line-height: 1.65em; margin: 0 0 1.2em;}
+#cs .c a {color: #5a758c; border-bottom: 1px dotted #5a758c;}
+#cs .c a:hover {color:#8b9caa; border-bottom: 1px solid #8b9caa;}
+
+
+#cs .c h1{color:#3e4c58;font: bold 150% georgia, helvetica, sans-serif; border-bottom: 1px solid #8192A1; margin-bottom: 10px; padding: 0 0 3px 0;}
+#cs .c h2{color:#285072;font:bold 125% arial, helvetica, sans-serif; padding: 0 0 2px 0;}
+#cs .c h3{color:#7e8d9a;font:bold 105% arial, helvetica, sans-serif; padding:0;}
+#cs .c h4{color:#535a60;font:100% arial, helvetica, sans-serif;}
+#cs .c h5{color:#333;font:90% arial, helvetica, sans-serif;}
+#cs .c h5{color:#333;font:bold 85% arial, helvetica, sans-serif;}
+
+#cs .c1 .r1, #cs .c .r2 .hds {background:#f4f2ef;border-bottom:2px solid #d8d1cc; width: 390px;}
+#cs .r2 .hds {padding: 0 0 8px 0;}
+
+
+#cs .c2{width: 15.384em; background:url(../i/side_bg.png) no-repeat scroll -12px -35px transparent; position: absolute; min-height: 800px; }
+#cs .cg{background:#fff; overflow:hidden; min-height: 650px;}
+
+#cs .cg .col1{float: left; width: 33%;}
+#cs .cg .col2{float: left; width: 33%;}
+#cs .cg .col3{float: left; width: 33%;}
+
+#cs span.head {font-weight: bold; float:left; margin: 3px 0 0 0;}
+
+/* UNORDERED LISTS */
+
+
+#cs .c ul {margin: 5px 0 15px 15px;}
+#cs .c ul li {line-height: 1.55em; font-size: 93%; font-family: arial, helvetica, sans-serif; color: #333; padding-right: 0.5em;}
+
+#cs .c ul li ul {margin: 5px 0 5px 20px; font-size: 105%; }
+#cs .c ul li ul li,#cs .c ul li ul li ul li {line-height: 1.55em; color: #333; background: none;}
+#cs .c ul li ul li ul {margin: 5px 0 5px 20px; font-size: 105%;}
+
+#cs .c .letters li {display: inline;}
+
+#cs .c .multiline li {display: block;}
+
+#cs .c ul.oneline {display: inline; margin:0}
+
+#cs .c ul.oneline li {display: inline;}
+
+
+/* DEFINITION LISTS */
+
+#cs .c dd ul li {display: inline;}
+
+
+/* BREADCRUMB NAVIGATION  */
+
+#ss{background:#fff url(../i/ss.png) 0 100% repeat-x;overflow:hidden}
+#ss .nvl,.nvl li,.utl li,.nvg li,.nvg a,.nvl li,.nvl a,.utl.m1 li,.utl.m1 a,.hds h3,.hds ul,.hds li,.hds a,.c2 .nvh h5 fieldset,.c2 .nvh h5 strong{float:left}
+.nvs h3 {float: left; color: #3e4c58; font-size: 93%; font-weight: 700; line-height: normal; margin: 1px 3px 2px 5px;}
+.nvs li.ix {background: none; color:#373e44 ;padding:0; font-weight: 700; font-size: 93%; }
+.nvs li {background:url(../i/_a1.png) no-repeat scroll 100% 0.45em transparent; float: left; line-height: normal; margin: 1px 0 2px 7px; padding: 0 10px 0 0;}
+.nvs li a {color:#285072 ; font-size: 93%; line-height: normal;}
+.nvs li a:hover {border-bottom: 1px solid #285072;}
+
+
+.c,.c2 .nvh h5 fieldset{position:relative}
+td{border-bottom:1px solid #e8ecf2;color:#333;font-size:85%;line-height:1.55em;padding:2px 0}
+th{border-bottom:2px solid #e8ecf2;color:#362d22;font-size:85%;font-weight:700;line-height:1.55em;padding:0 30px 2px 0;text-transform:uppercase;white-space:nowrap}
+
+
+
+.cg .c{float:left;width:24.615em}
+.cg .m{float:right;margin-left:-24.815em}
+.cg .m .c{float:none;margin-left:16em;width:auto; margin-right:6em; margin-top: 50px;}
+.hds{overflow:hidden}
+.hds a{font-size:85%;margin:0 0 0 10px;padding:3px 0 3px 20px}
+.hds ul{margin-top:22px}
+
+
+.m,table{width:100%}
+
+/* TOP NAVIGATION */
+
+#ns {position: absolute; z-index: 1; width: 100%;}
+
+.nvg{background:url(../i/nvg.png) repeat-x scroll 0 100% transparent; height: 46px; padding: 0 0 0 190px}
+
+.nvg .s1 a{background:#e1e1e1;font-weight:700}
+
+.nvg li{background: url(../i/ns.li.png) no-repeat scroll 100% 48% transparent;}
+.nvg li b {color: #344f5f; font-weight: 700;}
+.nvg a{color:#fff;font-size:105%;font-weight:700;padding:9px 15px}
+.nvg a:hover{background:#e1e1e1;}
+
+
+
+/* DROPDOWN MENU TOPNAV */
+
+.nvg .s1 ul li a {background: #f4f4f4; box-shadow: 4px 4px 0 0 rgba(35, 35, 35, 0.1); width: 11em;}
+.nvg .s1 ul li a:hover {width: 11em; background:#e1e1e1; }
+
+.nvg ul li.s1 a  {width: 11em }
+.sf-sub-indicator {display: none}
+
+/*.nvg li ul, .nvg li.s1 ul { left: -999em; position: absolute; width: 13.5em; border-bottom: 1px solid rgba(35, 35, 35, 0.2); box-shadow: 4px 4px 0 0 rgba(35, 35, 35, 0.1);}*/
+
+
+.nvg ul li {background: #f4f4f4; display: block; width: 13.5em; }
+.nvg ul li a {display: block; width: 13.5em; cursor: pointer; }
+.nvg ul li a:hover {width: 10.7em}
+.nvg ul li a b {font-weight: normal; font-size: 90% }
+/*.nvg li:hover ul {left: auto; position: absolute; top: 35px;}*/
+
+/* SORT OTPTIONS */
+
+#cs a.sort-option {width: 100px; background-color: #f4f4f4; padding: 2px; color: #344f5f; font-weight: 700; border:1px solid #e8ecf2;}
+
+#cs a.sort-selected {background:#e1e1e1; text-decoration: none;}
+
+/*** ESSENTIAL STYLES ***/
+
+.nvg ul {
+	position:		absolute;
+	top:			-999em;
+	width:			13.5em; /* left offset of submenus need to match (see below) */
+}
+.nvg ul li {
+	width:			100%
+}
+.nvg li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.nvg li {
+	float:			left;
+	position:		relative;
+}
+.nvg a {
+	display:		block;
+	position:		relative;
+}
+.nvg li:hover ul,
+.nvg li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		999;
+}
+
+ul.nvg li:hover li ul,
+ul.nvg li.sfHover li ul {
+	top:			-999em;
+}
+ul.nvg li li:hover ul,
+ul.nvg li li.sfHover ul {
+	left:			13.5em; /* match ul width */
+	top:			0;
+}
+ul.nvg li li:hover li ul,
+ul.nvg li li.sfHover li ul {
+	top:			-999em;
+}
+ul.nvg li li li:hover ul,
+ul.nvg li li li.sfHover ul {
+	left:			13.5em; /* match ul width */
+	top:			0;
+}
+
+
+/* OPTIONS */
+#cs .c div.options {padding: 0 0 50px 0;}
+#cs .c div.options ul li {font-size:80%; float: left; padding: 2px 5px; text-decoration:none; white-space:nowrap;}
+#cs .c div.options ul li a:hover {color: Black; text-decoration:none;}
+#cs .c div.options legend { border: 1px solid #efefef; background-color: #f9f9f9; padding: 1px 3px; font-size: 80%; font-weight: normal; text-transform: uppercase; }
+#cs .c div.options form input { margin: 0 0 5px 0px; border: 1px solid #ccc; }
+#cs .c div.options form button { border: 1px solid #ccc; background-color: #f9f9f9; color: #888; height:20px;}
+
+/* LANGUAGE BUTTONS */
+
+.nvg li.lang {float: right; background: none;}
+.nvg .lang .en {background: url(../i/en-button.png) no-repeat scroll 0 -1px transparent; text-indent: -5000px; width: 12px; margin: 0 4px 0 0 }
+/*.nvg .lang .en:hover {background: url(../i/en-button-hov.png) no-repeat scroll 0 -1px transparent; width: 12px;}*/
+.nvg .lang .py {background: url(../i/py-button.png) no-repeat scroll 0 -1px transparent; text-indent: -5000px; width: 25px}
+/*.nvg .lang .py:hover {background: url(../i/py-button-hov.png) no-repeat scroll 0 -1px transparent; width: 25px}*/
+
+/* DEFINITION LIST */
+
+#cs dl {color: #333; font-size: 93%; font-family: arial, helvetica, sans-serif; margin: 0 0 15px 0}
+#cs dl dd {margin: 5px 0 5px 2px;}
+#cs dl dt {margin: 15px 0 0 0; font-weight: 700; }
+
+/* MAIN INSCRIPTION TEXT */
+#cs div.inscription_text {margin-left: 12.692em;}
+#cs div.inscription_text ul {list-style-type: none; padding-bottom: 11px;}
+#cs div.inscription_text li {float: left;}
+#cs div.inscription_text li a { display: block; background-color: #DEDEDE; padding: 7px; border: 0 none;}
+#cs div.inscription_text li a:hover {border: 0 none; background:#6e6e6e; color: #fff;}
+#cs div.inscription_text li a.selected {background-color: #6e6e6e; color: #fff;}
+#cs div.inscription_text div {background-color: #DEDEDE; padding: 5px; border: 2px solid #6e6e6e;}
+#cs div.inscription_text div.textpart {border: none; padding-right: 0;}
+
+#cs .inscription div.wrap {clear: both; max-width: 165px; border: 2px solid white;}
+#cs .inscription h2 {max-width: 165px; float:left;}
+#cs .inscription h2.part {float:left; text-decoration: underline;} 
+#cs .inscription h2.field {max-width: 165px; clear: left;}
+#cs .inscription dl {margin: 15px 0; font-size: 100%;}
+#cs .inscription dl dt {width: 165px; float: left; margin: 0; padding: 0 0 0.5em;}
+#cs .inscription .h2 {color:#285072;font:bold 125% arial, helvetica, sans-serif; padding: 0 0 2px 0;}
+#cs .inscription dl dd {margin: 0 0 0 165px; padding: 0 0 0.5em 0.5em;}
+#cs .inscription dl p {font-size: 100%;}
+
+#cs .details dl {padding: 5px 0 0 165px;}
+
+#cs .c ul.tabNav {margin-left: 0;}
+
+#cs div.inscription_text textarea {width: 99%; height: 98%; margin-left: auto; margin-right: auto;}
+
+
+/* APPARATUS */
+#cs .inscription .app {position: relative; padding: 0 0 0.5em; line-height: 1.65em;}
+#cs .inscription .comm, #cs .inscription .trans {padding: 0 0 0.5em;}
+
+
+/* LOGOS */
+
+#cs .logoMatrix {margin: 120px 0 0 0}
+#cs .logoMatrix ul {float: left; left: 50%; padding: 20px 0; position: relative;}
+#cs .logoMatrix ul li {float: left; margin: 0 40px 0 0; position: relative; right: 50%; background: none;}
+#cs .logoMatrix ul li a, #cs .logoMatrix ul li a:hover {border: 0 none}
+
+
+/* FOOTER */
+
+#fs{margin: 0}
+#fs .r1{background:#fff url(../i/fs.r1.png) 50% 0 no-repeat;overflow:hidden;position:relative;width:100%;}
+#fs .r2{background:#B9BDC1 url(../i/fs.r2.png) 0 0 repeat-x;overflow:hidden;padding:10px 20px;position:relative}
+#fs .r2 .gx{position:absolute;border:0 none;text-indent:-5000px;height:58px;right:20px;top:15px}
+#fs .r2 a{border-bottom:1px solid #5a6876;color:#5a6876;float:left;line-height:normal}
+#fs .r2 a:hover{border-bottom-color:#747e88;color:#747e88}
+#fs .r2 li{border-right:1px dotted #a1a18d;float:left;font-size:93%;margin:0 8px 0 0;padding:0 9px 0 0}
+#fs .r2 li.ix{border:0 none}
+#fs .r2 ul{line-height:1.55em;overflow:hidden;padding:5px 0}
+#fs p{color:#78828d;font-size:93%;line-height:1.8em}
+
+
+
+/* CSS FOR INSCRIPTIONS */
+
+.latinnum {
+    border-top: thin black solid;
+     }
+     
+.supraline {
+    border-top: thin black solid;
+     }
+     
+.previouslyread {
+    text-decoration: underline;
+     }
+     
+*[lang="la"] {
+    font-family: "GentiumAlt", "Gentium","Palatino Linotype", "Palatino", "Times New Roman", "Times", "Arial Unicode MS", serif;
+}
+
+*[lang="grc"] {
+    font-family: "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode", 
+    "Palatino Linotype", "Titus Cyberbit Basic", "Cardo", "Vusillus Old Face", "Alphabetum", "Galatia SIL", 
+    "Code 2000", "GentiumAlt", "Gentium", "Minion Pro", "GeorgiaGreek", "Vusillus Old Face Italic", 
+    "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon", 
+    "Verdana", "Tahoma";
+   }
+   
+.textpart {
+    /*left: 6em;*/
+    line-height: 1.4;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    padding-right: 2em;
+    margin-left: 4em;
+}
+
+.textpartnumber {
+    padding-right: 0.2em;
+    position: absolute;
+    font-weight: bold;
+    }
+    
+.linenumber {
+    /*left: -4em;*/
+    margin-left: -2em;
+    padding-right: 0.2em;
+    position: absolute;
+    }
+    
+.linenumberbroken {
+    left: -4em;
+    padding-right: 0.2em;
+    position: absolute;
+    color: red ;
+    text-decoration: blink ;
+    }
+    
+.petraeligature {
+    text-decoration: underline;
+    }
+    
+.underline {
+    text-decoration: underline;
+    }
+
+.italic {
+    font-style: italic;
+    }
+

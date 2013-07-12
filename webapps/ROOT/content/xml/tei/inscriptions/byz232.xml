@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Строительная надпись неизвестного</title>
+             <title xml:lang="en">Building inscription of an unknown</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz232</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>МСК</repository>
+                     <idno>инв. № отсутствует</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Museum "Sudak Fortress"</repository>
+                     <idno>Inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="#m7 #m6">Темпера на штукатурке.</material>
+                            <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Роспись на квадре стены с живописной рамкой. Обломан со всех сторон кроме правой; сколы на верхней и лицевой сторонах.</p>
+                           <p xml:lang="en">Painting on a wall block with a decorated frame. Broken on all sides, except the right; chipped on the top and front.</p>
+                           <dimensions>
+                              <height>17,0</height>
+                              <width>12,0</width>
+                              <depth>17,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within the frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>; буквы вытянутые по вертикали, маньеризованные. Лигатуры.  Стиль надписи:  между строк двойная желтая линия.</seg>
+                        <seg xml:lang="en">Dipinto; elongated manneristic letters. Ligatures. Style of inscription: a double yellow line between the lines of text.</seg>
+                        <height unit="cm">4,0
+                      .</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                         <seg xml:lang="en">Sugdea.</seg>
+                     </origPlace>
+                     <origDate notBefore="1401" notAfter="1500" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">XV в.</seg>
+                        <seg xml:lang="en">XV C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">сентябрь 2003</date>, <date when="2009-09"> сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Судак.</placeName>
+                        <rs type="circumstances">раскопки И. А. Баранова и В. В. Майко, 1993 г.</rs>
+                        <rs type="context">Монастырь на склоне горы Перчем.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">Excavations of I.A. Baranov and V.V. Mayko.</rs>
+                        <rs type="context">Monastery on the Mount Perçem slope.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Судак, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Sudak, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-04-12" who="NG">Greek lemmata corrected</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-13" who="AG">Eng. institution added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-09" who="AG">several lines translated, small corrections in metadata, bibliography tagged, tags in the Greek text corrected</change>
+          <change when="2012-06-20" who="AFS">added metadata and tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов, Джанов 2004--><ptr target="b0052"/>,  402–405, № <biblScope>1</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">… воздвигнут от</supplied> осно<supplied reason="lost">ваний храм святого великомученика и бесе</supplied>ребенника <supplied reason="lost">Пантелеимона (?) трудами такого-то (?) …</supplied></p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[...erected from the] foundations, <supplied reason="lost">the church of the saint martyr and pe</supplied>nniless [Panteleimon ,by the efforts of...]</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Строительные надписи в росписях характерны как для поздневизантийкого времени вообще, так и для Крыма (например, № 207, 225) и для Судака в частности (см. № 233). Их характер (выделение строк сложными линиями) позволяет отнести к таковым и наш памятник, тем более что многострочная надпись такого типа не характерна для подписей к фигурам на росписях. Сохранился лишь фрагмент надписи, однако ее сохранная правая сторона показывает, что граница эпиграфического поля проходила по правому ребру блока, у которого росписью покрыта была и правая грань, т.е. надпись помещалась слева от какого-то проема, скорее всего, входного. В этой связи важно отметить, что наш фрагмент был найден рядом с входом в храм.</p>
+                <p>На камне видны следы двух строк, причем верхняя обломана на половине высоты. Строки разделены двойной желтой линией, и судя по ее характеру, снизу помещалась еще буквы. К такому же выводу приводит нас и восстановление текста.</p>
+             <p>Ясно читаются 4 буквы: ΓΥΡ, причем почти точно это конец какого-то слова, совпадающий здесь с краем строки (в надписях краской возможность компоновать текст всегда выше, чем в высеченных в камне). Обратный словарь греческого языка (Kretschmer, Locker 1944, 478) дает для такого окончания лишь два варианта: слова, сложные с γῦρος, и слова, сложные с ἄργυρος. Изо всех них в контексте надписи о строительстве и посвящении храма подходящим кажется лишь эпитет ἀνάργυρος «бессеребренник», применяемый обычной к святым-врачам, бесплатно лечившим всех нуждающихся.  </p>
+                <p>Для византийской традиции чрезвычайно характерно почитание святых бессеребрянников по двое (напр., три пары Косм и Дамианов), так что святому врачу даже добавляют спутника для образования пары (напр., св. Кир (врач) и Иоанн (воин)). Пожалуй, что единственный из всех них в одиночку почитается только вмч. Пантелеимон: его спутник пресвитер Ермолай добавляется к нему в основном в молитвах и в программах росписей, но культ отдельного почитания великомученика был чрезвычайно распространен по всей империи: только в Константинополе начитывается 9 его храмов — и ни одного Пантелеимона и Ермолая (Janin 1969, 386–388). Если, действительно, в надписи стояло слово “бессеребренник”, то, скорее всего, оно означало того, кому данный храм (и монастырь) был посвящен.</p>
+                <p> Нельзя, конечно, исключать и другие возможности прочтения этих букв: напр., как часть родового имени Аргир, хорошо известного с Х в., однако к первому варианту нас склоняет и возможное прочтение первой строки, от которой остались нижние части трех букв: ΕΔΑ. С большой долей осторожности, учитывая вероятное значение следующей строки, мы предлагаем читать здесь terminus technicus ἀπ᾿ ἐδάφους, описывающий строительство (или возобновление) храма от самого низа. Поскольку археологические раскопки не выявили предыдущей фазы существования храма, то мы склонны считать, что в настоящей надписи речь идет о строительстве храма (а вероятно, и всего монастыря), в честь великомученика и бессеребренника Пантелеимона в XV в. Немногие сохранившиеся буквы близки по шрифту к другим крымским монументальным надписям в росписях, особенно к № 233.</p>
+                <p> Об археологическом контексте см. Виноградов, Джанов 2004.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" quantity="1" unit="line"/>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w lemma="ἀνεγείρω">ἀνηγέρθη</w> <note>e.g.</note></supplied> <w lemma="ἀπό"><supplied reason="lost">ἀπ᾿</supplied></w> 
+               <w lemma="ἔδαφος"><unclear>ἐ</unclear><unclear>δ</unclear>ά<supplied reason="lost">φ<lb n="3" break="no"/>ους</supplied></w> <w lemma="ὁ">ὁ</w> <w lemma="ναός">ναὸς</w> <w lemma="ὁ">τοῦ</w> <w lemma="ἅγιος">ἁγίου</w>
+               <w lemma="μεγαλομάρτυς">μεγαλομάρτυρος</w> <w lemma="καί">καὶ</w> <w lemma="ἀνάργυρος"><supplied reason="lost">ἀναρ</supplied>γύρου</w>
+               <lb n="4"/><supplied reason="lost"><persName type="divine" key="#kyrios"><name nymRef="Παντελεήμων">Παντελεήμονος</name></persName>
+               <note>e.g.</note> <w lemma="διά">διὰ</w> <w lemma="κόπος">κόπου</w> <w lemma="ὁ">τοῦ</w> <w lemma="δεῖνα">δεινὸς</w> <note>e.g.</note></supplied>
+               <gap reason="lost" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

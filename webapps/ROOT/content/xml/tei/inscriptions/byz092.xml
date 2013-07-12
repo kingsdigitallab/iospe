@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">База колонки</title>
+            <title xml:lang="en">Base of colonnette</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz092</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4545/09</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4545/09</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc12">
+                     <seg xml:lang="ru">Литургическая надпись.</seg>
+                     <seg xml:lang="en">Liturgic inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">База.</objectType>
+                           <objectType xml:lang="en">Base.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Четырехгранная база центральной колонки окна с орнаментированным круглым валиком (выс. 4 см) и углублением наверху (глубина 6 см). Обломан справа и сзади.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>11,0</height>
+                              <width>12,5</width>
+                              <depth>14</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1-f3, f6">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, фи с удлиненной вертикалью.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,4–6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1200" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">X–XII вв.</seg>
+                        <seg xml:lang="en">X–XII centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09">September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1909 г., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Северо-восток, квартал III, у подземного храма, засыпь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1909, excavations of R.Ch. Leper.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-23" who="AG">several lines translated, smal corrections</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2012-01-04" who="AG">updated</change>
+         <change when="2011-12-07" who="AG">small corrections, tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Cвет<supplied reason="lost">одавче, Тебе сла</supplied>ва (?), ами<supplied reason="lost">нь</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Light-giver, glory to you, amen.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись шла по четырем сторонам базы: она начиналась на передней стороне буквами φοτ (i.e. φωτ),т.е. словом φῶς «свет» в косвенном падеже или 
+               словом, производным от него, и заканчивалась на левой стороне словом «аминь». Перед последним видна альфа, а перед ней штрих, который может 
+               принадлежать лишь кси или дзете (для каппы он слишком пологий). Явно, что речь идет о какой-то литургической формуле. Наша реконструкция является 
+               гипотетичской: хорошо известна литургическая формула «Светодавче, слава Тебе» (окончание тропаря на Богоявление). По всей видимости, эта формула 
+               со словом «свет» соотносится с функций носителя — центральной колонки окна, возможно, церковного.</p>
+                <p>Наиболее близким к месту находки храмом была церковь над подземным храмом в квартале III. Наличие в храме подземной части могло актуализировать 
+                   по контрасту тему света в верхнем храме.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w>Φοτ<supplied reason="lost" cert="low">όδοτα</supplied></w>, <w lemma="σύ"><supplied reason="lost" cert="low">σοι</supplied></w> <w lemma="δόξα"><supplied reason="lost" cert="low">δο</supplied><unclear>ξ</unclear>α</w> <note>e.g.</note>, <w lemma="ἀμήν">ἀμή<supplied reason="lost">ν</supplied></w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

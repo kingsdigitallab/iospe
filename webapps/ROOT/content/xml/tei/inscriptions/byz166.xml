@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Строительная надпись неизвестных</title>
+            <title xml:lang="en">Building inscription of unknown persons</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz166</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno>14628</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno>14628</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon23">Капитель.</objectType>
+                           <objectType xml:lang="en">Capital.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Круглая капитель в виде плетенной корзинки с валиком. Обломан сверху и справа; сколы по поверхности.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>18,0</height>
+                        </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На валике.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы разной высоты, минускульные. Лигатура ипсилон-пи.</seg>
+                        <seg xml:lang="en">Graffito; </seg>
+                        <height unit="cm">0,6–1,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1179" notAfter="1179" evidence="указание-надписи">
+                        <seg xml:lang="ru">1179 г.</seg>
+                        <seg xml:lang="en">1179 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1984 г., раскопки В.А. Сидоренко.</rs>
+                        <rs type="context">Базилика у водохранилища.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1984, excavations of V.A. Sidorenko.</rs>
+                        <rs type="context">Basilica by the water reservoir.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Украина.</seg>
+                     <seg xml:lang="en">Simferopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2013-06-10" who="AG">bibliography, comment and apparatus updated</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-01" who="AL">several lines translated, editor added, bibliography tagged, tags corrected</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+         <change when="2012-03-13" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               
+                  <bibl n="L1"><!--Sidorenko 2010--><ptr target="b0407"/>, № <biblScope>18</biblScope></bibl>
+                  <bibl n="2" ><!--Виноградов 2011a--><ptr target="b0386"/>,  239–240, № <biblScope>12</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <p>
+               <app loc="1-2"><rdg resp="b0407">… Κ(ύρι)ε βο[ήθει] … </rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Возобновлено в Варзарах гра<supplied reason="lost">до…ми (?)</supplied> в 6687 году, 29 июля, <supplied reason="lost">в 7-ой</supplied> ин<supplied reason="lost">дикт</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+             <p>Renovated in Barzaroi by the town[...] in the year 6687, on the 29th of July, in [the 7th] indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> К моменту нашего первого издания надписи издание Сидоренко было нам неизвестно. 
+               Надпись занимает лишь одну сторону капители — по всей видимости, ту, что была обращена к 
+                зрителю. Резчик начал с более лапидарного шрифта (ср. форму альфы), но затем перешел, 
+                видимо, от привычки к писанию на пергамене, к курсиву.</p>
+                <p>1. Формула надписи известна в Северном Причерноморье только по № 5 (Херсон, 487–488 гг.). 
+                    Из близких по времени памятников с аналогичной формулой отметим надпись о возобновлении 
+                    стены из Месемврии 1059–1067 гг. (Beševliev 1964, № 159) Поскольку капитель происходит из 
+                    храма, надпись на ней, скорее всего, относится к возобновлению базилики, которая 
+                    археологически датируется то ли 2 пол. VI в. (Sidorenko 2010), то ли  VII–X вв. (Сидоренко 1991, 328–329) 
+                    Буквы в конце строки могут указывать на возобновление храма горожанами.</p>
+                <p>2. 29 июля 1179 г. было средой.</p>
+                <p>Варзары, как район Горного Крыма, упоминаются в № 169. Соответственно, оказывается, что 
+                    Варзарами называлась местность к западу от Мангупа, чему не противоречит и второе 
+                    упоминание этого топонима.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Mesembria Sidorenko</p>
+             <p>Barzaroi Mangup</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w><expan><abbr><supplied reason="lost">Ἀ</supplied><unclear>ν</unclear>ανεόθ</abbr><ex>η</ex></expan></w>
+               <w lemma="εἰς">ἠ<supplied reason="lost">ς</supplied></w> <w lemma="ὁ"><supplied reason="lost">τοὺς</supplied></w> 
+               <placeName key="varzar">Βαρζάρους</placeName> <w lemma="ὑπό">ὑπὸ</w> <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ο͂ν</ex></expan></w>
+               <w part="I">ἀσ<supplied reason="lost">τυ</supplied></w>
+               <gap reason="lost" extent="unknown" unit="character" cert="low"/>
+               <lb n="2"/><date> <w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w> <num value="6687">ςχπζ</num>,
+                  <w lemma="μείς"><supplied reason="lost">μηνὶ</supplied></w> <rs type="month" ref="iun"><w lemma="Ἰούνιος">Ἰουλήου</w></rs> <num value="29">κθ</num>, 
+                  <w><expan><abbr>ἠ<unclear>ν</unclear></abbr><supplied reason="lost"><abbr>δ</abbr><ex>ικτιῶνος</ex></supplied></expan></w>
+                  <num value="7"><supplied reason="lost">ζ</supplied></num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

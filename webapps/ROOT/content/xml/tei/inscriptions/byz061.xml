@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Стефана, Стефана и Христофора</title>
+            <title xml:lang="en">Gravestone of Stephanos, Stephanos and Christophoros</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz061</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4138</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4138</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon9">Крест.</objectType>
+                           <objectType xml:lang="en">Cross.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m4">песчаник.</material>
+                           <material xml:lang="en">Sandstone.</material>
+                           <p xml:lang="ru">Крест с удлиненным нижним рукавом и расширяющимися концами. Обломаны правые углы верхнего и нижнего рукавов, сколы по поверхности.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>42,0</height>
+                              <width>28,5</width>
+                              <depth>15,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Вся поверхность, кроме верхнего рукава креста.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной, бета с увеличенной нижней частью, ро, тау, ипсилон, фи удлиненные, ро полуромбовидное, ипсилон У-образный, фи ромбовидное.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,5–3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0301" notAfter="0500" precision="medium" evidence="палеография орфография">
+                        <seg xml:lang="ru">IV–V вв.</seg>
+                        <seg xml:lang="en">IV–V centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1890 г., раскопки К. К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Западный некрополь, склон балки, неизвестный склеп, у входа.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1890, excavations of  K. K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Western necropolis, bank of a gully, unknown vault, near the entrance.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-22" who="AG">translation of 'contex' corrected</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-18" who="AG">several lines translated, tags corrected</change>
+          <change when="2012-04-25" who="AFS">bibliography updated</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">date corrected, bibliography updated</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-11" who="AG">tagged, some corrections, 1 line translated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"> <!--Латышев 1892a--> <ptr target="b0124"/></bibl>
+               <bibl n="1.1"><!-- Сборник--><ptr target="b0132"/>,  <biblScope>24</biblScope></bibl>
+                <bibl n="2"><!--Виноградов 2010a--> <ptr target="b0399"/>,  </bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>О памяти и упокоении Стефана, Стефана и Христофора пресвитеров. Аминь.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For rememberance and rest of Stephanos, and Stephanos, and Christophoros, the presbyters. Amen.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+                <p>О находке см. Косцюшко-Валюжинич 1890, 35, рис. 19. Надпись экспонировалась на выставке «Византийский Херсон» (Чичуров 1991, 28, № 13).</p>
+                <p>1–2. О формуле надписи см. IV.3.F.a.</p>
+                <p>2–6. Имя Стефан встречается среди ранневизантийских надписей Крыма еще в № 269, Христофор — в № 79 из Херсона и, вероятно, в № 236 из 
+                   Сугдеи (всего в христианской эпиграфике около 12 раз, согласно PHI7 Database).</p>
+                <p>6–7. По своей фонетике данная надпись принадлежит переходной эпохе: эта иcпользуется для передачи как звука  e  (в πρησβυτέρον), так и  i  
+                   (в Χρηστοφόρου) .  Латышев датирует это явление VI–VII вв., но на Боспоре оно характерно для надписей IV–V вв. (ср. № 270, 271, 300)</p>
+                <p>Палеографически надпись близка № 4: ср. формы альфы, а также беты с увеличенной нижней частью. Датировка IV–V вв. указывает на то, что в эту 
+                   эпоху пресвитеры погребались еще вне городских стен (ср. Сорочан 2005, 1054). Наша надпись — единственная христианская эпитафия на Западном 
+                   некрополе.</p>
+                <p>Неясно, надо ли воспринимать погребение трех пресвитеров вместе (вся надпись выполнена одной рукой) как указание на их одновременную смерть 
+                   (например, насильственную или от эпидемии, ср. № 64), или как священническую могилу, памятник над которой был поставлен не сразу после 
+                   первого захоронения. Надгробия в виде крестов традиционно считаются особенностью Константинополя и его вифинских окрестностей 
+                   (см. Feissel 2006, № 181, 185, 396, 410).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Kostsyushko-Valyuzhinich Chichurov</p>
+             <p></p>
+             <p>Crimea Chersonesos Sugdea</p>
+             <p>Latyshev Bosporos Western necropolis</p>
+             <p>(Sorochan 2005, 1054)</p>
+             <p></p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ὑπέρ">Ὑπ<unclear>ὲ</unclear>ρ</w> <w lemma="μνήμη">μ<unclear>νή</unclear>μης</w> <w lemma="καί">καὶ</w>
+               <lb n="2"/><w lemma="ἀνάπαυσις"><unclear>ἀ</unclear>ν<unclear>α</unclear>παύσεος</w> <persName type="attested" ref="#person44"><name nymRef="Στέφανος">Στε<lb n="3" break="no"/>φάνου</name></persName> <w lemma="καί">καὶ</w> <persName type="attested" ref="#person45"><name nymRef="Στέφανος">Στεφ<lb n="4" break="no"/>άνου</name></persName> <w lemma="καί">καὶ</w> <persName type="attested" ref="#person46"><name nymRef="Χριστόφορος">Χρ<lb n="5" break="no"/>ηστοφό<lb n="6" break="no"/>ρου</name></persName> <w lemma="πρέσβυς">πρησβυ<lb n="7" break="no"/>τέρον</w>. <w lemma="ἀμήν">Ἀμὴν</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

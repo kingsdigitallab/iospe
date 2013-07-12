@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Трофима</title>
+            <title xml:lang="en">Gravestone of Trophimos</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz272</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Крупнозернистый известняк.</material>
+                           <material xml:lang="en">Coarse-grained limestone.</material>
+                           <p xml:lang="ru">Расширяется кверху вправо; на лицевой стороне посередине рельефное изображение латинского креста со слабо расширяющимися концами. Состояние неизвестно.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>50,0</height>
+                              <width>38,0</width>
+                              <depth>10,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Сверху, снизу и в углах между рукавами креста.</seg>
+                           <seg xml:lang="en">At the top, bottom and in corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломанной перекладиной, эпсилон, сигма и фи лунарные, тета и омикрон прямоугольные, 
+                           фи удлинено по вертикали.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a broken crossbar; lunar epsilon, sigma and phi; rectangular theta and omikron, elongated phi.</seg>
+                        <height unit="cm">2,6–6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Пантикапей.</seg>
+                         <seg xml:lang="en">Pantikapaion.</seg>
+                     </origPlace>
+                      <origDate notBefore="0301" notAfter="0400" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IV в.</seg>
+                          <seg xml:lang="en">IV century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2004-09">Сентябрь 2004</date>, <date when="2008-09"> сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>, <date when="2004-09">September 2004</date>, <date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Керчь.</placeName>
+                        <rs type="circumstances">Начало октября 1896 г., случайная находка.</rs>
+                        <rs type="context">Глинище, Братская ул. (совр. Фрунзе), д. 19, сад И.Г. Чернявского.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">Early October 1896, chance find.</rs>
+                        <rs type="context">Glinishche, Bratskaya Street (modern Frunze Str.), house 19, garden of I.G. Chernyavsky.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-21" who="AG">several lines translated, small corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">corrections in bibliography tagging</change>
+          <change when="2012-06-25" who="AL">small corrections in metadata and bibliography tagging</change>
+          <change when="2012-05-16" who="AFS">corrected metadata and text</change>
+          <change when="2012-03-20" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Сборник --><ptr target="b0132"/>, <biblScope>91b</biblScope></bibl>
+                <bibl n="2"><!-- Шкорпил 1898b--><ptr target="b0246"/>, 205–207, № <biblScope> 16</biblScope></bibl>
+                <bibl n="2.1"><!--КХНБ--><ptr target="b0068"/>, <biblScope>35</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Здесь лежит Трофим.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies Trophimos.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись найдена недалеко от № 257 и 264 и близка, как сообщает Шкорпил, им по шрифту. Камень был приобретен для Мелек-Чесменского музея.</p>
+                <p> 1–3. Относительно формулы см. IV.3.F.d.  </p>
+                <p>4–5. Имя Трофим было распространено не только на христианском Боспоре (ср. № 273, 277, 295, 310), где прежде не было известно, 
+                   но и в Херсоне (ср. комм. к № 49).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Shkorpil Melek-Chesmen </p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἐνθάδε">Ἐνθάδε</w>
+               <lb n="2"/><w lemma="κατάκειμαι">κατά<lb n="3" break="no"/>κειται</w>
+               <lb n="4"/><persName type="attested" ref="#person349"><name nymRef="Τρόφιμος">Τρό<lb n="5" break="no"/>φιμος</name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

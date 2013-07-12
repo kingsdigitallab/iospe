@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Строительная надпись …ци</title>
+            <title xml:lang="en">Building inscription of ...tsi</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz170</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno> А-В–1352</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno> А-В–1352</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефной рамкой. Обломан справа, сколы по всем краям.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>71,0</height>
+                              <width>35,0</width>
+                              <depth>13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы удлиненные, разной высоты. Альфа наклонной перекладиной и  верхним подчеркиванием и с петлей, бета с несомкунтыми угловатыми полукружиями, дзета минускульная, тета миндалевидная, йота с диерезой, мю с Т-образной средней частью, ню с зеркально повернутой диагональю, омега расширенная. Лигатуры пи-йота, тау-альфа; нерегулярная диакритика.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">5,0–8,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1391" notAfter="1401" evidence="указание-надписи">
+                        <seg xml:lang="ru">1391–1401 гг.</seg>
+                        <seg xml:lang="en">1391–1401 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1890 г., обследования Ф. А. Брауна.</rs>
+                        <rs type="context">Табана-Дере, вторая линия обороны, башня, вторично использован в кладке.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1890, survey of F.A. Braun.</rs>
+                        <rs type="context">Tabana-Dere, second line of defence, tower, reused in the masonry.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-04-11" who="NG">Greek lemmata corrected</change>
+          <change when="2012-10-16" who="AL">small corrections in Russian text</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-01" who="AG">1 line translated, small correction</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-06" who="AG">several lines translated, metadata corrected, bibliography and apparatus tagged, tags corrected, editor added</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+          <change when="2012-03-19" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Сборник--><ptr target="b0132"/>,  <biblScope>46</biblScope></bibl>
+               <bibl n="1.1"><!--Малицкий 1933--><ptr target="b0163"/>,  <biblScope>5–6</biblScope></bibl>
+               <bibl n="1.1.1"><!--Мыц 2009--><ptr target="b0184"/>, <biblScope>26</biblScope></bibl>
+               <bibl n="2"><!--Виноградов 2011a--><ptr target="b0386"/>, 242–244, № <biblScope>14</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <p>
+               <app loc="1-2"><!--<rdg resp="b0132">Ἐκ[τίσθη ὁ πύργος (?) οὗτος ἐκ β]άθρων</rdg> Latyshev et alii--></app> 
+               <app loc="3"><!--<rdg resp="b0132">[(καὶ) συνδρομῆς</rdg> Latyshev et alii--></app>
+               <app loc="4"><!--<rdg resp="b0132">Τζιτ[ζικίου</rdg> Latyshev et alii--></app>
+               <app loc="7"><rdg resp="b0132">Τοχταμ[...</rdg> <rdg resp="b0163 b0184">Τοχταμ[ύσου resp. ύση</rdg></app>
+            </p>
+         </div>
+         
+         <div type="translation" xml:lang="ru">
+            <p>Пос<supplied reason="lost">троено от о</supplied>снования трудами …ци сотни<supplied reason="lost">ка</supplied> в ц<supplied reason="lost">арствование</supplied> Тохтамы<supplied reason="lost">ша</supplied>, в <supplied reason="lost">6900 (или: 690.)</supplied> году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Built from the foundation, through the effort of [...]tzi, the centurion, in the r<supplied reason="lost">eign</supplied> of Tochtamys, in the year [6900 (or 690.)].</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Ф.А. Браун заметил в кладке башни мраморный торец и вынул надпись (Производство 
+                археологических раскопок в Таврической губернии // ОАК, 1890. С. 19–20, рис. 12). По всей 
+                видимости, она была реутилизована в турецкое время. Надпись издана Латышевым по 
+                фотографии Монастырлы, присланной А.И. Маркевичем: она хранится в ФА ИИМК РАН (О.710.83).  </p>
+                <p> Восстановить первоначальную длину довольно легко по 6-й строке, где ясно 
+                    восстанавливается слово β[ασιλείας].  </p>
+                <p> 1–2. Относительно формулы см. комм. к № 165. Здесь не остается места для обозначения 
+                    построенного объекта, однако такой пропуск объясним, поскольку камень был вмурован в стену 
+                    постройки, и читателю было понятно, к чему он относится. Такой нестандартный пропуск 
+                    вызван, вероятно, использованием для надписи spolium'а (в мангупской эпиграфике есть лишь 
+                    еще одна надпись на мраморе — № 171) — резчик вынужден был сокращать текст, чтобы 
+                    вписаться в рамки камня. В ОАК камень назван надписью о строительстве храма, Латышев 
+                    считал ее относящейся к башне (видимо, судя по месту вторичного использования).  </p>
+                <p> 3–4. Восстановление Латышевым имени строителя Чичикий не подтверждается камнем, на 
+                    котором в 4-й строке хорошо виден омикрон. Кроме того, заметен vacat после трех первых букв 
+                    4-й строки, а следующие тау и омикрон должны, судя по длине строки, относится уже к артиклю 
+                    перед словом «сотник». Имя строителя было типа Мунци из № 175.  </p>
+                <p> 4–5. Строитель является сотником, так же, как и Хуитан другой мангупской надписи XIV в. 
+                    (№ 168)  </p>
+                <p> 6–8. Для датировки надписи по правителю Латышев выделил 2 возможности: 
+                    Тохта (1291–1313) или Тохтамыш (1380–1406). В первой, однако, по историческим причинам 
+                    засомневался уже Малицкий. Кроме того, при нашей реконструкции длины строк здесь остается 
+                    возможность лишь для второго варианта (в первом случае неясной будет мю после имени, так 
+                    как для обозначения месяца здесь нет места). Судя по расстоянию между букв в 8-й строке, в 
+                    обозначении года нет места для омеги — после необходимой стигмы там могло стоять только 
+                    сампи и, возможно, еще один знак. Таким образом, надпись была выполнена в промежутке 
+                    между 1391 и 1401 гг. Исторический комм. см. в Мыц 2009, 25–31.</p>
+                <p>По своей палеографии надпись отличается как от более ранних памятников XIV в. 
+                    (№ 168–169), так и от феодоритской эпиграфики XV в. (первый представитель № 171 1403 г.). 
+                    Близость даты последней к возможной датировке данной надписи заставляет предпочесть для 
+                    последней скорее 1 пол. 1390-х гг.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>F.A. Braun Latyshev</p>
+             <p>1-2. Latyshev</p>
+             <p>3-4. Latyshev</p>
+             <p>6-8. Latyshev Tokhta Tokhtamysh Malitsky Myts</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="κτίζω">Ἐκ<supplied reason="lost">τίσθη</supplied></w> <w lemma="ἐκ"><supplied reason="lost">ἐκ</supplied></w> <w lemma="βάθρον"><supplied reason="lost">β</supplied><lb n="2" break="no"/>άθρων</w> <w lemma="διά"><supplied reason="lost">διὰ</supplied></w>
+               <lb n="3"/><w lemma="κόπος">κόπου</w> <persName type="attested" ref="#person223"><name><gap reason="lost" extent="unknown" unit="character"/><lb n="4" break="no"/><seg part="F">τζι</seg></name></persName> <w lemma="ὁ">τ<unclear>ο</unclear><supplied reason="lost">ῦ</supplied></w> <w lemma="ἑκατόνταρχος">ἑκα<lb n="5" break="no"/>τοντάρ<supplied reason="lost">χου</supplied></w>,
+               <lb n="6"/><w lemma="ἐπί">ἐπὶ</w> <w lemma="ὁ">τῆς</w> <w lemma="βασίλεια"><expan><abbr>β<supplied reason="lost">ασιλί</supplied></abbr><supplied reason="lost"><ex>ας</ex></supplied></expan></w>
+               <lb n="7"/><persName type="ruler" key="tokhtamysh"><name nymRef="Τοχταμής">Τοχταμ<unclear>ή</unclear><supplied reason="lost">ς</supplied></name></persName>.
+               <lb n="8"/><w lemma="ἐπί">ἐπὶ</w> <date><w lemma="ἔτος">ἔτους</w> <num value="6900"><app type="alternative"><lem><supplied reason="lost">ςϠ</supplied></lem>
+                  <rdg><supplied reason="lost">ςϠ</supplied><gap reason="lost" quantity="1" unit="character"/></rdg></app></num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

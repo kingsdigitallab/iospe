@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие <certainty cert="low" locus="value" match=".."/> неизвестного</title>
+             <title xml:lang="en">Gravestone <certainty cert="low" locus="value" match=".."/> of an unknown</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz127</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="1">Funerary inscription.</seg>
+                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="2">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Неизвестен.</objectType>
+                           <objectType xml:lang="en">Unknown.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение латинского креста с раздваивающимися концами. Состояние неизвестно.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">Над крестом.</seg>
+                           <seg xml:lang="en">Above the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Ипсилон прогнутый. Лигатура ипсилон-сигма.</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="1381" notAfter="1382" evidence="указание-надписи">
+                        <seg xml:lang="ru">1381–1382 гг.</seg>
+                        <seg xml:lang="en">1381–1382 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="1382" notAfter="1482" evidence="указание-надписи">
+                        <seg xml:lang="ru">1382–1482 гг.</seg>
+                        <seg xml:lang="en">1382–1482 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Высокое<certainty locus="value" match=".." cert="low"/>.</placeName>
+                        <rs type="circumstances">Лето 1898 г., обследования А. Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe<certainty locus="value" match=".." cert="low"/>.</placeName>
+                        <rs type="circumstances">Summer of 1898, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-10-16" who="AL">small corrections in Russian text</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-30" who="AG">editor added</change>
+         <change when="2012-05-29" who="AG">small correction</change>
+         <change when="2012-04-30" who="AG">several lines translated</change>
+         <change when="2012-03-07" who="AG">corrections in metadata, bibliography and apparatus tagged, tags in the Greek text corrected</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!--Латышев 1898a--><ptr target="b0134"/>, 243, № <biblScope>64з</biblScope></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Латышев 1898a--><ptr target="b0134"/>, 243, № <biblScope>64з</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="1">
+             <p>
+               <app loc="2"><rdg resp="b0134">ςϠ..'</rdg></app>
+            </p>
+         </div>
+         <div type="apparatus" n="2">
+             <p>
+               <app loc="1"> <rdg resp="b0134">Χ[ρ(ιστός)</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>… в 6900 году.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Иисус Х<supplied reason="lost">ристос</supplied> побеждает.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>...in the year 6900.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Jesus Ch<supplied reason="lost">rist</supplied> is victorious.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Надпись издана Латышевым по эстампажу Бертье-Делагарда. Из публикации Латышева 
+                   остается непонятным, относится ли эта надпись, как и предыдущие, к Керменчику. 
+                   Судя по всему, речь идет о нижней части надгробия.</p>
+                <p> 2. Ширина камня не оставляет, вопреки Латышеву, места для букв после сампи. И, 
+                    действительно, дата 1381–1382 гг. совпадает с датой № 124 с таким же изображением креста с 
+                    надписью «Иисус Христос побеждает».  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p>1. Неясно, почему Латышев предлагает восстанавливать после хи ро, а не сигму, называя 
+                   такое сокращение, к тому же, типичным: возможно, это описка. Относительно написания 
+                   ΣΙ вм. ΙΣ см. комм. к № 213.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Latyshev Bertye-Delagard Kermenchik</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Latyshev</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+                  <lb n="2"/><date><w lemma="ἔτος"><unclear>ἔ</unclear>τους</w> <num value="6900">ς<unclear>Ϡ</unclear></num></date>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><name><choice><sic>ΣΙ</sic><corr><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></corr></choice></name> <name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><supplied reason="lost"><abbr>ς</abbr></supplied></expan></name></persName>
+                  <lb n="2"/><w lemma="νικάω">νικᾷ</w>
+                  <!--Orig.: 1: ΣΙ-->
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
