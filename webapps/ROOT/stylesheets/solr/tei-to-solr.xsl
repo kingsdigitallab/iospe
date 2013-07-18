@@ -3,6 +3,8 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../../kiln/stylesheets/solr/tei-to-solr.xsl" />
 
+  <xsl:import href="../common/conversions.xsl" />
+
   <xd:doc scope="stylesheet">
     <xd:desc>
       <xd:p><xd:b>Created on:</xd:b> Oct 18, 2010</xd:p>

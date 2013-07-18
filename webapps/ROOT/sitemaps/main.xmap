@@ -22,6 +22,7 @@
       </map:match>
     </map:pipeline>
 
+
     <map:pipeline id="local-images">
       <map:match id="local-images-gif" pattern="images/**.gif">
         <map:read mime-type="image/gif" src="../content/images/{1}.gif" />
@@ -52,14 +53,14 @@
           <map:when test="ru">
             <map:aggregate element="aggregation" label="content">
               <map:part src="cocoon://_internal/menu/main.ru.xml" />
-              <map:part src="cocoon://_internal/metadata/files.xml" />
+              <map:part src="cocoon://internal/metadata/files.xml" />
               <map:part src="cocoon:/facet-search/{1}/{2}/{3}/{4}/" />
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation" label="content">
               <map:part src="cocoon://_internal/menu/main.xml" />
-              <map:part src="cocoon://_internal/metadata/files.xml" />
+              <map:part src="cocoon://internal/metadata/files.xml" />
               <map:part src="cocoon:/facet-search/{1}/{2}/{3}/{4}/" />
             </map:aggregate>
           </map:otherwise>
@@ -95,7 +96,7 @@
       <map:match pattern="indices/index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
           <!-- Determine first available letters -->
           <map:part element="attested"
             src="cocoon:/getFirstLetter/attested:*" />
@@ -680,8 +681,8 @@
       <map:match pattern="corpora/*/index-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/landings/{1}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/landings/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -695,8 +696,8 @@
       <map:match pattern="corpora/*/index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/landings/{1}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/landings/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -718,8 +719,8 @@
       <map:match pattern="corpora/*/introduction-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/introductions/{1}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/introductions/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -733,8 +734,8 @@
       <map:match pattern="corpora/*/introduction.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/introductions/{1}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/introductions/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -748,8 +749,8 @@
       <map:match pattern="index-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/index.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/index.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -763,8 +764,8 @@
       <map:match pattern="index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/index.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/index.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -777,7 +778,7 @@
       <map:match pattern="*-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
           <map:part src="xml/alists/bibliography.xml" element="bib"/>
           <map:part src="xml/alists/criteria.xml" element="crit"/>
           <map:part element="prev_inscr"
@@ -788,7 +789,7 @@
           <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/> <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
-          <map:part src="xml/content/inscriptions/{1}.xml" element="inscription" label="tei"/>
+          <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"/>
         </map:aggregate>
         <map:transform src="../stylesheets/inscription.xsl">
           <map:parameter name="filedir" value="." />
@@ -802,7 +803,7 @@
       <map:match pattern="*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
           <map:part src="xml/alists/bibliography.xml" element="bib"/>
           <map:part src="xml/alists/criteria.xml" element="crit"/>
           <map:part element="prev_inscr"
@@ -813,7 +814,7 @@
           <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/> <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
-          <map:part src="xml/content/inscriptions/{1}.xml" element="inscription" label="tei"/>
+          <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"/>
         </map:aggregate>
         <map:transform src="../stylesheets/inscription.xsl">
           <map:parameter name="filedir" value="." />
@@ -824,15 +825,15 @@
       </map:match>
 
       <map:match pattern="*.xml">
-        <map:generate src="xml/content/inscriptions/{1}.xml"/>
+        <map:generate src="../content/xml/tei/inscriptions/{1}.xml"/>
         <map:serialize type="xml" />
       </map:match>
 
       <map:match pattern="inscriptions/index-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/nadpisi/index.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/nadpisi/index.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -846,8 +847,8 @@
       <map:match pattern="inscriptions/index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/nadpisi/index.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/nadpisi/index.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="." />
@@ -860,8 +861,8 @@
       <map:match pattern="doc/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/doc/{1}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/doc/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/doc.xsl">
           <map:parameter name="filedir" value="{1}" />
@@ -874,8 +875,8 @@
       <map:match pattern="**/*-ru.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.ru.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/{1}/{2}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/{1}/{2}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="{1}" />
@@ -889,8 +890,8 @@
       <map:match pattern="**/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml" />
-          <map:part src="cocoon://_internal/metadata/files.xml" />
-          <map:part src="xml/content/{1}/{2}.xml" label="tei" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/{1}/{2}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="../stylesheets/defaults.xsl">
           <map:parameter name="filedir" value="{1}" />
@@ -947,13 +948,13 @@
       </map:match>
 
       <map:match pattern="stripNameDate/*">
-        <map:generate src="xml/content/inscriptions/{1}"/>
+        <map:generate src="../content/xml/tei/inscriptions/{1}"/>
         <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
 
       <map:match pattern="v_epidoc/*">
-        <map:generate src="xml/content/inscriptions/{1}"/>
+        <map:generate src="../content/xml/tei/inscriptions/{1}"/>
         <map:transform src="../stylesheets/epidoc-views/epidoc.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
