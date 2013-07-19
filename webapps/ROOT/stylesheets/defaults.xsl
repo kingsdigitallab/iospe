@@ -413,16 +413,16 @@
   </xsl:template>
 
   <xsl:template name="xmv:css">
-    <link href="{$xmp:assets-path}/c/a.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="{$xmp:assets-path}/s/superfish/css/superfish.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link href="{$xmp:assets-path}/c/s.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{$kiln:assets-path}/styles/a.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{$kiln:assets-path}/scripts/superfish/css/superfish.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{$kiln:assets-path}/styles/s.css" media="screen, projection" rel="stylesheet" type="text/css" />
   </xsl:template>
 
   <xsl:template name="xmv:script">
-    <script src="{$xmp:assets-path}/s/jquery-1.10.2.min.js" type="text/javascript">&#160;</script>
-    <script src="{$xmp:assets-path}/s/superfish/js/hoverIntent.js" type="text/javascript">&#160;</script>
-    <script src="{$xmp:assets-path}/s/superfish/js/superfish-1.7.4.js" type="text/javascript">&#160;</script>
-    <script src="{$xmp:assets-path}/s/c.js" type="text/javascript">&#160;</script>
+    <script src="{$kiln:assets-path}/scripts/jquery-1.10.2.min.js" type="text/javascript">&#160;</script>
+    <script src="{$kiln:assets-path}/scripts/superfish/js/hoverIntent.js" type="text/javascript">&#160;</script>
+    <script src="{$kiln:assets-path}/scripts/superfish/js/superfish-1.7.4.js" type="text/javascript">&#160;</script>
+    <script src="{$kiln:assets-path}/scripts/c.js" type="text/javascript">&#160;</script>
   </xsl:template>
 
   <xsl:template name="formatInscrNum">

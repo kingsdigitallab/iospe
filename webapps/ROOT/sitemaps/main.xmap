@@ -23,6 +23,7 @@
     </map:pipeline>
 
 
+
     <map:pipeline id="local-images">
       <map:match id="local-images-gif" pattern="images/**.gif">
         <map:read mime-type="image/gif" src="../content/images/{1}.gif" />
@@ -35,6 +36,11 @@
       <map:match id="local-images-png" pattern="images/**.png">
         <map:read mime-type="image/png" src="../content/images/{1}.png" />
       </map:match>
+
+      <map:match pattern="favicon.ico">
+        <map:read mime-type="image/x-icon" src="../assets/images/favicon.ico"/>
+      </map:match>
+
     </map:pipeline>
 
 
