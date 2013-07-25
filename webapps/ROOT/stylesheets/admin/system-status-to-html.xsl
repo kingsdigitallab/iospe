@@ -26,51 +26,55 @@
        Adapted from Cocoon's status2html.xslt. -->
 
   <xsl:template match="status:statusinfo">
-    <h1>
+    <h2>
       <xsl:value-of select="@status:host" />
       <xsl:text> - </xsl:text>
       <xsl:value-of select="@status:date" />
-    </h1>
-    <h2>Apache Cocoon <xsl:value-of select="@status:cocoon-version"/></h2>
+    </h2>
+    <h3>Apache Cocoon <xsl:value-of select="@status:cocoon-version"/></h3>
 
-    <xsl:apply-templates />
-
-    <h2>XSLT Processor</h2>
-
-    <ul>
-      <li>
-        <span class="description">XSLT Version:</span>
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="system-property('xsl:version')"/>
-      </li>
-      <li>
-        <span class="description">Vendor:</span>
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="system-property('xsl:vendor')"/>
-      </li>
-      <li>
-        <span class="description">Vendor URL:</span>
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="system-property('xsl:vendor-url')"/>
-      </li>
-
-      <!--Add Xalan / Xerces information using custom Xalan extension
-          (if it's present). -->
-      <xsl:if test="function-available('xalan:checkEnvironment')">
-        <li><xsl:apply-templates select="xalan:checkEnvironment()"/></li>
-      </xsl:if>
-    </ul>
+    <div class="section-container vertical-tabs"
+         data-section="vertical-tabs">
+      <xsl:apply-templates />
+      <xsl:call-template name="xslt-processor" />
+    </div>
   </xsl:template>
 
   <xsl:template match="status:group">
-    <h2><xsl:value-of select="@status:name" /></h2>
-    <ul><xsl:apply-templates select="status:value" /></ul>
-    <xsl:apply-templates select="status:group" />
+    <section>
+      <p class="title system-status-title" data-section-title="">
+        <a href="#">
+          <xsl:choose>
+            <xsl:when test="starts-with(@status:name,
+                            'org.apache.cocoon.components.store.impl.')">
+              <xsl:value-of select="substring-after(@status:name,
+                                    'org.apache.cocoon.components.store.impl.')" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="@status:name" />
+            </xsl:otherwise>
+          </xsl:choose>
+        </a>
+      </p>
+      <div class="content" data-section-content="">
+        <xsl:if test="status:value">
+          <ul class="no-bullet">
+            <xsl:apply-templates select="status:value" />
+          </ul>
+        </xsl:if>
+        <xsl:if test="status:group">
+          <div class="section-container vertical-tabs"
+               data-section="vertical-tabs">
+            <xsl:apply-templates select="status:group" />
+          </div>
+        </xsl:if>
+      </div>
+    </section>
   </xsl:template>
 
   <xsl:template match="status:value">
     <li>
-      <span class="description">
+      <span class="system-status-name">
         <xsl:value-of select="@status:name" />
         <xsl:text>: </xsl:text>
       </span>
@@ -122,21 +126,53 @@
 
   <!-- Process Xalan extension output -->
   <xsl:template match="checkEnvironmentExtension">
-    <h2>Xerces, Xalan</h2>
+    <h3>Xerces, Xalan</h3>
     <ul>
       <xsl:apply-templates select="EnvironmentCheck/environment/item[starts-with(@key, 'version.')]" />
-</ul>
+    </ul>
   </xsl:template>
 
   <xsl:template match="item">
-    <li style="width: 40%">
-      <span class="description">
+    <li>
+      <span class="system-status-name">
         <xsl:value-of select="@key" />
         <xsl:text>:</xsl:text>
       </span>
       <xsl:text> </xsl:text>
       <xsl:value-of select="." />
     </li>
+  </xsl:template>
+
+  <xsl:template name="xslt-processor">
+    <section>
+      <p class="title system-status-title" data-section-title="">
+        <a href="#">XSLT Processor</a>
+      </p>
+      <div class="content" data-section-content="">
+        <ul class="no-bullet">
+          <li>
+            <span class="system-status-name">XSLT Version:</span>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="system-property('xsl:version')"/>
+          </li>
+          <li>
+            <span class="system-status-name">Vendor:</span>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="system-property('xsl:vendor')"/>
+          </li>
+          <li>
+            <span class="system-status-name">Vendor URL:</span>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="system-property('xsl:vendor-url')"/>
+          </li>
+          <!--Add Xalan / Xerces information using custom Xalan
+               extension (if it's present). -->
+          <xsl:if test="function-available('xalan:checkEnvironment')">
+            <li><xsl:apply-templates select="xalan:checkEnvironment()"/></li>
+          </xsl:if>
+        </ul>
+      </div>
+    </section>
   </xsl:template>
 
 </xsl:stylesheet>

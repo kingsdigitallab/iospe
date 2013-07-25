@@ -14,17 +14,16 @@
   <kiln:child>
     <kiln:block name="title">Solr index result for all files</kiln:block>
 
-    <kiln:block name="js">
-      <kiln:super />
-      <script src="{$kiln:assets-path}/scripts/admin.js">&#160;</script>
-    </kiln:block>
-
     <kiln:block name="header">
-      <h1>Kiln Admin: Solr index result for all files</h1>
+      <h1>Solr index result for all files</h1>
     </kiln:block>
 
     <kiln:block name="content">
-      <xsl:apply-templates select="/aggregation/*" mode="solr" />
+      <div class="row">
+        <div class="large-12 columns">
+          <xsl:apply-templates select="/aggregation/*" mode="solr" />
+        </div>
+      </div>
     </kiln:block>
   </kiln:child>
 
