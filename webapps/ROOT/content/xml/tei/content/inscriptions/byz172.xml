@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Строительная надпись Алексея</title>
+            <title xml:lang="en">Building inscription of Alexios</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz172</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>  А-В–1355</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno>  А-В–1355</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon32">Дверная притолока.</objectType>
+                           <objectType xml:lang="en">Door lintel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение 2 щитов с монограммой и гербом наверху и орнаментальной вставкой справа; справа внизу орнаментальная розетка и фигурный угол проема. Расколот на 2 части, обломан слева.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>36,5</height>
+                              <width>80,0</width>
+                              <depth>25,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Между щитами.</seg>
+                           <seg xml:lang="en">Between coats of arms.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы рельефные, удлиненные и маньеризованные. Альфа и лямбда с верхним штрихом, бета с несомкнутыми угловатыми полукружиями, тета с выступающей перекладиной, мю с Т-и Y-образной серединой.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">5,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1425" notAfter="1425" evidence="указание-надписи">
+                        <seg xml:lang="ru">1425 г.</seg>
+                        <seg xml:lang="en">1425 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1912 г., раскопки Р. Х. Лепера.</rs>
+                        <rs type="context">Дворец, башня, насыпь с южной стороны, верхний слой.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1912, excavations of R.Ch. Leper.</rs>
+                        <rs type="context">Palace, tower, banket ground on the southern side, upper layer.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-10-30" who="AL">small corrections in Russian text</change>
+         <change when="2012-09-24" who="AG">keys added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-01" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-11" who="AG">editor added</change>
+         <change when="2012-06-08" who="AG">several lines translated, tags corrected, small corrections in metadata</change>
+          <change when="2012-04-17" who="AL">translated a line, bibliography tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><ptr target="b0160"/><!-- Лепер 1913 -->78, № 6, рис. <biblScope>6–7</biblScope></bibl>
+                <bibl n="1.1"><ptr target="b0157"/><!-- Латышев 1918b --> 10, № <biblScope>7</biblScope></bibl>
+                <bibl n="2"><ptr target="b0029"/><!-- Бертье-Делагард 1918 --> <biblScope>30–31</biblScope></bibl>
+                <bibl n="3"><ptr target="b0163"/><!-- Малицкий 1933--> <biblScope>33–35</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <!--<app>1: οἶκος Loeper; πύργος (?) Latyshev et alii</app> -->
+               <app loc="2"><rdg resp="b0029 b0163">καὶ σὺν] ἐν</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Построена э</supplied>та <supplied reason="lost">башня (?)</supplied> вместе с двор<supplied reason="lost">цом и с 
+               благос</supplied>ловенной крепость<supplied reason="lost">ю, которая ныне видима, во</supplied> дни господина Ал<supplied reason="lost">ексея, 
+                  господаря город</supplied>а Феодоро и по<supplied reason="lost">морья, в окт</supplied>ябре 6934 года.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Th<supplied reason="lost">is tower was built</supplied> together with the palace <supplied reason="lost">and the bles</supplied>sed fortress, <supplied reason="lost">which can be seen today</supplied>, in the days of Al[exios, ruler of
+               the city of] Theodoro and its coast[line, in Oct]ober 6934.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Судя по форме камня, надпись находилась над входом здания, вероятно, самого дворца, о 
+                котором идет в ней речь. Возможно, что это был вход именно в башню-донжон дворца, около 
+                которой найден камень.   </p>
+                <p> 1. Формула восстановлена Лёпером по аналогии с № 214.  </p>
+                <p> 2. Поправка Бертье-Делагарда не учитывает длины пропавшей части строки и противоречит 
+                    формуле надписи № 214. Наличие идентичного упоминания о строительстве «крепости» в № 
+                    214 1427 г. (если только эта надпись — мангупская) заставляет предположить, что в 1425 г. к
+                    репость была отстроена еще не целиком. Эпитет «благословенный» в византийской эпиграфике 
+                    прилагается к епископии (Feissel 1983, № 215) и дому (IGLS 21, 84); ср. эпитеты Пойки 
+                    «почтенная» (№ 169) и Феодоро «богосхранимый» (№ 13, 163, 168).</p>
+                <p> 3. Уточнение «который (или: как) ныне видим» является особенностью феодоритской 
+                    эпиграфики (см. № 214, 226).</p>
+                <p> 3–4. Алексей, владетель Феодоро, известен из различных источников, в т.ч. с тем же титулом 
+                    из другой своей строительной надписи 1427 г. (№ 214; так же, вероятно, дверная притолока) 
+                    Ударение в названии Феодоро реконструируется по № 226.</p>
+                <p> 5. Исторический анализ см. в: Мыц 2009, 130–134.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1. Leper</p>
+             <p>2. Bertye-Delagard Poeka Theodoro</p>
+             <p>3-4. Theodoro</p>
+             <p>5. Myts</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><supplied reason="lost"><w lemma="κτίζω">Ἐκτίσθη</w> <w lemma="ὁ">ὁ</w> <w lemma="πύργος">πύργος</w> <note>(?)</note></supplied> <w lemma="οὗτος"><supplied reason="lost">οὗ</supplied>τος</w> <w lemma="μετά">μετὰ</w> <w lemma="ὁ">τοῦ</w> <w lemma="παλάτιον">παλατ<lb n="2" break="no"/><supplied reason="lost">ίου</supplied></w> <supplied reason="lost"><w lemma="καί">καὶ</w> <w lemma="σύν">σὺν</w> <w lemma="ὁ">τῷ</w></supplied> <w lemma="εὐλογέω"><supplied reason="lost">εὐλ</supplied>ογημένῳ</w> <w lemma="κάστρον">κάστρ<lb n="3" break="no"/><supplied reason="lost">ῳ</supplied></w>, <supplied reason="lost"><w lemma="ὁ">ὃ</w> <w lemma="νῦν">νῦν</w> <w lemma="ὁράω">ὁρᾶται</w>, <w lemma="ὑπό">ὑπὸ</w></supplied> <w lemma="ἡμέρα">ἡμερῶν</w> <w lemma="κύριος">κυροῦ</w> <persName type="ruler" key="alexios1Th"><name nymRef="Ἀλέξιος">Ἀλ<lb n="4" break="no"/><supplied reason="lost">εξίου</supplied></name> <w lemma="αὐθέντης"><supplied reason="lost">αὐθέντου</supplied></w> <w lemma="πόλις"><supplied reason="lost">πόλεω</supplied>ς</w> <placeName key="theodoros">Θεοδώρους</placeName> <w lemma="καί">καὶ</w> <w lemma="παραθαλάσσιος">πα<lb n="5" break="no"/><supplied reason="lost">ραθαλασσίας</supplied></w></persName>, <w lemma="μείς"><supplied reason="lost">μηνὶ</supplied></w> <rs type="month" ref="oct"><w lemma="Ὀκτώβριος"><supplied reason="lost">Ὀκτ</supplied>οβρίῳ</w></rs>, <w lemma="ἔτος">ἔτους</w> <num value="6934">ςϠλδ</num>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Николая</title>
+            <title xml:lang="en">Gravestone of Nikolas</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz193</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Неизвестен.</objectType>
+                           <objectType xml:lang="en">Unknown.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Неизвестно.</p>
+                           <p xml:lang="en">Unknown.</p>
+                           <dimensions>
+                              <height>15</height>
+                              <width>24</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                   <layoutDesc>
+                      <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы угловатые. Дельта и ню минускульные. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary; angular letters. Delta and nu minuscule. Ligature: omikron-ypsilon.</seg>
+                        <height unit="cm">1,25.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p024">
+                        <seg xml:lang="ru">Тепе-Кермен.</seg>
+                        <seg xml:lang="en">Tepe-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1400" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XV centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Тепе-Кермен.</placeName>
+                        <rs type="circumstances">1895 г., обследования Ю. А. Кулаковского.</rs>
+                        <rs type="context">« Храм с баптистерием».</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Tepe-Kermen.</placeName>
+                        <rs type="circumstances">1895, survey of Yu.A. Kulakovsky.</rs>
+                        <rs type="context">"Church with baptistery".</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-25" who="AG">corrections in metadata, several lines translated, tags corrected, apparatus tagged</change>
+          <change when="2012-06-19" who="AL">editor tag inserted, bibliography tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Сборник --><ptr target="b0132"/>,  <biblScope>51а</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="3"><rdg resp="b0132">μ(η)ν(ὸς)</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Николай 15 октября.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Nekolas, on the 15th of October.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> По мнению Кулаковского, надпись была кем-то принесена в храм. </p>
+                <p> 1–2. Относительно формулы см. IV.3.F.e.</p>
+                <p> 2–3. Относительно имени см. комм. к № 48.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>According to Kulakovsky, someone moved the inscription to the church.
+            1-2. On the formula, see IV.3.F.e.
+            2-3. On the formula, see commentary to byz.48.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκημήθη</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλο<supplied reason="lost">ς</supplied></w>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> <persName type="attested"><name nymRef="Νικόλας">Νηκό<lb n="3" break="no"/>λας</name></persName> <date><w lemma="μείς"><expan><abbr>μ</abbr><ex>η</ex><abbr>ν</abbr><ex>ὶ</ex></expan></w> <rs type="month" ref="oct"><w lemma="Ὀκτώβριος">Ὀκτο<lb n="4" break="no"/>βρίου</w></rs> <num value="15">ιε</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

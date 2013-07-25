@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Евсевия</title>
+            <title xml:lang="en">Gravestone of Eusebios</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz285</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>КМЗ</repository>
+                     <idno>КЛ–539</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Historical and Archeological Museum of Kerch State Historical and Cultural Preserve</repository>
+                     <idno>КЛ–539</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents> 
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Мягкий известняк.</material>
+                           <material xml:lang="en">Soft limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка и апицированный греческий крест с альфой и омегой на боковых рукавах; 
+                              на правой боковой стороне отверстие для крепления (вторичное использование ?); следы охры. Буквы отчасти выветрились.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>47,5</height>
+                              <width>44,0</width>
+                              <depth>20,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, эпсилон, омикрон и омега прямоугольные.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a broken crossbar, rectangular epsilon, omikron and omega.</seg>
+                        <height unit="cm">3,0–4,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Пантикапей.</seg>
+                         <seg xml:lang="en">Pantikapaion.</seg>
+                     </origPlace>
+                     <origDate notBefore="0437" notAfter="0437" evidence="указание-надписи">
+                        <seg xml:lang="ru">437 г.</seg>
+                        <seg xml:lang="en">437 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">Сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Керчь.</placeName>
+                        <rs type="circumstances">До ноября 1892 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">Before November 1892.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Керчь, РА Крым, Украина.</seg>
+                     <seg xml:lang="en">Kerch, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-22" who="AG">some corrections, several lines translated</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">small corrections in metadata</change>
+          <change when="2012-06-25" who="AL">small corrections in metadata, bibliography and Greek text-tagging</change>
+          <change when="2012-05-21" who="AFS">corrected metadata and tagging in greek text</change>
+         <change when="2012-03-13" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1895a--><ptr target="b0130"/>, 61–62, № <biblScope> 66</biblScope></bibl>
+               <bibl n="1.1"><!-- Сборник 86--><ptr target="b0132"/>,  </bibl>
+               <bibl n="1.1.1"><!-- КХНБ 13--> <ptr target="b0068"/>,  </bibl>
+               <bibl n="1.1.2"><!-- Виноградов 1987-->234, № <biblScope> 1</biblScope></bibl>
+                <bibl n="1.1.2.1"><!-- SEG XXXXVIII--><bibl xml:id="seg"><title>SEG</title></bibl><biblScope>992</biblScope></bibl>
+               <bibl n="2"><!-- Vinogradov 2007--><ptr target="b0376"/>,  263<biblScope>№ 10</biblScope>.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>В 733 году, в месяце дистре. Памятник Евсевия диакона.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>In the year 733, in the month of Dystros. Of Eusebios, deacon.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Камень подарен музею в ноябре 1892 г. купцом Букзелем, который сообщил, что тот найден в Керчи, но не сказал, где именно. По форме памятник 
+               похож на № 257.</p>
+                <p> 1–3. Датировка в начале эпитафии встречается в боспорской эпиграфике лишь однажды (КБН 734, 285 г.), причем так же, по году и по месяцу без числа. 
+                   Месяц дистр примерно соответствует марту.</p>
+                <p> 4–5. Относительно формулы см. IV.3.F.h.  </p>
+                <p> 6–7. Имя Евсевий встречается в христианской эпиграфике Северного Причерноморья также в № 18 (Херсонес). </p>
+                <p>7–8. Указание на церковный сан, частое для христианской эпиграфики (только диаконов PHI7 Database приводит ок. 340), в Северном Причерноморье 
+                   встречается в ранневизантийское время еще только в № 61 (Херсонес).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Bouksel </p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="part">
+                <ab>
+                    <lb n="1"/><date><w lemma="ἔτος">Ἔτους</w> <num value="733">γλψ</num>,
+                    <lb n="2"/><w lemma="μείς">μηνὶ</w>
+                    <lb n="3"/><w lemma="δύστρος">Δύστρου</w></date>.
+                </ab>
+            </div>
+            <div type="textpart" subtype="part">
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="4"/><w lemma="μνημεῖον">Μνη<lb n="5" break="no"/>μῖον</w>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="6"/><persName type="attested" ref="#person368"><name nymRef=" Εὐσέβιος">Εὐσεβί<lb n="7" break="no"/>ου</name></persName> <w lemma="διάκονος">δια<lb n="8" break="no"/>κόνου</w>.
+                  </ab>
+               </div>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

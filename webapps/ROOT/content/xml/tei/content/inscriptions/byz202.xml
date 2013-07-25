@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Прошение Луки</title>
+            <title xml:lang="en">Invocation of Loukas</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz202</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru" n="1">Инвокативная надпись.</seg>
+                     <seg xml:lang="en" n="1">Invocative inscription.</seg>
+                     <seg xml:lang="ru" n="2">Инвокативная надпись.</seg>
+                     <seg xml:lang="en" n="2">Invocative inscription.</seg>
+                     <seg xml:lang="ru" n="3">Памятная<certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                     <seg xml:lang="en" n="3">Commemoration<certainty cert="low" locus="value" match=".."/>.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon16 #mon20">Скальная стена.</objectType>
+                           <objectType xml:lang="en">Rock wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Плоская ниша (глуб. 1) с процарапанным изображением процветшего креста. Поверхность сильно исцарапана, перекрыта поздними граффити.</p>
+                           <p xml:lang="en">Shallow niche (<!--depth 1-->) with incised image of a flowering cross. The surface is heavily scratched, covered with later graffiti.</p>
+                           <dimensions>
+                              <height>26,0</height>
+                              <width>34,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">Слева под крестом.</seg>
+                           <seg xml:lang="en">To the left and under the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">Под крестом.</seg>
+                           <seg xml:lang="en">Below the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="3">
+                           <seg xml:lang="ru">Под надписью 2.</seg>
+                           <seg xml:lang="en">Below the inscription 2.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы разной высоты, угловатой формы. Ударения.</seg>
+                        <seg xml:lang="en">Graffito; angular letters of varying height. Accent marks. </seg>
+                        <height unit="cm">1,0–1,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p026">
+                        <seg xml:lang="ru">Чилтер-Мармара.</seg>
+                        <seg xml:lang="en">Chilter-Marmara.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="1402" notAfter="1403" evidence="указание-надписи">
+                        <seg xml:lang="ru">1402–1403 г.</seg>
+                        <seg xml:lang="en">1402–1403 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p026">
+                        <seg xml:lang="ru">Чилтер-Мармара.</seg>
+                        <seg xml:lang="en">Chilter-Marmara.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="1402" notAfter="1403" evidence="указание-надписи">
+                        <seg xml:lang="ru">1402–1403 г.</seg>
+                        <seg xml:lang="en">1402–1403 C.E.</seg>
+                     </origDate>
+                     <origPlace n="3" ref="origPlace.xml#p026">
+                        <seg xml:lang="ru">Чилтер-Мармара.</seg>
+                        <seg xml:lang="en">Chilter-Marmara.</seg>
+                     </origPlace>
+                     <origDate n="3" notBefore="1402" notAfter="1403" evidence="указание-надписи">
+                        <seg xml:lang="ru">1402–1403 гг.</seg>
+                        <seg xml:lang="en">1402–1403 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Чилтер-Мармара.</placeName>
+                        <rs type="circumstances">До 1886 г., обследование А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">5 ярус, пом. 43 (по Веймарну), восточная стена, слева от № 201.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chilter-Marmara.</placeName>
+                        <rs type="circumstances">Before 1886, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">in situ.</seg>
+                     <seg xml:lang="en">in situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-10-30" who="AL">small corrections in Russian text</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-12" who="AL">small corrections, several lines translated</change>
+          <change when="2012-06-06" who="AL">corrected bibliography</change>
+          <change when="2012-04-24" who="AL">inserted editor tag</change>
+         <change when="2012-03-14" who="AG">corrections in metadata and in the tags within the Greek text</change>
+         <change when="2012-03-13" who="MR">tagged a part of metadata and the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+            <listBibl n="3">
+                <bibl n="L1"><!-- Сборник --><ptr target="b0132"/>, <biblScope>44а</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="3">
+             <p>
+               <!--<app>1: Δοῦλος τοῦ θ(εο)ῦ om. omnes; Λουκ[ᾶς Latyshev, om. Kulakovskij apud Latyshev; Ἐ]π[ὶ] ἔτ(ους) om. omnes.</app> -->
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Господи. Господи.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Господи, помоги.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Раб Божий Лука (?). В 6911 году.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Lord. Lord.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Lord, help.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Servant of God, Loukas (?). In the year 6911.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Латышев использовал для издания копию Кулаковского 1896 г. Фотография Крымской экспедиции ГАИМК 1934 г. хранится в ФА ИИМК РАН 
+                  (О.1077.39; II–18664).</p>
+                <p> По-видимому, перед нами неудавшаяся надпись с формулой «Господи, помилуй».</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Относительно формулы см. IV.3.E.a.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p> Латышев использовал для издания копию Кулаковского 1896 года, который прочел лишь число года. Неясно, почему Латышев не привел ясного 
+                  чтения начала надписи.  </p>
+                <p>Христианское имя Лука в Крыму более неизвестно. Последняя надпись имеет характер памятной записи или надгробной — последнее менее вероятно, 
+                   так как в пещере нет погребений.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Latyshev Kulakovsky </p>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+            <div type="textpart" n="3">
+               <p>Kulakovsky  Loukas</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>
+                  <lb n="2"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>, <w lemma="βοηθέω">βοήθ<supplied reason="lost">ει</supplied></w>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="3">
+               <ab>
+                  <lb n="1"/><w lemma="δοῦλος">Δοῦλος</w> <w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> <persName type="attested" ref="#person269"><name nymRef="Λουκᾶς">Λο<supplied reason="lost">υ</supplied>κᾶ<supplied reason="lost" cert="low">ς </supplied></name></persName>. <w lemma="ἐπί"><supplied reason="lost">Ἐ</supplied>π<supplied reason="lost">ὶ</supplied></w> <date><w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w>
+                  <lb n="2"/><num value="6911">ςϠια</num></date>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

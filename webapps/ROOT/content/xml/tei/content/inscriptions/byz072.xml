@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие Кириака, сына Феодора <certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Gravestone of Kyriakos, son of Theodoros <certainty cert="low" locus="value" match=".."/></title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz072</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon9">Крест<certainty cert="low" locus="value" match=".."/>.</objectType>
+                           <objectType xml:lang="en">Cross<certainty cert="low" locus="value" match=".."/>.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк<certainty cert="low" locus="value" match=".."/>.</material>
+                           <material xml:lang="en">Limestone<certainty cert="low" locus="value" match=".."/>.</material>
+                           <p xml:lang="ru">Нижний рукав расширяется в подставку, по краю врезана рамка. Обломан сверху, сохранился только нижний рукав; сколы на правой части лицевой стороны.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>27,0</height>
+                              <width>18,0</width>
+                              <depth>88</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклоненной влево перекладиной, сигма полуромбовидная.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,0–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0301" notAfter="0500" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IV–V вв.</seg>
+                        <seg xml:lang="en">IV–V centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi</seg>
+                     <seg xml:lang="en">non vidi</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1907 г., раскопки К. К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Некрополь у Карантинной бухты, склеп № 2385.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1907, excavations of  K. K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Necropolis by the Quarantine Bay, vault no. 2385.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-22" who="AG">translation in 'context' corrected</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">small corrections</change>
+         <change when="2012-05-21" who="AG">several lines translated, tags corrected</change>
+          <change when="2012-04-30" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-16" who="AG">apparatus tagged, 2 lines translated</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-10" who="AG">updating, small corrections</change>
+         <change when="2011-12-06" who="AG">minor corrections, tags added to the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!--Латышев 1908--><ptr target="b0141"/>, № 27 <biblScope>15-41</biblScope></bibl>
+               <bibl n="1.1"><!--Виноградов 2010a--><ptr target="b0399"/>,  </bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <p>
+               <app loc="1-2"><rdg resp="b0141"/></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Здесь ле</supplied>ж<supplied reason="lost">ит</supplied> Ки<supplied reason="lost">ри</supplied>ак, сын Ф<supplied reason="lost">ео</supplied>дора.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies Kyriakos, son of Theodoros.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Если памятник первоначально представлял собой крест, то, вероятно, в его верхней части располагалась формула, вводившая имя погребенного в 
+               номинативе. Судя по ранневизантийской датировки надписи и остаткам альфы, это была, скорее всего, формула Ἐνθάδε κατάκειται. Имя Кириак имеет 
+               аналогии в Северном Причерноморье (№ 228, 298, 307).</p>
+                <p> Палеографически надпись близка № 4: ср. форму альфы и каппу без удлинения вертикали. С другой стороны, редкая форма сигмы в виде полуромба 
+                   находит параллель в такой же форме эпсилона из № 65.</p>
+                <p>О находке см. Косцюшко-Валюжинич 1911, 80. Могила, видимо, была не разграбленной, как считал Якобсон (1959, 259), а безынвентарной 
+                   (см. Сорочан 2005, 1072, прим. 123). О надгробиях в форме креста см. комм. к № 61.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Kostsyushko-Valyuzhinich Yakobson Sorochan</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἐνθάδε"><supplied reason="lost">Ἐνθάδε</supplied></w> <w lemma="κατάκειμαι"><supplied reason="lost">κατ</supplied><lb n="2" break="no"/><unclear>ά</unclear><supplied reason="lost">κιτε</supplied></w>
+               <lb n="3"/><persName type="attested" ref="#person75"><name nymRef="Κυριακός">Κ<unclear>υ</unclear><supplied reason="lost">ρι</supplied><lb n="4" break="no"/>ακὸς</name> <persName type="attested" ref="#person76"><name nymRef="Θεόδωρος"><unclear>Θ</unclear><supplied reason="lost">εο</supplied><lb n="5" break="no"/>δόρ<unclear>ο</unclear><supplied reason="lost">υ</supplied></name></persName></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

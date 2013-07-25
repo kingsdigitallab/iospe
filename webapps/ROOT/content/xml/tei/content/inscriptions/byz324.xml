@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Посвящение анонима</title>
+            <title xml:lang="en">Dedication of anonym</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz324</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>35054</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35054</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedication.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Выбоины по поверхности.</p>
+                           <p xml:lang="en">Indents on the surface.</p>
+                           <dimensions>
+                              <height>13,0</height>
+                              <width>21,5</width>
+                              <depth>13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В верхней части.</seg>
+                           <seg xml:lang="en">In the upper part.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы слегка наклонены вправо. Альфа с ломаной неглубокой перекладиной, ипсилон У-образный.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,5–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0501" notAfter="0600" precision="medium" evidence="археологический-контекст палеография" cert="low">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">Сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1901 г., раскопки К. К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Храм № 23 («Уваровская базилика»), справа от входа, в кладке стены.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                         <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1901, excavations of  K. K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Church no. 23 ("Uvarov basilica"), right of the entrance, in the wall masonry.23</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-09-11" who="AG">small corrections, several lines translated</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-03-05" who="AG">small corrections, bibliography, apparatus and the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Косцюшко-Валюжинич 1898--><ptr target="bb0096"/>,  <biblScope>54</biblScope></bibl> 
+               <bibl n="2"><!--НЭПХ--><ptr target="b0209"/>,  <biblScope>106</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+                <app><rdg resp="b0096">ΕıΧΗΣ</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Ради молитвы.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For the sake of prayer.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Соломоник обнаружила надпись в архивных материалах Национального заповедника "Херсонес Таврический", не подозревая о ее публикации 
+               (сделана маюскулом).</p>
+                  <p> Формула надписи в Крыму уникальна, более того, нам не удалось найти ни одного точно христианского памятника с ней 
+                     (в Egger 1926, 159, IV в., она реконструируется предположительно) — видимо, она является наследницей античных херсонесских 
+                     традиций (см. НЭПХ 106). Необычна и ее краткая форма, которую можно сравнить разве что с SEG 17, 182 из Вифинии (ἐκ [ἰ]δίων εὐχῆς χάριν). 
+                     Соломоник предполагала, что надпись могла продолжаться на соседних камнях, однако это выглядит маловероятным, учитывая наличие свободного 
+                     места на камне. Между тем, на этом основывается ее предположение о возможном вторичном использовании памятника в кладке стены. 
+                     Однако хорошая его сохранность и указание Косцюшко-Валюжинича на ее вставку в стену говорят о том, что это, скорее всего, вотив, специально 
+                     предназначенный для храма № 23. Впрочем, нельзя исключать и помещения в стену храма более ранней надписи.</p>
+                  <p>Сочетание округлых форм эпсилона и сигмы с ломаной перекладиной альфы указывает на VI в. (ср. № 23). Однако полной уверенности ни в 
+                     датировке, ни в христианском характере надписи нет.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Solomonik Kostsyushko-Valyuzhinich</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="εὐχή">Εὐχῆς</w> <w lemma="χάρις">χάριν</w>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

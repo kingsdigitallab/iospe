@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Плита с крестом</title>
+            <title xml:lang="en">Slab with a cross</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz104</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34929</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34929</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc4">
+                     <seg xml:lang="ru" n="1">Неизвестен.</seg>
+                     <seg xml:lang="en" n="1">Unknown.</seg>
+                     <seg xml:lang="ru" n="2">Демонстративная надпись.</seg>
+                     <seg xml:lang="en" n="2">Demonstrative.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мелкозернистый мрамор.</material>
+                           <material xml:lang="en">White fine-grained marble.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефное изображение креста. Обломан со всех сторон.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>16,0</height>
+                              <width>19,0</width>
+                              <depth>8,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">На кресте.</seg>
+                           <seg xml:lang="en">On the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">По сторонам от нижнего рукава креста.</seg>
+                           <seg xml:lang="en">On both sides of the lower arm of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, кионедон. Альфа с ломаной перекладиной.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">1,8.</height>
+                     </handNote>
+                     <handNote n="2">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной и удлиненной верхушкой.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003" n="1">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="0501" notAfter="0600" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                     <origPlace ref="origPlace.xml#p003" n="2">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="0501" notAfter="0600" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1907 г., раскопки К. К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Храм № 19 («храм с ковчегом»).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1907, excavations of  K. K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Church No 19 ("reliquary church").</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">small corrections</change>
+         <change when="2012-05-01" who="AG">several lines translated, bibliography corrected</change>
+         <change when="2012-04-23" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2011-12-21" who="AG">tagging</change>
+         <change when="2011-12-20" who="AG">small corrections, tagging</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!--IOSPE--><ptr target="iospe2"/> I2, <biblScope>623</biblScope></bibl>
+               <bibl n="2"><!--Латышев 1908--><ptr target="b0149"/>, 35, № <biblScope>31</biblScope></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--IOSPE--><ptr target="iospe2"/> I2, <biblScope>623</biblScope></bibl>
+               <bibl n="2"><!--Латышев 1908--><ptr target="b0149"/>, 35, № <biblScope>31</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>…</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Альфа, <supplied reason="lost">омега</supplied>.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>no translation</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Alpha, <supplied reason="lost">omega</supplied>.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="2">
+               <p> Судя по форме памятника, это экран алтарной преграды из ранневизантийского храма. Альфа и омега были расположены, вероятней всего, по 
+                  середине ширины угловых полей — в этом случае первоначальная ширина плиты (или, точнее, креста) составляла ок. 40 см, а на боковых и верхнем 
+                  рукаве креста располагалось примерно по 10 букв. Скорее всего, на кресте сохранился фрагмент имени дедиканта (типа Домитиан) или формулы
+                  (типа ... ἁμαρτίαν). В первом случае не исключено, что это имя повторялось и по горизонтали. Относительно формулы надписи 2 см. IV.3.C.d.</p>
+                <p>Датируется храм № 19 по-разному (см. Бернацки, Кленина, Рыжов 2004, 85–88), однако находка под его престолом ковчежца с монограммами 
+                   Юстиниана I вполне согласуется с палеографией надписи: альфа с ломаной перекладиной и четкие апексы указывают на VI–VII вв. Редкая форма 
+                   альфы с удлиненной влево верхушкой находит аналогию в евлогийном штампе (Косцюшко-Валюжинич 1898, 116–117, рис. 16), относящемуся, судя 
+                   по шрифту, к VI в., и в № 254 из Керчи.  </p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="2">
+               <p>Bernatsky Klenina Ryzhov Kostsyushko-Valyuzhinich Kerch</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+                  <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>τ</unclear></orig>
+                  <g type="stauros"/> <gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="3"/><orig>Τ</orig>
+                  <lb n="4"/><orig>Ι</orig>
+                  <lb n="5"/><orig>Α</orig>
+                  <lb n="6"/><orig>Ν</orig>
+                  <lb n="7"/><gap reason="lost" extent="unknown" unit="line"/>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><orig>Α</orig> <supplied reason="lost"><orig>Ω</orig></supplied>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

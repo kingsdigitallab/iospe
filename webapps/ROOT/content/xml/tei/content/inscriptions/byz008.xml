@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Строительная надпись (или посвящение) епископа Феодора</title>
+            <title xml:lang="en">Building inscription (or dedication) of Bishop Theodoros</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz008</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>ГИМ</repository>
+                     <idno>33492</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Historical Museum</repository>
+                     <idno>33492</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon4">Дверной косяк.</objectType>
+                           <objectType xml:lang="en">Door jamb.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконесский мрамор.</material>
+                           <material xml:lang="en">Proconnesian marble.</material>
+                           <p xml:lang="ru">Профилирован по боковым сторонам 5 полочками; сзади паз; лицевая сторона по вертикальной оси симметрии шероховатая (для крепления дверной коробки). Обломан снизу.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>50,0</height>
+                              <width>22,0</width>
+                              <depth>20,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">По левому и правому краю.</seg>
+                           <seg xml:lang="en">Along the left and the right edge.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы апицированные и маньеризованные. Кионедон, каппа с удлиненной вертикалью, омикрон в виде U с загнутыми внутрь усиками или миндалевидный, пи с удлиненной перекладиной, ро с усиком внизу полукружия, сигма ромбовидная, ипсилон и омега с дополнительной перекладинкой посередине. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary; </seg>
+                        <height unit="cm">2,5–9,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0501" notAfter="0600" precision="medium" evidence="палеография археологический-контекст">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2007-11">Ноябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="2007-11">November 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">1889 г., раскопки А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Храм № 15 («базилика в базилике»).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">1889, excavations of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Church No 15 ("basilica in basilica")</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en">Moscow, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-10-27" who="AL">inserted English toponyms and bibliography authors in commentary</change>
+          <change when="2012-10-01" who="AL">corrected Russian metadata</change>
+         <change when="2012-09-24" who="AG">small correction</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">small correction</change>
+         <change when="2012-05-15" who="AG">small tags correction</change>
+         <change when="2012-05-09" who="AG">small correction</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG">small correction in bibliography, editor added</change>
+         <change when="2012-04-05" who="AG">corrections in bibliography and apparatus</change>
+         <change when="2012-03-21" who="AG">corrections in bibliography, apparatus marked up</change>
+         <change when="2012-03-20" who="AG">corrections in bibliography</change>
+         <change when="2012-02-22" who="AG">bibliography tags corrected</change>
+         <change when="2012-02-20" who="AG">bibliography tagged</change>
+         <change when="2012-01-24" who="AG">several lines translated</change>
+         <change when="2012-01-23" who="AG">updated, 1 line translated</change>
+         <change when="2011-12-12" who="AG">minor tag correction in the date</change>
+         <change when="2011-12-06" who="AG">minor tag correction in the date</change>
+         <change when="2011-11-29" who="AG">minor corrections in the Greek text</change>
+         <change when="2011-11-28" who="AG">tidied XML, different corrections</change>
+         <change when="2011-11-25" who="KFL">Automated creation from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <!--<facsimile>
+      <surface>
+         <graphic url="8.jpg">
+            <desc xml:lang="en">Photograph of face<!-\- Vinogradov (2005)-\-></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>-->
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1895a--><ptr target="b0130"/>, 23 № <biblScope>28 </biblScope></bibl>
+               <bibl n="1.1"><!--Сборник--><ptr target="b0132"/>,  <biblScope>26</biblScope></bibl>
+               <bibl n="1.2"><!--Millet 1900--><ptr target="b0397"/></bibl>
+               <bibl n="1.2.1"><!--Латышев 1897--><ptr target="b0133"/>, <biblScope>150</biblScope></bibl>
+               <bibl n="1.3"><!--Латышев 1901a--><ptr target="b0138"/>, 75, № <biblScope>26</biblScope></bibl>
+               <bibl n="2"><!--Виноградов 2006--><ptr target="b0046"/>, 291 № <biblScope>2</biblScope></bibl>
+               <bibl n="2.1"><!--Vinogradov 2007--><ptr target="b0376"/>, 265 <biblScope>№ 16</biblScope></bibl> 
+            </listBibl>
+         </div>
+         
+         <div type="apparatus">
+            <p>
+               <app loc="1-3"><rdg resp="b0130 b0132"> .</rdg>  
+                                          <rdg resp="b0397">ἐπ]ὶ</rdg> 
+                                          <rdg resp="b0133 b0138">ἐπ]ὶ resp. ὑπὲ]ρ</rdg> <rdg resp="b0046 b0376">ἐπ]ὶ (resp. Κύριε βοήθε]ι)</rdg></app>
+            </p>
+         </div>
+         
+         <div type="translation" xml:lang="ru">
+               <p>При епископе Феодоре.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+               <p>In the time of bishop Theodoros.</p>
+         </div>
+         
+         <div type="commentary" xml:lang="ru">
+               <p> Кионедон характерен для христианских строительных надписей на косяках дверей в ранневизантийский период: Grégoire 1929, № 53 (Пергам); 
+                  IGLS 382 (Антиохена, 523 г.). В левом столбце буквы вполовину меньше, чем в правом: видимо, резчик поначалу боялся не вписаться в имеющееся 
+                  пространство (ср. № 6).</p>
+                <p> 1–3. От восстановления начала надписи Латышев сперва воздержался, Милле предложил читать здесь [ἐπ]ὶ — на это первоиздатель возразил, что 
+                   одиночная гаста могла принадлежать и ро из [ὑπέ]ρ. Этот предлог, однако, встречается в Северном Причерноморье только в формулах «О молитве», 
+                   «О спасении» и т.п., да и самостоятельная посвятительная формула такого типа нам не известна. Другим вариантом восстановления надписи точно не 
+                   известной вышины могла бы быть формула Кύριε, βοήθει, которая часто употребляется с генетивом (ср. Wessel 1989, № 517; Feissel 1983, № 262; 
+                   Bandy 73A; Grégoire 1929, № 96, 148, 226) и встречается, напр., в вышеупомянутой надписи кионедоном Grégoire 1929, № 53, однако, судя по 
+                   восстановлению правого столбца, для нее не остается места, а то, что она была помещена на притолоке (как в Пергаме) не полностью, маловероятно.  </p>
+                <p> 4–22. Епископ Феодор в ранневизантийском Херсоне из исторических источников не известен. Вполне вероятно, что именно епископ был ктитором 
+                   храма № 15, что важно для понимания необычного характера ее устройства и декорации (см. Гайдуков 2005). По археологическим находкам 
+                   возникновение базилики датируется всеми исследователями VI в. (см. Сорочан 2005, 735).</p>
+                <p>Буквы надписи ближе к ранневизантийскому монументальному шрифту (ср. пи с удлиненной перекладиной в № 94 из того же храма или омегу в № 27), 
+                   выполненному, впрочем, довольно манерно. Все они, однако, находят себе аналогии в VI в. (см. Morss 2003), за исключением омикрона, но полностью 
+                   чужды локальной херсонской эпиграфической традиции, так что резчик, вероятней всего, был не местного происхождения.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+             <p>Grégoire 1929, № 53 (Pergamos); IGLS 382 (<!-- Антиохена -->)</p>
+             <p>Latyshev Millet Northern Coast of Black Sea</p>
+             <p>Chersonesos (see Gaydukov 2005) (see Sorochan 2005, 735)</p>
+             <p>(see Morss 2003)</p>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="column">
+               <ab>
+                  <lb n="1"/><w lemma="ἐπί"><supplied reason="lost">Ἐ</supplied>
+                  <lb n="2"/><supplied reason="lost">π</supplied>
+                  <lb n="3"/><unclear cert="low">ὶ</unclear></w>
+                  <lb n="4"/><w lemma="ὁ">τ
+                  <lb n="5"/>ο
+                  <lb n="6"/>ῦ</w>
+                  <lb n="7"/><w lemma="ἐπίσκοπος">ἐ
+                  <lb n="8"/>π
+                  <lb n="9"/>ι
+                  <lb n="10"/>σ
+                  <lb n="11"/>κ
+                  <lb n="12"/>ό
+                  <lb n="13"/><supplied reason="lost">π</supplied>
+                  <lb n="14"/><supplied reason="lost">ο</supplied>
+                  <lb n="15"/><supplied reason="lost">υ</supplied></w>
+                  </ab></div>
+            <div type="textpart" subtype="column">
+               <ab>                  
+                  <lb n="1"/><persName type="attested" ref="#person10"><name nymRef="Θεόδωρος"><supplied reason="lost">Θ</supplied>
+                  <lb n="2"/>ε
+                  <lb n="3"/>ο
+                  <lb n="4"/>δ
+                  <lb n="5"/>ό
+                  <lb n="6"/>ρ
+                  <lb n="7"/>ου</name></persName>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

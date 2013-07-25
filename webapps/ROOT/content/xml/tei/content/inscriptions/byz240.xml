@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие неизвестного</title>
+            <title xml:lang="en">Gravestone of an unknown</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz240</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>МСК</repository>
+                     <idno>инв. № отсутствует</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Museum "Sudak Fortress"</repository>
+                     <idno>Inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Простой известковый дикарь.</material>
+                           <material xml:lang="en">Plain limestone rubble.</material>
+                           <p xml:lang="ru">Стела с полукруглым верхом; на лицевой стороне рельефная рамка и изображение циркульного креста. 
+                              Стесан слева, обломан снизу.</p>
+                           <p xml:lang="en">Stele with a rounded top; on the front: a framing border in relief and circular cross (a circle intersected by four arcs, 
+                           forming a cross). Cut on the left, broken off at the bottom.</p>
+                           <dimensions>
+                              <height>16,0</height>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки, <!--под розеткой-->.</seg>
+                           <seg xml:lang="en">Within the frame below the circular cross. </seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a slanting crossbar.</seg>
+                        <height unit="cm">4,0–4,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                         <seg xml:lang="en">Sugdea.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1001" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IX–XI вв.</seg>
+                        <seg xml:lang="en">IX–XI centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>, <date when="2009-09"> Сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Судак.</placeName>
+                        <rs type="circumstances">1872 г., обследования Н. Н. Мурзакевича.</rs>
+                        <rs type="context">Крепость, между башнями 1388 и 1394 гг., стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">1872, survey of N.N. Murzakevich.</rs>
+                        <rs type="context">Fortress, between towers of 1388 and 1394, wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Судак, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Sudak, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-13" who="AG">one line translated</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-09" who="AG">small corrections in metadata and bibliography, several lines translated</change>
+          <change when="2012-06-21" who="AFS">corrections in metadata</change>
+          <change when="2012-03-27" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Мурзакевич 1872--><ptr target="b0180"/>,  <biblScope>318</biblScope></bibl>
+               <bibl n="1.1"><!-- Сборник --><ptr target="b0132"/>,  <biblScope>73</biblScope></bibl>
+               <bibl n="1.2"><!-- Латышев 1913--> <ptr target="b0153"/>,  107–108, № <biblScope>1</biblScope></bibl>
+               <bibl n="2"><!-- Виноградов, Джанов 2004--><ptr target="b0052"/>,  413–414, № <biblScope>7</biblScope>.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>О блаженной памяти и упо<supplied reason="lost">коении такого-то</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For the blessed memory and rest of...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1–5. Относительно формулы см. IV.3.F.a.  </p>
+                <p> 5. Как верно отметил Латышев, отбитыми остались имя и, возможно, дата кончины.</p>
+                <p>Terminus ante quem для нашего камня — кон. XIV в., когда строится стена, в которую он был вделан. Альфа с наклонной перекладиной заставляет отнести его с осторожностью ко времени после IX в. (вопреки нашей предыдущей датировке, не учитывавшей данного обстоятельства).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/><w lemma="ὑπέρ">Ὑπὲρ</w> <w>μα<lb n="2" break="no"/>καρήας</w> <w>μ<lb n="3" break="no"/>νήμις</w> <w lemma="καί">καὶ</w>
+               <lb n="4"/><w lemma="ἀνάπαυσις">ἀνα<unclear>π</unclear><supplied reason="lost">αύσε<lb n="5" break="no"/>ως</supplied></w> <supplied reason="lost"><w lemma="ὁ">τοῦ</w> <w lemma="δεῖνα">δεῖνος</w></supplied>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

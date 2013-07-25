@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Аристона</title>
+            <title xml:lang="en"> Funerary text of Ariston</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz065</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>in situ</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>in situ</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="#m5 #m6">Охра на штукатурке.</material>
+                           <material xml:lang="en">Ochre on plaster.</material>
+                           <p xml:lang="ru">На задней стене лежанки изображение двух зеленых веточек, каждая с зелеными листьями и тремя красными цветами, и циркульного круга с красным периметром. Выцвел.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>26,0</height>
+                              <width>26,5</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В круге.</seg>
+                           <seg xml:lang="en">Within a circle.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>; буквы немного наклонены вправо. Альфа с наклоненной влево перекладиной и удлиненной влево и вверх правой диагональю, эпсилон ромбовидный, мю с укороченной серединой, ипсилон У-образный.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,5–4,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0301" notAfter="0500" precision="medium" evidence="археологический-контекст палеография">
+                        <seg xml:lang="ru">IV–V вв.</seg>
+                        <seg xml:lang="en">IV–V centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <rs type="circumstances">2002 г., обследования Е.Я. Туровского.</rs>
+                        <rs type="context">Некрополь у загородного крестообразного храма, склеп 2/2006 («2002 г.»), правая лежанка, задняя стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <rs type="circumstances">2002, survey of E.Ya. Turovsky.</rs>
+                        <rs type="context">Necropolis by the cruciform extramural church, vault 2/2006 ("2002"), right bench, rear wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">in situ.</seg>
+                     <seg xml:lang="en">in situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-22" who="AG">translation of 'context' corrected</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">corrections</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-25" who="AFS">bibliography updated</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-17" who="AG">some corrections</change>
+         <change when="2012-01-10" who="AG">some corrections, updating</change>
+         <change when="2011-12-05" who="AG">minor corrections, tags added to the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"> <!--Виноградов 2009a--> <ptr target="b0048"/>,  <biblScope>226–249</biblScope></bibl>
+                <bibl n="1.1"><!--Виноградов 2010a--> <ptr target="b0399"/>,  </bibl>
+            </listBibl>
+          </div>
+         <div type="apparatus">
+            <p>
+               <app loc="2-3"><rdg resp="b0048">ἀληθαργίσ]ει(?), κὲ </rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Аристон незабвенный, душа твоя с праведными.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Ariston, <!--[of eternal memory?]-->, your soul is with the righteous.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Первые публикации надписи: наше чтение в Ступко, Туровский, Филиппенко 2007, 190 (с многочисленными ошибками в наборе), и издание Виноградов 2009, были выполнены по фотографиям, любезно предоставленными первооткрывателями склепа. Аутопсия в сентябре 2008 г. и консультации с Д. Фейселем помогли скорректировать чтение 2–3-й строк.</p>
+                <p> 1–3. Первой части формулы находится аналогия в Grégoire 1929, № 9 (Кизик, IV в.): «блаженный Аркадий, приснопамятный, господин незабвенный (ἀληθάργ[ητε])» (ср. также IGLS 2530; Robert 1948, 128). Имя Аристон — христианское (см. Delehaye 1902, 753); оно также известно на Боспоре V в. (см. № 318) В данном случае оно, однако, очевидно восходит к локальной традиции: если во всей христианской эпиграфике оно встречается всего 10 раз (7 из них — в Малой Азии), то в античном Херсонесе более 40 раз (см. также комм. к № 318). Очевидно, Аристон был погребен в этой катакомбе, вероятно, в центральной лежанке.</p>
+                <p> 4–6. Относительно второй части формулы см. IV.3.F.b.</p>
+                <p>Палеографически надпись близка № 64: ср. формы альфы c петлей и вытянутого ро. С другой стороны, редкая форма полуромбовидного эпсилона находит параллель в такой же формы сигме в № 72. Археологически склеп датируется IV – нач. V в. (Ступко, Туровский, Филиппенко 2007)</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+             <p>Stupko, Turovsky, Filippenko 2007, 190 Vinogradov D.Feissel</p>
+             <p>Bosporos Grégoire 1929, № 9 (Cyzicus, IV century CE)</p>
+             <p></p>
+             <p>Stupko, Turovsky, Filippenko 2007</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person67"><name nymRef="Ἀρίστων">Ἀρίστω<lb n="2" break="no"/>ν</name></persName> <w lemma="ἀληθάργητος">ἀληθάρ<lb n="3" break="no"/><supplied reason="lost">γ</supplied>ητε</w>,
+               <lb n="4"/><w lemma="ὁ">ἡ</w> <w lemma="ψυχή">ψυχή</w> <w lemma="σύ">σου</w>
+               <lb n="5"/><w lemma="μετά">μετὰ</w> <w lemma="ὁ">τῶν</w>
+               <lb n="6"/><w lemma="δίκαιος">δικέων</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

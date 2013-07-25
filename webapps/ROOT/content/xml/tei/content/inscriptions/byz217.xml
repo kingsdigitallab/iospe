@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Мамци</title>
+            <title xml:lang="en">Gravestone of Mamtze</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz217</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>инв. № отсутствует</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno>Inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="#doc4 #doc2">
+                     <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
+                     <seg xml:lang="en" n="1">Demonstrative.</seg>
+                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="2">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Стела с треугольным завершением; на лицевой стороне изображение креста в рамке вверху и филенка с тупоугольным 
+                              завершением внизу, на тыльной стороне “коса” (высота 2) и орнамент на лицевой, боковых и тыльной сторонах. Разбит на 2 части.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>98,5</height>
+                              <width>36,0</width>
+                              <depth>20,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">Внутри филенки.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru">См. ниже.</seg>
+                        <seg xml:lang="en">See below.</seg>
+                        <height unit="cm">0,7–2.</height>
+                     </handNote>
+                     <handNote n="2">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. бета, дзета и лямбда минускульные, мю с Т-образной серединой, ню с зеркально повернутой перекладиной, 
+                           ипсилон V-образный, омега с полукруглым низом. Лигатура, надстрочные знаки, сокращения.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">1,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки<certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Laki<certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="1361" notAfter="1372" evidence="указание-надписи">
+                        <seg xml:lang="ru">1361–1372 гг.</seg>
+                        <seg xml:lang="en">1361–1372 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки<certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Laki<certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="1363" notAfter="1364" evidence="указание-надписи">
+                        <seg xml:lang="ru">1363–1364 гг.</seg>
+                        <seg xml:lang="en">1363–1364 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-29" who="AG">small correction</change>
+          <change when="2012-06-19" who="AL">small correction</change>
+         <change when="2012-05-02" who="AG">several lines translated, small corrections in metadata, tags corrected</change>
+          <change when="2012-04-24" who="AL">inserted editor tag, translated several lines</change>
+          <change when="2012-04-05" who="AL">original date tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="1">ined.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Иисус Христос побеждает.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Почил. Почил раб Божий Мамци в 6872 году.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Jesus Christ is victorious.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep. Fell asleep: a servant of God, Mamtze, in the year 6872.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Относительно формулы см. IV.3.C.e.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1. Не совсем понятно, почему надпись осталась недоконченной. Возможно, что было специально оставлено место для имени еще одного 
+                  умершего. Знаки слева от надписи буквами не являются.  </p>
+                <p> 2–3. Относительно формулы см. IV.3.F.e.  </p>
+                <p> 3–4. Относительно имени Мамци см. прил. 2 (ср. также № 45).  </p>
+                <p> 4–5. Последняя цифра в обозначении года не может быть ипсилоном хотя бы потому, что он во всей надписи V-образный. Скорее всего, это 
+                   единственный в Горном Крыму пример минускульной беты.</p>
+                <p>Судя по формуле датировки ἔτει, надпись может происходить из Лак (ср. № 137, 138). Последний близок данной надписи и по дате — 1362 г.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p/>
+            </div>
+            <div type="textpart" n="2">
+               <p>Laki</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name> <name nymRef="Χριστός"><expan><abbr><supplied reason="lost">Χ</supplied></abbr><ex>ριστὸ</ex><abbr>ς</abbr></expan></name></persName>
+                  <lb n="2"/><w lemma="νικάω">νι<supplied reason="lost">κᾷ</supplied></w>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκοιμ<supplied reason="lost">ήθη</supplied></w>
+                  <lb n="2"/><space extent="unknown"/>
+                  <lb n="3"/><g type="stauros"/> <w lemma="κοιμάω"><expan><abbr>Ἐκοιμήθ</abbr><ex>η</ex></expan></w> <w>ὡ</w> <w lemma="δοῦλος"><expan><abbr>δοῦλ</abbr><ex>ος</ex></expan></w>
+                  <lb n="4"/><w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> <persName type="attested" ref="#person282"><name>Μαμ<lb n="5" break="no"/>τζη</name></persName>, <date><w lemma="ἔτος">ἔτι</w> <num value="6872">ςω<lb n="6" break="no"/>οβ</num></date>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

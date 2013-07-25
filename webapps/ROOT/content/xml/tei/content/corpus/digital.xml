@@ -1,0 +1,74 @@
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="xml"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="en">Digital Epigraphy</title>
+        <title xml:lang="ru">Электронная публикация эпиграфических надписей</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication Information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <group>
+      <text xml:lang="en"><body>
+        <p>The EpiDoc Guidelines, recommendations for XML mark-up of epigraphic documents, were
+          originally conceived in 2000, by Tom Elliott, then director of the Ancient World Mapping
+          Center at the University of North Carolina at Chapel Hill, with Hugh Cayless and Amy
+          Hawkins. The guidelines and other tools have matured considerably through extensive
+          discussion in online fora such as the Markup list, at several conferences, and through the
+          experience of various pilot projects.2 The first major—but not by any means the
+          only—epigraphic project to adopt and pilot the EpiDoc recommendations has been
+          Inscriptions of Aphrodisias , and the guidelines have reached a degree of stability for
+          the first time during this process.</p>
+        <p>EpiDoc specifies the use of XML (Extensible Markup Language), an industry standard
+          maintained and documented by the World Wide Web Consortium (W3C 1996-2007). In simple
+          terms XML is a grammar for defining markup languages—including HTML, the principle
+          language of the Web. XML is a software- and platform-independent language, optimised for
+          compatibility, interchange, and durability, which means that it is ideal for archive
+          storage as well as web and database publication. Since XML, and, now less commonly, its
+          parent language SGML, are used almost universally for encoding and storing data in the
+          commercial sector by computer professionals, publishers, analysts, archivists, economists
+          and so forth, advantages over a proprietary database system are increasingly clear. In
+          particular, it is likely that any changes in technology that require upgrades to either
+          the encoding of XML itself, or its transformation and delivery, will be handled by those
+          with the resources to do so, and that academic projects can coat-tail on this progress,
+          rather than having to invest in expensive solutions themselves or see their materials fall
+          out of date.</p>
+        <p>An essential concept behind EpiDoc is the understanding that this form of semantic markup
+          is not meant to replace traditional epigraphic transcription based on the Leiden
+          conventions. The XML may (and almost inevitably will) encode more information than the
+          range of brackets and sigla used in Leiden, but there will always be a one-to-one
+          equivalence between Leiden codes and markup features in the EpiDoc guidelines. This means
+          that, at a minimum, a text encoded in Leiden can be marked up using EpiDoc XML with very
+          little extra editorial intervention—and in fact tools exist whereby this process can be
+          automated to 95% or better. </p>
+        <p> An EpiDoc file is a representation in XML of the edition of one inscription or a group
+          of inscriptions. At a minimum the file will contain a text in Greek or Latin, probably
+          with editorial sigla. It may also contain apparatus, translation, commentary, description
+          and dating of the text or object, history of the inscription, bibliography, or any other
+          information that is normally published in a scholarly edition. The file may also contain
+          cross references to other texts, files, indices, tables, appendices, and images. </p>
+        <p> An inscription or corpus of inscriptions marked up in EpiDoc XML may be rendered for
+          display or publication in a variety of forms; indexed, processed, queried and searched
+          like a database, but on any computer and in one of countless available search programmes;
+          interchanged with other projects, scholars, software, and encoding systems. </p>
+        <p> As well as offering a choice of rendering styles, this semantic markup allows us to
+          perform intelligent processes and searches upon the marked-up text. We can perform a word
+          search only for certain words when they are complete and not made up in part or in full by
+          editorial supplements, for example. Certain types of damage may be significant in their
+          own right, such as erasure, which might represent damnatio memoriae, or the replacement of
+          one name or expression with another.</p></body>
+      </text>
+      <text xml:lang="ru"><body>
+        <p>в разработке</p></body>
+      </text>
+    </group>
+  </text>
+</TEI>
