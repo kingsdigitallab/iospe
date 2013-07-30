@@ -4,8 +4,12 @@
                 xmlns:tei="http://www.tei-c.org/ns/1.0"
                 xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
                 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:local="http://www.cch.kcl.ac.uk/kiln/local/1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../../kiln/stylesheets/solr/tei-to-solr.xsl" />
+
+  <!-- <xsl:import href="../../kiln/stylesheets/solr/tei-to-solr.xsl" /> -->
+
+  <xsl:import href="../common/conversions.xsl" />
 
   <xd:doc scope="stylesheet">
     <xd:desc>
@@ -15,6 +19,8 @@
       which is the path of the file being indexed.</xd:p>
     </xd:desc>
   </xd:doc>
+
+  <xsl:param name="file-path" />
 
   <xsl:variable name="criteria">
     <xsl:sequence select="/aggregation/criteria/tei:TEI/tei:text/tei:body/tei:list" />
@@ -1254,37 +1260,37 @@
         <xsl:if
           test="/aggregation/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']">
           <field name="persnames">
-            <xsl:value-of select="xms:replace-spaces('sacred or divine entity')" />
+            <xsl:value-of select="local:replace-spaces('sacred or divine entity')" />
           </field>
           <field name="persnames-ru">
-            <xsl:value-of select="xms:replace-spaces('RU: sacred or divine entity')" />
+            <xsl:value-of select="local:replace-spaces('RU: sacred or divine entity')" />
           </field>
           <field name="persnames-en">
-            <xsl:value-of select="xms:replace-spaces('sacred or divine entity')" />
+            <xsl:value-of select="local:replace-spaces('sacred or divine entity')" />
           </field>
         </xsl:if>
         <xsl:if
           test="/aggregation/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']">
           <field name="persnames">
-            <xsl:value-of select="xms:replace-spaces('emperor or ruler')" />
+            <xsl:value-of select="local:replace-spaces('emperor or ruler')" />
           </field>
           <field name="persnames-ru">
-            <xsl:value-of select="xms:replace-spaces('RU: emperor or ruler')" />
+            <xsl:value-of select="local:replace-spaces('RU: emperor or ruler')" />
           </field>
           <field name="persnames-en">
-            <xsl:value-of select="xms:replace-spaces('emperor or ruler')" />
+            <xsl:value-of select="local:replace-spaces('emperor or ruler')" />
           </field>
         </xsl:if>
         <xsl:if
           test="/aggregation/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']">
           <field name="persnames">
-            <xsl:value-of select="xms:replace-spaces('other person')" />
+            <xsl:value-of select="local:replace-spaces('other person')" />
           </field>
           <field name="persnames-ru">
-            <xsl:value-of select="xms:replace-spaces('RU: other person')" />
+            <xsl:value-of select="local:replace-spaces('RU: other person')" />
           </field>
           <field name="persnames-en">
-            <xsl:value-of select="xms:replace-spaces('other person')" />
+            <xsl:value-of select="local:replace-spaces('other person')" />
           </field>
         </xsl:if>
 
@@ -1300,14 +1306,14 @@
 
   <xsl:template match="tei:titleStmt/tei:title[@xml:lang]" mode="document-metadata">
     <field name="document-title">
-      <xsl:value-of select="xms:clean(.)" />
+      <xsl:value-of select="local:clean(.)" />
     </field>
     <field name="document-title-{@xml:lang}">
-      <xsl:value-of select="xms:clean(.)" />
+      <xsl:value-of select="local:clean(.)" />
     </field>
   </xsl:template>
 
-  <xsl:function as="xs:string" name="xms:clean">
+  <xsl:function as="xs:string" name="local:clean">
     <xsl:param name="value" />
 
     <xsl:value-of select="normalize-space(replace($value, '\(\?\)', ''))" />
@@ -1316,12 +1322,12 @@
   <xsl:template match="tei:origDate" mode="document-metadata">
     <xsl:if test="normalize-space(@notBefore)">
       <field name="not-before">
-        <xsl:value-of select="xms:get-year-from-date(@notBefore)" />
+        <xsl:value-of select="local:get-year-from-date(@notBefore)" />
       </field>
     </xsl:if>
     <xsl:if test="normalize-space(@notAfter)">
       <field name="not-after">
-        <xsl:value-of select="xms:get-year-from-date(@notAfter)" />
+        <xsl:value-of select="local:get-year-from-date(@notAfter)" />
       </field>
     </xsl:if>
 
@@ -1332,22 +1338,22 @@
           select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1] = $evidence]" />
 
         <field name="evidence">
-          <xsl:value-of select="xms:replace-spaces($evidence)" />
+          <xsl:value-of select="local:replace-spaces($evidence)" />
         </field>
         <field name="evidence-ru">
-          <xsl:value-of select="xms:replace-spaces($evidence)" />
+          <xsl:value-of select="local:replace-spaces($evidence)" />
         </field>
         <field name="evidence">
-          <xsl:value-of select="xms:replace-spaces($evidence-en)" />
+          <xsl:value-of select="local:replace-spaces($evidence-en)" />
         </field>
         <field name="evidence-en">
-          <xsl:value-of select="xms:replace-spaces($evidence-en)" />
+          <xsl:value-of select="local:replace-spaces($evidence-en)" />
         </field>
       </xsl:for-each>
     </xsl:if>
   </xsl:template>
 
-  <xsl:function as="xs:integer" name="xms:get-year-from-date">
+  <xsl:function as="xs:integer" name="local:get-year-from-date">
     <xsl:param name="date" />
 
     <xsl:variable name="year">
@@ -1365,7 +1371,7 @@
     <xsl:value-of select="$year" />
   </xsl:function>
 
-  <xsl:function as="xs:string" name="xms:replace-spaces">
+  <xsl:function as="xs:string" name="local:replace-spaces">
     <xsl:param name="value" />
 
     <xsl:value-of select="normalize-space(replace($value, '\s', '_'))" />
@@ -1377,15 +1383,15 @@
 
       <xsl:for-each select="$monument/tei:list/tei:item[@xml:id = $ref]">
         <field name="monument-type">
-          <xsl:value-of select="xms:replace-spaces(tei:term)" />
+          <xsl:value-of select="local:replace-spaces(tei:term)" />
         </field>
         <field name="monument-type-{@xml:lang}">
-          <xsl:value-of select="xms:replace-spaces(tei:term)" />
+          <xsl:value-of select="local:replace-spaces(tei:term)" />
         </field>
 
         <xsl:for-each select="tei:gloss">
           <field name="monument-type-{@xml:lang}">
-            <xsl:value-of select="xms:replace-spaces(.)" />
+            <xsl:value-of select="local:replace-spaces(.)" />
           </field>
         </xsl:for-each>
       </xsl:for-each>
@@ -1398,15 +1404,15 @@
 
       <xsl:for-each select="$document/tei:list/tei:item[@xml:id = $ref]">
         <field name="document-type">
-          <xsl:value-of select="xms:replace-spaces(tei:term)" />
+          <xsl:value-of select="local:replace-spaces(tei:term)" />
         </field>
         <field name="document-type-ru">
-          <xsl:value-of select="xms:replace-spaces(tei:term)" />
+          <xsl:value-of select="local:replace-spaces(tei:term)" />
         </field>
 
         <xsl:for-each select="tei:gloss">
           <field name="document-type-{@xml:lang}">
-            <xsl:value-of select="xms:replace-spaces(.)" />
+            <xsl:value-of select="local:replace-spaces(.)" />
           </field>
         </xsl:for-each>
       </xsl:for-each>
@@ -1420,10 +1426,10 @@
       <xsl:for-each
         select="$location/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
         <field name="location">
-          <xsl:value-of select="xms:replace-spaces(.)" />
+          <xsl:value-of select="local:replace-spaces(.)" />
         </field>
         <field name="location-{@xml:lang}">
-          <xsl:value-of select="xms:replace-spaces(.)" />
+          <xsl:value-of select="local:replace-spaces(.)" />
         </field>
       </xsl:for-each>
     </xsl:for-each>
@@ -1436,15 +1442,15 @@
 
       <xsl:for-each select="$material/tei:list/tei:item[@xml:id = $ref]">
         <field name="material">
-          <xsl:value-of select="xms:replace-spaces(tei:term)" />
+          <xsl:value-of select="local:replace-spaces(tei:term)" />
         </field>
         <field name="material-{tei:term/@xml:lang}">
-          <xsl:value-of select="xms:replace-spaces(tei:term)" />
+          <xsl:value-of select="local:replace-spaces(tei:term)" />
         </field>
 
         <xsl:for-each select="tei:gloss">
           <field name="material-{@xml:lang}">
-            <xsl:value-of select="xms:replace-spaces(.)" />
+            <xsl:value-of select="local:replace-spaces(.)" />
           </field>
         </xsl:for-each>
       </xsl:for-each>
@@ -1457,10 +1463,10 @@
 
       <xsl:for-each select="$execution/list/item[@xml:id = $ref]/term">
         <field name="execution">
-          <xsl:value-of select="xms:replace-spaces(.)" />
+          <xsl:value-of select="local:replace-spaces(.)" />
         </field>
         <field name="execution-{@xml:lang}">
-          <xsl:value-of select="xms:replace-spaces(.)" />
+          <xsl:value-of select="local:replace-spaces(.)" />
         </field>
       </xsl:for-each>
     </xsl:for-each>
@@ -1468,10 +1474,10 @@
 
   <xsl:template match="tei:repository" mode="document-metadata">
     <field name="institution">
-      <xsl:value-of select="xms:replace-spaces(xms:clean(.))" />
+      <xsl:value-of select="local:replace-spaces(local:clean(.))" />
     </field>
     <field name="institution-{parent::*/@xml:lang}">
-      <xsl:value-of select="xms:replace-spaces(xms:clean(.))" />
+      <xsl:value-of select="local:replace-spaces(local:clean(.))" />
     </field>
   </xsl:template>
 
