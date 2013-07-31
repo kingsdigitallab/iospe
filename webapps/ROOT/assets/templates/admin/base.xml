@@ -6,7 +6,7 @@
   <xsl:import href="cocoon://_internal/template/xsl/stylesheets/defaults.xsl" />
 
   <kiln:block name="html">
-    <html>
+    <html class="no-js">
       <kiln:block name="head">
         <head>
           <meta name="viewport" content="width=device-width" />
@@ -60,7 +60,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li><a href="{$kiln:mount-path}/admin/visualise/">Visualisations</a></li>
+                  <li><a href="{$kiln:mount-path}/admin/introspection/">Introspection</a></li>
                   <li><a href="http://kiln.readthedocs.org/en/latest/">Documentation</a></li>
                 </ul>
                 <ul class="right">

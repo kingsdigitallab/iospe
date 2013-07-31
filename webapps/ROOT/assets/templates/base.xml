@@ -11,7 +11,7 @@
   <xsl:import href="cocoon://_internal/template/xsl/stylesheets/menu/menu.xsl" />
 
   <kiln:block name="html">
-    <html>
+    <html class="no-js">
       <kiln:block name="head">
         <head>
           <meta charset="utf-8" />
@@ -52,7 +52,7 @@
                 <section class="top-bar-section">
                   <ul class="left">
                     <xsl:apply-templates mode="main-menu"
-                                         select="//aggregation/div[@type='menu']" />
+                                         select="/aggregation/div[@type='menu']" />
                   </ul>
                   <ul class="right">
                     <li class="has-form search">
