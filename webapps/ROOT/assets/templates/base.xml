@@ -33,11 +33,6 @@
           <kiln:block name="js">
             <script src="{$kiln:assets-path}/foundation/js/vendor/custom.modernizr.js">&#160;</script>
 
-            <kiln:block name="mainjs">
-              <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
-                      data-main="{$kiln:assets-path}/scripts/base" >&#160;</script>
-            </kiln:block>
-
           </kiln:block>
           <kiln:block name="head-extra"></kiln:block>
         </head>
@@ -45,21 +40,22 @@
       <kiln:block name="body">
         <body>
           <kiln:block name="navigation">
-            <nav class="top-bar">
+            <nav class="top-bar contain-to-grid fixed">
               <kiln:block name="main-navigation">
-                <ul class="title-area">
-                  <li class="name">
-                    <h1><a href="{$kiln:context-path}/">Kiln</a></h1>
-                  </li>
-                  <li class="toggle-topbar menu-icon">
-                    <a href="#"><span>Menu</span></a>
-                  </li>
-                </ul>
                 <section class="top-bar-section">
                   <ul class="left">
                     <xsl:apply-templates mode="main-menu"
                                          select="//aggregation/div[@type='menu']" />
                   </ul>
+                  <ul class="left">
+                    <li class="has-form search">
+                      <form action="{$kiln:context-path}/search/" method="get">
+                        <input name="q" placeholder="Search"
+                               required="required" type="search" />
+                      </form>
+                    </li>
+                  </ul>
+
                   <ul class="right">
                     <li class="has-form search">
                       <form action="{$kiln:context-path}/search/" method="get">
@@ -96,8 +92,15 @@
             <!-- Since we make use of jQuery for other purposes, there
                  is no reason to use Foundation's check whether to use
                  jQuery or Zepto. -->
-            <script src="{$kiln:assets-path}/foundation/js/vendor/jquery.js" />
-            <script src="{$kiln:assets-path}/foundation/js/foundation.min.js" />
+            <script src="{$kiln:assets-path}/foundation/js/vendor/jquery.js" >&#160;</script>
+            <script src="{$kiln:assets-path}/foundation/js/foundation.min.js" >&#160;</script>
+            <script src="{$kiln:assets-path}/foundation/js/foundation/foundation.dropdown.js">&#160;</script>
+
+            <kiln:block name="mainjs">
+              <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+                      data-main="{$kiln:assets-path}/scripts/base" >&#160;</script>
+            </kiln:block>
+
             <script>$(document).foundation();</script>
           </kiln:block>
         </body>

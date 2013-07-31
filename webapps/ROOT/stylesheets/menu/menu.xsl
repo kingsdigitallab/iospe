@@ -11,6 +11,36 @@
     <xsl:apply-templates mode="main-menu" />
   </xsl:template> -->
 
+  <xsl:template match="li" mode="main-menu">
+
+    <xsl:variable name="hasdropdown">
+      <xsl:choose>
+        <xsl:when test="count(ul) > 0">has-dropdown</xsl:when>
+        <xsl:otherwise></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:variable name="isactive">
+      <xsl:choose>
+        <xsl:when test="@class='active-menu-item'">active</xsl:when>
+        <xsl:otherwise></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <li class="{$hasdropdown} {$isactive}">
+      <xsl:apply-templates mode="main-menu" />
+    </li>
+  </xsl:template>
+
+
+
+  <xsl:template match="li/ul" mode="main-menu">
+    <ul class="dropdown">
+      <xsl:apply-templates mode="main-menu" />
+    </ul>
+  </xsl:template>
+
+
 
 
   <!-- For the local menu, display only the siblings of the active
