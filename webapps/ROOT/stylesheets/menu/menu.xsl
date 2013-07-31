@@ -7,7 +7,11 @@
     <xsl:apply-templates mode="main-menu" />
   </xsl:template>
 
-  <xsl:template match="li/ul" mode="main-menu" />
+  <!-- <xsl:template match="li/ul" mode="main-menu" >
+    <xsl:apply-templates mode="main-menu" />
+  </xsl:template> -->
+
+
 
   <!-- For the local menu, display only the siblings of the active
        item. -->
