@@ -32,6 +32,12 @@
           </kiln:block>
           <kiln:block name="js">
             <script src="{$kiln:assets-path}/foundation/js/vendor/custom.modernizr.js">&#160;</script>
+
+            <kiln:block name="mainjs">
+              <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+                      data-main="{$kiln:assets-path}/scripts/base" >&#160;</script>
+            </kiln:block>
+
           </kiln:block>
           <kiln:block name="head-extra"></kiln:block>
         </head>
