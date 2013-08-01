@@ -33,6 +33,8 @@
     </xsl:copy>
   </xsl:template>
 
+
+
   <!-- For the local menu, display only the siblings of the active
        item. -->
   <xsl:template match="kiln:nav" mode="local-menu">

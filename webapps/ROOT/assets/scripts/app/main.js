@@ -1,6 +1,6 @@
 define([], function() {
 
     $(function() {
-        // stuff
+        //$('h2').css('color', '#f00');
     });
 });

@@ -125,7 +125,7 @@
 
        <map:match pattern="index-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main-{ru}.xml?filename=index&amp;fileextension=html" />
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=index&amp;fileextension=html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
           <map:part src="../content/xml/tei/index.xml" label="tei" />
         </map:aggregate>
@@ -142,7 +142,7 @@
 
       <map:match pattern="*-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main-{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
@@ -200,7 +200,7 @@
 
        <map:match pattern="inscriptions/*-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.{2].xml?filename={1}&amp;fileextension=html" />
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
           <map:part src="../content/xml/tei/nadpisi/index.xml" label="tei" />
         </map:aggregate>

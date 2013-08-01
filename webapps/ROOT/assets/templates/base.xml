@@ -14,7 +14,7 @@
       <kiln:block name="head">
         <head>
           <meta charset="utf-8" />
-          <meta content="width=device-width" name="viewport" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta content="IE=edge,chrome=IE8" http-equiv="X-UA-Compatible" />
           <title>
             <kiln:block name="title">Kiln: </kiln:block>
@@ -38,70 +38,87 @@
       </kiln:block>
       <kiln:block name="body">
         <body>
-          <kiln:block name="navigation">
-            <nav class="top-bar contain-to-grid fixed">
-              <kiln:block name="main-navigation">
-                <section class="top-bar-section">
-                  <ul class="left">
-                    <xsl:apply-templates mode="main-menu"
-                                         select="/aggregation/kiln:nav" />
-                 </ul>
-                  <ul class="left">
-                    <li class="has-form search">
-                      <form action="{$kiln:context-path}/search/" method="get">
-                        <input name="q" placeholder="Search"
-                               required="required" type="search" />
-                      </form>
-                    </li>
-                  </ul>
-
-                  <ul class="right">
-                    <li class="has-form search">
-                      <form action="{$kiln:context-path}/search/" method="get">
-                        <input name="q" placeholder="Search"
-                               required="required" type="search" />
-                      </form>
-                    </li>
-                  </ul>
-                </section>
-              </kiln:block>
-            </nav>
-          </kiln:block>
-          <kiln:block name="page-header">
-            <div class="row">
-              <div class="large-12 columns">
-                <h1>
-                  <kiln:block name="page-heading"></kiln:block>
-                </h1>
+          <div class="row">
+            <div class="large-12">
+              <div id="banner" class="row>">
+                <div id="sea_of_loneliness" class="large-12 columns">
+                  <a id="logo" class="right" href="{$kiln:context-path}/">
+                    <img src="{$kiln:assets-path}/images/bs.h4.en.png" title="IOSPE" />
+                  </a>
+                </div>
               </div>
-            </div>
-          </kiln:block>
-          <kiln:block name="content-section">
-            <main>
-              <kiln:block name="content" />
-            </main>
-          </kiln:block>
-          <kiln:block name="footer">
-            <footer>
-              <p>Powered by <a href="http://kcl-ddh.github.io/kiln/">Kiln</a></p>
-              <p>Theme by <a href="http://foundation.zurb.com/">Foundation</a></p>
-            </footer>
-          </kiln:block>
-          <kiln:block name="end-js">
-            <!-- Since we make use of jQuery for other purposes, there
-                 is no reason to use Foundation's check whether to use
-                 jQuery or Zepto. -->
-            <script src="{$kiln:assets-path}/foundation/js/vendor/jquery.js" >&#160;</script>
-            <script src="{$kiln:assets-path}/foundation/js/foundation.min.js" >&#160;</script>
-            <script src="{$kiln:assets-path}/foundation/js/foundation/foundation.dropdown.js">&#160;</script>
+              <div class="row">
+                <div class="contain-to-grid large-12 columns">
+                  <kiln:block name="navigation">
+                    <nav class="top-bar">
+                      <kiln:block name="main-navigation">
+                        <ul class="title-area">
+                          <li class="name">
+                            <a id="griffin" href="{$kiln:context-path}/">
+                              <img src="{$kiln:assets-path}/images/griffin.png" title="IOSPE" />
+                            </a>
+                            &#160;
+                          </li>
+                          <li class="toggle-topbar menu-icon">
+                            <a href="#"><span>Menu</span></a>
+                          </li>
+                        </ul>
+                        <section class="top-bar-section">
+                          <ul class="left">
+                            <xsl:apply-templates mode="main-menu"
+                                                 select="/aggregation/kiln:nav" />
+                          </ul>
 
-            <kiln:block name="mainjs">
-              <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
-                      data-main="{$kiln:assets-path}/scripts/base" >&#160;</script>
-            </kiln:block>
+                        </section>
 
-            <script>$(document).foundation();</script>
-          </kiln:block>
+                        <section class="top-bar-section">
+                          <ul class="right">
+                            <xsl:call-template name="menu-languages" />
+                          </ul>
+                        </section>
+                      </kiln:block>
+                    </nav>
+                  </kiln:block>
+                </div> <!-- fixed and contained to the grid -->
+              </div>
+              <kiln:block name="page-header">
+                <div class="row">
+                  <div class="large-12 columns">
+                    <h1>
+                      <kiln:block name="page-heading"></kiln:block>
+                    </h1>
+                  </div>
+                </div>
+              </kiln:block>
+              <kiln:block name="content-section">
+                <main>
+                  <kiln:block name="content" />
+                </main>
+              </kiln:block>
+              <kiln:block name="footer">
+                <footer>
+                  <p>Powered by <a href="http://kcl-ddh.github.io/kiln/">Kiln</a></p>
+                  <p>Theme by <a href="http://foundation.zurb.com/">Foundation</a></p>
+                </footer>
+              </kiln:block>
+              <kiln:block name="end-js">
+                <!-- Since we make use of jQuery for other purposes, there
+                     is no reason to use Foundation's check whether to use
+                     jQuery or Zepto. -->
+                <script src="{$kiln:assets-path}/foundation/js/vendor/jquery.js" >&#160;</script>
+                <script src="{$kiln:assets-path}/foundation/js/foundation.min.js" >&#160;</script>
+                <script src="{$kiln:assets-path}/foundation/js/foundation/foundation.dropdown.js">&#160;</script>
+                <script src="{$kiln:assets-path}/foundation/js/foundation/foundation.topbar.js">&#160;</script>
+
+                <kiln:block name="mainjs">
+                  <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+                          data-main="{$kiln:assets-path}/scripts/base" >&#160;</script>
+                </kiln:block>
+
+                <script>$(document).foundation();</script>
+              </kiln:block>
+            </div> <!-- 12 (no columns) -->
+          </div> <!-- row -->
         </body>
       </kiln:block>
     </html>

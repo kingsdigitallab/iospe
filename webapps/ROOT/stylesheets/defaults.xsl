@@ -23,6 +23,7 @@
   <!-- $language is the language code used to distinguish between
        language contexts in a multilingual site. -->
   <xsl:param name="language" select="''" />
+  <xsl:param name="lang" select="''" />
 
   <!-- Specify a mount path if you are mounting the webapp in a
        subdirectory rather than at the root of the domain. This path
@@ -92,5 +93,15 @@
       <xsl:value-of select="$fileextension" />
     </xsl:if>
   </xsl:variable>
+
+
+  <xsl:template name="menu-languages">
+    <li class="lang">
+      <a class="py" href="{substring-before($filename,'.xml')}-ru.html" title="Русский">Русский</a>
+    </li>
+    <li class="lang">
+      <a class="en" href="{substring-before($filename,'.xml')}.html" title="English">English</a>
+    </li>
+  </xsl:template>
 
 </xsl:stylesheet>
