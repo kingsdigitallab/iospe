@@ -106,7 +106,133 @@
 
       <!-- starting with content -->
 
-      <!-- Indices -->
+      <!-- Indices, TOCs, concordances -->
+      <map:match pattern="indices/index.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=index&amp;fileextension=html" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <!-- Determine first available letters -->
+          <map:part element="attested"
+            src="cocoon:/getFirstLetter/attested:*" />
+          <map:part element="words-grc"
+            src="cocoon:/getFirstLetter/words:*%20AND%20lang:grc" />
+          <map:part element="words-lat"
+            src="cocoon:/getFirstLetter/words:*%20AND%20lang:lat" />
+          <map:part element="fragments-grc"
+            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:grc" />
+          <map:part element="fragments-lat"
+            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:lat" />
+          <map:part element="places"
+            src="cocoon:/isAvailable/places:*" />
+          <map:part element="divine"
+            src="cocoon:/isAvailable/names:*%20AND%20persName-type:divine" />
+          <map:part element="ruler"
+            src="cocoon:/isAvailable/names:*%20AND%20persName-type:ruler" />
+          <map:part element="months"
+            src="cocoon:/isAvailable/months:*" />
+          <map:part element="symbols"
+            src="cocoon:/isAvailable/symbols:*" />
+          <map:part element="ligatures"
+            src="cocoon:/isAvailable/ligatures:*" />
+          <map:part element="numerals"
+            src="cocoon:/isAvailable/numerals:*" />
+          <map:part element="abbr"
+            src="cocoon:/isAvailable/abbr:*" />
+          <map:part element="death"
+            src="cocoon:/isAvailable/death:*" />
+          <map:part element="findspot"
+            src="cocoon:/isAvailable/findspot-en:*" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="home"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/index-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=index&amp;fileextension=html" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <!-- Determine first available letters -->
+          <map:part element="attested"
+            src="cocoon:/getFirstLetter/attested:*" />
+          <map:part element="words-grc"
+            src="cocoon:/getFirstLetter/words:*%20AND%20lang:grc" />
+          <map:part element="words-lat"
+            src="cocoon:/getFirstLetter/words:*%20AND%20lang:lat" />
+          <map:part element="fragments-grc"
+            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:grc" />
+          <map:part element="fragments-lat"
+            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:lat" />
+          <map:part element="places"
+            src="cocoon:/isAvailable/places:*" />
+          <map:part element="divine"
+            src="cocoon:/isAvailable/names:*%20AND%20persName-type:divine" />
+          <map:part element="ruler"
+            src="cocoon:/isAvailable/names:*%20AND%20persName-type:ruler" />
+          <map:part element="months"
+            src="cocoon:/isAvailable/months:*" />
+          <map:part element="symbols"
+            src="cocoon:/isAvailable/symbols:*" />
+          <map:part element="ligatures"
+            src="cocoon:/isAvailable/ligatures:*" />
+          <map:part element="numerals"
+            src="cocoon:/isAvailable/numerals:*" />
+          <map:part element="abbr"
+            src="cocoon:/isAvailable/abbr:*" />
+          <map:part element="death"
+            src="cocoon:/isAvailable/death:*" />
+          <map:part element="findspot"
+            src="cocoon:/isAvailable/findspot-ru:*" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="home"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Symbols, Ligatures, Numerals, Abbreviations, Deaths -->
+      <map:match pattern="indices/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="index"
+                    src="cocoon://_internal/solr/query/q={1}:*&amp;sort={1}-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="index"
+                    src="cocoon://_internal/solr/query/q={1}:*&amp;sort={1}-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Main -->
 
       <map:match pattern="index.html">
         <map:aggregate element="aggregation" label="content">
@@ -307,6 +433,65 @@
           <map:parameter name="lang" value="en" />
         </map:transform>
         <map:serialize type="xhtml" />
+      </map:match>
+
+    </map:pipeline>
+
+    <!-- Preprocessing -->
+    <map:pipeline internal-only="true">
+      <!-- general check to test wether index is available (can be removed when all indices are available) -->
+      <map:match pattern="isAvailable/*">
+        <map:generate src="cocoon://_internal/solr/query/q={1}&amp;rows=1" />
+        <map:serialize/>
+      </map:match>
+      <!-- get first available letter: index query-->
+      <map:match pattern="getFirstLetter/*">
+        <map:generate src="cocoon://_internal/solr/query/q={1}%20AND%20first-letter:*&amp;sort=first-letter%20asc&amp;rows=1" />
+        <map:serialize/>
+      </map:match>
+      <!-- generate list of available letter: index query -->
+      <map:match pattern="getLetters/*">
+        <map:generate src="cocoon://_internal/solr/query/q={1}&amp;sort=first-letter%20asc&amp;rows=9999" />
+        <map:transform src="../stylesheets/getLetters.xsl"/>
+        <map:serialize/>
+      </map:match>
+      <map:match pattern="getLetters-lat/*">
+        <map:generate src="cocoon://_internal/solr/query/q={1}%20AND%20lang:lat&amp;sort=first-letter%20asc&amp;rows=9999" />
+        <map:transform src="../stylesheets/getLetters.xsl">
+          <!--<map:parameter name="lang" value="grc"/>-->
+        </map:transform>
+        <map:serialize/>
+      </map:match>
+      <map:match pattern="getLetters-grc/*">
+        <map:generate src="cocoon://_internal/solr/query/q={1}%20AND%20lang:grc&amp;sort=first-letter-grc%20asc&amp;rows=9999" />
+        <map:transform src="../stylesheets/getLetters.xsl">
+          <!--<map:parameter name="lang" value="grc"/>-->
+        </map:transform>
+        <map:serialize/>
+      </map:match>
+    </map:pipeline>
+
+    <map:pipeline internal-only="true">
+      <map:match pattern="views/*/*/*">
+        <map:generate src="cocoon:/stripNameDate/{2}"/>
+        <map:transform src="../stylesheets/example-p5-xslt/start-edition.xsl">
+          <map:parameter name="edition-type" value="{1}" />
+          <map:parameter name="leiden-style" value="iospe" />
+          <map:parameter name="verse-lines" value="{3}" />
+        </map:transform>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <map:match pattern="stripNameDate/*">
+        <map:generate src="xml/content/inscriptions/{1}"/>
+        <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <map:match pattern="v_epidoc/*">
+        <map:generate src="xml/content/inscriptions/{1}"/>
+        <map:transform src="../stylesheets/epidoc-views/epidoc.xsl"/>
+        <map:serialize type="xml"/>
       </map:match>
 
     </map:pipeline>
