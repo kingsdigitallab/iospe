@@ -107,6 +107,221 @@
       <!-- starting with content -->
 
       <!-- Indices, TOCs, concordances -->
+
+      <!-- Concordances -->
+
+      <!-- Publications -->
+      <map:match pattern="conc/index-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=index&amp;fileextension=html" />
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances.xsl">
+          <map:parameter name="filedir" value="conc" />
+          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="concordance" value="publications"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="conc/index.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=main&amp;fileextension=html" />
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances.xsl">
+          <map:parameter name="filedir" value="conc" />
+          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="concordance" value="publications"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Publications / publication -->
+      <map:match pattern="conc/publications/*-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances.xsl">
+          <map:parameter name="filedir" value="conc/publications" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="concordance" value="publication"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="conc/publications/*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances.xsl">
+          <map:parameter name="filedir" value="conc/publications" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="concordance" value="publication"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+
+      <!-- TOCS -->
+
+       <!-- locations -->
+      <map:match pattern="corpora/*/locations-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename=locations&amp;fileextension=html" />
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=origin-ref:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="locations.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="toc" value="locations"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="corpora/*/locations.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=locations&amp;fileextension=html" />
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=origin-ref:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="locations.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="locations"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+
+      <!-- bynum -->
+      <map:match pattern="indices/bynum-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=bynum&amp;fileextension=html" />
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=inscription:*&amp;sort=inscription%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="bynum.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="{1}"/>
+          <map:parameter name="toc" value="bynum"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/bynum.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=bynum&amp;fileextension=html" />
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=inscription:*&amp;sort=inscription%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="bynum.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="bynum"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+
+      <!-- TOC, SUBTYPE -->
+      <!-- date -->
+      <map:match pattern="indices/date/*-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date-type:*"/>
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="toc" value="date"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/date/*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date-type:*"/>
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="date"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- TOC, SIMPLE -->
+      <!-- category, object -->
+      <map:match type="regexp" pattern="indices/(category|object)-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q={1}-ru:*&amp;sort={1}-ru%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="toc" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match type="regexp" pattern="indices/(category|object).html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q={1}-en:*&amp;sort={1}-en%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Indices -->
       <map:match pattern="indices/index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?filename=index&amp;fileextension=html" />
@@ -199,6 +414,263 @@
         <map:serialize type="xhtml" />
       </map:match>
 
+      <!-- Index names using AL -->
+      <!-- persons -->
+
+      <map:match pattern="indices/person/other-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=other&amp;fileextension=html" />
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml" />
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=persName-ref:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="other.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="lang" value="{1}"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/person/other.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=other&amp;fileextension=html" />
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml" />
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=persName-ref:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="other.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      <!--  <map:serialize type="xml" />-->
+      </map:match>
+
+      <!-- Divine, Ruler -->
+      <map:match pattern="indices/person/*-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="../contact/xml/tei/alists/{1}.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/person/*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="../contact/xml/tei/alists/{1}.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="en"/>
+          </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Index / Letter -->
+      <!-- NAMES ONLY: Attested -->
+      <map:match pattern="indices/names/*-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="cocoon:/getLetters/attested:*"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices/names" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="attested"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/names/*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="cocoon:/getLetters/attested:*"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices/names" />
+          <map:parameter name="filename" value="{1}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="index" value="attested"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xml" />
+      </map:match>
+
+      <!-- Index / Language - Letter -->
+      <!-- Words, Fragments -->
+      <map:match pattern="indices/*/*/*-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{4}.xml?filename={3}&amp;fileextension=html" />
+          <map:part src="cocoon:/getLetters-{2}/{1}:*"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{3}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="ancient-lang" value="{2}"/>
+          <map:parameter name="lang" value="{4}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/*/*/*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={3}&amp;fileextension=html" />
+          <map:part src="cocoon:/getLetters-{2}/{1}:*"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="" />
+          <map:parameter name="filename" value="{3}.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="ancient-lang" value="{2}"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Other indices using ALs -->
+      <!-- Months -->
+      <map:match pattern="indices/months-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=months&amp;fileextension=html" />
+          <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=months:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="months.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="months"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/months.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=months&amp;fileextension=html" />
+          <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=months:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="months.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="months"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Places -->
+      <map:match pattern="indices/places-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=places&amp;fileextension=html" />
+          <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=places:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="places.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="places"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/places.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=places&amp;fileextension=html" />
+          <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=places:*&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="places.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="places"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <!-- Single indices that differ in english/russian -->
+      <!-- Findspot -->
+      <map:match pattern="indices/findspot-*.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?filename=findspot&amp;fileextension=html" />
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=findspot-ru:*&amp;sort=findspot-ru%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="findspot.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="findspot-{1}"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="indices/findspot.html">
+        <map:aggregate element="aggregation">
+          <map:part src="cocoon://_internal/menu/main.xml?filename=findspot&amp;fileextension=html" />
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999" />
+        </map:aggregate>
+        <map:transform src="stylesheets/local/indices.xsl">
+          <map:parameter name="filedir" value="indices" />
+          <map:parameter name="filename" value="findspot.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="index" value="findspot-en"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+      <!-- Single indices (must be at the end because of URL) -->
+      <!-- Index -->
       <!-- Symbols, Ligatures, Numerals, Abbreviations, Deaths -->
       <map:match pattern="indices/*-*.html">
         <map:aggregate element="aggregation" label="content">
@@ -371,12 +843,43 @@
         <map:serialize type="xhtml" />
       </map:match>
 
+      <!-- Landing pages for volumes -->
+      <map:match pattern="corpora/*/index-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/landings/{1}.xml" label="tei" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="filedir" value="." />
+          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="{2}" />
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
+      <map:match pattern="corpora/*/index.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
+          <map:part src="cocoon://internal/metadata/files.xml" />
+          <map:part src="../content/xml/tei/landings/{1}.xml" label="tei" />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="filedir" value="." />
+          <map:parameter name="filename" value="index.xml" />
+          <map:parameter name="fileextension" value="html" />
+          <map:parameter name="lang" value="en" />
+        </map:transform>
+        <map:serialize type="xhtml" />
+      </map:match>
+
       <!-- Introductions -->
       <map:match pattern="corpora/*/introduction-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?filename={1}&amp;fileextension=html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
-          <map:part src="../content/tei/introductions/{1}.xml" label="tei" />
+          <map:part src="../content/xml/tei/introductions/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tei.xsl">
           <map:parameter name="filedir" value="." />
@@ -391,7 +894,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?filename={1}&amp;fileextension=html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
-          <map:part src="../content/tei/introductions/{1}.xml" label="tei" />
+          <map:part src="../content/xml/tei/introductions/{1}.xml" label="tei" />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tei.xsl">
           <map:parameter name="filedir" value="." />
