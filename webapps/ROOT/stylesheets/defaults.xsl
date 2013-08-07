@@ -96,11 +96,11 @@
 
 
   <xsl:template name="menu-languages">
-    <li class="lang">
-      <a class="py" href="{substring-before($filename,'.xml')}-ru.html" title="Русский">Русский</a>
-    </li>
-    <li class="lang">
+    <li class="lang en">
       <a class="en" href="{substring-before($filename,'.xml')}.html" title="English">English</a>
+    </li>
+    <li class="lang py">
+      <a class="py" href="{substring-before($filename,'.xml')}-ru.html" title="Русский">Русский</a>
     </li>
   </xsl:template>
 
