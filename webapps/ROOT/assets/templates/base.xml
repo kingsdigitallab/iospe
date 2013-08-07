@@ -81,24 +81,47 @@
                   </kiln:block>
                 </div> <!-- fixed and contained to the grid -->
               </div>
-              <kiln:block name="page-header">
-                <div class="row">
-                  <div class="large-12 columns">
-                    <h1>
-                      <kiln:block name="page-heading"></kiln:block>
-                    </h1>
-                  </div>
+              <div id="body-wrapper" class="row">
+                <div class="large-2 columns" >&#160;</div>
+
+                <div id="main-content" class="large-10 columns ">
+                  <kiln:block name="page-header">
+                    <div class="row">
+                      <div class="large-12 columns">
+                        <h1>
+                          <kiln:block name="page-heading"></kiln:block>
+                        </h1>
+                      </div>
+                    </div>
+                  </kiln:block>
+                  <kiln:block name="content-section">
+                    <main>
+                      <kiln:block name="content" />
+                    </main>
+                  </kiln:block>
                 </div>
-              </kiln:block>
-              <kiln:block name="content-section">
-                <main>
-                  <kiln:block name="content" />
-                </main>
-              </kiln:block>
+              </div>
               <kiln:block name="footer">
                 <footer>
-                  <p>Powered by <a href="http://kcl-ddh.github.io/kiln/">Kiln</a></p>
-                  <p>Theme by <a href="http://foundation.zurb.com/">Foundation</a></p>
+                  <p>
+                    <xsl:choose>
+                      <xsl:when test="$lang='en'">
+                        <a href="#cs" title="#">Top of Page</a>
+                      </xsl:when>
+                      <xsl:when test="$lang='ru'">
+                        <a href="#cs" title="#">К началу страницы</a>
+                      </xsl:when>
+                    </xsl:choose>
+                  </p>
+
+                  <xsl:choose>
+                    <xsl:when test="$lang='en'">
+                      <p>&#xa9; 2011 King's College London</p>
+                    </xsl:when>
+                    <xsl:when test="$lang='ru'">
+                      <p>&#xa9; 2011 Кингс Колледж Лондон</p>
+                    </xsl:when>
+                  </xsl:choose>
                 </footer>
               </kiln:block>
               <kiln:block name="end-js">
