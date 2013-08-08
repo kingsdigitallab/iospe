@@ -65,15 +65,27 @@ p {color: #333;}
 }
 
 #griffin {
+    background: url(../images/griffin.png) no-repeat scroll transparent;
+    background-position: bottom right;
     display: block;
     margin-top: -108px;
-    margin-left: -10px;
-}
-
-#griffin img {
-    width: 195px;
+    margin-right: 20px;
     height: 143px;
 }
+
+@media only screen and (max-width: 767px) {
+  #griffin {
+    background: none;
+    height: 0;
+  }
+}
+
+@media only screen and (min-width: 1240px) {
+    #griffin {
+        background-position: -8px bottom;
+    }
+}
+
 
 a#logo:hover,
 a#logo:visited,
@@ -81,7 +93,7 @@ a#logo:active,
 a#griffin:hover,
 a#griffin:visited,
 a#griffin:active {
-    background: transparent;
+    background-color: transparent;
 }
 
 /* navigation */
@@ -174,7 +186,24 @@ a#griffin:active {
 
 /* rock on the left */
 
-#body-wrapper {
-    background: url(../images/side_bg.png) no-repeat scroll -2px -65px  transparent;
+#rock {
+    background: url(../images/side_bg.png) no-repeat scroll transparent;
+    background-position: right -65px;
+    min-height: 690px;
 
+}
+
+@media only screen and (max-width: 767px) {
+  #rock {
+    background: none;
+    height: 0;
+    min-height: 0;
+  }
+}
+
+
+@media only screen and (min-width: 1240px) {
+    #rock {
+        background-position: left  -65px;
+    }
 }

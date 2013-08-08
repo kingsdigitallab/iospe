@@ -52,15 +52,14 @@
                   <kiln:block name="navigation">
                     <nav class="top-bar">
                       <kiln:block name="main-navigation">
-                        <ul class="title-area">
+                        <ul class="title-area large-2">
                           <li class="name">
                             <a id="griffin" href="{$kiln:context-path}/">
-                              <img src="{$kiln:assets-path}/images/griffin.png" title="IOSPE" />
+                              &#160;
                             </a>
-                            &#160;
                           </li>
                           <li class="toggle-topbar menu-icon">
-                            <a href="#"><span>Menu</span></a>
+                            <a href="#"><span></span></a>
                           </li>
                         </ul>
                         <section class="top-bar-section">
@@ -82,7 +81,7 @@
                 </div> <!-- fixed and contained to the grid -->
               </div>
               <div id="body-wrapper" class="row">
-                <div class="large-2 columns" >&#160;</div>
+                <div id="rock" class="large-2 columns" >&#160;</div>
 
                 <div id="main-content" class="large-10 columns ">
                   <kiln:block name="page-header">
@@ -106,10 +105,10 @@
                   <p>
                     <xsl:choose>
                       <xsl:when test="$lang='en'">
-                        <a href="#cs" title="#">Top of Page</a>
+                        <a href="#logo" title="#">Top of Page</a>
                       </xsl:when>
                       <xsl:when test="$lang='ru'">
-                        <a href="#cs" title="#">К началу страницы</a>
+                        <a href="#logo" title="#">К началу страницы</a>
                       </xsl:when>
                     </xsl:choose>
                   </p>
