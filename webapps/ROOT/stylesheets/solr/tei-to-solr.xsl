@@ -1552,10 +1552,4 @@
   </xsl:template>
 
   <xsl:template match="tei:note" mode="apparatus" />
-
-  <xsl:template match="/">
-    <add>
-      <xsl:apply-imports />
-    </add>
-  </xsl:template>
 </xsl:stylesheet>

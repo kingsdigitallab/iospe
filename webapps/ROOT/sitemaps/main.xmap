@@ -754,7 +754,7 @@
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
           <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"/>
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tei.xsl">
+        <map:transform src="cocoon://_internal/template/inscription.xsl">
           <map:parameter name="filedir" value="." />
           <map:parameter name="filename" value="{1}.xml" />
           <map:parameter name="fileextension" value="html" />
@@ -779,7 +779,7 @@
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
           <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"/>
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tei.xsl">
+        <map:transform src="cocoon://_internal/template/inscription.xsl">
           <map:parameter name="filedir" value="." />
           <map:parameter name="filename" value="{1}.xml" />
           <map:parameter name="fileextension" value="html" />
@@ -986,13 +986,13 @@
       </map:match>
 
       <map:match pattern="stripNameDate/*">
-        <map:generate src="xml/content/inscriptions/{1}"/>
+        <map:generate src="../content/xml/tei/inscriptions/{1}"/>
         <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
 
       <map:match pattern="v_epidoc/*">
-        <map:generate src="xml/content/inscriptions/{1}"/>
+        <map:generate src="../content/xml/tei/inscriptions/{1}"/>
         <map:transform src="../stylesheets/epidoc-views/epidoc.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
@@ -1009,6 +1009,7 @@
         <map:serialize type="xml_nodecl" />
       </map:match>
     </map:pipeline>
+
 
     <!-- Error handling, making use of the templating system for
          errors that fit within the site's design. If this throws any

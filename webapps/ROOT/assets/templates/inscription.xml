@@ -5,7 +5,7 @@
            xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Imports stylesheet to convert TEI into HTML. -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/to-html.xsl" />
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/inscription.xsl" />
 
   <kiln:parent>
     <xi:include href="base.xml" />
@@ -13,18 +13,18 @@
 
   <kiln:child>
     <kiln:block name="title">
-      <xsl:value-of select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@xml:lang=$lang]" />
+      <xsl:value-of select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]" />
     </kiln:block>
 
     <kiln:block name="page-heading">
       <kiln:super />
-      <xsl:value-of select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@xml:lang=$lang]" />
+      <xsl:value-of select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]" />
     </kiln:block>
 
     <kiln:block name="content">
       <div class="row">
         <div class="large-12 columns">
-          <xsl:apply-templates select="/aggregation/tei:TEI/tei:text/tei:group/tei:text[@xml:lang=$lang]" />
+          <xsl:apply-templates select="/aggregation/inscription/tei:TEI/tei:text/tei:group/tei:text[@xml:lang=$lang]" />
         </div>
       </div>
     </kiln:block>
