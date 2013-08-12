@@ -21,7 +21,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="tei:ref[@target][ancestor::tei:list[@type='logo']]">
+  <xsl:template match="tei:list[@type='logo']//tei:ref[@target]">
     <a href="{@target}">
       <xsl:apply-templates select="@*" />
       <xsl:if test="normalize-space(@title)">
@@ -36,4 +36,43 @@
       <xsl:apply-templates />
     </a>
   </xsl:template>
+
+  <xsl:template match="tei:list[@type='gloss']">
+    <dl>
+      <xsl:apply-templates />
+    </dl>
+  </xsl:template>
+
+  <xsl:template match="tei:list[@type='gloss']/tei:item">
+    <dd>
+      <xsl:apply-templates />
+    </dd>
+  </xsl:template>
+
+  <xsl:template match="tei:list[@type='gloss']/tei:label">
+    <dt>
+      <xsl:apply-templates />
+    </dt>
+  </xsl:template>
+
+
+  <xsl:template match="tei:name">
+    <strong>
+      <xsl:apply-templates />
+    </strong>
+  </xsl:template>
+
+
+  <xsl:template match="tei:list[@type='logo']//tei:figure">
+    <xsl:attribute name="id">
+      <xsl:value-of select="@xml:id" />
+    </xsl:attribute>
+    <xsl:call-template name="tei-assign-classes" />
+    <xsl:variable name="root-id"
+                  select="ancestor::tei:TEI/@xml:id | ancestor::tei:teiCorpus/@xml:id" />
+    <img src="{$kiln:content-path}/images/{$root-id}/{tei:graphic/@url}">
+      <xsl:apply-templates mode="tei-alt-text" select="." />
+    </img>
+  </xsl:template>
+
 </xsl:stylesheet>
