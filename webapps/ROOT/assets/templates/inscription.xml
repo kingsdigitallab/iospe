@@ -16,6 +16,10 @@
       <xsl:value-of select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]" />
     </kiln:block>
 
+    <kiln:block name="page-pre-header">
+      <xsl:call-template name="inscriptionnav"/>
+    </kiln:block>
+
     <kiln:block name="page-heading">
       <kiln:super />
       <xsl:value-of select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]" />
@@ -24,7 +28,7 @@
     <kiln:block name="content">
       <div class="row">
         <div class="large-12 columns">
-          <xsl:apply-templates select="/aggregation/inscription/tei:TEI/tei:text/tei:group/tei:text[@xml:lang=$lang]" />
+
         </div>
       </div>
     </kiln:block>
