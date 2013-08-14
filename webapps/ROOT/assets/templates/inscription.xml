@@ -17,7 +17,7 @@
     </kiln:block>
 
     <kiln:block name="page-pre-header">
-      <xsl:call-template name="inscriptionnav"/>
+      <xsl:call-template name="inscriptionnav" />
     </kiln:block>
 
     <kiln:block name="page-heading">
@@ -27,10 +27,15 @@
 
     <kiln:block name="content">
       <div class="row">
-        <div class="large-12 columns">
-
+        <div class="large-12 columns inscription">
+          <xsl:apply-templates select="//inscription/tei:TEI" />
         </div>
       </div>
+    </kiln:block>
+
+    <kiln:block name="mainjs">
+      <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+              data-main="{$kiln:assets-path}/scripts/inscription" >&#160;</script>
     </kiln:block>
   </kiln:child>
 

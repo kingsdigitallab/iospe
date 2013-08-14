@@ -745,9 +745,9 @@
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
           <map:part element="prev_inscr"
-            src="cocoon://_internal/solr/query/q=inscription:[*%20TO%20{1}]&amp;start=0&amp;rows=999" />
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B*+TO+{1}%7D&amp;sort=inscription+desc&amp;start=0&amp;rows=1" />
           <map:part element="next_inscr"
-            src="cocoon://_internal/solr/query/q=inscription:[{1}%20TO%20*]&amp;start=1&amp;rows=1" />
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=inscription+asc&amp;start=0&amp;rows=1" />
           <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
           <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/> <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
@@ -770,9 +770,9 @@
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
           <map:part element="prev_inscr"
-            src="cocoon://_internal/solr/query/q=inscription:[*%20TO%20{1}]&amp;start=0&amp;rows=999" />
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B*+TO+{1}%7D&amp;sort=inscription+desc&amp;start=0&amp;rows=1" />
           <map:part element="next_inscr"
-            src="cocoon://_internal/solr/query/q=inscription:[{1}%20TO%20*]&amp;start=1&amp;rows=1" />
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=inscription+asc&amp;start=0&amp;rows=1" />
           <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
           <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/> <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>

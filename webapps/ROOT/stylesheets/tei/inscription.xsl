@@ -6,18 +6,13 @@
     <xsl:template match="/" />
 
     <xsl:template name="inscriptionnav">
-      <xsl:variable name="nextlabel">
-        <xsl:value-of select="if ($lang='ru') then 'Следующая' else 'Next'"/>
-      </xsl:variable>
-      <xsl:variable name="prevlabel">
-        <xsl:value-of select="if ($lang='ru') then 'Предыдущая' else 'Previous'"/>
-      </xsl:variable>
-      <xsl:variable name="placeholder">
-        <xsl:value-of select="if ($lang='ru') then 'Надпись №' else 'Inscription #'"/>
-      </xsl:variable>
-      <xsl:variable name="golabel">
-        <xsl:value-of select="if ($lang='ru') then 'Найти' else 'Go'"/>
-      </xsl:variable>
+      <xsl:param name="next_inscr" />
+      <xsl:param name="prev_inscr" />
+
+      <xsl:variable name="nextlabel" select="if ($lang='ru') then 'Следующая' else 'Next'" />
+      <xsl:variable name="prevlabel" select="if ($lang='ru') then 'Предыдущая' else 'Previous'"/>
+      <xsl:variable name="placeholder" select="if ($lang='ru') then 'Надпись №' else 'Inscription #'"/>
+      <xsl:variable name="golabel" select="if ($lang='ru') then 'Найти' else 'Go'"/>
 
       <div class="row">
 
@@ -25,16 +20,20 @@
         <div class="large-1 columns">
           <ul class="pagination">
             <xsl:choose>
-              <xsl:when test="//prev_inscr//str[@name='inscription'][text()=substring-before($filename, '.xml')]/preceding::str[@name='inscription'][1]">
-                <li class="arrow"><a href="{concat(//prev_inscr//str[@name='inscription'][text()=substring-before($filename, '.xml')]/preceding::str[@name='inscription'][1], if ($lang='ru') then '-ru' else())}.html">
-                  &#171;
-                  <xsl:value-of select="$prevlabel" /></a>
+              <xsl:when test="//prev_inscr//result/doc/str[@name='inscription']/text()">
+                <li class="arrow">
+                  <a href="{concat(//prev_inscr//result/doc/str[@name='inscription'], $kiln:url-lang-suffix)}.html">
+                    <xsl:text>&#171; </xsl:text>
+                    <xsl:value-of select="$prevlabel" />
+                  </a>
                 </li>
               </xsl:when>
               <xsl:otherwise>
-                <li class="arrow unavailable"><a href="">
-                  &#171;
-                  <xsl:value-of select="$prevlabel" /></a>
+                <li class="arrow unavailable">
+                  <a href="">
+                    <xsl:text>&#171; </xsl:text>
+                    <xsl:value-of select="$prevlabel" />
+                  </a>
                 </li>
               </xsl:otherwise>
             </xsl:choose>
@@ -49,32 +48,35 @@
                 <input id="numTxt" name="numTxt" type="text" placeholder="{$placeholder}" />
               </div>
               <div class="small-4 columns">
-                <a href="#" class="button prefix"><xsl:value-of select="$golabel" /></a>
+                <a href="#" class="button prefix submit"><xsl:value-of select="$golabel" /></a>
               </div>
             </form>
           </div>
         </div>
 
         <!-- next -->
-        <div class="large-1 columns">
+        <div class="large-9 columns">
           <ul class="pagination">
             <xsl:choose>
-              <xsl:when test="//next_inscr//str[@name='inscription'][not(text()=substring-before($filename, '.xml'))]">
-                <li class="arrow"><a href="{concat(//next_inscr//str[@name='inscription'], if ($lang='ru') then '-ru' else())}.html">
-                  <xsl:value-of select="$nextlabel" />
-                  &#187;</a>
+              <xsl:when test="//next_inscr//result/doc/str[@name='inscription']/text()">
+                <li class="arrow">
+                  <a href="{concat(//next_inscr//result/doc/str[@name='inscription'], $kiln:url-lang-suffix)}.html">
+                    <xsl:value-of select="$nextlabel" />
+                    <xsl:text> &#187;</xsl:text>
+                  </a>
                 </li>
               </xsl:when>
               <xsl:otherwise>
-                <li class="arrow unavailable"><a href="">
-                  <xsl:value-of select="$nextlabel" />
-                  &#187;</a>
+                <li class="arrow unavailable">
+                  <a href="">
+                    <xsl:value-of select="$nextlabel" />
+                    <xsl:text> &#187;</xsl:text>
+                  </a>
                 </li>
               </xsl:otherwise>
             </xsl:choose>
           </ul>
         </div>
-        <div class="large-8 columns" />
       </div>
     </xsl:template>
 
