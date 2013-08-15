@@ -1,28 +1,48 @@
 // Inscriptions specific functions
 
-require(['./base'],
-  function (base) {
+require(['common', 'base', 'app/main'],
+  function (common, base, main) {
 
-    var build_inscription_id = function (n) {
-      return 'byz' + ('0' * (3 - n.length)) + n;
+
+    var parse_inscription = function (query) {
+      var n = query.match(/^(b?y?z?)?\s*(\d{1,3})(\.\d)?([a-j])?$/);
+
+      if (!n || !n[2]) {
+        return false;
+      }
+
+      return {'byz': 'byz',
+              'n': main.pad(n[2]),
+              'sub': '' + (n[3] || ''),
+              'suffix': '' + (n[4] || '')};
     };
 
-    var parse_inscription_id = function (val) {
-      var n = val.match(/^(\d{1,3})(\.\d)?([a-j])?$/);
-      return n;
+    var build_inscription_doc = function(inscription, extension) {
+      var ext = extension || '.html';
+
+      return ('' + inscription.byz +
+                 inscription.n +
+                 inscription.sub +
+                 inscription.suffix +
+                 main.get_kiln_url_language_suffix() +
+                 ext);
+
     };
 
     $(function() {
         $('#jumpForm').on('submit',
           function (e) {
             e.preventDefault();
-            var n = $('#numTxt').val();
-            n = parse_inscription_id(n);
+            var $nt = $('#numTxt'),
+                query = $nt.val(),
+                i = parse_inscription(query);
 
-            if (n) {
-              location.href = '.' + build_inscription_id(n) + base.get_kiln_url_language_suffix() + '.html';
+            $nt.removeClass('error').next('small').remove();
+
+            if (i) {
+              location.href =  build_inscription_doc(i);
             } else {
-              $('#numTxt', this).text('Invalid id number');
+              $('#numTxt', this).addClass('error').after('<small>Invalid id number</small>');
             }
 
           });
