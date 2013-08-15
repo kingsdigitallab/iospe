@@ -22,13 +22,30 @@
 
     <kiln:block name="page-heading">
       <kiln:super />
+      <xsl:call-template name="formatInscrNum">
+        <xsl:with-param name="num" select="//tei:publicationStmt/tei:idno[@type='filename']"/>
+        <xsl:with-param name="printCorpus" select="true()"/>
+      </xsl:call-template>
+      <xsl:text>. </xsl:text>
       <xsl:value-of select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]" />
     </kiln:block>
 
     <kiln:block name="content">
       <div class="row">
         <div class="large-12 columns inscription">
+          <!-- support -->
+          <div class="row">
+            <div class="large-2">
+              <h2 ><xsl:value-of select="if ($lang='ru') then 'Камень' else 'Stone'"/></h2>
+
+              <!-- Support is the only always-one element in the metadata -->
+              <xsl:apply-templates select="tei:support" name="inscriptionSupport" />
+            </div>
+          </div>
+
+          <!-- anything else -->
           <xsl:apply-templates select="//inscription/tei:TEI" />
+
         </div>
       </div>
     </kiln:block>
