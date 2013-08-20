@@ -6,20 +6,7 @@
       Defaults stylesheet. Defines default globals and reads
       parameters from the sitemap.
   -->
-
-  <!-- $filedir is the directory containing the context file. To
-       specify the 'root' directory, it's value should be null (and
-       not .). Note that directory information can also be included in
-       $filename. -->
-  <xsl:param name="filedir" select="''" />
-  <!-- $filename is the name of the context file. It may include
-       directory path information (but must not duplicate any such
-       information that is in $filedir). -->
-  <xsl:param name="filename" select="''" />
-  <!-- $fileextension is the extension part of the *transformed*
-       context file's name (and therefore may not match the extension
-       as it appears in $filename. -->
-  <xsl:param name="fileextension" select="''" />
+  <xsl:param name="url" select="''" />
   <!-- $language is the language code used to distinguish between
        language contexts in a multilingual site. -->
   <xsl:param name="language" select="''" />
@@ -82,27 +69,13 @@
     <xsl:value-of select="$kiln:images-url" />
   </xsl:variable>
 
-  <xsl:variable name="kiln:pathroot"
-                select="concat($kiln:context-path, '/', $filedir)" />
-  <xsl:variable name="kiln:path">
-    <xsl:value-of select="$kiln:pathroot" />
-    <xsl:if test="not(ends-with($kiln:pathroot, '/'))">
-      <xsl:text>/</xsl:text>
-    </xsl:if>
-    <xsl:value-of select="$filename" />
-    <xsl:if test="$fileextension">
-      <xsl:text>.</xsl:text>
-      <xsl:value-of select="$fileextension" />
-    </xsl:if>
-  </xsl:variable>
-
-
   <xsl:template name="menu-languages">
+    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-ru)?(\.html)$', '$1')" />
     <li class="lang en">
-      <a class="en" href="{substring-before($filename,'.xml')}.html" title="English">English</a>
+      <a class="en" href="/{$url_base}.html" title="English">English</a>
     </li>
     <li class="lang py">
-      <a class="py" href="{substring-before($filename,'.xml')}-ru.html" title="Русский">Русский</a>
+      <a class="py" href="/{$url_base}-ru.html" title="Русский">Русский</a>
     </li>
   </xsl:template>
 

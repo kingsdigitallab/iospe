@@ -230,116 +230,116 @@
 
     <!-- default fields -->
 
-    <field indexed="true" multiValued="true" name="document_title"
-           required="false" stored="true" type="text_general" />
-    <field indexed="true" multiValued="true" name="author"
-           required="false" stored="true" type="string" />
-    <field indexed="true" multiValued="true" name="editor"
-           required="false" stored="true" type="text_general" />
-    <!-- publication_date is treated as a string, because Solr's date
-         field type requires a UTC time, and we may wish to store only
-         a year. -->
-    <field indexed="true" multiValued="false" name="publication_date"
-           required="false" stored="true" type="string" />
-    <field indexed="true" multiValued="false" name="file_path"
-           required="false" stored="true" type="string" />
-    <field indexed="false" multiValued="false" name="document_id"
-           required="false" stored="true" type="string" />
-    <field indexed="false" multiValued="false" name="section_id"
-           required="false" stored="true" type="string" />
-    <field indexed="true" multiValued="false" name="entity_key"
-           required="false" stored="true" type="string" />
-    <field indexed="true" multiValued="false" name="entity_name"
-           required="false" stored="true" type="text_general" />
-    <field indexed="true" multiValued="false" name="eats_entity_name"
-           required="false" stored="true" type="text_general" />
+   <field indexed="true" multiValued="true" name="document_title"
+          required="false" stored="true" type="text_general" />
+   <field indexed="true" multiValued="true" name="author"
+          required="false" stored="true" type="string" />
+   <field indexed="true" multiValued="true" name="editor"
+          required="false" stored="true" type="text_general" />
+   <!-- publication_date is treated as a string, because Solr's date
+        field type requires a UTC time, and we may wish to store only
+        a year. -->
+   <field indexed="true" multiValued="false" name="publication_date"
+          required="false" stored="true" type="string" />
+   <field indexed="true" multiValued="false" name="file_path"
+          required="false" stored="true" type="string" />
+   <field indexed="false" multiValued="false" name="document_id"
+          required="false" stored="true" type="string" />
+   <field indexed="false" multiValued="false" name="section_id"
+          required="false" stored="true" type="string" />
+   <field indexed="true" multiValued="false" name="entity_key"
+          required="false" stored="true" type="string" />
+   <field indexed="true" multiValued="false" name="entity_name"
+          required="false" stored="true" type="text_general" />
+   <field indexed="true" multiValued="false" name="eats_entity_name"
+          required="false" stored="true" type="text_general" />
 
-    <!-- catchall field, containing all other searchable text fields
-         (implemented via copyField further on in this schema -->
-    <field name="text" type="text_general" indexed="true"
-           stored="false" multiValued="true"/>
+   <!-- catchall field, containing all other searchable text fields
+        (implemented via copyField further on in this schema -->
+   <field name="text" type="text_general" indexed="true"
+          stored="false" multiValued="true"/>
 
-    <!-- catchall text field that indexes tokens both normally and in
-         reverse for efficient leading wildcard queries. -->
-    <field name="text_rev" type="text_general_rev" indexed="true"
-           stored="false" multiValued="true"/>
+   <!-- catchall text field that indexes tokens both normally and in
+        reverse for efficient leading wildcard queries. -->
+   <field name="text_rev" type="text_general_rev" indexed="true"
+          stored="false" multiValued="true"/>
 
-    <!-- Dynamic field definitions allow using convention over
-         configuration for fields via the specification of patterns to
-         match field names.  EXAMPLE: name="*_i" will match any field
-         ending in _i (like myid_i, z_i) RESTRICTION: the glob-like
-         pattern in the name attribute must have a "*" only at the
-         start or the end.  -->
+   <!-- Dynamic field definitions allow using convention over
+        configuration for fields via the specification of patterns to
+        match field names.  EXAMPLE: name="*_i" will match any field
+        ending in _i (like myid_i, z_i) RESTRICTION: the glob-like
+        pattern in the name attribute must have a "*" only at the
+        start or the end.  -->
 
-    <dynamicField name="*_i"  type="int"    indexed="true"  stored="true"/>
-    <dynamicField name="*_is" type="int"    indexed="true"  stored="true"  multiValued="true"/>
-    <dynamicField name="*_s"  type="string"  indexed="true"  stored="true" />
-    <dynamicField name="*_ss" type="string"  indexed="true"  stored="true" multiValued="true"/>
-    <dynamicField name="*_l"  type="long"   indexed="true"  stored="true"/>
-    <dynamicField name="*_ls" type="long"   indexed="true"  stored="true"  multiValued="true"/>
-    <dynamicField name="*_t"  type="text_general"    indexed="true"  stored="true"/>
-    <dynamicField name="*_txt" type="text_general"   indexed="true"  stored="true" multiValued="true"/>
-    <dynamicField name="*_en"  type="text_en"    indexed="true"  stored="true" multiValued="true"/>
-    <dynamicField name="*_b"  type="boolean" indexed="true" stored="true"/>
-    <dynamicField name="*_bs" type="boolean" indexed="true" stored="true"  multiValued="true"/>
-    <dynamicField name="*_f"  type="float"  indexed="true"  stored="true"/>
-    <dynamicField name="*_fs" type="float"  indexed="true"  stored="true"  multiValued="true"/>
-    <dynamicField name="*_d"  type="double" indexed="true"  stored="true"/>
-    <dynamicField name="*_ds" type="double" indexed="true"  stored="true"  multiValued="true"/>
+   <dynamicField name="*_i"  type="int"    indexed="true"  stored="true"/>
+   <dynamicField name="*_is" type="int"    indexed="true"  stored="true"  multiValued="true"/>
+   <dynamicField name="*_s"  type="string"  indexed="true"  stored="true" />
+   <dynamicField name="*_ss" type="string"  indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_l"  type="long"   indexed="true"  stored="true"/>
+   <dynamicField name="*_ls" type="long"   indexed="true"  stored="true"  multiValued="true"/>
+   <dynamicField name="*_t"  type="text_general"    indexed="true"  stored="true"/>
+   <dynamicField name="*_txt" type="text_general"   indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_en"  type="text_en"    indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_b"  type="boolean" indexed="true" stored="true"/>
+   <dynamicField name="*_bs" type="boolean" indexed="true" stored="true"  multiValued="true"/>
+   <dynamicField name="*_f"  type="float"  indexed="true"  stored="true"/>
+   <dynamicField name="*_fs" type="float"  indexed="true"  stored="true"  multiValued="true"/>
+   <dynamicField name="*_d"  type="double" indexed="true"  stored="true"/>
+   <dynamicField name="*_ds" type="double" indexed="true"  stored="true"  multiValued="true"/>
 
-    <!-- Type used to index the lat and lon components for the
-         "location" FieldType -->
-    <dynamicField name="*_coordinate"  type="tdouble" indexed="true"  stored="false" />
+   <!-- Type used to index the lat and lon components for the
+        "location" FieldType -->
+   <dynamicField name="*_coordinate"  type="tdouble" indexed="true"  stored="false" />
 
-    <dynamicField name="*_dt"  type="date"    indexed="true"  stored="true"/>
-    <dynamicField name="*_dts" type="date"    indexed="true"  stored="true" multiValued="true"/>
-    <dynamicField name="*_p"  type="location" indexed="true" stored="true"/>
+   <dynamicField name="*_dt"  type="date"    indexed="true"  stored="true"/>
+   <dynamicField name="*_dts" type="date"    indexed="true"  stored="true" multiValued="true"/>
+   <dynamicField name="*_p"  type="location" indexed="true" stored="true"/>
 
-    <!-- some trie-coded dynamic fields for faster range queries -->
-    <dynamicField name="*_ti" type="tint"    indexed="true"  stored="true"/>
-    <dynamicField name="*_tl" type="tlong"   indexed="true"  stored="true"/>
-    <dynamicField name="*_tf" type="tfloat"  indexed="true"  stored="true"/>
-    <dynamicField name="*_td" type="tdouble" indexed="true"  stored="true"/>
-    <dynamicField name="*_tdt" type="tdate"  indexed="true"  stored="true"/>
+   <!-- some trie-coded dynamic fields for faster range queries -->
+   <dynamicField name="*_ti" type="tint"    indexed="true"  stored="true"/>
+   <dynamicField name="*_tl" type="tlong"   indexed="true"  stored="true"/>
+   <dynamicField name="*_tf" type="tfloat"  indexed="true"  stored="true"/>
+   <dynamicField name="*_td" type="tdouble" indexed="true"  stored="true"/>
+   <dynamicField name="*_tdt" type="tdate"  indexed="true"  stored="true"/>
 
-    <dynamicField name="*_pi"  type="pint"    indexed="true"  stored="true"/>
-    <dynamicField name="*_c"   type="currency" indexed="true"  stored="true"/>
+   <dynamicField name="*_pi"  type="pint"    indexed="true"  stored="true"/>
+   <dynamicField name="*_c"   type="currency" indexed="true"  stored="true"/>
 
-    <dynamicField name="ignored_*" type="ignored" multiValued="true"/>
-    <dynamicField name="attr_*" type="text_general" indexed="true" stored="true" multiValued="true"/>
+   <dynamicField name="ignored_*" type="ignored" multiValued="true"/>
+   <dynamicField name="attr_*" type="text_general" indexed="true" stored="true" multiValued="true"/>
 
-    <dynamicField name="random_*" type="random" />
+   <dynamicField name="random_*" type="random" />
 
-    <!-- uncomment the following to ignore any fields that don't
-         already match an existing field name or dynamic field, rather
-         than reporting them as an error.  alternately, change the
-         type="ignored" to some other type e.g. "text" if you want
-         unknown fields indexed and/or stored by default -->
-    <!--dynamicField name="*" type="ignored" multiValued="true" /-->
+   <!-- uncomment the following to ignore any fields that don't
+        already match an existing field name or dynamic field, rather
+        than reporting them as an error.  alternately, change the
+        type="ignored" to some other type e.g. "text" if you want
+        unknown fields indexed and/or stored by default -->
+   <!--dynamicField name="*" type="ignored" multiValued="true" /-->
 
-  </fields>
+ </fields>
 
 
-  <!-- Field to use to determine and enforce document uniqueness.
-       Unless this field is marked with required="false", it will be a
-       required field
-    -->
-  <!--<uniqueKey>id</uniqueKey>-->
+ <!-- Field to use to determine and enforce document uniqueness.
+      Unless this field is marked with required="false", it will be a
+      required field
+   -->
+ <!--<uniqueKey>id</uniqueKey>-->
 
-  <!-- DEPRECATED: The defaultSearchField is consulted by various query parsers when
-   parsing a query string that isn't explicit about the field.  Machine (non-user)
-   generated queries are best made explicit, or they can use the "df" request parameter
-   which takes precedence over this.
-   Note: Un-commenting defaultSearchField will be insufficient if your request handler
-   in solrconfig.xml defines "df", which takes precedence. That would need to be removed.
-  <defaultSearchField>text</defaultSearchField> -->
+ <!-- DEPRECATED: The defaultSearchField is consulted by various query parsers when
+  parsing a query string that isn't explicit about the field.  Machine (non-user)
+  generated queries are best made explicit, or they can use the "df" request parameter
+  which takes precedence over this.
+  Note: Un-commenting defaultSearchField will be insufficient if your request handler
+  in solrconfig.xml defines "df", which takes precedence. That would need to be removed.-->
+ <defaultSearchField>text</defaultSearchField>
 
-  <!-- DEPRECATED: The defaultOperator (AND|OR) is consulted by various query parsers
-   when parsing a query string to determine if a clause of the query should be marked as
-   required or optional, assuming the clause isn't already marked by some operator.
-   The default is OR, which is generally assumed so it is not a good idea to change it
-   globally here.  The "q.op" request parameter takes precedence over this.
-  <solrQueryParser defaultOperator="OR"/> -->
+ <!-- DEPRECATED: The defaultOperator (AND|OR) is consulted by various query parsers
+  when parsing a query string to determine if a clause of the query should be marked as
+  required or optional, assuming the clause isn't already marked by some operator.
+  The default is OR, which is generally assumed so it is not a good idea to change it
+  globally here.  The "q.op" request parameter takes precedence over this.
+ <solrQueryParser defaultOperator="OR"/> -->
 
   <!-- copyField commands copy one field to another at the time a document
         is added to the index.  It's used either to index the same field differently,
