@@ -35,13 +35,26 @@
         <div class="large-12 columns inscription">
           <!-- support -->
           <div class="row">
-            <div class="large-2">
+            <div class="large-2 columns">
+              <!-- would be better in stylesheet -->
               <h2 ><xsl:value-of select="if ($lang='ru') then 'Камень' else 'Stone'"/></h2>
-
-              <!-- Support is the only always-one element in the metadata -->
-              <xsl:apply-templates select="tei:support" name="inscriptionSupport" />
             </div>
+
+            <div class="large-10 columns">
+              <div class="row">
+                <!-- Support is the only always-one element in the metadata -->
+                <xsl:call-template name="inscriptionSupport" />
+              </div>
+            </div>
+
           </div>
+
+
+          <div style="background: #ffdddd">
+            <xsl:apply-templates select="//inscription/tei:TEI//tei:body" />
+          </div>
+
+
 
           <!-- anything else -->
           <xsl:apply-templates select="//inscription/tei:TEI" />
