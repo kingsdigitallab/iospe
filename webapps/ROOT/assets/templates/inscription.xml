@@ -50,14 +50,14 @@
           </div>
 
 
-          <div style="background: #ffdddd">
-            <xsl:apply-templates select="//inscription/tei:TEI//tei:body" />
-          </div>
+
+          <xsl:apply-templates select="//inscription/tei:TEI//tei:body" />
+
 
 
 
           <!-- anything else -->
-          <xsl:apply-templates select="//inscription/tei:TEI" />
+          <!-- <xsl:apply-templates select="//inscription/tei:TEI" /> -->
 
         </div>
       </div>
