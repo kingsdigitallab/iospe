@@ -6,8 +6,13 @@
 //except for 'app' ones, which are in a sibling
 //directory.
 requirejs.config({
-    baseUrl: './',
+    baseUrl: "assets/scripts/",
     paths: {
-        app: '../app'
+        rainbow: "vendor/rainbow/js/rainbow"
     }
+});
+
+require(['app/main'],
+  function (main) {
+    //$('h3').css('color', '#00f');
 });

@@ -1,7 +1,7 @@
 // Inscriptions specific functions
 
-require(['common', 'base', 'app/main'],
-  function (common, base, main) {
+require(['common', 'app/main', 'vendor/rainbow/js/rainbow'],
+  function (common, main, Rainbow) {
 
 
     var parse_inscription = function (query) {
@@ -52,4 +52,5 @@ require(['common', 'base', 'app/main'],
           $('#jumpForm').trigger('submit');
         });
     });
+    Rainbow.color();
 });

@@ -10,7 +10,7 @@ define([], function() {
               ci = '0',
               ni = '' + window.parseInt(n);
 
-          return '' + Array(wi - ni.length + 1).join(ci) + n;
+          return '' + Array(wi - ni.length + 1).join(ci) + ni;
         }
     };
 });

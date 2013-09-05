@@ -733,9 +733,7 @@
                     </p>
                     <div id="epidoc{if (@n) then @n else '1'}" class="content"
                       data-section-content="data-section-content">
-                      <textarea cols="60" rows="20" wrap="off">
-                        <xsl:copy-of select="//v_ep/node()"/>
-                      </textarea>
+                      <pre><code data-language="xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
                     </div>
                   </section>
 
@@ -876,11 +874,60 @@
           </div>
         </div>
       </xsl:if>
-
-      <xsl:apply-templates/>
     </div>
 
+    <xsl:apply-templates/>
 
   </xsl:template>
+
+  <!--DIVS-->
+  <xsl:template match="tei:div">
+    <xsl:choose>
+      <xsl:when test="@type='edition'">
+        <!-- Removes edition div, content is preprocessed and copied -->
+      </xsl:when>
+      <xsl:when test="@type='metadata' and (@n='category-text' or @n='category-monument')">
+        <!-- Removes categoy-text and category-monument -->
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- BIBLIOGRAPHY (pointers) -->
+  <xsl:template match="tei:bibl//tei:ptr">
+    <xsl:apply-templates select="//bib//tei:bibl[@id=current()/@target]"/>
+    <xml:text>, </xml:text>
+  </xsl:template>
+
+  <!-- IMAGES (photograph [default] and representation [mode]) -->
+  <xsl:template match="tei:facsimile" mode="photograph">
+    <div class="image" xsl:exclude-result-prefixes="tei">
+      <div class="t04">
+        <xsl:apply-templates select=".//tei:graphic"/>
+      </div>
+    </div>
+  </xsl:template>
+
+  <xsl:template match="tei:facsimile" mode="representation">
+    <div class="image" xsl:exclude-result-prefixes="tei">
+      <div class="t04">
+        <xsl:apply-templates select=".//tei:graphic[@decls='#representation']"/>
+      </div>
+    </div>
+  </xsl:template>
+
+  <xsl:template match="tei:div/tei:head"/>
+
+  <!-- Mode multipara -->
+  <xsl:template match="tei:p|tei:ab" mode="multipara">
+    <p xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </p>
+  </xsl:template>
+
+
+  <xsl:template match="tei:div/tei:head" mode="multipara"> </xsl:template>
 
 </xsl:stylesheet>
