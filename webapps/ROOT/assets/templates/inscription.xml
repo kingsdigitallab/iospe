@@ -12,6 +12,13 @@
   </kiln:parent>
 
   <kiln:child>
+
+    <kiln:block name="css">
+      <kiln:super />
+      <link href="{$kiln:assets-path}/scripts/vendor/highlightjs/styles/tomorrow.css"
+                  rel="stylesheet" type="text/css" />
+    </kiln:block>
+
     <kiln:block name="title">
       <xsl:value-of select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]" />
     </kiln:block>

@@ -733,7 +733,7 @@
                     </p>
                     <div id="epidoc{if (@n) then @n else '1'}" class="content"
                       data-section-content="data-section-content">
-                      <pre><code data-language="xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
+                      <pre><code class="language-xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
                     </div>
                   </section>
 
