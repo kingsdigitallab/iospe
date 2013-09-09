@@ -663,6 +663,7 @@
               </xsl:choose>
               <xsl:text>.&#160;</xsl:text>
             </div>
+          </div>
 
 
             <!-- Actual Inscription Data -->
@@ -767,7 +768,6 @@
                   </xsl:if>
                 </div>
               </div>
-            </div>
 
           </div>
         </div>
@@ -929,5 +929,981 @@
 
 
   <xsl:template match="tei:div/tei:head" mode="multipara"> </xsl:template>
+
+  <xsl:template match="tei:div[@type='apparatus']" mode="multipara">
+    <xsl:for-each select="descendant::tei:app">
+      <xsl:if
+        test="@loc and (not(preceding-sibling::tei:app) or @loc != preceding-sibling::tei:app[1]/@loc)">
+        <xsl:value-of select="translate(@loc, ' ', '.')"/>
+        <xsl:text>: </xsl:text>
+      </xsl:if>
+      <xsl:apply-templates/>
+      <xsl:choose>
+        <xsl:when test="@loc != following-sibling::tei:app[1]/@loc">
+          <br/>
+        </xsl:when>
+        <xsl:when test="following-sibling::tei:app">
+          <xsl:text>; </xsl:text>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="tei:lem">
+    <xsl:apply-templates/>
+    <xsl:call-template name="resp"/>
+    <xsl:text>: </xsl:text>
+  </xsl:template>
+
+  <xsl:template match="tei:rdg">
+    <xsl:apply-templates/>
+    <xsl:call-template name="resp"/>
+    <xsl:if test="following-sibling::tei:rdg">
+      <xsl:text>; </xsl:text>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template name="resp">
+    <xsl:if test="@resp">
+      <xsl:text> </xsl:text>
+      <xsl:variable name="cur-n" select="ancestor::tei:div[@type='apparatus']/@n/string()"/>
+      <xsl:variable name="resps">
+        <xsl:for-each select="tokenize(@resp, ' ')">
+          <tei:resp>
+            <xsl:value-of select="."/>
+          </tei:resp>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:variable name="docSubset">
+        <xsl:sequence select="//bib"/>
+        <xsl:sequence select="//tei:TEI[descendant::tei:div[@type='bibliography']]"/>
+      </xsl:variable>
+      <xsl:for-each select="$resps//tei:resp">
+        <xsl:choose>
+          <xsl:when test="$docSubset//tei:biblStruct[@xml:id=current()]">
+            <xsl:variable name="biblio-subset">
+              <xsl:for-each
+                select="$docSubset//tei:body//tei:div[@type='bibliography']/tei:listBibl[if (@n) then @n=$cur-n else true()]/tei:bibl//tei:ptr">
+                <xsl:sequence select="$docSubset//tei:biblStruct[@xml:id=current()/@target]"/>
+              </xsl:for-each>
+            </xsl:variable>
+            <xsl:variable name="cur-surname">
+              <xsl:value-of
+                select="normalize-space($biblio-subset//tei:biblStruct[@xml:id=current()][1]/(descendant::tei:surname[if (@xml:lang=$lang) then @xml:lang else if (not(@xml:lang)) then true() else false()])[1])"
+              />
+            </xsl:variable>
+            <xsl:variable name="bibDate">
+              <xsl:if
+                test="count($biblio-subset//tei:biblStruct//tei:author[1]//tei:surname[if (@xml:lang=$lang) then @xml:lang=$lang else if (not(@xml:lang)) then true() else false()][normalize-space(.)=$cur-surname]) &gt; 1">
+                <xsl:value-of
+                  select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:imprint[1]//tei:date"
+                />
+              </xsl:if>
+            </xsl:variable>
+            <xsl:value-of select="$cur-surname"/>
+            <xsl:if test="$bibDate != ''">
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$bibDate"/>
+            </xsl:if>
+            <xsl:if test="following-sibling::tei:resp">
+              <xsl:text>, </xsl:text>
+            </xsl:if>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="."/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="tei:dimensions">
+    <!-- https://issuetracker.cch.kcl.ac.uk/view.php?id=3053 (1) -->
+
+
+    <xsl:if test="tei:height">
+      <xsl:value-of select="if ($lang='ru') then 'высота: ' else 'h:'"/>
+      <xsl:value-of select="tei:height"/>
+      <xsl:text> x </xsl:text>
+    </xsl:if>
+
+    <xsl:if test="tei:width">
+      <xsl:value-of select="if ($lang='ru') then 'ширина: ' else 'w:'"/>
+      <xsl:value-of select="tei:width"/>
+    </xsl:if>
+
+    <xsl:if test="tei:depth">
+      <xsl:value-of select="if ($lang='ru') then ' x толщина:' else ' x d:'"/>
+      <xsl:value-of select="tei:depth"/>
+    </xsl:if>
+
+    <xsl:if test="tei:dim[@type = 'diameter']">
+      <xsl:value-of select="if ($lang='ru') then 'диам.:' else ' x diam.:'"/>
+      <xsl:value-of select="tei:dim[@type = 'diameter']"/>
+    </xsl:if>
+
+    <xsl:if test="tei:dim[@type != 'diameter']">
+      <xsl:for-each select="tei:dim[@type != 'diameter']">
+        <xsl:text> x </xsl:text>
+        <xsl:value-of select="@type"/>
+        <xsl:text>: </xsl:text>
+        <xsl:value-of select="."/>
+      </xsl:for-each>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="tei:lb">
+    <xsl:text>|</xsl:text>
+  </xsl:template>
+  <!-- FIGURES -->
+  <xsl:template match="tei:facsimile//tei:graphic" mode="photograph">
+    <span
+      style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
+      <!-- Full size popup -->
+      <a class="x87" href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
+        <!-- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -->
+        <span>&#160;</span>
+        <!-- Thumbnail image -->
+        <img src="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;WID=100&amp;HEI=100&amp;CVT=jpeg">
+          <!-- @alt info -->
+          <xsl:if test="string(tei:desc[@xml:lang=$lang])">
+            <xsl:attribute name="alt">
+              <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
+            </xsl:attribute>
+          </xsl:if>
+        </img>
+      </a>
+    </span>
+    <!--
+    <dl style="width: 112px;" xsl:exclude-result-prefixes="tei">
+      <dt>
+        <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
+      </dt>
+      <dd style="height: 106px;">
+        <!-\- Full size popup -\->
+        <a class="x87" href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
+          <!-\- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -\->
+          <span>&#160;</span>
+          <!-\- Thumbnail image -\->
+          <img src="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;WID=100&amp;HEI=100&amp;CVT=jpeg">
+            <!-\- @alt info -\->
+            <xsl:if test="string(tei:desc[@xml:lang=$lang])">
+              <xsl:attribute name="alt">
+                <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
+              </xsl:attribute>
+            </xsl:if>
+          </img>
+        </a>
+      </dd>
+    </dl>-->
+  </xsl:template>
+
+  <!-- GREEK -->
+  <xsl:template match="tei:foreign[@lang='grc']|tei:term[@lang='grc']">
+    <span class="greek" xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+
+  <xsl:template name="lang-grc">
+    <xsl:if test="ancestor-or-self::tei:div[@lang='grc']">
+      <xsl:attribute name="class">
+        <xsl:text>greek</xsl:text>
+      </xsl:attribute>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="tei:*[@lang='la']">
+    <em xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </em>
+  </xsl:template>
+
+
+  <!-- LINKS -->
+  <xsl:template match="tei:xref">
+    <xsl:choose>
+      <!--Narrative-->
+      <xsl:when test="@type='eAla-text'">
+        <em xsl:exclude-result-prefixes="tei">
+          <xsl:text>ala2004 </xsl:text>
+        </em>
+        <xsl:apply-templates/>
+      </xsl:when>
+      <!--ALA Inscriptions-->
+      <xsl:when test="@type='eAla'">
+        <em xsl:exclude-result-prefixes="tei">
+          <xsl:text>ala2004 </xsl:text>
+        </em>
+        <strong xsl:exclude-result-prefixes="tei">
+          <xsl:apply-templates/>
+        </strong>
+      </xsl:when>
+      <!-- Unpublished inscriptions -->
+      <xsl:when test="@type='iAph'">
+        <xsl:text>(</xsl:text>
+        <span style="font-style: italic;" title="(unpublished inscription forthcoming 2008)"
+          xsl:exclude-result-prefixes="tei">
+          <xsl:value-of select="if ($lang='ru') then 'RU-unpublished' else 'unpublished'"/>
+        </span>
+        <xsl:text>)</xsl:text>
+      </xsl:when>
+      <!--Inscriptions-->
+      <xsl:when test="@type='inscription'">
+        <a xsl:exclude-result-prefixes="tei">
+          <xsl:attribute name="href">
+            <xsl:variable name="num1" select="upper-case(normalize-space(.))"/>
+            <xsl:variable name="letter" select="translate(normalize-space(.), '0123456789', '')"/>
+            <xsl:value-of select="$letter"/>
+            <xsl:number format="00001" value="$num1"/>
+            <xsl:text>.html</xsl:text>
+          </xsl:attribute>
+          <xsl:attribute name="title">
+            <xsl:variable name="num1" select="upper-case(normalize-space(.))"/>
+            <xsl:variable name="letter" select="translate(normalize-space(.), '0123456789', '')"/>
+            <xsl:value-of
+              select="if ($lang='ru') then 'переход к надписи № ' else 'Link to inscription '"/>
+            <xsl:value-of select="$letter"/>
+            <xsl:number format="00001" value="$num1"/>
+          </xsl:attribute>
+          <strong>
+            <xsl:apply-templates/>
+          </strong>
+        </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+  <!-- BIBLIO -->
+  <xsl:template match="tei:bibl[title='PHI' or title='EDH']//tei:biblScope">
+    <xsl:choose>
+      <xsl:when test="tei:title='PHI' and @n">
+        <a class="intNew" rel="external" target="_blank" xsl:exclude-result-prefixes="tei">
+          <xsl:attribute name="title">
+            <xsl:value-of
+              select="if ($lang='ru') then 'RU-Link to PHI Inscriptions (opens in new window)' else 'Link to PHI Inscriptions (opens in new window)'"
+            />
+          </xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:text>http://epigraphy.packhum.org/inscriptions/oi?ikey=</xsl:text>
+            <xsl:value-of select="@n"/>
+          </xsl:attribute>
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
+      <xsl:when test="tei:title='EDH' and @n">
+        <a class="intNew" rel="external" target="_blank" xsl:exclude-result-prefixes="tei">
+          <xsl:attribute name="title">
+            <xsl:value-of
+              select="if ($lang='ru') then 'RU-Link to EDH Inscriptions (opens in new window)' else 'Link to EDH Inscriptions (opens in new window)'"
+            />
+          </xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:text>http://edh-www.adw.uni-heidelberg.de/EDH/servlet/EgrForm?aktion=eingabe&amp;benutzer=gast&amp;kennwort=g2dhst&amp;f_id_nr='</xsl:text>
+            <xsl:value-of select="@n"/>
+            <xsl:text>'</xsl:text>
+          </xsl:attribute>
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+  <xsl:template match="tei:bibl">
+    <xsl:choose>
+      <xsl:when test="@type='hbi'">
+        <!--<a xsl:exclude-result-prefixes="tei">
+          <xsl:attribute name="href">
+            <xsl:value-of select="$InsAphroot"/>
+            <xsl:value-of select="$biblpath"/>
+            <xsl:text>index.html</xsl:text>
+            <xsl:if test="string(@n)">
+              <xsl:text>#</xsl:text>
+              <xsl:value-of select="@n"/>
+            </xsl:if>
+          </xsl:attribute>-->
+        <xsl:apply-templates/>
+        <!--</a>-->
+      </xsl:when>
+      <!--<xsl:when test="tei:title='IRT'">
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:text>http://irt.kcl.ac.uk/irt2009/IRT</xsl:text>
+            <xsl:number value="translate(biblScope, 'abcde','')" format="001"/>
+            <xsl:value-of select="translate(biblScope, '0123456789','')"/>
+            <xsl:text>.html</xsl:text>
+          </xsl:attribute>
+        </xsl:element>
+      </xsl:when>-->
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+  <xsl:template match="tei:bibl/tei:title">
+    <xsl:choose>
+      <xsl:when test="@level='m' or @level='j'">
+        <em xsl:exclude-result-prefixes="tei">
+          <xsl:apply-templates/>
+        </em>
+      </xsl:when>
+      <xsl:when test="@level='a' or @level='u'">
+        <xsl:text>'</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>'</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+
+  <xsl:template
+    match="tei:author[ancestor::tei:bibl[@rend='primary']][not(preceding-sibling::tei:author)]">
+    <xsl:text>&#8226;</xsl:text>
+    <xsl:apply-templates/>
+  </xsl:template>
+
+
+
+  <!-- EDITORIAL AMENDMENTS -->
+  <xsl:template match="tei:unclear[@reason='damage']">
+    <xsl:call-template name="subpunct">
+      <xsl:with-param name="unc-len" select="string-length(.)"/>
+      <xsl:with-param name="abs-len" select="string-length(.)+1"/>
+    </xsl:call-template>
+  </xsl:template>
+
+
+
+  <xsl:template name="subpunct">
+    <xsl:param name="abs-len"/>
+    <xsl:param name="unc-len"/>
+    <xsl:if test="$unc-len!=0">
+      <xsl:value-of select="substring(., number($abs-len - $unc-len),1)"/>
+      <xsl:text>&#x0323;</xsl:text>
+      <xsl:call-template name="subpunct">
+        <xsl:with-param name="unc-len" select="$unc-len - 1"/>
+        <xsl:with-param name="abs-len" select="string-length(.)+1"/>
+      </xsl:call-template>
+    </xsl:if>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:gap[@reason='omitted']">
+    <xsl:text>(---)</xsl:text>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:gap[@reason='ellipsis']">
+    <xsl:text> ... </xsl:text>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:gap">
+    <xsl:if test="@reason='lost' and not(@dim='top')">
+      <xsl:call-template name="lost-opener"/>
+    </xsl:if>
+    <xsl:if test="following-sibling::tei:certainty[@target=current()/@xml:id and @degree='low']">
+      <xsl:text>?</xsl:text>
+    </xsl:if>
+    <xsl:choose>
+      <!-- condition -->
+      <xsl:when test="@quantity and @unit='character'">
+        <xsl:choose>
+          <xsl:when test="@quantity='1'">
+            <xsl:apply-templates/>
+            <xsl:text>&#xb7;</xsl:text>
+          </xsl:when>
+          <xsl:when test="@quantity='2'">
+            <xsl:apply-templates/>
+            <xsl:text>&#xb7;&#xb7;</xsl:text>
+          </xsl:when>
+          <xsl:when test="@quantity='3'">
+            <xsl:apply-templates/>
+            <xsl:text>&#xb7;&#xb7;&#xb7;</xsl:text>
+          </xsl:when>
+          <!--<xsl:when test="quantity(@quantity)>3">
+            <xsl:apply-templates/>
+            <xsl:text>&#xb7;&#xb7; c. </xsl:text>
+            <xsl:value-of select="@quantity"/>
+            <xsl:text> &#xb7;&#xb7;</xsl:text>
+          </xsl:when>-->
+          <xsl:otherwise>
+            <xsl:text>&#xb7;&#xb7; ? &#xb7;&#xb7;</xsl:text>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <!-- condition -->
+      <xsl:when test="@quantity and @unit='cm'">
+        <xsl:apply-templates/>
+        <xsl:text>&#xb7;&#xb7; c. </xsl:text>
+        <xsl:value-of select="@quantity"/>
+        <xsl:text> cm &#xb7;&#xb7;</xsl:text>
+      </xsl:when>
+      <!-- extent = unknown -->
+      <xsl:when test="@extent='unknown'">
+        <xsl:apply-templates/>
+        <xsl:text>&#xb7;&#xb7; ? &#xb7;&#xb7;</xsl:text>
+      </xsl:when>
+      <!-- default -->
+      <xsl:otherwise>
+        <xsl:text>&#xb7;&#xb7; ? &#xb7;&#xb7;</xsl:text>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:if test="@reason='lost' and not(@dim='bottom')">
+      <xsl:call-template name="lost-closer"/>
+    </xsl:if>
+  </xsl:template>
+
+
+  <xsl:template match="tei:ex">
+    <xsl:text>(</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>)</xsl:text>
+  </xsl:template>
+
+
+  <xsl:template match="tei:abbr">
+    <xsl:apply-templates/>
+    <xsl:if
+      test="not(parent::tei:expan) and not(following-sibling::tei:supplied[@reason='abbreviation'])">
+      <xsl:text>(?)</xsl:text>
+    </xsl:if>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:orig">
+    <xsl:choose>
+      <xsl:when test="ancestor::tei:expan and not(contains(@n, 'unresolved'))"> </xsl:when>
+      <xsl:when test="contains(@n, 'unresolved')">
+        <span style="text-transform: uppercase ;" xsl:exclude-result-prefixes="tei">
+          <xsl:apply-templates/>
+        </span>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:num">
+    <xsl:if test="@value &gt;= 1000">
+      <xsl:text>&#x0375;</xsl:text>
+    </xsl:if>
+    <xsl:apply-templates/>
+    <xsl:if test="not(@value mod 1000 = 0)">
+      <xsl:text>&#x00B4;</xsl:text>
+    </xsl:if>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:note">
+    <span style="font-style: normal; important!" xsl:exclude-result-prefixes="tei">
+      <xsl:choose>
+        <xsl:when test="ancestor::tei:app">
+          <xsl:if test="parent::tei:lem or parent::tei:rdg">
+            <xsl:text>: </xsl:text>
+          </xsl:if>
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:when test="ancestor::tei:bibl">
+          <xsl:apply-templates/>
+        </xsl:when>
+        <xsl:when test="ancestor::tei:p">
+          <xsl:call-template name="note-par"/>
+        </xsl:when>
+        <xsl:when test="ancestor::tei:l">
+          <xsl:call-template name="note-par"/>
+        </xsl:when>
+        <xsl:when test="ancestor::tei:translation">
+          <xsl:text>(</xsl:text>
+          <em>
+            <xsl:apply-templates/>
+          </em>
+          <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:when test="ancestor::tei:ab">
+          <xsl:choose>
+            <xsl:when test="@rend='italic'">
+              <em>
+                <xsl:apply-templates/>
+              </em>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:call-template name="note-par"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <dd>
+            <xsl:call-template name="note-par"/>
+          </dd>
+        </xsl:otherwise>
+      </xsl:choose>
+    </span>
+  </xsl:template>
+
+  <xsl:template name="note-par">
+    <xsl:text>(</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>)</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="tei:space">
+    <xsl:choose>
+      <!-- condition -->
+      <xsl:when test="@quantity='1' and @unit='character'">
+        <xsl:apply-templates/>
+        <em xsl:exclude-result-prefixes="tei">
+          <sup>
+            <xsl:text> </xsl:text>
+            <xsl:if
+              test="following-sibling::tei:certainty[@target=current()/@xml:id and @degree='low']">
+              <xsl:text>?</xsl:text>
+            </xsl:if>
+            <xsl:text>v. </xsl:text>
+          </sup>
+        </em>
+      </xsl:when>
+      <!-- condition -->
+      <xsl:when test="@unit='line'">
+        <xsl:apply-templates/>
+        <xsl:text>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</xsl:text>
+        <em xsl:exclude-result-prefixes="tei">
+          <span class="smaller">
+            <xsl:if
+              test="following-sibling::tei:certainty[@target=current()/@xml:id and @degree='low']">
+              <xsl:text>?</xsl:text>
+            </xsl:if>
+            <xsl:text>vacat </xsl:text>
+          </span>
+        </em>
+      </xsl:when>
+      <!-- default -->
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+        <em xsl:exclude-result-prefixes="tei">
+          <span class="smaller">
+            <xsl:text> </xsl:text>
+            <xsl:if
+              test="following-sibling::tei:certainty[@target=current()/@xml:id and @degree='low']">
+              <xsl:text>?</xsl:text>
+            </xsl:if>
+            <xsl:text>vac. </xsl:text>
+          </span>
+        </em>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="tei:sic[@n='superfluous']">
+    <xsl:text>{</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>}</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="tei:choice[@type='correction']/tei:sic"> </xsl:template>
+
+  <xsl:template match="tei:choice[@type='correction']/tei:corr">
+    <xsl:text>&#x231C;</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>&#x231D;</xsl:text>
+  </xsl:template>
+
+
+  <xsl:template match="tei:supplied">
+    <xsl:choose>
+      <!-- condition -->
+      <xsl:when test="@reason='lost'">
+        <xsl:call-template name="lost-opener"/>
+        <xsl:call-template name="cert-low"/>
+        <xsl:apply-templates/>
+        <xsl:call-template name="lost-closer"/>
+      </xsl:when>
+      <!-- condition -->
+      <xsl:when test="@reason='omitted'">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:call-template name="cert-low"/>
+        <xsl:apply-templates/>
+        <xsl:text>&gt;</xsl:text>
+      </xsl:when>
+      <!-- condition -->
+      <xsl:when test="@reason='subaudible'">
+        <xsl:text>(</xsl:text>
+        <xsl:call-template name="cert-low"/>
+        <xsl:apply-templates/>
+        <xsl:text>)</xsl:text>
+      </xsl:when>
+      <!-- condition -->
+      <xsl:when test="@reason='abbreviation'">
+        <xsl:text>(</xsl:text>
+        <xsl:call-template name="cert-low"/>
+        <xsl:apply-templates/>
+        <xsl:text>)</xsl:text>
+      </xsl:when>
+      <!-- condition -->
+      <xsl:when test="@reason='explanation'">
+        <xsl:text>(i.e. </xsl:text>
+        <xsl:call-template name="cert-low"/>
+        <xsl:apply-templates/>
+        <xsl:text>)</xsl:text>
+      </xsl:when>
+      <!-- default -->
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template match="tei:g">
+    <xsl:apply-templates/>
+    <xsl:if test="ancestor::tei:w">
+      <xsl:text> </xsl:text>
+    </xsl:if>
+    <em xsl:exclude-result-prefixes="tei">
+      <span class="smaller">
+        <xsl:value-of select="@type"/>
+      </span>
+    </em>
+    <xsl:if test="ancestor::tei:w">
+      <xsl:text> </xsl:text>
+    </xsl:if>
+  </xsl:template>
+
+  <xsl:template match="tei:add">
+    <span class="addedtext" xsl:exclude-result-prefixes="tei">
+      <xsl:text>`</xsl:text>
+      <xsl:apply-templates/>
+      <xsl:text>&#xb4;</xsl:text>
+    </span>
+  </xsl:template>
+
+  <xsl:template match="tei:del">
+    <span class="deletedtext" xsl:exclude-result-prefixes="tei">
+      <xsl:text>[[</xsl:text>
+      <xsl:apply-templates/>
+      <xsl:text>]]</xsl:text>
+    </span>
+  </xsl:template>
+
+  <xsl:template match="tei:rs[@cert='low']">
+    <xsl:text>?</xsl:text>
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <!-- SEG -->
+  <xsl:template match="tei:seg[@cert='low']">
+    <xsl:text>?</xsl:text>
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="tei:provenance[@type='autopsy']">
+    <span class="autopsy" xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:emph">
+    <em xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </em>
+  </xsl:template>
+
+
+
+  <xsl:template match="tei:width | tei:height | tei:depth">
+    <xsl:if test="ancestor::tei:div[@type = 'description'][@n != 'letters']">
+      <xsl:choose>
+        <xsl:when test="self::tei:width">
+          <xsl:text>W. </xsl:text>
+        </xsl:when>
+        <xsl:when test="self::tei:height">
+          <xsl:text>H. </xsl:text>
+        </xsl:when>
+        <xsl:when test="self::tei:depth">
+          <xsl:text>D. </xsl:text>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:if>
+    <xsl:if test="@precision='circa'">
+      <xsl:text>c. </xsl:text>
+    </xsl:if>
+    <xsl:apply-templates/>
+  </xsl:template>
+
+
+  <!-- Templates for opening and closing brackets for gap and supplied -->
+  <xsl:template name="lost-opener">
+    <xsl:choose>
+      <!--1.
+````````__|__
+```````|`````|
+```````x`````x
+      -->
+      <xsl:when test="preceding-sibling::tei:*[1][@reason='lost']">
+        <xsl:if
+          test="preceding-sibling::text() and preceding-sibling::tei:*[1][following-sibling::text()]">
+          <xsl:variable name="curr-prec" select="generate-id(preceding-sibling::text()[1])"/>
+          <xsl:for-each select="preceding-sibling::tei:*[1][@reason='lost']">
+            <xsl:choose>
+              <xsl:when test="generate-id(following-sibling::text()[1]) = $curr-prec">
+                <xsl:if test="not(following-sibling::text()[1] =' ')">
+                  <xsl:text>[</xsl:text>
+                </xsl:if>
+              </xsl:when>
+              <xsl:otherwise> </xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each>
+        </xsl:if>
+      </xsl:when>
+
+
+      <!--2.
+````````__|__
+```````|```__|__
+```````x``|`````|
+``````````x
+      -->
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1][@reason='lost']]]"> </xsl:when>
+
+
+      <!--3.
+````````__|__
+`````__|__```|
+````|`````|``x
+``````````x
+      -->
+      <xsl:when
+        test="preceding-sibling::tei:*[1]/tei:*[not(following-sibling::node())][@reason='lost']">
+        <xsl:if test="preceding-sibling::node()[1]/self::text()">
+          <xsl:if test="preceding-sibling::node()[1][not(normalize-space(.) = '')]">
+            <xsl:text>[</xsl:text>
+          </xsl:if>
+        </xsl:if>
+      </xsl:when>
+
+
+      <!--4.
+````````____|____
+`````__|__`````__|__
+````|`````|```|`````|
+``````````x```x
+      -->
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason='lost']]]"> </xsl:when>
+
+
+      <!--5.
+````````____|____
+`````__|__```````|
+````|```__|__````x
+```````|`````|
+`````````````x
+      -->
+      <xsl:when
+        test="preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason='lost']"> </xsl:when>
+
+
+      <!--6.
+````````____|____
+`````__|__`````__|__
+````|```__|__`|`````|
+```````|`````|x
+`````````````x
+      -->
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason='lost']]]"> </xsl:when>
+
+
+      <!--7.
+````````______|______
+`````__|__`````````__|__
+````|```__|__```__|__```|
+```````|`````|`|`````|
+`````````````x`x
+      -->
+
+
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason='lost']]]]"> </xsl:when>
+
+
+      <!--8.
+````````______|______
+```````|```````````__|__
+```````x````````__|__```|
+```````````````|`````|
+```````````````x
+      -->
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1][@reason='lost']]]]"> </xsl:when>
+
+
+
+      <!--9.
+````````______|______
+`````__|__`````````__|__
+````|`````|`````__|__```|
+``````````x````|`````|
+```````````````x
+      -->
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::node())][@reason='lost']]]]">
+        <xsl:if test="parent::tei:*[parent::tei:*[preceding-sibling::node()[1]/self::text()]]">
+          <xsl:if
+            test="parent::tei:*[parent::tei:*[normalize-space(preceding-sibling::node()[1]) != '']]"
+            >[</xsl:if>
+        </xsl:if>
+      </xsl:when>
+
+
+      <!-- 10. -->
+      <xsl:when
+        test="preceding-sibling::tei:*[1][local-name()='lb'] and preceding-sibling::tei:*[2][local-name()='supplied' and @reason='lost']">
+
+        <xsl:variable name="curr-prec-txt" select="generate-id(preceding-sibling::text()[1])"/>
+        <xsl:for-each select="preceding-sibling::tei:*[1][local-name()='lb']">
+          <xsl:choose>
+            <xsl:when
+              test="following-sibling::text() and generate-id(following-sibling::text()[1])=$curr-prec-txt and not(following-sibling::text()[1]=' ')">
+              <xsl:text>[</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:variable name="lb-prec-txt" select="generate-id(preceding-sibling::text()[1])"/>
+              <xsl:for-each select="preceding-sibling::tei:*[1][@reason='lost']">
+                <xsl:choose>
+                  <xsl:when
+                    test="following-sibling::text() and generate-id(following-sibling::text()[1])=$lb-prec-txt and not(following-sibling::text()[1]=' ')">
+                    <xsl:text>[</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise> </xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>[</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="lost-closer">
+    <xsl:choose>
+      <!-- 1. -->
+      <xsl:when test="following-sibling::tei:*[1][@reason='lost']">
+        <xsl:if
+          test="following-sibling::text() and following-sibling::tei:*[1][preceding-sibling::text()]">
+          <xsl:variable name="curr-foll" select="generate-id(following-sibling::text()[1])"/>
+          <xsl:for-each select="following-sibling::tei:*[1][@reason='lost']">
+            <xsl:choose>
+              <xsl:when
+                test="generate-id(preceding-sibling::text()[1]) = $curr-foll and not(preceding-sibling::text()[1]=' ')">
+                <xsl:text>]</xsl:text>
+              </xsl:when>
+              <xsl:otherwise> </xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each>
+        </xsl:if>
+      </xsl:when>
+      <!-- 2. -->
+      <xsl:when
+        test="following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason='lost']"> </xsl:when>
+      <!-- 3. -->
+      <xsl:when
+        test="current()[not(following-sibling::node())][parent::node()[following-sibling::tei:*[1][@reason='lost']]]">
+        <xsl:variable name="curr-foll-txt" select="generate-id(following-sibling::text()[1])"/>
+        <xsl:choose>
+          <xsl:when
+            test="parent::node()/following-sibling::tei:*[1][@reason='lost'][generate-id(preceding-sibling::text()[1]) = $curr-foll-txt]"
+            >]</xsl:when>
+        </xsl:choose>
+      </xsl:when>
+      <!-- 4. -->
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason='lost']]]"> </xsl:when>
+      <!-- 5. -->
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1][@reason='lost']]]]"> </xsl:when>
+      <!-- 6. -->
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason='lost']]]]"> </xsl:when>
+      <!-- 7. -->
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())]/tei:*[not(preceding-sibling::node())][@reason='lost']]]]"> </xsl:when>
+      <!-- 8. -->
+      <xsl:when
+        test="following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())]/tei:*[not(preceding-sibling::node())][@reason='lost']"> </xsl:when>
+      <!-- 9. -->
+      <xsl:when
+        test="current()[not(following-sibling::node())][parent::tei:*[following-sibling::tei:*[1]/child::node()[1]/child::node()[1][@reason='lost']]]">
+        <xsl:if test="parent::tei:*[following-sibling::node()[1]/self::text()]">
+          <xsl:if test="parent::tei:*[normalize-space(following-sibling::node()[1]) != '']"
+            >]</xsl:if>
+        </xsl:if>
+      </xsl:when>
+      <!-- 10. -->
+      <xsl:when
+        test="following-sibling::tei:*[1][local-name()='lb'] and following-sibling::tei:*[2][local-name()='supplied' and @reason='lost']">
+        <xsl:variable name="curr-prec-txt" select="generate-id(following-sibling::text()[1])"/>
+        <xsl:for-each select="following-sibling::*[1][local-name()='lb']">
+          <xsl:choose>
+            <xsl:when
+              test="preceding-sibling::text() and generate-id(preceding-sibling::text()[1])=$curr-prec-txt and not(preceding-sibling::text()[1]=' ')">
+              <xsl:text>]</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:variable name="lb-prec-txt" select="generate-id(following-sibling::text()[1])"/>
+              <xsl:for-each select="following-sibling::tei:*[1][@reason='lost']">
+                <xsl:choose>
+                  <xsl:when
+                    test="preceding-sibling::text() and generate-id(preceding-sibling::text()[1])=$lb-prec-txt and not(preceding-sibling::text()[1]=' ')">
+                    <xsl:text>]</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise> </xsl:otherwise>
+                </xsl:choose>
+              </xsl:for-each>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>]</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+  <xsl:template name="cert-low">
+    <xsl:if test="@cert='low'">
+      <xsl:text>?</xsl:text>
+    </xsl:if>
+  </xsl:template>
 
 </xsl:stylesheet>
