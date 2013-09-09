@@ -4,7 +4,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt> <!-- \d+\. -->
+            <titleStmt>
                 <title xml:lang="ru">Надпись Михаила и Василия (?)</title>
                 <title xml:lang="en">Inscription of Michael and Basilios (?)</title>
                 <editor xml:id="ayv2012">
@@ -65,11 +65,11 @@
                     </physDesc>
                 <history>
                     <origin>
-                        <origPlace>
+                        <origPlace ref="origPlace.xml#p056">
                             <seg xml:lang="ru">Артек.</seg>
                             <seg xml:lang="en">Artek.</seg>
                         </origPlace>
-                        <origDate notBefore="1091" notAfter="1192" cert="low" evidence="указание-надписи">
+                        <origDate notBefore="1091" notAfter="1192" cert="low" evidence="указание_надписи">
                             <seg xml:lang="ru">1091–1192 гг. (?).</seg>
                             <seg xml:lang="en">1091–1192 C.E. (?).</seg>
                         </origDate>
@@ -100,7 +100,8 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
-            <change when="2013-04-29" who="AG">Greek rext marked up</change>
+            <change when="2013-08-22" who="GB">Linked to original place, and general tidied</change>
+            <change when="2013-04-29" who="AG">Greek text marked up</change>
             <change when="2013-04-26" who="AG">created from the Word document, marked up</change>
         </revisionDesc>
     </teiHeader>
@@ -109,16 +110,28 @@
             
             <div type="bibliography">
                 <listBibl>
-                    <bibl n="1">ined.</bibl>
+                    <bibl/>
                 </listBibl>
             </div>
             
         <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-                <lb n="1"/><persName type="attested" nymRef="Μιχαήλ"><name><expan><supplied reason="lost"><abbr>M</abbr></supplied><abbr>ιχ</abbr><ex cert="low">αὴλ</ex></expan></name></persName> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <persName type="attested" nymRef="Βασίλιος"><name>Βασσ<supplied reason="lost">ι</supplied>λ<gap reason="lost" extent="unknown" unit="character"/></name></persName> <persName type="divine" key="kyrios"><w><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>, 
-                <lb n="2"/><w lemma="μνημονεύω"><supplied reason="lost">μ</supplied>νηστήθι</w> <note>(?)</note> <w lemma="ὁ"><expan><abbr>τῆ</abbr><ex>ς</ex></expan></w> <gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
-                <lb n="3"/><w lemma="ἀδελφότης"><supplied reason="lost">ἀ</supplied>δ<supplied reason="lost">ε</supplied>λφότιτος</w> <w lemma="'ἐπί">ἐπὶ</w> <gap reason="lost" extent="unknown" unit="character"/>
-                <lb n="4"/><gap reason="lost" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/> <w lemma="δούλος">δούλο</w> <note>(?)</note>·  <date><w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w> <num atLeast="6600" atMost="6699"><supplied reason="lost">ς</supplied>χ<gap reason="lost" quantity="2" unit="character"/></num></date>.
+                <lb n="1"/><persName type="attested" nymRef="Мιχαήλ"><name><expan><supplied reason="lost"
+                    ><abbr>М</abbr></supplied><abbr>ιχ</abbr><ex cert="low">αὴλ</ex></expan></name></persName>
+                <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                <persName type="attested" nymRef="Βασίλιος"><name>Βασσ<supplied reason="lost">ι</supplied>λ<gap
+                    reason="lost" extent="unknown" unit="character"/></name></persName>
+                <persName type="divine" key="kyrios"><w><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>, 
+                <lb n="2"/><w lemma="μνημονεύω"><supplied reason="lost">μ</supplied>νηστήθι</w> <note>?</note>
+                <w lemma="ὁ"><expan><abbr>τῆ</abbr><ex>ς</ex></expan></w>
+                <gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+                <lb n="3"/><w lemma="ἀδελφότης"><supplied reason="lost">ἀ</supplied>δ<supplied reason="lost">ε</supplied>λφότιτος</w>
+                <w lemma="ἐπί">ἐπὶ</w> <gap reason="lost" extent="unknown" unit="character"/>
+                <lb n="4"/><gap reason="lost" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/>
+                <w lemma="δούλος">δούλο</w> <note>?</note>·  
+                <date><w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w> 
+                    <num atLeast="6600" atMost="6699"><supplied reason="lost">ς</supplied>χ<gap
+                        reason="lost" quantity="2" unit="character"/></num></date>.
             </ab>
         </div>
             
@@ -130,9 +143,9 @@
                 <p>All information about the inscription comes from the manuscript of P. Koeppen (<!--СПФ АРАН. Ф. 30. Оп. 1. Д. 343. Ч. 1. Л. 96-->) about which 
                     I was kindly informed by I.V. Tunkina. According to P. Koeppen, the inscription was found on the estate Kardiatrikon, the property of colonel Potyomkin.
                     At the top of the insribed field four letters chi look ornamental. The inscription is restored rather tentatively.</p>
-                <p>1-4. Judging by the palaeography and dating, the inscription should be compared with no. 166 (Mangup, 1179 C.E.). Between the abbreviated word "year" and the chi,
+                <p>1-4. Judging by the palaeography and dating, the inscription should be compared with <ref type="iscription">V 166</ref> (Mangup, 1179 C.E.). Between the abbreviated word "year" and the chi,
                     there should be a sigma. Juging by the restoration "fraternity," the inscription might have originated from some monastary in the area of Artek 
-                    (cf. no. 227 from the nearby Panair). At the same time, we cannot rule out the possibility that the iscription is post-Byzantine.</p>
+                    (cf. <ref type="iscription">V 227</ref> from the nearby Panair). At the same time, we cannot rule out the possibility that the iscription is post-Byzantine.</p>
             </div>
             <div type="translation" xml:lang="ru">
                 <p>Михаил (?) Васил(…). Господи, помяни (?) … братию … рабу. В 66.. году.</p>
@@ -142,11 +155,13 @@
             </div>
             
             <div type="commentary" xml:lang="ru">
-                <p> Все сведения о надписи содержатся в рукописи П. Кёппена (СПФ АРАН. Ф. 30. Оп. 1. Д. 343. Ч. 1. Л. 96; любезно сообщено И. В. Тункиной). Согласно 
-                    ему, надпись найдена в имении полковника Потемкина <!--Кардиатрикон-->. На верхнем поле помещено изображение 4 хи, которые выглядят как орнамент. 
+                <p> Все сведения о надписи содержатся в рукописи П. Кёппена (СПФ АРАН. Ф. 30. Оп. 1. Д. 343. Ч. 1. Л. 96; любезно сообщено И.В. Тункиной). Согласно 
+                    ему, надпись найдена в имении полковника Потемкина <!--Кардиатрикон-->. На верхнем поле помещено изображение четырех букв хи, которые выглядят 
+                    как орнамент. 
                     Надпись восстанавливается предположительно.</p>
-               <p>1–4. По палеографии и датировке надпись следует сравнить с № 166 (Мангуп, 1179 г.). Между сокращением слова «год» и хи должна была стоять 
-                    стигма. Судя по восстанавливаемому слову «братия» надпись относилась к какому-то монастырю в районе Артека (ср. № 227 с соседнего Панаира). 
+                <p>1–4. По палеографии и датировке надпись следует сравнить с <ref type="iscription">V 166</ref> (Мангуп, 1179 г.). Между сокращением слова «год» и хи 
+                    должна была стоять 
+                    стигма. Судя по восстанавливаемому слову «братия» надпись относилась к какому-то монастырю в районе Артека (ср. <ref type="iscription">V 227</ref> с соседнего Панаира). 
                    Впрочем, точной уверенности, в том, что надпись не поствизантийского времени, нет.</p>   
             </div>
             

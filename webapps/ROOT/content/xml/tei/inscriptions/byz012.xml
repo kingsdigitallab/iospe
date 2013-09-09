@@ -41,14 +41,16 @@
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru">Неизвестен.</material>
                            <material xml:lang="en">Unknown.</material>
-                           <p xml:lang="ru">На лицевой стороне рельефная рамка, три монограммы в рамках и растительный орнамент между рамок.Состояние неизвестно.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка, три монограммы в рамках и <!--растительный - ?или геометрический - треугольный--> орнамент между рамок.
+                              Состояние неизвестно.</p>
+                           <p xml:lang="en">On the front - a frame in relief along the perimeter; inside the frame: three framed monograms
+                              and a vegetative ornament in-between the frames.</p> 
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout ana="f1">
-                           <seg xml:lang="ru">над монограммами.</seg>
-                           <seg xml:lang="en">over the monograms.</seg>
+                           <seg xml:lang="ru">Над монограммами.</seg>
+                           <seg xml:lang="en">Above the monograms.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -76,12 +78,12 @@
                   </provenance>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot">Херсонес.</placeName>
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">1798 г., обследования П.С. Палласа.</rs>
                         <rs type="context">Башня XVII (?).</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Chersonesos.</placeName>
+                        <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName>
                         <rs type="circumstances">1798, survey of P.S. Pallas</rs>
                         <rs type="context">Tower XVII (?).</rs>
                      </seg>
@@ -112,11 +114,19 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="byz12">
+            <desc xml:lang="en">Drawing of face (from ??)</desc>
+            <desc xml:lang="ru"></desc>
+         </graphic>
+      </surface>
+   </facsimile>
    <text>
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!--CIG--><ptr target="cig"/>  IV <biblScope>8851</biblScope></bibl> 
+               <bibl n="L1"><!--CIG--><ptr target="CIG"/>  IV <biblScope>8851</biblScope></bibl> 
                <bibl n="1.1"><!--Сборник--><ptr target="b0132"/>,  <biblScope>9</biblScope></bibl>
                <bibl n="1.1.1"><!--Millet 1900--><ptr target="b0397"/></bibl> 
                <bibl n="1.2"><!--Малицкий 1933--><ptr target="b0163"/>,  <biblScope>36–37</biblScope></bibl> 
@@ -125,9 +135,9 @@
          </div>
          <div type="apparatus">
            <p>
-              <app loc="1"><lem resp="kirchhof">βαλλομέ[ν]ου ᾿ς</lem><rdg/>
-                                      <rdg resp="b0397">βαλλομένου ἐ[ν]</rdg> 
-                                      <rdg resp="kirchhof">Χερσ[ῶνο]ς</rdg> <!-- et alii. -->
+              <app loc="1"><lem resp="Kirchhoff">βαλλομέ<supplied reason="lost">ν</supplied>ου ᾿ς</lem><rdg/>
+                                      <rdg resp="b0397">βαλλομένου ἐ<supplied reason="lost">ν</supplied></rdg> 
+                                     <note>et alii</note><rdg resp="Kirchhoff">Χερσ<supplied reason="lost">ῶνο</supplied>ς</rdg> <!-- Kirchhoff et alii. -->
               </app>
             </p>
          </div>
@@ -138,29 +148,42 @@
             <p>Set up in the Chersonia castle.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p> Паллас (Pallas 1801, 74) говорит о данной надписи после № 5 и упоминает, что она найдена «там же», т.е. либо в стене башни XVII, либо где-то в 
-               Херсонесе вообще. Надпись известна по рисунку Дюбуа (Dubois de Montpéreux 1843, atl. sér. IV, pl. 24b, fig. 10).</p>
-                <p> По своему типу (три монограммы в картушах) надпись, несомненно, относится к памятникам феодоритской эпиграфики XV в. (ср. № 172, 214). 
+            <p> Паллас (Pallas 1801, 74) говорит о данной надписи после <ref type="inscription">V 5</ref> и упоминает, что она найдена «там же», т.е. либо в стене башни XVII, либо где-то в 
+               <!--Херсонесе--> вообще. Надпись известна по рисунку Дюбуа (Dubois de Montpéreux 1843, atl. sér. IV, pl. 24b, fig. 10).</p>
+                <p> По своему типу (три монограммы в картушах) надпись, несомненно, относится к памятникам феодоритской эпиграфики XV в. (ср. <ref type="inscription">V 172</ref>, <ref type="inscription">V 214</ref>). 
                    Наклон букв ясно показывает, что Паллас не перерисовывал буквы (вероятно, вязь), а передавал свою расшифровку надписи.  </p>
-                <p> 1. Наше чтение надписи предположительно. Относительно данного значения глагола βάλλω см. Lampe, s.v., C — вероятно, здесь следует видеть 
-                   аористную форму βαλ{λ}όμενον; в конце слова точно стоит ню, ибо так же оно изображается и третьим от конца, в последнем слове, где его чтение 
+                <p> 1. Наше чтение надписи предположительно. Относительно данного значения глагола βάλλω см. Lampe, <!--s.v., C--> — вероятно, здесь следует видеть 
+                   аористную форму βαλ{λ}όμενον; в конце слова точно стоит ню, ибо так же оно изображается и <!--третьим? четвертым--> от конца, в последнем слове, где его чтение 
                    несомненно.</p>
                 <p>Ключевой для датировки надписи является расшифровка ее монограмм (Милле предлагал следующую расшифровку монограмм: ἰς κ᾿ μηνὸς Δεκεμβρίου). 
                    В первой монограмме ясно читается имя Исаак; во второй читаются только буквы MAN (возможно, от имени Мануил); в третьей имя неясно. Известен 
-                   Исаак, правитель Феодоро (ум. в 1475 г.; см. Мыц 1991a, 183): его монограмма стоит на центральном месте в № 224 (1459 г.), тогда как в данном 
-                   случае она занимает второе место (судя по надписям господаря Алексея (№ 172, 214) главным является центральный символ, в то время как боковые — 
+                   Исаак, правитель Феодоро (ум. в 1475 г.; см. Мыц 1991a, 183): его монограмма стоит на центральном месте в <ref type="inscription">V 224</ref> (1459 г.), тогда как в данном 
+                   случае она занимает второе место (судя по надписям господаря Алексея (<ref type="inscription">V 172</ref>, <ref type="inscription">V 214</ref>) главным является центральный символ, в то время как боковые — 
                    второстепенными). Этот факт заставляет отнести нашу надпись ко времени до 1459 г., когда Исаак уже занял первенствующую позицию. Центральная 
                    монограмма должна принадлежать старшему феодоритскому господарю, которым с 1446 по 1459 г. был, по всей видимости, Олобо 
                    (см. Мыц, 2009, 401–404): в монограмме может быть отражено его христианское имя. Таким образом, данная надпись была поставлена, по всей 
-                   видимости, между 1446 и 1459 г. (см. также комм. к № 13). С этим согласуется и не обычная для Феодоро форма картушей на рисунке Палласа: они и не 
-                   остроконечные, как в № 172, 214 и еще на одном мангупском фрагменте с монограммой Алексия (Малицкий 1932, 35, рис. 11), и не круглые, как в более 
-                   позднем № 224 и четко не датированном № 142.</p>
+                   видимости, между 1446 и 1459 г. (см. также комм. к <ref type="inscription">V 13</ref>). С этим согласуется и необычная для Феодоро форма картушей на рисунке Палласа: они и не 
+                   остроконечные, как в <ref type="inscription">V 172</ref>, <ref type="inscription">V 214</ref> и еще на одном мангупском фрагменте с монограммой Алексия (Малицкий 1932, 35, рис. 11), и не круглые, как в более 
+                   позднем <ref type="inscription">V 224</ref> и четко не датированном <ref type="inscription">V 142</ref>.</p>
          </div>
          <div type="commentary" xml:lang="en">
-             <p>Pallas 1801, 74 Dubois de Montpéreux 1843, atl. sér. IV, pl. 24b, fig. 10</p>
-             <p>Theodoro Pallas</p>
-             <p>Theodoro Theodoro </p>
-             <p>Millet Myts Myts Malitsky Pallas</p>
+             <p>Pallas (1801, 74) discusses this inscription immediately after <ref type="inscription">V 5</ref> and mentions that it was found "in the same area," that is, either in the wall of the Tower
+                XVII, or somewhere in the general area of Chersonessos. The inscription is known from the drawing of Dubois (Dubois de Montpéreux 1843, atl. sér. IV, pl. 24b, fig. 10.</p>
+             <p>The form of the inscription (three monograms in cartouches) is decidedly representative of the Theodorite epigraphy of the XVth century (see, e.g. Nos. 172, 214).
+                The uniform leaning of letters indicates that Pallas was not reproducing lettershapes in a facsimile style, but was presenting his own reading of the text.</p>
+            <p>1. Our reading of the inscription is rather tentative. On the specific meaning of βάλλω here, see Lampe<!--, s.v. C--> - we should probably identify this as the aorist
+               stem - βαλ{λ}όμενον; at the end of the word is definitely a nu, as it is the same letter as the fourth letter from the end in the last word - Χερσονίας - 
+               where its reading is indisputable. </p>
+            <p>The decipherement of the monograms is key to the dating of the inscription (Millet offered the following interpretation: ἰς κ᾿ μηνὸς Δεκεμβρίου).
+               In the first monogram, the name Icaac is quite transparent; in the second - only letters MAN are decipherable (perhaps from the name Manuil);
+               in the third - the name is unclear. We know of Isaac, the ruler of Theodoro (died in 1475 CE; see Myts1991a, 183): his monogram occupies the central
+               position in <ref type="inscription">V 224</ref> (1459 CE), while in this case it appears in the secondary position: if we can judge by the inscriptions of prince Alexios (nos. 172, 214),
+               the main monogram is the central one, while the lateral ones are secondary. This fact prompts us to date the inscription before 1459 CE, since by then
+               Isaak had already acquired the leading role. The central monogram should refer to the senior Theodorite official, who from 1446 till 1459 was apparently
+               Olobo (Myts 2009, 401-404): in the monogram, we might be seeing a reflection of his Christian name. Overall, we can conclude that the inscription was 
+               most likely put up some time between 1446 and 1459 CE (see also commentary to <ref type="inscription">V 13</ref>). This date fits well with the unusual shape of the cartouches on the 
+               drawing of Pallas: they are neither pointy, as in <ref type="inscription">V 172</ref> and <ref type="inscription">V 214</ref>, as well as on another fragment from Mangup with the monogram of Alexios (Malitsky 
+               1932, 35, drawing 11), nor are they rounded, as in the later <ref type="inscription">V 224</ref>, and in <ref type="inscription">V 142</ref> (of less certain date).</p>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>

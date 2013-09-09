@@ -59,7 +59,7 @@
                         </support>
                      </supportDesc>
                      <layoutDesc>
-                        <layout ana="f2" n="2">
+                        <layout ana="f2">
                            <seg xml:lang="ru">На роге и отчасти на тулове.</seg>
                            <seg xml:lang="en"/>
                         </layout>
@@ -79,20 +79,20 @@
                         <seg xml:lang="ru">Феодоро.</seg>
                         <seg xml:lang="en">Theodoro.</seg>
                      </origPlace>
-                     <origDate notBefore="1456" notAfter="1456" evidence="указание-надписи">
+                     <origDate notBefore="1456" notAfter="1456" evidence="указание_надписи">
                         <seg xml:lang="ru">1456 г.</seg>
                         <seg xml:lang="en">1456 C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="autopsy" n="1">
-                     <seg xml:lang="ru"><date when="2005-09">май 1999, август 2001, сентябрь 2002, сентябрь 2003, сентябрь 2004, сентябрь 2005, сентябрь 2006, сентябрь 2007</date>.</seg>
-                     <seg xml:lang="en"><date when="2005-09">May 1999, August 2001, September 2002, September 2003, September 2004, September 2005, September 2006, September 2007</date>.</seg>
+                     <seg xml:lang="ru"><date>Май 1999</date>, <date>август 2001</date>, <date>сентябрь 2002</date>, <date>сентябрь 2003</date>, <date>сентябрь 2004</date>, <date when="2005-09">сентябрь 2005</date>, <date>сентябрь 2006</date>, <date>сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"><date>May 1999</date>, <date>August 2001</date>, <date>September 2002</date>, <date>September 2003</date>, <date>September 2004</date>, <date when="2005-09">September 2005</date>, <date>September 2006</date>, <date>September 2007</date>.</seg>
                   </provenance>
                   <provenance type="autopsy" n="2">
-                     <seg xml:lang="ru"><date when="2005-09">сентябрь 2005</date>.</seg>
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
                      <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
                   </provenance>
-                  <provenance type="found" n="3">
+                  <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Мангуп.</placeName>
                         <rs type="circumstances">1912 г., раскопки Р.Х. Лепера.</rs>
@@ -132,7 +132,7 @@
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!--Виноградов  2000--><ptr target="b0406"/> <biblScope>445</biblScope></bibl>
+               <bibl n="L1"><!--Виноградов  2000--><ptr target="b0406"/>, <biblScope>445</biblScope></bibl>
                <bibl n="1.1"><!-- Байер 2002--><ptr target="b0012"/>,  <biblScope>220</biblScope></bibl>
             </listBibl>
          </div>
@@ -145,7 +145,7 @@
             <p>Почил раб Божий Стефан, его жена и дети 9 ноября 6965 года.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p>Fell asleep: a servant of God, Stephanos, his wise and children, on the 9th of November, in the year 6965.</p>
+            <p>Fell asleep: a servant of God, Stephanos, his wife and children, on the 9th of November, in the year 6965.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p> Надпись была прочитана уже Лепером (Лепер 1913, 149, рис. 4; Лепер 1914), который 
@@ -153,8 +153,8 @@
                 было приготовлено заранее, а дата вырезана после смерти чтеца Стефана. 
                Поэтому дата смерти относится только к Стефану, а не ко всем упомянутым в надписи.</p>
                 <p> 1–2. Относительно формулы см. IV.3.F.e.  </p>
-                <p> 2. Относительно имени см. комм. к № 61.  </p>
-                <p>3. Чтец упоминается в нескольких мангупских надписях (№ 174 и 175). Следует отметить 
+            <p> 2. Относительно имени см. комм. к <ref type="inscription">V 61</ref>.  </p>
+            <p>3. Чтец упоминается в нескольких мангупских надписях (<ref type="inscription">V 174</ref> и <ref type="inscription">V 175</ref>). Следует отметить 
                     смешение падежей (аккузатив вместо номинатива) в слове σύμβιον. Конъектура Байера не 
                     имеет под собой никаких оснований: ему неизвестно широкое смешение падежей в крымских 
                     надписях.</p>
@@ -164,15 +164,13 @@
              <p>3. Bayer</p>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="fragment" n="2">
                <ab>
                <lb n="1"/><w lemma="κοιμάω">Ἐκημήθι</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλο<supplied reason="lost">ς</supplied></w>
                <lb n="2"/><w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>Θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> <persName type="attested" ref="#person230"><name nymRef="Στέφανος">Στέφανος</name></persName>
                <lb n="3"/><w lemma="ἀναγνώστης">ἀναγνόστης</w>, <w lemma="σύμβιος">σύμβιον</w>
-               <lb n="4"/><w lemma="καί">καὶ</w> <w lemma="τέκνον">τέκνον</w> <w lemma="αὐτός">αὐτοῦ</w> <w lemma="ἐν">ἐν</w> <date><w lemma="μείς"><expan><abbr>μη</abbr><ex>νὶ</ex></expan></w>
+               <lb n="4"/><w lemma="καί">καὶ</w> <w lemma="τέκνον">τέκνον</w> <w lemma="αὐτός">αὐτοῦ</w> <w lemma="ἐν">ἐν</w> <date><w lemma="μήν"><expan><abbr>μη</abbr><ex>νὶ</ex></expan></w>
                   <rs type="month" ref="nou"><w lemma="Νοέμβριος">Νοεβρίο</w></rs> <num value="9">θ</num>, <w lemma="ἔτος">ἔτους</w> <num value="6965">ςϠξε</num></date>.
             </ab>
-            </div>
          </div>
       </body>
    </text>

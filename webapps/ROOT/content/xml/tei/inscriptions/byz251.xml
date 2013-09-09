@@ -17,7 +17,7 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country>rUSSIA</country>
+               <msIdentifier><country>Russia</country>
                   <altIdentifier xml:lang="ru">
                      <repository>ГЭ</repository>
                      <idno>П.1888.13</idno>
@@ -101,6 +101,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-07-23" who="ΝG">inserted Greek lemmata</change>
           <change when="2013-04-12" who="ΝG">minor correction of Greek lemmata</change>
           <change when="2013-03-06" who="ΝG">corrected Greek lemmata</change>
          <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
@@ -113,26 +114,26 @@
       <body>
          <div type="bibliography">
             <listBibl>     
-               <bibl n="L1"><!-- Latyšev¬ 1888 --><ptr target="b0158"/>,  22-25 <biblScope>31</biblScope></bibl>
-               <bibl n="1.1"><!-- IOSPE --> <ptr target="iospe"/>,  <biblScope>II 491</biblScope></bibl>
+               <bibl n="L1"><!-- Latyšev 1888 --><ptr target="b0158"/>,  22-25 <biblScope>31</biblScope></bibl>
+               <bibl n="1.1"><!-- IOSPE --> <ptr target="IOSPE"/> <biblScope>II 491</biblScope></bibl>
                <bibl n="1.1.1"><!-- Minns 1913 --> <ptr target="b0336"/>,  657, № <biblScope>66</biblScope></bibl>
                <bibl n="2.1"><!-- Кулаковский 1891a --> <ptr target="b0108"/>,  <biblScope>181–182</biblScope></bibl>
                <bibl n="2.1"><!-- Кулаковский 1891b --> <ptr target="b0109"/>,  <biblScope>24–25</biblScope></bibl>
                <bibl n="3"><!-- Латышев 1892b --> <ptr target="b0126"/></bibl>
-               <bibl n="4"><!-- КБН --> <ptr target="cirb"/>,  <biblScope>67</biblScope></bibl>
+               <bibl n="4"><!-- КБН --> <ptr target="CIRB"/>,  <biblScope>67</biblScope></bibl>
                <bibl n="4.1"><!-- КХНБ --> <ptr target="b0068"/>,  <biblScope>2</biblScope></bibl>
                <bibl n="5"><!-- Виноградов 1998 --> <ptr target="b0057"/>,  <biblScope>233–247</biblScope></bibl>
-               <bibl n="5.1"><!--  SEG XXXXVIII --> <ptr target="seg"/>,  <biblScope>XXXXVIII, 993</biblScope></bibl>
-               <!--<bibl n="6"><!-\-  Vinogradov 2007 -\-> <ptr target="????????"/> 257–259, № <biblScope>4</biblScope></bibl>-->
+               <bibl n="5.1"><!--  SEG XXXXVIII --> <title>SEG</title>,  <biblScope>XXXXVIII.993</biblScope></bibl>
+               <bibl n="6"><!--Vinogradov 2007--> <ptr target="b0376"/> 257–259, № <biblScope>4</biblScope></bibl>
                <bibl n="L.1"><!-- Виноградов 2011a --> <ptr target="b0386"/>,  247–250, № <biblScope>16</biblScope></bibl>
             </listBibl>
          </div>
          <div type="apparatus">
              <p>
-                <app loc="2"> <lem resp="b0109">Δοιπτούνου</lem> <!--<lem resp="latyshev">Δουπτούνου</lem> Latyshev 1963 et alii;--> <rdg resp="b0158">Διουπτούνου</rdg></app>
-                <app loc="7-8"> <!--<rdg resp="b0057 ???? b0386">πρώ[του ἐπὶ κόμ]ητας (?)</rdg>--> <!--<rdg resp="b0158 iospe b0126">πρω[τεύοντος ... ]τα</rdg> Latyshev et alii--></app>
-                <app loc="8"><rdg resp="b0158 iospe b0126">Σεαυάγου</rdg></app>
-                <app loc="9-10"> <!--<rdg resp="b0158 iospe b0126">ΚΟΝ [...] ΑΓΙΕΤ. Θ</rdg> Latyshev et alii--> <!--<rdg resp="b0057 ????">Οἰκ[τοβρίου ἰνδ(ικτιῶνος) ς´, ὡς δὲ Βόσπ](ορος) ἄγι, ἔτ(ους) θο[ψ´]</rdg> Y. Vinogradov, A. Vinogradov 2007--></app>
+                <app loc="2"> <rdg resp="b0109">Δοιπτούνου</rdg> <rdg resp="Latyshev">Δουπτούνου</rdg> <note>et alii</note> <rdg resp="b0158">Διουπτούνου</rdg></app>
+                <app loc="7-8"> <rdg resp="b0057 b0376 b0386">πρώ[του ἐπὶ κόμ]ητας (?)</rdg> <rdg resp="b0158 IOSPE b0126">πρω[τεύοντος ... ]τα</rdg> <note>et alii</note></app>
+                <app loc="8"><rdg resp="b0158 IOSPE b0126">Σεαυάγου</rdg></app>
+                <app loc="9-10"> <rdg resp="b0158 IOSPE b0126">ΚΟΝ [...] ΑΓΙΕΤ. Θ</rdg> <note>et alii</note> <rdg resp="b0057 b0376">Οἰκ[τοβρίου ἰνδ(ικτιῶνος) ς´, ὡς δὲ Βόσπ](ορος) ἄγι, ἔτ(ους) θο[ψ´]</rdg></app>
                 <app loc="11"><rdg/></app>.
             </p>
          </div>
@@ -150,34 +151,45 @@
             <p>После первоиздания Латышева и его воспроизведения в IOSPE II Кулаковский высказал свою критику, которую Латышев (Латышев 1892b) 
             частично принял в отношении имени царя Дойптун и неясности датировки, но отверг в части чтения имени Саваг вм. Сеаваг. 
             Архивными материалами Латышева (место хранения не указано) пользовались издатели КБН: их чтения в аппарате обозначаются 
-            как Latyshev 1963. Наконец, новые прочтения темных мест надписи предложил Ю. Г. Виноградов. У него же см. подробный анализ всех аспектов надписи. 
+            как Latyshev 1965. Наконец, новые прочтения темных мест надписи предложил Ю.Г. Виноградов. У него же см. подробный анализ всех аспектов надписи. 
             Добавим лишь, что, вероятней всего, упоминаемая в надписи башня стояла неподалеку от места находки камня. 
             Археологически она, впрочем, не прослеживается (см. Nadel 1977, 96, not. 62).</p>
             <p>1. Два небольших значка по сторонам от креста можно прочесть только как «подвесные» альфу и омегу — получается, что резчик попытался 
                «христианизировать» античную формулу Ἀγαθῇ τύχῃ, подобно тому, как другие составители ранневизантийских надписей снабжали ее иными  
-               христианскими формулами: ζωή, ὑγία (IGLS III, 305) или εἷς θεός (IGLS III, 306; Bernand 1977, № 14w).</p>
-            <p>2, 4, 5, 7. Относительно имен см. прил. 1 и комм. к № 310.</p> 
+               христианскими формулами: ζωή, ὑγία (IGLS III, № 305) или εἷς θεός (IGLS III, № 306; Bernand 1977, № 14w).</p>
+            <p>2, 4, 5, 7. Относительно имен см. прил. 1 и комм. к <ref type="inscription">V 310</ref>.</p> 
             <p>3–4. В конце V в. свой смысл сохраняет использование титулатуры «друг кесаря и друг римлян, благочестивый»: 
             с одной стороны, как традиционного титула боспорских царей, с другой, как выражения лояльности империи. 
             Характерно, что Дойптун ставит, против обычая (71 раз в КБН), слово «благочестивый» на первое место: возможно, это не просто ошибка, 
             а сознательный шаг, обусловленный в т.ч. и христианским переосмыслением этого титула.</p>
-            <p>9–10. Единственное, с чем нельзя согласиться в реконструкции Ю. Г. Виноградова, — это чтение конца 9-й строки и 10-й строки. 
+            <p>7–8. Восстановление Ю. Г. Виноградова ἐπὶ τοῦ πρώ[του ἐπὶ κόμ]η̣τας выглядит вполне оправданным в контексте предшествующего упоминания 
+               комита-секретаря, хотя несколько непонятным оказывается помещение первого комита после комита-секретаря, — поэтому нельзя исключать, что в 
+               надписи мог стоять и другая должность на -ητης.</p>
+            <p>10-11. Единственное, с чем нельзя согласиться в реконструкции Ю.Г. Виноградова, — это чтение конца 10-й строки и 11-й строки. 
             Против него говорят гапаксная форма Οἰκτοβρίου (равно как и уникальная для Боспора двойная датировка по месяцам), отсутствие 
-            знака сокращения в 10-й строке и, наконец, ясная левая вертикальная гаста у последней буквы в той же строке, которая, таким образом, 
-            ро (с немного увеличенным полукружием), а не омикрон. Более того, на месте предполагаемого сокращения хорошо читаются остатки мю — в 10-й строке явно 
+            знака сокращения в 10-й строке и, наконец, ясная левая вертикальная гаста у последней буквы в той же строке, которая, таким образом, является 
+            ро (с немного увеличенным полукружием), а не омикроном. Более того, на месте предполагаемого сокращения хорошо читаются остатки мю — в 10-й строке явно 
             читается слово μαγίστορ, вариант более распространенного μαΐστωρ, засвидетельствованный в Anthologia graeca 1, 109 и 
             Lefebvre 1907, № 196 (конструкцию с genetivus absolutus предложил восстанавливать здесь Д. Фейссель в частной беседе с нами). 
             Этим термином в Византии (откуда он и был заимствован на Боспор) обозначался мастер и начальник чего-либо (Trapp 1994, s.v.). 
-            Впрочем, упоминание комита Савага все равно оставляет в силе датировку концом V в.: с одной стороны, до 491–492 гг. — даты его смерти (см. № 299), 
-            а с другой, видимо, после 479 г. (а не после 478, потому что наша надпись составлена в горпиее — первом месяце года), когда он назван просто комитом (№ 318).</p>  
-            <p>11. Датировка по году могла стоять на последней строке посередине, симметрично Ἀγαθῇ τύχῃ в 1-ой строке.</p> 
+            Впрочем, упоминание комита Савага все равно оставляет в силе датировку концом V в.: с одной стороны, до 491–492 гг. — даты его смерти (см. <ref type="inscription">V 299</ref>), 
+               а с другой, видимо, после 479 г. (а не после 478, потому что наша надпись составлена в горпиее — первом месяце года), когда он назван просто комитом (<ref type="inscription">V 318</ref>).</p>  
+            <p>12. Датировка по году могла стоять на последней строке посередине, симметрично Ἀγαθῇ τύχῃ в 1‐ой строке.</p> 
          </div>
          <div type="commentary" xml:lang="en">
             <p>Kulakovsky D. Feissel</p>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/><w lemma="ἄλφα"><unclear>Α</unclear></w> <g type="stauros"/> <w lemma="ὠμέγα"><unclear>Ω</unclear></w> <note>(?)</note> 
+               <lb n="1"/><w lemma="ἄλφα"><unclear>Α</unclear></w> <g type="stauros"/> <w lemma="ὠμέγα"><unclear>Ω</unclear></w> <note>?</note> <w lemma="ἀγαθός">Ἀγα<unclear>θῇ</unclear></w> <w lemma="τύχη"><unclear>τύχῃ</unclear></w>.
+               <lb n="2"/><g type="stauros"/>  <w lemma="ἐπί">Ἐπὶ</w> <persName type="ruler" key="doiptounos"><name nymRef="Τιβέριος">Τιβερίου</name> <name nymRef=" Ἰούλιος">Ἰουλίου</name> <name nymRef="Δουπτοῦνος">Δοιπτουνο<supplied reason="lost">υ</supplied></name>
+               <lb n="3"/><w lemma="βασιλεύς"><expan><abbr>βασιλ</abbr><ex>έως</ex></expan></w> <w lemma="εὐσεβής">εὐσεβοῦς</w>, <w>φιλοκέσαρος</w> <w lemma="καί">καὶ</w>
+               <lb n="4"/><w lemma="φιλορωμαῖος"><unclear>φ</unclear>ιλορωμέου</w></persName>, <w lemma="ἀνίστημι"><unclear>ἀν</unclear>έστη</w> <w lemma="ὁ">ὁ</w> <w lemma="πύργος">πύργος</w> <w lemma="οὗτος">οὗ<lb n="5" break="no"/><supplied reason="lost">το</supplied><unclear>ς</unclear></w> <w lemma="καί">καὶ</w> <w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔπαρχος">ἐπάρχου</w> <persName type="attested"><name nymRef="Εἰσγούδιος">Εἰσγουδίου</name></persName>
+               <lb n="6"/><supplied reason="lost"><w lemma="καί">καὶ</w></supplied> <w lemma="ἐπί"><supplied reason="lost">ἐ</supplied><unclear>π</unclear>ὶ</w> <w lemma="ὁ">τοῦ</w> <w lemma="κόμης"><expan><abbr>κόμ</abbr><ex>ητος</ex></expan></w> <persName type="attested"><name>Σπαδινου</name></persName> <w lemma="ὁ">τοῦ</w> <w lemma="ἐπί">ἐ<lb n="7" break="no"/><supplied reason="lost">πὶ</supplied></w> <w lemma="ὁ"><supplied reason="lost">τῆς</supplied></w> <w lemma="πινακίς"><unclear>πι</unclear>νακίδος</w> <w lemma="καί">καὶ</w> <w lemma="ἐπί">ἐπὶ</w> <w lemma="ὁ">τοῦ</w> <w lemma="πρῶτος">πρώ<lb n="8" break="no"/><supplied reason="lost">του</supplied></w> <w lemma="ἐπί"><supplied reason="lost">ἐπὶ</supplied></w> <w lemma="κόμης"><supplied reason="lost">κόμ</supplied><unclear>η</unclear>τας</w> <persName type="attested"><name nymRef="Σαυαγας">Σαυαγου</name></persName> <w lemma="καί">καὶ</w> <w lemma="ἐπί">ἐπὶ</w> <w lemma="ὁ">τοῦ</w>
+               <lb n="9"/><w lemma="ἐπιμελητής"><supplied reason="lost">ἐπιμελετο</supplied>ῦ</w> <w lemma="ὁ">τοῦ</w> <w lemma="ἐπί">ἐπὶ</w> <w lemma="ὁ">τοῦ</w> <w lemma="ἔργον">ἔργου</w>
+               <lb n="10"/><supplied reason="lost"><w lemma="ὁ">τοῦ</w> <w lemma="δεῖνα">δεῖνος</w></supplied>, <date><supplied reason="lost"><w lemma="μήν">μηνὸς</w></supplied> <w lemma="Γορπιαῖος">Γορπιαίου</w> <num value="20">κ</num></date>· <w lemma="οἰκοδομέω">οἰκ<supplied reason="lost">ο</supplied><lb n="11" break="no"/><supplied reason="lost">δομοῦντος</supplied></w> <supplied reason="lost"><w lemma="ὁ">τοῦ</w> <w lemma="δεῖνα">δεῖνος</w></supplied> <w lemma="μάγιστρος"><unclear>μ</unclear>αγίστο<unclear>ρ</unclear><supplied reason="lost">ος</supplied></w>.
+               <lb n="12"/><date><supplied reason="lost"><w lemma="ἔτος">Ἔτους</w></supplied> <num value="7" type="fraction"><gap reason="lost" quantity="2" unit="character"/><supplied reason="lost">ψ</supplied></num></date>.
+               <lb n="1"/><w lemma="ἄλφα"><unclear>Α</unclear></w> <g type="stauros"/> <w lemma="ὠμέγα"><unclear>Ω</unclear></w> <note>?</note> 
                <w lemma="ἀγαθός">Ἀγα<unclear>θῇ</unclear></w> <w lemma="τύχη"><unclear>τύχῃ</unclear></w>.
                <lb n="2"/><g type="stauros"/>  <w lemma="ἐπί">Ἐπὶ</w> <persName type="ruler" key="doiptounos"><name nymRef="Τιβέριος">Τιβερίου</name> 
                   <name nymRef=" Ἰούλιος">Ἰουλίου</name> <name nymRef="Δουπτοῦνος">Δοιπτουνο<supplied reason="lost">υ</supplied></name>
