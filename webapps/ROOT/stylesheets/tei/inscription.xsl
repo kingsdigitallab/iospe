@@ -876,8 +876,8 @@
       </xsl:if>
     </div>
 
-    <xsl:apply-templates/>
-
+<!--     <xsl:apply-templates/>
+ -->
   </xsl:template>
 
   <!--DIVS-->
