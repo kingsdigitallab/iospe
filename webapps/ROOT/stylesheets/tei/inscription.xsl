@@ -136,9 +136,9 @@
     <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang]">
       <div class="row">
         <div class="large-2 columns">
-          <h3>
+          <h6>
             <xsl:value-of select="if ($lang='ru') then 'Разновидность' else 'Type of monument'"/>
-          </h3>
+          </h6>
         </div>
         <div class="large-10 columns">
           <p>
@@ -154,9 +154,9 @@
     <xsl:if test="//tei:support/tei:material[@xml:lang=$lang]">
       <div class="row">
         <div class="large-2 columns">
-          <h3>
+          <h6>
             <xsl:value-of select="if ($lang='ru') then 'Материал' else 'Material'"/>
-          </h3>
+          </h6>
         </div>
         <div class="large-10 columns">
           <p>
@@ -171,11 +171,11 @@
     <xsl:if test="//tei:support/tei:p[@xml:lang=$lang]">
       <div class="row">
         <div class="large-2 columns">
-          <h3>
+          <h6>
             <xsl:value-of
               select="if ($lang='ru') then 'Описание  и состояние  документа' else 'Description and condition'"
             />
-          </h3>
+          </h6>
         </div>
         <div class="large-10 columns">
           <p>
@@ -208,9 +208,9 @@
         <xsl:for-each select="//tei:provenance[@type='found'][@n=current()/@n or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Место  находки' else 'Find place'"/>
-              </h3>
+              </h6>
             </div>
 
             <div class="large-10 columns">
@@ -222,10 +222,10 @@
           <!-- Find Circumnstances -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Условия  находки' else 'Find circumstances'"/>
-              </h3>
+              </h6>
             </div>
 
             <div class="large-10 columns">
@@ -237,9 +237,9 @@
           <!-- Find context -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Контекст находки' else 'Find context'"/>
-              </h3>
+              </h6>
             </div>
 
             <div class="large-10 columns">
@@ -253,10 +253,10 @@
         <xsl:if test="//tei:provenance[@type='observed'][@n = current()/@n or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Место хранения' else 'Modern location'"
                 />
-              </h3>
+              </h6>
             </div>
 
             <div class="large-10 columns">
@@ -271,9 +271,9 @@
         <xsl:for-each select="//tei:support/tei:dimensions[@n = current()/@n or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Размеры' else 'Dimensions'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:choose>
@@ -326,9 +326,9 @@
         <xsl:if test="//tei:provenance[@type = 'autopsy']">
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Автопсия' else 'Autopsy'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:value-of select="//tei:provenance[@type = 'autopsy']/tei:seg[@xml:lang=$lang]"/>
@@ -341,11 +341,11 @@
         <xsl:if test="//tei:altIdentifier[@n = current()/@n or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Институт  хранения' else 'Institution and inventory'"
                 />
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:value-of
@@ -471,9 +471,9 @@
               <!-- Faces code -->
               <div class="row">
                 <div class="large-2 columns">
-                  <h3>
+                  <h6>
                     <xsl:value-of select="if ($lang='ru') then 'Код фаса' else 'Faces code'"/>
-                  </h3>
+                  </h6>
                 </div>
                 <div class="large-10 columns">
                   <xsl:value-of select="@ana"/>
@@ -486,10 +486,10 @@
             <xsl:if test="tei:seg">
               <div class="row">
                 <div class="large-2 columns">
-                  <h3>
+                  <h6>
                     <xsl:value-of
                       select="if ($lang='ru') then 'Местоположение' else 'Placement of text'"/>
-                  </h3>
+                  </h6>
                 </div>
                 <div class="large-10 columns">
                   <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
@@ -503,10 +503,10 @@
           <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg">
             <div class="row">
               <div class="large-2 columns">
-                <h3>
+                <h6>
                   <xsl:value-of
                     select="if ($lang='ru') then 'Стиль  письма' else 'Style of lettering'"/>
-                </h3>
+                </h6>
               </div>
               <div class="large-10 columns">
                 <xsl:value-of
@@ -520,9 +520,9 @@
           <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height">
             <div class="row">
               <div class="large-2 columns">
-                <h3>
+                <h6>
                   <xsl:value-of select="if ($lang='ru') then 'Высота букв' else 'Letterheights'"/>
-                </h3>
+                </h6>
               </div>
               <div class="large-10 columns">
                 <xsl:value-of
@@ -553,9 +553,9 @@
           <!-- Origin -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Происхождение текста' else 'Origin'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:value-of
@@ -567,9 +567,9 @@
           <!-- Category -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Характер документа' else 'Category'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:value-of
@@ -581,9 +581,9 @@
           <!-- Date -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Датировка текста' else 'Date'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:value-of
@@ -595,10 +595,10 @@
           <!-- Dating Criteria -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Обоснование датировки' else 'Dating criteria'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:choose>
@@ -619,9 +619,9 @@
           <!-- Editions -->
           <div class="row">
             <div class="large-2 columns">
-              <h3>
+              <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Издания' else 'Editions'"/>
-              </h3>
+              </h6>
             </div>
             <div class="large-10 columns">
               <xsl:choose>
