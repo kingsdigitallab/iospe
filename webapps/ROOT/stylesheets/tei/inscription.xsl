@@ -132,59 +132,74 @@
 
   <xsl:template name="inscriptionSupport">
 
-    <!-- Type of monument (if exists) -->
-    <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang]">
-      <div class="row">
-        <div class="large-2 columns">
-          <h6>
-            <xsl:value-of select="if ($lang='ru') then 'Разновидность' else 'Type of monument'"/>
-          </h6>
-        </div>
-        <div class="large-10 columns">
-          <p>
-            <xsl:value-of select="//tei:objectType[@xml:lang=$lang]"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
+    <!-- Stone -->
+    <div class="row">
+      <div class="large-2 columns">
+        <!-- would be better in stylesheet -->
+        <h2>
+          <xsl:value-of select="if ($lang='ru') then 'Камень' else 'Stone'"/>
+        </h2>
       </div>
-    </xsl:if>
+
+      <div class="large-10 columns">
+
+        <!-- Type of monument (if exists) -->
+        <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang]">
+          <div class="row">
+            <div class="large-2 columns">
+              <h6>
+                <xsl:value-of select="if ($lang='ru') then 'Разновидность' else 'Type of monument'"
+                />
+              </h6>
+            </div>
+            <div class="large-10 columns">
+              <p>
+                <xsl:value-of select="//tei:objectType[@xml:lang=$lang]"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:if>
 
 
-    <!-- Material (if exists) -->
-    <xsl:if test="//tei:support/tei:material[@xml:lang=$lang]">
-      <div class="row">
-        <div class="large-2 columns">
-          <h6>
-            <xsl:value-of select="if ($lang='ru') then 'Материал' else 'Material'"/>
-          </h6>
-        </div>
-        <div class="large-10 columns">
-          <p>
-            <xsl:value-of select="//tei:material[@xml:lang=$lang]"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:if>
+        <!-- Material (if exists) -->
+        <xsl:if test="//tei:support/tei:material[@xml:lang=$lang]">
+          <div class="row">
+            <div class="large-2 columns">
+              <h6>
+                <xsl:value-of select="if ($lang='ru') then 'Материал' else 'Material'"/>
+              </h6>
+            </div>
+            <div class="large-10 columns">
+              <p>
+                <xsl:value-of select="//tei:material[@xml:lang=$lang]"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:if>
 
-    <!-- Description and condition (if exists) -->
-    <xsl:if test="//tei:support/tei:p[@xml:lang=$lang]">
-      <div class="row">
-        <div class="large-2 columns">
-          <h6>
-            <xsl:value-of
-              select="if ($lang='ru') then 'Описание  и состояние  документа' else 'Description and condition'"
-            />
-          </h6>
-        </div>
-        <div class="large-10 columns">
-          <p>
-            <xsl:apply-templates select="//tei:p[@xml:lang=$lang]/node()"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
+        <!-- Description and condition (if exists) -->
+        <xsl:if test="//tei:support/tei:p[@xml:lang=$lang]">
+          <div class="row">
+            <div class="large-2 columns">
+              <h6>
+                <xsl:value-of
+                  select="if ($lang='ru') then 'Описание  и состояние  документа' else 'Description and condition'"
+                />
+              </h6>
+            </div>
+            <div class="large-10 columns">
+              <p>
+                <xsl:apply-templates select="//tei:p[@xml:lang=$lang]/node()"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:if>
       </div>
-    </xsl:if>
+
+    </div>
   </xsl:template>
 
   <xsl:template name="objectData">
@@ -444,9 +459,6 @@
               <xsl:text>.&#160;</xsl:text>
             </xsl:element>
           </xsl:if>
-
-
-
           <!-- Inscribed field -->
 
           <xsl:element
@@ -666,108 +678,106 @@
           </div>
 
 
-            <!-- Actual Inscription Data -->
-            <div class="row">
-              <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
-              <div class="large-12 columns">
-                <div class="section-container tabs" data-section="tabs">
+          <!-- Actual Inscription Data -->
+          <div class="row">
+            <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
+            <div class="large-12 columns">
+              <div class="section-container tabs" data-section="tabs">
 
-                  <!-- Edition -->
+                <!-- Edition -->
+                <section>
+                  <p class="title" data-section-title="data-section-title">
+                    <a href="#edition{if (@n) then @n else '1'}">
+                      <xsl:value-of select="if ($lang='ru') then 'Критическое' else 'Edition'"/>
+                    </a>
+                  </p>
+                  <div id="edition{if (@n) then @n else '1'}" class="content"
+                    data-section-content="data-section-content">
+                    <!-- Only get current text part (inscription) if necessary -->
+                    <xsl:choose>
+                      <xsl:when test="@n">
+                        <xsl:variable name="tet" select="@n"/>
+                        <xsl:apply-templates
+                          select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
+                          mode="copyEpidoc"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:apply-templates select="//v_in//div[@id='edition'][1]/*[not(self::h2)]"
+                          mode="copyEpidoc"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </div>
+                </section>
+
+                <!-- Diplomatic -->
+                <section>
+                  <p class="title" data-section-title="data-section-title">
+                    <a href="#diplomatic{if (@n) then @n else '1'}">
+                      <xsl:value-of
+                        select="if ($lang='ru') then 'Дипломатическое' else 'Diplomatic'"/>
+                    </a>
+                  </p>
+                  <div id="diplomatic{if (@n) then @n else '1'}" class="content"
+                    data-section-content="data-section-content">
+                    <xsl:choose>
+                      <xsl:when test="@n">
+                        <xsl:variable name="tet" select="@n"/>
+                        <xsl:apply-templates
+                          select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
+                          mode="copyEpidoc"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:apply-templates select="//v_di//div[@id='edition'][1]/*[not(self::h2)]"
+                          mode="copyEpidoc"/>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </div>
+                </section>
+
+                <!-- Epidoc XML -->
+                <section>
+                  <p class="title" data-section-title="data-section-title">
+                    <a href="#epidoc{if (@n) then @n else '1'}">
+                      <xsl:value-of select="if ($lang='ru') then 'EpiDoc (XML)' else 'EpiDoc (XML)'"
+                      />
+                    </a>
+                  </p>
+                  <div id="epidoc{if (@n) then @n else '1'}" class="content"
+                    data-section-content="data-section-content">
+                    <pre><code class="language-xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
+                  </div>
+                </section>
+
+                <!-- Edition in Verse (If it exists)-->
+                <xsl:if test="descendant::tei:lg">
                   <section>
                     <p class="title" data-section-title="data-section-title">
-                      <a href="#edition{if (@n) then @n else '1'}">
-                        <xsl:value-of select="if ($lang='ru') then 'Критическое' else 'Edition'"/>
+                      <a href="#verse{if (@n) then @n else '1'}">
+                        <xsl:value-of
+                          select="if ($lang='ru') then 'В стихотворной форме' else 'Edition in Verse'"
+                        />
                       </a>
                     </p>
-                    <div id="edition{if (@n) then @n else '1'}" class="content"
+                    <div id="verse{if (@n) then @n else '1'}" class="content"
                       data-section-content="data-section-content">
-                      <!-- Only get current text part (inscription) if necessary -->
                       <xsl:choose>
                         <xsl:when test="@n">
                           <xsl:variable name="tet" select="@n"/>
                           <xsl:apply-templates
-                            select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
+                            select="//v_ve//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
                             mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:otherwise>
                           <xsl:apply-templates
-                            select="//v_in//div[@id='edition'][1]/*[not(self::h2)]"
+                            select="//v_ve//div[@id='edition'][1]/*[not(self::h2)]"
                             mode="copyEpidoc"/>
                         </xsl:otherwise>
                       </xsl:choose>
                     </div>
                   </section>
-
-                  <!-- Diplomatic -->
-                  <section>
-                    <p class="title" data-section-title="data-section-title">
-                      <a href="#diplomatic{if (@n) then @n else '1'}">
-                        <xsl:value-of
-                          select="if ($lang='ru') then 'Дипломатическое' else 'Diplomatic'"/>
-                      </a>
-                    </p>
-                    <div id="diplomatic{if (@n) then @n else '1'}" class="content"
-                      data-section-content="data-section-content">
-                      <xsl:choose>
-                        <xsl:when test="@n">
-                          <xsl:variable name="tet" select="@n"/>
-                          <xsl:apply-templates
-                            select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
-                            mode="copyEpidoc"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:apply-templates
-                            select="//v_di//div[@id='edition'][1]/*[not(self::h2)]"
-                            mode="copyEpidoc"/>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </div>
-                  </section>
-
-                  <!-- Epidoc XML -->
-                  <section>
-                    <p class="title" data-section-title="data-section-title">
-                      <a href="#epidoc{if (@n) then @n else '1'}">
-                        <xsl:value-of
-                          select="if ($lang='ru') then 'EpiDoc (XML)' else 'EpiDoc (XML)'"/>
-                      </a>
-                    </p>
-                    <div id="epidoc{if (@n) then @n else '1'}" class="content"
-                      data-section-content="data-section-content">
-                      <pre><code class="language-xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
-                    </div>
-                  </section>
-
-                  <!-- Edition in Verse (If it exists)-->
-                  <xsl:if test="descendant::tei:lg">
-                    <section>
-                      <p class="title" data-section-title="data-section-title">
-                        <a href="#verse{if (@n) then @n else '1'}">
-                          <xsl:value-of
-                            select="if ($lang='ru') then 'В стихотворной форме' else 'Edition in Verse'"
-                          />
-                        </a>
-                      </p>
-                      <div id="verse{if (@n) then @n else '1'}" class="content"
-                        data-section-content="data-section-content">
-                        <xsl:choose>
-                          <xsl:when test="@n">
-                            <xsl:variable name="tet" select="@n"/>
-                            <xsl:apply-templates
-                              select="//v_ve//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
-                              mode="copyEpidoc"/>
-                          </xsl:when>
-                          <xsl:otherwise>
-                            <xsl:apply-templates
-                              select="//v_ve//div[@id='edition'][1]/*[not(self::h2)]"
-                              mode="copyEpidoc"/>
-                          </xsl:otherwise>
-                        </xsl:choose>
-                      </div>
-                    </section>
-                  </xsl:if>
-                </div>
+                </xsl:if>
               </div>
+            </div>
 
           </div>
         </div>
@@ -876,7 +886,7 @@
       </xsl:if>
     </div>
 
-<!--     <xsl:apply-templates/>
+    <!--     <xsl:apply-templates/>
  -->
   </xsl:template>
 
