@@ -14,101 +14,85 @@
     <!-- KFL - Inscriptions by Date gets title from tocs.xsl, all the rest get the title here -->
     <xsl:choose>
       <xsl:when test="$index='home'">
-        <xsl:value-of select="if ($lang='en') then 'Indices' else 'Указатели'"/>
+        <i18n:text >Indices</i18n:text>
       </xsl:when>
       <xsl:when test="$index='words' and //str[@name='lang']='lat'">
-        <xsl:value-of select="if ($lang='en') then 'Latin Words' else 'Латинские слова'"/>
+        <i18n:text>Latin Words</i18n:text>
       </xsl:when>
       <xsl:when test="$index='words' and //str[@name='lang']='grc'">
-        <xsl:value-of select="if ($lang='en') then 'Greek Words' else 'Греческие слова'"/>
+        <i18n:text>Greek Words</i18n:text>
       </xsl:when>
       <xsl:when test="$index='fragments' and //str[@name='lang']='lat'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Fragments of Text in Latin' else 'Фрагменты текстов на латинском языке'"
-        />
+        <i18n:text>Fragments of Text in Latin</i18n:text>
       </xsl:when>
       <xsl:when test="$index='fragments' and //str[@name='lang']='grc'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Fragments of Text in Greek' else 'Фрагменты текстов на греческом языке'"
-        />
+        <i18n:text>Fragments of Text in Greek</i18n:text>
       </xsl:when>
       <xsl:when test="$index='attested' and //str[@name='persName-type']='attested'">
-        <xsl:value-of select="if ($lang='en') then 'Personal Names' else 'Личные имена'"/>
+        <i18n:text>Personal Names</i18n:text>
       </xsl:when>
       <xsl:when test="$index='ruler' and //str[@name='persName-type']='ruler'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Rulers of Rome, Byzantium or Bosporan Kingdoms' else 'Правители Рима, Византии или Боспорского царства'"
-        />
+        <i18n:text>Rulers of Rome, Byzantium or Bosporan Kingdoms</i18n:text>
       </xsl:when>
       <xsl:when test="$index='divine' and //str[@name='persName-type']='divine'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Divine, religious or mythic figures' else 'Божественные, религиозные или мифические личности и персонажи'"
-        />
+        <i18n:text>Divine, religious or mythic figures</i18n:text>
       </xsl:when>
       <xsl:when test="$index='places'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Mentioned places' else 'Места, упомянутые в надписях'"/>
+        <i18n:text>Mentioned places</i18n:text>
       </xsl:when>
       <xsl:when test="$index='months'">
-        <xsl:value-of select="if ($lang='en') then 'Months' else 'Месяцы'"/>
+        <i18n:text>Months</i18n:text>
       </xsl:when>
       <xsl:when test="$index='symbols'">
-        <xsl:value-of select="if ($lang='en') then 'Symbols' else 'Символы'"/>
+        <i18n:text>Symbols</i18n:text>
       </xsl:when>
       <xsl:when test="$index='numerals'">
-        <xsl:value-of select="if ($lang='en') then 'Numerals' else 'Числа'"/>
+        <i18n:text>Numerals</i18n:text>
       </xsl:when>
       <xsl:when test="$index='ligatures'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Ligatured characters' else 'RU: Ligatured characters'"/>
+        <i18n:text>Ligatured characters</i18n:text>
       </xsl:when>
       <xsl:when test="$index='abbr'">
-        <xsl:value-of select="if ($lang='en') then 'Abbreviations' else 'Аббревиатуры'"/>
+        <i18n:text>Abbreviations</i18n:text>
       </xsl:when>
       <xsl:when test="$index='death'">
-        <xsl:value-of select="if ($lang='en') then 'Age at Death' else 'Возраст в момент смерти'"/>
+        <i18n:text>Age at Death</i18n:text>
       </xsl:when>
       <xsl:when test="$index=concat('findspot-',$lang)">
-        <xsl:value-of select="if ($lang='en') then 'Find Places' else 'Месту находки'"/>
+        <i18n:text>Find Places</i18n:text>
       </xsl:when>
       <xsl:when test="$index='persons'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Attested Persons' else 'Идентифицированные лица'"/>
+        <i18n:text>Attested Persons</i18n:text>
       </xsl:when>
       <xsl:when test="$index='attested'">
-        <xsl:value-of select="if ($lang='en') then 'Personal names' else 'Личные имена'"/>
+        <i18n:text>Personal names</i18n:text>
       </xsl:when>
       <xsl:when test="$index='monument-type'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Inscriptions by Monument Type' else 'Надписи по типу памятника'"
-        />
+        <i18n:text>Inscriptions by Monument Type</i18n:text>
       </xsl:when>
       <xsl:when test="$index='document-type'">
-        <xsl:value-of
-          select="if ($lang='en') then 'Inscriptions by Category of Text' else 'Надписи по типу документа'"
-        />
+        <i18n:text>Inscriptions by Category of Text</i18n:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:text> </xsl:text>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
   <!-- Home -->
   <xsl:template name="indexHome">
 
     <ul>
-      <i18n:text key="words_and_names"/>
+      <i18n:text>Words and Names</i18n:text>
       <li>
         <xsl:choose>
           <xsl:when test="//words-grc//result[@numFound &gt; 0]">
             <a href="words/grc/{//words-grc//str[@name='first-letter']}.html">
-              <i18n:text key="greek_words"/>
+              <i18n:text>Greek words</i18n:text>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text key="greek_words"/>
-            <em><i18n:text key="no_results_found"/></em>
+            <i18n:text>Greek words</i18n:text>
+            <em><i18n:text>(no results found)</i18n:text></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -116,11 +100,12 @@
         <xsl:choose>
           <xsl:when test="//attested//result[@numFound &gt; 0]">
             <a href="names/{//attested//str[@name='first-letter']}.html">
-              <i18n:text key="personal_names"/>
+              <i18n:text>Personal names</i18n:text>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text key="personal_names"/><em><i18n:text key="no_results_found"/></em>
+            <i18n:text>Personal names</i18n:text>
+            <em><i18n:text>(no results found)</i18n:text></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -128,11 +113,12 @@
         <xsl:choose>
           <xsl:when test="//fragments-grc//result[@numFound &gt; 0]">
             <a href="fragments/grc/{//fragments-grc//str[@name='first-letter']}.html">
-              <i18n:text key="fragments_of_text_in_greek"/>
+              <i18n:text>Fragments of text in Greek</i18n:text>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text key="fragments_of_text_in_greek"/> <em><i18n:text key="no_results_found"/></em>
+            <i18n:text>Fragments of text in Greek</i18n:text>
+            <em><i18n:text>(no results found)</i18n:text></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
