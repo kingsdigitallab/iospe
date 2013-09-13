@@ -96,33 +96,19 @@
 
   <!-- Home -->
   <xsl:template name="indexHome">
-    <xsl:variable name="words_and_names"><xsl:text>Words and Names</xsl:text></xsl:variable>
-    <xsl:variable name="greek_words"><xsl:text>Greek words</xsl:text></xsl:variable>
-    <xsl:variable name="no_results_found"><xsl:text>(no results found)</xsl:text></xsl:variable>
-    <xsl:variable name="personal_names"><xsl:text>Personal names</xsl:text></xsl:variable>
-    <xsl:variable name="fragments_of_text_in_greek"><xsl:text>Fragments of text in Greek</xsl:text></xsl:variable>
-    <i18n:text key="key">key</i18n:text>
-
-    <!-- <xsl:if test="$lang='ru'">
-      <xsl:variable name="words_and_names"><xsl:text>Слова и имена собственные</xsl:text></xsl:variable>
-      <xsl:variable name="greek_words"><xsl:text>Греческие слова</xsl:text></xsl:variable>
-      <xsl:variable name="no_results_found"><xsl:text>(no results found)</xsl:text></xsl:variable>
-      <xsl:variable name="personal_names"><xsl:text>Личные имена</xsl:text></xsl:variable>
-      <xsl:variable name="fragments_of_text_in_greek"><xsl:text>Фрагменты текстов на греческом языке</xsl:text></xsl:variable>
-    </xsl:if> -->
 
     <ul>
-      <xsl:value-of select="$words_and_names"/>
+      <i18n:text key="words_and_names"/>
       <li>
         <xsl:choose>
           <xsl:when test="//words-grc//result[@numFound &gt; 0]">
             <a href="words/grc/{//words-grc//str[@name='first-letter']}.html">
-              <xsl:value-of select="$greek_words"/>
+              <i18n:text key="greek_words"/>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$greek_words"/>
-            <em><xsl:value-of select="$no_results_found"/></em>
+            <i18n:text key="greek_words"/>
+            <em><i18n:text key="no_results_found"/></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -130,11 +116,11 @@
         <xsl:choose>
           <xsl:when test="//attested//result[@numFound &gt; 0]">
             <a href="names/{//attested//str[@name='first-letter']}.html">
-              <xsl:value-of select="$personal_names"/>
+              <i18n:text key="personal_names"/>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$personal_names"/><em><xsl:value-of select="$no_results_found"/></em>
+            <i18n:text key="personal_names"/><em><i18n:text key="no_results_found"/></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -142,11 +128,11 @@
         <xsl:choose>
           <xsl:when test="//fragments-grc//result[@numFound &gt; 0]">
             <a href="fragments/grc/{//fragments-grc//str[@name='first-letter']}.html">
-              <xsl:value-of select="$fragments_of_text_in_greek"/>
+              <i18n:text key="fragments_of_text_in_greek"/>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$fragments_of_text_in_greek"/> <em><xsl:value-of select="$no_results_found"/></em>
+            <i18n:text key="fragments_of_text_in_greek"/> <em><i18n:text key="no_results_found"/></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
