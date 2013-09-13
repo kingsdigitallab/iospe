@@ -74,15 +74,17 @@
         <i18n:text>Inscriptions by Category of Text</i18n:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text> </xsl:text>
+        <xsl:text></xsl:text>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
   <!-- Home -->
   <xsl:template name="indexHome">
 
-    <ul>
+    <h4>
       <i18n:text>Words and Names</i18n:text>
+    </h4>
+    <ul class="no-bullet">
       <li>
         <xsl:choose>
           <xsl:when test="//words-grc//result[@numFound &gt; 0]">
@@ -91,8 +93,7 @@
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text>Greek words</i18n:text>
-            <em><i18n:text>(no results found)</i18n:text></em>
+            <i18n:text>Greek words</i18n:text> <em><i18n:text>(no results found)</i18n:text></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -104,8 +105,7 @@
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text>Personal names</i18n:text>
-            <em><i18n:text>(no results found)</i18n:text></em>
+            <i18n:text>Personal names</i18n:text> <em><i18n:text>(no results found)</i18n:text></em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -118,9 +118,174 @@
           </xsl:when>
           <xsl:otherwise>
             <i18n:text>Fragments of text in Greek</i18n:text>
-            <em><i18n:text>(no results found)</i18n:text></em>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
           </xsl:otherwise>
         </xsl:choose>
+      </li>
+    </ul>
+
+    <h4>
+      <i18n:text>Prosopography and Geography</i18n:text>
+    </h4>
+    <ul class="no-bullet">
+      <li>
+        <a href="person/other.html">
+          <i18n:text>Attested Persons</i18n:text>
+        </a>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//ruler//result[@numFound &gt; 0]">
+            <a href="person/ruler.html">
+              <i18n:text>Rulers of Rome, Byzantium or Bosporan kingdoms</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Rulers of Rome, Byzantium or Bosporan kingdoms</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//divine//result[@numFound &gt; 0]">
+            <a href="person/divine.html">
+              <i18n:text>Divine, religious or mythic figures</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Divine, religious or mythic figures</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//places//result[@numFound &gt; 0]">
+            <a href="places.html">
+              <i18n:text>Mentioned places</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Mentioned places</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+    </ul>
+
+    <h4>
+      <i18n:text>Other Features</i18n:text>
+    </h4>
+    <ul class="no-bullet">
+      <li>
+        <xsl:choose>
+          <xsl:when test="//abbr//result[@numFound &gt; 0]">
+            <a href="abbr.html">
+              <i18n:text>Abbreviations</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Abbreviations</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//symbols//result[@numFound &gt; 0]">
+            <a href="symbols.html">
+              <i18n:text>Symbols</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Symbols</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//numerals//result[@numFound &gt; 0]">
+            <a href="numerals.html">
+              <i18n:text>Numerals</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Numerals</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//months//result[@numFound &gt; 0]">
+            <a href="months.html">
+              <i18n:text>Months</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Months</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+      <li>
+        <xsl:choose>
+          <xsl:when test="//death//result[@numFound &gt; 0]">
+            <a href="death.html">
+              <i18n:text>Age at death</i18n:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Age at death</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
+          </xsl:otherwise>
+        </xsl:choose>
+      </li>
+    </ul>
+
+    <h4>
+      <i18n:text>Inscriptions</i18n:text>
+    </h4>
+    <ul class="no-bullet">
+      <li>
+        <a href="date/dated.html">
+          <i18n:text>By date</i18n:text>
+        </a>
+      </li>
+      <li>
+        <a href="document-type.html">
+          <i18n:text>By category of text</i18n:text>
+        </a>
+      </li>
+      <li>
+        <a href="monument-type.html">
+          <i18n:text>By monument type</i18n:text>
+        </a>
+      </li>
+      <li>
+        <a href="findspot.html">
+          <i18n:text>By find place</i18n:text>
+        </a>
       </li>
     </ul>
   </xsl:template>
@@ -129,6 +294,5 @@
   <xsl:template name="generateIndex">
     <xsl:text>Proper Index</xsl:text>
   </xsl:template>
-
 
 </xsl:stylesheet>
