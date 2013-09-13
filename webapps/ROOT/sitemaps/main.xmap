@@ -168,10 +168,9 @@
         <map:serialize type="xhtml" />
       </map:match>
 
-
       <!-- TOCS -->
 
-       <!-- locations -->
+      <!-- locations -->
       <map:match pattern="corpora/*/locations-*.html">
         <map:aggregate element="aggregation">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=corpora/{1}/locations-{2}.html" />
@@ -202,7 +201,6 @@
         <map:serialize type="xhtml" />
       </map:match>
 
-
       <!-- bynum -->
       <map:match pattern="indices/bynum-*.html">
         <map:aggregate element="aggregation">
@@ -231,7 +229,6 @@
         </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
-
 
       <!-- TOC, SUBTYPE -->
       <!-- date -->
@@ -339,6 +336,9 @@
           <map:parameter name="index" value="home"/>
           <map:parameter name="lang" value="en"/>
         </map:transform>
+        <map:transform type="i18n">
+         <map:parameter name="locale" value="en"/>
+       </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -383,6 +383,9 @@
           <map:parameter name="index" value="home"/>
           <map:parameter name="lang" value="{1}"/>
         </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -419,7 +422,8 @@
           <map:parameter name="use-request-parameters" value="true"/>
         </map:transform>
         <map:serialize type="xhtml" />
-      <!--  <map:serialize type="xml" />-->
+        <!--  <map:serialize type="xml" />
+        -->
       </map:match>
 
       <!-- Divine, Ruler -->
@@ -449,7 +453,7 @@
           <map:parameter name="url" value="indices/person/{1}.html" />
           <map:parameter name="index" value="{1}"/>
           <map:parameter name="lang" value="en"/>
-          </map:transform>
+        </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
 
@@ -659,7 +663,7 @@
         <map:serialize type="xhtml" />
       </map:match>
 
-       <map:match pattern="index-*.html">
+      <map:match pattern="index-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=index-{1}.html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
@@ -685,7 +689,8 @@
           <map:part element="next_inscr"
             src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=inscription+asc&amp;start=0&amp;rows=1" />
           <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
-          <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/> <!-- verse -->
+          <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
+          <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
           <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"/>
@@ -708,7 +713,8 @@
           <map:part element="next_inscr"
             src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=inscription+asc&amp;start=0&amp;rows=1" />
           <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
-          <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/> <!-- verse -->
+          <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
+          <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
           <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"/>
@@ -725,10 +731,9 @@
         <map:serialize type="xml" />
       </map:match>
 
-
       <!-- Inscriptions -->
 
-       <map:match pattern="inscriptions/*-*.html">
+      <map:match pattern="inscriptions/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=inscriptions/{1}-{2}.html" />
           <map:part src="cocoon://internal/metadata/files.xml" />
@@ -753,7 +758,6 @@
         </map:transform>
         <map:serialize type="xhtml" />
       </map:match>
-
 
       <!-- documentation -->
       <map:match pattern="doc/*.html">
@@ -874,14 +878,16 @@
       <map:match pattern="getLetters-lat/*">
         <map:generate src="cocoon://_internal/solr/query/q={1}%20AND%20lang:lat&amp;sort=first-letter%20asc&amp;rows=9999" />
         <map:transform src="../stylesheets/getLetters.xsl">
-          <!--<map:parameter name="lang" value="grc"/>-->
+          <!--<map:parameter name="lang" value="grc"/>
+          -->
         </map:transform>
         <map:serialize/>
       </map:match>
       <map:match pattern="getLetters-grc/*">
         <map:generate src="cocoon://_internal/solr/query/q={1}%20AND%20lang:grc&amp;sort=first-letter-grc%20asc&amp;rows=9999" />
         <map:transform src="../stylesheets/getLetters.xsl">
-          <!--<map:parameter name="lang" value="grc"/>-->
+          <!--<map:parameter name="lang" value="grc"/>
+          -->
         </map:transform>
         <map:serialize/>
       </map:match>
@@ -922,7 +928,6 @@
         <map:serialize type="xml_nodecl" />
       </map:match>
     </map:pipeline>
-
 
     <!-- Error handling, making use of the templating system for
          errors that fit within the site's design. If this throws any

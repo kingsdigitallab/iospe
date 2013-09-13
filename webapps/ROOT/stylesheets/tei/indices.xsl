@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
@@ -100,14 +101,15 @@
     <xsl:variable name="no_results_found"><xsl:text>(no results found)</xsl:text></xsl:variable>
     <xsl:variable name="personal_names"><xsl:text>Personal names</xsl:text></xsl:variable>
     <xsl:variable name="fragments_of_text_in_greek"><xsl:text>Fragments of text in Greek</xsl:text></xsl:variable>
+    <i18n:text key="key">key</i18n:text>
 
-    <xsl:if test="$lang='ru'">
+    <!-- <xsl:if test="$lang='ru'">
       <xsl:variable name="words_and_names"><xsl:text>Слова и имена собственные</xsl:text></xsl:variable>
       <xsl:variable name="greek_words"><xsl:text>Греческие слова</xsl:text></xsl:variable>
       <xsl:variable name="no_results_found"><xsl:text>(no results found)</xsl:text></xsl:variable>
       <xsl:variable name="personal_names"><xsl:text>Личные имена</xsl:text></xsl:variable>
       <xsl:variable name="fragments_of_text_in_greek"><xsl:text>Фрагменты текстов на греческом языке</xsl:text></xsl:variable>
-    </xsl:if>
+    </xsl:if> -->
 
     <ul>
       <xsl:value-of select="$words_and_names"/>
@@ -126,30 +128,29 @@
       </li>
       <li>
         <xsl:choose>
-            <xsl:when test="//attested//result[@numFound &gt; 0]">
-                <a href="names/{//attested//str[@name='first-letter']}.html">
-                    <xsl:value-of select="$personal_names"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="$personal_names"/><em><xsl:value-of select="$no_results_found"/></em>
-            </xsl:otherwise>
+          <xsl:when test="//attested//result[@numFound &gt; 0]">
+            <a href="names/{//attested//str[@name='first-letter']}.html">
+              <xsl:value-of select="$personal_names"/>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$personal_names"/><em><xsl:value-of select="$no_results_found"/></em>
+          </xsl:otherwise>
         </xsl:choose>
-    </li>
-    <li>
+      </li>
+      <li>
         <xsl:choose>
-            <xsl:when test="//fragments-grc//result[@numFound &gt; 0]">
-                <a href="fragments/grc/{//fragments-grc//str[@name='first-letter']}.html">
-                    <xsl:value-of select="$fragments_of_text_in_greek"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="$fragments_of_text_in_greek"/> <em><xsl:value-of select="$no_results_found"/></em>
-            </xsl:otherwise>
+          <xsl:when test="//fragments-grc//result[@numFound &gt; 0]">
+            <a href="fragments/grc/{//fragments-grc//str[@name='first-letter']}.html">
+              <xsl:value-of select="$fragments_of_text_in_greek"/>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$fragments_of_text_in_greek"/> <em><xsl:value-of select="$no_results_found"/></em>
+          </xsl:otherwise>
         </xsl:choose>
-    </li>
+      </li>
     </ul>
-
   </xsl:template>
 
   <!-- Generate Index -->
