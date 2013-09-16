@@ -4,10 +4,10 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Imports inscription stylesheet . -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/indices.xsl"/>
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/indices-home.xsl"/>
 
   <kiln:parent>
-    <xi:include href="base.xml"/>
+    <xi:include href="indices.xml"/>
   </kiln:parent>
 
 
@@ -25,7 +25,7 @@
     </kiln:block>
 
     <kiln:block name="content">
-      <xsl:call-template name="generateIndex"/>
+          <xsl:call-template name="indexHome"/>
     </kiln:block>
 
   </kiln:child>
