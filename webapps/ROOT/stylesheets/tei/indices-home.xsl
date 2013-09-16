@@ -9,7 +9,7 @@
   <xsl:template match="/"/>
 
   <!-- set title -->
-  <xsl:template name="indexTitle">
+  <xsl:template name="indexTitleHome">
     <i18n:text>Indices</i18n:text>
   </xsl:template>
   <!-- Home -->
@@ -52,7 +52,8 @@
       <li>
         <xsl:choose>
           <xsl:when test="//fragments-grc//result[@numFound &gt; 0]">
-            <a href="fragments/grc/{//fragments-grc//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
+            <a
+              href="fragments/grc/{//fragments-grc//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
               <i18n:text>Fragments of text in Greek</i18n:text>
             </a>
           </xsl:when>

@@ -375,7 +375,7 @@
           <map:part element="index"
             src="cocoon://_internal/solr/query/q=persName-ref:*&amp;rows=999"/>
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/indices.xsl">
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
           <map:parameter name="url" value="indices/person/other-{1}.html"/>
           <map:parameter name="index" value="persons"/>
           <map:parameter name="lang" value="{1}"/>
@@ -394,7 +394,7 @@
           <map:part element="index"
             src="cocoon://_internal/solr/query/q=persName-ref:*&amp;rows=999"/>
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/indices.xsl">
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
           <map:parameter name="url" value="indices/person/other.html"/>
           <map:parameter name="index" value="persons"/>
           <map:parameter name="lang" value="en"/>
@@ -417,7 +417,7 @@
             src="cocoon://_internal/solr/query/q=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/indices.xsl">
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
           <map:parameter name="url" value="indices/person/{1}-{2}.html"/>
           <map:parameter name="index" value="{1}"/>
           <map:parameter name="lang" value="{2}"/>
@@ -436,7 +436,7 @@
             src="cocoon://_internal/solr/query/q=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/indices.xsl">
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
           <map:parameter name="url" value="indices/person/{1}.html"/>
           <map:parameter name="index" value="{1}"/>
           <map:parameter name="lang" value="en"/>

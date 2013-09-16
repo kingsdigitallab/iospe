@@ -4,7 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Imports inscription stylesheet . -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/indices-home.xsl"/>
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/indices-person.xsl"/>
 
   <kiln:parent>
     <xi:include href="indices.xml"/>
@@ -15,17 +15,17 @@
 
     <kiln:block name="title">
       <kiln:super/>
-      <xsl:call-template name="indexTitleHome"/>
+      <xsl:call-template name="indexTitlePerson"/>
     </kiln:block>
 
 
     <kiln:block name="page-heading">
       <kiln:super/>
-      <xsl:call-template name="indexTitleHome"/>
+      <xsl:call-template name="indexTitlePerson"/>
     </kiln:block>
 
     <kiln:block name="content">
-          <xsl:call-template name="indexHome"/>
+      <xsl:call-template name="generateIndexPerson"/>
     </kiln:block>
 
   </kiln:child>

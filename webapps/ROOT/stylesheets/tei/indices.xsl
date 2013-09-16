@@ -30,12 +30,6 @@
       <xsl:when test="$index='attested' and //str[@name='persName-type']='attested'">
         <i18n:text>Personal Names</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='ruler' and //str[@name='persName-type']='ruler'">
-        <i18n:text>Rulers of Rome, Byzantium or Bosporan Kingdoms</i18n:text>
-      </xsl:when>
-      <xsl:when test="$index='divine' and //str[@name='persName-type']='divine'">
-        <i18n:text>Divine, religious or mythic figures</i18n:text>
-      </xsl:when>
       <xsl:when test="$index='places'">
         <i18n:text>Mentioned places</i18n:text>
       </xsl:when>
@@ -59,9 +53,6 @@
       </xsl:when>
       <xsl:when test="$index=concat('findspot-',$lang)">
         <i18n:text>Find Places</i18n:text>
-      </xsl:when>
-      <xsl:when test="$index='persons'">
-        <i18n:text>Attested Persons</i18n:text>
       </xsl:when>
       <xsl:when test="$index='attested'">
         <i18n:text>Personal names</i18n:text>
@@ -285,101 +276,9 @@
     </div>
   </xsl:template>
 
-
-  <xsl:template name="person">
-    <dt id="{@xml:id}">
-      <xsl:value-of select="tei:persName[@xml:lang=$lang]"/>
-    </dt>
-    <dd>
-      <ul class="multiline">
-        <li>
-          <xsl:for-each select="tei:persName[@xml:lang!='en'][@xml:lang!='ru']">
-            <xsl:value-of select="."/>
-            <xsl:text> </xsl:text>
-          </xsl:for-each>
-        </li>
-        <li>
-          <xsl:if test="tei:floruit[tei:seg[@xml:lang=$lang]]">
-            <i18n:text>Attested</i18n:text><xsl:text>: </xsl:text>
-            <xsl:value-of select="tei:floruit/tei:seg[@xml:lang=$lang]"/>
-            <xsl:text> </xsl:text>
-          </xsl:if>
-        </li>
-        <li>
-          <xsl:if test="tei:occupation">
-            <xsl:value-of select="tei:occupation"/>
-            <xsl:text> </xsl:text>
-          </xsl:if>
-        </li>
-        <li>
-          <xsl:for-each
-            select="//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]">
-            <xsl:choose>
-              <xsl:when test="@name = 'father'">
-                <i18n:text>father</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'son'">
-                <i18n:text>son</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'mother'">
-                <i18n:text>mother</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'daughter'">
-                <i18n:text>daughter</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'brother'">
-                <i18n:text>brother</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'sister'">
-                <i18n:text>sister</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'related'">
-                <i18n:text>related</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'fiancé'">
-                <i18n:text>fiancé</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'fiancée'">
-                <i18n:text>fiancée</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'husband'">
-                <i18n:text>husband</i18n:text>
-              </xsl:when>
-              <xsl:when test="@name = 'wife'">
-                <i18n:text>wife</i18n:text>
-              </xsl:when>
-            </xsl:choose>
-
-            <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
-              as="xs:sequence"/>
-
-            <xsl:for-each select="//persons/descendant::tei:person[@xml:id=$passives]">
-              <a href="#{@xml:id}">
-                <xsl:value-of select="tei:persName[@xml:lang=$lang]"/>
-              </a>
-              <xsl:if test="following::tei:person[@xml:id=$passives]">
-                <xsl:text>, </xsl:text>
-              </xsl:if>
-            </xsl:for-each>
-
-            <xsl:if test="following::tei:relation[@active=current()/@active]">
-              <xsl:text>; </xsl:text>
-            </xsl:if>
-
-          </xsl:for-each>
-        </li>
-        <li>
-          <xsl:for-each
-            select="//result/doc[substring-after(str[@name='persName-ref'], '#') = current()/@xml:id]">
-            <xsl:call-template name="link2inscription"/>
-          </xsl:for-each>
-        </li>
-      </ul>
-    </dd>
-  </xsl:template>
-
   <xsl:template name="sort-option">
-    <i18n:text>Sort by</i18n:text><xsl:text>: </xsl:text>
+    <i18n:text>Sort by</i18n:text>
+    <xsl:text>: </xsl:text>
 
     <a href="?sort=date">
       <xsl:attribute name="class">
