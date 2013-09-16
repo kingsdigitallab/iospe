@@ -154,37 +154,37 @@
             select="//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]">
             <xsl:choose>
               <xsl:when test="@name = 'father'">
-                <i18n:text>father</i18n:text>
+                <i18n:text>father of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'son'">
-                <i18n:text>son</i18n:text>
+                <i18n:text>son of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'mother'">
-                <i18n:text>mother</i18n:text>
+                <i18n:text>mother of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'daughter'">
-                <i18n:text>daughter</i18n:text>
+                <i18n:text>daughter of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'brother'">
-                <i18n:text>brother</i18n:text>
+                <i18n:text>brother of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'sister'">
-                <i18n:text>sister</i18n:text>
+                <i18n:text>sister of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'related'">
-                <i18n:text>related</i18n:text>
+                <i18n:text>related of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'fiancé'">
-                <i18n:text>fiancé</i18n:text>
+                <i18n:text>fiancé of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'fiancée'">
-                <i18n:text>fiancée</i18n:text>
+                <i18n:text>fiancée of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'husband'">
-                <i18n:text>husband</i18n:text>
+                <i18n:text>husband of</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'wife'">
-                <i18n:text>wife</i18n:text>
+                <i18n:text>wife of</i18n:text>
               </xsl:when>
             </xsl:choose>
 
