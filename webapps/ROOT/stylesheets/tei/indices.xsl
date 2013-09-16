@@ -211,68 +211,68 @@
 
     <div class="large-2 columns">
       <h6>
-      <xsl:choose>
-        <xsl:when test="str[@name='num-value']">
-          <xsl:value-of select="$display_key"/>
-          <xsl:text> (</xsl:text>
-          <xsl:value-of select="str[@name='num-value']"/>
-          <xsl:text>)</xsl:text>
-        </xsl:when>
-        <xsl:when test="str[@name='num-atleast'] and str[@name='num-atmost']">
-          <xsl:value-of select="$display_key"/>
-          <xsl:text> (</xsl:text>
-          <xsl:value-of select="str[@name='num-atleast']"/>
-          <xsl:text>-</xsl:text>
-          <xsl:value-of select="str[@name='num-atmost']"/>
-          <xsl:text>)</xsl:text>
-        </xsl:when>
-        <xsl:when test="str[@name='num-atleast']">
-          <xsl:value-of select="$display_key"/>
-          <xsl:text> (</xsl:text>
-          <xsl:value-of select="str[@name='num-atleast']"/>
-          <xsl:text>)</xsl:text>
-        </xsl:when>
-        <xsl:when test="str[@name='num-atmost']">
-          <xsl:value-of select="$display_key"/>
-          <xsl:text> (</xsl:text>
-          <xsl:value-of select="str[@name='num-atmost']"/>
-          <xsl:text>)</xsl:text>
-        </xsl:when>
-        <xsl:when test="$index='death'">
-          <xsl:variable name="y" select="iospe:sort-dur(current-grouping-key(), 'Y')"/>
-          <xsl:variable name="m" select="iospe:sort-dur(current-grouping-key(), 'M')"/>
-          <xsl:variable name="d" select="iospe:sort-dur(current-grouping-key(), 'D')"/>
-          <xsl:if test="$y!=''">
-            <xsl:value-of select="$y"/>
-            <xsl:text> year</xsl:text>
-            <xsl:if test="$y &gt; 1">s</xsl:if>
-            <xsl:text> </xsl:text>
-          </xsl:if>
-          <xsl:if test="$m!=''">
-            <xsl:value-of select="$m"/>
-            <xsl:text> month</xsl:text>
-            <xsl:if test="$m &gt; 1">s</xsl:if>
-            <xsl:text> </xsl:text>
-          </xsl:if>
-          <xsl:if test="$d!=''">
-            <xsl:value-of select="$m"/>
-            <xsl:text> day</xsl:text>
-            <xsl:if test="$m &gt; 1">s</xsl:if>
-            <xsl:text> </xsl:text>
-          </xsl:if>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:choose>
-            <xsl:when test="normalize-space(current-grouping-key())">
-              <xsl:value-of select="$display_key"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>Empty</xsl:text>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:otherwise>
-      </xsl:choose>
-    </h6>
+        <xsl:choose>
+          <xsl:when test="str[@name='num-value']">
+            <xsl:value-of select="$display_key"/>
+            <xsl:text> (</xsl:text>
+            <xsl:value-of select="str[@name='num-value']"/>
+            <xsl:text>)</xsl:text>
+          </xsl:when>
+          <xsl:when test="str[@name='num-atleast'] and str[@name='num-atmost']">
+            <xsl:value-of select="$display_key"/>
+            <xsl:text> (</xsl:text>
+            <xsl:value-of select="str[@name='num-atleast']"/>
+            <xsl:text>-</xsl:text>
+            <xsl:value-of select="str[@name='num-atmost']"/>
+            <xsl:text>)</xsl:text>
+          </xsl:when>
+          <xsl:when test="str[@name='num-atleast']">
+            <xsl:value-of select="$display_key"/>
+            <xsl:text> (</xsl:text>
+            <xsl:value-of select="str[@name='num-atleast']"/>
+            <xsl:text>)</xsl:text>
+          </xsl:when>
+          <xsl:when test="str[@name='num-atmost']">
+            <xsl:value-of select="$display_key"/>
+            <xsl:text> (</xsl:text>
+            <xsl:value-of select="str[@name='num-atmost']"/>
+            <xsl:text>)</xsl:text>
+          </xsl:when>
+          <xsl:when test="$index='death'">
+            <xsl:variable name="y" select="iospe:sort-dur(current-grouping-key(), 'Y')"/>
+            <xsl:variable name="m" select="iospe:sort-dur(current-grouping-key(), 'M')"/>
+            <xsl:variable name="d" select="iospe:sort-dur(current-grouping-key(), 'D')"/>
+            <xsl:if test="$y!=''">
+              <xsl:value-of select="$y"/>
+              <xsl:text> year</xsl:text>
+              <xsl:if test="$y &gt; 1">s</xsl:if>
+              <xsl:text> </xsl:text>
+            </xsl:if>
+            <xsl:if test="$m!=''">
+              <xsl:value-of select="$m"/>
+              <xsl:text> month</xsl:text>
+              <xsl:if test="$m &gt; 1">s</xsl:if>
+              <xsl:text> </xsl:text>
+            </xsl:if>
+            <xsl:if test="$d!=''">
+              <xsl:value-of select="$m"/>
+              <xsl:text> day</xsl:text>
+              <xsl:if test="$m &gt; 1">s</xsl:if>
+              <xsl:text> </xsl:text>
+            </xsl:if>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:choose>
+              <xsl:when test="normalize-space(current-grouping-key())">
+                <xsl:value-of select="$display_key"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text>Empty</xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </h6>
     </div>
     <div class="large-10 columns">
       <ul class="inline-list">
@@ -300,7 +300,7 @@
         </li>
         <li>
           <xsl:if test="tei:floruit[tei:seg[@xml:lang=$lang]]">
-            <xsl:value-of select="if ($lang='en') then 'Attested: ' else 'Идентифицированный: '"/>
+            <i18n:text>Attested</i18n:text><xsl:text>: </xsl:text>
             <xsl:value-of select="tei:floruit/tei:seg[@xml:lang=$lang]"/>
             <xsl:text> </xsl:text>
           </xsl:if>
@@ -316,38 +316,37 @@
             select="//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]">
             <xsl:choose>
               <xsl:when test="@name = 'father'">
-                <xsl:value-of select="if ($lang='en') then 'father of ' else 'отец имярек '"/>
+                <i18n:text>father</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'son'">
-                <xsl:value-of select="if ($lang='en') then 'son of ' else 'сын имярек '"/>
+                <i18n:text>son</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'mother'">
-                <xsl:value-of select="if ($lang='en') then 'mother of ' else 'мать имярек '"/>
+                <i18n:text>mother</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'daughter'">
-                <xsl:value-of select="if ($lang='en') then 'daughter of ' else 'дочь имярек '"/>
+                <i18n:text>daughter</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'brother'">
-                <xsl:value-of select="if ($lang='en') then 'brother of ' else 'брат имярек '"/>
+                <i18n:text>brother</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'sister'">
-                <xsl:value-of select="if ($lang='en') then 'sister of ' else 'сестра имярек '"/>
+                <i18n:text>sister</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'related'">
-                <xsl:value-of select="if ($lang='en') then 'related to ' else 'родственник имярек '"
-                />
+                <i18n:text>related</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'fiancé'">
-                <xsl:value-of select="if ($lang='en') then 'fiancé of ' else 'жених той-то '"/>
+                <i18n:text>fiancé</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'fiancée'">
-                <xsl:value-of select="if ($lang='en') then 'fiancée of ' else 'невеста имярек '"/>
+                <i18n:text>fiancée</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'husband'">
-                <xsl:value-of select="if ($lang='en') then 'husband of ' else 'муж той-то '"/>
+                <i18n:text>husband</i18n:text>
               </xsl:when>
               <xsl:when test="@name = 'wife'">
-                <xsl:value-of select="if ($lang='en') then 'wife of ' else 'жена имярек '"/>
+                <i18n:text>wife</i18n:text>
               </xsl:when>
             </xsl:choose>
 
@@ -380,7 +379,8 @@
   </xsl:template>
 
   <xsl:template name="sort-option">
-    <xsl:value-of select="if ($lang='en') then 'Sort by: ' else 'Сортировать: '"/>
+    <i18n:text>Sort by</i18n:text><xsl:text>: </xsl:text>
+
     <a href="?sort=date">
       <xsl:attribute name="class">
         <xsl:text>sort-option</xsl:text>
@@ -388,8 +388,8 @@
           <xsl:text> sort-selected</xsl:text>
         </xsl:if>
       </xsl:attribute>
+      <i18n:text>Date</i18n:text>
 
-      <xsl:value-of select="if ($lang='en') then 'Date' else 'дате'"/>
     </a>
     <xsl:text> </xsl:text>
     <a href="?sort=name">
@@ -400,7 +400,8 @@
         </xsl:if>
       </xsl:attribute>
 
-      <xsl:value-of select="if ($lang='en') then 'Name' else 'инеми'"/>
+      <i18n:text>Name</i18n:text>
+
     </a>
   </xsl:template>
 
