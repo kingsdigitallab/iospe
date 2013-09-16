@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
@@ -14,7 +13,7 @@
     <!-- KFL - Inscriptions by Date gets title from tocs.xsl, all the rest get the title here -->
     <xsl:choose>
       <xsl:when test="$index='home'">
-        <i18n:text >Indices</i18n:text>
+        <i18n:text>Indices</i18n:text>
       </xsl:when>
       <xsl:when test="$index='words' and //str[@name='lang']='lat'">
         <i18n:text>Latin Words</i18n:text>
@@ -74,7 +73,7 @@
         <i18n:text>Inscriptions by Category of Text</i18n:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text></xsl:text>
+        <xsl:text/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -93,7 +92,10 @@
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text>Greek words</i18n:text> <em><i18n:text>(no results found)</i18n:text></em>
+            <i18n:text>Greek words</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
@@ -105,7 +107,10 @@
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text>Personal names</i18n:text> <em><i18n:text>(no results found)</i18n:text></em>
+            <i18n:text>Personal names</i18n:text>
+            <em>
+              <i18n:text>(no results found)</i18n:text>
+            </em>
           </xsl:otherwise>
         </xsl:choose>
       </li>
