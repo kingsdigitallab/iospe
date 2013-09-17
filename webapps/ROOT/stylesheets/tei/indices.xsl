@@ -8,6 +8,7 @@
   <xsl:param name="ancient-lang" select="'n/a'"/>
 
   <xsl:import href="../common/conversions.xsl"/>
+  <xsl:import href="inscription.xsl" />
 
   <xsl:template match="/"/>
 
@@ -151,7 +152,7 @@
 
 
   <xsl:template name="link2inscription">
-    <a href="/{str[@name='file']}{$kiln:url-lang-suffix}.html">
+    <a class="link2inscription" href="/{str[@name='file']}{$kiln:url-lang-suffix}.html">
       <xsl:if test="str[@name='sup']">
         <xsl:text>[</xsl:text>
       </xsl:if>
