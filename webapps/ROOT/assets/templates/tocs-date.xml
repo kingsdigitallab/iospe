@@ -4,10 +4,10 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Imports inscription stylesheet . -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/tocs.xsl"/>
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/tocs-date.xsl"/>
 
   <kiln:parent>
-    <xi:include href="base.xml"/>
+    <xi:include href="tocs.xml"/>
   </kiln:parent>
 
 
@@ -15,17 +15,18 @@
 
     <kiln:block name="title">
       <kiln:super/>
-      <xsl:call-template name="tocTitle"/>
+      <xsl:call-template name="tocTitleDate"/>
     </kiln:block>
 
 
     <kiln:block name="page-heading">
       <kiln:super/>
-      <xsl:call-template name="tocTitle"/>
+      <xsl:call-template name="tocTitleDate"/>
     </kiln:block>
 
     <kiln:block name="content">
-      <xsl:call-template name="tocNav"/>
+      <kiln:super/>
+      <xsl:call-template name="generateTocDate"/>
     </kiln:block>
 
   </kiln:child>

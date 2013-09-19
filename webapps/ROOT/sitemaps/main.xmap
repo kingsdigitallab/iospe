@@ -177,10 +177,13 @@
           <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
           <map:part element="toc" src="cocoon://_internal/solr/query/q=origin-ref:*&amp;rows=999"/>
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tocs.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-locations.xsl">
           <map:parameter name="url" value="corpora/{1}/locations-{2}.html"/>
           <map:parameter name="lang" value="{2}"/>
           <map:parameter name="toc" value="locations"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -191,10 +194,13 @@
           <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
           <map:part element="toc" src="cocoon://_internal/solr/query/q=origin-ref:*&amp;rows=999"/>
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tocs.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-locations.xsl">
           <map:parameter name="url" value="corpora/{1}/locations.html"/>
           <map:parameter name="lang" value="en"/>
           <map:parameter name="toc" value="locations"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -207,10 +213,13 @@
             src="cocoon://_internal/solr/query/q=inscription:*&amp;sort=inscription%20asc&amp;rows=999"
           />
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tocs.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
           <map:parameter name="url" value="indices/bynum-{1}.html"/>
           <map:parameter name="lang" value="{1}"/>
           <map:parameter name="toc" value="bynum"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -222,10 +231,13 @@
             src="cocoon://_internal/solr/query/q=inscription:*&amp;sort=inscription%20asc&amp;rows=999"
           />
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tocs.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
           <map:parameter name="url" value="indices/bynum.html"/>
           <map:parameter name="lang" value="en"/>
           <map:parameter name="toc" value="bynum"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -241,10 +253,13 @@
             src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tocs.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
           <map:parameter name="url" value="indices/date/{1}-{2}.html"/>
           <map:parameter name="lang" value="{2}"/>
           <map:parameter name="toc" value="date"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -258,10 +273,13 @@
             src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tocs.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
           <map:parameter name="url" value="indices/date/{1}.html"/>
           <map:parameter name="lang" value="en"/>
           <map:parameter name="toc" value="date"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -279,6 +297,9 @@
           <map:parameter name="lang" value="{2}"/>
           <map:parameter name="toc" value="{1}"/>
         </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -292,6 +313,9 @@
           <map:parameter name="url" value="indices/{1}.html"/>
           <map:parameter name="lang" value="en"/>
           <map:parameter name="toc" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
