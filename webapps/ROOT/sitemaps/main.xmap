@@ -985,7 +985,7 @@
     </map:pipeline>
 
     <!-- Preprocessing -->
-    <map:pipeline internal-only="true">
+    <map:pipeline internal-only="false">
       <!-- general check to test wether index is available (can be removed when all indices are available) -->
       <map:match pattern="isAvailable/*">
         <map:generate src="cocoon://_internal/solr/query/q={1}&amp;rows=1"/>
