@@ -16,7 +16,9 @@
         <i18n:text>Dated by year</i18n:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="//list[@xml:lang=$lang]/century[@url=substring-after(//str[@name='q'], 'date-type:')]"/>
+        <xsl:value-of
+          select="//list[@xml:lang=$lang]/century[@url=substring-after(//str[@name='q'], 'date-type:')]"
+        />
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -24,9 +26,10 @@
   <xsl:template name="generateTocDate">
     <!-- exclude duplicates (caused by multiple inscriptions within the same file with the same date) -->
     <dl class="tocs">
-      <xsl:for-each-group select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
+      <xsl:for-each-group
+        select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
                                   and not(str[@name='file'] = preceding-sibling::doc/str[@name='file']) ]"
-                                  group-by="int[@name='date-notBefore']">
+        group-by="int[@name='date-notBefore']">
         <xsl:for-each-group select="current-group()" group-by="int[@name='date-notAfter']">
 
           <dt>
@@ -34,8 +37,7 @@
               <xsl:when test="str[@name=concat($toc,'-',$lang)]!=''">
                 <xsl:value-of select="str[@name=concat($toc,'-',$lang)]"/>
               </xsl:when>
-              <xsl:otherwise>
-                [<i18n:text>date specified, but not spelled out</i18n:text>]
+              <xsl:otherwise> [<i18n:text>date specified, but not spelled out</i18n:text>]
               </xsl:otherwise>
             </xsl:choose>
           </dt>
@@ -45,11 +47,11 @@
                 <xsl:value-of select="substring-after(str[@name='tei-id'], 'byz')"/>
                 <xsl:text> </xsl:text>
                 <xsl:choose>
-                  <xsl:when test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
-                    [<i18n:text>no title</i18n:text>]
-                  </xsl:when>
+                  <xsl:when
+                    test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''"
+                    > [<i18n:text>no title</i18n:text>] </xsl:when>
                   <xsl:otherwise>
-                    <xsl:text></xsl:text>
+                    <xsl:text/>
                     <xsl:value-of select="str[@name=concat('inscription-title-', $lang)]"/>
                   </xsl:otherwise>
                 </xsl:choose>

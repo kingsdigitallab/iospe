@@ -22,7 +22,7 @@
         <i18n:text>Inscriptions by Monument Type</i18n:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text></xsl:text>
+        <xsl:text/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -43,8 +43,10 @@
             <li>
               <i18n:text>By century: BCE</i18n:text>
             </li>
-            <xsl:for-each select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
-              <xsl:sort select="//century[@url=current()]/@num" data-type="number" order="descending"/>
+            <xsl:for-each
+              select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
+              <xsl:sort select="//century[@url=current()]/@num" data-type="number"
+                order="descending"/>
               <li>
                 <a href="{.}.html">
                   <xsl:value-of select="substring-before(., '-')"/>
@@ -57,7 +59,8 @@
           <li>
             <i18n:text>By century: CE</i18n:text>
           </li>
-          <xsl:for-each select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'CE']">
+          <xsl:for-each
+            select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'CE']">
             <xsl:sort select="//century[@url=current()]/@num" data-type="number"/>
             <li>
               <a href="{.}.html">

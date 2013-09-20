@@ -22,7 +22,8 @@
         <dd>
           <a href="/{str[@name='inscription']}.html">
             <xsl:choose>
-              <xsl:when test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
+              <xsl:when
+                test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
                 <xsl:value-of select="if ($lang='en') then '[no title]' else 'RU: [no title]'"/>
               </xsl:when>
               <xsl:otherwise>

@@ -30,12 +30,15 @@
             <xsl:text> </xsl:text>
             <a href="/{ancestor::doc/str[@name='file']}.html">
               <xsl:choose>
-                <xsl:when test="translate(normalize-space(ancestor::doc/str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
-                  [<i18n:text>no title</i18n:text>]
-                  <xsl:value-of select="if ($lang='en') then '[no title]' else 'RU: [no title]'"/>
+                <xsl:when
+                  test="translate(normalize-space(ancestor::doc/str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
+                  <xsl:text>[</xsl:text>
+                  <i18n:text>no title</i18n:text>
+                  <xsl:text>]</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:value-of select="ancestor::doc/str[@name=concat('inscription-title-', $lang)]"/>
+                  <xsl:value-of
+                    select="ancestor::doc/str[@name=concat('inscription-title-', $lang)]"/>
                 </xsl:otherwise>
               </xsl:choose>
             </a>
