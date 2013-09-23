@@ -4,25 +4,28 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Imports stylesheet to convert TEI into HTML. -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/concordances.xsl"/>
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/concordances-publications.xsl"/>
 
   <kiln:parent>
-    <xi:include href="base.xml"/>
+    <xi:include href="concordances.xml"/>
   </kiln:parent>
 
   <kiln:child>
 
     <kiln:block name="title">
-      <xsl:call-template name="concordanceTitle"/>
+      <kiln:super/>
+      <!-- <xsl:call-template name="concordancePublicationTitle"/> -->
     </kiln:block>
 
 
     <kiln:block name="page-heading">
-      <xsl:call-template name="concordanceTitle"/>
+      <kiln:super/>
+      <!-- <xsl:call-template name="concordancePublicationTitle"/> -->
     </kiln:block>
 
     <kiln:block name="content">
-      <xsl:call-template name="generateConcordance"/>
+      <kiln:super />
+      <!-- <xsl:call-template name="generatePublicationConcordance"/> -->
     </kiln:block>
 
   </kiln:child>

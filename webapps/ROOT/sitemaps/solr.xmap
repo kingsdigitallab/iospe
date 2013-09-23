@@ -93,7 +93,19 @@
 
       <!-- Adding TEI only. The first parameter is the file type. -->
       <map:match id="local-solr-add" pattern="add/*/**.xml">
-        <map:generate src="cocoon:/preprocess/{1}/{2}.xml" />
+        <map:aggregate element="aggregation">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part element="criteria" src="../content/xml/tei/alists/criteria.xml"/>
+          <map:part element="execution" src="../content/xml/tei/alists/execution.xml"/>
+          <map:part element="location" src="../content/xml/tei/alists/origPlace.xml"/>
+          <map:part element="material" src="../content/xml/tei/alists/material-search.xml"/>
+          <map:part element="monument" src="../content/xml/tei/alists/monument-search.xml"/>
+          <map:part element="document" src="../content/xml/tei/alists/document-search.xml"/>
+          <map:part src="../content/xml/tei/alists/mentionedplace.xml"/>
+          <map:part src="../content/xml/tei/alists/months.xml"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml"/>
+          <map:part src="cocoon:/preprocess/{1}/{2}.xml" />
+        </map:aggregate>
         <map:transform src="../stylesheets/solr/{1}-to-solr.xsl">
           <map:parameter name="file-path" value="{2}" />
         </map:transform>

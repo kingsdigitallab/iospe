@@ -92,7 +92,7 @@
     </map:pipeline>
 
     <!-- Templating. -->
-    <map:pipeline id="kiln-templating" internal-only="true">
+    <map:pipeline id="kiln-templating" internal-only="false">
       <!-- To read XSLTs referenced from the template files -->
       <map:match pattern="_internal/template/xsl/**.xsl">
         <map:generate src="../../{1}.xsl" />

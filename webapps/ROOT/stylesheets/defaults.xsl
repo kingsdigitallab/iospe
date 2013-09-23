@@ -10,7 +10,7 @@
   <!-- $language is the language code used to distinguish between
        language contexts in a multilingual site. -->
   <xsl:param name="language" select="''" />
-  <xsl:param name="lang" select="''" />
+  <xsl:param name="lang" select="''en'" />
 
   <xsl:variable name="kiln:url-lang-suffix" select="if ($lang='ru') then '-ru' else()" />
 

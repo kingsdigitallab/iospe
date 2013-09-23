@@ -45,7 +45,7 @@
             </li>
             <xsl:for-each
               select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
-              <xsl:sort select="//century[@url=current()]/@num" data-type="number"
+              <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num" data-type="number"
                 order="descending"/>
               <li>
                 <a href="{.}.html">
@@ -61,7 +61,7 @@
           </li>
           <xsl:for-each
             select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'CE']">
-            <xsl:sort select="//century[@url=current()]/@num" data-type="number"/>
+            <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num" data-type="number"/>
             <li>
               <a href="{.}.html">
                 <xsl:value-of select="substring-before(., '-')"/>

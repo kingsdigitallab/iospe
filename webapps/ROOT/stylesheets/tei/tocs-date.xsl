@@ -4,6 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="toc"/>
+  <xsl:param name="date-type"/>
 
   <xsl:template match="/"/>
 
@@ -12,12 +13,12 @@
     <i18n:text>Inscriptions by Date</i18n:text>
     <xsl:text>-</xsl:text>
     <xsl:choose>
-      <xsl:when test="substring-after(//str[@name='q'], 'date-type:')='dated'">
+      <xsl:when test="$date-type='dated'">
         <i18n:text>Dated by year</i18n:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:value-of
-          select="//list[@xml:lang=$lang]/century[@url=substring-after(//str[@name='q'], 'date-type:')]"
+          select="//list[@xml:lang=$lang]/century[@url=$date-type]"
         />
       </xsl:otherwise>
     </xsl:choose>
