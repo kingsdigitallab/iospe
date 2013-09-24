@@ -70,7 +70,9 @@
 
                         <section class="top-bar-section">
                           <ul class="right language-choice">
-                            <xsl:call-template name="menu-languages"/>
+                            <kiln:block name="menu-languages">
+                              <xsl:call-template name="menu-languages"/>
+                            </kiln:block>
                           </ul>
                         </section>
                       </kiln:block>

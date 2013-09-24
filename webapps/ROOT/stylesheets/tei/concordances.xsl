@@ -89,7 +89,6 @@
     <xsl:variable name="top-limit">
       <xsl:number value="$div * $col" format="0001"/>
     </xsl:variable>
-    <!-- <div class="col{$col}" xsl:exclude-result-prefixes="#all" style="border-bottom: 1px solid grey"> -->
     <div class="large-4 columns col{$col}" xsl:exclude-result-prefixes="#all">
 
       <ul class="no-bullet">
