@@ -45,25 +45,25 @@
     <!-- Search -->
     <map:pipeline type="noncaching">
       <map:match pattern="search/index.html">
-        <map:redirect-to uri="en/200/1800/start=0/"/>
+        <map:redirect-to uri="en/200/1800/"/>
       </map:match>
       <map:match pattern="search/index-ru.html">
-        <map:redirect-to uri="ru/200/1800/start=0/"/>
+        <map:redirect-to uri="ru/200/1800/"/>
       </map:match>
 
-      <map:match pattern="search/*/*/*/*/">
+      <map:match pattern="search/*/*/*/">
         <map:select type="parameter">
           <map:parameter name="parameter-selector-test" value="{1}"/>
           <map:when test="ru">
             <map:aggregate element="aggregation" label="content">
-              <map:part src="cocoon://_internal/menu/main.{1}.xml?url=conc/index-{1}.html"/>
+              <map:part src="cocoon://_internal/menu/main.{1}.xml?url=search/{1}/{2}/{3}/"/>
               <map:part src="cocoon://internal/metadata/files.xml"/>
               <map:part src="cocoon:/internal/search/facet_query.{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation" label="content">
-              <map:part src="cocoon://_internal/menu/main.xml?url=conc/index.html"/>
+              <map:part src="cocoon://_internal/menu/main.xml?url=search/{1}/{2}/{3}/"/>
               <map:part src="cocoon://internal/metadata/files.xml"/>
               <map:part src="cocoon:/internal/search/facet_query.{1}.xml"/>
             </map:aggregate>
@@ -71,10 +71,10 @@
         </map:select>
         <map:transform src="cocoon://_internal/template/search.xsl">
           <map:parameter name="lang" value="{1}"/>
-          <map:parameter name="url" value="search/{1}/{2}/{3}/{4}"/>
+          <map:parameter name="url" value="search/{1}/{2}/{3}/"/>
           <map:parameter name="min-year" value="{2}"/>
           <map:parameter name="max-year" value="{3}"/>
-          <map:parameter name="query-string" value="{4}"/>
+          <map:parameter name="query-string" value="{request:queryString}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
