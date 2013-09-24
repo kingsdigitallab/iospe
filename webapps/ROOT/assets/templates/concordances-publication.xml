@@ -13,18 +13,15 @@
   <kiln:child>
 
     <kiln:block name="title">
-      <kiln:super/>
       <xsl:call-template name="concordancePublicationTitle"/>
     </kiln:block>
 
 
     <kiln:block name="page-heading">
-      <kiln:super/>
       <xsl:call-template name="concordancePublicationTitle"/>
     </kiln:block>
 
     <kiln:block name="content">
-      <kiln:super />
       <xsl:call-template name="generatePublicationConcordance"/>
     </kiln:block>
 
