@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kiln:root xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Imports stylesheet to convert Solr results into HTML. -->
   <xsl:import href="cocoon://_internal/template/xsl/stylesheets/solr/results-to-html.xsl"/>
@@ -13,12 +13,12 @@
   <kiln:child>
     <kiln:block name="title">
       <kiln:super/>
-      <xsl:text>Search</xsl:text>
+      <i18n:text>Search</i18n:text>
     </kiln:block>
 
     <kiln:block name="page-heading">
       <kiln:super/>
-      <xsl:text>Search</xsl:text>
+      <i18n:text>Search</i18n:text>
     </kiln:block>
 
     <kiln:block name="menu-languages">
