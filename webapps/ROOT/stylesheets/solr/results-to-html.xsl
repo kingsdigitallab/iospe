@@ -68,19 +68,38 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template match="lst[@name='facet_fields']/lst" mode="search-results">
+  <xsl:template name="timeSlider">
     <section>
       <p class="title" data-section-title="">
-        <a href="#">
-          <xsl:apply-templates mode="search-results" select="@name"/>
-        </a>
+        <a href="#">Date</a>
       </p>
       <div class="content" data-section-content="">
-        <ul class="no-bullet">
-          <xsl:apply-templates mode="search-results"/>
-        </ul>
+        <xsl:text>here goes slider</xsl:text>
       </div>
     </section>
+  </xsl:template>
+
+  <xsl:template match="lst[@name='facet_fields']/lst" mode="search-results">
+    <xsl:choose>
+      <xsl:when test="./@name='not-before' and ./following-sibling::lst[@name='not-after'] ">
+        <xsl:call-template name="timeSlider"/>
+      </xsl:when>
+      <xsl:when test="./@name='not-after' " />
+      <xsl:otherwise>
+        <section>
+          <p class="title" data-section-title="">
+            <a href="#">
+              <xsl:apply-templates mode="search-results" select="@name"/>
+            </a>
+          </p>
+          <div class="content" data-section-content="">
+            <ul class="no-bullet">
+              <xsl:apply-templates mode="search-results"/>
+            </ul>
+          </div>
+        </section>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="lst[@name='facet_fields']/lst/@name" mode="search-results">
@@ -91,6 +110,7 @@
         <xsl:text> </xsl:text>
       </xsl:if>
     </xsl:for-each>
+
   </xsl:template>
 
   <xsl:template match="result/doc" mode="search-results">
