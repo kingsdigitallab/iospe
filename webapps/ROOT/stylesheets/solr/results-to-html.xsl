@@ -2,7 +2,7 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:import href="../defaults.xsl"/>
 
@@ -71,10 +71,21 @@
   <xsl:template name="timeSlider">
     <section>
       <p class="title" data-section-title="">
-        <a href="#">Date</a>
+        <a href="#">
+          <i18n:text>Date</i18n:text>
+          <xsl:text> </xsl:text>
+          <span id="date-slider-label">-</span>
+        </a>
       </p>
       <div class="content" data-section-content="">
-        <xsl:text>here goes slider</xsl:text>
+
+
+        <div id="date-slider-range" data-range-max="{$kiln:max-year}"
+          data-range-min="{$kiln:min-year}" data-value-min="{$min-year}"
+          data-value-max="{$max-year}" data-query="{$escaped-query-string}"
+          i18n:attr="data-label-suffix" data-label-suffix="A.D.">
+          <xsl:text>&#160;</xsl:text>
+        </div>
       </div>
     </section>
   </xsl:template>
@@ -84,7 +95,7 @@
       <xsl:when test="./@name='not-before' and ./following-sibling::lst[@name='not-after'] ">
         <xsl:call-template name="timeSlider"/>
       </xsl:when>
-      <xsl:when test="./@name='not-after' " />
+      <xsl:when test="./@name='not-after' "/>
       <xsl:otherwise>
         <section>
           <p class="title" data-section-title="">

@@ -1,7 +1,7 @@
 // Inscriptions specific functions
 
 require(['common'], function(common) {
-  require(['./app/main', 'highlightjs'],
+  require(['app/main', 'highlightjs'],
     function (main, highlightjs) {
 
       var parse_inscription = function (query) {

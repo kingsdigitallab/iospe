@@ -6,9 +6,17 @@
 //except for 'app' ones, which are in a sibling
 //directory.
 requirejs.config({
-    baseUrl: "./assets/scripts",
+    baseUrl: "/assets/scripts",
     paths: {
-        highlightjs: "vendor/highlightjs/highlight.pack"
+        "jquery-ui": "vendor/jquery-ui/ui/jquery-ui",
+        highlightjs: "vendor/highlightjs/highlight.pack",
+        app: "app"
+
+    },
+    shim: {
+        "jquery-ui": {
+            exports: "$"
+        },
     }
 });
 
