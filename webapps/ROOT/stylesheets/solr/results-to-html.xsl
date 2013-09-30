@@ -41,21 +41,42 @@
       <xsl:value-of select="substring-before($fq, '&quot;')"/>
       <xsl:value-of select="encode-for-uri(substring-after($fq, ':'))"/>
     </xsl:variable>
-    <xsl:if test="not(contains($escaped-query-string, $escaped-fq))">
-      <li>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>?</xsl:text>
-            <xsl:value-of select="$escaped-query-string"/>
-            <xsl:value-of select="$fq"/>
-          </xsl:attribute>
-          <xsl:value-of select="@name"/>
-        </a>
-        <xsl:text> (</xsl:text>
+
+    <li>
+      <a>
+        <xsl:attribute name="href">
+          <xsl:choose>
+            <xsl:when test="not(contains($escaped-query-string, $escaped-fq))">
+              <xsl:text>?</xsl:text>
+              <xsl:value-of select="$escaped-query-string"/>
+              <xsl:value-of select="$fq"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:text>#</xsl:text>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+        <xsl:attribute name="class">
+          <xsl:if test="contains($escaped-query-string, $escaped-fq)">
+            <xsl:text>disabled</xsl:text>
+          </xsl:if>
+        </xsl:attribute>
+        <xsl:value-of select="replace(@name, '_', ' ')"/>
+      </a>
+      <xsl:text> </xsl:text>
+
+      <xsl:variable name="label_type">
+        <xsl:if test="contains($escaped-query-string, $escaped-fq)">
+          <xsl:text>secondary</xsl:text>
+        </xsl:if>
+        <xsl:text> </xsl:text>
+      </xsl:variable>
+
+      <span class="round label {$label_type}">
         <xsl:value-of select="."/>
-        <xsl:text>)</xsl:text>
-      </li>
-    </xsl:if>
+      </span>
+    </li>
+
   </xsl:template>
 
   <xsl:template match="lst[@name='facet_fields']" mode="search-results">
@@ -144,7 +165,7 @@
         <h3>No results found</h3>
       </xsl:when>
       <xsl:when test="doc">
-        <ul>
+        <ul class="no-bullet">
           <xsl:apply-templates mode="search-results" select="doc"/>
         </ul>
       </xsl:when>
@@ -154,7 +175,7 @@
   <xsl:template match="*[@name='fq']" mode="search-results">
     <h3>Current filters</h3>
 
-    <ul>
+    <ul class="inline-list">
       <xsl:choose>
         <xsl:when test="local-name(.) = 'str'">
           <xsl:call-template name="display-applied-facet"/>
@@ -177,17 +198,19 @@
       <xsl:value-of select="encode-for-uri(substring-after(., ':'))"/>
     </xsl:variable>
     <li>
-      <xsl:value-of select="replace(., '[^:]+:&quot;(.*)&quot;$', '$1')"/>
-      <xsl:text> (</xsl:text>
-      <!-- Create a link to unapply the facet. -->
-      <a>
+      <a class="info secondary button small">
         <xsl:attribute name="href">
           <xsl:text>?</xsl:text>
           <xsl:value-of select="replace($escaped-query-string, $fq, '')"/>
         </xsl:attribute>
-        <xsl:text>x</xsl:text>
+
+        <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
+        <xsl:text>&#160;</xsl:text>
+        <!-- Create a link to unapply the facet. -->
+        <span>
+            <i class="icon-remove">&#160;</i>
+        </span>
       </a>
-      <xsl:text>)</xsl:text>
     </li>
   </xsl:template>
 

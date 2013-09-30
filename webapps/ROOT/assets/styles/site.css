@@ -26,6 +26,16 @@ a:visited { color: #800080; }
 a:hover { color: #8b9caa; background-color: #ffff80; }
 a:active { color: #006666; }
 
+a.disabled:link,
+a.disabled:visited,
+a.disabled:hover,
+a.disabled:active {
+    color: #999999;
+    background-color: transparent;
+    pointer-events: none;
+    cursor:default;
+}
+
 
 p {color: #333;}
 

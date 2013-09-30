@@ -1,4 +1,7 @@
 define([], function() {
+    $('a.disabled').on('click', function(e) {
+        e.preventDefault();
+    });
 
     return {
         get_kiln_url_language_suffix: function () {
