@@ -10,7 +10,6 @@
   <xsl:param name="url"/>
   <xsl:param name="min-year"/>
   <xsl:param name="max-year"/>
-  <xsl:param name="params"/>
 
   <!-- query-string is escaped, but according to different rules than
        both XPath's encode-for-uri and escape-html-uri
@@ -27,6 +26,20 @@
 
   <xsl:variable as="xs:integer" name="kiln:min-year" select="200"/>
   <xsl:variable as="xs:integer" name="kiln:max-year" select="1800"/>
+
+
+
+  <xsl:template
+    match="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
+    mode="search_form">
+    <form id="search_form" action="." method="get" data-query="{$escaped-query-string}">
+      <input name="q" placeholder="Search terms" type="search">
+        <xsl:attribute name="value">
+          <xsl:value-of select="."/>
+        </xsl:attribute>
+      </input>
+    </form>
+  </xsl:template>
 
   <xsl:template match="int" mode="search-results">
     <!-- A facet's count. -->
@@ -62,6 +75,9 @@
           </xsl:if>
         </xsl:attribute>
         <xsl:value-of select="replace(@name, '_', ' ')"/>
+        <xsl:if test="@name = ''">
+          <i18n:text>Empty</i18n:text>
+        </xsl:if>
       </a>
       <xsl:text> </xsl:text>
 
@@ -111,6 +127,21 @@
     </section>
   </xsl:template>
 
+  <xsl:template name="defaultFacet">
+    <section>
+      <p class="title" data-section-title="">
+        <a href="#">
+          <xsl:apply-templates mode="search-results" select="@name"/>
+        </a>
+      </p>
+      <div class="content" data-section-content="">
+        <ul class="no-bullet">
+          <xsl:apply-templates mode="search-results"/>
+        </ul>
+      </div>
+    </section>
+  </xsl:template>
+
   <xsl:template match="lst[@name='facet_fields']/lst" mode="search-results">
     <xsl:choose>
       <xsl:when test="./@name='not-before' and ./following-sibling::lst[@name='not-after'] ">
@@ -118,18 +149,7 @@
       </xsl:when>
       <xsl:when test="./@name='not-after' "/>
       <xsl:otherwise>
-        <section>
-          <p class="title" data-section-title="">
-            <a href="#">
-              <xsl:apply-templates mode="search-results" select="@name"/>
-            </a>
-          </p>
-          <div class="content" data-section-content="">
-            <ul class="no-bullet">
-              <xsl:apply-templates mode="search-results"/>
-            </ul>
-          </div>
-        </section>
+        <xsl:call-template name="defaultFacet"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -173,20 +193,17 @@
   </xsl:template>
 
   <xsl:template match="*[@name='fq']" mode="search-results">
-    <h3>Current filters</h3>
 
-    <ul class="inline-list">
-      <xsl:choose>
-        <xsl:when test="local-name(.) = 'str'">
+    <xsl:choose>
+      <xsl:when test="local-name(.) = 'str'">
+        <xsl:call-template name="display-applied-facet"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:for-each select="str">
           <xsl:call-template name="display-applied-facet"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:for-each select="str">
-            <xsl:call-template name="display-applied-facet"/>
-          </xsl:for-each>
-        </xsl:otherwise>
-      </xsl:choose>
-    </ul>
+        </xsl:for-each>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="display-applied-facet">
@@ -197,6 +214,9 @@
       <xsl:value-of select="substring-before(., '&quot;')"/>
       <xsl:value-of select="encode-for-uri(substring-after(., ':'))"/>
     </xsl:variable>
+    <xsl:variable name="label">
+      <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
+    </xsl:variable>
     <li>
       <a class="info secondary button small">
         <xsl:attribute name="href">
@@ -204,14 +224,65 @@
           <xsl:value-of select="replace($escaped-query-string, $fq, '')"/>
         </xsl:attribute>
 
-        <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
+        <xsl:value-of select="$label"/>
+        <xsl:if test="$label = ''">
+          <i18n:text>Empty</i18n:text>
+        </xsl:if>
         <xsl:text>&#160;</xsl:text>
         <!-- Create a link to unapply the facet. -->
         <span>
-            <i class="icon-remove">&#160;</i>
+          <i class="icon-remove">&#160;</i>
         </span>
       </a>
     </li>
+  </xsl:template>
+
+  <xsl:template match="*[@name='q']" mode="search-results">
+
+    <xsl:choose>
+      <xsl:when test="local-name(.) = 'str'">
+        <xsl:call-template name="display-applied-search-term"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:for-each select="str">
+          <xsl:call-template name="display-applied-search-term"/>
+        </xsl:for-each>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="display-applied-search-term">
+    <xsl:if test="not(text() = 'dt:i')">
+      <xsl:value-of select="text()"/>
+      <xsl:variable name="q">
+        <!-- Match the fq parameter as it appears in the query
+           string. -->
+        <xsl:text>&amp;q=</xsl:text>
+        <xsl:value-of select="text()"/>
+      </xsl:variable>
+      <xsl:variable name="label">
+        <i18n:text>text</i18n:text>
+        <xsl:text>:</xsl:text>
+        <xsl:value-of select="."/>
+      </xsl:variable>
+      
+      <xsl:value-of select="$q" />
+      <li>
+        <a class="info secondary button small">
+          <xsl:attribute name="href">
+            <xsl:text>?</xsl:text>
+            <xsl:value-of select="replace($escaped-query-string, $q, '')"/>
+          </xsl:attribute>
+
+          <xsl:value-of select="$label"/>
+          <xsl:text>&#160;</xsl:text>
+          <!-- Create a link to unapply the facet. -->
+          <span>
+            <i class="icon-remove">&#160;</i>
+          </span>
+        </a>
+      </li>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="text()" mode="search-results"/>
