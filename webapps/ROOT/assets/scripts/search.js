@@ -1,8 +1,8 @@
 // search specific functions
 
 require(['common'], function(common) {
-  require(['app/main', 'jquery-ui'],
-    function (main, jqui) {
+  require(['app/main', 'jquery-ui', 'purl'],
+    function (main, jqui, purl) {
       function update_date_range_label() {
         var $date_slider = $( "#date-slider-range" ),
           $label = $( "#date-slider-label" ),
@@ -45,11 +45,28 @@ require(['common'], function(common) {
 
 
         $search_form.on('submit', function(e) {
-          var query = $('input[name=q]', $search_form).val();
+          var query = $('input[name=q]', $search_form).val(),
+            params = purl(document.location.href).param(),
+            new_query_string = '';
 
           e.preventDefault();
 
-          document.location.href = "?" + old_query + '&q=' + query + '';
+          if (params.q === undefined) {
+            params.q = [query];
+          } else if ($.isArray(params.q)) {
+            params.q.push(query);
+          } else {
+            params.q = [params.q, query];
+          }
+
+          new_query_string = $.param(params, true);
+
+          // $params function encodes colons
+          new_query_string = new_query_string.replace("%3A", ':');
+
+          console.log(new_query_string);
+
+          document.location.href = "?" + new_query_string;
         });
       }
 

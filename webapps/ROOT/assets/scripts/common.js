@@ -9,8 +9,9 @@ requirejs.config({
     baseUrl: "/assets/scripts",
     paths: {
         "jquery-ui": "vendor/jquery-ui/ui/jquery-ui",
-        highlightjs: "vendor/highlightjs/highlight.pack",
-        app: "app"
+        "highlightjs": "vendor/highlightjs/highlight.pack",
+        "purl": "vendor/purl/purl",
+        "app": "app"
 
     },
     shim: {

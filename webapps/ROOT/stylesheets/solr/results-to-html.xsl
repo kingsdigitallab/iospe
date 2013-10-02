@@ -2,7 +2,8 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+  xmlns:str="http://exslt.org/strings">
 
   <xsl:import href="../defaults.xsl"/>
 
@@ -253,28 +254,30 @@
 
   <xsl:template name="display-applied-search-term">
     <xsl:if test="not(text() = 'dt:i')">
-      <xsl:value-of select="text()"/>
       <xsl:variable name="q">
         <!-- Match the fq parameter as it appears in the query
            string. -->
-        <xsl:text>&amp;q=</xsl:text>
+        <xsl:text>([&amp;]?)</xsl:text>
+        <xsl:text>(q=</xsl:text>
         <xsl:value-of select="text()"/>
+        <xsl:text>)([&amp;$])</xsl:text>
       </xsl:variable>
       <xsl:variable name="label">
         <i18n:text>text</i18n:text>
         <xsl:text>:</xsl:text>
         <xsl:value-of select="."/>
       </xsl:variable>
-      
-      <xsl:value-of select="$q" />
+      <xsl:call-template name="create_facet_button_url">
+        <xsl:with-param name="r_q_name">q</xsl:with-param>
+        <xsl:with-param name="r_q_value"><xsl:value-of select="text()"/></xsl:with-param>
+      </xsl:call-template> query: [<xsl:value-of select="$q"/>]<br/> replaced query: [<xsl:value-of
+        select="replace($escaped-query-string, $q, '$3')"/>]<br/>
       <li>
         <a class="info secondary button small">
           <xsl:attribute name="href">
             <xsl:text>?</xsl:text>
             <xsl:value-of select="replace($escaped-query-string, $q, '')"/>
-          </xsl:attribute>
-
-          <xsl:value-of select="$label"/>
+          </xsl:attribute> <xsl:value-of select="$label"/>
           <xsl:text>&#160;</xsl:text>
           <!-- Create a link to unapply the facet. -->
           <span>
@@ -287,6 +290,18 @@
 
   <xsl:template match="text()" mode="search-results"/>
 
+
+  <xsl:template name="create_facet_button_url">
+    <xsl:param name="r_q_name"/>
+    <xsl:param name="r_q_value"/>
+
+    <xsl:for-each
+      select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']">
+      yelo
+      <xsl:value-of select="node()"/>
+    </xsl:for-each>
+
+  </xsl:template>
 
   <xsl:template name="searchMenuLanguages">
     <li class="lang en">
