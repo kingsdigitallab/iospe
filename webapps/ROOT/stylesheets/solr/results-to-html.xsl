@@ -121,6 +121,9 @@
           i18n:attr="data-label-suffix" data-label-suffix="A.D.">
           <xsl:text>&#160;</xsl:text>
         </div>
+        <p class="muted">
+          <i18n:text>Use sliders to select date range</i18n:text>
+        </p>
       </div>
     </section>
   </xsl:template>
@@ -161,10 +164,10 @@
         <i18n:text>monument</i18n:text>
       </xsl:when>
       <xsl:when test="starts-with(., 'evidence')">
-        <i18n:text>dating criteria</i18n:text>     
+        <i18n:text>dating criteria</i18n:text>
       </xsl:when>
       <xsl:when test="starts-with(., 'execution')">
-        <i18n:text>technique</i18n:text>     
+        <i18n:text>technique</i18n:text>
       </xsl:when>
       <xsl:when test="starts-with(., 'persnames')">
         <i18n:text>names</i18n:text>
@@ -178,7 +181,7 @@
       <xsl:when test="starts-with(., 'document-type')">
         <i18n:text>category of text</i18n:text>
       </xsl:when>
-      
+
       <xsl:otherwise>
         <xsl:for-each select="tokenize(., '_')">
           <xsl:value-of select="upper-case(substring(., 1, 1))"/>
@@ -209,7 +212,9 @@
   <xsl:template match="response/result" mode="search-results">
     <xsl:choose>
       <xsl:when test="number(@numFound) = 0">
-        <h3><i18n:text>No results found</i18n:text></h3>
+        <h3>
+          <i18n:text>No results found</i18n:text>
+        </h3>
       </xsl:when>
       <xsl:when test="doc">
         <ul class="no-bullet">
