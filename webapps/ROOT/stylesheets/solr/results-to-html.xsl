@@ -34,11 +34,8 @@
     match="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
     mode="search_form">
     <form id="search_form" action="." method="get" data-query="{$escaped-query-string}">
-      <input name="q" placeholder="Search terms" type="search">
-        <xsl:attribute name="value">
-          <xsl:value-of select="."/>
-        </xsl:attribute>
-      </input>
+      <input name="q" placeholder="Search terms" type="search"/>
+
     </form>
   </xsl:template>
 
@@ -156,13 +153,42 @@
   </xsl:template>
 
   <xsl:template match="lst[@name='facet_fields']/lst/@name" mode="search-results">
-    <xsl:for-each select="tokenize(., '_')">
-      <xsl:value-of select="upper-case(substring(., 1, 1))"/>
-      <xsl:value-of select="substring(., 2)"/>
-      <xsl:if test="not(position() = last())">
-        <xsl:text> </xsl:text>
-      </xsl:if>
-    </xsl:for-each>
+    <xsl:choose>
+      <xsl:when test="starts-with(., 'institution')">
+        <i18n:text>repository</i18n:text>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'monument-type')">
+        <i18n:text>monument</i18n:text>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'evidence')">
+        <i18n:text>dating criteria</i18n:text>     
+      </xsl:when>
+      <xsl:when test="starts-with(., 'execution')">
+        <i18n:text>technique</i18n:text>     
+      </xsl:when>
+      <xsl:when test="starts-with(., 'persnames')">
+        <i18n:text>names</i18n:text>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'material')">
+        <i18n:text>material</i18n:text>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'location')">
+        <i18n:text>origin of text</i18n:text>
+      </xsl:when>
+      <xsl:when test="starts-with(., 'document-type')">
+        <i18n:text>category of text</i18n:text>
+      </xsl:when>
+      
+      <xsl:otherwise>
+        <xsl:for-each select="tokenize(., '_')">
+          <xsl:value-of select="upper-case(substring(., 1, 1))"/>
+          <xsl:value-of select="substring(., 2)"/>
+          <xsl:if test="not(position() = last())">
+            <xsl:text> </xsl:text>
+          </xsl:if>
+        </xsl:for-each>
+      </xsl:otherwise>
+    </xsl:choose>
 
   </xsl:template>
 
@@ -194,7 +220,6 @@
   </xsl:template>
 
   <xsl:template match="*[@name='fq']" mode="search-results">
-
     <xsl:choose>
       <xsl:when test="local-name(.) = 'str'">
         <xsl:call-template name="display-applied-facet"/>
@@ -208,21 +233,21 @@
   </xsl:template>
 
   <xsl:template name="display-applied-facet">
-    <xsl:variable name="fq">
-      <!-- Match the fq parameter as it appears in the query
-           string. -->
-      <xsl:text>&amp;fq=</xsl:text>
-      <xsl:value-of select="substring-before(., '&quot;')"/>
-      <xsl:value-of select="encode-for-uri(substring-after(., ':'))"/>
-    </xsl:variable>
+
     <xsl:variable name="label">
       <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
     </xsl:variable>
+
     <li>
       <a class="info secondary button small">
         <xsl:attribute name="href">
           <xsl:text>?</xsl:text>
-          <xsl:value-of select="replace($escaped-query-string, $fq, '')"/>
+          <xsl:call-template name="create_facet_button_url">
+            <xsl:with-param name="r_q_name">fq</xsl:with-param>
+            <xsl:with-param name="r_q_value">
+              <xsl:value-of select="text()"/>
+            </xsl:with-param>
+          </xsl:call-template>
         </xsl:attribute>
 
         <xsl:value-of select="$label"/>
@@ -254,30 +279,24 @@
 
   <xsl:template name="display-applied-search-term">
     <xsl:if test="not(text() = 'dt:i')">
-      <xsl:variable name="q">
-        <!-- Match the fq parameter as it appears in the query
-           string. -->
-        <xsl:text>([&amp;]?)</xsl:text>
-        <xsl:text>(q=</xsl:text>
-        <xsl:value-of select="text()"/>
-        <xsl:text>)([&amp;$])</xsl:text>
-      </xsl:variable>
       <xsl:variable name="label">
         <i18n:text>text</i18n:text>
         <xsl:text>:</xsl:text>
         <xsl:value-of select="."/>
       </xsl:variable>
-      <xsl:call-template name="create_facet_button_url">
-        <xsl:with-param name="r_q_name">q</xsl:with-param>
-        <xsl:with-param name="r_q_value"><xsl:value-of select="text()"/></xsl:with-param>
-      </xsl:call-template> query: [<xsl:value-of select="$q"/>]<br/> replaced query: [<xsl:value-of
-        select="replace($escaped-query-string, $q, '$3')"/>]<br/>
       <li>
         <a class="info secondary button small">
           <xsl:attribute name="href">
             <xsl:text>?</xsl:text>
-            <xsl:value-of select="replace($escaped-query-string, $q, '')"/>
-          </xsl:attribute> <xsl:value-of select="$label"/>
+
+            <xsl:call-template name="create_facet_button_url">
+              <xsl:with-param name="r_q_name">q</xsl:with-param>
+              <xsl:with-param name="r_q_value">
+                <xsl:value-of select="text()"/>
+              </xsl:with-param>
+            </xsl:call-template>
+          </xsl:attribute>
+          <xsl:value-of select="$label"/>
           <xsl:text>&#160;</xsl:text>
           <!-- Create a link to unapply the facet. -->
           <span>
@@ -295,12 +314,45 @@
     <xsl:param name="r_q_name"/>
     <xsl:param name="r_q_value"/>
 
-    <xsl:for-each
-      select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']">
-      yelo
-      <xsl:value-of select="node()"/>
-    </xsl:for-each>
+    <xsl:text>start=</xsl:text>
+    <xsl:choose>
+      <xsl:when
+        test="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']">
+        <xsl:value-of
+          select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']"
+        />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>0</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
 
+    <xsl:for-each
+      select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']">
+      <xsl:choose>
+        <xsl:when test="local-name(.) = 'str'">
+          <xsl:if
+            test="not(@name=$r_q_name and text() = $r_q_value) and not(@name='q' and text() = 'dt:i')">
+            <xsl:text>&amp;</xsl:text>
+            <xsl:value-of select="./@name"/>
+            <xsl:text>=</xsl:text>
+            <xsl:value-of select="text()"/>
+          </xsl:if>
+        </xsl:when>
+        <xsl:when test="local-name(.) = 'arr'">
+          <xsl:for-each select="str">
+            <xsl:if
+              test="not(parent::node()[@name=$r_q_name] and text() = $r_q_value) and not(parent::node()[@name='q'] and text() = 'dt:i')">
+              <xsl:text>&amp;</xsl:text>
+              <xsl:value-of select="parent::node()/@name"/>
+              <xsl:text>=</xsl:text>
+              <xsl:value-of select="text()"/>
+            </xsl:if>
+          </xsl:for-each>
+        </xsl:when>
+      </xsl:choose>
+
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="searchMenuLanguages">
