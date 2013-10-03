@@ -20,7 +20,7 @@
   <xsl:param name="query-string"/>
   <xsl:variable name="escaped-query-string">
     <xsl:value-of
-      select="replace(if($query-string = '') then 'q=&quot;&quot;' else $query-string , ',', '%2C')"
+      select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"
     />
   </xsl:variable>
 
