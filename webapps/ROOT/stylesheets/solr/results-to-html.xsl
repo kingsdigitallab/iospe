@@ -209,7 +209,7 @@
   <xsl:template match="response/result" mode="search-results">
     <xsl:choose>
       <xsl:when test="number(@numFound) = 0">
-        <h3>No results found</h3>
+        <h3><i18n:text>No results found</i18n:text></h3>
       </xsl:when>
       <xsl:when test="doc">
         <ul class="no-bullet">

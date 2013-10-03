@@ -47,13 +47,26 @@
         </div>
         <div class="large-8 columns">
           <!-- List of currently applied facets. -->
-          <h3>Current filters</h3>
+          <div class="panel">
+            <h3>Current filters</h3>
 
-          <ul class="inline-list">
-            <xsl:apply-templates mode="search-results"
-              select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']"/>
-            <xsl:text>&#160;</xsl:text>
-          </ul>
+            <ul class="inline-list">
+              <xsl:choose>
+                <xsl:when
+                  test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']) > 1">
+                  <xsl:apply-templates mode="search-results"
+                    select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']"
+                  />
+                </xsl:when>
+                <xsl:otherwise>
+                  <li class="muted">
+                    <i18n:text>No filters</i18n:text>
+                  </li>
+                </xsl:otherwise>
+              </xsl:choose>
+
+            </ul>
+          </div>
 
           <xsl:apply-templates select="/aggregation/response/result" mode="search-results"/>
         </div>
