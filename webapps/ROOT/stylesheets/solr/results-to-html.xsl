@@ -20,8 +20,7 @@
   <xsl:param name="query-string"/>
   <xsl:variable name="escaped-query-string">
     <xsl:value-of
-      select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"
-    />
+      select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"/>
   </xsl:variable>
 
 
@@ -210,6 +209,12 @@
   </xsl:template>
 
   <xsl:template match="response/result" mode="search-results">
+    <xsl:variable name="start" select="/aggregation/response/result/@start"/>
+    <xsl:variable name="rows"
+      select="/aggregation/response/lst/lst[@name = 'params']/str[@name = 'rows']"/>
+    <xsl:variable name="page" select="count(/aggregation/response/result/doc)"/>
+    <xsl:variable name="total" select="/aggregation/response/result/@numFound"/>
+
     <xsl:choose>
       <xsl:when test="number(@numFound) = 0">
         <h3>
@@ -217,11 +222,93 @@
         </h3>
       </xsl:when>
       <xsl:when test="doc">
+        <h3>
+          <i18n:text>Results</i18n:text>
+        </h3>
         <ul class="no-bullet">
           <xsl:apply-templates mode="search-results" select="doc"/>
         </ul>
+        <xsl:call-template name="navigation">
+          <xsl:with-param name="start" select="$start"/>
+          <xsl:with-param name="rows" select="$rows"/>
+          <xsl:with-param name="total" select="$total"/>
+        </xsl:call-template>
       </xsl:when>
     </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="navigation">
+    <xsl:param name="start" required="yes"/>
+    <xsl:param name="rows" required="yes"/>
+    <xsl:param name="total" required="yes"/>
+
+    <div>
+      <ul>
+        <xsl:choose>
+          <xsl:when test="$start = 0">
+            <li class="disabled">
+              <a href="">&lt;</a>
+            </li>
+          </xsl:when>
+          <xsl:otherwise>
+            <li>
+              <a>
+                <xsl:attribute name="href">
+                  <xsl:call-template name="create_facet_button_url">
+                    <xsl:with-param name="start">
+                      <xsl:value-of select="$start - $rows"/>
+                    </xsl:with-param>
+                  </xsl:call-template>
+                </xsl:attribute>
+                <xsl:text>&lt;</xsl:text>
+              </a>
+            </li>
+          </xsl:otherwise>
+        </xsl:choose>
+
+        <xsl:for-each select="1 to xs:integer(ceiling($total div $rows))">
+          <xsl:variable name="cur" select="$rows * . - $rows"/>
+
+          <li>
+            <xsl:if test="$cur = $start">
+              <xsl:attribute name="class">active</xsl:attribute>
+            </xsl:if>
+            <a>
+              <xsl:attribute name="href">
+                <xsl:call-template name="create_facet_button_url">
+                  <xsl:with-param name="start">
+                    <xsl:value-of select="$cur"/>
+                  </xsl:with-param>
+                </xsl:call-template>
+              </xsl:attribute>
+              <xsl:value-of select="."/>
+            </a>
+          </li>
+        </xsl:for-each>
+
+        <xsl:choose>
+          <xsl:when test="$start + $rows > $total">
+            <li class="disabled">
+              <a href="">&gt;</a>
+            </li>
+          </xsl:when>
+          <xsl:otherwise>
+            <li>
+              <a>
+                <xsl:attribute name="href">
+                  <xsl:call-template name="create_facet_button_url">
+                    <xsl:with-param name="start">
+                      <xsl:value-of select="$start + $rows"/>
+                    </xsl:with-param>
+                  </xsl:call-template>
+                </xsl:attribute>
+                <xsl:text>&gt;</xsl:text>
+              </a>
+            </li>
+          </xsl:otherwise>
+        </xsl:choose>
+      </ul>
+    </div>
   </xsl:template>
 
   <xsl:template match="*[@name='fq']" mode="search-results">
@@ -316,11 +403,15 @@
 
 
   <xsl:template name="create_facet_button_url">
-    <xsl:param name="r_q_name"/>
-    <xsl:param name="r_q_value"/>
+    <xsl:param name="r_q_name" select="''"/>
+    <xsl:param name="r_q_value" select="''"/>
+    <xsl:param name="start" select="'none'"/>
 
     <xsl:text>start=</xsl:text>
     <xsl:choose>
+      <xsl:when test="not($start='none')">
+        <xsl:value-of select="$start"/>
+      </xsl:when>
       <xsl:when
         test="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']">
         <xsl:value-of
