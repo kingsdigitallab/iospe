@@ -55,16 +55,15 @@
     <li>
       <a>
         <xsl:attribute name="href">
-          <xsl:choose>
-            <xsl:when test="not(contains($escaped-query-string, $escaped-fq))">
-              <xsl:text>?</xsl:text>
-              <xsl:value-of select="$escaped-query-string"/>
-              <xsl:value-of select="$fq"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>#</xsl:text>
-            </xsl:otherwise>
-          </xsl:choose>
+          <xsl:text>?</xsl:text>
+          <xsl:call-template name="create_facet_button_url">
+            <xsl:with-param name="r_q_name">fq</xsl:with-param>
+            <xsl:with-param name="r_q_value">
+              <xsl:value-of select="$escaped-fq"/>
+            </xsl:with-param>
+            <xsl:with-param name="start" select="'0'" />
+          </xsl:call-template>
+          <xsl:value-of select="$fq" />
         </xsl:attribute>
         <xsl:attribute name="class">
           <xsl:if test="contains($escaped-query-string, $escaped-fq)">
@@ -249,7 +248,7 @@
             <i18n:translate>
               <i18n:text key="__res_showing">Showing {0} to {1} of {2}</i18n:text>
               <i18n:param><xsl:value-of select="$start + 1" /></i18n:param>
-              <i18n:param><xsl:value-of select="$start + $rows" /></i18n:param>
+              <i18n:param><xsl:value-of select="$start + count(doc)" /></i18n:param>
               <i18n:param><xsl:value-of select="$total" /></i18n:param>
             </i18n:translate>
           </small>
@@ -272,6 +271,8 @@
     <xsl:param name="start" required="yes"/>
     <xsl:param name="rows" required="yes"/>
     <xsl:param name="total" required="yes"/>
+
+    <xsl:variable name="context" select="/" />
 
     <div class="row">
       <div class="large-12 columns">
@@ -312,6 +313,7 @@
                     <xsl:with-param name="start">
                       <xsl:value-of select="$cur" />
                     </xsl:with-param>
+                    <xsl:with-param name="context" select="$context" />
                   </xsl:call-template>
                 </xsl:attribute>
                 <xsl:value-of select="."/>
@@ -443,6 +445,7 @@
     <xsl:param name="r_q_name" select="'q'"/>
     <xsl:param name="r_q_value" select="$default_search_query"/>
     <xsl:param name="start" select="'none'"/>
+    <xsl:param name="context" select="/" />
 
     <xsl:text>start=</xsl:text>
     <xsl:choose>
@@ -450,9 +453,9 @@
         <xsl:value-of select="$start"/>
       </xsl:when>
       <xsl:when
-        test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']) = 1">
+        test="count($context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']) = 1">
         <xsl:value-of
-          select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']"
+          select="$context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']"
         />
       </xsl:when>
       <xsl:otherwise>
@@ -460,8 +463,8 @@
       </xsl:otherwise>
     </xsl:choose>
 
-    <!-- <xsl:for-each
-      select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']">
+    <xsl:for-each
+      select="$context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']">
       <xsl:choose>
         <xsl:when test="local-name(.) = 'str'">
           <xsl:if
@@ -484,7 +487,7 @@
           </xsl:for-each>
         </xsl:when>
       </xsl:choose>
-    </xsl:for-each> -->
+    </xsl:for-each>
   </xsl:template>
 
   <xsl:template name="searchMenuLanguages">
