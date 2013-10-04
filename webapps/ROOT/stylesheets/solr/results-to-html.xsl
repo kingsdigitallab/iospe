@@ -195,14 +195,31 @@
   </xsl:template>
 
   <xsl:template match="result/doc" mode="search-results">
+    <xsl:variable name="id"
+      select="replace(substring-after(str[@name = 'tei-id'], 'byz'), '^0+', '')" />
     <li>
       <a>
         <xsl:attribute name="href">
           <xsl:value-of select="$kiln:context-path"/>
           <xsl:text>/</xsl:text>
           <xsl:value-of select="str[@name='tei-id']"/>
+          <xsl:value-of select="$kiln:url-lang-suffix"/>
           <xsl:text>.html</xsl:text>
         </xsl:attribute>
+
+        <xsl:choose>
+          <xsl:when test="contains($id, '.')">
+            <strong>
+              <xsl:value-of select="substring-before($id, '.')" />
+            </strong>
+            <xsl:text>.</xsl:text>
+            <xsl:value-of select="substring-after($id, '.')" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$id" />
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text> </xsl:text>
         <xsl:value-of select="arr[@name=concat('document-title-', $lang)]/str[1]"/>
       </a>
     </li>
@@ -222,12 +239,23 @@
         </h3>
       </xsl:when>
       <xsl:when test="doc">
-        <h3>
+        <h2>
           <i18n:text>Results</i18n:text>
-        </h3>
+          <xsl:text> </xsl:text>
+          <small>
+            <i18n:translate>
+              <i18n:text key="__res_showing">Showing {0} to {1} of {2}</i18n:text>
+              <i18n:param><xsl:value-of select="$start + 1" /></i18n:param>
+              <i18n:param><xsl:value-of select="$start + $rows" /></i18n:param>
+              <i18n:param><xsl:value-of select="$total" /></i18n:param>
+            </i18n:translate>
+          </small>
+        </h2>
+
         <ul class="no-bullet">
           <xsl:apply-templates mode="search-results" select="doc"/>
         </ul>
+
         <xsl:call-template name="navigation">
           <xsl:with-param name="start" select="$start"/>
           <xsl:with-param name="rows" select="$rows"/>
@@ -242,72 +270,76 @@
     <xsl:param name="rows" required="yes"/>
     <xsl:param name="total" required="yes"/>
 
-    <div>
-      <ul>
-        <xsl:choose>
-          <xsl:when test="$start = 0">
-            <li class="disabled">
-              <a href="">&lt;</a>
-            </li>
-          </xsl:when>
-          <xsl:otherwise>
+    <div class="row">
+      <div class="large-12 columns">
+        <ul class="pagination pagination-centered">
+          <xsl:choose>
+            <xsl:when test="$start = 0">
+              <li class="unavailable arrow">
+                <a href="">&lt;</a>
+              </li>
+            </xsl:when>
+            <xsl:otherwise>
+              <li class="arrow">
+                <a>
+                  <xsl:attribute name="href">
+                    <xsl:text>?</xsl:text>
+                    <xsl:call-template name="create_facet_button_url">
+                      <xsl:with-param name="start">
+                        <xsl:value-of select="$start - $rows"/>
+                      </xsl:with-param>
+                    </xsl:call-template>
+                  </xsl:attribute>
+                  <xsl:text>&lt;</xsl:text>
+                </a>
+              </li>
+            </xsl:otherwise>
+          </xsl:choose>
+
+          <xsl:for-each select="1 to xs:integer(ceiling($total div $rows))">
+            <xsl:variable name="cur" select="$rows * . - $rows"/>
             <li>
+              <xsl:if test="$cur = $start">
+                <xsl:attribute name="class">current</xsl:attribute>
+              </xsl:if>
               <a>
                 <xsl:attribute name="href">
+                  <xsl:text>?</xsl:text>
                   <xsl:call-template name="create_facet_button_url">
                     <xsl:with-param name="start">
-                      <xsl:value-of select="$start - $rows"/>
+                      <xsl:value-of select="$cur" />
                     </xsl:with-param>
                   </xsl:call-template>
                 </xsl:attribute>
-                <xsl:text>&lt;</xsl:text>
+                <xsl:value-of select="."/>
               </a>
             </li>
-          </xsl:otherwise>
-        </xsl:choose>
+          </xsl:for-each>
 
-        <xsl:for-each select="1 to xs:integer(ceiling($total div $rows))">
-          <xsl:variable name="cur" select="$rows * . - $rows"/>
-
-          <li>
-            <xsl:if test="$cur = $start">
-              <xsl:attribute name="class">active</xsl:attribute>
-            </xsl:if>
-            <a>
-              <xsl:attribute name="href">
-                <xsl:call-template name="create_facet_button_url">
-                  <xsl:with-param name="start">
-                    <xsl:value-of select="$cur"/>
-                  </xsl:with-param>
-                </xsl:call-template>
-              </xsl:attribute>
-              <xsl:value-of select="."/>
-            </a>
-          </li>
-        </xsl:for-each>
-
-        <xsl:choose>
-          <xsl:when test="$start + $rows > $total">
-            <li class="disabled">
-              <a href="">&gt;</a>
-            </li>
-          </xsl:when>
-          <xsl:otherwise>
-            <li>
-              <a>
-                <xsl:attribute name="href">
-                  <xsl:call-template name="create_facet_button_url">
-                    <xsl:with-param name="start">
-                      <xsl:value-of select="$start + $rows"/>
-                    </xsl:with-param>
-                  </xsl:call-template>
-                </xsl:attribute>
-                <xsl:text>&gt;</xsl:text>
-              </a>
-            </li>
-          </xsl:otherwise>
-        </xsl:choose>
-      </ul>
+          <xsl:choose>
+            <xsl:when test="$start + $rows > $total">
+              <li class="arrow unavailable">
+                <a href="">&gt;</a>
+              </li>
+            </xsl:when>
+            <xsl:otherwise>
+              <li class="arrow">
+                <a>
+                  <xsl:attribute name="href">
+                    <xsl:text>?</xsl:text>
+                    <xsl:call-template name="create_facet_button_url">
+                      <xsl:with-param name="start">
+                        <xsl:value-of select="$start + $rows"/>
+                      </xsl:with-param>
+                    </xsl:call-template>
+                  </xsl:attribute>
+                  <xsl:text>&gt;</xsl:text>
+                </a>
+              </li>
+            </xsl:otherwise>
+          </xsl:choose>
+        </ul>
+      </div>
     </div>
   </xsl:template>
 
@@ -339,6 +371,7 @@
             <xsl:with-param name="r_q_value">
               <xsl:value-of select="text()"/>
             </xsl:with-param>
+            <xsl:with-param name="start" select="'0'" />
           </xsl:call-template>
         </xsl:attribute>
 
@@ -386,6 +419,7 @@
               <xsl:with-param name="r_q_value">
                 <xsl:value-of select="text()"/>
               </xsl:with-param>
+              <xsl:with-param name="start" select="'0'" />
             </xsl:call-template>
           </xsl:attribute>
           <xsl:value-of select="$label"/>
@@ -403,17 +437,16 @@
 
 
   <xsl:template name="create_facet_button_url">
-    <xsl:param name="r_q_name" select="''"/>
-    <xsl:param name="r_q_value" select="''"/>
+    <xsl:param name="r_q_name" select="'q'"/>
+    <xsl:param name="r_q_value" select="'dt:i'"/>
     <xsl:param name="start" select="'none'"/>
-
     <xsl:text>start=</xsl:text>
     <xsl:choose>
       <xsl:when test="not($start='none')">
         <xsl:value-of select="$start"/>
       </xsl:when>
       <xsl:when
-        test="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']">
+        test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']) = 1">
         <xsl:value-of
           select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']"
         />
@@ -422,8 +455,8 @@
         <xsl:text>0</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
-
-    <xsl:for-each
+    <xsl:value-of select="/" />
+    <!-- <xsl:for-each
       select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']">
       <xsl:choose>
         <xsl:when test="local-name(.) = 'str'">
@@ -447,8 +480,7 @@
           </xsl:for-each>
         </xsl:when>
       </xsl:choose>
-
-    </xsl:for-each>
+    </xsl:for-each> -->
   </xsl:template>
 
   <xsl:template name="searchMenuLanguages">
