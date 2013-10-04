@@ -40,8 +40,7 @@ require(['common'], function(common) {
 
 
       function prepare_search_form() {
-        var $search_form = $('#search_form'),
-          old_query  = $search_form.data('query');
+        var $search_form = $('#search_form');
 
 
         $search_form.on('submit', function(e) {

@@ -22,6 +22,7 @@
     <xsl:value-of
       select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"/>
   </xsl:variable>
+  <xsl:variable name="default_search_query" select="'dt:i'" />
 
 
   <xsl:variable as="xs:integer" name="kiln:min-year" select="200"/>
@@ -32,9 +33,8 @@
   <xsl:template
     match="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
     mode="search_form">
-    <form id="search_form" action="." method="get" data-query="{$escaped-query-string}">
+    <form id="search_form" action="." method="get" >
       <input name="q" placeholder="Search terms" type="search"/>
-
     </form>
   </xsl:template>
 
@@ -116,8 +116,11 @@
 
         <div id="date-slider-range" data-range-max="{$kiln:max-year}"
           data-range-min="{$kiln:min-year}" data-value-min="{$min-year}"
-          data-value-max="{$max-year}" data-query="{$escaped-query-string}"
-          i18n:attr="data-label-suffix" data-label-suffix="A.D.">
+          data-value-max="{$max-year}" i18n:attr="data-label-suffix"
+          data-label-suffix="A.D.">
+          <xsl:attribute name="data-query">
+            <xsl:call-template name="create_facet_button_url" />
+          </xsl:attribute>
           <xsl:text>&#160;</xsl:text>
         </div>
         <p class="muted">
@@ -403,7 +406,7 @@
   </xsl:template>
 
   <xsl:template name="display-applied-search-term">
-    <xsl:if test="not(text() = 'dt:i')">
+    <xsl:if test="not(text() = $default_search_query)">
       <xsl:variable name="label">
         <i18n:text>text</i18n:text>
         <xsl:text>:</xsl:text>
@@ -438,8 +441,9 @@
 
   <xsl:template name="create_facet_button_url">
     <xsl:param name="r_q_name" select="'q'"/>
-    <xsl:param name="r_q_value" select="'dt:i'"/>
+    <xsl:param name="r_q_value" select="$default_search_query"/>
     <xsl:param name="start" select="'none'"/>
+
     <xsl:text>start=</xsl:text>
     <xsl:choose>
       <xsl:when test="not($start='none')">
@@ -452,16 +456,16 @@
         />
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text>0</xsl:text>
+        <xsl:text>999</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:value-of select="/" />
+
     <!-- <xsl:for-each
       select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']">
       <xsl:choose>
         <xsl:when test="local-name(.) = 'str'">
           <xsl:if
-            test="not(@name=$r_q_name and text() = $r_q_value) and not(@name='q' and text() = 'dt:i')">
+            test="not(@name=$r_q_name and text() = $r_q_value) and not(@name='q' and text() = $default_search_query)">
             <xsl:text>&amp;</xsl:text>
             <xsl:value-of select="./@name"/>
             <xsl:text>=</xsl:text>
@@ -471,7 +475,7 @@
         <xsl:when test="local-name(.) = 'arr'">
           <xsl:for-each select="str">
             <xsl:if
-              test="not(parent::node()[@name=$r_q_name] and text() = $r_q_value) and not(parent::node()[@name='q'] and text() = 'dt:i')">
+              test="not(parent::node()[@name=$r_q_name] and text() = $r_q_value) and not(parent::node()[@name='q'] and text() = $default_search_query)">
               <xsl:text>&amp;</xsl:text>
               <xsl:value-of select="parent::node()/@name"/>
               <xsl:text>=</xsl:text>
