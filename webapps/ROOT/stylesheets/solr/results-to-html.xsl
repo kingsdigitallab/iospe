@@ -22,12 +22,12 @@
     <xsl:value-of
       select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"/>
   </xsl:variable>
-  <xsl:variable name="default_search_query" select="'dt:i'" />
+  <xsl:variable name="default_search_query" select="'dt:i'"/>
 
   <xsl:template
     match="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
     mode="search_form">
-    <form id="search_form" action="." method="get" >
+    <form id="search_form" action="." method="get">
       <input name="q" placeholder="Search terms" type="search"/>
     </form>
   </xsl:template>
@@ -55,9 +55,9 @@
             <xsl:with-param name="r_q_value">
               <xsl:value-of select="$escaped-fq"/>
             </xsl:with-param>
-            <xsl:with-param name="start" select="'0'" />
+            <xsl:with-param name="start" select="'0'"/>
           </xsl:call-template>
-          <xsl:value-of select="$fq" />
+          <xsl:value-of select="$fq"/>
         </xsl:attribute>
         <xsl:attribute name="class">
           <xsl:if test="contains($escaped-query-string, $escaped-fq)">
@@ -109,10 +109,9 @@
 
         <div id="date-slider-range" data-range-max="{$kiln:max-year}"
           data-range-min="{$kiln:min-year}" data-value-min="{$min-year}"
-          data-value-max="{$max-year}" i18n:attr="data-label-suffix"
-          data-label-suffix="A.D.">
+          data-value-max="{$max-year}" i18n:attr="data-label-suffix" data-label-suffix="A.D.">
           <xsl:attribute name="data-query">
-            <xsl:call-template name="create_facet_button_url" />
+            <xsl:call-template name="create_facet_button_url"/>
           </xsl:attribute>
           <xsl:text>&#160;</xsl:text>
         </div>
@@ -192,7 +191,7 @@
 
   <xsl:template match="result/doc" mode="search-results">
     <xsl:variable name="id"
-      select="replace(substring-after(str[@name = 'tei-id'], 'byz'), '^0+', '')" />
+      select="replace(substring-after(str[@name = 'tei-id'], 'byz'), '^0+', '')"/>
     <li>
       <a>
         <xsl:attribute name="href">
@@ -206,13 +205,13 @@
         <xsl:choose>
           <xsl:when test="contains($id, '.')">
             <strong>
-              <xsl:value-of select="substring-before($id, '.')" />
+              <xsl:value-of select="substring-before($id, '.')"/>
             </strong>
             <xsl:text>.</xsl:text>
-            <xsl:value-of select="substring-after($id, '.')" />
+            <xsl:value-of select="substring-after($id, '.')"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="$id" />
+            <xsl:value-of select="$id"/>
           </xsl:otherwise>
         </xsl:choose>
         <xsl:text> </xsl:text>
@@ -241,9 +240,15 @@
           <small>
             <i18n:translate>
               <i18n:text key="__res_showing">Showing {0} to {1} of {2}</i18n:text>
-              <i18n:param><xsl:value-of select="$start + 1" /></i18n:param>
-              <i18n:param><xsl:value-of select="$start + count(doc)" /></i18n:param>
-              <i18n:param><xsl:value-of select="$total" /></i18n:param>
+              <i18n:param>
+                <xsl:value-of select="$start + 1"/>
+              </i18n:param>
+              <i18n:param>
+                <xsl:value-of select="$start + count(doc)"/>
+              </i18n:param>
+              <i18n:param>
+                <xsl:value-of select="$total"/>
+              </i18n:param>
             </i18n:translate>
           </small>
         </h2>
@@ -266,7 +271,7 @@
     <xsl:param name="rows" required="yes"/>
     <xsl:param name="total" required="yes"/>
 
-    <xsl:variable name="context" select="/" />
+    <xsl:variable name="context" select="/"/>
 
     <div class="row">
       <div class="large-12 columns">
@@ -305,9 +310,9 @@
                   <xsl:text>?</xsl:text>
                   <xsl:call-template name="create_facet_button_url">
                     <xsl:with-param name="start">
-                      <xsl:value-of select="$cur" />
+                      <xsl:value-of select="$cur"/>
                     </xsl:with-param>
-                    <xsl:with-param name="context" select="$context" />
+                    <xsl:with-param name="context" select="$context"/>
                   </xsl:call-template>
                 </xsl:attribute>
                 <xsl:value-of select="."/>
@@ -370,7 +375,7 @@
             <xsl:with-param name="r_q_value">
               <xsl:value-of select="text()"/>
             </xsl:with-param>
-            <xsl:with-param name="start" select="'0'" />
+            <xsl:with-param name="start" select="'0'"/>
           </xsl:call-template>
         </xsl:attribute>
 
@@ -418,7 +423,7 @@
               <xsl:with-param name="r_q_value">
                 <xsl:value-of select="text()"/>
               </xsl:with-param>
-              <xsl:with-param name="start" select="'0'" />
+              <xsl:with-param name="start" select="'0'"/>
             </xsl:call-template>
           </xsl:attribute>
           <xsl:value-of select="$label"/>
@@ -439,7 +444,7 @@
     <xsl:param name="r_q_name" select="'q'"/>
     <xsl:param name="r_q_value" select="$default_search_query"/>
     <xsl:param name="start" select="'none'"/>
-    <xsl:param name="context" select="/" />
+    <xsl:param name="context" select="/"/>
 
     <xsl:text>start=</xsl:text>
     <xsl:choose>

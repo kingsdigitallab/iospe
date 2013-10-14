@@ -61,8 +61,7 @@
                   </li>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:apply-templates
-                    mode="search-results"
+                  <xsl:apply-templates mode="search-results"
                     select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']"
                   />
                 </xsl:otherwise>

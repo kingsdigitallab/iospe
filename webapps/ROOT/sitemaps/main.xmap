@@ -84,15 +84,15 @@
 
       <!-- Get search results. -->
       <map:match id="local-search-query" pattern="search/*/*/*.xml">
-        <map:generate src="../assets/queries/solr/{3}.xml" />
+        <map:generate src="../assets/queries/solr/{3}.xml"/>
         <map:transform src="../stylesheets/solr/merge-parameters.xsl">
-          <map:parameter name="query-string" value="{request:queryString}" />
+          <map:parameter name="query-string" value="{request:queryString}"/>
           <map:parameter name="min-year" value="{1}"/>
           <map:parameter name="max-year" value="{2}"/>
         </map:transform>
-        <map:transform src="../kiln/stylesheets/solr/generate-query.xsl" />
-        <map:transform type="xinclude" />
-        <map:serialize type="xml" />
+        <map:transform src="../kiln/stylesheets/solr/generate-query.xsl"/>
+        <map:transform type="xinclude"/>
+        <map:serialize type="xml"/>
       </map:match>
     </map:pipeline>
 
@@ -1044,15 +1044,12 @@
       </map:match>
 
       <map:match pattern="**.jpg">
-        <map:read src="cocoon://_internal/fedora/{1}"
-                  mime-type="image/jpeg" />
+        <map:read src="cocoon://_internal/fedora/{1}" mime-type="image/jpeg"/>
       </map:match>
 
       <map:match pattern="**.xml">
-        <map:generate
-            src="cocoon://_internal/fedora/objects/{1}/versions.xml?format=xml"
-            />
-        <map:serialize type="xml" />
+        <map:generate src="cocoon://_internal/fedora/objects/{1}/versions.xml?format=xml"/>
+        <map:serialize type="xml"/>
       </map:match>
 
     </map:pipeline>
