@@ -25,20 +25,23 @@
 
     <map:selectors>
       <map:selector logger="sitemap.selector.exception" name="exception"
-        src="org.apache.cocoon.selection.ExceptionSelector">
-        <exception class="org.apache.cocoon.ResourceNotFoundException" name="not-found"/>
+                    src="org.apache.cocoon.selection.ExceptionSelector">
+        <exception class="org.apache.cocoon.ResourceNotFoundException"
+                   name="not-found" />
         <exception class="org.apache.cocoon.components.flow.InvalidContinuationException"
-          name="invalid-continuation"/>
-        <exception class="java.lang.IllegalArgumentException" name="illegal-argument"/>
+                   name="invalid-continuation" />
+        <exception class="java.lang.IllegalArgumentException"
+                   name="illegal-argument" />
         <!-- The statement below tells the selector to unroll as much
              exceptions as possible -->
-        <exception class="java.lang.Throwable" unroll="true"/>
+        <exception class="java.lang.Throwable" unroll="true" />
       </map:selector>
     </map:selectors>
 
     <map:serializers>
-      <map:serializer logger="sitemap.serializer.xml" mime-type="text/xml" name="xml_nodecl"
-        src="org.apache.cocoon.serialization.XMLSerializer">
+      <map:serializer logger="sitemap.serializer.xml"
+                      mime-type="text/xml" name="xml_nodecl"
+                      src="org.apache.cocoon.serialization.XMLSerializer">
         <omit-xml-declaration>yes</omit-xml-declaration>
       </map:serializer>
     </map:serializers>
@@ -52,9 +55,13 @@
              message. -->
         <debug>1</debug>
         <eats-server>http://localhost:8000/</eats-server>
-        <rdf-base-uri/>
+        <!-- If authentication tokens are required, provide them in
+             the URL as per RFC 2396; eg,
+             http://username:password@domain.name/ -->
+        <fedora-url></fedora-url>
+        <rdf-base-uri></rdf-base-uri>
         <sesame-server>http://localhost:9999/openrdf-sesame/</sesame-server>
-        <sesame-server-repository/>
+        <sesame-server-repository></sesame-server-repository>
         <solr-server>http://localhost:9999/solr/</solr-server>
       </global-variables>
     </map:component-configurations>
@@ -64,7 +71,8 @@
       <!-- Mount the main kiln sitemap, which in turn mounts the main
            project sitemap, main.xmap. -->
       <map:match pattern="**">
-        <map:mount check-reload="yes" src="../kiln/sitemaps/main.xmap" uri-prefix=""/>
+        <map:mount check-reload="yes" src="../kiln/sitemaps/main.xmap"
+                   uri-prefix="" />
       </map:match>
     </map:pipeline>
 
@@ -73,11 +81,11 @@
          recursion. Therefore, just create a plain HTML error
          page. -->
     <map:handle-errors>
-      <map:generate type="exception"/>
+      <map:generate type="exception" />
       <map:transform src="../stylesheets/error/default-to-html.xsl">
-        <map:parameter name="debug" value="{global:debug}"/>
+        <map:parameter name="debug" value="{global:debug}" />
       </map:transform>
-      <map:serialize/>
+      <map:serialize />
     </map:handle-errors>
 
   </map:pipelines>
