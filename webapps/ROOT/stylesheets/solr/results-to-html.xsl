@@ -24,12 +24,6 @@
   </xsl:variable>
   <xsl:variable name="default_search_query" select="'dt:i'" />
 
-
-  <xsl:variable as="xs:integer" name="kiln:min-year" select="200"/>
-  <xsl:variable as="xs:integer" name="kiln:max-year" select="1800"/>
-
-
-
   <xsl:template
     match="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
     mode="search_form">

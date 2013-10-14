@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <!--
       Defaults stylesheet. Defines default globals and reads
@@ -13,6 +14,11 @@
   <xsl:param name="lang" select="'en'"/>
 
   <xsl:variable name="kiln:url-lang-suffix" select="if ($lang='ru') then '-ru' else()"/>
+
+
+  <!-- minimum and maximums years of inscriptions -->
+  <xsl:variable as="xs:integer" name="kiln:min-year" select="200"/>
+  <xsl:variable as="xs:integer" name="kiln:max-year" select="1800"/>
 
   <!-- Specify a mount path if you are mounting the webapp in a
        subdirectory rather than at the root of the domain. This path

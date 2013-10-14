@@ -58,14 +58,14 @@
             <map:aggregate element="aggregation" label="content">
               <map:part src="cocoon://_internal/menu/main.{1}.xml?url=search/{1}/{2}/{3}/"/>
               <map:part src="cocoon://internal/metadata/files.xml"/>
-              <map:part src="cocoon:/internal/search/facet_query.{1}.xml"/>
+              <map:part src="cocoon:/search/{2}/{3}/facet_query.{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation" label="content">
               <map:part src="cocoon://_internal/menu/main.xml?url=search/{1}/{2}/{3}/"/>
               <map:part src="cocoon://internal/metadata/files.xml"/>
-              <map:part src="cocoon:/internal/search/facet_query.{1}.xml"/>
+              <map:part src="cocoon:/search/{2}/{3}/facet_query.{1}.xml"/>
             </map:aggregate>
           </map:otherwise>
         </map:select>
@@ -80,6 +80,19 @@
           <map:parameter name="locale" value="{1}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Get search results. -->
+      <map:match id="local-search-query" pattern="search/*/*/*.xml">
+        <map:generate src="../assets/queries/solr/{3}.xml" />
+        <map:transform src="../stylesheets/solr/merge-parameters.xsl">
+          <map:parameter name="query-string" value="{request:queryString}" />
+          <map:parameter name="min-year" value="{1}"/>
+          <map:parameter name="max-year" value="{2}"/>
+        </map:transform>
+        <map:transform src="../kiln/stylesheets/solr/generate-query.xsl" />
+        <map:transform type="xinclude" />
+        <map:serialize type="xml" />
       </map:match>
     </map:pipeline>
 
