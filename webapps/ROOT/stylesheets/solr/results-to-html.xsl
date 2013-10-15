@@ -24,11 +24,9 @@
   </xsl:variable>
   <xsl:variable name="default_search_query" select="'dt:i'"/>
 
-  <xsl:template
-    match="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
-    mode="search_form">
+  <xsl:template name="search_form">
     <form id="search_form" action="." method="get">
-      <input name="q" placeholder="Search terms" type="search"/>
+      <input name="fq:text" placeholder="Search terms" type="search"/>
     </form>
   </xsl:template>
 
@@ -365,76 +363,41 @@
     <xsl:variable name="label">
       <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
     </xsl:variable>
-
-    <li>
-      <a class="info secondary button small">
-        <xsl:attribute name="href">
-          <xsl:text>?</xsl:text>
-          <xsl:call-template name="create_facet_button_url">
-            <xsl:with-param name="r_q_name">fq</xsl:with-param>
-            <xsl:with-param name="r_q_value">
-              <xsl:value-of select="text()"/>
-            </xsl:with-param>
-            <xsl:with-param name="start" select="'0'"/>
-          </xsl:call-template>
-        </xsl:attribute>
-
-        <xsl:value-of select="$label"/>
-        <xsl:if test="$label = ''">
-          <i18n:text>Empty</i18n:text>
-        </xsl:if>
-        <xsl:text>&#160;</xsl:text>
-        <!-- Create a link to unapply the facet. -->
-        <span>
-          <i class="icon-remove">&#160;</i>
-        </span>
-      </a>
-    </li>
-  </xsl:template>
-
-  <xsl:template match="*[@name='q']" mode="search-results">
+    <xsl:variable name="type">
+      <!-- get parameter type and remove language suffix by using non-greedy regex -->
+      <xsl:value-of select="replace(., '([^:]+?)(-\w{2})?:.*$', '$1')"/>
+    </xsl:variable>
 
     <xsl:choose>
-      <xsl:when test="local-name(.) = 'str'">
-        <xsl:call-template name="display-applied-search-term"/>
-      </xsl:when>
+      <xsl:when test="$type = 'not-before' or $type = 'not-after'"/>
       <xsl:otherwise>
-        <xsl:for-each select="str">
-          <xsl:call-template name="display-applied-search-term"/>
-        </xsl:for-each>
+        <li>
+          <a class="info secondary button small">
+            <xsl:attribute name="href">
+              <xsl:text>?</xsl:text>
+              <xsl:call-template name="create_facet_button_url">
+                <xsl:with-param name="r_q_name">fq</xsl:with-param>
+                <xsl:with-param name="r_q_value">
+                  <xsl:value-of select="text()"/>
+                </xsl:with-param>
+                <xsl:with-param name="start" select="'0'"/>
+              </xsl:call-template>
+            </xsl:attribute>
+            <xsl:value-of select="$type"/>
+            <xsl:text>:</xsl:text>
+            <xsl:value-of select="$label"/>
+            <xsl:if test="$label = ''">
+              <i18n:text>Empty</i18n:text>
+            </xsl:if>
+            <xsl:text>&#160;</xsl:text>
+            <!-- Create a link to unapply the facet. -->
+            <span>
+              <i class="icon-remove">&#160;</i>
+            </span>
+          </a>
+        </li>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <xsl:template name="display-applied-search-term">
-    <xsl:if test="not(text() = $default_search_query)">
-      <xsl:variable name="label">
-        <i18n:text>text</i18n:text>
-        <xsl:text>:</xsl:text>
-        <xsl:value-of select="."/>
-      </xsl:variable>
-      <li>
-        <a class="info secondary button small">
-          <xsl:attribute name="href">
-            <xsl:text>?</xsl:text>
-
-            <xsl:call-template name="create_facet_button_url">
-              <xsl:with-param name="r_q_name">q</xsl:with-param>
-              <xsl:with-param name="r_q_value">
-                <xsl:value-of select="text()"/>
-              </xsl:with-param>
-              <xsl:with-param name="start" select="'0'"/>
-            </xsl:call-template>
-          </xsl:attribute>
-          <xsl:value-of select="$label"/>
-          <xsl:text>&#160;</xsl:text>
-          <!-- Create a link to unapply the facet. -->
-          <span>
-            <i class="icon-remove">&#160;</i>
-          </span>
-        </a>
-      </li>
-    </xsl:if>
   </xsl:template>
 
   <xsl:template match="text()" mode="search-results"/>
@@ -463,30 +426,41 @@
     </xsl:choose>
 
     <xsl:for-each
-      select="$context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']">
+      select="$context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']">
       <xsl:choose>
         <xsl:when test="local-name(.) = 'str'">
-          <xsl:if
-            test="not(@name=$r_q_name and text() = $r_q_value) and not(@name='q' and text() = $default_search_query)">
-            <xsl:text>&amp;</xsl:text>
-            <xsl:value-of select="./@name"/>
-            <xsl:text>=</xsl:text>
-            <xsl:value-of select="text()"/>
+          <xsl:if test="not(@name=$r_q_name and text() = $r_q_value)">
+            <xsl:call-template name="build_url_param_pair"/>
           </xsl:if>
         </xsl:when>
         <xsl:when test="local-name(.) = 'arr'">
           <xsl:for-each select="str">
-            <xsl:if
-              test="not(parent::node()[@name=$r_q_name] and text() = $r_q_value) and not(parent::node()[@name='q'] and text() = $default_search_query)">
-              <xsl:text>&amp;</xsl:text>
-              <xsl:value-of select="parent::node()/@name"/>
-              <xsl:text>=</xsl:text>
-              <xsl:value-of select="text()"/>
+            <xsl:if test="not(parent::node()[@name=$r_q_name] and text() = $r_q_value)">
+              <xsl:call-template name="build_url_param_pair"/>
             </xsl:if>
           </xsl:for-each>
         </xsl:when>
       </xsl:choose>
     </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template name="build_url_param_pair">
+    <xsl:variable name="param_name">
+      <xsl:value-of select="parent::node/@name"/>
+    </xsl:variable>
+    <xsl:variable name="param_type">
+      <xsl:value-of select="replace(., '([^:]+):.*$', '$1')"/>
+    </xsl:variable>
+
+    <xsl:choose>
+      <xsl:when test="$param_type = 'not-before' or $param_type = 'not-after'"/>
+      <xsl:otherwise>
+        <xsl:text>&amp;</xsl:text>
+        <xsl:value-of select="parent::node()/@name"/>
+        <xsl:text>=</xsl:text>
+        <xsl:value-of select="text()"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="searchMenuLanguages">

@@ -27,7 +27,6 @@ require(['common'], function(common) {
 
           stop: function (event, ui) {
             var new_relative_location = '../../' + ui.values[0] + '/' + ui.values[1] + '/?' + $date_slider.data('query');
-            console.log(new_relative_location);
             document.location.href = new_relative_location;
           }
         });
@@ -44,26 +43,24 @@ require(['common'], function(common) {
 
 
         $search_form.on('submit', function(e) {
-          var query = $('input[name=q]', $search_form).val(),
+          var query = "text:\"" + $('input[name=fq\\:text]', $search_form).val() +  "\"",
             params = purl(document.location.href).param(),
             new_query_string = '';
 
           e.preventDefault();
 
-          if (params.q === undefined) {
-            params.q = [query];
-          } else if ($.isArray(params.q)) {
-            params.q.push(query);
+          if (params.fq === undefined) {
+            params.fq = [query];
+          } else if ($.isArray(params.fq)) {
+            params.fq.push(query);
           } else {
-            params.q = [params.q, query];
+            params.fq = [params.fq, query];
           }
 
           new_query_string = $.param(params, true);
 
           // $params function encodes colons
           new_query_string = new_query_string.replace("%3A", ':');
-
-          console.log(new_query_string);
 
           document.location.href = "?" + new_query_string;
         });

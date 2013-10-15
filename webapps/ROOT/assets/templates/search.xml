@@ -36,9 +36,7 @@
       <div class="row">
         <div class="large-4 columns">
 
-          <xsl:apply-templates
-            select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='q']"
-            mode="search_form"/>
+          <xsl:call-template name="search_form"/>
 
           <!-- List available facets. -->
           <xsl:apply-templates
@@ -54,15 +52,14 @@
             <ul class="inline-list">
               <xsl:choose>
                 <xsl:when
-                  test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='q']) = 1 and
-                        count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']) = 0">
+                  test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']) = 0">
                   <li class="muted">
                     <i18n:text>No filters</i18n:text>
                   </li>
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:apply-templates mode="search-results"
-                    select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq' or @name='q']"
+                    select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']"
                   />
                 </xsl:otherwise>
               </xsl:choose>
