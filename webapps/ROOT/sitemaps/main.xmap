@@ -904,7 +904,7 @@
           <!-- verse -->
           <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
           <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
-          <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"
+           <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/inscription.xsl">
@@ -1043,15 +1043,6 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <map:match pattern="**.jpg">
-        <map:read src="cocoon://_internal/fedora/{1}" mime-type="image/jpeg"/>
-      </map:match>
-
-      <map:match pattern="**.xml">
-        <map:generate src="cocoon://_internal/fedora/objects/{1}/versions.xml?format=xml"/>
-        <map:serialize type="xml"/>
-      </map:match>
-
     </map:pipeline>
 
     <!-- Preprocessing -->
@@ -1114,7 +1105,7 @@
       <map:match pattern="v_epidoc/*">
         <map:generate src="../content/xml/tei/inscriptions/{1}"/>
         <map:transform src="../stylesheets/epidoc-views/epidoc.xsl"/>
-        <map:serialize type="xml"/>
+        <map:serialize type="text"/>
       </map:match>
 
     </map:pipeline>
