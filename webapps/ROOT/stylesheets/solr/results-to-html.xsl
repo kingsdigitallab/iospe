@@ -361,7 +361,14 @@
   <xsl:template name="display-applied-facet">
 
     <xsl:variable name="label">
-      <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
+      <xsl:choose>
+        <xsl:when test="starts-with(., 'text')" >
+          <xsl:value-of select="replace(replace(., '[^:]+:(.*)$', '$1'), '_', ' ')"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="replace(replace(., '[^:]+:&quot;(.*)&quot;$', '$1'), '_', ' ')"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
     <xsl:variable name="type">
       <!-- get parameter type and remove language suffix by using non-greedy regex -->
@@ -421,7 +428,7 @@
         />
       </xsl:when>
       <xsl:otherwise>
-        <xsl:text>999</xsl:text>
+        <xsl:text>0</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
 

@@ -43,7 +43,7 @@ require(['common'], function(common) {
 
 
         $search_form.on('submit', function(e) {
-          var query = "text:\"" + $('input[name=fq\\:text]', $search_form).val() +  "\"",
+          var query = "text:" + $('input[name=fq\\:text]', $search_form).val(),
             params = purl(document.location.href).param(),
             new_query_string = '';
 
