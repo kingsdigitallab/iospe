@@ -3,7 +3,7 @@
 <map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
   <map:pipelines>
     <map:pipeline>
-<!-- Publications -->
+      <!-- Publications -->
       <map:match pattern="index-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=conc/index-{1}.html"/>
