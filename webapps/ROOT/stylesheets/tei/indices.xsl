@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
@@ -11,6 +14,45 @@
   <xsl:import href="inscription.xsl"/>
 
   <xsl:template match="/"/>
+
+
+  <xsl:function name="iospe:sort-dur">
+    <xsl:param name="w3cdur"/>
+    <xsl:param name="request"/>
+    <xsl:variable name="year">
+      <xsl:analyze-string select="$w3cdur" regex="^P(\d+)Y">
+        <xsl:matching-substring>
+          <xsl:value-of select="regex-group(1)"/>
+        </xsl:matching-substring>
+    </xsl:analyze-string>
+    </xsl:variable>
+    <xsl:variable name="month">
+      <xsl:analyze-string select="$w3cdur" regex="(\d+)M">
+        <xsl:matching-substring>
+          <xsl:value-of select="regex-group(1)"/>
+        </xsl:matching-substring>
+      </xsl:analyze-string>
+    </xsl:variable>
+    <xsl:variable name="day">
+      <xsl:analyze-string select="$w3cdur" regex="(\d+)D">
+        <xsl:matching-substring>
+          <xsl:value-of select="regex-group(1)"/>
+        </xsl:matching-substring>
+      </xsl:analyze-string>
+    </xsl:variable>
+
+    <xsl:choose>
+      <xsl:when test="$request='Y'">
+        <xsl:value-of select="$year"/>
+      </xsl:when>
+      <xsl:when test="$request='M'">
+        <xsl:value-of select="$month"/>
+      </xsl:when>
+      <xsl:when test="$request='D'">
+        <xsl:value-of select="$day"/>
+      </xsl:when>
+    </xsl:choose>
+  </xsl:function>
 
   <!-- set title -->
   <xsl:template name="indexTitle">
