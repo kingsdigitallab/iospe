@@ -33,7 +33,7 @@
             <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
           </h2>
 
-          <dl class="indices-person">
+          <dl class="indices indices-person">
             <xsl:for-each
               select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
 
@@ -105,7 +105,7 @@
       </xsl:when>
       <xsl:when test="$index='persons' and $sort='date'">
         <xsl:call-template name="sort-option"/>
-        <dl class="indices-person">
+        <dl class="indices indices-person">
           <xsl:for-each select="//persons//tei:person">
             <xsl:sort select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
             <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
@@ -116,7 +116,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:call-template name="sort-option"/>
-        <dl class="indices-person">
+        <dl class="indices indices-person">
           <xsl:for-each select="//persons//tei:person">
             <xsl:sort
               select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
@@ -136,7 +136,12 @@
     </dt>
 
 
-    <dd>
+    <dd class="persName">
+      <span class="secondary label radius">
+        <i18n:text>Name</i18n:text>
+      </span>
+      <xsl:text> </xsl:text>
+
       <xsl:for-each select="tei:persName[@xml:lang!='en'][@xml:lang!='ru']">
         <xsl:value-of select="."/>
         <xsl:text> </xsl:text>
@@ -144,9 +149,13 @@
     </dd>
 
     <xsl:if test="tei:floruit[tei:seg[@xml:lang=$lang]]">
-      <dd>
-        <i18n:text>Attested</i18n:text>
-        <xsl:text>: </xsl:text>
+      <dd class="flourit">
+
+        <span class="secondary label radius">
+          <i18n:text>Attested</i18n:text>
+        </span>
+        <xsl:text> </xsl:text>
+
         <xsl:value-of select="tei:floruit/tei:seg[@xml:lang=$lang]"/>
         <xsl:text> </xsl:text>
       </dd>
@@ -154,7 +163,13 @@
 
 
     <xsl:if test="tei:occupation">
-      <dd>
+      <dd class="ocupation">
+
+        <span class="secondary label radius">
+          <i18n:text>Occupation</i18n:text>
+        </span>
+        <xsl:text> </xsl:text>
+
         <xsl:value-of select="tei:occupation"/>
         <xsl:text> </xsl:text>
       </dd>
@@ -166,6 +181,12 @@
     <xsl:if
       test="//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id] or //persons/descendant::tei:person[@xml:id=$passives]">
       <dd class="relations">
+
+        <span class="secondary label radius">
+          <i18n:text>Relationship</i18n:text>
+        </span>
+        <xsl:text> </xsl:text>
+
         <xsl:for-each
           select="//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]">
           <xsl:choose>
@@ -224,6 +245,11 @@
     </xsl:if>
 
     <dd class="inscriptions">
+      <span class="secondary label radius">
+        <i18n:text>Inscriptions</i18n:text>
+      </span>
+      <xsl:text> </xsl:text>
+
       <ul class="inline-list">
         <xsl:for-each
           select="//result/doc[substring-after(str[@name='persName-ref'], '#') = current()/@xml:id]">

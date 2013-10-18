@@ -322,31 +322,34 @@
   </xsl:template>
 
   <xsl:template name="sort-option">
-    <i18n:text>Sort by</i18n:text>
-    <xsl:text>: </xsl:text>
 
-    <a href="?sort=date">
-      <xsl:attribute name="class">
-        <xsl:text>sort-option</xsl:text>
-        <xsl:if test="$sort = 'date'">
-          <xsl:text> sort-selected</xsl:text>
-        </xsl:if>
-      </xsl:attribute>
-      <i18n:text>Date</i18n:text>
+    <dl class="sub-nav">
+      <dt>
+        <i18n:text>Sort by</i18n:text>
+        <xsl:text>: </xsl:text>
+      </dt>
+      <dd>
+        <xsl:attribute name="class">
+          <xsl:if test="$sort = 'date'">
+            <xsl:text>active</xsl:text>
+          </xsl:if>
+        </xsl:attribute>
+        <a href="?sort=date">
+          <i18n:text>Date</i18n:text>
+        </a>
+      </dd>
 
-    </a>
-    <xsl:text> </xsl:text>
-    <a href="?sort=name">
-      <xsl:attribute name="class">
-        <xsl:text>sort-option</xsl:text>
-        <xsl:if test="$sort = 'name' or $sort = ''">
-          <xsl:text> sort-selected</xsl:text>
-        </xsl:if>
-      </xsl:attribute>
-
-      <i18n:text>Name</i18n:text>
-
-    </a>
+      <dd>
+        <xsl:attribute name="class">
+          <xsl:if test="$sort = 'name' or $sort = ''">
+            <xsl:text>active</xsl:text>
+          </xsl:if>
+        </xsl:attribute>
+        <a href="?sort=name">
+          <i18n:text>Name</i18n:text>
+        </a>
+      </dd>
+    </dl>
   </xsl:template>
 
 
