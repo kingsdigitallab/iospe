@@ -320,6 +320,8 @@
   </xsl:template>
 
   <xsl:template name="sort-option">
+    <!-- print sort options, name is default unless group param is true, in which case, group is default -->
+    <xsl:param name="group" select="false()"/>
 
     <dl class="sub-nav">
       <dt>
@@ -336,10 +338,9 @@
           <i18n:text>Date</i18n:text>
         </a>
       </dd>
-
       <dd>
         <xsl:attribute name="class">
-          <xsl:if test="$sort = 'name' or $sort = ''">
+          <xsl:if test="$sort = 'name' or ($sort = '' and not($group))">
             <xsl:text>active</xsl:text>
           </xsl:if>
         </xsl:attribute>
@@ -347,6 +348,19 @@
           <i18n:text>Name</i18n:text>
         </a>
       </dd>
+           
+      <xsl:if test="$group">
+        <dd>
+          <xsl:attribute name="class">
+            <xsl:if test="$sort = 'group' or $sort = ''">
+              <xsl:text>active</xsl:text>
+            </xsl:if>
+          </xsl:attribute>
+          <a href="?sort=group">
+            <i18n:text>Group</i18n:text>
+          </a>
+        </dd>
+      </xsl:if>
     </dl>
   </xsl:template>
 

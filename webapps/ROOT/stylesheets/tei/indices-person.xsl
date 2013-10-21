@@ -28,7 +28,13 @@
   <!-- Generate Index -->
   <xsl:template name="generateIndexPerson">
     <xsl:choose>
-      <xsl:when test="$index=('divine', 'ruler')">
+      <xsl:when test="$index=('divine', 'ruler') and not($sort=('date', 'name'))">
+        <xsl:if test="$index='ruler'">
+          <xsl:call-template name="sort-option">
+            <xsl:with-param name="group" select="true()"/>
+          </xsl:call-template>
+        </xsl:if>
+
         <xsl:for-each select="//AL//tei:listPerson">
           <h2>
             <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
@@ -37,85 +43,36 @@
           <dl class="indices indices-person">
             <xsl:for-each
               select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
-
-              <dt>
-                <xsl:choose>
-                  <xsl:when test="count(tei:persName[not(@type)][@xml:lang])>1">
-                    <xsl:value-of select="tei:persName[not(@type)][@xml:lang='grc'][1]"/>
-                    <xsl:if test="tei:persName[not(@type)][@xml:lang='la']">
-                      <xsl:text> / </xsl:text>
-                      <xsl:value-of select="tei:persName[not(@type)][@xml:lang='la'][1]"/>
-                    </xsl:if>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="tei:persName[not(@type)][1]"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </dt>
-
-
-              <xsl:choose>
-                <xsl:when test="@xml:id">
-                  <xsl:for-each-group
-                    select="//result//doc[str[@name='persName-key']=current()/@xml:id]"
-                    group-by="str[@name='persName-full']">
-                    <dd class="inscriptions">
-
-                      <span class="secondary label radius">
-                        <i18n:text>Full Name</i18n:text>
-                      </span>
-                      <xsl:text> </xsl:text>
-
-                      <xsl:value-of select="current-grouping-key()"/>
-                    </dd>
-                    <dd>
-
-                      <span class="secondary label radius">
-                        <i18n:text>Inscriptions</i18n:text>
-                      </span>
-                      <xsl:text> </xsl:text>
-
-                      <ul class="inline-list">
-                        <xsl:for-each select="current-group()">
-                          <li>
-                            <xsl:call-template name="link2inscription"/>
-                          </li>
-                        </xsl:for-each>
-                      </ul>
-                    </dd>
-
-                  </xsl:for-each-group>
-                </xsl:when>
-                <xsl:otherwise>
-                  <dd> See: <xsl:choose>
-                      <xsl:when
-                        test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">
-                        <xsl:value-of
-                          select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='grc'][1]"/>
-                        <xsl:if
-                          test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[not(@type)][@xml:lang='la']">
-                          <xsl:text> / </xsl:text>
-                          <xsl:value-of
-                            select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='la'][1]"
-                          />
-                        </xsl:if>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:value-of
-                          select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[1]"
-                        />
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </dd>
-                </xsl:otherwise>
-              </xsl:choose>
-
+              <xsl:call-template name="character"/>
             </xsl:for-each>
           </dl>
         </xsl:for-each>
-
-
-
+      </xsl:when>
+      <xsl:when test="$index='ruler' and $sort='date'">
+        <xsl:call-template name="sort-option">
+          <xsl:with-param name="group" select="true()"/>
+        </xsl:call-template>
+        <dl class="indices indices-person">
+          <xsl:for-each
+            select="//AL//tei:listPerson/tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
+            <xsl:sort select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
+            <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
+            <xsl:call-template name="character"/>
+          </xsl:for-each>
+        </dl>
+      </xsl:when>
+      <xsl:when test="$index='ruler' and $sort='name'">
+        <xsl:call-template name="sort-option">
+          <xsl:with-param name="group" select="true()"/>
+        </xsl:call-template>
+        <dl class="indices indices-person">
+          <xsl:for-each
+            select="//AL//tei:listPerson/tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
+            <xsl:sort
+              select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
+            <xsl:call-template name="character"/>
+          </xsl:for-each>
+        </dl>
       </xsl:when>
       <xsl:when test="$index='persons' and $sort='date'">
         <xsl:call-template name="sort-option"/>
@@ -140,8 +97,78 @@
         </dl>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
 
+  <xsl:template name="character">
+    <dt>
+      <xsl:choose>
+        <xsl:when test="count(tei:persName[not(@type)][@xml:lang])>1">
+          <xsl:value-of select="tei:persName[not(@type)][@xml:lang='grc'][1]"/>
+          <xsl:if test="tei:persName[not(@type)][@xml:lang='la']">
+            <xsl:text> / </xsl:text>
+            <xsl:value-of select="tei:persName[not(@type)][@xml:lang='la'][1]"/>
+          </xsl:if>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="tei:persName[not(@type)][1]"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </dt>
 
+    <xsl:choose>
+      <xsl:when test="@xml:id">
+        <xsl:for-each-group select="//result//doc[str[@name='persName-key']=current()/@xml:id]"
+          group-by="str[@name='persName-full']">
+          <dd class="inscriptions">
+
+            <span class="secondary label radius">
+              <i18n:text>Full Name</i18n:text>
+            </span>
+            <xsl:text> </xsl:text>
+
+            <xsl:value-of select="current-grouping-key()"/>
+          </dd>
+          <dd>
+
+            <span class="secondary label radius">
+              <i18n:text>Inscriptions</i18n:text>
+            </span>
+            <xsl:text> </xsl:text>
+
+            <ul class="inline-list">
+              <xsl:for-each select="current-group()">
+                <li>
+                  <xsl:call-template name="link2inscription"/>
+                </li>
+              </xsl:for-each>
+            </ul>
+          </dd>
+
+        </xsl:for-each-group>
+      </xsl:when>
+      <xsl:otherwise>
+        <dd> See: <xsl:choose>
+            <xsl:when
+              test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">
+              <xsl:value-of
+                select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='grc'][1]"/>
+              <xsl:if
+                test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[not(@type)][@xml:lang='la']">
+                <xsl:text> / </xsl:text>
+                <xsl:value-of
+                  select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='la'][1]"
+                />
+              </xsl:if>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of
+                select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[1]"
+              />
+            </xsl:otherwise>
+          </xsl:choose>
+        </dd>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="person">
