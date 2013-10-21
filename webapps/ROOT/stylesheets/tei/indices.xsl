@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="index"/>
@@ -241,11 +239,11 @@
         <xsl:choose>
           <xsl:when test="str[@name='num-value']">
             <xsl:value-of select="$display_key"/>
-              <small>
-                <xsl:text> (</xsl:text>
-                <xsl:value-of select="str[@name='num-value']"/>
-                <xsl:text>)</xsl:text>
-              </small>
+            <small>
+              <xsl:text> (</xsl:text>
+              <xsl:value-of select="str[@name='num-value']"/>
+              <xsl:text>)</xsl:text>
+            </small>
           </xsl:when>
           <xsl:when test="str[@name='num-atleast'] and str[@name='num-atmost']">
             <xsl:value-of select="$display_key"/>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
@@ -188,13 +189,9 @@
       </dd>
     </xsl:if>
 
-
-    <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
-      as="xs:sequence"/>
     <xsl:if
-      test="//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id] or //persons/descendant::tei:person[@xml:id=$passives]">
+      test="count(//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]) > 0">
       <dd class="relations">
-
         <span class="secondary label radius">
           <i18n:text>Relationship</i18n:text>
         </span>
@@ -239,6 +236,9 @@
           </xsl:choose>
           <!-- space after relationship -->
           <xsl:text> </xsl:text>
+
+          <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
+            as="xs:sequence"/>
 
           <xsl:for-each select="//persons/descendant::tei:person[@xml:id=$passives]">
             <a href="#{@xml:id}">
