@@ -348,7 +348,7 @@
           <i18n:text>Name</i18n:text>
         </a>
       </dd>
-           
+
       <xsl:if test="$group">
         <dd>
           <xsl:attribute name="class">

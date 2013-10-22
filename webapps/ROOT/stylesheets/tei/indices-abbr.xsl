@@ -34,9 +34,15 @@
     <table class="indices indices-abbrs">
       <thead>
         <tr>
-          <th><i18n:text>Abbreviaitons</i18n:text></th>
-          <th><i18n:text>Expand to</i18n:text></th>
-          <th><i18n:text>References</i18n:text></th>
+          <th>
+            <i18n:text>Abbreviaitons</i18n:text>
+          </th>
+          <th>
+            <i18n:text>Expand to</i18n:text>
+          </th>
+          <th>
+            <i18n:text>References</i18n:text>
+          </th>
         </tr>
       </thead>
       <tbody>

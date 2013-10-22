@@ -11,7 +11,7 @@
   <!-- set title -->
   <xsl:template name="tocTitleDate">
     <i18n:text>Inscriptions by Date</i18n:text>
-    
+
     <xsl:choose>
       <xsl:when test="$date-type='dated'">
         <xsl:text> -</xsl:text>

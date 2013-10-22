@@ -15,7 +15,7 @@
   </xsl:template>
 
   <xsl:template name="generateTocLocations">
-    <dl class="tocs">
+    <dl class="indices indices-locations tocs">
       <xsl:for-each select="//AL//tei:place">
 
         <dt>
