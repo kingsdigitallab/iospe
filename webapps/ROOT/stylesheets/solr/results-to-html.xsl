@@ -83,47 +83,61 @@
 
   </xsl:template>
 
+  <xsl:template match="lst[@name='facet_fields']/lst[@name='not-after']"
+    mode="outside-search-results">
+    <section>
+      <h4>
+        <i18n:text>Date</i18n:text>
+        <xsl:text> </xsl:text>
+        <span id="date-slider-label">-</span>
+      </h4>
+
+      <div id="date-slider-range" data-range-max="{$kiln:max-year}"
+        data-range-min="{$kiln:min-year}" data-value-min="{$min-year}" data-value-max="{$max-year}"
+        i18n:attr="data-label-suffix" data-label-suffix="A.D.">
+        <xsl:attribute name="data-query">
+          <xsl:call-template name="create_facet_button_url"/>
+        </xsl:attribute>
+        <xsl:text>&#160;</xsl:text>
+      </div>
+      <p class="muted">
+        <i18n:text>Use sliders to select date range</i18n:text>
+      </p>
+    </section>
+  </xsl:template>
+
   <xsl:template match="lst[@name='facet_fields']" mode="search-results">
     <xsl:if test="lst/int">
       <h3>Facets</h3>
 
-      <div class="section-container accordion" data-section="accordion">
-        <xsl:apply-templates mode="search-results"/>
+      <xsl:apply-templates mode="outside-search-results"/>
+
+      <xsl:variable name="facets">
+        <xsl:sequence select="."/>
+      </xsl:variable>
+
+      <div class="section-container accordion" data-section="accordion"
+        data-options="one_up: false;">
+        <xsl:for-each
+          select="'location', 'document-type', 'evidence', 'persnames', 'monument-type', 'material', 'execution', 'institution'">
+          <xsl:variable name="label" select="."/>
+
+          <xsl:for-each select="$facets//lst[starts-with(@name, $label)]">
+            <xsl:apply-templates select="." mode="search-results"/>
+          </xsl:for-each>
+        </xsl:for-each>
       </div>
     </xsl:if>
-  </xsl:template>
-
-  <xsl:template name="timeSlider">
-    <section>
-      <p class="title" data-section-title="">
-        <a href="#">
-          <i18n:text>Date</i18n:text>
-          <xsl:text> </xsl:text>
-          <span id="date-slider-label">-</span>
-        </a>
-      </p>
-      <div class="content" data-section-content="">
-
-
-        <div id="date-slider-range" data-range-max="{$kiln:max-year}"
-          data-range-min="{$kiln:min-year}" data-value-min="{$min-year}"
-          data-value-max="{$max-year}" i18n:attr="data-label-suffix" data-label-suffix="A.D.">
-          <xsl:attribute name="data-query">
-            <xsl:call-template name="create_facet_button_url"/>
-          </xsl:attribute>
-          <xsl:text>&#160;</xsl:text>
-        </div>
-        <p class="muted">
-          <i18n:text>Use sliders to select date range</i18n:text>
-        </p>
-      </div>
-    </section>
   </xsl:template>
 
   <xsl:template name="defaultFacet">
     <section>
       <p class="title" data-section-title="">
-        <a href="#">
+        <a>
+          <xsl:attribute name="href">
+            <xsl:text>#section-</xsl:text>
+            <xsl:value-of select="@name"/>
+          </xsl:attribute>
           <xsl:apply-templates mode="search-results" select="@name"/>
         </a>
       </p>
@@ -137,10 +151,7 @@
 
   <xsl:template match="lst[@name='facet_fields']/lst" mode="search-results">
     <xsl:choose>
-      <xsl:when test="./@name='not-before' and ./following-sibling::lst[@name='not-after'] ">
-        <xsl:call-template name="timeSlider"/>
-      </xsl:when>
-      <xsl:when test="./@name='not-after' "/>
+      <xsl:when test="./@name='not-after' or @name='not-before'"/>
       <xsl:otherwise>
         <xsl:call-template name="defaultFacet"/>
       </xsl:otherwise>
@@ -362,7 +373,7 @@
 
     <xsl:variable name="label">
       <xsl:choose>
-        <xsl:when test="starts-with(., 'text')" >
+        <xsl:when test="starts-with(., 'text')">
           <xsl:value-of select="replace(replace(., '[^:]+:(.*)$', '$1'), '_', ' ')"/>
         </xsl:when>
         <xsl:otherwise>
@@ -408,6 +419,7 @@
   </xsl:template>
 
   <xsl:template match="text()" mode="search-results"/>
+  <xsl:template match="text()" mode="outside-search-results"/>
 
 
   <xsl:template name="create_facet_button_url">
