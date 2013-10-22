@@ -20,7 +20,7 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexPlaces">
-    <dl class="indices-places">
+    <dl class="indices indices-places">
       <xsl:for-each select="//AL//tei:place[@xml:id=(//result//doc//str[@name='places-key'])]">
         <dt>
           <xsl:choose>

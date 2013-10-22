@@ -31,38 +31,64 @@
       </xsl:choose>
     </xsl:variable>
 
-    <dl class="indices-abbrs">
+    <table class="indices indices-abbrs">
+      <thead>
+        <tr>
+          <th><i18n:text>Abbreviaitons</i18n:text></th>
+          <th><i18n:text>Expand to</i18n:text></th>
+          <th><i18n:text>References</i18n:text></th>
+        </tr>
+      </thead>
+      <tbody>
 
-      <xsl:for-each-group select="//doc"
-        group-by="translate(translate(normalize-space(str[@name='abbr']), '[].? - ', ''), $lowercase, $transformation)">
+
+        <xsl:for-each-group select="//doc"
+          group-by="translate(translate(normalize-space(str[@name='abbr']), '[].? - ', ''), $lowercase, $transformation)">
 
 
-        <xsl:if test="not(translate(str[@name='abbr'], ' ','') = '')">
-          <dt>
-            <xsl:value-of select="current-grouping-key()"/>
-          </dt>
-
-          <xsl:for-each-group
-            select="//doc[translate(translate(normalize-space(str[@name='abbr']), '[].? - ', ''), $lowercase, $transformation)=current-grouping-key()]"
-            group-by="translate(normalize-space(str[@name='expan']), '[].? - ', '')">
-            <xsl:sort select="str[@name='expan-sort']"/>
-            <dd>
+          <xsl:if test="not(translate(str[@name='abbr'], ' ','') = '')">
+            <xsl:variable name="group-head">
               <xsl:value-of select="current-grouping-key()"/>
-              <xsl:text> </xsl:text>
-              <ul class="inline-list">
-                <xsl:for-each
-                  select="//doc[translate(normalize-space(str[@name='expan']), '[].? - ', '')=current-grouping-key()]">
-                  <li>
-                    <xsl:call-template name="link2inscription"/>
-                  </li>
-                </xsl:for-each>
-              </ul>
-            </dd>
-          </xsl:for-each-group>
-        </xsl:if>
+            </xsl:variable>
 
-      </xsl:for-each-group>
-    </dl>
+            <xsl:for-each-group
+              select="//doc[translate(translate(normalize-space(str[@name='abbr']), '[].? - ', ''), $lowercase, $transformation)=current-grouping-key()]"
+              group-by="translate(normalize-space(str[@name='expan']), '[].? - ', '')">
+              <xsl:sort select="str[@name='expan-sort']"/>
+              <tr class="index_row">
+                <xsl:choose>
+                  <xsl:when test="position() = 1">
+                    <th>
+                      <xsl:value-of select="$group-head"/>
+                    </th>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <th>
+                      <xsl:text> </xsl:text>
+                    </th>
+                  </xsl:otherwise>
+                </xsl:choose>
+                <td>
+                  <xsl:value-of select="current-grouping-key()"/>
+                </td>
+                <td>
+                  <ul class="inline-list">
+                    <xsl:for-each
+                      select="//doc[translate(normalize-space(str[@name='expan']), '[].? - ', '')=current-grouping-key()]">
+                      <li>
+                        <xsl:call-template name="link2inscription"/>
+                      </li>
+                    </xsl:for-each>
+                  </ul>
+                </td>
+              </tr>
+
+            </xsl:for-each-group>
+          </xsl:if>
+
+        </xsl:for-each-group>
+      </tbody>
+    </table>
 
 
   </xsl:template>
