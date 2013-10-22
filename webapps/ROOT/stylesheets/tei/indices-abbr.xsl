@@ -20,17 +20,6 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexAbbrs">
-    <xsl:variable name="transformation">
-      <xsl:choose>
-        <xsl:when test="$index=('fragment', 'abbr')">
-          <xsl:sequence select="$uppercase"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:sequence select="$lowercase"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-
     <table class="indices indices-abbrs">
       <thead>
         <tr>

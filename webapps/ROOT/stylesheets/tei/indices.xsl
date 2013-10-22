@@ -12,7 +12,16 @@
   <xsl:import href="inscription.xsl"/>
 
   <xsl:template match="/"/>
-
+  <xsl:variable name="transformation">
+    <xsl:choose>
+      <xsl:when test="$index=('fragments', 'abbr')">
+        <xsl:sequence select="$uppercase"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:sequence select="$lowercase"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <xsl:function name="iospe:sort-dur">
     <xsl:param name="w3cdur"/>
@@ -297,7 +306,7 @@
           <xsl:otherwise>
             <xsl:choose>
               <xsl:when test="normalize-space(current-grouping-key())">
-                <xsl:value-of select="$display_key"/>
+                <xsl:value-of select="translate(translate(normalize-space($display_key), '[].? - ', ''), $lowercase, $transformation)"/>
               </xsl:when>
               <xsl:otherwise>
                 <xsl:text>Empty</xsl:text>
