@@ -11,7 +11,7 @@
 
   <!-- set title -->
   <xsl:template name="tocTitleLocations">
-    <i18n:text>Inscriptions by Location</i18n:text>
+    <i18n:text>Inscriptions</i18n:text>
   </xsl:template>
 
   <xsl:template name="generateTocLocations">

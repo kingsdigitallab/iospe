@@ -1332,7 +1332,7 @@
 
     <xsl:if test="normalize-space(@evidence)">
       <xsl:for-each select="tokenize(@evidence, ' ')">
-        <xsl:variable name="evidence" select="translate(., '-', ' ')"/>
+        <xsl:variable name="evidence" select="translate(., '_', ' ')"/>
         <xsl:variable name="evidence-en"
           select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1] = $evidence]"/>
 
