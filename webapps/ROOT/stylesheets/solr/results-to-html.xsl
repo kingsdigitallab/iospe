@@ -5,10 +5,10 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
   xmlns:str="http://exslt.org/strings">
 
-  <xsl:import href="../defaults.xsl"/>
 
-  <xsl:param name="lang"/>
-  <xsl:param name="url"/>
+  <xsl:import href="../defaults.xsl" />
+  <xsl:include href="cocoon://_internal/url/reverse.xsl" />
+
   <xsl:param name="min-year"/>
   <xsl:param name="max-year"/>
 
