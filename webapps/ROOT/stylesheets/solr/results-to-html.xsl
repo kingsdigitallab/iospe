@@ -6,8 +6,8 @@
   xmlns:str="http://exslt.org/strings">
 
 
-  <xsl:import href="../defaults.xsl" />
-  <xsl:include href="cocoon://_internal/url/reverse.xsl" />
+  <xsl:import href="../defaults.xsl"/>
+  <xsl:include href="cocoon://_internal/url/reverse.xsl"/>
 
   <xsl:param name="min-year"/>
   <xsl:param name="max-year"/>
@@ -54,6 +54,7 @@
               <xsl:value-of select="$escaped-fq"/>
             </xsl:with-param>
             <xsl:with-param name="start" select="'0'"/>
+            <xsl:with-param name="context" select="/"/>
           </xsl:call-template>
           <xsl:value-of select="$fq"/>
         </xsl:attribute>
@@ -112,20 +113,15 @@
 
       <xsl:apply-templates mode="outside-search-results"/>
 
-      <xsl:variable name="facets">
-        <xsl:sequence select="."/>
-      </xsl:variable>
+      <xsl:variable name="order"
+        select="'location', 'document-type', 'evidence', 'persnames', 'monument-type', 'material', 'execution', 'institution'"/>
 
       <div class="section-container accordion" data-section="accordion"
         data-options="one_up: false;">
-        <xsl:for-each
-          select="'location', 'document-type', 'evidence', 'persnames', 'monument-type', 'material', 'execution', 'institution'">
-          <xsl:variable name="label" select="."/>
-
-          <xsl:for-each select="$facets//lst[starts-with(@name, $label)]">
-            <xsl:apply-templates select="." mode="search-results"/>
-          </xsl:for-each>
-        </xsl:for-each>
+        <xsl:apply-templates select="current()//lst" mode="search-results">
+          <xsl:sort select="index-of($order, substring-before(@name, concat('-', $lang)))"
+            order="ascending"/>
+        </xsl:apply-templates>
       </div>
     </xsl:if>
   </xsl:template>
