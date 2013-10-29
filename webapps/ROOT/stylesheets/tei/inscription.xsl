@@ -101,6 +101,7 @@
               <xsl:text>Unknwon corpus</xsl:text>
             </xsl:otherwise>
           </xsl:choose>
+          <xsl:text>&#160;</xsl:text>
         </xsl:if>
         <strong>
           <xsl:number format="1" value="number(regex-group(2))"/>

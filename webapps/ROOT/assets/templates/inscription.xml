@@ -19,9 +19,17 @@
     </kiln:block>
 
     <kiln:block name="title">
-      <xsl:value-of
-        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"
-      />
+      <xsl:choose>
+        <xsl:when
+          test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang] != ''">
+          <xsl:value-of
+            select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"
+          />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>&#160;</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
     </kiln:block>
 
     <kiln:block name="page-pre-header">
