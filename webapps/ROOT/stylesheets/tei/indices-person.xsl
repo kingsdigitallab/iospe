@@ -137,6 +137,7 @@
 
             <ul class="inline-list">
               <xsl:for-each select="current-group()">
+                <xsl:sort select="str[@name='tei-id']"/>
                 <li>
                   <xsl:call-template name="link2inscription"/>
                 </li>
@@ -293,6 +294,7 @@
       <ul class="inline-list">
         <xsl:for-each
           select="//result/doc[substring-after(str[@name='persName-ref'], '#') = current()/@xml:id]">
+          <xsl:sort select="str[@name='tei-id']"/>
           <li>
             <xsl:call-template name="link2inscription"/>
           </li>

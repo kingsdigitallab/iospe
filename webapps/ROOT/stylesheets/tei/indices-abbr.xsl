@@ -70,6 +70,7 @@
                   <ul class="inline-list">
                     <xsl:for-each
                       select="//doc[translate(normalize-space(str[@name='expan']), '[].? - ', '')=current-grouping-key()]">
+                      <xsl:sort select="str[@name='tei-id']"/>
                       <li>
                         <xsl:call-template name="link2inscription"/>
                       </li>

@@ -56,6 +56,7 @@
                 <xsl:text> </xsl:text>
                 <ul class="inline-list">
                   <xsl:for-each select="current-group()">
+                    <xsl:sort select="str[@name='tei-id']"/>
                     <li>
                       <xsl:call-template name="link2inscription"/>
                     </li>
