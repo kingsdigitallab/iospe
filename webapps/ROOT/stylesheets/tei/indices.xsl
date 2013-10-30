@@ -239,93 +239,96 @@
       select="if ($index='death') then number(iospe:sort-dur(current-grouping-key(), 'D')) else ()"/>
 
     <xsl:variable name="display_key">
-      <xsl:value-of select="upper-case(substring(current-grouping-key(), 1, 1))"/>
-      <xsl:value-of select="substring(replace(current-grouping-key(), '_' , ' '), 2)"/>
+      <xsl:value-of select="replace(current-grouping-key(), '_' , ' ')"/>
     </xsl:variable>
 
-    <tr class="index_row row">
-      <th class="large-2">
-        <xsl:choose>
-          <xsl:when test="str[@name='num-value']">
-            <xsl:value-of select="$display_key"/>
-            <small>
-              <xsl:text> (</xsl:text>
-              <xsl:value-of select="str[@name='num-value']"/>
-              <xsl:text>)</xsl:text>
-            </small>
-          </xsl:when>
-          <xsl:when test="str[@name='num-atleast'] and str[@name='num-atmost']">
-            <xsl:value-of select="$display_key"/>
-            <small>
-              <xsl:text> (</xsl:text>
-              <xsl:value-of select="str[@name='num-atleast']"/>
-              <xsl:text>-</xsl:text>
-              <xsl:value-of select="str[@name='num-atmost']"/>
-              <xsl:text>)</xsl:text>
-            </small>
-          </xsl:when>
-          <xsl:when test="str[@name='num-atleast']">
-            <xsl:value-of select="$display_key"/>
-            <small>
-              <xsl:text> (</xsl:text>
-              <xsl:value-of select="str[@name='num-atleast']"/>
-              <xsl:text>)</xsl:text>
-            </small>
-          </xsl:when>
-          <xsl:when test="str[@name='num-atmost']">
-            <xsl:value-of select="$display_key"/>
-            <small>
-              <xsl:text> (</xsl:text>
-              <xsl:value-of select="str[@name='num-atmost']"/>
-              <xsl:text>)</xsl:text>
-            </small>
-          </xsl:when>
-          <xsl:when test="$index='death'">
-            <xsl:variable name="y" select="iospe:sort-dur(current-grouping-key(), 'Y')"/>
-            <xsl:variable name="m" select="iospe:sort-dur(current-grouping-key(), 'M')"/>
-            <xsl:variable name="d" select="iospe:sort-dur(current-grouping-key(), 'D')"/>
-            <xsl:if test="$y!=''">
-              <xsl:value-of select="$y"/>
-              <xsl:text> year</xsl:text>
-              <xsl:if test="$y &gt; 1">s</xsl:if>
-              <xsl:text> </xsl:text>
-            </xsl:if>
-            <xsl:if test="$m!=''">
-              <xsl:value-of select="$m"/>
-              <xsl:text> month</xsl:text>
-              <xsl:if test="$m &gt; 1">s</xsl:if>
-              <xsl:text> </xsl:text>
-            </xsl:if>
-            <xsl:if test="$d!=''">
-              <xsl:value-of select="$m"/>
-              <xsl:text> day</xsl:text>
-              <xsl:if test="$m &gt; 1">s</xsl:if>
-              <xsl:text> </xsl:text>
-            </xsl:if>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:choose>
-              <xsl:when test="normalize-space(current-grouping-key())">
-                <xsl:value-of select="translate(translate(normalize-space($display_key), '[].? - ', ''), $lowercase, $transformation)"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:text>Empty</xsl:text>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:otherwise>
-        </xsl:choose>
-      </th>
+    <xsl:if test="str[@name='file'] != ''">
+      <tr class="index_row row">
+        <th class="large-2">
+          <xsl:choose>
+            <xsl:when test="str[@name='num-value']">
+              <xsl:value-of select="$display_key"/>
+              <small>
+                <xsl:text> (</xsl:text>
+                <xsl:value-of select="str[@name='num-value']"/>
+                <xsl:text>)</xsl:text>
+              </small>
+            </xsl:when>
+            <xsl:when test="str[@name='num-atleast'] and str[@name='num-atmost']">
+              <xsl:value-of select="$display_key"/>
+              <small>
+                <xsl:text> (</xsl:text>
+                <xsl:value-of select="str[@name='num-atleast']"/>
+                <xsl:text>-</xsl:text>
+                <xsl:value-of select="str[@name='num-atmost']"/>
+                <xsl:text>)</xsl:text>
+              </small>
+            </xsl:when>
+            <xsl:when test="str[@name='num-atleast']">
+              <xsl:value-of select="$display_key"/>
+              <small>
+                <xsl:text> (</xsl:text>
+                <xsl:value-of select="str[@name='num-atleast']"/>
+                <xsl:text>)</xsl:text>
+              </small>
+            </xsl:when>
+            <xsl:when test="str[@name='num-atmost']">
+              <xsl:value-of select="$display_key"/>
+              <small>
+                <xsl:text> (</xsl:text>
+                <xsl:value-of select="str[@name='num-atmost']"/>
+                <xsl:text>)</xsl:text>
+              </small>
+            </xsl:when>
+            <xsl:when test="$index='death'">
+              <xsl:variable name="y" select="iospe:sort-dur(current-grouping-key(), 'Y')"/>
+              <xsl:variable name="m" select="iospe:sort-dur(current-grouping-key(), 'M')"/>
+              <xsl:variable name="d" select="iospe:sort-dur(current-grouping-key(), 'D')"/>
+              <xsl:if test="$y!=''">
+                <xsl:value-of select="$y"/>
+                <xsl:text> year</xsl:text>
+                <xsl:if test="$y &gt; 1">s</xsl:if>
+                <xsl:text> </xsl:text>
+              </xsl:if>
+              <xsl:if test="$m!=''">
+                <xsl:value-of select="$m"/>
+                <xsl:text> month</xsl:text>
+                <xsl:if test="$m &gt; 1">s</xsl:if>
+                <xsl:text> </xsl:text>
+              </xsl:if>
+              <xsl:if test="$d!=''">
+                <xsl:value-of select="$m"/>
+                <xsl:text> day</xsl:text>
+                <xsl:if test="$m &gt; 1">s</xsl:if>
+                <xsl:text> </xsl:text>
+              </xsl:if>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:choose>
+                <xsl:when test="normalize-space(current-grouping-key())">
+                  <xsl:value-of
+                    select="translate(translate(normalize-space($display_key), '[].?-', ''), $lowercase, $transformation)"
+                  />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:text>Empty</xsl:text>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:otherwise>
+          </xsl:choose>
+        </th>
 
-      <td class="large-10">
-        <ul class="inline-list">
-          <xsl:for-each select="current-group()">
-            <li>
-              <xsl:call-template name="link2inscription"/>
-            </li>
-          </xsl:for-each>
-        </ul>
-      </td>
-    </tr>
+        <td class="large-10">
+          <ul class="inline-list">
+            <xsl:for-each select="current-group()">
+              <li>
+                <xsl:call-template name="link2inscription"/>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </td>
+      </tr>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="sort-option">
