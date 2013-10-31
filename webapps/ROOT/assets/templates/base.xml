@@ -19,9 +19,9 @@
             <kiln:block name="title">Kiln: </kiln:block>
           </title>
           <kiln:block name="css">
-            <link href="{$kiln:assets-path}/foundation/css/normalize.css" rel="stylesheet"
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/normalize.css" rel="stylesheet"
                   type="text/css"/>
-            <link href="{$kiln:assets-path}/foundation/css/foundation.min.css" rel="stylesheet"
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/foundation.min.css" rel="stylesheet"
                   type="text/css"/>
             <link href="{$kiln:assets-path}/scripts/vendor/font-awesome/css/font-awesome.min.css"
                   rel="stylesheet"
@@ -31,7 +31,7 @@
             <link href="{$kiln:assets-path}/styles/site.css" rel="stylesheet" type="text/css"/>
           </kiln:block>
           <kiln:block name="js">
-            <script src="{$kiln:assets-path}/foundation/js/vendor/custom.modernizr.js"
+            <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/vendor/custom.modernizr.js"
               >&#160;</script>
 
           </kiln:block>
@@ -134,11 +134,11 @@
                 <!-- Since we make use of jQuery for other purposes, there
                      is no reason to use Foundation's check whether to use
                      jQuery or Zepto. -->
-                <script src="{$kiln:assets-path}/foundation/js/vendor/jquery.js">&#160;</script>
-                <script src="{$kiln:assets-path}/foundation/js/foundation.min.js">&#160;</script>
-                <script src="{$kiln:assets-path}/foundation/js/foundation/foundation.dropdown.js"
+                <script src="{$kiln:assets-path}/scripts/vendor/jquery/jquery.js">&#160;</script>
+                <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js">&#160;</script>
+                <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.dropdown.js"
                   >&#160;</script>
-                <script src="{$kiln:assets-path}/foundation/js/foundation/foundation.topbar.js"
+                <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.topbar.js"
                   >&#160;</script>
 
                 <kiln:block name="mainjs">

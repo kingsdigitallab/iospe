@@ -12,13 +12,13 @@
           <meta name="viewport" content="width=device-width" />
           <title><kiln:block name="title">Kiln admin: </kiln:block></title>
           <kiln:block name="js">
-            <script src="{$kiln:assets-path}/foundation/js/vendor/custom.modernizr.js">&#160;</script>
+            <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/vendor/custom.modernizr.js">&#160;</script>
             <script src="{$kiln:assets-path}/scripts/admin.js">&#160;</script>
           </kiln:block>
           <kiln:block name="css">
-            <link href="{$kiln:assets-path}/foundation/css/normalize.css"
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/normalize.css"
                   rel="stylesheet" />
-            <link href="{$kiln:assets-path}/foundation/css/foundation.min.css"
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/foundation.min.css"
                   rel="stylesheet" />
             <link href="{$kiln:assets-path}/styles/admin.css"
                   rel="stylesheet" />
@@ -84,13 +84,10 @@
             </kiln:block>
           </footer>
           <kiln:block name="end-js">
-            <script>
-              <xsl:text>document.write('&lt;script src="</xsl:text>
-              <xsl:value-of select="$kiln:assets-path" />
-              <xsl:text>/foundation/js/vendor/' + ('__proto__' in {} </xsl:text>
-              <xsl:text>? 'zepto' : 'jquery') + '.js">&lt;\/script>');</xsl:text>
+            <script src="{$kiln:assets-path}/scripts/vendor/jquery/jquery.js">
+              <xsl:text> </xsl:text>
             </script>
-            <script src="{$kiln:assets-path}/foundation/js/foundation.min.js">
+            <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js">
               <xsl:text> </xsl:text>
             </script>
             <script>$(document).foundation();</script>
