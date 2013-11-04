@@ -311,7 +311,7 @@
                   </xsl:if>
                   <xsl:if test="tei:width">
                     <xsl:value-of
-                      select="if (tei:height) 
+                      select="if (tei:height)
                       then (if ($lang='ru') then '; ширина ' else ', W. ')
                       else (if ($lang='ru') then 'Ширина ' else 'W. ')"/>
                     <xsl:choose>
@@ -327,7 +327,7 @@
                   </xsl:if>
                   <xsl:if test="tei:depth">
                     <xsl:value-of
-                      select="if (tei:height or tei:width) 
+                      select="if (tei:height or tei:width)
                       then (if ($lang='ru') then '; толщина ' else ', Th. ')
                       else (if ($lang='ru') then 'Толщина ' else 'Th. ')"/>
                     <xsl:choose>
@@ -343,7 +343,7 @@
                   </xsl:if>
                   <xsl:if test="tei:dim[@type = 'diameter']">
                     <xsl:value-of
-                      select="if (tei:height or tei:width or tei:depth) 
+                      select="if (tei:height or tei:width or tei:depth)
                       then (if ($lang='ru') then '; диаметр ' else ', Diam. ')
                       else (if ($lang='ru') then 'Диаметр ' else 'Diam. ')"/>
 
@@ -796,20 +796,20 @@
 
 
           <!-- Actual Inscription Data -->
-          <div class="row">
+          <div class="row inscription-data">
             <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
             <div class="large-12 columns">
               <div class="section-container tabs" data-section="tabs">
 
                 <!-- Edition -->
-                <section>
-                  <p class="title" data-section-title="data-section-title">
+                <section class="active">
+                  <p class="title" data-section-title="true">
                     <a href="#edition{if (@n) then @n else '1'}">
                       <xsl:value-of select="if ($lang='ru') then 'Критическое' else 'Edition'"/>
                     </a>
                   </p>
                   <div id="edition{if (@n) then @n else '1'}" class="content"
-                    data-section-content="data-section-content">
+                    data-section-content="true">
                     <!-- Only get current text part (inscription) if necessary -->
                     <xsl:choose>
                       <xsl:when test="@n">
@@ -828,14 +828,14 @@
 
                 <!-- Diplomatic -->
                 <section>
-                  <p class="title" data-section-title="data-section-title">
+                  <p class="title" data-section-title="true">
                     <a href="#diplomatic{if (@n) then @n else '1'}">
                       <xsl:value-of
                         select="if ($lang='ru') then 'Дипломатическое' else 'Diplomatic'"/>
                     </a>
                   </p>
                   <div id="diplomatic{if (@n) then @n else '1'}" class="content"
-                    data-section-content="data-section-content">
+                    data-section-content="true">
                     <xsl:choose>
                       <xsl:when test="@n">
                         <xsl:variable name="tet" select="@n"/>
@@ -853,14 +853,14 @@
 
                 <!-- Epidoc XML -->
                 <section>
-                  <p class="title" data-section-title="data-section-title">
+                  <p class="title" data-section-title="true">
                     <a href="#epidoc{if (@n) then @n else '1'}">
                       <xsl:value-of select="if ($lang='ru') then 'EpiDoc (XML)' else 'EpiDoc (XML)'"
                       />
                     </a>
                   </p>
                   <div id="epidoc{if (@n) then @n else '1'}" class="content"
-                    data-section-content="data-section-content">
+                    data-section-content="true">
                     <pre><code class="language-xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
                   </div>
                 </section>
@@ -868,7 +868,7 @@
                 <!-- Edition in Verse (If it exists)-->
                 <xsl:if test="descendant::tei:lg">
                   <section>
-                    <p class="title" data-section-title="data-section-title">
+                    <p class="title" data-section-title="true">
                       <a href="#verse{if (@n) then @n else '1'}">
                         <xsl:value-of
                           select="if ($lang='ru') then 'В стихотворной форме' else 'Edition in Verse'"
@@ -876,7 +876,7 @@
                       </a>
                     </p>
                     <div id="verse{if (@n) then @n else '1'}" class="content"
-                      data-section-content="data-section-content">
+                      data-section-content="true">
                       <xsl:choose>
                         <xsl:when test="@n">
                           <xsl:variable name="tet" select="@n"/>
