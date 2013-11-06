@@ -24,10 +24,10 @@
       <thead>
         <tr>
           <th>
-            <i18n:text>Abbreviaitons</i18n:text>
+            <i18n:text>Abbreviation</i18n:text>
           </th>
           <th>
-            <i18n:text>Expand to</i18n:text>
+            <i18n:text>Expands to</i18n:text>
           </th>
           <th>
             <i18n:text>References</i18n:text>

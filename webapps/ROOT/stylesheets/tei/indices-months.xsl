@@ -20,50 +20,60 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexMonths">
+    <table class="indices indices-months">
+      <xsl:for-each select="//AL//list">
 
-    <xsl:for-each select="//AL//list">
-      <xsl:if test="count(descendant::month) > 0">
-        <h2>
-          <xsl:value-of select="head"/>
-        </h2>
-        <dl class="indices indices-months">
-          <xsl:for-each select="descendant::month">
-            <dt>
-              <xsl:choose>
-                <xsl:when test="count(name[not(@type)][@xml:lang])>1">
-                  <xsl:value-of select="name[not(@type)][@xml:lang='grc'][1]"/>
-                  <xsl:if test="name[not(@type)][@xml:lang='la']">
-                    <xsl:text> / </xsl:text>
-                    <xsl:value-of select="name[not(@type)][@xml:lang='la'][1]"/>
-                  </xsl:if>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="name[not(@type)][1]"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </dt>
-            <xsl:choose>
-              <xsl:when test="@xml:id">
-                <dd>
-                  <ul class="inline-list">
-                    <xsl:for-each select="//result//doc[str[@name='months-ref']=current()/@xml:id]">
-                      <xsl:sort select="str[@name='tei-id']"/>
-                      <li>
-                        <xsl:call-template name="link2inscription"/>
-                      </li>
-                    </xsl:for-each>
-                  </ul>
-                </dd>
-              </xsl:when>
-              <xsl:otherwise> </xsl:otherwise>
-            </xsl:choose>
-          </xsl:for-each>
-        </dl>
-      </xsl:if>
-    </xsl:for-each>
+        <xsl:if test="count(descendant::month) > 0">
+          <tbody>
+            <tr class="index_row row">
+              <th class="table_sub_heading" colspan="2">
+                <xsl:value-of select="head"/>
+              </th>
+            </tr>
 
 
-
+            <xsl:for-each select="descendant::month">
+              <tr class="index_row row">
+                <th>
+                  <xsl:choose>
+                    <xsl:when test="count(name[not(@type)][@xml:lang])>1">
+                      <xsl:value-of select="name[not(@type)][@xml:lang='grc'][1]"/>
+                      <xsl:if test="name[not(@type)][@xml:lang='la']">
+                        <xsl:text> / </xsl:text>
+                        <xsl:value-of select="name[not(@type)][@xml:lang='la'][1]"/>
+                      </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="name[not(@type)][1]"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </th>
+                <xsl:choose>
+                  <xsl:when test="@xml:id">
+                    <td>
+                      <ul class="inline-list">
+                        <xsl:for-each
+                          select="//result//doc[str[@name='months-ref']=current()/@xml:id]">
+                          <xsl:sort select="str[@name='tei-id']"/>
+                          <li>
+                            <xsl:call-template name="link2inscription"/>
+                          </li>
+                        </xsl:for-each>
+                      </ul>
+                    </td>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <td>
+                      <xsl:text>&#160;</xsl:text>
+                    </td>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </tr>
+            </xsl:for-each>
+          </tbody>
+        </xsl:if>
+      </xsl:for-each>
+    </table>
   </xsl:template>
 
 </xsl:stylesheet>

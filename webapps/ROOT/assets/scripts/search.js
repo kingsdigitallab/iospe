@@ -20,6 +20,7 @@ require(['common'], function(common) {
           min: $date_slider.data('range-min'),
           max: $date_slider.data('range-max'),
           values: [ $date_slider.data('value-min'), $date_slider.data('value-max')],
+          step: 25,
 
           slide: function( event, ui ) {
             update_date_range_label();
