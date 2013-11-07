@@ -178,7 +178,7 @@
       <xsl:when test="@xml:id">
         <xsl:for-each-group select="//result//doc[str[@name='persName-key']=current()/@xml:id]"
           group-by="str[@name='persName-full']">
-          <dd class="inscriptions">
+          <dd>
 
             <span class="secondary label radius">
               <i18n:text>Full Name</i18n:text>
@@ -187,7 +187,20 @@
 
             <xsl:value-of select="current-grouping-key()"/>
           </dd>
-          <dd>
+
+          <!--
+          <dd class="flourit">
+
+            <span class="secondary label radius">
+              <i18n:text>Attested</i18n:text>
+            </span>
+            <xsl:text> </xsl:text>
+
+            <xsl:value-of select="tei:floruit"/>
+            <xsl:text> </xsl:text>
+          </dd>-->
+
+          <dd class="inscriptions">
 
             <span class="secondary label radius">
               <i18n:text>Inscriptions</i18n:text>

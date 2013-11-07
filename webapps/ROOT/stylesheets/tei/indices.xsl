@@ -163,6 +163,8 @@
     <xsl:if test="//letters">
       <xsl:call-template name="letterList"/>
     </xsl:if>
+    
+    <xsl:value-of select="$transformation"/>
 
 
     <!-- grouping is typically done on the field named after the index,
