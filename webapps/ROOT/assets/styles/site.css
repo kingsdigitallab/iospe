@@ -147,10 +147,14 @@ a#griffin:active {
     font-weight: 700;
 }
 
+.top-bar-section ul li:hover>a,
 .top-bar-section ul li.active>a,
+.top-bar-section li a:not(.button):hover,
+.top-bar-section li a:not(.button):active,
 .top-bar-section li a:hover,
 .top-bar-section li a:active {
     background: #e1e1e1;
+    color: #344f5f
 }
 
 .top-bar-section .dropdown  {
@@ -231,9 +235,22 @@ a#griffin:active {
     padding-top: 14px;
 }
 
-/* tabs */
+/* inscription  */
+.inscription .details {
+    margin-bottom: 1em;
+}
 
-.inscription-data .section-container.tabs .content {
+.inscription .details h6,
+.inscription .details  p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.inscription .details p + p {
+    margin-bottom: 1em;
+}
+
+.inscription-data .section-container.tabs .content.epidoc_xml {
     max-height: 300px;
     overflow: auto;
 }
