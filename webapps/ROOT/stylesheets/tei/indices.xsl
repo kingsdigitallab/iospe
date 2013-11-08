@@ -12,6 +12,9 @@
   <xsl:import href="inscription.xsl"/>
 
   <xsl:template match="/"/>
+  
+  <!-- Some indices require an upper-case grouping. Add the list here -->
+  <!-- Pull the right transformation to keep the grouping key unchanged or make it uppercase -->
   <xsl:variable name="transformation">
     <xsl:choose>
       <xsl:when test="$index=('fragments', 'abbr')">
@@ -22,7 +25,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-
+  
+ 
   <xsl:function name="iospe:sort-dur">
     <xsl:param name="w3cdur"/>
     <xsl:param name="request"/>
@@ -146,25 +150,10 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndex">
-    <!-- Some indices require an upper-case grouping. Add the list here -->
-    <!-- Pull the right transformation to keep the grouping key unchanged or make it uppercase -->
-    <xsl:variable name="transformation">
-      <xsl:choose>
-        <xsl:when test="$index=('fragment', 'abbr')">
-          <xsl:sequence select="$uppercase"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:sequence select="$lowercase"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-
     <!-- list of available letters, if present -->
     <xsl:if test="//letters">
       <xsl:call-template name="letterList"/>
     </xsl:if>
-    
-    <xsl:value-of select="$transformation"/>
 
 
     <!-- grouping is typically done on the field named after the index,
@@ -178,13 +167,13 @@
                 -->
           <xsl:when test="//doc/str[@name=$index]">
             <xsl:for-each-group select="//doc"
-              group-by="translate(normalize-space(str[@name=$index]), $lowercase, $transformation)">
+              group-by="translate(translate(normalize-space(str[@name=$index]), '[].?-', ''), $lowercase, $transformation)">
               <xsl:call-template name="index_group"/>
             </xsl:for-each-group>
           </xsl:when>
           <xsl:when test="//doc/arr[@name=concat($index, '-', $lang)]">
             <xsl:for-each-group select="//doc" group-by="arr[@name=concat($index, '-', $lang)]/str">
-              <xsl:call-template name="index_group"/>
+              pork <xsl:call-template name="index_group"/>
             </xsl:for-each-group>
           </xsl:when>
           <!-- There is no default, if nothing is displayed something is very wrong in the indices -->
@@ -308,9 +297,7 @@
             <xsl:otherwise>
               <xsl:choose>
                 <xsl:when test="normalize-space(current-grouping-key())">
-                  <xsl:value-of
-                    select="translate(translate(normalize-space($display_key), '[].?-', ''), $lowercase, $transformation)"
-                  />
+                  <xsl:value-of select="$display_key"/>
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:text>Empty</xsl:text>
