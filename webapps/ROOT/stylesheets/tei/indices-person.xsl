@@ -178,31 +178,34 @@
       <xsl:when test="@xml:id">
         <xsl:for-each-group select="//result//doc[str[@name='persName-key']=current()/@xml:id]"
           group-by="str[@name='persName-full']">
+          <xsl:variable name="persName-key">
+            <xsl:value-of select="str[@name='persName-key']"/>
+          </xsl:variable>
           <dd>
 
-            <span class="secondary label radius">
+            <span class="person_detail_label">
               <i18n:text>Full Name</i18n:text>
             </span>
             <xsl:text> </xsl:text>
 
             <xsl:value-of select="current-grouping-key()"/>
           </dd>
+          <xsl:if test="//tei:person[@xml:id=$persName-key]/tei:floruit">
+            <dd class="floruit">
 
-          <!--
-          <dd class="flourit">
+              <span class="person_detail_label">
+                <i18n:text>Attested</i18n:text>
+              </span>
+              <xsl:text> </xsl:text>
 
-            <span class="secondary label radius">
-              <i18n:text>Attested</i18n:text>
-            </span>
-            <xsl:text> </xsl:text>
-
-            <xsl:value-of select="tei:floruit"/>
-            <xsl:text> </xsl:text>
-          </dd>-->
+              <xsl:value-of select="//tei:person[@xml:id=$persName-key]/tei:floruit"/>
+              <xsl:text> </xsl:text>
+            </dd>
+          </xsl:if>
 
           <dd class="inscriptions">
 
-            <span class="secondary label radius">
+            <span class="person_detail_label">
               <i18n:text>Inscriptions</i18n:text>
             </span>
             <xsl:text> </xsl:text>
@@ -251,7 +254,7 @@
 
 
     <dd class="persName">
-      <span class="secondary label radius">
+      <span class="person_detail_label">
         <i18n:text>Name</i18n:text>
       </span>
       <xsl:text> </xsl:text>
@@ -261,11 +264,10 @@
         <xsl:text> </xsl:text>
       </xsl:for-each>
     </dd>
-
     <xsl:if test="tei:floruit[tei:seg[@xml:lang=$lang]]">
       <dd class="flourit">
 
-        <span class="secondary label radius">
+        <span class="person_detail_label">
           <i18n:text>Attested</i18n:text>
         </span>
         <xsl:text> </xsl:text>
@@ -279,7 +281,7 @@
     <xsl:if test="tei:occupation">
       <dd class="ocupation">
 
-        <span class="secondary label radius">
+        <span class="person_detail_label">
           <i18n:text>Occupation</i18n:text>
         </span>
         <xsl:text> </xsl:text>
@@ -292,7 +294,7 @@
     <xsl:if
       test="count(//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]) > 0">
       <dd class="relations">
-        <span class="secondary label radius">
+        <span class="person_detail_label">
           <i18n:text>Relationship</i18n:text>
         </span>
         <xsl:text> </xsl:text>
@@ -358,7 +360,7 @@
     </xsl:if>
 
     <dd class="inscriptions">
-      <span class="secondary label radius">
+      <span class="person_detail_label">
         <i18n:text>Inscriptions</i18n:text>
       </span>
       <xsl:text> </xsl:text>
