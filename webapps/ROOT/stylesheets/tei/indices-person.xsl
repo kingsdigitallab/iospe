@@ -26,18 +26,37 @@
   </xsl:template>
 
   <xsl:template name="group_listing">
-    <xsl:for-each select="//AL//tei:listPerson">
-      <h2>
-        <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
-      </h2>
+    <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
 
-      <dl class="indices indices-person">
-        <xsl:for-each
-          select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
-          <xsl:call-template name="character"/>
-        </xsl:for-each>
-      </dl>
-    </xsl:for-each>
+      <xsl:for-each select="//AL//tei:listPerson">
+        <section>
+          <xsl:attribute name="class">
+            <xsl:if test="position() = 1">
+              <xsl:text>active</xsl:text>
+            </xsl:if>
+          </xsl:attribute>
+          <p class="title" data-section-title="true">
+            <a>
+              <xsl:attribute name="href">
+                <xsl:text>>sort=</xsl:text>
+                <xsl:value-of select="$sort" />
+                <xsl:text>#</xsl:text>
+                <xsl:value-of select="translate(tei:head[@xml:lang=$lang], ' /\[](){}-.,!?', '_')"/>
+              </xsl:attribute>
+              <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
+            </a>
+          </p>
+          <div class="content" data-section-content="true">
+            <dl class="indices indices-person">
+              <xsl:for-each
+                select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
+                <xsl:call-template name="character"/>
+              </xsl:for-each>
+            </dl>
+          </div>
+        </section>
+      </xsl:for-each>
+    </div>
   </xsl:template>
 
 
