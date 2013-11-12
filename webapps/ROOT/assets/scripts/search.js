@@ -2,38 +2,38 @@
 
 require(['common'], function(common) {
   require(['app/main', 'jquery-ui', 'purl'],
-    function (main, jqui, purl) {
-      function update_date_range_label() {
-        var $date_slider = $( "#date-slider-range" ),
-          $label = $( "#date-slider-label" ),
-          ui_values = $date_slider.slider('option', 'values'),
+    function(main, jqui, purl) {
+      function update_date_range_label(values) {
+        var $date_slider = $("#date-slider-range"),
+          $label = $("#date-slider-label"),
           suffix = $date_slider.data('label-suffix');
 
-        $label.text( "" + ui_values[0] + " - " + ui_values[1] + ' ' + suffix);
+        $label.text("" + values[0] + " - " + values[1] + ' ' + suffix);
       }
 
       function setup_date_slider() {
-        var $date_slider = $( "#date-slider-range" );
+        var $date_slider = $("#date-slider-range");
 
         $date_slider.slider({
           range: true,
           min: $date_slider.data('range-min'),
           max: $date_slider.data('range-max'),
-          values: [ $date_slider.data('value-min'), $date_slider.data('value-max')],
+          values: [$date_slider.data('value-min'), $date_slider.data('value-max')],
           step: 25,
 
-          slide: function( event, ui ) {
-            update_date_range_label();
+          create: function() {
+            update_date_range_label($(this).slider('values'));
           },
 
-          stop: function (event, ui) {
+          slide: function(event, ui) {
+            update_date_range_label(ui.values);
+          },
+
+          stop: function(event, ui) {
             var new_relative_location = '../../' + ui.values[0] + '/' + ui.values[1] + '/?' + $date_slider.data('query');
             document.location.href = new_relative_location;
           }
         });
-
-        update_date_range_label();
-
       }
 
       setup_date_slider();
