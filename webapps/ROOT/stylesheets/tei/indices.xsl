@@ -64,6 +64,11 @@
       </xsl:when>
     </xsl:choose>
   </xsl:function>
+  
+  <xsl:function name="iospe:normalise_id">
+    <xsl:param name="string" />
+    <xsl:value-of select="lower-case(replace($string, '\W+', '_'))" />
+  </xsl:function>
 
   <!-- set title -->
   <xsl:template name="indexTitle">
