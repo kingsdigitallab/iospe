@@ -90,7 +90,12 @@
       <h4>
         <i18n:text>Date</i18n:text>
         <xsl:text> </xsl:text>
-        <span id="date-slider-label">-</span>
+        <span id="date-slider-label">
+          <xsl:value-of select="$min-year"></xsl:value-of>
+          <xsl:text> - </xsl:text>
+          <xsl:value-of select="$max-year"></xsl:value-of>
+          <xsl:text> A.D.</xsl:text>
+        </span>
       </h4>
 
       <div id="date-slider-range" data-range-max="{$kiln:max-year}"
