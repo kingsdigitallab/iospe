@@ -12,7 +12,7 @@
   <xsl:import href="inscription.xsl"/>
 
   <xsl:template match="/"/>
-  
+
   <!-- Some indices require an upper-case grouping. Add the list here -->
   <!-- Pull the right transformation to keep the grouping key unchanged or make it uppercase -->
   <xsl:variable name="transformation">
@@ -25,8 +25,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-  
- 
+
+
   <xsl:function name="iospe:sort-dur">
     <xsl:param name="w3cdur"/>
     <xsl:param name="request"/>
@@ -64,7 +64,7 @@
       </xsl:when>
     </xsl:choose>
   </xsl:function>
-  
+
   <xsl:function name="iospe:normalise_id">
     <xsl:param name="string" />
     <xsl:value-of select="lower-case(replace($string, '\W+', '_'))" />
@@ -178,7 +178,7 @@
           </xsl:when>
           <xsl:when test="//doc/arr[@name=concat($index, '-', $lang)]">
             <xsl:for-each-group select="//doc" group-by="arr[@name=concat($index, '-', $lang)]/str">
-              pork <xsl:call-template name="index_group"/>
+              <xsl:call-template name="index_group"/>
             </xsl:for-each-group>
           </xsl:when>
           <!-- There is no default, if nothing is displayed something is very wrong in the indices -->
