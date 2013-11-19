@@ -39,9 +39,9 @@
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
                            <objectType xml:lang="en">Wall.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m10">глина.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
                            <material xml:lang="en">Clay.</material>
-                           <p xml:lang="ru">Был уничтожен полностью, кроме остатков первого слова.</p>
+                           <p xml:lang="ru">Была уничтожена полностью, кроме остатков первого слова.</p>
                            <p xml:lang="en">It was completely destroyed, except for remnants of the first word.</p>
                         </support>
                      </supportDesc>
@@ -72,14 +72,14 @@
                      </origDate>
                   </origin>
                   <provenance type="autopsy">
-                     <seg xml:lang="ru">non vidi</seg>
-                     <seg xml:lang="en">non vidi</seg>
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
                   </provenance>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Керчь.</placeName>
                         <rs type="circumstances">1896 г., случайная находка.</rs>
-                        <rs type="context">г. Митридат, дом Я. Заварзина, двор, катакомба.</rs>
+                        <rs type="context">Г. Митридат, дом Я. Заварзина, двор, катакомба.</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Kerch.</placeName>
@@ -110,7 +110,7 @@
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!-- Сборник --> <ptr target="b0132"/>,  <biblScope>85а</biblScope></bibl>
+               <bibl n="L1"><!-- Сборник --><ptr target="b0132"/>, <biblScope>85а</biblScope></bibl>
             </listBibl>
          </div>
          <div type="translation" xml:lang="ru">
@@ -120,9 +120,9 @@
             <p>Lord, have mercy for your servant Pappos.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p> Надпись найдена и уничтожена мальчиками, один из которых и скопировал ее, с некоторым смешением сходных букв. Шрифт описан по публикации 
+            <p>Надпись найдена и уничтожена мальчиками, один из которых и скопировал ее, с некоторым смешением сходных букв. Шрифт описан по публикации 
                Латышева, который видел копию, и счел ее относящейся к V–VI вв.</p>
-            <p> 1–4. Относительно формулы см. IV.3.E.b. Надпись можно сблизить по формуле со «Святый Боже …, помилуй раба твоего Савага» в <ref type="inscription">V 258</ref> — 
+            <p>1–4. Относительно формулы см. <ref type="introduction">IV.3.E.b</ref>. Надпись можно сблизить по формуле со «Святый Боже …, помилуй раба твоего Савага» в <ref type="inscription">V 258</ref> — 
                    учитывая местонахождение данной надписи, возможно предположить, что она имела характер надгробной.</p>
             <p>5. Имя Папп в христианских надписях зафиксировано только в LBW V, № 1484. Однако оно совершенно типично для Боспора и встречается 
                    в КБН 39 раз.</p>
@@ -132,16 +132,26 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος">Κύριε</w></persName>, <w lemma="ἐλεέω">ἐλέ<lb n="2" break="no"/>ησον</w> <w lemma="ὁ">τ<lb n="3" break="no"/>ὸν</w><w lemma="δοῦλος"> δοῦλ<lb n="4" break="no"/>όν</w> <w lemma="σύ">σου</w>
+               <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος">Κύριε</w></persName>, 
+               <w lemma="ἐλεέω">ἐλέ<lb
+                  n="2" break="no"/>ησον</w> <w lemma="ὁ">τ<lb
+                     n="3" break="no"/>ὸν</w> <w lemma="δοῦλος">δοῦλ<lb
+                        n="4" break="no"/>όν</w> <w lemma="σύ">σου</w>
                <lb n="5"/><persName type="attested" ref="person327"><name nymRef="Πάππος">Πάππον</name></persName>.
-               <!--<lb n="6"/>Копия:
-               <lb n="7"/>ΚΥΡΙΕΕΑΕ
-               <lb n="8"/>ΗΟΟΝΤ
-               <lb n="9"/>ΟΝΔΟΥΑ
-               <lb n="10"/>ΟΝΧΟΥ
-               <lb n="11"/>ΠΑΠΠΟΜ-->
-            </ab>
+             </ab>
          </div>
+         
+         <div type="apparatus">
+            <listApp>
+               <app><note xml:lang="en">Copy: </note><note xml:lang="ru">Копия: </note>
+                  <rdg><lb n="1"/>ΚΥΡΙΕΕΑΕ
+               <lb n="2"/>ΗΟΟΝΤ
+               <lb n="3"/>ΟΝΔΟΥΑ
+               <lb n="4"/>ΟΝΧΟΥ
+               <lb n="5"/>ΠΑΠΠΟΜ</rdg></app>
+            </listApp>
+         </div>
+         
       </body>
    </text>
 </TEI>

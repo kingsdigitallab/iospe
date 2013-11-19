@@ -41,7 +41,8 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">На лицевой стороне нишка, снизу шип, на тыльной стороне коса, на левом боку стилизованное изображение пальмы. Обломан сверху и справа.</p>
+                           <p xml:lang="ru">На лицевой стороне нишка, снизу шип, на тыльной стороне коса, на левом боку стилизованное изображение пальмы. 
+                              Обломана сверху и справа.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height>32,0</height>
@@ -116,9 +117,7 @@
    <text>
       <body>
          <div type="bibliography">
-            <listBibl>
-               <bibl/>
-            </listBibl>
+            <p/>
          </div>
          <div type="translation" xml:lang="ru">
             <p>Почил раб Христов Иоанн, сын К<gap reason="ellipsis"/>, 6 декабря, в день святого Николая, в 69.. году.</p>
@@ -128,7 +127,7 @@
          </div>
          <div type="commentary" xml:lang="ru">
             <p> Надпись, по всей видимости, происходит с позднесредневекового могильника на плато Фыцка. </p>
-                <p> 1–3. Относительно формулы см. IV.3.F.e. Вариант «раб Христов» характерен обычно для 
+            <p> 1–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. Вариант «раб Христов» характерен обычно для 
                    клириков (см. комм. к <ref type="inscription">V 197</ref>).</p>
                 <p>6–7. Уточнение по празднику в византийской эпиграфике Северного Причерноморья не 
                     встречается. Ср. надпись 965 г. из Сентинского храма в Карачаево-Черкессии (Белецкий, 
@@ -142,12 +141,19 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκυ<supplied reason="lost">μήθι</supplied></w>
-               <lb n="2"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλ<supplied reason="lost">ος</supplied></w> <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
-               <lb n="3"/><persName type="divine" key="#iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName> <persName type="attested" ref="#person207"><name nymRef="Ἰωάννης">Ἰωά<supplied reason="lost">ννης</supplied></name>
+               <lb n="2"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλ<supplied reason="lost">ος</supplied></w>
+               <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
+               <lb n="3"/><persName type="divine" key="#iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName>
+               <persName type="attested" ref="#person207"><name nymRef="Ἰωάννης">Ἰωά<supplied reason="lost">ννης</supplied></name>
                <lb n="4"/><w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person208"><name><seg part="I">Κ</seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="5"/><w lemma="ἐν">ἐν</w> <date><w lemma="μήν">μην<supplied reason="lost">ὶ</supplied></w> <rs type="month" ref="dec"><w lemma="Δεκέμβριος"><supplied reason="lost">Δεκεμβ</supplied><lb n="6" break="no"/>ρίου</w></rs> <num value="6">ς</num>, <w lemma="ἡμέρα"><supplied reason="lost">ἡμέρᾳ</supplied></w> <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
-               <lb n="7"/><persName type="divine" key="stnicolas"><w lemma="ἅγιος">ἁγίου</w> <persName type="divine" key="stnicolas"><name nymRef="Νικόλαος">Νε<supplied reason="lost">ικολάου</supplied></name></persName></persName>,
-               <lb n="8"/><w lemma="ἔτος">ἔτους</w> <num value="69">ςϠ</num><gap reason="lost" quantity="2" unit="character"/> </date>.
+               <lb n="5"/><w lemma="ἐν">ἐν</w> <date><w lemma="μήν">μην<supplied reason="lost">ὶ</supplied></w>
+                  <rs type="month" ref="dec"><w lemma="Δεκέμβριος"><supplied reason="lost">Δεκεμβ</supplied><lb
+                     n="6" break="no"/>ρίου</w></rs> <num value="6">ς</num>, 
+                  <w lemma="ἡμέρα"><supplied reason="lost">ἡμέρᾳ</supplied></w> 
+                  <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
+               <lb n="7"/><persName type="divine" key="stnicolas"><w lemma="ἅγιος">ἁγίου</w> 
+                  <persName type="divine" key="stnicolas"><name nymRef="Νικόλαος">Νε<supplied reason="lost">ικολάου</supplied></name></persName></persName>,
+               <lb n="8"/><w lemma="ἔτος">ἔτους</w> <num value="69">ςϠ</num><gap reason="lost" quantity="2" unit="character"/></date>.
             </ab>
          </div>
       </body>

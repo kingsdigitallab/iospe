@@ -71,8 +71,8 @@
                      </origDate>
                   </origin>
                   <provenance type="autopsy">
-                     <seg xml:lang="ru">non vidi</seg>
-                     <seg xml:lang="en">non vidi</seg>
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
                   </provenance>
                   <provenance type="found">
                      <seg xml:lang="ru">
@@ -112,16 +112,16 @@
          <div type="bibliography">
             <listBibl>
                 <bibl n="L1"><!-- Виноградов 2004--><ptr target="b0042"/>, <biblScope>123–130</biblScope></bibl>
-                  <bibl n="1.2."> <!-- Виноградов 2005а--><ptr target="b0043"/>, <biblScope>431–432</biblScope></bibl>
+                  <bibl n="1.2."><!-- Виноградов 2005а--><ptr target="b0043"/>, <biblScope>431–432</biblScope></bibl>
             </listBibl>
          </div>
          <div type="apparatus">
              <p>
-               <!--<app>5: γ´ Kourtsian apud Vinogradov.</app> -->
+               <app loc="5"><rdg>γ´ <note>Kourtsian apud Vinogradov</note></rdg></app>
             </p>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Почил во блаженной и раб Божий Ла..ули-бей, <!--первого разряда третьей части--><supplied reason="lost" cert="low">what is this about</supplied>, 17 (?) мая, в пятницу.</p>
+            <p>Почил во блаженной и раб Божий Ла..ули-бей, <!--первого разряда третьей части,--><!--<supplied reason="lost" cert="low">what is this about</supplied>--> 17 (?) мая, в пятницу.</p>
          </div>
          <div type="translation" xml:lang="en">
             <p>Fell asleep in blessedness, and a servant of God, La..ouli-bei, <!--first category, third part-->, 17th (?) May, on Friday.</p>
@@ -132,7 +132,7 @@
                Эски-Керменской экспедиции 1937 г. Из раскопа № V (Линия обороны)» (РА ИИМК РАН. Ф. 2. Оп. 1. 1937. Д. 182. Л. 84 об, 
                № 202; любезно указано С.В. Харитоновым), согласно которой камень был передан в ГАИМК, а также в ряде других 
                рукописей Репникова. Негативы и фотографии надписи хранятся в ФА ИИМК РАН (II–39479, II–40870; О.1344.2, O.1373.49).</p>
-                <p> 1–3. Относительно формулы см. IV.3.F.e. Несколько необычно выглядит сокращение слова ἐν, которое похоже скорее на 
+                <p> 1–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. Несколько необычно выглядит сокращение слова ἐν, которое похоже скорее на 
                    типичную аббревиатуру καί. Пропуск слова “память” встречается в <ref type="inscription">V 139</ref>.  </p>
                 <p> 3–4. В имени усопшего пропали две буквы, однако хорошо читаются как начало и конец имени, так и татарский титул 
                    “бей”, встречающийся также, в несколько других вариантах, в <ref type="inscription">V 158</ref> и <ref type="inscription">V 165</ref>.  </p>
@@ -153,10 +153,18 @@
             <ab>
                <lb n="1"/><w lemma="κοιμάω">Ἐκημί<unclear>θ</unclear>ι</w> <w lemma="ἐν"><expan><ex>ἐν</ex></expan></w>
                <lb n="2"/><w lemma="μακάριος">μακαρίᾳ</w> <w lemma="καί">κὲ</w>
-               <lb n="3"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>
-                <persName type="attested" ref="#person273"><name nymRef="Λαουλι-βει">Λα<gap reason="illegible" quantity="1" unit="character"/><lb n="4" break="no"/><gap reason="illegible" quantity="1" unit="character"/>ουλι-βει</name></persName>,<w>ὡ</w> <w lemma="καί">κὲ</w> <w part="I">πρ<unclear>ό</unclear></w><lb n="5" break="no"/><w lemma="ὁ">της</w> <w lemma="θέσις">θέσεος</w> <w lemma="ὁ">τοῦ</w> <num value="3">γ</num>
-               <lb n="6"/><w lemma="μέρος"><unclear>μέρ</unclear>ους</w>, <date><w>μηνὴ</w> <rs type="month" ref="mai"><w lemma="Μάϊος">μ<supplied reason="lost">αΐ</supplied>ο</w></rs> <num value="17">ι<unclear>ζ</unclear><note>?</note></num>,
-               <lb n="7"/><w lemma="ἡμέρα">ἡμέρᾳ</w> <w lemma="παρασκευή">παρασκ<supplied reason="lost">ευ</supplied><unclear>ῇ</unclear></w></date>.
+               <lb n="3"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w>
+               <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>
+                <persName type="attested" ref="#person273"><name nymRef="Λαουλι-βει">Λα<gap
+                   reason="illegible" quantity="1" unit="character"/><lb
+                      n="4" break="no"/><gap reason="illegible" quantity="1" unit="character"/>ουλι-βει</name></persName>,
+               <w>ὡ</w> <w lemma="καί">κὲ</w> <w>πρ<unclear>ό</unclear><lb n="5" break="no"/>της</w>
+               <w lemma="θέσις">θέσεος</w> <w lemma="ὁ">τοῦ</w> <num value="3">γ</num>
+               <lb n="6"/><w lemma="μέρος"><unclear>μέρ</unclear>ους</w>, <date><w lemma="μήν">μηνὴ</w>
+                  <rs type="month" ref="mai"><w lemma="Μάϊος">μ<supplied reason="lost">αΐ</supplied>ο</w></rs>
+                  <num value="17">ι<unclear>ζ</unclear><note>?</note></num>,
+               <lb n="7"/><w lemma="ἡμέρα">ἡμέρᾳ</w> 
+                  <w lemma="παρασκευή">παρασκ<supplied reason="lost">ευ</supplied><unclear>ῇ</unclear></w></date>.
             </ab>
          </div>
       </body>
