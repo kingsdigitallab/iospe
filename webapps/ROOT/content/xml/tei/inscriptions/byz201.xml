@@ -134,6 +134,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>
          <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
          <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
@@ -147,6 +148,14 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz201">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -230,7 +239,7 @@
             </div>
             <div type="textpart" subtype="inscription" n="2">
                <ab>
-                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>, 
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, 
                   <w lemma="βοηθέω">βοήθη</w> <w lemma="ὁ">τῷ</w> <w lemma="δοῦλος">δούλῳ</w>
                   <lb n="2"/><w lemma="σύ">σου</w> <persName type="attested" ref="#person266"><name nymRef="Βλάσειος">Βλασείῳ</name></persName>
                   <persName type="attested"><name><seg part="Y">Ητ<gap reason="illegible" quantity="1" unit="character"/>ῇ</seg></name></persName>.
@@ -238,7 +247,7 @@
             </div>
             <div type="textpart" subtype="inscription" n="3">
                <ab>
-                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>, 
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, 
                   <w lemma="βοηθέω">β<supplied reason="lost">ο</supplied>ήθει</w> 
                   <persName type="attested" ref="#person268"><name nymRef="Σωφρόνιος">Σοφ<unclear>ρ</unclear><supplied reason="lost">ο</supplied><unclear>ν</unclear><supplied reason="lost">ί</supplied>ῳ</name></persName>
                   <gap reason="lost" extent="unknown" unit="character"/> <w lemma="διά"><supplied reason="lost">δι</supplied><lb n="2" break="no"/>ὰ</w> <w lemma="ὁ">τὴν</w> <w>ἱστ<unclear>ο͂σ</unclear><supplied reason="lost">αν</supplied></w>,

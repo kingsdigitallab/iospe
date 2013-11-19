@@ -55,7 +55,7 @@
                      <layoutDesc>
                         <layout ana="f1" n="1">
                            <seg xml:lang="ru">На верхней рамке (стесана).</seg>
-                           <seg xml:lang="en">On the top frame (which has been horizontally cut leaving only the bottom ends of letters).</seg>
+                           <seg xml:lang="en">On the top frame (which has been horizontally cut leaving only the bottoms of letters).</seg>
                         </layout>
                         <layout ana="f1" n="2">
                            <seg xml:lang="ru">Под верхней рамкой.</seg>
@@ -106,9 +106,9 @@
                         <rs type="context">Некрополь у Карантинной бухты, склеп № 784, засыпь перед входом.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">1896, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
-                        <rs type="context">Necropolis by the Quarantine Bay, vault no. 784, filling in front of the entrance.</rs>
+                        <rs type="context">Necropolis by the Quarantine Bay, vault no. 784, <!--filling--> in front of the entrance.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -120,6 +120,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-10-24" who="TW">Image code added</change>
          <change when="2013-04-04" who="AG">bibliography updated</change>
           <change when="2013-01-15" who="AL">inserted English names in commentary</change>
          <change when="2012-08-22" who="AG">1 line translated</change>
@@ -139,6 +140,14 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz56">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -227,16 +236,16 @@
             </div>
             <div type="textpart" n="2">
                <p>See commentary to <ref type="inscription">V 56</ref>.1. </p>
-                <p>The last letter before the break is certainly a lunate epsilon: its middle hast is clearly visible. In the editio princeps, Latyshev failed
-                to observe this, but in the republication he fixed his reading. Latyshev's restoration "to Saint Peter" seems less preferable, since Peter, unlike Christ, is 
-                represented without a halo.</p>
+                <p>The last letter before the break is certainly a lunate epsilon: its middle stroke is clearly visible. In the editio princeps, Latyshev had failed
+                to observe this, but in the republication he fixed his original reading. Latyshev's restoration "to Saint Peter" is not as attractive, since Peter, 
+                unlike Christ, is represented without a halo.</p>
             </div>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <div type="textpart" subtype="inscription" n="1">
                <ab>
                   <lb n="1"/><w lemma="ὁ"><supplied reason="lost">Ὁ</supplied></w>
-                  <persName type="divine" key="iesous"><w lemma="κύριος"><expan><abbr><unclear>κ</unclear></abbr><ex>ύριο</ex><abbr><unclear>ς</unclear></abbr></expan></w>
+                  <persName type="divine" key="iesous"><roleName><w lemma="κύριος"><expan><abbr><unclear>κ</unclear></abbr><ex>ύριο</ex><abbr><unclear>ς</unclear></abbr></expan></w></roleName>
                      <name nymRef="Ἰησοῦς"><expan><abbr><unclear>Ἰε</unclear></abbr><ex>σοῦ</ex><abbr><unclear>ς</unclear></abbr></expan></name></persName>
                   <w lemma="δίδωμι"><unclear>δ</unclear><supplied reason="lost">ιδοὺς</supplied></w>
                   <supplied reason="lost"><w lemma="χείρ">χεῖρα</w>
@@ -247,7 +256,7 @@
             <div type="textpart" subtype="inscription" n="2">
                <ab>
                   <lb n="1"/><g type="stauros"/> <w lemma="ὁ">Ὁ</w>
-                  <persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>κ</abbr><ex>ύριο</ex><abbr>ς</abbr></expan></w>
+                  <persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>κ</abbr><ex>ύριο</ex><abbr>ς</abbr></expan></w></roleName>
                      <name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name></persName>
                   <g type="stauros"/> <w lemma="δίδωμι">διδοὺς</w> <w lemma="χείρ">χε<supplied reason="lost">ῖρα</supplied></w>
                   <supplied reason="lost"><persName type="divine" key="stpeter"><name nymRef="Πέτρος">Πέτρῳ</name></persName>

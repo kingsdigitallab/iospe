@@ -40,7 +40,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Крест с расширяющимися концами. Разбит на 2 части, отбит нижний рукав, часть букв стерта.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">Stone cross with widening arms. Broken in two parts, with missing bottom arm, and some letters effaced.</p>
                            <dimensions>
                               <height>39,5</height>
                               <width>51,5</width>
@@ -51,18 +51,20 @@
                      <layoutDesc>
                         <layout ana="f1" n="1">
                            <seg xml:lang="ru">На верхнем рукаве креста.</seg>
-                           <seg xml:lang="en">On the upper arm of the cross.</seg>
+                           <seg xml:lang="en">On the top arm of the cross.</seg>
                         </layout>
                         <layout ana="f1" n="2">
                            <seg xml:lang="ru">На перекрестье, крестообразно.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the intersection, crosswise.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклоненной влево перекладиной, эпсилон и сигма прямоугольные, мю с укороченной серединой, омикрон круглый и ромбовидный, удлиненное ро.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклоненной влево перекладиной, эпсилон и 
+                           сигма прямоугольные, мю с укороченной серединой, омикрон круглый и ромбовидный, удлиненное ро.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with crossbar slanting left, rectangular epsilon and sigma, mu <!--with shortened middle-->, round and diamond omicron,
+                        elongated rho.</seg>
                         <height unit="cm">1,0–1,3.</height>
                      </handNote>
                      <handNote n="2">
@@ -100,20 +102,21 @@
                         <rs type="context">Некрополь у Карантинной бухты, склеп № 1951, снаружи, перед входом.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">1905, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
                         <rs type="context">Necropolis at Quarantine Bay, vault no. 1951, outside, in front of the entrance.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
+       <revisionDesc>
+         <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-03-13" who="NG">iminor corrections 9in Greek lemmata</change>
           <change when="2013-01-15" who="AL">inserted English names in commentary</change>
          <change when="2012-08-22" who="AG">translation in 'context' corrected</change>
@@ -132,6 +135,14 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz63">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -191,7 +202,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <div type="textpart" subtype="inscription" n="1">
                <ab>
-                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><supplied reason="lost">Κύρι</supplied>ε</w></persName>, <w lemma="ἀναπαύω">ἀν<unclear>ά</unclear>παυσον</w> <w lemma="ὁ">τ<supplied reason="lost">ὰς</supplied></w>
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><supplied reason="lost">Κύρι</supplied>ε</w></roleName></persName>, <w lemma="ἀναπαύω">ἀν<unclear>ά</unclear>παυσον</w> <w lemma="ὁ">τ<supplied reason="lost">ὰς</supplied></w>
                   <lb n="2"/><w lemma="ψυχή"><supplied reason="lost">ψυ</supplied>χὰς</w> <w lemma="ὁ">τὰς</w> <w lemma="ἐνθάδε">ἐνθά<supplied reason="lost">δ</supplied>ε</w>
                   <lb n="3"/><w><supplied reason="lost">κ</supplied><unclear>α</unclear>τακιμένας</w>, <w lemma="ἀμήν">ἀμήν</w>·
                   <lb n="4"/><persName type="attested" ref="#person51"><name nymRef="Δαμιανός"><supplied reason="lost">Δ</supplied>αμιανοῦ</name></persName> <w lemma="καί">καὶ</w> <persName type="attested" ref="#person52"><name nymRef="Μαργαρίτη">Μαρ<lb n="5" break="no"/><unclear>γ</unclear>αρίτος</name></persName> <w lemma="καί">καὶ</w> <w lemma="ὁ">το͂ν</w>

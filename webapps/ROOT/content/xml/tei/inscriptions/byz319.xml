@@ -46,7 +46,8 @@
                                     <material xml:lang="ru" ref="material-search.xml#m9">Ракушечник.</material>
                                     <material xml:lang="en">Shell-rock.</material>
                                     <!-- Описание и состояние документа -->
-                                    <p xml:lang="ru">Стела с навершием в виде круга со сложно профилированным валиком по краю и углублением для креста в центре. Обломан сверху и справа (?).</p>
+                                    <p xml:lang="ru">Стела с навершием в виде круга со сложно профилированным валиком по краю и углублением для креста в центре. 
+                                        Обломана сверху и справа (?).</p>
                                     <p xml:lang="en"></p>
                                     <!-- Размеры -->
                                     <dimensions>
@@ -76,7 +77,7 @@
                 <history>
                     <origin>
                         <!-- Происхождение текста -->
-                        <origPlace>
+                        <origPlace ref="origPlace.xml#p051">
                             <seg xml:lang="ru">Таманский полуостров.</seg>
                             <seg xml:lang="en">Taman peninsula.</seg>
                         </origPlace>
@@ -121,11 +122,24 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2013-11-07" who="TW">Added image code</change>
             <change when="2013-03-06" who="NG">translations in metadata, some corrections, lemmata added</change>
             <change when="2012-11-27" who="AG">translations in metadata, some corrections, lemmata added</change>
             <change when="2012-10-13" who="AL">added 'revisionDesc' tag; some metadata translated; small corrections in Russian text</change>
         </revisionDesc>
     </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz319.1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+            <graphic url="byz319.2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
     <text>
         <body>
             
@@ -136,12 +150,12 @@
             
         <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-                <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>
+                <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>
                 <choice><orig><w lemma="σύ"><expan><abbr>ὑ</abbr><ex>μῶν</ex></expan></w></orig> <reg cert="low"><w lemma="ἐγώ"><expan><abbr>ἡ</abbr><ex>μῶν</ex></expan></w></reg></choice>,
                 <w lemma="δεσπότης">δέσπωτα</w> <w lemma="κακός">κακοῦ</w>, <w lemma="φθόνος">πθόνου</w> <w lemma="καί">καὶ</w> <w lemma="ζῆλος">ζήλου</w>
-                <lb n="2"/><w lemma="καί">καὶ</w> <w lemma="πνευματικός">πνευματικοῦ</w> <w lemma="πρᾶγμα">πράγματος</w>· <persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>,
+                <lb n="2"/><w lemma="καί">καὶ</w> <w lemma="πνευματικός">πνευματικοῦ</w> <w lemma="πρᾶγμα">πράγματος</w>· <persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
                 <w lemma="δόξα">δόξα</w> <w lemma="σύ">σ<supplied reason="lost">οι</supplied></w>.
-                <lb n="3"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>
+                <lb n="3"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>
                 <w lemma="ὦ">ὦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εό</ex><abbr>ς</abbr></expan></w>,
                 <w lemma="φυλάσσω">φύλαξον</w> <w lemma="ὁ">τοὺς</w> <w lemma="δοῦλος">δούλους</w>
                 <lb n="4"/><w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>

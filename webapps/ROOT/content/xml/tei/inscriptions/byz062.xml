@@ -40,7 +40,8 @@
                            <material xml:lang="ru" ref="material-search.xml#m2">Местный известняк.</material>
                            <material xml:lang="en">Local limestone.</material>
                            <p xml:lang="ru">Плита в виде латинского креста с расширяющимися рукавами и выступом наверху. Сколы внизу; камень сильно выветрен.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">Panel in the shape of Latin cross, with widenining arms and<!-- a projection--> at the top. Chipped at the bottom; 
+                            weathered surface.</p>
                            <dimensions>
                               <height>67,0</height>
                               <width>31,0</width>
@@ -55,19 +56,20 @@
                         </layout>
                         <layout ana="f1" n="2">
                            <seg xml:lang="ru">Все рукава креста, кроме нижнего, и перекрестье.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">The intersection, and all arms of the cross except the bottom.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote n="1">
                         <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Lapidary. Alpha with broken crossbar.</seg>
                         <height unit="cm">1,5–2,0.</height>
                      </handNote>
                      <handNote n="2">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, эпсилон и сигма лунарные, ипсилон У- и V-образный.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, эпсилон и сигма лунарные, 
+                           ипсилон У- и V-образный.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with broken crossbar, lunate epsilon and sigma, У-shaped and V-shaped ypsilon.</seg>
                         <height unit="cm">1,5–2,0.</height>
                      </handNote>
                   </handDesc>
@@ -102,20 +104,21 @@
                         <rs type="context">Некрополь у Карантинной бухты, склеп № 2281.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">1907, excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
                         <rs type="context">Necropolis by the Karantinnaya bay, vault no. 2281.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en">Sebastopol, Ukrraine.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukrraine.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-01-15" who="AL">inserted English names in commentary</change>
          <change when="2012-08-22" who="AG">translation of 'context' corrected</change>
          <change when="2012-08-21" who="AFS">Greek lemmata added</change>
@@ -128,6 +131,14 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz62">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -200,7 +211,7 @@
             </div>
             <div type="textpart" subtype="inscription" n="2">
                <ab>
-                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος">Κύριε</w></persName>,
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος">Κύριε</w></roleName></persName>,
                   <w lemma="Ἀναπαύω">ἀνάπαυσο<supplied reason="lost">ν</supplied></w>
                   <lb n="2"/><w lemma="ὁ"><supplied reason="lost">τὸν</supplied></w> <w lemma="δοῦλος">δοῦλον</w>
                   <w lemma="ὁ">τοῦ</w>

@@ -49,7 +49,7 @@
                      <layoutDesc>
                         <layout ana="f1">
                            <seg xml:lang="ru">Вокруг верхнего рукава креста.</seg>
-                           <seg xml:lang="en">On either side of the upper arm of the cross.</seg>
+                           <seg xml:lang="en">On either side of the top arm of the cross.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -85,20 +85,21 @@
                         <rs type="context">1 куртина, ров, склеп № 4.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">1968, excavations of I.A. Antonova.</rs>
                         <rs type="context">Curtain wall 1, moat, burial vault no. 4.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-01-15" who="AL">inserted English names in commentary</change>
          <change when="2012-08-22" who="AG">small correction in translation</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>
@@ -114,13 +115,21 @@
          <change when="2011-12-01" who="AG"> tags in the Greek text added, minor corrections</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz52">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
             <listBibl>
                <bibl n="L1"><!-- Яйленко 1987 --><ptr target="b0257"/>, <biblScope>168</biblScope></bibl>
                <bibl n="1.1"><!-- SEG--><title>SEG</title>, <biblScope>XXXIX.693</biblScope></bibl>
-               <bibl n="1.2"><!-- Яйленко 2008 --><ptr target="b0408"/>,  <biblScope>563-564</biblScope></bibl>
+               <bibl n="1.2"><!-- Яйленко 2008 --><ptr target="b0408"/>, <biblScope>563-564</biblScope></bibl>
             </listBibl>
          </div>
          <div type="apparatus">
@@ -131,7 +140,7 @@
          </div>
          <div type="translation" xml:lang="ru">
                <p>
-                  <lb n="1"/>Помяни, Господи, <!--рабов-->, сделавших благое дело. Помоги.
+                  Помяни, Господи, <!--рабов-->, сделавших благое дело. Помоги.
                   </p>
          </div>
          <div type="translation" xml:lang="en">
@@ -166,13 +175,13 @@
                <p></p>
                <p></p>
              <p>Yaylenko</p>
-             <p>Byzantium Sorochan (2005, 958–960) church of St. Leontius E.I. Solomonik ( Antonova, Ryzhov 1972)</p>
+             <p>Byzantium Sorochan (2005, 958–960) church of St. Leontius E.I. Solomonik (Antonova, Ryzhov 1972)</p>
           </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
                <div type="textpart" subtype="column">
                <ab>
                   <lb n="1"/><g type="stauros"/> <w lemma="μνημονεύω">Μ<choice><corr>νή</corr><sic>ην</sic></choice>στιθι</w>
-                  <persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>,
+                  <persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
                   <lb n="2"/><w lemma="ὁ">το͂ν</w> <w lemma="δοῦλος">δοῦλον</w>,
                    <lb n="3"/><space quantity="1" unit="line"/>
                   <lb n="4"/><w lemma="βοηθέω">Βοήθι</w>.

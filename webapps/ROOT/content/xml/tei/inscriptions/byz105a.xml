@@ -67,12 +67,12 @@
                     </physDesc>
                 <history>
                     <origin>
-                        <origPlace>
-                            <seg xml:lang="ru">Неизвестно.</seg>
-                            <seg xml:lang="en">Unknown.</seg>
+                        <origPlace ref="origPlace.xml#p003">
+                            <seg xml:lang="ru">Неизвестно (Херсон?).</seg>
+                            <seg xml:lang="en">Unknown (Chersonesos?).</seg>
                         </origPlace>
                         <origDate notBefore="0501" notAfter="1100"  precision="medium" evidence="палеография">
-                        <seg xml:lang="ru">VI–XI вв. </seg>
+                        <seg xml:lang="ru">VI–XI вв.</seg>
                         <seg xml:lang="en">VI–XI centuries C.E.</seg>
                         </origDate>
                     </origin>
@@ -87,8 +87,8 @@
                                     <rs type="context">Берег моря.</rs>
                                 </seg>
                                 <seg xml:lang="en">
-                                    <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName> 
-                                    <rs type="circumstances">Ca. 1906</rs>
+                                    <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName> 
+                                    <rs type="circumstances">Ca. 1906.</rs>
                                     <rs type="context">On the coast.</rs>
                                 </seg>
                             </provenance>
@@ -101,9 +101,18 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc>
+            <change when="2013-10-24" who="TW">Added image code</change>
             <change when="2013-04-02" who="AG">created from Word doc and a template, marked up, several lines translated</change>
         </revisionDesc>
     </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz105a">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
     <text>
         <body>
             
@@ -131,13 +140,15 @@
             
             <div type="commentary" xml:lang="ru">
                 <p>Надпись издана эпиграфическим шрифтом, без чтения дважды (Латышев 1907, 38. № 18; IOSPE I2 626).</p>
-                <p>1. Если здесь, действительно, читается типичный для ранневизантийских императорских надписей (ср. <ref type="inscription">V 4</ref>, <ref type="inscription">V 5</ref>) 
+                <p>1. Если здесь, действительно, читается типичный для ранневизантийских императорских надписей
+                    (ср. <ref type="inscription">V 4</ref>, <ref type="inscription">V 5</ref>) 
                         эпитет αἰω[νι..., что может указывать на официальный характер надписи.</p>
                     <p>Судя по форме мю, надпись датируется византийским временем.</p>
             </div>
             <div type="commentary" xml:lang="en">
                 <p>The inscription was twice published in diplomatic transcription (Latyshev 1907, No.18; IOSPE I2 626).</p>
-                <p>1. If indeed we could read here the epithet αἰω[νι..., which was typical for Early Byzantine imperial inscriptions (cf. <ref type="inscription">V 4</ref>, <ref type="inscription">V 5</ref>), 
+                <p>1. If indeed we could read here the epithet αἰω[νι..., which was typical for Early Byzantine imperial inscriptions
+                    (cf. <ref type="inscription">V 4</ref>, <ref type="inscription">V 5</ref>), 
                 this would indicate the official character of the inscription. </p>
                 <p>Judging by the form of mu, the inscription is of Byzantine date.</p>
             </div>

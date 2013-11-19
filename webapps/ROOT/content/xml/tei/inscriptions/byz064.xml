@@ -5,8 +5,8 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Феодора, Константина, Асеники, Марии, Кирадии, Георгия, Анастасия, Иоанна, Анастасии, Никомида, Асеники<certainty cert="low" locus="value" match=".."/>, Мнимы, Кирадии и Идонии <certainty cert="low" locus="value" match=".."/></title>
-             <title xml:lang="en">Gravestone of Theodoros, Konstantinos, Asenika, Maria, Kyradia, Georgios, Anastasia, Ioannes, Anastasia, Nikomedes, Asenika<certainty cert="low" locus="value" match=".."/>, Mneme, Kyradia and Hidone <certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="ru">Надгробие Феодора, Константина, и других <!--Асеники, Марии, Кирадии, Георгия, Анастасия, Иоанна, Анастасии, Никомида, Асеники--><certainty cert="low" locus="value" match=".."/>, Мнимы, Кирадии и Идонии <certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Gravestone of Theodoros, Konstantinos, and others<!--Asenika, Maria, Kyradia, Georgios, Anastasia, Ioannes, Anastasia, Nikomedes, Asenika--><certainty cert="low" locus="value" match=".."/>, Mneme, Kyradia and Hidone <certainty cert="low" locus="value" match=".."/></title>
          </titleStmt>
          <publicationStmt>
             <idno type="filename">byz064</idno>
@@ -37,9 +37,10 @@
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Крымбальский (альминский) известняк.</material>
                            <material xml:lang="en">Crimbal (Alma) limestone.</material>
-                           <p xml:lang="ru">На лицевой стороне изображен наверху крест с расширяющимися концами в круге. Обломана сверху, 
+                           <p xml:lang="ru">На лицевой стороне изображен наверху крест с расширяющимися концами в круге. Плита обломана сверху, 
                               сколота нижняя часть лицевой стороны, кроме левого угла; правая сторона стерта.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">The panel is damaged: the top is mostly missing (there are traces of an incised circle onthe front, probably containing a cross with widening
+                           arms); the central and bottom parts of the front are deeply chipped, the right side is badly weathered.</p>
                            <dimensions>
                               <height>40,5</height>
                               <width>31,5</width>
@@ -49,15 +50,17 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout ana="f1">
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="ru">Верхняя половина лецевой стороны.</seg>
+                           <seg xml:lang="en">Top half of the front.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; bouletée. Альфа с петлей, эпсилон и сигма лунарные и прямоугольные, каппа несомкнутая, мю с укороченной серединой, ро удлиненное, ипсилон V-образный.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; bouletée. Альфа с петлей, эпсилон и сигма лунарные и 
+                           прямоугольные, каппа несомкнутая, мю с укороченной серединой, ро удлиненное, ипсилон V-образный.</seg>
+                        <seg xml:lang="en">Lapidary; bouletée. Looped alpha, lunate and rectangular epsilon and sigma; the diagonals and the vertical of kappa do 
+                           not touch, mu with shortened middle, rho with extended vertical, V-shaped ypsilon.</seg>
                         <height unit="cm">1,5–2,1.</height>
                      </handNote>
                   </handDesc>
@@ -91,13 +94,14 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-01-15" who="AL">inserted English names in commentary</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>
          <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
@@ -114,6 +118,14 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz64">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -154,7 +166,7 @@
                 <p>9–10. О формуле см. <ref type="introduction">IV.3.F.b</ref>.</p>
                 <p>Характерное явление для орфографии данной надписи — диттография ню (1-я и 6-я строки), а также полная утрата долготы звуком  о  
                    (и, возможно, замена эты эпсилоном в 9-й строке, см. комм. к <ref type="inscription">V 61</ref>). Палеографически надпись близка <ref type="inscription">V 65</ref>: 
-                   ср. формы альфы с петлей и вытянутого ро, а также к <ref type="inscription">V 4</ref>: ср. формы прямоугольных эпсилона и сигмы, мю (ср. также <ref type="inscription">V 21</ref>) и V-образного ипсилона.</p>
+                   ср. формы альфы с петлей и вытянутого ро, а также к <ref type="inscription">V 4</ref>: ср. формы прямоугольных эпсилона и сигмы, мю (ср. также <ref type="inscription">V 21.1</ref>) и V-образного ипсилона.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p>Chersonesos</p>
@@ -166,7 +178,7 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/><g type="stauros"/> <persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>,
+               <lb n="1"/><g type="stauros"/> <persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
                <w lemma="ἀναπαύω">ἀν<surplus>ν</surplus>άπαυσον</w>
                <lb n="2"/><w lemma="ὁ">τὰς</w> <w lemma="ψυχή">ψυχὰς</w> <w lemma="ὁ">τὰς</w> <w lemma="ἐνθάδε">ἐνθά<supplied reason="lost">δε</supplied></w>
                <lb n="3"/><w>ἀνακιμένας</w> <w lemma="μετά">μετὰ</w> <w>δι<lb n="4" break="no"/>κέον</w> <g type="dipunct"/> <persName type="attested" ref="#person53"><name nymRef="Θεόδωρος">Θεοδόρου</name></persName> ·

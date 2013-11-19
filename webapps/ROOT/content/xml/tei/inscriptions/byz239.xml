@@ -44,7 +44,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Икона работы генуэзского мастера (?); на лицевой стороне рамка (выс. 0,8) и изображение святого Георгия на коне. 
-                              Сохранился целиком.</p>
+                              Сохранилась целиком.</p>
                            <p xml:lang="en">Work of a Genoese master (?); on the front: a framing border (height 0,8) and image of St. George on a horse.</p>
                            <dimensions>
                               <height>21,0</height>
@@ -116,6 +116,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>
          <change when="2012-07-13" who="AG">2 lines translated</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
@@ -125,6 +126,14 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz239">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -168,14 +177,14 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <div type="textpart" subtype="inscription" n="1">
                <ab>
-                  <lb n="1"/><persName type="divine" key="stgeorge"><w lemma="ὁ">Ὁ</w> <w lemma="ἅγιος">ἅγιος</w>
+                  <lb n="1"/><persName type="divine" key="stgeorge"><w lemma="ὁ">Ὁ</w> <roleName><w lemma="ἅγιος">ἅγιος</w></roleName>
                   <lb n="2"/><name nymRef="Γεώργιος">Γεώργι<supplied reason="lost">ος</supplied></name></persName>
                </ab>
             </div>
             <div type="textpart" subtype="inscription" n="2">
                <ab>
                   <lb n="1"/><persName type="divine" key="sttheodore"><w lemma="ὁ"><unclear>Ὁ</unclear></w> <note>?</note> 
-                  <w lemma="ἅγιος"><expan><abbr>ἅγ</abbr><ex>ιος</ex></expan></w> <name nymRef="Θεόδωρος">Θε<lb n="2" break="no"/><supplied reason="lost">ό</supplied><unclear>δ</unclear>ωρος</name></persName>
+                  <roleName><w lemma="ἅγιος"><expan><abbr>ἅγ</abbr><ex>ιος</ex></expan></w></roleName> <name nymRef="Θεόδωρος">Θε<lb n="2" break="no"/><supplied reason="lost">ό</supplied><unclear>δ</unclear>ωρος</name></persName>
                </ab>
             </div>
          </div>

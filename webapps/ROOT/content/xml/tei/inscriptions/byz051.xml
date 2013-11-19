@@ -5,8 +5,8 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru" ref="#m6">Прошение на штукатурке</title>
-            <title xml:lang="en">Invocation on plaster</title>
+            <title xml:lang="ru" ref="#m6"><!--Прошение на штукатурке--></title>
+            <title xml:lang="en"><!--Invocation on plaster--></title>
             <editor xml:id="ayv2012">
                <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
                <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
@@ -41,8 +41,11 @@
                            <objectType xml:lang="en">Pedestal.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк сарматского яруса.</material>
                            <material xml:lang="en">Sarmatian stage limestone.</material>
-                           <p xml:lang="ru">Ступенчатый постамент для надгробной стелы (с 2 пиронами на боковых сторонах: в виде «ласточкиного хвоста» и Г-образным) во вторичном использовании в кладке стены. Состояние неизвестно.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="ru">Ступенчатый постамент для надгробной стелы (с 2 пиронами на боковых сторонах: в виде «ласточкиного хвоста» и Г-образным) 
+                              во вторичном использовании в кладке стены. Состояние неизвестно.</p>
+                           <p xml:lang="en">Stepped pedestal for a grave stele (with two clamps on the sides: one swallow-tail-shaped, and another L-shaped) in secondary use:
+                              used in wall masonry. Condition unknown. 
+                         </p>
                            <dimensions>
                               <height>26,0</height>
                               <width>35,0</width>
@@ -87,20 +90,21 @@
                         <rs type="context">XVII башня, внутренняя обкладка, шестой ряд сверху.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sebastopol (Chersonesos).</placeName>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">1961, survey of I.A. Antonova.</rs>
                         <rs type="context">tower XVII, inner ashlaring, sixth row from the top.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en">Sebastopol, Ukraine.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2012-10-10" who="AL">small corrections</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
@@ -113,6 +117,14 @@
          <change when="2011-12-01" who="AG">tagging of the Greek text, minor corrections</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz51">
+                <desc xml:lang="en">Drawing of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -122,7 +134,7 @@
          </div>
          <div type="translation" xml:lang="ru">
                <p>
-                  <lb n="1"/>Господи, помоги.</p>
+                  Господи, помоги.</p>
          </div>
          <div type="translation" xml:lang="en">
                <p>O Lord, help.</p>
@@ -135,7 +147,7 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
                <ab>
-                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος">Κύριε</w></persName>, <w lemma="βοηθέω">βοήθει</w>.
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος">Κύριε</w></roleName></persName>, <w lemma="βοηθέω">βοήθει</w>.
                </ab>
          </div>
       </body>

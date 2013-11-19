@@ -218,6 +218,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-03-06" who="NG">small correction in Greek lemmata</change>
           <change when="2012-10-30" who="AL">small corrections in Russian text</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>
@@ -231,6 +232,18 @@
          <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
       </revisionDesc>
    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz182.1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+           <graphic url="byz182.2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic> 
+        </surface>
+    </facsimile>
    <text>
       <body>
          <div type="bibliography">
@@ -361,7 +374,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <div type="textpart" subtype="inscription" n="1">
                <ab>
-                  <lb n="1"/><supplied reason="lost"><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName></supplied>,
+                  <lb n="1"/><supplied reason="lost"><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName></supplied>,
                   <w lemma="βοηθέω"><supplied reason="lost">β</supplied>οήθη</w> <w lemma="ὁ">τὼν</w> <w lemma="δοῦλος">δοῦλόν</w>
                   <lb n="2"/><w lemma="σύ">σου</w> <persName type="attested" ref="#person232"><name nymRef="Ἰωάννης">Ἰωάννην</name></persName>.
                </ab>
@@ -397,7 +410,7 @@
             </div>
             <div type="textpart" subtype="inscription" n="5">
                <ab>
-                  <lb n="1"/><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName>, <supplied reason="lost"><w lemma="βοηθέω">βοήθει</w></supplied>
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, <supplied reason="lost"><w lemma="βοηθέω">βοήθει</w></supplied>
                   <lb n="2"/><w lemma="καί"><supplied reason="lost">καὶ</supplied></w> <w lemma="ἀφίημι">ἄφ<supplied reason="lost" cert="low">εσον</supplied></w> <supplied reason="lost"><w lemma="ὁ">τὸν</w></supplied>
                   <lb n="3"/><w lemma="δοῦλος"><supplied reason="lost">δοῦ</supplied>λόν</w> <w lemma="σύ">σου</w>
                   <lb n="4"/><persName type="attested" ref="#person243"><name nymRef="Παῦλος">Παῦλον</name></persName>.
@@ -406,7 +419,7 @@
             <div type="textpart" subtype="inscription" n="6">
                <ab>
                   <lb n="1"/><gap reason="lost" quantity="1" unit="line"/>
-                  <lb n="2"/><supplied reason="lost"><persName type="divine" key="kyrios"><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></persName></supplied>, <w lemma="βοηθέω"><supplied reason="lost">β</supplied>ωί<supplied reason="lost">θ</supplied>υ</w>, <w lemma="ὁ"><supplied reason="lost">τ</supplied>ὸν</w> <w lemma="δοῦλος">δοὺλόν</w> <w lemma="σύ">σου</w>
+                  <lb n="2"/><supplied reason="lost"><persName type="divine" key="kyrios"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName></supplied>, <w lemma="βοηθέω"><supplied reason="lost">β</supplied>ωί<supplied reason="lost">θ</supplied>υ</w>, <w lemma="ὁ"><supplied reason="lost">τ</supplied>ὸν</w> <w lemma="δοῦλος">δοὺλόν</w> <w lemma="σύ">σου</w>
                   <lb n="3"/> <gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person244"><name><seg part="F">άννιον</seg></name></persName>.
                </ab>
             </div>
