@@ -322,7 +322,6 @@ class Index(object):
 
     def __build_index(self):
         for conversion in self.conversions:
-            print conversion.source.to_filename(), ',', conversion.source.to_filename(ext=False)
 
             self.old_filenames[
                 conversion.source.to_filename(ext=False)] = conversion
