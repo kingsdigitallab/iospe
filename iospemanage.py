@@ -60,6 +60,8 @@ class DocParser(object):
 
     """ Abstract conversion """
 
+    # Document properties, these get filled with
+    # actual values of specific documents
     prefix = None
     num_id_sep = None
     num_pad = None
@@ -72,6 +74,8 @@ class DocParser(object):
 
     extension = None
 
+    # Document property parsing properties
+    # they get used with parsing a documdent
     prefix_format = u''
     num_id_sep_format = u''
     num_pad = 0
@@ -85,8 +89,11 @@ class DocParser(object):
     numeric = [u'num_id', u'sub_id']
 
     def __init__(self, **kwargs):
+        # when the document gets initialised
+        # it fills the properties based on a dictionary
         for name, val in kwargs.iteritems():
             if name in self.numeric:
+                # numeric values get converted into integers
                 if val == None or val == u'':
                     setattr(self, name, u'')
                 else:
@@ -107,7 +114,8 @@ class DocParser(object):
 
     @classmethod
     def parse(cls, string):
-        """parse a conversion into a new Doc object"""
+        """parse a conversion into a new DocParser object"""
+
         doc_id_parser_format = (
 
             # beggining of the string
@@ -160,6 +168,8 @@ class DocParser(object):
             raise InvalidFormat(
                 u'{} not a valid {}'.format(string, cls.__name__))
 
+        # returns an instance of a class using the
+        # parsed elements as new properties
         return cls(**doc_id_matches.groupdict())
 
 
@@ -198,7 +208,7 @@ class IOSPEDocBefore(DocParser):
 
 class IOSPEDocAfter(DocParser):
 
-    """"Defines a IOSPE Old Document"""
+    """"Defines a IOSPE New Document"""
     prefix_format = u'5'
     num_id_sep_format = u'\.'
     num_id_format = r'\d+'
@@ -224,6 +234,8 @@ class IOSPEDocAfter(DocParser):
 
 
 class IRCyrDocBefore(DocParser):
+
+    """"Defines a IRCyr Old Document"""
     prefix_format = r'[ABCGPT]'
     num_id_sep_format = u''
     num_pad = 5
@@ -250,6 +262,8 @@ class IRCyrDocBefore(DocParser):
 
 
 class IRCyrDocAfter(DocParser):
+
+    """"Defines a IRCyr New Document"""
     prefix_format = r'[ABCGPT]'
     num_id_sep_format = u'\.'
     num_id_format = r'\d+'
@@ -430,7 +444,7 @@ def update_filename(doc, c_index):
 
 
 def write_dictionary(index, filename):
-    """Write the dictionarry for reference """
+    """Write the dictionary for reference """
 
     with open(filename, 'w', 'utf') as dictfl:
         for conv in index.conversions:
