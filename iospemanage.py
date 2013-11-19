@@ -412,6 +412,7 @@ def update_references(doc, c_index):
                 u'Reference: "{}" not found in index!'.format(key.strip()))
 
         ref.text = conv.destination.to_reference()
+        ref.addnext(etree.Comment(conv.source.to_filename(ext=False)))
 
     return doc
 
@@ -502,7 +503,7 @@ def convert(conversions, path, conversion_type):
         print u'Writing {}.'.format(conv.destination.to_filename()),
         write_xml(doc, os.path.join(path, conv.destination.to_filename()))
 
-        print u'Removing {}.'.format(conv.destination.to_filename())
+        print u'Removing {}.'.format(conv.source.to_filename())
         os.remove(os.path.join(path, conv.source.to_filename()))
 
     for ref, errtype, mess in accumulate_errors:
