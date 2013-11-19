@@ -10,7 +10,14 @@ import re
 
 import os
 
+from lxml import etree
+
+from copy import deepcopy
+
+
 manager = Manager()
+
+TEI_NAMESPACE = u"http://www.tei-c.org/ns/1.0"
 
 
 class IOSPEManageError(Exception):
@@ -31,6 +38,24 @@ class InvalidFormat(IOSPEManageError):
     pass
 
 
+class IOSPENotFoundError(IOSPEManageError):
+
+    """Generic Exception for not found"""
+    pass
+
+
+class FilenameNotFound(IOSPENotFoundError):
+
+    """Filename not Found"""
+    pass
+
+
+class ReferenceNotFound(IOSPENotFoundError):
+
+    """Reference not Found"""
+    pass
+
+
 class DocParser(object):
 
     """ Abstract conversion """
@@ -45,27 +70,29 @@ class DocParser(object):
     sub_id = None
     suffix = None
 
-    prefix_format = ''
-    num_id_sep_format = ''
-    num_pad = 0
-    num_id_format = ''
-    subletter_sep_format = ''
-    subletter_format = ''
-    sub_id_sep_format = ''
-    sub_id_format = ''
-    suffix_format = ''
+    extension = None
 
-    numeric = ['num_id', 'sub_id']
+    prefix_format = u''
+    num_id_sep_format = u''
+    num_pad = 0
+    num_id_format = u''
+    subletter_sep_format = u''
+    subletter_format = u''
+    sub_id_sep_format = u''
+    sub_id_format = u''
+    suffix_format = u''
+
+    numeric = [u'num_id', u'sub_id']
 
     def __init__(self, **kwargs):
         for name, val in kwargs.iteritems():
             if name in self.numeric:
-                if val == None or val == '':
-                    setattr(self, name, '')
+                if val == None or val == u'':
+                    setattr(self, name, u'')
                 else:
                     setattr(self, name, int(val))
             else:
-                if val == None or val == '':
+                if val == None or val == u'':
                     setattr(self, name, u'')
                 else:
                     setattr(self, name, val)
@@ -74,7 +101,7 @@ class DocParser(object):
         """convert the document to a reference notation"""
         pass
 
-    def to_filename(self):
+    def to_filename(self, ext=True):
         """convert the document to a filename notation"""
         pass
 
@@ -131,7 +158,7 @@ class DocParser(object):
             assert doc_id_matches is not None
         except AssertionError:
             raise InvalidFormat(
-                '{} not a valid {}'.format(string, cls.__name__))
+                u'{} not a valid {}'.format(string, cls.__name__))
 
         return cls(**doc_id_matches.groupdict())
 
@@ -139,95 +166,111 @@ class DocParser(object):
 class IOSPEDocBefore(DocParser):
 
     """"Defines a IOSPE Old Document"""
-    prefix_format = 'byz'
-    num_id_sep_format = ''
+    prefix_format = u'byz'
+    num_id_sep_format = u''
     num_pad = 3
     num_id_format = r'\d+'
-    subletter_sep_format = ''
+    subletter_sep_format = u''
     subletter_format = r'\w'
-    sub_id_sep_format = '\.'
+    sub_id_sep_format = u'\.'
     sub_id_format = r'\d+'
-    suffix_format = ''
+    suffix_format = u''
 
-    def to_filename(self):
-        return ('{self.prefix}'
-                '{self.num_id_sep}{self.num_id:0{self.num_pad}}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
-                '{self.suffix}.xml'
-                ).format(self=self)
+    extension = u'xml'
+
+    def to_filename(self, ext=True):
+        extension = (u'.' + self.extension) if ext else u''
+        return (u'{self.prefix}'
+                u'{self.num_id_sep}{self.num_id:0{self.num_pad}}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
+                u'{self.suffix}'
+                u'{extension}'
+                ).format(self=self, extension=extension)
 
     def to_reference(self):
-        return ('V'
-                ' {self.num_id}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
+        return (u'V'
+                u' {self.num_id}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
                 ).format(self=self)
 
 
 class IOSPEDocAfter(DocParser):
 
     """"Defines a IOSPE Old Document"""
-    prefix_format = '5'
-    num_id_sep_format = '\.'
+    prefix_format = u'5'
+    num_id_sep_format = u'\.'
     num_id_format = r'\d+'
 
-    def to_filename(self):
-        return ('{self.prefix}'
-                '{self.num_id_sep}{self.num_id:0{self.num_pad}}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
-                '{self.suffix}.xml'
-                ).format(self=self)
+    extension = u'xml'
+
+    def to_filename(self, ext=True):
+        extension = (u'.' + self.extension) if ext else u''
+        return (u'{self.prefix}'
+                u'{self.num_id_sep}{self.num_id:0{self.num_pad}}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
+                u'{self.suffix}'
+                u'{extension}'
+                ).format(self=self, extension=extension)
 
     def to_reference(self):
-        return ('V'
-                ' {self.num_id}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
+        return (u'V'
+                u' {self.num_id}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
                 ).format(self=self)
 
 
 class IRCyrDocBefore(DocParser):
     prefix_format = r'[ABCGPT]'
-    num_id_sep_format = ''
+    num_id_sep_format = u''
     num_pad = 5
     num_id_format = r'\d+'
 
-    def to_filename(self):
-        return ('{self.prefix}'
-                '{self.num_id_sep}{self.num_id:0{self.num_pad}}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
-                '{self.suffix}.xml'
-                ).format(self=self)
+    extension = u'xml'
+
+    def to_filename(self, ext=True):
+        extension = (u'.' + self.extension) if ext else u''
+        return (u'{self.prefix}'
+                u'{self.num_id_sep}{self.num_id:0{self.num_pad}}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
+                u'{self.suffix}'
+                u'{extension}'
+                ).format(self=self, extension=extension)
 
     def to_reference(self):
-        return ('{self.prefix}'
-                '.{self.num_id}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
+        return (u'{self.prefix}'
+                u'.{self.num_id}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
                 ).format(self=self)
 
 
 class IRCyrDocAfter(DocParser):
     prefix_format = r'[ABCGPT]'
-    num_id_sep_format = '\.'
+    num_id_sep_format = u'\.'
     num_id_format = r'\d+'
 
-    def to_filename(self):
-        return ('{self.prefix}'
-                '{self.num_id_sep}{self.num_id:0{self.num_pad}}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
-                '{self.suffix}.xml'
-                ).format(self=self)
+    extension = u'xml'
+
+    def to_filename(self, ext=True):
+        extension = (u'.' + self.extension) if ext else u''
+        return (u'{self.prefix}'
+                u'{self.num_id_sep}{self.num_id:0{self.num_pad}}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
+                u'{self.suffix}'
+                u'{extension}'
+                ).format(self=self, extension=extension)
 
     def to_reference(self):
-        return ('{self.prefix}'
-                '.{self.num_id}'
-                '{self.subletter_sep}{self.subletter}'
-                '{self.sub_id_sep}{self.sub_id}'
+        return (u'{self.prefix}'
+                u'.{self.num_id}'
+                u'{self.subletter_sep}{self.subletter}'
+                u'{self.sub_id_sep}{self.sub_id}'
                 ).format(self=self)
 
 
@@ -273,14 +316,16 @@ class Index(object):
     old_filenames = {}
     old_references = {}
 
-
     def __init__(self, conversions):
         self.conversions = conversions
         self.__build_index()
 
     def __build_index(self):
         for conversion in self.conversions:
-            self.old_filenames[conversion.source.to_filename()] = conversion
+            print conversion.source.to_filename(), ',', conversion.source.to_filename(ext=False)
+
+            self.old_filenames[
+                conversion.source.to_filename(ext=False)] = conversion
             self.old_references[conversion.source.to_reference()] = conversion
 
     def find(self, string):
@@ -289,7 +334,8 @@ class Index(object):
         elif string in self.old_references:
             return self.old_references[string]
         else:
-            return False
+            raise IOSPENotFoundError(
+                u'"{}" not found in index.'.format(string))
 
 
 def load_conversion_file(filepath, conv_type):
@@ -302,7 +348,7 @@ def load_conversion_file(filepath, conv_type):
                 original_form, new_form = line.strip().split()
             except ValueError:
                 raise InvalidConversionType(
-                    'Error: "{line}" does not specify a valid conversion'.format(line=line))
+                    u'Error: "{line}" does not specify a valid conversion'.format(line=line))
 
             conversions.append(conv_type.parse(original_form, new_form))
 
@@ -313,6 +359,90 @@ def walk_through_files(root):
     for root, dirs, files in os.walk(root):
         for f in files:
             yield f
+
+
+def open_xml(filepath):
+    xmlParser = etree.XMLParser(
+        ns_clean=False,
+        remove_blank_text=False,
+        remove_comments=False,
+        strip_cdata=False)
+
+    return etree.parse(filepath, xmlParser)
+
+
+def write_xml(et, filepath):
+
+    et.write(
+        filepath,
+        method='xml',
+        pretty_print=False,
+        encoding='UTF-8',
+        with_tail=True,
+        standalone=None,
+        compression=0,
+        exclusive=False,
+        with_comments=True,
+        xml_declaration=True)
+
+
+def update_references(doc, c_index):
+    for ref in doc.xpath(u'//TEI:ref[@type="inscription"]',
+                         namespaces={u'TEI': TEI_NAMESPACE}):
+
+        key = ref.text
+
+        try:
+            conv = c_index.find(key.strip())
+        except IOSPENotFoundError:
+            raise ReferenceNotFound(
+                u'Reference: "{}" not found in index!'.format(key.strip()))
+
+        ref.text = conv.destination.to_reference()
+
+    return doc
+
+
+def update_filename(doc, c_index):
+    for ref in doc.xpath(
+        u'/TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:publicationStmt/TEI:idno[@type="filename"]',
+            namespaces={u'TEI': TEI_NAMESPACE}):
+
+        key = ref.text
+        new_ref = deepcopy(ref)
+        save_tail = ref.tail
+        save_head = ref.getparent().itertext().next()
+        if save_head.strip() != u'':
+            save_head = u''
+
+        try:
+            conv = c_index.find(key.strip())
+        except IOSPENotFoundError:
+            raise FilenameNotFound(
+                u'idno: "{}" not found in index!'.format(key.strip()))
+
+        ref.text = conv.destination.to_filename(ext=False)
+        new_ref.set(u'type', u'AYV2012-number')
+        ref.addnext(new_ref)
+        ref.tail = save_head
+        new_ref.tail = save_tail
+
+    return doc
+
+
+def write_dictionary(index, filename):
+    """Write the dictionarry for reference """
+
+    with open(filename, 'w', 'utf') as dictfl:
+        for conv in index.conversions:
+            dictfl.write('\t'.join([
+                conv.source.to_filename(),
+                conv.source.to_reference(),
+                conv.destination.to_filename(),
+                conv.destination.to_reference()
+            ]))
+
+            dictfl.write("\n")
 
 
 @manager.arg('conversions', help='file which contains the document conversions')
@@ -330,13 +460,40 @@ def convert(conversions, path, conversion_type):
 
     c_index = load_conversion_file(conversions, conv_type)
 
-    print path
+    write_dictionary(c_index, u'dictionary.txt')
+
+    accumulate_errors = []
     for f in walk_through_files(path):
-        conv = c_index.find(f)
-        print f, conv.source.to_reference(), ': ', conv.destination.to_reference(), ', ', conv.destination.to_filename()
+        fname, ext = os.path.splitext(f)
+        try:
+            conv = c_index.find(fname)
+            assert conv != False
+        except IOSPENotFoundError as e:
+            accumulate_errors.append([f, e.__class__.__name__, e.message])
+            continue
 
+        print u'Reading {}.'.format(conv.source.to_filename()),
+        doc = open_xml(os.path.join(path, conv.source.to_filename()))
 
+        try:
+            print 'updating references.',
+            doc = update_references(doc, c_index)
+            print 'updating filename.',
+            doc = update_filename(doc, c_index)
+        except IOSPENotFoundError as e:
+            accumulate_errors.append(
+                [conv.source.to_filename(), e.__class__.__name__, e.message])
+            print 'skipping'
+            continue
 
+        print u'Writing {}.'.format(conv.destination.to_filename()),
+        write_xml(doc, os.path.join(path, conv.destination.to_filename()))
+
+        print u'Removing {}.'.format(conv.destination.to_filename())
+        os.remove(os.path.join(path, conv.source.to_filename()))
+
+    for ref, errtype, mess in accumulate_errors:
+        print u'ERROR: {} {} {}'.format(ref, errtype, mess)
 
 
 if __name__ == '__main__':
