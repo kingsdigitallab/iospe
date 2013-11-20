@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/"/>
@@ -425,46 +426,88 @@
 
   <xsl:template match="tei:body">
     <xsl:call-template name="objectData"/>
-
-    <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
-    <xsl:choose>
-      <xsl:when test="//tei:div[@type='edition']/tei:div[@subtype='fragment']">
-        <xsl:for-each select="//tei:div[@type='edition']//tei:div[@subtype='fragment']">
-          <!-- Render metadata about inscriptions in current fragment, if any -->
-          <xsl:choose>
-            <xsl:when test="descendant::tei:div[@subtype='inscription']">
-              <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
+    <div class="row">
+      <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
+      <xsl:choose>
+        <xsl:when test="//tei:div[@type='edition']/tei:div[@subtype='fragment']">
+          <xsl:for-each select="//tei:div[@type='edition']//tei:div[@subtype='fragment']">
+            <!-- Render metadata about inscriptions in current fragment, if any -->
+            <xsl:choose>
+              <xsl:when test="descendant::tei:div[@subtype='inscription']">
+                <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
+                  <xsl:call-template name="inscriptionData">
+                    <xsl:with-param name="nestedTitles" select="true()"/>
+                  </xsl:call-template>
+                </xsl:for-each>
+              </xsl:when>
+              <xsl:otherwise>
                 <xsl:call-template name="inscriptionData">
                   <xsl:with-param name="nestedTitles" select="true()"/>
                 </xsl:call-template>
-              </xsl:for-each>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:call-template name="inscriptionData">
-                <xsl:with-param name="nestedTitles" select="true()"/>
-              </xsl:call-template>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:for-each>
-      </xsl:when>
-      <xsl:otherwise>
-        <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
-        <xsl:for-each select="//tei:div[@type='edition']">
-          <xsl:choose>
-            <xsl:when test="descendant::tei:div[@subtype='inscription']">
-              <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
-                <xsl:call-template name="inscriptionData">
-                  <xsl:with-param name="nestedTitles" select="false()"/>
-                </xsl:call-template>
-              </xsl:for-each>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:call-template name="inscriptionData"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:for-each>
-      </xsl:otherwise>
-    </xsl:choose>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each>
+        </xsl:when>
+        <xsl:otherwise>
+          <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
+          <xsl:for-each select="//tei:div[@type='edition']">
+            <xsl:choose>
+              <xsl:when test="descendant::tei:div[@subtype='inscription']">
+                <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
+                  <xsl:call-template name="inscriptionData">
+                    <xsl:with-param name="nestedTitles" select="false()"/>
+                  </xsl:call-template>
+                </xsl:for-each>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:call-template name="inscriptionData"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:for-each>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:call-template name="download_xml_link"/>
+    </div>
+  </xsl:template>
+
+  <xsl:template name="download_xml_link">
+    <xsl:variable name="filename">
+      <xsl:value-of select="//tei:idno[@type='filename']"/>
+      <xsl:text>.xml</xsl:text>
+    </xsl:variable>
+
+    <div xsl:exclude-result-prefixes="tei" class="large-12 columns">
+      <p>
+        <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
+          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
+        </a>
+        <xsl:value-of
+          select="if ($lang='ru') then 'RU-&#160;You may download this ' else '&#160;You may download this '"/>
+        <a href="{$filename}">
+          <xsl:attribute name="title">
+            <xsl:value-of
+              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;You may download this '"
+            />
+          </xsl:attribute>
+          <xsl:value-of
+            select="if ($lang='ru') then 'RU-inscription in EpiDoc XML' else 'inscription in EpiDoc XML'"
+          />
+        </a>
+        <xsl:text>.</xsl:text>
+
+        <xsl:value-of
+          select="if ($lang='ru') then 'RU- (This file should validate to the ' else ' (This file should validate to the '"/>
+        <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
+          <xsl:attribute name="title">
+            <xsl:value-of
+              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;You may download this '"
+            />
+          </xsl:attribute>
+          <xsl:value-of select="if ($lang='ru') then 'RU-EpiDoc schema' else 'EpiDoc schema'"/>
+        </a>
+        <xsl:text>.)</xsl:text>
+      </p>
+    </div>
   </xsl:template>
 
 
@@ -486,8 +529,9 @@
       <xsl:value-of select="$fullN"/>
     </xsl:message> -->
 
+
     <!-- If there are multiple inscriptions, add title -->
-    <div class="large-12">
+    <div class="large-12 columns">
       <div class="row">
         <div class="large-2 columns">
           <xsl:if test="self::tei:div[@subtype='inscription']/@n">
