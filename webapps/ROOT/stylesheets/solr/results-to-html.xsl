@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:h="http://apache.org/cocoon/request/2.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
   xmlns:str="http://exslt.org/strings">
@@ -8,6 +8,7 @@
 
   <xsl:import href="../defaults.xsl"/>
   <xsl:include href="cocoon://_internal/url/reverse.xsl"/>
+  <xsl:include href="results-pagination.xsl"/>
 
   <xsl:param name="min-year"/>
   <xsl:param name="max-year"/>
@@ -91,9 +92,9 @@
         <i18n:text>Date</i18n:text>
         <xsl:text> </xsl:text>
         <span id="date-slider-label">
-          <xsl:value-of select="$min-year"></xsl:value-of>
+          <xsl:value-of select="$min-year"/>
           <xsl:text> - </xsl:text>
-          <xsl:value-of select="$max-year"></xsl:value-of>
+          <xsl:value-of select="$max-year"/>
           <xsl:text> A.D.</xsl:text>
         </span>
       </h4>
@@ -266,7 +267,6 @@
         <ul class="no-bullet">
           <xsl:apply-templates mode="search-results" select="doc"/>
         </ul>
-
         <xsl:call-template name="navigation">
           <xsl:with-param name="start" select="$start"/>
           <xsl:with-param name="rows" select="$rows"/>
