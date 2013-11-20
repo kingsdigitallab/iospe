@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Филоксена </title>
+            <title xml:lang="en">Gravestone of Philoxenos</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz274</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>КМЗ</repository>
+                     <idno>КЛ–1175</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Historical and Archeological Museum of Kerch State Historical and Cultural Preserve</repository>
+                     <idno>КЛ–1175</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк-дикарь.</material>
+                           <material xml:lang="en">Limestone rubble.</material>
+                           <p xml:lang="ru">Лицевая сторона тщательно обтесана, на ней находится врезанное изображение латинского креста с апицированными 
+                              концами горизонтальных рукавов и растраивающимися концами — вертикальных. Сохранилась целиком.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>41,0</height>
+                              <width>36,5</width>
+                              <depth>7,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                            <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы прокрашены охрой. Альфа с ломаной перекладиной, дельта и лямбда с удлиненной вверх правой 
+                           гастой, эпсилон прямоугольный и лунарный, фи прямоугольное, ипсилон Y-и V-образный.</seg>
+                        <seg xml:lang="en">Lapidary; letters filled in with ochre. Alpha with a broken crossbar; delta and lambda with upwards protruding right hastae, 
+                           rectangular and lunar epsilon, rectangular phi, Y-shaped and V-shaped ypsilon.</seg>
+                        <height unit="cm">3,0–5,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Пантикапей.</seg>
+                         <seg xml:lang="en">Pantikapaion.</seg>
+                     </origPlace>
+                      <origDate notBefore="0301" notAfter="0400" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IV в.</seg>
+                          <seg xml:lang="en">IV century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2004-09">сентябрь 2004</date>, <date when="2008-09"> сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>, <date when="2004-09">September 2004</date>, <date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Керчь.</placeName>
+                        <rs type="circumstances">3 мая 1909 г., случайная находка.</rs>
+                        <rs type="context">Глинище, сад Полтавского.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">3 May 1909, chance find</rs>
+                        <rs type="context">Glinishche, garden of Poltavsky.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Керчь, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Kerch, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2012-08-21" who="NG">inserted Greek lemmata</change>
+         <change when="2012-08-21" who="AG">several lines translated, small corrections</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">correction in bibliography tagging</change>
+          <change when="2012-06-25" who="AL">small correction in metadata and bibliography tagging</change>
+          <change when="2012-05-16" who="AFS">corrected metadata and text</change>
+          <change when="2012-03-20" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz274">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!-- Марти 1911--><ptr target="b0170"/>, 8–11, № <biblScope>3</biblScope></bibl>
+                <bibl n="1.1"><!-- Яйленко 1987--><ptr target="b0257"/>, 165 <biblScope>прим. 11</biblScope></bibl>
+                <bibl n="1.1.1"><!-- Bull. ép. 1990--><bibl xml:id="Bulletin"><title>Bulletin épigraphique</title></bibl>, 1990, <biblScope>903</biblScope></bibl>
+                <bibl n="1.1.2"><!-- SEG XXXIX--><bibl xml:id="seg"><title>SEG</title></bibl>, <biblScope>XXXIX.699</biblScope></bibl>
+                <bibl n="1.2"><!-- КХНБ --><ptr target="b0068"/>, <biblScope>39</biblScope></bibl>
+                <bibl n="2"><!-- Vinogradov 2007--><ptr target="b0376"/>, 261–263, № <biblScope>9</biblScope>.</bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Здесь лежит Филоксен, сын Агапита, скорняк по профессии.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies Philoxenos son of Agapitos, a furrier by trade.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Камень был куплен у И. Пекерева для музея Мелек-Чесменского кургана. По мнению Марти, крест был высечен раньше надписи, однако неясно, на чем 
+               такое предположение основано. Д. Фейссель, составитель заметки в Bull. ép., не найдя у Яйленко ссылки на издание, ошибочно посчитал надпись 
+               новонайденной.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.d</ref>.  </p>
+                <p> 2–3. Имя Филоксен встречается на Боспоре трижды, начиная со II в. по Р.Х. (см. КБН, 905). Известно оно и в христианской эпиграфике 
+                   (например, Feissel 1983, № 160; IG XIV, 2418).  </p>
+                <p> 4–5. Имя Агапит на Боспоре не известно, зато встречается в византийских надписях (MAMA I, 279; VI, 339; IGLS 1908; ICUR 25972; SEG VIII.741). 
+                   Существуют и два святых с таким именем (см. Delehaye 1902, 1043).</p>
+                <p>5–7. Обозначение профессии встречается в христианских надписях, особенно часто в Коринфе (см. Bees 1941, pass.). Профессия γουνάριος 
+                   засвидетельствована в Beševliev 1964, № 99, 100, 102–104 (VI в.), Feissel 1983, № 34 (V–VI вв.).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Pekerev Melek-Chesmen Marti Feissel Yaylenko</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="ἐνθάδε">Ἐνθάδε</w> <w lemma="κατάκειμαι">κα<lb n="2" break="no"/>τάκιτε</w> <persName type="attested" ref="#person351"><name nymRef="Φιλόξενος">Φι<lb n="3" break="no"/>λόξενος</name>
+               <lb n="4"/><w lemma="υἱός">υἱὸς</w> <persName type="attested" ref="#person352"><name nymRef="Ἀγαπητός">Ἀγα<lb n="5" break="no"/>πητοῦ</name></persName></persName> <w lemma="ὁ">τὴν</w>
+               <lb n="6"/><w lemma="τέχνη"><expan><abbr>τέχνη</abbr><ex>ν</ex></expan></w> <w lemma="γουνάριος">γου<lb n="7" break="no"/>νάριος</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="ru">Владельческая надпись Савага</title>
+                <title xml:lang="en">Ownership inscription of Sauagas</title>
+                <editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor>
+            </titleStmt>   
+            <publicationStmt>
+                <idno type="filename">byz318</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country></country>
+                        <altIdentifier xml:lang="ru">
+                            <!-- Институт хранения -->
+                            <repository>Частная коллекция</repository>
+                            <idno/>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Private collection</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><summary corresp="document-search.xml#doc14">>
+                        <!-- Характер документа -->
+                        <seg xml:lang="ru">Владельческая надпись.</seg>
+                        <seg xml:lang="en">Ownership inscription.</seg>
+                    </summary></msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <!-- Разновидность -->
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon22">Колонна.</objectType>
+                                    <objectType xml:lang="en">Column.</objectType>
+                                    <!-- Материал -->
+                                    <material xml:lang="ru" ref="material-search.xml#m11">Диорит.</material>
+                                    <material xml:lang="en">Diorite.</material>
+                                    <!-- Описание и состояние документа -->
+                                    <p xml:lang="ru">Обломана сверху и внизу (?).</p>
+                                    <p xml:lang="en"></p>
+                                    <!-- Размеры -->
+                                    <dimensions></dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <!-- Местоположение -->
+                                <layout ana="f1"><!-- ana= Код фаса -->
+                                    <seg xml:lang="ru">.</seg>
+                                    <seg xml:lang="en">.</seg>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <!-- Стиль письма -->
+                            <handNote>
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, эпсилон, 
+                                    сигма и омега прямоугольные, омикрон меньшего размера, омикрон и фи
+                                    ромбовидные, пи с удлиненной перекладиной, омега прямоугольная; знак сокращения.</seg>
+                                <seg xml:lang="en">.</seg>
+                                <height unit="cm">3,0–6,0.</height><!-- Высота букв -->
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <!-- Происхождение текста -->
+                        <origPlace ref="origPlace.xml#p051">
+                            <seg xml:lang="ru">Таманский полуостров, побережье Азовского моря.</seg>
+                            <seg xml:lang="en">Taman peninsula, Azov sea shore.</seg>
+                        </origPlace>
+                        
+                        <!-- Датировка текста -->
+                        <origDate notBefore="0478" notAfter="0479" evidence="указание_надписи"><!-- evidence= Обоснование датировки -->
+                            <seg xml:lang="ru">478–479 гг.</seg>
+                            <seg xml:lang="en">478-479 C.E.</seg>
+                        </origDate>
+                    </origin>
+                    
+                        
+                            <!-- Автопсия -->
+                            <provenance type="autopsy">
+                                <seg xml:lang="ru">non vidi.</seg>
+                                <seg xml:lang="en">non vidi.</seg>
+                            </provenance>
+                            
+                            <!-- Место находки -->
+                            <provenance type="found">
+                                <seg xml:lang="ru">
+                                    <placeName type="ancientFindspot">Таманский полуостров.</placeName> 
+                                    <!-- Условия находки -->
+                                    <rs type="circumstances">Неизвестны</rs>
+                                    <!-- Контекст находки -->
+                                    <rs type="context">Побережье Азовского моря</rs>
+                                </seg>
+                                <seg xml:lang="en">
+                                    <placeName type="ancientFindspot">Taman peninsula.</placeName> 
+                                    <rs type="circumstances">Unknown.</rs>
+                                    <rs type="context">Azov sea shore</rs>
+                                </seg>
+                            </provenance>
+                            
+                            <!-- Место хранения -->
+                            <provenance type="observed">
+                                <seg xml:lang="ru">Частная коллекция.</seg>
+                                <seg xml:lang="en">Private collection.</seg>
+                            </provenance>
+          
+                </history>
+            </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2013-11-07" who="TW">Added image code</change>
+            <change when="2013-02-20" who="ΝG">minor correction in Greek lemata</change>
+            <change when="2013-02-13" who="AG">repository corrected</change>
+            <change when="2012-11-27" who="AG">translations of metadata, lemmata added, bibliography and apparatus tagged</change>
+         <change when="2012-10-13" who="AL">added 'revisionDesc' tag; small corrections in Russian text</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz318">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            
+            <div type="bibliography">
+            <!-- Издания -->
+                <listBibl>
+                    <bibl n="L1"><!--Виноградов 1998--><ptr target="b0057"/>, 239–240, № <biblScope>4</biblScope></bibl>
+                    <bibl n="1.1"><!--SEG--> <title>SEG</title> <biblScope>XXXXVIII.995</biblScope></bibl>
+                    <bibl n="1.2"><!--Vinogradov 2007--><ptr target="b0376"/>, 261, № <biblScope>6</biblScope></bibl>
+                    <bibl n="2"><!--Виноградов 2010b--><ptr target="b0414"/>, <biblScope>149-151</biblScope></bibl>
+                </listBibl>
+            </div>
+            
+        <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                <lb n="1"/><w lemma="ὠνέομαι">Ὠν<unclear>ε</unclear>ί<supplied reason="lost">θη</supplied></w>
+                <supplied reason="lost"><g type="stauros"/> <w lemma="ὁ">ὁ</w></supplied> <w lemma="τόπος">τόπος</w>
+                <lb n="2"/><w lemma="ἁλιευτικός">ἁλιευτικὸς</w> <w lemma="νέος">νέος</w>
+                <lb n="3"/><w lemma="διαφέρω">δι<unclear>α</unclear>φέρο<unclear>ν</unclear></w>
+                <persName type="attested" ref="#person325"><name nymRef="Σαυαγας">Σαυα<lb
+                    n="4" break="no"/>γᾳ</name> <persName type="attested"><name nymRef="Ἄριστων">Ἀρίστονος</name></persName></persName>
+                <w lemma="κόμης"><expan><abbr>κόμ</abbr><ex>ητος</ex></expan></w>
+                <lb n="5"/><w lemma="ἐν">ἐν</w> <w lemma="ὁ">τῷ</w> <num value="775">εοψ</num>
+                <w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ει</ex></expan></w>.
+            </ab>
+        </div>
+            
+            <div type="apparatus">
+                <!-- Критич. аппарат -->
+                <p>
+                    <!--<app loc="1"><rdg resp="b0057 ????? b0399">ΙΙΙΠΕΙ[... </rdg>Y. Vinogradov </app>-->
+                </p>
+            </div>
+            
+            <div type="translation" xml:lang="ru">
+                <!-- Перевод -->
+                <p>Куплено новое рыболовецкое место, принадлежащее Савагу, сыну Аристона, комиту, в 775 году.
+                </p>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>A new fishing spot was purchased, belonging to Sauagas, son of Ariston, prefect, in the year 775. </p>
+            </div>
+            
+            <div type="commentary" xml:lang="ru">
+                <!-- Комментарий -->
+                <p>Надпись найдена не в окрестностях ст. Троицкая, как мы судили ранее по первоизданию, но на Азовском побережье Таманского
+                    полуострова (любезное указание А.В. Пьянкова). Издатель пользовался протиркой, предоставленной ему Б.А. Раевым через С.Р. Тохтасьева. 
+                    Еще в начале 1990-ых гг. камень хранился в народном музее станицы Троицкая, однако в 2008 г. он обнаружился в частной коллекции. Фото любезно 
+                    предоставлено нам Раевым.</p> 
+                    <p>1. На протирке, любезно переданной нам самим Тохтасьевым, во второй букве, действительно, не читается горизонтали, однако 
+                        единственное пи в этой надписи имеет сильно вынесенные концы, для которых не остается места на камне. Это чтение подтверждает и 
+                        фотография Раева.</p>
+                    <p>1–5. По верному предположению издателя, надпись отмечала новоприобретенный рыболовецкий участок Савага, известного нам также по 
+                        надписям <ref type="inscription">V 251</ref>, <ref type="inscription">V 299</ref> и <ref type="inscription">V 319</ref>. Владельческие надписи неизвестны в византийской эпиграфике Северного Причерноморья, а в остальном 
+                        христианском мире встречаются только на могилах (не относятся к погребению «место, принадлежащее венетам» в Оксиринхе нач. VII в. (SB, № 6019) и, 
+                        вероятно, подобная надпись из Антиохены нач. VI в. (IGLS, № 1232)). В этой связи важна лексика памятника: термин τόπος употребляется в христианской 
+                        эпиграфике в основном для обозначения места для погребения и очень часто сопровождается причастием διαφέρων «принадлежащее такому-то» 
+                        (подр. см. Grossi Gondi 1968, 241–254). Поэтому можно предположить, что образцом для этой не находящий аналогий владельческой надписи 
+                        Савага послужила данная (хоть и не засвидетельствованная в Северном Причерноморье) формула, тем более, что она обозначает не погребение 
+                        как таковое, а лишь место, предназначенное для него и приобретенное заранее (зачастую указывается продавец, сумма и дата, как в нашем случае, 
+                        сделки).</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>Troitskaya Azov coast of the Taman peninsula Pyankov Raev Tokhtasiev Troitskaya Raev Sauagas  Oxyrhynchus Antiochene</p>
+                <p></p>
+                <p></p>
+            </div>
+        </body>
+    </text>
+</TEI>

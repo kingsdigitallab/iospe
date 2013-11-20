@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Феодора</title>
+            <title xml:lang="en">Gravestone of Theodoros</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz221</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Unknown/Ukraine</country>
+                  <altIdentifier xml:lang="ru" n="1">
+                     <repository>Неизвестен</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="1">
+                     <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="ru" n="2">
+                     <repository>ЯИЛМ</repository>
+                     <idno>КП–5677</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="2">
+                     <repository>Yalta Museum of History and Literature</repository>
+                     <idno>КП–5677</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне орнаментированная рамка и посередине рельефное изображение креста на голгофе с меньшими 
+                              крестами над перекладиной, на боковых сторонах рельефные орнаменты. Обломана сверху, разбита на 2 части.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>22,0</height>
+                              <width>26,0</width>
+                              <depth>11,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">По сторонам креста.</seg>
+                           <seg xml:lang="en">On both sides of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей и верхним подчеркиванием, омега в виде двух миндалин. Лигатуры.</seg>
+                        <seg xml:lang="en"/>Lapidary. Alpha with a loop and decorative horizonal stroke at the top, omega is in the shape of <!--two almonds-->. Ligatures.
+                        <height unit="cm">1,0–1,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p032">
+                        <seg xml:lang="ru">Алустон.</seg>
+                        <seg xml:lang="en">Alouston.</seg>
+                     </origPlace>
+                     <origDate notBefore="1291" notAfter="1392" evidence="указание_надписи">
+                        <seg xml:lang="ru">1291–1392 гг.</seg>
+                        <seg xml:lang="en">1291–1392 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy" n="1">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="autopsy" n="2">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found" n="1">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Алушта.</placeName>
+                        <rs type="circumstances">1886 г, разведки В.Ф. Миллерa.</rs>
+                        <rs type="context">Могильник около дач Нарбута и Ге.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Alushta.</placeName>
+                        <rs type="circumstances">1886, survey of V.F. Miller.</rs>
+                        <rs type="context">Necropolis near summer cottages of Narbut and Gay.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="found" n="2">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Алушта.</placeName>
+                        <rs type="circumstances">1950 г., раскопки Е.В. Веймарна.</rs>
+                        <rs type="context">Участок между приморским шоссе и дорогой на холм, храм, юго-восточное плечо, снаружи, склеп, обкладка.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Alushta.</placeName>
+                        <rs type="circumstances">1950, excavations of E.V. Veymarn.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                     <provenance type="observed" n="1">
+                        <seg xml:lang="ru">Неизвестно.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                     </provenance>
+                  <provenance type="observed" n="2">
+                     <seg xml:lang="ru">Ялта, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Yalta, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-10" who="AG">date corrected</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-01" who="AG">several lines translated, bibliography and tags corrected</change>
+          <change when="2012-04-24" who="AL">inserted editor tag, text inserted and tagged, bibliography inserted and tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz221.1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+            <graphic url="byz221.2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="Фрагмент 1">
+               <bibl n="L1"><!-- Миллер 1888--><ptr target="b0173"/>, 132, табл. <biblScope>II.2</biblScope></bibl> 
+                  <bibl n="1.1"><!--Сборник--><ptr target="b0132"/>, <biblScope>72</biblScope></bibl>  
+            </listBibl>
+              <listBibl n="Фрагмент 2">
+                 <bibl n="2"><!-- Скржинская 1958--><ptr target="b0205"/>,  <biblScope>156–165</biblScope></bibl> 
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+             <p>Здесь лежит раб Божий…<g type="stauros"/> 68<gap reason="lost" extent="2" unit="character"/> год. Феодор погребен, зять его; Феодора, сына Тиги..сиг…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies a servant of God... int he year 68[..]. Theodoros was buried, his son in law; of Theodoros, son of Tege...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Склеп, в котором найден фр. 2, относится к XV–XVI вв., и камень здесь был использован вторично. Л.В. Фирсов (Фирсов 1990, 66, рис. 9) привел 
+               реконструкцию типа такого рода плит на основании двух наших фрагментов, однако объединить фрагменты не предложил. В любом случае, Латышев 
+               ошибочно относил надпись по шрифту ко времени не позднее VIII–IX вв.</p>
+                <p> 1–4. Относительно формулы 1 см. <ref type="introduction">IV.3.F.d</ref>.</p>
+            <p> 10, 14–15. О имени Феодор см. комм. к <ref type="inscription">V 148</ref>.</p>
+                <p> 11. Формула с ошибочным ἐθάφη уникальна в Северном Причерноморье, но имеет аналогии в Βull. ép. 1968, 553 (Пальмира, 535 г.).</p>
+                <p> 12. 4-ая буква, которую Скржинская называет u-образной бетой, — несомненно, пи. Ее появление на месте беты обусловлено византийским 
+                   произношением дифтонга «мп» как «мб».</p>
+                <p> 14–21. Очевидно, что в левой части надписи упомянуты два погребенных: «раб Божий», чье имя пропало, и его зять Феодор. Кто такой Феодор, сын 
+                   Тиги..сиг…, в правой половине надписи, не совсем ясно: то ли это еще один погребенный, то ли здесь мы имеем дело с продолжением левой 
+                   половины, и тогда Феодор — это зять первого Феодора, а его имя здесь построено после первого упоминания.</p>
+            <p> 16. Имя на Тиги- находит параллель Тигинаг в <ref type="inscription">V 262</ref> из Пантикапея (IV–VI вв.).</p>
+            <p> Относительно формы памятника см. комм. к <ref type="inscription">V 286</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="fragment" n="1">
+                 <ab> 
+                     <lb n="1"/><g type="stauros"/><w lemma="ἐνθάδε">Ἐνθά<lb n="2" break="no"/>δε</w> <w lemma="κατάκειμαι">κα<lb n="3" break="no"/>τάκη<lb n="4" break="no"/>ται</w>
+                    <w lemma="ὁ">ὁ</w>
+                     <lb n="5"/><w lemma="δοῦλος"><supplied reason="lost">δοῦλ</supplied>ος</w>
+                     <lb n="6"/><w lemma="ὁ"><supplied reason="lost"><expan><abbr>τ</abbr><ex>οῦ</ex></expan></supplied></w>
+                    <w lemma="θεός">θ<supplied reason="lost">εοῦ</supplied></w>
+                     <lb n="7"/><gap reason="lost" quantity="1" unit="line"/>
+                     <lb n="8"/><gap reason="lost" quantity="1" unit="line"/>
+                     <lb n="9"/><g type="stauros"/> <date><num>ςω<gap reason="illegible" quantity="2" unit="character"/></num></date>.
+                     <lb n="10"/><persName type="attested"  ref="#person289"><name nymRef="Θεόδωρος"><expan><abbr>Θεόδωρ</abbr><ex>ος</ex></expan></name></persName>
+                     <lb n="11"/><w>ἐθάφι</w>,
+                     <lb n="12"/><w><expan><abbr>γαμπρ</abbr><ex>ὸς</ex></expan></w> 
+                     <lb n="13"/><w lemma="αὐτός">αὐτοῦ</w>·
+                 </ab>
+                </div>
+        <div type="textpart" subtype="fragment" n="2">
+            <ab>
+                <lb n="1"/> <persName type="attested"><persName type="attested" ref="#person289"><name nymRef="Θεόδωρος">Θ<unclear>εο</unclear>δώ<lb n="2" break="no"/>ρου</name></persName><w lemma="ὁ">τοῦ</w>
+                <lb n="3"/><persName type="attested" ref="#person290"><name>Τηγη<lb n="4" break="no"/><gap reason="illegible" quantity="2" unit="character"/></name></persName></persName><orig>ΣΗΓ</orig>
+                <lb n="5"/><gap reason="illegible" quantity="4" unit="character"/>
+                <lb n="6"/><gap reason="illegible" quantity="4" unit="character"/><orig>Σ</orig>
+                <lb n="7"/><gap reason="illegible" quantity="4" unit="character"/>
+                <lb n="8"/><gap reason="illegible" quantity="4" unit="character"/>
+            </ab>
+        </div>              
+         </div>
+      </body>
+   </text>
+</TEI>

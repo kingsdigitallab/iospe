@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надпись на плите</title>
+            <title xml:lang="en">Inscription on a slab</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz212</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломана со всех сторон, кроме левой (?).</p>
+                           <p xml:lang="en"/>Broken on all sides, except left (?).
+                           <dimensions>
+                              <height>11,5</height>
+                              <width>13,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы маньеризованные, заостренные. Ро незамкнутое, ро и стигма удлиненные.</seg>
+                        <seg xml:lang="en"/>Lapidary; manneristic pointy letters. Loop of rho left open, rho and stigma elongated.
+                        <height unit="cm">2,5–4,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p029">
+                        <seg xml:lang="ru">Эски-Кермен.</seg>
+                        <seg xml:lang="en">Eski-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1300" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IХ–XIII вв.</seg>
+                        <seg xml:lang="en">IX-XIII centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Эски-Кермен.</placeName>
+                        <rs type="circumstances">1930 г., раскопки Ф.И. Шмита.</rs>
+                        <rs type="context">Базилика.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Eski-Kermen.</placeName>
+                        <rs type="circumstances">1930, excavations of F.I. Schmit.</rs>
+                        <rs type="context">Basilica.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-27" who="AG">small corrections, several lines translated</change>
+          <change when="2012-06-19" who="AL">inserted object type and material; small corrections</change>
+          <change when="2012-06-06" who="AL">text tagging corrected</change>
+          <change when="2012-04-24" who="AL">inserted editor tag, translated a line</change>
+          <change when="2012-03-27" who="AL">original date tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz212">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>136 (?).</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>136 (?).</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Негатив надписи хранятся в ФА ИИМК РАН (II–2454; любезно указано С.В. Харитоновым; см. также Шмит 1932, рис. 63; Виноградов 2004, 124).</p>
+                <p> Единственное возможное прочтение надписи по-гречески — это число 136 с обратным порядком знаков, характерным, например, для боспорской 
+                   эпиграфики. «Подвеска» букв под линией строки типична для средневизантийского минускула.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+             <ab>
+               <lb n="1"/><num value="136">ςλρ</num><note>?</note>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

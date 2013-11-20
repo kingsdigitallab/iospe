@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+  <xsl:param name="toc"/>
+  <xsl:param name="date-type"/>
+
+  <xsl:template match="/"/>
+
+  <!-- set title -->
+  <xsl:template name="tocTitleDate">
+    <i18n:text>Inscriptions by Date</i18n:text>
+
+    <xsl:choose>
+      <xsl:when test="$date-type='dated'">
+        <xsl:text> -</xsl:text>
+        <i18n:text>Dated by year</i18n:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text> -</xsl:text>
+        <xsl:value-of select="//list[@xml:lang=$lang]/century[@url=$date-type]"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="generateTocDate">
+    <!-- exclude duplicates (caused by multiple inscriptions within the same file with the same date) -->
+    <dl class="indices indices-date tocs">
+      <xsl:for-each-group
+        select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
+                                  and not(str[@name='file'] = preceding-sibling::doc/str[@name='file']) ]"
+        group-by="int[@name='date-notBefore']">
+        <xsl:for-each-group select="current-group()" group-by="int[@name='date-notAfter']">
+          <xsl:if test="not(str[@name='tei-id'] = '')">
+            <!-- Remove empty elements which might have been indexed -->
+            <dt>
+              <xsl:choose>
+                <xsl:when test="str[@name=concat($toc,'-',$lang)]!=''">
+                  <xsl:value-of select="str[@name=concat($toc,'-',$lang)]"/>
+                </xsl:when>
+                <xsl:otherwise> [<i18n:text>date specified, but not spelled out</i18n:text>]
+                </xsl:otherwise>
+              </xsl:choose>
+            </dt>
+            <xsl:for-each select="current-group()">
+              <dd>
+                <a href="/{str[@name='file']}.html">
+                  <xsl:value-of select="substring-after(str[@name='tei-id'], 'byz')"/>
+                  <xsl:text> </xsl:text>
+                  <xsl:choose>
+                    <xsl:when
+                      test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''"
+                      > [<i18n:text>no title</i18n:text>] </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:text/>
+                      <xsl:value-of select="str[@name=concat('inscription-title-', $lang)]"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </a>
+              </dd>
+
+            </xsl:for-each>
+          </xsl:if>
+        </xsl:for-each-group>
+      </xsl:for-each-group>
+    </dl>
+  </xsl:template>
+
+</xsl:stylesheet>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Кефрины</title>
+            <title xml:lang="en">Gravestone of Kethrine</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz120</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                      <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Неизвестен.</objectType>
+                           <objectType xml:lang="en">Unknown.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Неизвестно.</p>
+                           <p xml:lang="en">Unknown.</p>
+                           <dimensions>
+                              <height>30,0</height>
+                              <width>8,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы разной высоты, несколько вытянутые. Бета с несомкнутыми полукружиями, мю с Y-образной средней частью. Лигатуры эпсилон-тау, омикрон-ипсилон.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate notBefore="1361" notAfter="1361" evidence="указание_надписи">
+                        <seg xml:lang="ru">1361 г.</seg>
+                        <seg xml:lang="en">1361 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Высокое.</placeName>
+                        <rs type="circumstances">Апрель 1897 г., обследования А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Храм свв. Космы и Дамиана, стена справа от входа.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">April 1897, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Church of Saints Kosmas and Damian, wall to the right of the entrance.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-17" who="AG">small corrections</change>
+         <change when="2012-05-29" who="AG">one line translated</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-24" who="AG">editor added, several lines translated</change>
+         <change when="2012-02-06" who="AG">tagged bibliography, apparatus, small corrections</change>
+          <change when="2012-02-29" who="AFS">tagged Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz120">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1897--><ptr target="b0133"/>, 156, № <biblScope>64а</biblScope></bibl>
+               <bibl n="2"><!--Латышев 1898a--><ptr target="b0134"/>, <biblScope>238–239</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="2"><rdg resp="b0133">…ρίνη</rdg></app> 
+                <app loc="2"><lem>το&#x0342; μ(ηνὶ)</lem><rdg resp="b0133"/></app>
+               <app loc="2"><rdg resp="b0134">Δικε(μ)βρίῳ</rdg> <rdg resp="b0133">καὶ ...</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья Кефрина в декабре, в 6870 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep a servant of God Kethrine, in December, year 6870.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по фотографии, прорисовке и эстампажу Бертье-Делагарда. Прорисовка надписи хранится в ФА ИИМК РАН (Q.759.82). 
+               Крест на камне похож на <ref type="inscription">V 135</ref> и <ref type="inscription">V 139</ref>.  </p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+                <p> 2. Латышев предположил, что имя Кефрина может быть местной формой имени Екатерина (как вариант формы Катерина, см. Grégoire 1929, № 217).</p>
+                <p>3. Датировочная формула ἐπὶ ἔτους характерна именно для надписей из Керменчика (см. подр. <ref type="introduction">III.1.C.b</ref>). </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev Bertye-Delagard</p>
+            <p>Kermenchik</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκοιμήθη</w>  <w lemma="ὁ">οἱ</w>
+               <w lemma="δοῦλος">δούλοι</w> <w lemma="ὁ">τοῦ</w>
+                <lb n="2"/><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>
+               <persName type="attested" ref="#person156"><name nymRef="Κεθρίνη">Κεθρίνη</name></persName>
+               <w lemma="ἐν">ἐν</w> <w lemma="ὁ">τῷ</w>
+               <date><w lemma="μήν"><expan><abbr>μ</abbr><ex>ηνὶ</ex></expan></w>
+                  <rs type="month" ref="dec"><w lemma="Δεκέμβριος">Δικαιβρίο</w></rs>
+               <lb n="3"/><w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔτος"><expan><abbr>ἔτου</abbr><ex>ς</ex></expan></w>
+                  <num value="6870">ςωο</num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

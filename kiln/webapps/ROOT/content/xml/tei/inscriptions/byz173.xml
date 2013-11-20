@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Посвящение <certainty cert="low" locus="value" match=".."/> чтеца</title>
+             <title xml:lang="en">Dedication<certainty cert="low" locus="value" match=".."/> of a reader</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz173</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>ЯИЛМ</repository>
+                     <idno>инв. № отсутствует</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Yalta Museum of History and Literature</repository>
+                     <idno>Inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedication.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m8">Плотный мергель.</material>
+                           <material xml:lang="en">Compact marl.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка и рельефный крест с расширяющимися концами посередине, около верхнего рукава 
+                              рельефное изображение ветви (?). Обломана со всех сторон; лицевая сторона сильно стерта.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>14,0</height>
+                              <width>13,0</width>
+                              <depth>4,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На верхнем рукаве креста.</seg>
+                           <seg xml:lang="en">On the upper arm of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы неравной величины. Альфа с наклонной перекладиной, омега в виде двух несомкнутых кружков.</seg>
+                        <seg xml:lang="en">Lapidary; letters of uneven size. Alpha with slanting crossbar, omega in the shape of two detached semicircles.</seg>
+                        <height unit="cm">0,5–0,9.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="medium" evidence="археологический_контекст">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX–X centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1981 г., раскопки В.Л. Мыца.</rs>
+                        <rs type="context">Юго-восточный склон, крестообразный храм.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1981, excavations of V.L. Myts.</rs>
+                        <rs type="context">South-eastern slope, cruciform church.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Ялта, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Yalta, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2011-06-11" who="AG">tagged, several lines translated, small corrections, editor addedc</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz173">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Соломоник 1986--><ptr target="b0210"/>,  216–217, рис. <biblScope>11</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="1-4"><rdg resp="b0210"> Ἔγ<unclear>θ</unclear>[εος] (?) ἁγνοῦ Τε(ο)δόθο(υ)</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Я, чтец, раб Христов <supplied reason="lost">такой-то…</supplied></p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>I, a reader, servant of God...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> По-видимому, камень представляет собой посвящение, связанное со строительством или 
+                украшением храма.</p>
+                <p> 1–4. Неправильное прочтение Соломоник этих строк дезавуирует ее выводы относительно 
+                   посвящения храма св. Феодоту. Чтец упоминается еще в 2 мангупских надписях (<ref type="inscription">V 174</ref> и <ref type="inscription">V 179</ref>).</p>
+            <p> 3–5. Относительно термина «раб Христов» см. комм. к <ref type="inscription">V 197</ref>. Относительно сбивки в падежах 
+               ср. <ref type="inscription">V 53</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Solomonik</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="ἐγώ">Ἐγό</w>, <w lemma="ἀναγνώστης"><expan><abbr>ἀν<lb n="2" break="no"/>αγνόσ<lb n="3" break="no"/>τ</abbr><ex>η</ex><abbr>ς</abbr></expan></w>, <w lemma="δοῦλος">δο<lb n="4" break="no"/><unclear>ύ</unclear><supplied reason="lost">λ</supplied>ῳ</w>
+               <lb n="5"/><persName type="divine" key="#iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName>
+               <lb n="6"/><supplied reason="lost"><w lemma="ὁ">ὁ</w> <w lemma="δεῖνα">δεῖνα</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

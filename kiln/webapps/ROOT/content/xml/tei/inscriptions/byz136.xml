@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Феодорициса и Хатая</title>
+            <title xml:lang="en">Gravestone of Theodoritzes and Chatais</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz136</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno>А-21942</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno>А-21942</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне лучковая арка и рельефное изображение трех крестов на подножье; на боковых сторонах изображения 
+                              крестов с орнаментом. Разбитf на 2 части при перевозке в Симферополь; в настоящее время нижняя часть утрачена.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>83,0</height>
+                              <width>36,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под рельефом.</seg>
+                           <seg xml:lang="en">Below the relief.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Дзета минускульная, лямбда с вертикальной правой гастой, мю с Y-образной серединой, омега угловатая. Лигатуры омикрон-ипсилон, ипсилон-йота; сокращение κ(αί).</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки.</seg>
+                        <seg xml:lang="en">Laki.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1301" evidence="указание_надписи">
+                        <seg xml:lang="ru">1301 г.</seg>
+                        <seg xml:lang="en">1301 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Лаки.</placeName>
+                        <rs type="circumstances">Лето 1898 г., обследования А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Лес, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Laki.</placeName>
+                        <rs type="circumstances">Summer of 1898, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Forest, cemetery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Simferopol, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">small corrections</change>
+         <change when="2012-07-10" who="AFS">small changes in Greek text</change>         
+         <change when="2012-05-30" who="AG">editor added</change>
+         <change when="2012-04-30" who="AG">several lines translated</change>
+         <change when="2012-03-12" who="AG">checked, some corrections in metadata, bibliography and apparatus tagged, tags in the Greek text corrected</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz136.1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1898a--><ptr target="b0134"/>, 233–235, 252, № <biblScope>64в</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="2"><rdg resp="b0134">Χατὰ ἡ σύ(ζυγος)</rdg></app>
+                <app loc="3-4"><rdg resp="b0134">ΠΛΑΠΑΝΤΟΥΤΖΟΤΑΓΑΙ</rdg></app>
+                <app loc="4"><rdg resp="b0134">μηνὸς Α(ὐγου)στ(ου) α´</rdg></app>
+                <app loc="5"><rdg resp="b0134">ςωο´</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Феодорицис и Хатай, его брат, сыновья Палпана, сына Чогатая, 1 <supplied reason="lost">м</supplied>ая 6809 года.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Theodoritzes, and Chatais, his brother, sons of Palpan, son of Tzogatai, on the 1st of May, in the year 6809.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по фотографии Бертье-Делагарда, которая хранится в ФА ИИМК 
+                (О.1077.10); там же находится и публикуемый снимок (Q.759.87).  </p>
+                <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+            <p> 1–2. Относительно имени Феодорицис см. комм. к <ref type="inscription">V 131</ref>, о имени Хатай — прил. 2. Отметим, 
+                    что один брат носит греческое имя, а другой — тюркское.</p>
+                <p> 3–4. В настоящее время от 4–й строки сохранились только верхушки букв, но и по ним 
+                    (как и по фотографии) можно увидеть, что на рисунке в статье Латышева допущена ошибка: 
+                    вм. ΠΑΛΠΑΝΤΟΥΤΖΟΓΑΤΑΙ воспроизведено ΠΛΑΠΑΝΤΟΥΤΖΟТАГΑΙ. Тюркское имя Чогатай 
+                    (см. прил. 2) известно в Крыму в форме Scacatai у Гийома де Рубрука: так звали татарского 
+                    «князя Газарии» в 1253 г. (Pelliot 1949, 47, n. 2) Судя по разнице в 48 лет между 1253 г. и 
+                    1301 — годом нашей надписи, герой Рубрука вполне мог быть дедом Феодорициса и Хатая. 
+                    Если это так, то, во-первых, погребенные на Лакском кладбище имели знатное происхождение 
+                    (в пользу этого говорит и высокий уровень исполнения надписи), а, во-вторых, оказывается, что 
+                    внуки Чогатая были христианами.</p>
+                <p> 4. Уникальная для Крыма форма μέου вм. μαΐου встречается в IGLS 1912, 2053.  </p>
+                <p> 5. Тета в числе года четко читается на архивной фотографии.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev Bertye-Delagard</p>
+             <p>3-4. Latyshev Guillaume de Rubrouck Laki</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκοιμήθη</w> <w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="δοῦλος"> δοῦλος</w> <w lemma="ὁ">τοῦ</w> 
+               <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> 
+               <persName type="attested" ref="#person184"><name nymRef="Θεοδωρίτσης">Θεο<lb n="2" break="no"/>δωρίτζης</name></persName><g type="dipunct"/> 
+               <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> 
+               <persName type="attested" ref="#person185"><name nymRef="Χαταις">Χαταις</name></persName> 
+               <w lemma="ἀδελφός"><expan><abbr><unclear>ἀ</unclear>δ</abbr><ex>ελφὸς</ex></expan></w>
+               <lb n="3"/><w lemma="αὐτός">αὐτοῦ</w>, <w lemma="υἱός">υἱοὶ</w> <persName type="attested" ref="#person186"><name>Παλπαν</name></persName> 
+               <w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person187"><name nymRef="Τζογαται">Τζο<lb n="4" break="no"/>γαται</name></persName>, 
+               <date><w lemma="μήν"><expan><abbr>μην</abbr><ex>ὶ</ex></expan></w> <w lemma="μέος"><supplied reason="lost">Μ</supplied>έ<unclear>ου</unclear></w> 
+                  <w lemma="εἰς"><unclear>ὐ</unclear>ς</w> <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ὰ</ex></expan></w> 
+                  <num value="1">α</num> <w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w>
+               <lb n="5"/><num value="6809">ςωθ</num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

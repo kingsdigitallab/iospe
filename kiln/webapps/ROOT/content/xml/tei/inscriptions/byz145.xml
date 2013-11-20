@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Авраамия и Космы</title>
+            <title xml:lang="en">Funerary text of Abrames and Kosmas</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz145</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon35">Ниша.</objectType>
+                           <objectType xml:lang="en">Niche.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Плоская ниша с рамкой в скальной стене. Сколы по поверхности, обломана правая и нижняя часть.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>33,0</height>
+                              <width>47,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей и прогнутой правой диагональю, мю широкое, сигма минускульная. Ударения.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">2,2–3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита.</seg>
+                        <seg xml:lang="en">Kalamita.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XV centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Инкерман.</placeName>
+                        <rs type="circumstances">1870-е гг., обследование Д.И. Струкова.</rs>
+                        <rs type="context">Устье Гайтанской балки, храм «с крещальней», аркосолий в северной стене, восточная стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">1870s, survey od D.I. Strukov.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">in situ.</seg>
+                     <seg xml:lang="en">in situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-29" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">corrections</change>
+         <change when="2012-05-31" who="AG">editor added, several lines translated, bibliography and apparatus corrected</change>
+         <change when="2012-03-13" who="AG">tags in the Greek text corrected</change>
+         <change when="2012-03-12" who="AG">corrections in metadata, bibliography and apparatus tagged</change>
+         <change when="2012-03-06" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz145.1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+             <graphic url="byz145.2">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+           <graphic url="byz145.3">
+                <desc xml:lang="en">Drawing of face 2(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Сборник--><ptr target="b0132"/>,  <biblScope>33</biblScope></bibl>
+               <!--<bibl n="1.1"><!-\-Millet 1900-\-><ptr target="b???"/>, #, № <biblScope>33</biblScope></bibl>-->
+               <bibl n="2"><!--Виноградов 2005а--><ptr target="b0043"/>, <biblScope>432–434</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="3"> <rdg resp="b0132">υ(ἱὸς ?) Ἄθκ[α</rdg></app>--&gt;
+               <app loc="3-4"> <rdg resp="b0132">..´, ἡμ(έρᾳ) [...]</rdg> <rdg resp="b0043">ι[θ´], ἡ(μέρᾳ) ς´.</rdg></app>-
+               <app loc="4"> <rdg resp="b0132">Ἄθκα</rdg></app>
+               <app loc="5-6"><rdg resp="b0132">[Μαρτίῳ ?] ςτκθ´?</rdg>  <!--<rdg resp="????">ἡμ(έρᾳ) ΤΚΘ</rdg> Millet--> <rdg resp="b0043">ἡ(μέρᾳ) .´, ςϠκθ´ (?)</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почили рабы Божьи Авраамий, …, первого разряда и комит, 8 числа первого месяца; и Ко<supplied reason="lost">см</supplied>а, 
+               первого разряда и к<supplied reason="lost">о</supplied>мит, 29 числа …-го месяца.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: servants of God, Abrames,..., of the first <!--[class?category?]--> and a komites, on the 8th day of the first month; and Kosmas, 
+               of the first <!--[class?category?] -->and a komites, on the 29th day of [...] month.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Латышев издал надпись по копии Бертье-Делагарда (Бертье-Делагард 1886, 220–221, рис. 67; 
+                см. также: Латышев 1897, 151); сохранилась также копия Д. Струкова (РА ИИМК РАН. Ф. Р–I, № 
+                619. Л. 4; см. Струков 1876, 26) и публикуемая фотография начала ХХ века 
+                (ФА ИИМК РАН II–36633; O.1320.22). В настоящее время больше половины (нижняя часть) текста 
+                погибло.  </p>
+                <p> Надпись помещается над двойной гробницей в северо-западной части храма, датируемого по 
+                    архитектуре и литургическому устройству XIV–XV вв. (см. Виноградов, Гайдуков, Желтов 2005, 
+                    76) Очевидно, речь идет о надгробии двух ктиторов церкви и, возможно, монастыря 
+                    (ср. <ref type="inscription">V 143</ref>). Наш вариант чтения надписи предполагает их значительное положение в 
+                    Феодоритском государстве.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+                <p> 2. Имя Авраамий больше не встречается в надписях Крыма, но часто — в христианской 
+                    эпиграфике: именно с такой формой имени известен один преподобный 
+                    (см. Delehaye 1902, 1042).  </p>
+                <p> 2, 4. Общепризнанной стала гипотеза Латышева, который предложил интерпретировать 
+                    ΥΑΘΚ в 2-й строке и ΑΘΚΑ в 4–1 строке как υ(ἱὸς) Ἄθκ[α] и Ἄθκα соответственно, сопоставив 
+                    этот патронимик с именами (или фамилиями) Ἄπκα и Ἀνάτκους в Халкинском синаксаре. 
+                    Такое прочтение наталкивается на ряд возражений. Во-первых, сокращение υ(ἱὸς) не находит 
+                    себе аналогий среди византийских надписей Северного Причерноморья. Во-вторых, непонятно, 
+                    почему это слово не повторено во втором случае. Наконец, в надписи четко различаются 
+                    сохранившиеся ударения, стоящие над некоторыми словами, и знаки сокращений или цифр, 
+                    как над вышеупомянутым ипсилоном — одно из этих титл стоит над следующей за ним альфой.</p>
+                <p> В надгробии с Эски-Кермена (№ 211) после имени погребенного четко читается его ранг: 
+                    ὁ καὶ τῆς πρώτης θέσεως “первого разряда” (из дальнейшего текста следует, что он, вероятно, 
+                    был начальником “третьей части” — видимо, территориальной единицы Феодоритского 
+                    государства). Так же мы склонны и понимать сокращение ΑΘ в нашей надписи — α´ θ(έσεως) 
+                    (во втором случае тета с титлом), а следующие за ним каппу и альфу — как остаток καί. 
+                    Такое понимание хорошо согласуется и со следующим далее в обоих случаях титулом комит. 
+                    Если мы действительно имеем дело с обозначением ранга или должности, то становится 
+                    понятным, почему в одном случае после имени стоит ипсилон, а в другом нет, однако от 
+                    расшифровки титула, начинающегося на ипсилон, ввиду отсутствия параллелей, следует 
+                    воздержаться. Альтернативные чтения в 2-й и 4-й строках происходят из копии Струкова.  </p>
+                <p> 3, 5. В плане обозначения даты надпись выказывает несколько сложностей. Месяц указан в 
+                   первом случае как «первый» (т.е. сентябрь, ср. <ref type="inscription">V 162</ref>), а во втором явно обозначен цифрой 
+                   (ср. <ref type="inscription">V 60</ref>, <ref type="inscription">V 89</ref>, <ref type="inscription">V 162</ref>).  </p>
+            <p> 4. Относительно имени Косма см. комм. к <ref type="inscription">V 231</ref>.</p>
+                <p> 4–6. После необычного сокращения ἰς ἡμ(έραν) «в день», которое обычно вводит день 
+                    недели, следуют комбинации : Η и : ΤΚΘ соответственно (обнаружение архивной фотографии 
+                    опровергло наши предположения относительно возможной датировки по году в 6-й строке). 
+                    В такой ситуации мы вынуждены либо считать, что обозначение дня недели шло перед этим 
+                    словом — однако в таком случае невозможно истолковать буквы после него, либо следует 
+                    считать, что этим словом автор надписи вводит день месяца, причем во втором случае с 
+                    артиклем.</p>
+                <p> Итак, Авраамий и Косма были, по всей видимости, ктиторами храма «с крещальней». Эта 
+                    церковь — одна из самых «развитых» в поздневизантийском Горном Крыму: в ней 
+                    единственной есть обособленный протесис и крещальня. Пещерный комплекс вокруг нее может 
+                    быть интерпретирован как монастырь. Такое сложное и мощное строительство вполне 
+                    соответствует высокому статусу погребенных, которые принадлежали, по всей вероятности, к 
+                    высшему классу феодоритского чиновничества и, вполне возможно, подобно Ла..ули-бею с 
+                    Эски-Кермена (см. <ref type="inscription">V 211</ref>), были местными феодалами.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev Bertye-Delagard D. Strukov</p>
+             <p>Vinogradov Gaydukov Zheltov</p>
+             <p>Latyshev</p>
+             <p>Eski-Kermen</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω"><expan><abbr>Ἐκημήθ</abbr><ex>η</ex><abbr>σαν</abbr></expan></w> <w lemma="ὁ">ὑ</w> 
+               <w lemma="δοῦλος">δοῦλη</w>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> 
+               <persName type="attested" ref="#person198"><name nymRef="Ἀβράμης">Ἀβράμης</name></persName> 
+               <abbr>υ</abbr>, <num value="1">α</num> <w lemma="θέσις"><expan><abbr>θ</abbr><ex>έσεως</ex></expan></w> 
+               <w lemma="καί">κ<unclear>α</unclear><supplied reason="lost">ὶ</supplied></w> 
+               <w lemma="ὁ"><supplied reason="lost" cert="low">ὁ</supplied></w>
+               <lb n="3"/><w lemma="κόμης">κόμης</w> <date><w lemma="μήν">μηνὶ</w> <w lemma="πρῶτος">πρότο</w> 
+                  <w lemma="εἰς">ἰ<unclear>ς</unclear></w> <w lemma="ἡμέρα"><expan><abbr>ἡ 
+              <lb n="4" break="no"/>μ</abbr><ex>έραν</ex></expan></w> <num value="8">η</num></date> <w lemma="καί">κὲ</w> 
+               <persName type="attested" ref="#person199"><name nymRef="Κοσμᾶς">Κο<supplied reason="lost">σμ</supplied>ᾶς</name></persName>, 
+               <num value="1">α</num> <w lemma="θέσις"><expan><abbr>θ</abbr><ex>έσεως</ex></expan></w> 
+               <app type="alternative"><lem><w lemma="καί">κα<supplied reason="lost">ὶ</supplied></w></lem> 
+                  <rdg><w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <w lemma="ὁ">ὁ</w></rdg></app> 
+               <w lemma="κόμης">κ<supplied reason="lost">ό</supplied>
+              <lb n="5" break="no"/>μης</w><date>, <w lemma="μήν">μ<unclear>η</unclear>νὶ</w> 
+                 <num><gap reason="lost" quantity="1" unit="character"/></num> 
+                 <supplied reason="lost"><w lemma="εἰς">ἰς</w></supplied> 
+                 <w lemma="ἡμέρα"><expan><abbr>ἡ<lb n="6" break="no"/>μ</abbr><ex>έραν</ex></expan></w> 
+                 <w>τ<supplied reason="lost"><app type="alternative"><lem>ὰ</lem><rdg>ὴν</rdg></app></supplied></w> 
+                 <num value="29">κθ<certainty locus="value" match=".." cert="low"/></num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

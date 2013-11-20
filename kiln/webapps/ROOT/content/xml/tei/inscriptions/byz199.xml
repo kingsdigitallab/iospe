@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробная надпись донатора</title>
+            <title xml:lang="en">Funerary inscription of a donator</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz199</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>in situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon31">Фреска.</objectType>
+                           <objectType xml:lang="en">Fresco.</objectType>
+                           <material xml:lang="ru" ref="#m7 #m6">Темпера на штукатурке.</material>
+                           <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Оббита снизу.</p>
+                           <p xml:lang="en">Chipped at the bottom.</p>
+                           <dimensions>
+                              <height>3,5</height>
+                              <width>10,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>, белая краска по синему фону; вытянутые по вертикали и заостренные на концах буквы.</seg>
+                        <seg xml:lang="en">Dipinto, white paint over blue backgroud; letters are elongated, with pointy hastae.</seg>
+                        <height unit="cm">3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p025">
+                        <seg xml:lang="ru">Черкес-Кермен.</seg>
+                        <seg xml:lang="en">Cherkes-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1351" notAfter="1352" evidence="указание_№_197">
+                        <seg xml:lang="ru">Ок. 1351–1352 или 1381–1382 гг.</seg>
+                        <seg xml:lang="en">Ca. 1351–1352  or 1381–1382 C.E.</seg>
+                        <certainty locus="value" match="../@notBefore" assertedValue="1381"/>
+                        <certainty locus="value" match="../@notAfter" assertedValue="1382"/> 
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Черкес-Кермен.</placeName>
+                        <rs type="circumstances">До 1896 г., обследования Ю.А. Кулаковского.</rs>
+                        <rs type="context">«Храм донаторов», северо-западный угол.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Cherkes-Kermen.</placeName>
+                        <rs type="circumstances">Before 1896, survey of Yu.A. Kulakovsky.</rs>
+                        <rs type="context">"Church of Donators", north-western corner.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">in situ.</seg>
+                     <seg xml:lang="en">in situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2013-04-17" who="AG">comments updated</change>
+         <change when="2012-08-29" who="AFS">added Greek lemmata</change>
+         <change when="2012-07-03" who="AG">apparatus upd after Vinogradov</change>
+         <change when="2012-06-26" who="AG">several lines translated, small corrections, apparatus tagged, tags corrected</change>
+          <change when="2012-06-19" who="AL">editor tag inserted, bibliography tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz199">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Сборник--><ptr target="b0132"/>,  <biblScope>43a-z</biblScope></bibl>
+               <bibl n="1.1"><!-- Латышев 1897--><ptr target="b0133"/>, <biblScope>152</biblScope></bibl>
+                <bibl n="2"><!--Виноградов 2004--><ptr target="b0042"/>, <biblScope>129</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="1"><rdg resp="b0132 b0133">Ἐκοιμήθη</rdg> </app>
+               <app loc="1-2"><lem>[ἡ ... δεῖνα</lem><rdg/></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья такая-то…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Третья строка из копии Кулаковского вряд ли относится к этой надписи, скорее, это подпись к изображению св. Георгия. См. также комм. к <ref type="inscription">V 200</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The third line, from the copy of Kulakosky, most likely does not belong to this inscription. <!--Rather it is an inscription from St. George.--> See also 
+               commentary for <ref type="inscription">V 200</ref>.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκοιμήθη</w> <supplied reason="lost"><w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w></supplied>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> <supplied reason="lost"><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w> <w lemma="ὁ">ἡ</w> <w lemma="δεῖνα">δεῖνα</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

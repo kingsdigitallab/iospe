@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="ru">Надгробие неизвестных</title>
+                <title xml:lang="en">Gravestone of an unknown</title>
+                <editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor>
+            </titleStmt>
+            <publicationStmt>
+                <idno type="filename">byz114</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Ukraine</country>
+                        <altIdentifier xml:lang="ru">
+                            <repository>in situ</repository>
+                            <idno/>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>in situ</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <summary corresp="document-search.xml#doc2">
+                            <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                            <seg xml:lang="en" n="1">Funerary inscription.</seg>
+                            <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                            <seg xml:lang="en" n="2">Funerary inscription.</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon6">Блоки.</objectType>
+                                    <objectType xml:lang="en">Blocks.</objectType>
+                                    <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                                    <material xml:lang="en">Limestone.</material>
+                                    <p xml:lang="ru">Лицевая сторона слабо обработана. Сохранились целиком.</p>
+                                    <p xml:lang="en"/>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout ana="f1" n="1">
+                                    <seg xml:lang="ru">Между других граффити.</seg>
+                                    <seg xml:lang="en"/>
+                                </layout>
+                                <layout ana="f1" n="2">
+                                    <seg xml:lang="ru">Между других граффити.</seg>
+                                    <seg xml:lang="en"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote n="1">
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы вытянуты по вертикали, угловатые.</seg>
+                                <seg xml:lang="en"/>
+                            </handNote>
+                            <handNote n="2">
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы вытянуты по вертикали, угловатые.</seg>
+                                <seg xml:lang="en"/>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origPlace.xml#p007" n="1">
+                                <seg xml:lang="ru">Бакла.</seg>
+                                <seg xml:lang="en">Bakla.</seg>
+                            </origPlace>
+                            <origDate n="1" notBefore="1283" notAfter="1283" evidence="указание_надписи">
+                                <seg xml:lang="ru">1283 г.</seg>
+                                <seg xml:lang="en">1283 C.E.</seg>
+                            </origDate>
+                            <origPlace ref="origPlace.xml#p007" n="2">
+                                <seg xml:lang="ru">Бакла.</seg>
+                                <seg xml:lang="en">Bakla.</seg>
+                            </origPlace>
+                            <origDate n="2" notBefore="1283" notAfter="1283" evidence="указание_надписи">
+                                <seg xml:lang="ru">1283 г.</seg>
+                                <seg xml:lang="en">1283 C.E.</seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="autopsy">
+                            <seg xml:lang="ru">non vidi.</seg>
+                            <seg xml:lang="en">non vidi.</seg>
+                        </provenance>
+                        <provenance type="found">
+                            <seg xml:lang="ru">
+                                <placeName type="ancientFindspot">Бакла.</placeName>
+                                <rs type="circumstances">1978 г., раскопки В.Е. Рудакова.</rs>
+                                <rs type="context">Крестообразный храм, склеп под центральной частью, южная стена, на выс. 140–150 см от пола.</rs>
+                            </seg>
+                            <seg xml:lang="en">
+                                <placeName type="ancientFindspot">Bakla.</placeName>
+                                <rs type="circumstances">1978, excavations of V.E. Rudakov.</rs>
+                                <rs type="context"/>
+                            </seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="ru">in situ.</seg>
+                            <seg xml:lang="en">in situ.</seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+            <change when="2012-05-28" who="AG">several lines translated</change>
+            <change when="2012-04-23" who="AG">date corrected, several lines translated, editor added</change>
+            <change when="2012-03-06" who="AG">corrected and tagged</change>
+            <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz114.1">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+            <graphic url="byz114.2">
+                <desc xml:lang="en">Drawing of face 2(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="bibliography">
+                <listBibl n="1">
+                    <bibl/>
+                </listBibl>
+                <listBibl n="2">
+                    <bibl/>
+                </listBibl>
+            </div>
+            <div type="translation" xml:lang="ru">
+                <div type="textpart" n="1">
+                    <p>Рабы Божьи (?).</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>6792 (?), <gap reason="lost" extent="2" unit="character"/>-го ноября (?).</p>
+                </div>
+            </div>
+            <div type="translation" xml:lang="en">
+                <div type="textpart" n="1">
+                    <p>Servants of God (?)</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>year 6792 (?)... of November</p>
+                </div>
+            </div>
+            <div type="commentary" xml:lang="ru">
+                <div type="textpart" n="1">
+                    <p>Здесь отсутствуют имена усопших: возможно, они не были скопированы Рудаковым</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p> Знаки, воспроизведенные на рисунке Рудакова (Рудаков 1980, 121–129, рис. 3) — несомненно, буквы. Уровень исполнения их очень низкий, однако 
+                        можно угадать в них какой-то смысл.  </p>
+                    <p> В надписи явно присутствует пси, которое вкупе с соседними знаками кажется похожим на обозначение года, а следующие за ними ΜΝΒΡ — 
+                        на “месяц ноябрь”.</p>
+                    <p>Указание на конец XIII в. в склепе, засыпанном, по Рудакову, при постройке позднего одноапсидного храма, не совсем согласуется с 
+                        предположением первооткрывателя о разрушении крестообразного храма в XII в. — возможно, необходима перепроверка датировок Рудакова для 
+                        вещей из комплекса первой церкви.</p>
+                </div>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <div type="textpart" n="1">
+                    <p>Rudakov</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>Rudakov</p>
+                    <p>Rudakov</p>
+                </div>
+            </div>
+            <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="δοῦλος">Δοῦλοι</w> <w lemma="ὁ"><expan><abbr>τ</abbr><ex>οῦ</ex></expan></w> <w lemma="θεός"><expan><abbr>θ</abbr><ex cert="low">εοῦ</ex></expan></w>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><date><num value="6792">ςψϞ<unclear>β</unclear></num> <note>?</note>, <w lemma="μήν"><expan><abbr>μ</abbr><ex>ηνὶ</ex></expan></w>
+                      <rs type="month" ref="nou"><w lemma="Νοέμβριος"><expan><abbr>Ν</abbr><ex>οε</ex><abbr>βρ</abbr><ex cert="low">ίου</ex></expan></w></rs>
+                      <num><gap reason="lost" quantity="2" unit="character"/></num></date>
+               </ab>
+            </div>
+         </div>
+        </body>
+    </text>
+</TEI>

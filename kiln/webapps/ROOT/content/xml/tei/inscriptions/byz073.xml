@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие ...ия</title>
+            <title xml:lang="en">Gravestone of ...ias</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz073</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34960</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34960</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломана со всех сторон, кроме левой.</p>
+                           <p xml:lang="en">Broken on all sides except the left. </p>
+                           <dimensions>
+                              <height>10,5</height>
+                              <width>7,5</width>
+                              <depth>6,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, сигма <!--полу-->ромбовидная.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a broken hasta; <!--half-->-diamond sigma.</seg>
+                        <height unit="cm">2,5–2,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0501" notAfter="0700" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">VI–VII вв.</seg>
+                        <seg xml:lang="en">VI–VII centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1889 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1889, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-30" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-16" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography corrected and tagged</change>
+         <change when="2012-01-10" who="AG">updating, partial translation, some corrections</change>
+         <change when="2011-12-06" who="AG">minor corrections, tags added to the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz73">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!--Соломоник 1973--><ptr target="b0391"/>, № 134<biblScope>119-122</biblScope></bibl> 
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <p>
+               <app loc="1"><rdg resp="b0209"/></app>
+               <app loc="2-3"><rdg resp="b0209">ΙΑΟ ΤΑΝ </rdg></app>
+               <app loc="4"><rdg resp="b0209"/></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>…ий <supplied reason="lost">ле</supplied>жи<supplied reason="lost">т здесь</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>...a[...]ias lies here.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Фотография надписи приложена к перепечатке отчета о раскопках за 1889 и 1890 гг. в архиве Национального заповедника "Херсонес Таврический", 
+               но в описи находок за 1890 г. камня нет — вероятно, он был найден в 1889 г., когда детальная опись находок не велась.</p>
+             <p> 2–4. Относительно формулы см. <ref type="introduction">IV.3.F.d</ref>; обратный порядок слов встречается в Γιαννόπουλος 1912, 154, № 4 (Фессалия, VI (?) в.).</p>
+            <p> Ромбовидная форма сигмы находит параллель в <ref type="inscription">V 60</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Thessaly</p>
+            <p>Diamond-shaped sigma finds a parallel in <ref type="inscription">V 60</ref>.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>Α</orig><gap reason="lost" extent="unknown" unit="character"/><lb n="2" break="no"/><persName type="attested" ref="#person77"><name><seg part="F"><unclear>ι</unclear>ας</seg></name></persName>
+               <w lemma="κατάκειμαι"><supplied reason="lost">κα</supplied><lb n="3" break="no"/>τά<unclear>κ</unclear><supplied reason="lost">ιτε</supplied></w>
+               <lb n="4"/><supplied reason="lost"><w lemma="ἐνθάδε">ἐνθάδε</w></supplied>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

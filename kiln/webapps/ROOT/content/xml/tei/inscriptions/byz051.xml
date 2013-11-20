@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru" ref="#m6"><!--Прошение на штукатурке--></title>
+            <title xml:lang="en"><!--Invocation on plaster--></title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz051</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>21/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>21/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
+                           <objectType xml:lang="en">Pedestal.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк сарматского яруса.</material>
+                           <material xml:lang="en">Sarmatian stage limestone.</material>
+                           <p xml:lang="ru">Ступенчатый постамент для надгробной стелы (с 2 пиронами на боковых сторонах: в виде «ласточкиного хвоста» и Г-образным) 
+                              во вторичном использовании в кладке стены. Состояние неизвестно.</p>
+                           <p xml:lang="en">Stepped pedestal for a grave stele (with two clamps on the sides: one swallow-tail-shaped, and another L-shaped) in secondary use:
+                              used in wall masonry. Condition unknown. 
+                         </p>
+                           <dimensions>
+                              <height>26,0</height>
+                              <width>35,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы угловатые.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">5,0–10,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX–X centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1961 г., обследование И.А. Антоновой.</rs>
+                        <rs type="context">XVII башня, внутренняя обкладка, шестой ряд сверху.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1961, survey of I.A. Antonova.</rs>
+                        <rs type="context">tower XVII, inner ashlaring, sixth row from the top.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-10-10" who="AL">small corrections</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-17" who="AG">several lines translated</change>
+         <change when="2012-04-23" who="AG">several lines translated , small corrections, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-16" who="AG">some corrections, updated</change>
+         <change when="2011-12-01" who="AG">tagging of the Greek text, minor corrections</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz51">
+                <desc xml:lang="en">Drawing of face (from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Соломоник 1971 --><ptr target="b0211"/>,  <biblScope>250–253</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+               <p>
+                  Господи, помоги.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+               <p>O Lord, help.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Относительно формулы см. <ref type="introduction">IV.3.E.a</ref>. Форма беты близка <ref type="inscription">V 46</ref> и <ref type="inscription">V 50</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>On the formula, see <ref type="introduction">IV.3.E.a</ref>. The shape of beta is similar to <ref type="inscription">V 46</ref> and <ref type="inscription">V 50</ref>.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="kyrios"><roleName><w lemma="κύριος">Κύριε</w></roleName></persName>, <w lemma="βοηθέω">βοήθει</w>.
+               </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

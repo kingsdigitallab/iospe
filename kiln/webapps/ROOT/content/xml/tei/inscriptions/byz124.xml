@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Костиса</title>
+            <title xml:lang="en">Gravestone of Kostys</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor> 
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz124</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                      <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="1">Funerary inscription.</seg>
+                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="2">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефное изображение процветшего креста с двумя каплями на концах на подножии сложной формы и 
+                              углубление под ним. Буквы стерты.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">В углублении под подножием креста.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, каппа с прогнутыми диагоналями.</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                     <handNote n="2">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Мю с Y-образной серединой. Лигатуры омикрон-ипсилон, сигма-тау-ипсилон.</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="1382" notAfter="1382" evidence="указание_надписи">
+                        <seg xml:lang="ru">1382 г.</seg>
+                        <seg xml:lang="en">1382 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="1382" notAfter="1382" evidence="указание_надписи">
+                        <seg xml:lang="ru">1382 г.</seg>
+                        <seg xml:lang="en">1382 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Высокое.</placeName>
+                        <rs type="circumstances">Лето 1898 г., обследования А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Храм свв. Космы и Дамиана, стена слева от входа.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">Summer of 1898, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Church of Saints Kosmas and Damian, wall to the left of the entrance.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-04-17" who="NG">Greek lemmata corrected</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">small corrections</change>
+         <change when="2012-06-26" who="AG">corrected</change>
+         <change when="2012-04-30" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-06" who="AG">check, small corrections, tagged bibliography and apparatus</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz124">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="1"><!--Латышев 1898a--><ptr target="b0134"/>, 239–240, № <biblScope>64д</biblScope></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Латышев 1898a--><ptr target="b0134"/>, 239–240, № <biblScope>64д</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="1">
+             <p>
+               <app loc="2"> <rdg resp="b0134">[μηνὶ]</rdg></app>
+            </p>
+         </div>
+         <div type="apparatus" n="2">
+             <p>
+                <app loc="2"><rdg resp="b0134">[μηνὶ]</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Иисус Христос побеждает.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Почил раб Божий Костис 20 <supplied reason="lost">и</supplied>юня, в <supplied reason="lost">6</supplied>890 году.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p><supplied reason="lost">Jesus</supplied> Ch(rist) is victorious.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep: a servant of God Kostys, on the 20th of <supplied reason="lost">J</supplied>une, in the year <supplied reason="lost">6</supplied>890.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Надпись издана Латышевым по эстампажу Бертье-Делагарда. Сам камень, изданный 
+                   Латышевым с рисунком, пропал. Его фотография хранится в ФА ИИМК (О.710.71 и 
+                   публикуемый снимок II–44322, O.1529.71).</p>
+                <p>1–2. Относительно формулы см. <ref type="introduction">IV.3.C.e</ref>.  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+               <p> 2. Имя Костис — сокращенное от Константин, известного в Крыму по <ref type="inscription">V 32</ref>, <ref type="inscription">V 318</ref> и <ref type="inscription">V 319</ref>.  </p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Latyshev Bertye-Delagard</p>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><supplied reason="lost"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name></supplied> <name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><abbr><supplied reason="lost">ς</supplied></abbr></expan></name></persName>
+                  <lb n="2"/><w lemma="νικάω">νικᾷ</w>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="κοιμάω"><expan><abbr>Ἐκ</abbr><ex>ι</ex><abbr>μίθι</abbr></expan></w>
+                  <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος"><expan><abbr>δοῦ</abbr><ex>λος</ex></expan></w>
+                  <w lemma="ὁ"><supplied reason="lost">τ</supplied>οῦ</w>
+                  <lb n="2"/><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>
+                  <persName type="attested" ref="#person162"><name nymRef="Κώστας"><expan><abbr>Κόστυ</abbr><ex>ς</ex></expan></name></persName>
+                  <w lemma="ἐν">ἐ<unclear>ν</unclear></w>
+                  <date><w lemma="μήν"><supplied reason="lost"><expan><abbr>μ</abbr><ex>ηνὶ</ex></expan></supplied></w>
+                  <lb n="3"/><rs type="month" ref="iun"><w lemma="Ἰούνιος"><supplied reason="lost">Ἰ</supplied><unclear>ο</unclear>υνίου</w></rs>
+                     <w lemma="εἰς">εἰς</w> <num value="20">κ</num>,
+                  <lb n="4"/><w lemma="ἔτος">ἔτ<unclear>ο</unclear><supplied reason="lost">υς</supplied></w>
+                     <num value="6890"><supplied reason="lost">ς</supplied><unclear>ω</unclear>Ϟ</num></date>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

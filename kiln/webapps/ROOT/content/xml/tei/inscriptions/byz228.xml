@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Иоанна и прошение Кириака</title>
+            <title xml:lang="en">Gravestone of Ioannes and invocation of Kyriakos</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz228</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="#doc5 #doc2">
+                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                     <seg xml:lang="en" n="1">Funerary inscription.</seg>
+                     <seg xml:lang="ru" n="2">Посвятительная надпись.</seg>
+                     <seg xml:lang="en" n="2">Dedication.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломан слева, сколы по ребрам.</p>
+                           <p xml:lang="en">Broken on the left, chipped along the edges.</p>
+                           <dimensions>
+                              <height>25,0</height>
+                              <width>36,0</width>
+                              <depth>17,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                        <layout ana="f3" n="2">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote n="1">
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы неровные, позднеминускульные, наклонены вправо. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Graffito; letters are uneven, late minuscule, leaning to the right. Ligatures: omikron-ypsilon.</seg>
+                        <height unit="cm">1,5–3,5
+                      .</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace n="1" ref="origPlace.xml#p036">
+                        <seg xml:lang="ru">Партенит.</seg>
+                        <seg xml:lang="en">Partenit.</seg>
+                     </origPlace>
+                     <origDate n="1" notBefore="1471" notAfter="1471" evidence="указание_надписи">
+                        <seg xml:lang="ru">1471 г.</seg>
+                        <seg xml:lang="en">1471 C.E.</seg>
+                     </origDate>
+                     <origPlace n="2" ref="origPlace.xml#p036">
+                        <seg xml:lang="ru">Партенит.</seg>
+                        <seg xml:lang="en">Partenit.</seg>
+                     </origPlace>
+                     <origDate n="2" notBefore="1471" notAfter="1471" evidence="указание_надписи">
+                        <seg xml:lang="ru">1471 г.</seg>
+                        <seg xml:lang="en">1471 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Партенит.</placeName>
+                        <rs type="circumstances">1871 г., раскопки Д.М. Струкова.</rs>
+                        <rs type="context">Базилика, северный неф.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Partenit.</placeName>
+                        <rs type="circumstances">1871, excavations of D.M. Strukov.</rs>
+                        <rs type="context">Basilica, northern nave.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-10" who="AG">type corrected</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-06" who="AG">several lines translated, apparatus marked up</change>
+         <change when="2012-07-05" who="AFS">marking up Greek text,added metadata.</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz228">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl><!--Латышев 1896--><ptr target="b0132"/>, № <biblScope>71</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="2">
+             <p>
+              <app loc="1-4"> <rdg resp="b0132">... τοῦ κυρί[ου</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>З<supplied reason="lost">десь (?) леж</supplied>ит (?) <supplied reason="lost">к</supplied>титор Иоанн. …в и <supplied reason="lost">о</supplied>ставив 
+                  ее завершенной, <supplied reason="lost">с</supplied>крылся к дальним в 6980 году, 5 <supplied reason="lost">сен</supplied>тября, в четверг.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Прошение Кириа<supplied reason="lost">ка и</supplied>ере<supplied reason="lost">я</supplied>.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Here (?) lies (?) ktytor Ioann... and having left it completed, he hid with <!--the distant-->, in the year 6980, on the 5th of September, Thursday.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Entreaty of Kyriakos, the priest.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Относительно контекста находки см. Караулов 1872, 312–313. Латышев (Латышев 1896, №71) воздержался от прочтения надписи. </p>
+                <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.d</ref>. </p>
+               <p> 2. Относительно погребения ктитора см. комм. к <ref type="inscription">V 68</ref>. </p>
+                <p> 3–4. Причастие в начале 3-й строки обозначало какое-то действие покойного — скорее всего, перестройку или украшение церкви, которую он «оставил 
+                   завершенной». Во время этой перестройки начала 1470-ых годов в пол базилики могла попасть строительная надпись митрополита Дамиана 1427 г. — <ref type="inscription">V 226</ref>.  </p>
+               <p> 4–5. Завершение формулы уникально: не исключено, что его риторический стиль навеян <ref type="inscription">V 226</ref> и <ref type="inscription">V 229</ref>.  </p>
+               <p>6–7. 5 сентября 1471 г. действительно приходилось на четверг.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> Надпись 2 выполнена той же рукой, что и надпись 1. </p>
+               <p> 1–2. Это типичное прошение, что вполне соответствует месту камня в храме (ср. Латышев 1896, №61). Относительно формулы см. <ref type="introduction">IV.3.B.a</ref>.  </p>
+               <p> 3. Об имени Кириак см. комм. к <ref type="inscription">V 72</ref>. </p>
+                <p> 4. Слово иерей в данном случае обозначает скорее священника, чем епископа. </p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p/>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="ἐνθάδε">Ἐ<supplied reason="lost" cert="low">νθάδε</supplied></w> 
+                  <lb n="2"/><w lemma="κατάκειμαι"><supplied reason="lost" cert="low">κατακ</supplied>υτε</w> <w><supplied reason="lost">κ</supplied>τύτορ</w> <persName type="attested" ref="#person305"><name nymRef="Ἰωάννης"><expan><abbr>Ἠ<unclear>ω</unclear></abbr><ex>άννης</ex></expan></name></persName>.
+                  <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ας</w> <w lemma="καί">κ<supplied reason="lost">ὲ</supplied></w> <w>τελύαν</w>
+                  <lb n="4"/><w lemma="καταλείπω"><expan><abbr><supplied reason="lost">κατ</supplied>αλιπ</abbr><ex>ών</ex></expan></w>, <w>ἐκτοπίυς</w>
+                  <lb n="5"/><w><supplied reason="lost">κατ</supplied>άκριψ<unclear>ε</unclear></w> <date><num value="6980">ςϠπ</num>,
+                  <lb n="6"/><rs type="month" ref="sep"><w lemma="Σεπτέμβριος"><expan><abbr><supplied reason="lost">σεπ</supplied></abbr><abbr><unclear>τ</unclear></abbr><abbr>εβρ</abbr><ex>ίῳ</ex></expan></w></rs> 
+                     <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ῇ</ex></expan></w> <num value="5">ε</num> <space unit="character"/> <w lemma="πέμπτος">πέ<supplied reason="lost">μ</supplied><lb n="7" break="no"/><unclear>π</unclear><unclear>τ</unclear><supplied reason="lost">ῃ</supplied></w></date>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="δέησις">Δέησ<lb n="2" break="no"/><supplied reason="lost">ι</supplied>ς</w>
+                  <lb n="3"/><w lemma="ὁ">τοῦ</w>
+                  <lb n="4"/><persName type="attested" ref="#person306"><name nymRef="Κυριακός"><expan><abbr>Κυρια</abbr><supplied reason="lost"><abbr>κ</abbr><ex>οῦ</ex></supplied></expan></name></persName>
+                  <lb n="5"/><w lemma="ἱερεύς"><supplied reason="lost">ἱ</supplied><unclear>ε</unclear>ρέ<supplied reason="lost">ως</supplied></w>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

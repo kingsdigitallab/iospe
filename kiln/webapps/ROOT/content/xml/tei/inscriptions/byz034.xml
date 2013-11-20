@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Замковый камень</title>
+            <title xml:lang="en">Keystone</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz034</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>90/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>90/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon11">Замковый камень.</objectType>
+                           <objectType xml:lang="en">Keystone.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Лицевая сторона заглажена; посередине ее изображение шестиконечного креста на Голгофе. Сколы по всей поверхности.</p>
+                           <p xml:lang="en">Front is smooth, in the center – image of a two-barred (patriarchal) cross on the Golgotha. Chipped all over.</p>
+                           <dimensions>
+                              <height>17,5</height>
+                              <width>16,3</width>
+                              <depth>9,6</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross. </seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; пи с удлиненной перекладиной, фи с удлиненной вертикалью.</seg>
+                        <seg xml:lang="en">Lapidary. Pi with extended horizontal; phi with elongated vertical.</seg>
+                        <height unit="cm">1,5–3,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos. </seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1200" precision="medium" evidence="археологический_контекст">
+                        <seg xml:lang="ru">X–XII вв.</seg>
+                        <seg xml:lang="en">X-XII centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Балаклавский район, устье балки Бермана, сев. склон, восточнее шоссе 5 км — Феолент.</placeName>
+                        <rs type="circumstances">1991 г., разведки В.В. Созник и Т.Б. Кудрявцевой.</rs>
+                        <rs type="context">Комплекс построек X–XII вв.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Balaklava district, mouth of Berman’s Gully, northern slope, east of highway 5km to Feolent.</placeName>
+                        <rs type="circumstances">1991, survey of V.V. Soznik and T.B. Kudryavtseva. </rs>
+                        <rs type="context">Building complex of the 10th-12th centuries C.E..</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine. </seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-10-01" who="AL">corrected Russian metadata</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-14" who="AG">small corrections</change>
+         <change when="2012-04-17" who="AG">small corrections in metadata, editor added</change>
+         <change when="2012-04-10" who="AG">date corrected</change>
+         <change when="2012-03-01" who="GB">copied translations from web version</change>
+         <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-18" who="AG">updated, 1 line translated, date corrected</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="byz34">
+            <desc xml:lang="en">Photograph of face (from ??)</desc>
+            <desc xml:lang="ru"></desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p>ined</p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Свет Христов сияет всем.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>The light of Christ shines for all.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Относительно формулы см. <ref type="introduction">IV.3.C.a</ref>. Несколько нетрадиционны сокращения: вместо обычных Φ Χ Φ Π написано ΦΣ ΧΥ Φ Π.</p>
+            <p> По-видимому, камень являлся завершением арки какого-то значительного здания, возможно, храма.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Regarding the formula, see <ref type="introduction">IV.3.C.a</ref>. The abbreviations are somewhat unusual: ΦΣ ΧΥ Φ Π instead of Φ Χ Φ Π.</p>
+            <p>The keystone was probably positioned at an apex of an arch in some important building, possibly a church.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="φῶς"><expan><abbr>Φ</abbr><ex>ῶ</ex><abbr>ς</abbr></expan></w> 
+                <persName type="divine" key="#iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName>
+               <lb n="2"/><w lemma="φαίνω"><expan><abbr>φ</abbr><ex>αίνει</ex></expan></w> <w lemma="πᾶς"><expan><abbr>π</abbr><ex>ᾶσιν</ex></expan></w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="2.0" xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- This XSLT adds the Solr query parameters passed in the
+       query-string parameter to an XML query document (root element
+       "query"). The document is only added to, with the new elements
+       added after the existing ones. -->
+
+  <xsl:import href="../defaults.xsl"/>
+  <xsl:import href="../../kiln/stylesheets/solr/merge-parameters.xsl"/>
+
+  <xsl:param name="query-string"/>
+  <xsl:param name="min-year"/>
+  <xsl:param name="max-year"/>
+
+  <xsl:template match="query">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+      <xsl:for-each select="tokenize($query-string, '&amp;')">
+        <xsl:element name="{substring-before(., '=')}">
+          <xsl:value-of select="substring-after(., '=')"/>
+        </xsl:element>
+      </xsl:for-each>
+      <fq>
+        <xsl:text>not-before:[</xsl:text>
+        <xsl:value-of select="$kiln:min-year"/>
+        <xsl:text>+TO+</xsl:text>
+        <xsl:value-of select="xs:integer($max-year)"/>
+        <xsl:text>]</xsl:text>
+      </fq>
+      <fq>
+        <xsl:text>not-after:[</xsl:text>
+        <xsl:value-of select="xs:integer($min-year)"/>
+        <xsl:text>+TO+</xsl:text>
+        <xsl:value-of select="$kiln:max-year"/>
+        <xsl:text>]</xsl:text>
+      </fq>
+    </xsl:copy>
+  </xsl:template>
+
+</xsl:stylesheet>

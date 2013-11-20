@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Иоанна</title>
+            <title xml:lang="en">Gravestone of Ioannes</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz118</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno>инв. № неизвестен</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno>inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Плотный мшанковый известняк.</material>
+                           <material xml:lang="en">Cоmpact bryozoan limestone.</material>
+                           <p xml:lang="ru">Стела в виде храмика с двускатной крышей; на лицевой стороне изображение крестов в двойном круге на фронтоне и на 
+                              боковых сторонах и с орнаментальным  пояском под фронтоном; на задней стороне следы крепления. Расколота на 2 части, выщербины по поверхности.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>35,5</height>
+                              <width>18,0</width>
+                              <depth>13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под розеткой.</seg>
+                           <seg xml:lang="en">Below the rosette.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, bouletée. Альфа с петлей; каппа с удлиненной вертикалью, мю и ипсилон прогнутые, хи с апексами на верхних концах.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">0,6–2,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p008">
+                        <seg xml:lang="ru">Басман.</seg>
+                        <seg xml:lang="en">Basman.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1100" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">X–XI вв.</seg>
+                        <seg xml:lang="en">X–XI centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Басман, Хребет.</placeName>
+                        <rs type="circumstances">1962 г., обследование О.И. Домбровского.</rs>
+                        <rs type="context">Карстовые полости, пещера № 5, в завале камней из разрушенного храма.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Basman Ridge.</placeName>
+                        <rs type="circumstances">1962, survey of O.I. Dombrovsky.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Simferopol, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-17" who="AG">small correction</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-24" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-06" who="AG">corrected, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz118.1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+            <graphic url="byz118.2">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Соломоник 1986--><ptr target="b0210"/>, 214–215, рис. <biblScope>6–8</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="3"><rdg resp="b0210">πρ(εσβύτερος) vel πρ(ωτοπαπᾶς)</rdg></app>
+               <app loc="4-5"><rdg resp="b0210">Χερσαικείας</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий <supplied reason="lost">Ио</supplied>анн, пресвитер Херсакии.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: servant of God <!--[Io]annes-->, presbyteros of Chersakeia.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Данный памятник выделяется из общего ряда стандартных надгробий как по своей форме, так и по содержанию надписи. Камень имитирует храм с 
+               двускатной кровлей и украшен вписанными в круг крестами в своей верхней части, отделенной от надписи декоративным пояском. Такое подражание 
+               церковному зданию известно в византийских надгробиях Горного Крыма: ближайшая аналогия — пропавшее надгробие из храма Спаса на г. Бойка в виде 
+               миниатюрной модели храма с двускатной крышей и пятигранной апсидой: на фронтоне модели вырезан процветший крест с двумя маленькими 
+               равноконечными крестами в кружках по бокам фронтона, ниже вырезана надпись на греческом языке (Домбровский 1968, 90). Такая форма объясняется, 
+               возможно, саном погребенного, который был, как следует из надписи, пресвитером.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p> 3. Имя покойного (причем именно Иоанн) в генитиве вместо номинатива встречается в <ref type="inscription">V 66</ref>. Относительно сокращения «пр(есвитер)» в 
+               поздневизантийском Крыму ср. <ref type="inscription">V 153</ref>, <ref type="inscription">V 190</ref> и <ref type="inscription">V 206</ref>. Вариант «протопоп», предложенный Соломоник, ни разу не засвидетельствован в Северном 
+               Причерноморье; ср., напротив, <ref type="inscription">V 206</ref>.1). Обозначение места пресвитерства не уникально, оно встречается в <ref type="inscription">V 189</ref> и <ref type="inscription">V 206</ref>, а также в 
+                   Ὀρλάνδος, Βρανούσσης 1973, № 95 и Mitford 1950, 139, № 11; по всей видимости, оно означает принадлежность погребенного к клиру Херсонской 
+                   епархии.  </p>
+                <p> 4–5. Большой интерес представляет название местности Херсакия (то, что Соломоник приняла за йоту в конце 4-й строки, — случайная черта на 
+                   обломе). Первоиздательница совершенно справедливо сопоставила его с упоминанием херсаков в “Житии апостола Андрея”, написанном 
+                   Епифанием Монахом вскоре после 815–820 гг. (см. Виноградов 2005c, 39–47) Там это слово употребляется автором, посетившим Крым, как 
+                   обозначение жителей Херсона. Имя это, несомненно, местного происхождения (в некоторых рукописях “Жития” оно заменено поэтому на 
+                   традиционное “херсониты”), что доказывает и <ref type="inscription">V 14</ref>. Соломоник предположила, что Херсакией могла называться обширная область вокруг Херсона, 
+                   хотя нельзя исключить и возможности погребения Иоанна вдали от места его служения (например, на родине) в местно почитаемом храме в 
+                   Басманской пещере. Кроме того, такое уточнение могло служить для противопоставления Готской епархии, занимавшей большую часть 
+                   Горного Крыма.</p>
+                <p>Шрифт надписи обнаруживает черты средневизантийского унциала (прогнутое мю), и может датироваться временем начиная с IX в. Однако мы 
+                   встречаем и следы позднего употребления такого шрифта (ср. <ref type="inscription">V 26</ref>, XIV в.). С другой стороны, формула ἐκοιμήθη не встречается в Крыму 
+                   раньше 1065 г. (<ref type="inscription">V 287</ref>) Поэтому мы склонны относить данную надпись к X–XI вв. Археологический материал из пещеры 5 датируется VIII–Х 
+                   веками (Иванов, Дублянский, Домбровский 1963, 28–30).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Saviour on Boyka mountain Dombrovsky</p>
+            <p>Solomonik</p>
+            <p>4-5. Epiphanius the Monk <!--Epiphanius Monachus--> Basman cave Eparchy of Gothia</p>
+            <p>Ivanov Dublyansky Dombrovsky</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω"><expan><abbr>Ἐκυμή</abbr><ex>θη</ex></expan></w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δ<supplied reason="lost">οῦ</supplied><lb n="2" break="no"/>λως</w> <w lemma="ὁ">τοῦ</w> <w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>
+               <lb n="3"/><persName type="attested" ref="#person154"><name nymRef="Ἰωάννης"><supplied reason="lost">Ἰο</supplied><unclear>ά</unclear>νου</name> <w lemma="πρέσβυς"><expan><abbr>πρ</abbr><ex>εσβύτερος</ex></expan></w>
+               <lb n="4"/><w lemma="ὁ"><supplied reason="lost">τ</supplied>ῆς</w>
+                  <placeName key="chersakeia">Χερσα<lb n="5" break="no"/>κείας</placeName></persName> <g type="stauros"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

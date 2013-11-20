@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие Феодора</title>
+            <title xml:lang="en">Gravestone of Theodoros</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz263</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>КМЗ</repository>
+                     <idno>КЛ–541</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Historical and Archeological Museum of Kerch State Historical and Cultural Preserve</repository>
+                     <idno>КЛ–541</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon9">Крест.</objectType>
+                           <objectType xml:lang="en">Cross.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Крест с расширяющимися концами. Обломаны левый и правый рукава и правый угол нижнего рукава.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>59,0</height>
+                              <width>32,0</width>
+                              <depth>12,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы прокрашены охрой. Альфа с ломаной перекладиной, дельта с удлиненной вверх правой гастой, эпсилон, омикрон, сигма и омега прямоугольные.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">3,0–5,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Пантикапей.</seg>
+                        <seg xml:lang="en">Pantikapaion.</seg>
+                     </origPlace>
+                     <origDate notBefore="0501" notAfter="0533" precision="medium" evidence="указание_надписи формула форма_камня">
+                        <seg xml:lang="ru">Нач. VI в.</seg>
+                         <seg xml:lang="en">Early VI century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2004-09">сентябрь 2004</date>, <date when="2008-09"> сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>, <date when="2004-09">September 2004</date>, <date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Керчь.</placeName>
+                        <rs type="circumstances">1953 г., раскопки В.Д. Блаватского.</rs>
+                        <rs type="context">Г. Митридат, северный склон, могила № 37, на глубине 131–150 см. заклад детского погребения.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">1953, excavations of V.D. Blavatsky.</rs>
+                        <rs type="context">Mount Mithridates, northern slope, grave no. 37, at a depth of 131-150 cm, <!--заклад--> of a child's burial.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Керчь, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Kerch, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2012-10-06" who="AL">small corrections in Russian text</change>
+         <change when="2012-08-15" who="AG">1 line translated, lemma corrected</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">correction in Greek text tagging</change>
+         <change when="2012-05-14" who="AG">corrections in metadata and Greek text, several lines translated, bibliography and apparatus tidied</change>
+          <change when="2012-05-09" who="AFS">corrections on layout and text</change>
+          <change when="2012-03-20" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz263">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Блаватский 1956 --><ptr target="b0031"/>,  <biblScope>117</biblScope></bibl>
+               <bibl n="1.1"><!-- КХНБ --><ptr target="b0068"/>,  <biblScope>22</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="4"><rdg resp="b0031 b0068">δ(οῦλος τοῦ) [Θ(εοῦ)</rdg></app>
+               <app loc="5"><rdg resp="b0031 b0068">ἐν] ἰνδ(ικτιῶνι)</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Здесь лежит Феодор диакон (или: В 804 году); во 2-й индикт.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies Theodoros, deacon (or: in the year 804), in the 2nd indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Относительно археологического контекста находки см. также: Блаватский 1962, 36, рис. 23. По всей видимости, надпись относится к детскому 
+               погребению в могиле № 37. Относительно надгробий в форме креста см. комм. к <ref type="inscription">V 61</ref>. Диатроптов и Емец датируют надпись VI–VII вв., не приводя 
+               аргументов (см. ниже).</p>
+                <p> 1–3. Относительно формулы см. <ref type="introduction">IV.3.F.d</ref>.  </p>
+            <p> 3–4. Имя Феодор среди ранневизантийских надписей Боспора встречается также в <ref type="inscription">V 280</ref>, <ref type="inscription">V 261</ref>. Дельта после имени усопшего не может быть 
+                   сокращением слов δ(οῦλος τοῦ) [Θ(εοῦ)], как считал Блаватский. Существует два варианта ее понимания. Если надгробие не принадлежит ребенку, то она может быть 
+                   сокращением слова διάκονος (ср., например, MAMA IV, 223; Reynolds 1960, 291); если после дельты на обломанном правом рукаве стояла еще одна буква, то мы знаем и 
+                   сокращение δι(άκονος) (ср., например, Şahin 1978, 45; MAMA III, 758). Другой вариант реконструкции — понимание дельты как части обозначения 
+                   года по боспорской эры (с типичным обратным порядком цифр и без уточняющего слова «год», как и в <ref type="inscription">V 260</ref>): справа остается место еще для одного 
+                   знака, но, учитывая необходимость совпадения года со 2-м индиктом (из 4-й строки), остается лишь один вариант — последний месяц 804 года боспорской 
+                   эры, т.е. октябрь 507 — сентябрь 508 гг. по Р.Х. (индикт начинается с сентября). К тому же, только такой вариант объяснит странную двойную датировку: 
+                   как раз в начале VI в. Боспор переходит под прямое византийское управление и здесь может появиться датировка по индикту, соседствующая еще со 
+                   старой боспорской эрой. В любом случае, датировка по индикту заставляет датировать надпись VI–VII вв., однако форма камня, близкая к боспорским 
+                   надгробиям IV–V вв., сужает эту датировку до VI в.</p>
+                <p>5. Для ἐν перед словом «индикт» нет места, поскольку левый край нижнего рукава креста сохранился полностью.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Blavatsky Diatroptov Emets</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g type="stauros"/> <w lemma="ἐνθάδε">Ἐνθά<lb n="2" break="no"/>δε</w> <w lemma="κατάκειμαι"><supplied reason="lost">κα<lb n="3" break="no"/>τ</supplied>άκιτε</w> <persName type="attested" ref="#person337"><name nymRef="Θεόδωρος">Θ<supplied reason="lost">ε<lb n="4" break="no"/>ό</supplied>δωρος</name></persName> 
+               <app type="alternative"><lem><w lemma="διάκονος"><expan><abbr>δ</abbr><ex>ιάκονος</ex></expan></w></lem> 
+                  <rdg><w lemma="διάκονος"><expan><abbr>δ<supplied reason="lost">ι</supplied></abbr><ex>άκονος</ex></expan></w></rdg></app> 
+                  <date><num value="804">δ<supplied reason="lost">ω</supplied></num>
+                <lb n="5"/><w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w> <num value="2">β</num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

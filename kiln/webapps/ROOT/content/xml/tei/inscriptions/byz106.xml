@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие <certainty cert="low" locus="value" match=".."/> Симеона</title>
+             <title xml:lang="en">Gravestone <certainty cert="low" locus="value" match=".."/> of Simeon</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">byz106</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country></country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная<certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                     <seg xml:lang="en">Funerary<certainty cert="low" locus="value" match=".."/> inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon23">Капитель.</objectType>
+                           <objectType xml:lang="en">Capital.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Мягкий известняк.</material>
+                           <material xml:lang="en">Soft limestone.</material>
+                           <p xml:lang="ru">Капитель с выкружкой и полочкой с орнаментом в виде кружков с точкой посередине. Сохранился один фрагмент, обломанный со 
+                              всех сторон.</p>
+                           <p xml:lang="en">Capital with apothesis and fillet, the latter decorated with dotted circles. One fragment, broken on all sides, survives.</p>
+                           <dimensions>
+                              <height>20,0</height>
+                              <width>29,0</width>
+                              <depth>15,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На выкружке.</seg>
+                           <seg xml:lang="en">On the apothesis.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, лямбда курсивная. Лигатура омикрон-ипсилон, 
+                           выступающая за нижний край строки, надстрочная сигма.</seg>
+                        <seg xml:lang="en">Lapidary. Cursive lambda; superscript sigma. Ligature (omicron-ypsilon), extending below the writing lineЧ.</seg>
+                        <height unit="cm">0,7–1,6.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p006">
+                        <seg xml:lang="ru">Ай-Димитрий.</seg>
+                        <seg xml:lang="en">Ay-Dimitry.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1500" precision="medium" evidence="архитектурный_контекст">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XV centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Урочище Ай-Димитрий.</placeName>
+                        <rs type="circumstances">До 1890 г., обследования А.К. Романюка.</rs>
+                        <rs type="context">Хутор Ревелиоти.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"><!--урочище--> Ay-Dimitry.</placeName>
+                        <rs type="circumstances">Before 1890, survey of A.K. Romanyuk</rs>
+                        <rs type="context">Revelioti farmstead.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-10-10" who="AL">small corrections in Russian text</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">small correction</change>
+         <change when="2012-05-24" who="AG">small corrections</change>
+         <change when="2012-05-01" who="AG">several lines translated</change>
+         <change when="2012-04-23" who="AG">some small corrections, editor added, bibliography updated, apparatus corrected</change>
+         <change when="2012-02-28" who="AG">checked, bibliography and apparatus tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz106">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+                   <graphic url="byz106">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Романюк 1890--><ptr target="b0198"/>, 122, № 2, рис. <biblScope>2</biblScope></bibl>
+               <bibl n="1.1"><!--Сборник--> <ptr target="b0132"/>,  <biblScope>65</biblScope></bibl> 
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="1"><rdg resp="b0132">Ἐνθάδε κατάκειται</rdg> <rdg resp="b0198"/></app>
+               <app loc="1"><lem>[θ(εο)ῦ]</lem> <rdg resp="b0198"/></app> 
+                <app loc="1"><rdg resp="b0198">Σιμεονήου</rdg> <rdg resp="b0132">Συμεών</rdg> </app> 
+                <app loc="2"> <rdg/></app>  
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Симеон, 19-го …</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: servant of God, Simeones, on the 19th...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надписи на архитектурных деталях в Горном Крыму, в отличие от Херсонеса, встречаются довольно редко. Из надписей на капителях нам известна 
+               разве что капитель типа “плетеной корзины” из-под Мангупа (<ref type="inscription">V 187</ref>). Наша капитель происходит, по всей видимости, из разрушенной церкви св. Димитрия 
+               в урочище Ай-Димитрий. Следуя единственному источнику, рисунку Романюка, по форме букв надпись следует отнести к средне- или поздневизантийскому 
+               периоду, однако опубликованная им же плита с крестом (рис. 3) явно указывает на поздневизантийскую эпоху.</p>
+                <p> К сожалению, неполная сохранность текста сильно затрудняет атрибуцию памятника: он может быть как посвящением с именем донатора 
+                   (что кажется вероятным, учитывая архитектурный характер памятника), так и, что вероятнее, надгробием (на что может указывать дата в конце текста).  </p>
+                <p> 1. Несмотря на пропуск слова “Божий” ясно восстанавливается типичное словосочетание “раб Божий” (выражение «раб Твой» кажется менее 
+                   вероятным из-за следующего за этим номинатива) и, скорее всего, дата надписи. Имя Симеон употреблено в форме Σιμεόνης (ср. SEG XXXII, 1474), а 
+                   не Σ(υ)με(ών), как считал Латышев, потому что наличие в конце эты и сигмы трудно объяснить другим образом, тем более что далее следует vacat (εἰς [τά] 
+                   может следовать только за называнием месяца).  </p>
+                <p>2. Восстановление формул Κύριε, βοήθει или ἐκοιμήθη кажется маловероятным, как из-за того, что имя находится в 1-й строке, так и, для первого 
+                   варианта, из-за того, что оно стоит в именительном падеже. Кроме того, над йотой ясно видно титло, что указывает на ее числовое значение.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Mangup Ay-Dimitry</p>
+            <p>Latyshev</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+             <ab>
+                <lb n="1"/><supplied reason="lost" cert="low"><w lemma="κοιμάω">Ἐκοιμήθη</w></supplied> <supplied reason="lost"><w lemma="ὁ">ὁ</w></supplied><w lemma="δοῦλος"> δοῦλος</w> <w lemma="ὁ">τοῦ</w> <supplied reason="lost"><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></supplied> <persName type="attested" ref="#person137"><name nymRef="Σιμεόνις">Σιμεόνης</name></persName>
+                <lb n="2"/><date><supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied> <gap reason="lost" extent="unknown" unit="character"/> <num value="19">θι</num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>
