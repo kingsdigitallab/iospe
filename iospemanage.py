@@ -157,8 +157,9 @@ class DocParser(object):
             r'$'
         ).format(cls)
 
-        doc_id_parser_format_r = re.compile(doc_id_parser_format,
-                                            flags=(re.VERBOSE or re.IGNORECASE))
+        doc_id_parser_format_r = re.compile(
+            doc_id_parser_format,
+            flags=(re.VERBOSE or re.IGNORECASE))
 
         try:
             doc_id_matches = doc_id_parser_format_r.match(
@@ -361,7 +362,9 @@ def load_conversion_file(filepath, conv_type):
                 original_form, new_form = line.strip().split()
             except ValueError:
                 raise InvalidConversionType(
-                    u'Error: "{line}" does not specify a valid conversion'.format(line=line))
+                    (u'Error: "{line}"'
+                     u' does not specify a'
+                     u'valid conversion').format(line=line))
 
             conversions.append(conv_type.parse(original_form, new_form))
 
@@ -418,9 +421,10 @@ def update_references(doc, c_index):
 
 
 def update_filename(doc, c_index):
-    for ref in doc.xpath(
-        u'/TEI:TEI/TEI:teiHeader/TEI:fileDesc/TEI:publicationStmt/TEI:idno[@type="filename"]',
-            namespaces={u'TEI': TEI_NAMESPACE}):
+    for ref in doc.xpath((u'/TEI:TEI/TEI:teiHeader/'
+                          u'TEI:fileDesc/TEI:publicationStmt'
+                          u'/TEI:idno[@type="filename"]'),
+                         namespaces={u'TEI': TEI_NAMESPACE}):
 
         key = ref.text
         new_ref = deepcopy(ref)
@@ -459,7 +463,31 @@ def write_dictionary(index, filename):
             dictfl.write("\n")
 
 
-@manager.arg('conversions', help='file which contains the document conversions')
+def write_svn_repair_log(log, filename):
+    """Writes a bash file to repair the moves of converted
+        in order to keep svn history on those files"""
+
+    with open(filename, 'w', 'utf') as svn_log_fl:
+
+        svn_log_fl.write(u'#!/usr/bin/env sh\n\n')
+        for source, dest in log:
+            svn_log_fl.write((
+                u'mv "{dest}" "{source}"'
+                u' && '
+                u'svn mv "{source}" "{dest}"'
+            ).format(source=source, dest=dest))
+            svn_log_fl.write("\n")
+
+    print("""================NOTICE:==============================
+In order to keep the subversion history on the modified
+files, svn needs to be notified of their new location.
+An svn repair file was generated: '{filename}'
+=====================================================""".format(filename=filename))
+
+
+@manager.arg(
+    'conversions',
+    help='file which contains the document conversions')
 @manager.arg('path', help='path to documents')
 @manager.arg('conversion_type', help='type of conversion')
 @manager.command
@@ -477,6 +505,7 @@ def convert(conversions, path, conversion_type):
     write_dictionary(c_index, u'dictionary.txt')
 
     accumulate_errors = []
+    log_for_svn = []
     for f in walk_through_files(path):
         fname, ext = os.path.splitext(f)
         try:
@@ -505,6 +534,13 @@ def convert(conversions, path, conversion_type):
 
         print u'Removing {}.'.format(conv.source.to_filename())
         os.remove(os.path.join(path, conv.source.to_filename()))
+
+        log_for_svn.append([
+            os.path.join(path, conv.source.to_filename()),
+            os.path.join(path, conv.destination.to_filename())
+        ])
+
+    write_svn_repair_log(log_for_svn, 'svn_repair.sh')
 
     for ref, errtype, mess in accumulate_errors:
         print u'ERROR: {} {} {}'.format(ref, errtype, mess)
