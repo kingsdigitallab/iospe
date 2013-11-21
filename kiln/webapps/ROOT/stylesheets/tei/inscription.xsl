@@ -85,29 +85,20 @@
     </div>
   </xsl:template>
 
-  <!-- formatInscrNum -->
+  <!-- format inscription number -->
 
   <xsl:template name="formatInscrNum">
     <xsl:param name="num"/>
     <xsl:param name="printCorpus" select="false()"/>
 
-    <xsl:analyze-string regex="(\D+)(\d+)(\.\d+)?(\D*)" select="$num">
+    <xsl:analyze-string regex="(\d)\.(\d+)" select="$num">
       <xsl:matching-substring>
         <xsl:if test="$printCorpus">
-          <xsl:choose>
-            <xsl:when test="regex-group(1) = 'byz'">
-              <xsl:text>Byzantine</xsl:text>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:text>Unknwon corpus</xsl:text>
-            </xsl:otherwise>
-          </xsl:choose>
+          <xsl:number select="regex-group(1)" format="I"/>
           <xsl:text>&#160;</xsl:text>
         </xsl:if>
         <strong>
           <xsl:number format="1" value="number(regex-group(2))"/>
-          <xsl:value-of select="regex-group(3)"/>
-          <xsl:value-of select="regex-group(4)"/>
         </strong>
       </xsl:matching-substring>
     </xsl:analyze-string>
@@ -1336,15 +1327,12 @@
       <xsl:when test="@type='inscription'">
         <xsl:element name="a">
           <xsl:attribute name="href">
-            <xsl:variable name="volume" select="substring-before(normalize-space(.),' ')"/>
+            <xsl:variable name="volume" select="number(substring-before(normalize-space(.),' '))"/>
             <xsl:variable name="num1"
-              select="translate(substring-after(normalize-space(.),' '), 'abcdefg', '')"/>
-            <xsl:variable name="letter"
-              select="translate(substring-after(normalize-space(.),' '), '0123456789', '')"/>
-            <xsl:text>byz</xsl:text>
-            <!-- later test for volume number and replace -->
-            <xsl:number format="001" value="$num1"/>
-            <xsl:value-of select="$letter"/>
+              select="substring-after(normalize-space(.),' ')"/>
+            <xsl:number format="1" value="$volume"/>
+            <xsl:text>.</xsl:text>
+            <xsl:number format="1" value="$num1"/>
             <xsl:value-of select="if ($lang='ru') then '-ru' else ()"/>
             <xsl:text>.html</xsl:text>
           </xsl:attribute>
