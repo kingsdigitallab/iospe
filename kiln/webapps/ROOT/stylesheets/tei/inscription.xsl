@@ -1327,10 +1327,26 @@
       <xsl:when test="@type='inscription'">
         <xsl:element name="a">
           <xsl:attribute name="href">
-            <xsl:variable name="volume" select="number(substring-before(normalize-space(.),' '))"/>
-            <xsl:variable name="num1"
-              select="substring-after(normalize-space(.),' ')"/>
-            <xsl:number format="1" value="$volume"/>
+            <xsl:variable name="volume" select="substring-before(normalize-space(.),' ')"/>
+            <xsl:variable name="num1" select="substring-after(normalize-space(.),' ')"/>
+            <xsl:choose>
+              <xsl:when test="$volume='I'">
+                <xsl:number value="1"/>
+              </xsl:when>
+              <xsl:when test="$volume='II'">
+                <xsl:number value="2"/>
+              </xsl:when>
+              <xsl:when test="$volume='III'">
+                <xsl:number value="3"/>
+              </xsl:when>
+              <xsl:when test="$volume='IV'">
+                <xsl:number value="4"/>
+              </xsl:when>
+              <xsl:when test="$volume='V'">
+                <xsl:number value="5"/>
+              </xsl:when>
+            </xsl:choose>
+            <!--<xsl:number format="1" value="$volume"/>-->
             <xsl:text>.</xsl:text>
             <xsl:number format="1" value="$num1"/>
             <xsl:value-of select="if ($lang='ru') then '-ru' else ()"/>
@@ -1463,41 +1479,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-
-
-  <xsl:template match="tei:bibl">
-    <xsl:choose>
-      <xsl:when test="@type='hbi'">
-        <!--<a xsl:exclude-result-prefixes="tei">
-          <xsl:attribute name="href">
-            <xsl:value-of select="$InsAphroot"/>
-            <xsl:value-of select="$biblpath"/>
-            <xsl:text>index.html</xsl:text>
-            <xsl:if test="string(@n)">
-              <xsl:text>#</xsl:text>
-              <xsl:value-of select="@n"/>
-            </xsl:if>
-          </xsl:attribute>-->
-        <xsl:apply-templates/>
-        <!--</a>-->
-      </xsl:when>
-      <!--<xsl:when test="tei:title='IRT'">
-        <xsl:element name="a">
-          <xsl:attribute name="href">
-            <xsl:text>http://irt.kcl.ac.uk/irt2009/IRT</xsl:text>
-            <xsl:number value="translate(biblScope, 'abcde','')" format="001"/>
-            <xsl:value-of select="translate(biblScope, '0123456789','')"/>
-            <xsl:text>.html</xsl:text>
-          </xsl:attribute>
-        </xsl:element>
-      </xsl:when>-->
-      <xsl:otherwise>
-        <xsl:apply-templates/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-
+  
   <xsl:template match="tei:bibl/tei:title">
     <xsl:choose>
       <xsl:when test="@level='m' or @level='j'">
