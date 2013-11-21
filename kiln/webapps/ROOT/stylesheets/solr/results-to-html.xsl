@@ -201,12 +201,10 @@
   </xsl:template>
 
   <xsl:template match="result/doc" mode="search-results">
-    <!--<xsl:variable name="id"
-      select="replace(substring-after(str[@name = 'tei-id'], 'byz'), '^0+', '')"/>-->
     <xsl:variable name="id">
-      <xsl:number value="substring-before(t:idno[@type='filename'],'.')" format="I"/>
+      <xsl:number value="substring-before(str[@name = 'tei-id'],'.')" format="I"/>
       <xsl:text>&#xa0;</xsl:text>
-      <xsl:number value="substring-after(t:idno[@type='filename'],'.')" format="1"/>
+      <xsl:number value="substring-after(str[@name = 'tei-id'],'.')" format="1"/>
     </xsl:variable>
     <li>
       <a>
@@ -217,7 +215,7 @@
           <xsl:value-of select="$kiln:url-lang-suffix"/>
           <xsl:text>.html</xsl:text>
         </xsl:attribute>
-
+        
         <xsl:choose>
           <xsl:when test="contains($id, '.')">
             <strong>
@@ -232,6 +230,8 @@
         </xsl:choose>
         <xsl:text> </xsl:text>
         <xsl:value-of select="arr[@name=concat('document-title-', $lang)]/str[1]"/>
+        
+        
       </a>
     </li>
   </xsl:template>
