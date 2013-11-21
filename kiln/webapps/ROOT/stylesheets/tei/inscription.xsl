@@ -94,7 +94,7 @@
     <xsl:analyze-string regex="(\d)\.(\d+)" select="$num">
       <xsl:matching-substring>
         <xsl:if test="$printCorpus">
-          <xsl:number select="regex-group(1)" format="I"/>
+          <xsl:number value="regex-group(1)" format="I"/>
           <xsl:text>&#160;</xsl:text>
         </xsl:if>
         <strong>
@@ -1479,7 +1479,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  
+
   <xsl:template match="tei:bibl/tei:title">
     <xsl:choose>
       <xsl:when test="@level='m' or @level='j'">

@@ -87,6 +87,9 @@
           <map:parameter name="url" value="index.html"/>
           <map:parameter name="lang" value="en"/>
         </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -157,6 +160,9 @@
         <map:transform src="cocoon://_internal/template/inscription.xsl">
           <map:parameter name="url" value="{1}.html"/>
           <xml:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
