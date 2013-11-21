@@ -201,8 +201,13 @@
   </xsl:template>
 
   <xsl:template match="result/doc" mode="search-results">
-    <xsl:variable name="id"
-      select="replace(substring-after(str[@name = 'tei-id'], 'byz'), '^0+', '')"/>
+    <!--<xsl:variable name="id"
+      select="replace(substring-after(str[@name = 'tei-id'], 'byz'), '^0+', '')"/>-->
+    <xsl:variable name="id">
+      <xsl:number value="substring-before(t:idno[@type='filename'],'.')" format="I"/>
+      <xsl:text>&#xa0;</xsl:text>
+      <xsl:number value="substring-after(t:idno[@type='filename'],'.')" format="1"/>
+    </xsl:variable>
     <li>
       <a>
         <xsl:attribute name="href">

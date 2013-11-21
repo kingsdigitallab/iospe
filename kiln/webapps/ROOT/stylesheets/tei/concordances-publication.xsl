@@ -94,7 +94,10 @@
                 <xsl:for-each select="current-group()">
                   <li>
                     <a href="../../{str[@name='tei-id']}.html">
-                      <xsl:value-of select="substring-after(str[@name='tei-id'],'byz')"/>
+                      <xsl:number value="substring-before(str[@name='tei-id'],'.')" format="I"/>
+                      <xsl:text>&#xa0;</xsl:text>
+                      <xsl:number value="substring-after(str[@name='tei-id'],'.')" format="1"/>
+                      <!--<xsl:value-of select="substring-after(str[@name='tei-id'],'byz')"/>-->
                     </a>
                   </li>
 
