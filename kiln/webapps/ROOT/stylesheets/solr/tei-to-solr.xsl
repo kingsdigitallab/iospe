@@ -1334,7 +1334,7 @@
       <xsl:for-each select="tokenize(@evidence, ' ')">
         <xsl:variable name="evidence" select="translate(., '_', ' ')"/>
         <xsl:variable name="evidence-en"
-          select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1] = $evidence]"/>
+          select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1][lower-case(.) = lower-case($evidence)]]"/>
 
         <field name="evidence">
           <xsl:value-of select="local:replace-spaces($evidence)"/>
