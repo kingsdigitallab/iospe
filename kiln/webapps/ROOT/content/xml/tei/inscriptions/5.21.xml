@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Посвящение Мартирия</title>
+            <title xml:lang="en">Dedication of Martyrios</title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.21</idno>
+            <idno type="AYV2012-number">byz021.1</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>3467/3</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3467/3</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents><summary corresp="document-search.xml#doc5">
+                  <seg xml:lang="ru">Посвятительная надпись.</seg>
+                  <seg xml:lang="en">Dedication.</seg>
+                  </summary></msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконнесский мрамор.</material>
+                           <material xml:lang="en">Proconnesian marble.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефное изображение латинского креста с расширяющимися концами. 
+                              Обломана слева и справа; разбита на три части.</p>
+                           <p xml:lang="en">On the front - image of Latin cross with widening arms' ends. Broken off on the left and right; broken into
+                              three pieces.</p>
+                           <dimensions>
+                              <height>87,0</height>
+                              <width>71,0</width>
+                              <depth>7,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В верхних углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In upper corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы слегка неровные. Альфа с петлей 
+                           и с наклонной перекладиной, пи с удлиненной перекладиной, ро и фи удлиненное, ипсилон V- и Y-образный, 
+                           иногда с наклоном вправо, омега закругленная и прямоугольная.</seg>
+                        <seg xml:lang="en">Lapidary. Letters are slightly uneven. Alpha with a loop and with a slanting crossbar; pi with extended horizontal;
+                           elongated rho and phi; V-shaped and Y-shaped ypsilon, sometimes leaning to the right; omega - either rounded or rectangular.</seg>
+                        <height unit="cm">2,5–3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0368" notAfter="0500" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">Кон. IV – V в.</seg>
+                        <seg xml:lang="en">Late IV – V century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="2002-09">Сентябрь 2002</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="2002-09">September 2002</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1877–1878 гг., раскопки ООИД.</rs>
+                        <rs type="context">Храм № 36 («Восточная базилика») (?).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1877-1878, excavations of the Odessa Society of History and Antiquities.</rs>
+                        <rs type="context">Church No 36 ("Eastern basilica") (?)</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">small correction, 1 line translated</change>
+         <change when="2012-05-14" who="AG">small correction</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-18" who="AG">bibliography updated</change>
+         <change when="2012-04-17" who="AG">two lines translated, editor added, apparatus corrected, small correction in commentary</change>
+         <change when="2012-04-10" who="AG">apparatus and bibliography updated</change>
+         <change when="2012-03-20" who="AG">apparatus tagged, tags in bibliography tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography, corrected page number of Vinogradov</change>
+         <change when="2012-01-18" who="AG">date corrected, 1 line translated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="byz21.1.1">
+            <desc xml:lang="en">Photograph of monument (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="byz21.1.2">
+            <desc xml:lang="en">Photograph of text (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Юргевич 1879a--><ptr target="b0254"/>, 8, № <biblScope>4</biblScope></bibl>
+               <bibl n="1.1"><!--Юргевич 1879b--><ptr target="b0255"/>, <biblScope>313</biblScope></bibl>
+               <bibl n="2"><!--Сборник--><ptr target="b0132"/>,  <biblScope>15</biblScope></bibl>
+               <bibl n="3"><!--Виноградов 2010a--><ptr target="b0399"/>, 119–122, № <biblScope>b1</biblScope></bibl>
+            </listBibl>
+      </div>
+         <div type="apparatus">
+            <p>
+               <app loc="1-7"><rdg resp="b0254">Τὴν ἐκκλίνει εὐχὴν λιπαροῦ γυνὴ Ἀντωνίου Ἰνδικτιῶνος ΙΔ, ῶνα ἔτους</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+               <p>
+                 О молитве за Мартирия и всех его близких.
+                  </p>
+         </div>
+         <div type="translation" xml:lang="en">
+               <p>For the prayer of Martyrios and all his near and dear.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+               <p>При первом издании Юргевич использовал плохие снимки. Второе издание было сделано им по снимкам А.В. Иванова. 
+                  Надпись демонстрировалась на выставке «Византийский Херсон» (Москва, 1991 г.; Чичуров 1991, 20, № 4)</p>
+                <p>1–2. Относительно формулы см. <ref type="introduction">IV.3.B.b</ref>.</p>
+                <p>2–3. Имя Мартирий в Северном Причерноморье более не встречается; известно 4 святых с таким именем (Delehaye 1902, 2, 160, 205, 457). 
+                   Оно часто встречается и в христианских надписях: известен даже памятник с точно таким же текстом (ὑπὲρ εὐχῆς Μαρτυρί[ου]) 
+                   из Фив Фтиотийских (SEG XXX, 536). Интересно, что если в Малой Азии оно эпиграфически засвидетельствовано 3 раза, на Кавказе и Балканах — по 1, 
+                   в Италии — 2, в Греции — 5, то в сирийском регионе — целых 13. В связи с этим встает вопрос, не был ли и Мартирий, подобно Малху из <ref type="inscription">V 20</ref><!--byz020-->, сирийцем.</p>
+                <p>Относительно надписей на плитах алтарной преграды см. выше, комм. к № 19. Судя по размерам, надпись на плите алтарной преграды — посвящение 
+                   ктитора из крупного храма ранневизантийского времени. Поскольку ООИД в 1877–1878 гг. раскопало лишь один таковой — № 36 (в храме № 23 («Уваровская базилика») 
+                   были открыты только крещальня и прилегающие к ней помещения), то памятник, по всей видимости, происходит из него. 
+                   Впрочем, недавно А. Бернацки (Biernacki 2009, 207), без опоры на археологический контекст, отнес эту плиту к Уваровской базилике и счел ее плитой 
+                   интерколумния (см. выше), датировал ее VI в.</p>
+            <p>Альфа с наклонной перекладиной сближает данную надпись с <ref type="inscription">V 6</ref><!--byz005-->, альфа с петлей — с <ref type="inscription">V 65</ref><!--byz065-->, а прогнутое мю — с <ref type="inscription">V 18</ref><!--byz018-->. 
+                   Таким образом, она датируется, вероятней всего концом IV–V вв. Датировка храма № 36 спорная: от V до конца VII вв. (см. Бернацки, Кленина, Рыжов 2004, 77), 
+                   однако гипотеза Сорочана (Сорочан 2005, 880–886) о строительстве храма на этом месте в конце IV в., а также указание 
+                   Гайдукова (Гайдуков 2005, 52–53, 62) на архаичное отсутствие выемки для мощей под престолом позволяет отнести данную надпись 
+                   даже и к этому времени (см. также комм. к <ref type="inscription">V 58</ref><!--byz058-->). Впрочем, А. Бернацки (Biernacki 2009, 207) датирует ее по стилю VI в.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+             <p>Yurgevich A.V.Ivanov "Byzantine Chersonesos" (Moscow, 1991; Chichurov 1991, 20, № 4)</p>
+             <p/>
+             <p>Northern Black Sea area (Delehaye 1902, 2, 160, 205, 457) Phthiotic Thebes (SEG XXX, 536) Asia Minor Caucasus Balkans  Italy Greece Syrian region </p>
+             <p> ООИД <!-- Odessa Society of History and Antiquities --> (Biernacki 2009, 207) church No 23 ('Uvarov basilica')</p>
+            <p>(Сорочан 2005, 880–886) (Gaydukov 2005, 52–53, 62) (Biernacki 2009, 207)</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+                  <lb n="1"/><g type="stauros"/> <w lemma="ὑπέρ">Ὑπὲρ</w> <w lemma="εὐχή">ε<lb n="2" break="no"/>ὐχῆς</w> <persName type="attested" ref="#person22"><name>Μα<lb n="3" break="no"/>ρτυρίου</name></persName> <w lemma="καί">κ<lb n="4" break="no"/>αὶ</w> <w lemma="πᾶς">πάντω<lb n="5" break="no"/>ν</w> <w lemma="ὁ">τ<unclear>ῶ</unclear>ν</w>  <w lemma="διαφέρω">δι<lb n="6" break="no"/>αφερόντ<lb n="7" break="no"/>ων</w> <w lemma="αὐτός">αὐτοῦ</w>.
+               </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

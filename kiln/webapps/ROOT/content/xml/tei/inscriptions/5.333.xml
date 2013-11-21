@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие Платониды<certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Gravestone of Platonis<certainty cert="low" locus="value" match=".."/></title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.333</idno>
+            <idno type="AYV2012-number">byz328</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Мягкий известняк.</material>
+                           <material xml:lang="en">Soft limestone.</material>
+                           <p xml:lang="ru">Античная (?) плита (во вторичном использовании), напоминает по форме изуродованный крест. Обломана снизу (?).</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>26,0</height>
+                              <width>14,0–23,0</width>
+                              <depth>11,0–13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы прокрашены охрой. Альфа с прямой перекладиной (?), лямбда с удлиненным верхом.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">4,0–7,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p049">
+                        <seg xml:lang="ru">Гермонасса.</seg>
+                        <seg xml:lang="en">Hermonassa.</seg>
+                     </origPlace>
+                      <origDate notBefore="0301" notAfter="0500" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IV–V вв.</seg>
+                        <seg xml:lang="en">IV–V centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Тамань, окрестности.</placeName>
+                        <rs type="circumstances">До декабря 1907 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Taman, vicinity of.</placeName>
+                        <rs type="circumstances">Before December 1907.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-02-13" who="AG">repository corrected</change>
+         <change when="2013-01-09" who="AG">some corrections</change>
+         <change when="2012-09-11" who="AG">translation added, lemma added</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata and bibliography</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-29" who="AG">small corrections, bibliography, apparatus and the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Марти 1910--><ptr target="b0167"/>, 12, №<biblScope>2</biblScope></bibl>
+               <bibl n="1.1"><!--КХНБ--><ptr target="b0068"/>, <biblScope>27</biblScope></bibl>
+               <bibl n="1.2"><!--Виноградов 2010b--><ptr target="b0414"/>, <biblScope>159</biblScope></bibl> 
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+               <app loc="1-5"> <rdg resp="b0167 b0068">Πλάτωνι ἐν[...</rdg></app> 
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Платонида здесь лежит (?)</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here [lies (?)] Platonis.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись куплена у И. Пекерева в декабре 1907 г. Марти отнес ее к христианским по шрифту, но ввиду утраты памятника подтвердить или опровергнуть 
+               такую атрибуцию невозможно.  </p>
+            <p> Относительно реконструируемой формулы ср. <ref type="inscription">V 73</ref><!--byz073-->.</p>
+                <p>Имя Платонида известно по христианской надписи из Пессинунта (Strubbe 1983, 232). В античной эпиграфике это имя засвидетельствовано семь раз, 
+                   причем в трех случаях указывается, что это прозвище.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>I. Pekerev Marti Platonis Pessinus</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person425"><name nymRef="Πλατωνίς">Πλατ<lb n="2" break="no"/>ωνὶ<supplied reason="lost">ς</supplied></name></persName>
+               <lb n="3"/><w lemma="ἔνθα">ἔν<supplied reason="lost">θα</supplied></w>
+               <lb n="4"/><w lemma="κατάκειμαι"><supplied reason="lost" cert="low">κατά<lb n="5" break="no"/>κειται</supplied></w>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

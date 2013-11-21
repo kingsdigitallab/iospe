@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Посвящение Дутцага, Савага, Форимага, Даппая, Трофима, Омара, Са.лиха, Мидаха, .овулгаия, Аттасия, Алдага, Кандитция, Адма.ция, Севрага и Да...</title>
+            <title xml:lang="en">Dedication of Doutzagas, Sauagas, Thorimag, Dappaeis, Trophimos, Omar, Sa.lich, Midach, .oboulgaeis, Attasis, Aldach, Kanditzis, Adma.tzis, Seurag, and Da...</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.331</idno>
+            <idno type="AYV2012-number">byz310</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>КМЗ</repository>
+                     <idno> КЛ–1011</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Historical and Archeological Museum of Kerch State Historical and Cultural Preserve</repository>
+                     <idno>КЛ–1011</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedication.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon22">Колонна.</objectType>
+                           <objectType xml:lang="en">Column.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Поверхность отшлифована. Обломана сверху и снизу.</p>
+                           <p xml:lang="en">Polished surface. Broken at the top and bottom.</p>
+                           <dimensions>
+                              <height>78</height>
+                              <dim type="diameter">35,5</dim>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На половине окружности.</seg>
+                           <seg xml:lang="en">On half of the circle.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы апицированные. Альфа с ломаной перекладиной, дельта и пи с удлиненной перекладиной, лямбда с удлиненной вверх правой гастой, мю с укороченной серединой, фи удлиненное.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">0,5–2,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p049">
+                        <seg xml:lang="ru">Гермонасса.</seg>
+                        <seg xml:lang="en">Hermonassa.</seg>
+                     </origPlace>
+                     <origDate notBefore="0470" notAfter="0492" precision="medium" evidence="просопография">
+                        <seg xml:lang="ru">470–480-е гг. (до 491–492 гг.; 473–474 или 483–484 гг. ?).</seg>
+                        <seg xml:lang="en">470–480s C.E. (before 491–492 C.E.; 473–474 or 483–484 C.E.?).</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2004-09">сентябрь 2004</date>, <date when="2008-09">сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>, <date when="2004-09">September 2004</date>, <date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Тамань, берег.</placeName>
+                        <rs type="circumstances">1868 г., случайная находка.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Taman, coast.</placeName>
+                        <rs type="circumstances">1868, chance find.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Керчь, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Kerch, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2012-09-04" who="NG">Greek lemmata corrected</change>
+         <change when="2012-09-04" who="AG">lemmata added, apparatus tagged</change>
+         <change when="2012-09-03" who="AG">tags corrected, several lines translated, apparatus tagged</change>
+          <change when="2012-08-23" who="AL">checked metadata, tagged bibliography</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-26" who="GB">Fixed Greek text</change>
+         <change when="2012-05-23" who="AFS">corrections in metadata</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz310">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- IOSPE --><title>IOSPE</title> II <biblScope>389</biblScope></bibl>
+                <bibl n="1.1"><!-- Тиханова-Клименко 1926 --><ptr target="b0224"/>, <biblScope>546–560</biblScope></bibl>
+                <bibl n="1.2"><!-- КБН --><title>КБН</title>, <biblScope>1099</biblScope></bibl>
+               <bibl n="1.2.1"><!-- SEG --><title>SEG</title>, <biblScope>III.609</biblScope></bibl>
+                <bibl n="1.2.2"><!-- КХНБ --><ptr target="b0068"/>, <biblScope>61</biblScope></bibl>
+                <bibl n="2"><!-- Яйленко 1987 --><ptr target="b0257"/>, <biblScope>163–166</biblScope></bibl>
+               <bibl n="2.1"><!-- Bull. ép.  --><title>Bulletin épigraphique</title> 1990, <biblScope>903</biblScope></bibl>
+               <bibl n="2.2"><!-- SEG --><title>SEG</title> <biblScope>XXXIX.697</biblScope></bibl>
+                <bibl n="2.3"><!-- Ю. Виноградов 1998 --><ptr target="b0057"/>, <biblScope>238–239</biblScope></bibl>
+               <bibl n="2.3.1"><!-- SEG --><title>SEG</title> <biblScope>XLVIII.994</biblScope></bibl>
+                <bibl n="3"><!-- Яйленко 2002a --><ptr target="b0258"/></bibl>
+               <bibl n="3.1"><!-- SEG --><title>SEG</title> <biblScope> LII.739</biblScope></bibl>
+                <bibl n="4"><!-- Vinogradov 2007 --><ptr target="b0376"/>,  261, № <biblScope>7</biblScope></bibl>
+               <bibl n="5"><!--  Виноградов 2010--><ptr target="b0414"/>, <biblScope>147-149</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <p>
+                <app loc="1"><rdg resp="b0257">e.g. Κύριε, βοήθησον δούλους ἀμπελου[ργούς]</rdg> <rdg resp="b0258">Κύριε, βοήθησον δούλους περ]ιπ<unclear>ό</unclear>λους</rdg> <rdg resp="IOSPE gajdukevich">πολου</rdg></app>
+               <app loc="1"><rdg resp="b0257">σ<unclear>ο</unclear>ὺς ἑπτά</rdg> <rdg resp="b0258">πιστ]ους ἑπτὰ</rdg> <rdg resp="IOSPE gajdukevich">ους ἑπτά</rdg></app>
+                <app loc="2"><rdg resp="b0376 b0387">(καὶ) ζ<unclear>ε͂</unclear>σο</rdg> <rdg resp="b0257">ἐ]<unclear>λέ</unclear>(η)σο(ν)</rdg> <rdg resp="b0258">σο͂σε</rdg></app>
+                <app loc="2-3"><!--<rdg resp="??????">μνήμ[ησον ἐ]<unclear>μ</unclear>ὲ</rdg> Zheltov apud Vinogradov 2007--> <rdg resp="IOSPE gajdukevich">μνημ...ιο</rdg> 
+                   <rdg resp="b0257 b0258">μνημ[ονε]<unclear>υε</unclear> sic!</rdg> <rdg resp="b0057">μνήμ[ης τῆ]<unclear>ς</unclear></rdg> <rdg resp="b0376">μνήμ[ησον]</rdg></app>
+                <app loc="3-4"><rdg resp="b0376 b0414">ὑ<unclear>γ</unclear>[ία. .ψ´]</rdg> <rdg resp="b0258 b0057">ψ..´</rdg> <rdg resp="b0376">Y[... .ψ´]</rdg></app>
+                <app loc="4"><rdg resp="b0257 b0258">καὶ</rdg></app>
+                <app loc="5"><rdg resp="b0257 b0258">εἰσὶν δὲ οἱ</rdg> <rdg resp="IOSPE gajdukevich">.. οἱ ..λ.οι</rdg></app>
+                <app loc="6"><rdg resp="b0257 b0258">Δουτζαγας</rdg> <rdg resp="IOSPE gajdukevich">...τζαγας</rdg></app> --&gt;
+                <app loc="6"><rdg resp="b0057 b0258">Σαυαγας κόμ(ης)</rdg> <rdg resp="IOSPE gajdukevich b0257">Σαυαγάσκο<unclear>υ</unclear></rdg></app>
+                <app loc="7"><rdg resp="b0257">Οριμαγ</rdg> <rdg resp="b0258"><unclear>Χ</unclear>οριμαγ</rdg> <rdg resp="IOSPE gajdukevich"> ...ορίμαγ(ος)</rdg></app>
+                <app loc="7"><rdg resp="b0257 b0258">Δαππαεις</rdg> <rdg resp="IOSPE gajdukevich">Δαππασις</rdg></app>
+                <app loc="8"><rdg resp="b0057">ὁ μάρ(τυς) (?)</rdg></app>
+                <app loc="9"><rdg resp="b0376 b0414">Σα.<unclear>λ</unclear>ιχ</rdg> <rdg resp="b0257">Σ[αλ(?)]<unclear>δι</unclear>χ</rdg> <rdg resp="b0258">Σ<unclear>αλδί</unclear>χ</rdg></app>
+                <app loc="9"><rdg resp="b0257 b0258">Μιδαχ</rdg> <rdg resp="IOSPE gajdukevich">Μίδαχ(ος)</rdg></app>
+                <app loc="10"><rdg resp="b0376 b0414">.<unclear>ο</unclear>β.ουλγαεις</rdg>
+                   <rdg resp="IOSPE gajdukevich">Οὐάγ[α]σις</rdg> <rdg resp="b0257"><unclear>Το</unclear>(?)βουλγαεις</rdg> <rdg resp="b0258"> † <unclear>Τα</unclear>βουλγαεις</rdg></app>
+               <app loc="10"><rdg resp="b0257 b0258">Ατταεις</rdg></app>
+                <app loc="11"><rdg resp="b0376 b0414">Αλδαγ</rdg> <rdg resp="IOSPE gajdukevich">[Μά]λδαγ(ος ?)</rdg> 
+                   <rdg resp="b0257 b0258"><unclear>Μ</unclear>αλδαγ</rdg></app>
+                <app loc="11"><rdg resp="b0257 b0258"><unclear>Κα</unclear>νδιτζις</rdg> <rdg resp="IOSPE gajdukevich">..νδ.τζις</rdg></app>
+                <app loc="12"><rdg resp="IOSPE gajdukevich">Αλμ...ις</rdg> <rdg resp="b0257">Αλμ<unclear>α</unclear>...ζις</rdg> <rdg resp="b0258">.]δμα[....]ξις</rdg> <rdg resp="b0376">Αδμα...ζις</rdg></app>
+                <app loc="12"><rdg resp="b0257">Σευραγ</rdg> <rdg resp="b0258">Σεραυγ</rdg> <rdg resp="IOSPE gajdukevich">Σεύραγ(ος)</rdg></app>
+                <app loc="13"><rdg resp="b0257 b0258">Δα.., [ἀμ]<unclear>ή</unclear>ν</rdg> <rdg resp="IOSPE gajdukevich">...ν</rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Виноградарей Своих почти, Господи, оживотвори их и помяни меня со святыми; здравие. 
+               [В 7..] году и месяце ксанфике [..-го числа]. 
+               Фиаситы же следующие: Дутцаг, Саваг комит, Форимаг, Даппай, Трофим, Омар, Са.лих, Мидах, .овулгаий, 
+               Аттасий, Алдаг, Кандитций, Адма.ций, Севраг, Да<gap reason="ellipsis"/>, аминь.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Honor your vineyard workers, o Lord, and grant them life, and remember me with the saints; health.  [In the 7... ] year and month of Xanthikos 
+            [on the day...]. These are the participants in thiasos: Doutzagas, prefect Sauagas, Thorimag, Dappaeis, Trophimos, Omar, Sa.lich, Midach, .oboulagaeis, 
+            Attasis, Aldag, Kanditzis, Adma.tzis, Seurag, Da..., amen.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надписи на колоннах были распространены в ранневизантийское время. Из современных 
+                данной надписи примеров упомянем <ref type="inscription">V 342</ref><!--byz318--> и IdC 49 (III–V вв.). Неясно, стояла ли эта колонна 
+                отдельно или внутри какого-то здания, например, храма.</p>
+                <p> Стефани, первым упомянувший о надписи (Stephani 1870, 193–194), прочел лишь ΤΙΟ в 3-й 
+                    строке, ΤΡΟΦΙΝΟΣ в 8-й и ΑΛΜ в 12-й, и поэтому его чтения не учитываются в критическом 
+                    аппарате.</p>
+                <p> 1–3. В восстановлении начала надписи большой вклад принадлежит Яйленко. Однако ему не 
+                    удалось реконструировать начальную формулу полностью. В нашем чтении мы также 
+                    вынуждены прибегать к двум небольшим допущениям: реконструировать гапаксный глагол 
+                    σεπτάζω, находящий, впрочем, аналогию в таком же гапаксном σεπτεύω (Hesychius, s.v.), и 
+                    восстанавливать императив ζσο (вм. ζῆσο) без конечного ню (вариант Яйленко ἐ]λέ(η)σο(ν) 
+                    невозможен, т.к. на камне нет лямбды). Чтение конца 2-ой строки и начала 3-ей строки было 
+                   любезно предложено нам в частной беседе свящ. Михаилом Желтовым. Просьба о поминовении 
+                   резчика со святыми типологически близка к формуле надгробий «упокой с праведными» 
+                   (см. <ref type="inscription">V 64</ref><!--byz064-->, <ref type="inscription">V 65</ref><!--byz065-->). Важно отметить, что просуществовавшие до кон. V в. фиасоты, причем явно 
+                   христианского характера (о чем говорит употребление крестов) называют себя «виноградарями».
+                   Это выражение надо понимать, скорее всего, символически (ср., напр.,  Eusebius Caesarensis.  
+                   Comm. in Isaiam 2, 51). Тиханова (Тиханова 1926, 553) показала христианское употребление 
+                   термина «фиасоты» у Феофилакта Симокатты (7, 2, 17): оно означает участников праздника в 
+                   честь святого.  </p>
+                <p> Формула с μνημόνευε в христианской эпиграфике известна нам лишь один раз — в ICUR, № 24611.</p>
+                <p> 3–4. Датировка по месяцу ксанфику принадлежит боспорской традиции. Туда же должна 
+                    восходить и датировка по году. Предложение Яйленко, поддержанное Ю.Г. Виноградовым, 
+                    считать ипсилон, стоящий перед словом «год», не числом 400 (тогда бы надпись относилась к 
+                    184–193 гг., что слишком рано и по содержанию, и по палеографии), а недописанным пси 
+                    (без верхней вертикали) следует отвергнуть, так как во всех боспорских надписях 2-й пол. V в. 
+                    число сотен в обозначении года всегда стоит в конце (ср. <ref type="inscription">V 265</ref><!--byz251-->, <ref type="inscription">V 303</ref><!--byz297-->, <ref type="inscription">V 342</ref><!--byz318-->). Сохранившаяся 
+                    после ипсилона вертикальная черта также не может принадлежать пи, так как последнее имеет 
+                    в надписи удлиненную перекладину, для которой нет места в данном случае — таким образом, 
+                    эта вертикаль — обломок гаммы, мю или ню. Учитывая то, что перед ипсилоном стоит знак типа 
+                    колона, наиболее вероятным представляется восстановление слова ὑγία, употребляющегося 
+                    как отдельное восклицание в христианской эпиграфике изолированно (Gough 1958, 244–250) 
+                   или в сочетании с другими (SEG XXXV.1529, 1531, 1532; IGLS, № 304, 381, 1463, 2070). 
+                   Обозначение года, следовательно, стояло в начале 4-й строки, однако начало ее левого края 
+                   позволяет  реконструировать кроме необходимого  пси, скорее всего, лишь одну букву 
+                   (см. ниже).</p>
+                <p> 6. Напротив, предложенное Ю.Г. Виноградовым отождествление комита Савага в 6-й строке 
+                   с комитом Савагом, известным по 3 другим надписям 478–492 гг. (<ref type="inscription">V 265</ref><!--byz251-->, <ref type="inscription">V 305</ref><!--byz299--> и <ref type="inscription">V 342</ref><!--byz318-->) позволяет 
+                    отнести данную надпись к последней четверти V в. С учетом этого хронологического 
+                    промежутка, единственная цифра перед  пси  была либо  омикроном , либо  пи  — надпись 
+                    датировалась, таким образом, 770 или 780 гг. боспорской эры, т.е. 473–474 или 483–484 гг. по Р.Х. 
+                    Как верно отметил Ю.Г. Виноградов, Саваг один из всех фиасотов обладает титулом и, его имя 
+                    отмечено крестом. Этот крест не имеет отношения к упоминанию умершего, так как комит Саваг 
+                    умер в 491–492 гг. (см. <ref type="inscription">V 305</ref><!--byz299-->)  </p>
+                <p> 8. Второй крест стоит около имени Трофим, единственного, отметим, христианского среди 
+                   всех остальных (см. комм. к <ref type="inscription">V 49</ref><!--byz049-->). Однако следующие за ним буквы вряд ли следует считать, 
+                    вопреки Ю.Г. Виноградову, сокращением слова «мученик».</p>
+                <p> Два креста именно рядом с христианским именем и именем крупного боспорского чиновника 
+                    наталкивают на размышления о характере упоминаемого в надписи фиаса: не исключено, что 
+                    он существовал лишь как аристократическое сообщество, не обязательно христиан. Отнесение 
+                   надписи к кон. V в. разрушает гипотезу И.А. Левинской (Левинская 2000,211–213, прим 158), 
+                   которая датировала ее IV в. и считала членов фиаса недавно обращенными в христианство 
+                   иудейскими «квазипрозелитами».</p>
+                <p> Относительно остальных имен см. прил. 1.</p>
+                <p> 13. Как полагается христианскому прошению, текст заканчивается словом «аминь».</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+             <p>Stephani Yaylenko Mikhail Zheltov Tikhanova Theophylaktos Simokattes Levinskaya</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἀμπελουργός"><supplied reason="lost">Ἀ</supplied>μπελου<supplied reason="lost">ργούς</supplied></w>
+               <w lemma="σύ"><supplied reason="lost">σ</supplied>ου</w>
+               <w lemma="σεπτεύω">σέπτ<unclear>α</unclear><supplied reason="lost" cert="low">σον</supplied></w><supplied reason="lost">, 
+               <w lemma="κύριος"><expan><abbr>κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w>,</supplied>
+               <lb n="2"/><w lemma="καί"><expan><ex>καὶ</ex></expan></w> <w lemma="ζάω">ζ<unclear>ε͂</unclear>σο</w> <w lemma="αὐτός">αὐτοὺς</w> <w lemma="καί">καὶ</w>
+               <w lemma="μνημονεύω">μνημ<supplied reason="lost">όνευε</supplied></w>
+               <lb n="3"/><w lemma="ἐγώ"><supplied reason="lost">ἐ</supplied><unclear>μ</unclear>ὲ</w> <w lemma="μετά">μετὰ</w> <w lemma="ὁ">τῶν</w>
+               <w lemma="ἅγιος">ἁγίων</w>· <w lemma="ὑγιεία">ὑ<unclear>γ</unclear><supplied reason="lost">ία</supplied></w>.
+               <lb n="4"/><num atLeast="700"><gap reason="lost" quantity="1" unit="character"/><supplied reason="lost">ψ</supplied></num>
+               <w lemma="ἔτος">ἔτι</w> <w lemma="καί"><unclear>κ</unclear>αὶ</w> <w lemma="μήν">μηνεὶ</w>
+               <rs type="month" ref="xanthikos"><w lemma="ξανθικός">Ξανθικ<supplied reason="lost">ῷ</supplied></w></rs>
+               <num><gap reason="lost" quantity="2" unit="character"/></num>
+               <lb n="5"/><w lemma="εἰμί">Εἰσὶν</w> <w lemma="δέ">δὲ</w> <w lemma="ὁ">οἱ</w> 
+               <w lemma="συνθιασώτης">συνθειασεῖτ<unclear>α</unclear><supplied reason="lost">ι</supplied></w>·
+               <lb n="6"/><persName type="attested" ref="#person397"><name nymRef="Δουτζαγας">Δουτζαγας</name></persName>, <g type="stauros"/>
+               <persName type="attested"><name nymRef="Σαυαγας">Σαυαγας</name> <w lemma="κόμης"><expan><abbr>κό<unclear>μ</unclear></abbr><ex>ης</ex></expan></w></persName>,
+               <lb n="7"/><persName type="attested" ref="#person399"><name nymRef="Θοριμαγ"><unclear>Θ</unclear>οριμαγ</name></persName>,
+               <persName type="attested" ref="#person400"><name nymRef="Δαππαεις">Δαππαεις</name></persName>,
+               <lb n="8"/><g type="stauros"/> <persName type="attested" ref="#person401"><name nymRef="Τρόφιμος">Τρόφιμος</name></persName>, 
+               <persName type="attested" ref="#person402"><name nymRef="Ομαρ">Ομαρ</name></persName>,
+               <lb n="9"/><persName type="attested" ref="#person403"><name nymRef="Σα.λιχ">Σα<gap reason="illegible" quantity="1" unit="character"/><unclear>λ</unclear>ιχ</name></persName>, 
+               <persName type="attested" ref="#person404"><name nymRef="Μιδαχ">Μιδαχ</name></persName>,
+               <lb n="10"/><persName type="attested" ref="#person405"><name><gap reason="illegible" quantity="1" unit="character"/><unclear>οβ</unclear>ουλγαεις</name></persName>, 
+               <persName type="attested" ref="#person406"><name nymRef="Αττασις">Αττασις</name></persName>,
+               <lb n="11"/><persName type="attested" ref="#person407"><name nymRef="Αλδαγ">Αλδαγ</name></persName>, <persName type="attested" ref="#person408"><name nymRef="Κανδιτζις"><unclear>Κα</unclear>νδιτζις</name></persName>,
+               <lb n="12"/><persName type="attested" ref="#person409"><name nymRef="Αδματζις">Αδμα<gap reason="illegible" quantity="2" unit="character"/><supplied reason="lost">τ</supplied>ζις</name></persName>,
+               <persName type="attested" ref="#person410"><name nymRef="Σευραγ">Σευραγ</name></persName>,
+               <lb n="13"/><persName type="attested" ref="#person411"><name><seg part="I">Δα</seg><gap reason="illegible" quantity="3" unit="character"/></name></persName>,
+               <w lemma="ἀμήν"><supplied reason="lost">ἀμ</supplied><unclear>ή</unclear>ν</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

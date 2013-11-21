@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Прошение монаха</title>
+            <title xml:lang="en">Invocation of a monk</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.223</idno>
+            <idno type="AYV2012-number">byz210a</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>БМЗ</repository>
+                     <idno>инв. № неизвестен</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray State Historical and Cultural Preserve</repository>
+                     <idno>inv. no. unknown</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Наличник окна.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Наличник окна с рамкой и валиком внутри. Обломан со всех сторон кроме левой.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                            <height>13,5</height>
+                              <width>13,5</width>
+                              <depth>59,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На валике.</seg>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs> Альфа с петлей.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">0,6-1,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p029">
+                        <seg xml:lang="ru">Эски-Кермен.</seg>
+                        <seg xml:lang="en">Eski-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1300" precision="medium" evidence="археологический_контекст">
+                        <seg xml:lang="ru">XIII в.</seg>
+                        <seg xml:lang="en">XIII century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Эски-Кермен.</placeName>
+                        <rs type="circumstances">2007 г., раскопки А. И. Айбабина.</rs>
+                        <rs type="context">квартал на Главной улице, напротив каземата № 5, восточная часть, площадь перед входом в часовню, подвал, засыпь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Eski-Kermen.</placeName>
+                        <rs type="circumstances">2007, excavations of A.I. Aybabin.</rs>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, АР Крым, Украина.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Autonomous Republic of Crimea, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2013-09-29" who="AG">manually created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz210a">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Айбабин, Хайретдинова 2001--><ptr target="b0418"/>, 428, рис. <biblScope>24</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <p>
+               <!--<app>μονάχος (sic!) Sidorenko apud Aybabin, Khayretdinova.</app>-->
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Господи, помоги монаху ...</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> О формуле см. <ref type="introduction">IV.3.E.a</ref>; дополнение к ней в номинативе, предлагаемое В. А. Сидоренко, вряд ли возможно. 
+               После слова «монах» шел эпитет или имя.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Sidorenko</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <!--<lb n="1"/>Κ(ύρι)ε, βοήθι μοναχ Σ[...].-->
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Мозаика</title>
+            <title xml:lang="en">Mosaic</title>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.94</idno>
+            <idno type="AYV2012-number">byz094</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>инв. № отсутствует</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>Inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc12">
+                     <seg xml:lang="ru">Литургическая надпись.</seg>
+                     <seg xml:lang="en">Liturgic inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon25">Мозаичный пол.</objectType>
+                           <objectType xml:lang="en">Mosaic floor.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m3">Каменные тессеры.</material>
+                           <material xml:lang="en">Stone tesserae.</material>
+                           <p xml:lang="ru">Поле внутри рамки. Обломан слева.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>16</height>
+                               <width>50</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Пи с удлиненной перекладиной, ипсилон Y-образный.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">7,0–8,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0501" notAfter="0600" precision="medium" evidence="археологический_контекст">
+                        <seg xml:lang="ru">VI в.</seg>
+                        <seg xml:lang="en">VI century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09">September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1889 г., раскопки А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Храм № 15 (т. н. “Базилика в базилике”), наос, у западного входа.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1889. excavations of A.L. Bertye- Delagard.</rs>
+                        <rs type="context">Church No 15 ("basilica in basilica"), nave, near the western entrance.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-10-10" who="AL">small corrections in metadata and Russian text</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">1 line translated</change>
+         <change when="2012-05-23" who="AG">several lines translated, tags corrected</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2012-01-03" who="AG">updated</change>
+         <change when="2011-12-07" who="AG">small corrections, tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz94">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… выхода… на Господа.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... exit... for the Lord.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> В 2000-е гг. надпись была демонтирована вместе с мозаиками храма № 15 и перенесена в хранение.</p>
+            <p> Наряду с посвящением Малха (<ref type="inscription">V 20</ref><!--byz020-->) это единственная византийская надпись на мозаике не только в Херсонесе, но и во всем Северном 
+                   Причерноморье. Ввиду ее краткости (сохранились половинки обеих строк), кажется вероятным, что она содержала какую-то литургическую формулу, 
+                   связанную с процессией выхода клириков и народа из храма. Возможно, она каким-то образом родственна широко распространенной на мозаиках, 
+                   особенно в Сирии, формулой Κύριος φυλάξει τὴν εἴσοδόν σου καὶ τὴν ἔξοδόν σου (Пс 120:8) (ср. IGLS № 1456, 1466–68, 1567, 1571, 1680 etc.) или, в другом 
+                   варианте, Κύριος φυλάξη τὴν εἴσοδον ταύτην (Sironen 1997, № 342 (V–VI вв.)). Ср. также формулу Θεοῦ οἴκου εἴσοδος в Guillou 1996, № 204
+                   (Патерно, ср. Иез 44:5). См. также Гайдуков 2005, 84–85.</p>
+            <p> С другой стороны, на мраморном дверном косяке рядом с ней помещалась строительная надпись епископа Феодора (<ref type="inscription">V 9</ref><!--byz008-->). Поэтому можно с 
+                   осторожностью предложить и иное понимание слов надписи: «… на средства… при господине» (с ошибкой в падежном управлении и продолжением в 
+                   другом месте).</p>
+                <p>Т.к. мозаика принадлежит к первому этапу строительства базилики, надпись датируется временем постройки храма, т.е. VI в. (Сорочан 2005, 735–738)</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Gaydukov</p>
+            <p>Sorochan</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ἐξοδόω"><supplied reason="lost">ἐ</supplied>ξώδου</w>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ἐπί"><supplied reason="lost">ἐ</supplied>πὶ</w> <persName type="divine" key="kyrios"><roleName><w lemma="κύριος">κύριον</w></roleName></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

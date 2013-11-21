@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="ru">Надгробие неизвестного</title>
+            <title xml:lang="en">Gravestone of unknown</title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.230</idno>
+            <idno type="AYV2012-number">byz334</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>ГМИИ</repository>
+                     <idno>инв. № отсутствует</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Pushkin Museum of Fine Arts</repository>
+                     <idno>Inv. no. missing</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита <certainty cert="low" locus="value" match=".."/>.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефный бортик. Обломана со всех сторон, кроме правой.</p>
+                           <p xml:lang="en"/>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы удлиненные, заостренные. Тета с удлиненной перекладиной. Лигатура мю-эпсилон; надстрочный знак, знак ударения (?).</seg>
+                        <seg xml:lang="en"/>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p054">
+                        <seg xml:lang="ru">Горный Крым <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Mountain Crimea <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                      <origDate notBefore="1301" notAfter="1500" precision="medium" evidence="палеография">  
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XV centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en">Moscow, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-02-13" who="AG">country of repository  corrected</change>
+         <change when="2012-09-12" who="AG">repository added, translation added</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-29" who="AFS">adding metadata</change>
+         <change when="2012-12-29" who="AG">small corrections, tags tidied in the date, the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб <supplied reason="lost">Божий такой-то…</supplied></p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of [God...]</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись указана А.А. Агафоновым, ему же принадлежит и публикуемое фото, которое является единственным источником наших знаний о надписи. 
+               Отыскать ее в фондах ГМИИ нам не удалось. По своему типу она похожа на надгробия Горного Крыма.</p>
+                <p>1–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>A.A. Agafonov   Pushkin Museum of Fine Arts  Mountain Crimea</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω"><supplied reason="lost">Ἐκοι</supplied>μήθ<supplied reason="lost">η</supplied></w>
+               <lb n="2"/><w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> 
+               <w lemma="δοῦλος"><expan><abbr><supplied reason="lost">δοῦ</supplied>λ</abbr><ex>ο</ex><abbr>ς</abbr></expan></w>
+               <w lemma="ὁ">τοῦ</w>
+               <lb n="3"/><supplied reason="lost"><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w>
+                  <w lemma="ὁ">ὁ</w> <w lemma="δεῖνα">δεῖνα</w></supplied><gap reason="lost" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

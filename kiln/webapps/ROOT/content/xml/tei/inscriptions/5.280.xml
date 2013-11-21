@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие Софенета<certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Gravestone of Sophainetos<certainty cert="low" locus="value" match=".."/></title>
+             <editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.280</idno>
+            <idno type="AYV2012-number">byz268</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Funerary inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Крупнозернистый известняк.</material>
+                           <material xml:lang="en">Coarse-grained limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение латинского креста с расширяющимися концами (с укороченным левым рукавом); на тыльной 
+                              продольное углубление. Выветрилась, обломана снизу.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height>42,0</height>
+                              <width>44,0</width>
+                              <depth>13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Со всех сторон от креста.</seg>
+                           <seg xml:lang="en">All around the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломанной перекладиной, дельта с вытянутой вверх правой гастой, эпсилон, тета, омикрон, сигма и 
+                           фи прямоугольные, фи удлиненное по вертикали.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a broken crossbar, delta with extended right hasta, rectangular theta, omikron, sigma, and phi,
+                           phi is also elongated.</seg>
+                        <height unit="cm">4,0–7,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Пантикапей.</seg>
+                        <seg xml:lang="en">Pantikapaion.</seg>
+                     </origPlace>
+                     <origDate notBefore="0301" notAfter="0400" precision="medium" evidence="палеография археологический_контекст">
+                        <seg xml:lang="ru">IV в.</seg>
+                          <seg xml:lang="en">IV century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru">non vidi.</seg>
+                     <seg xml:lang="en">non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Керчь.</placeName>
+                        <rs type="circumstances">4 мая 1897 г., случайная находка.</rs>
+                        <rs type="context">Глинище, сад К. Верле.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">4 May 1897, chance find.</rs>
+                        <rs type="context">Glinishche, garden of K. Verle.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-15" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">small correction</change>
+         <change when="2012-06-21" who="AG">corrections, several lines translated</change>
+          <change when="2012-05-09" who="AFS">corrections on layout and text</change>
+          <change when="2012-03-20" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="byz268">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Шкорпил 1898b--><ptr target="b0246"/>,  207–208, № <biblScope>17</biblScope></bibl>
+               <bibl n="1.1"><!-- КХНБ --><ptr target="b0068"/>,  <biblScope>28</biblScope></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Здесь лежит Софе<supplied reason="lost">нет (?)</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies Sophai<supplied reason="lost">netos</supplied> (?).</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись найдена вместе с <ref type="inscription">V 267</ref><!--byz255--> и <ref type="inscription">V 281</ref><!--byz269-->, а также иудейским надгробием Симона (Шкорпил 1898b, 210, № 20). </p>
+                <p> 1–4. Относительно формулы см. <ref type="introduction">IV.3.F.d</ref>. </p>
+                <p> 5–7. Имя Софенет засвидетельствовано лишь в античной литературе и эпиграфике: IG XII,9 249 (Эвбея), 50 раз в IG VII 3498 (Мегары) и, что важно, 
+                   в посвящении херсонессцев II в. (Крыжицкий 1975, 115). Возможен, хотя и менее вероятен, другой вариант восстановления — Σοφέας (IG XII, suppl. 113). </p>
+            <p> См. также комм. к <ref type="inscription">V 267</ref><!--byz255-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἐνθάδε">Ἐνθάδ<lb n="2" break="no"/>ε</w> <w lemma="κατάκειμαι">κατά<lb n="3" break="no"/>κειτ<lb n="4" break="no"/>αι</w> <persName type="attested" ref="#person342" cert="low"><name nymRef=" Σοφαίνετος">Σο<lb n="5" break="no"/>φαί<lb n="6" break="no"/><supplied reason="lost">νετος</supplied></name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Строительная надпись Исаака I Комнина <certainty cert="low" locus="value" match=".."/></title>
+             <title xml:lang="en">Building inscription of Isaac I Komnenos <certainty cert="low" locus="value" match=".."/></title>
+            <editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor>
+         </titleStmt>
+         <publicationStmt>
+            <idno type="filename">5.12</idno>
+            <idno type="AYV2012-number">byz011</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>35042</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35042</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мелкозернистый мрамор.</material>
+                           <material xml:lang="en">White fine-grained marble.</material>
+                           <p xml:lang="ru">Тыльная сторона не обработана. Обломана со всех сторон.</p>
+                           <p xml:lang="en">The back side is unworked. Broken off on all sides.</p>
+                           <dimensions>
+                              <height>19,5</height>
+                              <width>22,0</width>
+                              <depth>4,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы удлиненные. Альфа с наклонной 
+                           перекладиной, бета с несомкнутыми полукружиями.</seg>
+                        <seg xml:lang="en">Lapidary. Letters are elongated; alpha with a slanting crossbar; the loops of beta are vertically spaced without touching each other.</seg>
+                        <height unit="cm">6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="1059" notAfter="1059" evidence="палеография">
+                        <seg xml:lang="ru">1059 г.</seg>
+                        <seg xml:lang="en">1059 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1900 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Оборонительные стены, участок от пролома до башни № 17 («башня Зинона»), снаружи.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1900, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Fortification walls, a sector between the breach and the Tower 17 ("Zenon's Tower"), on the external face.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en">Sevastopol, Ukraine.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2013-04-12" who="NG">Greek lemmata corrected</change>
+          <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
+         <change when="2012-08-16" who="AG">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-09" who="AG">small correction</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG, AFS">bibliography corrected, apparatus marked up, editor added, translated a line</change>
+         <change when="2012-04-05" who="AG">bibliography updated</change>
+        <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+        <change when="2012-02-20" who="AG">bibliography tagged</change>
+        <change when="2011-12-19" who="AG">updated</change>
+       <change when="2011-12-12" who="AG"> tags in the date corrected</change>
+       <change when="2011-12-01" who="AG"> tags in the Greek text added</change>
+      <change when="2011-11-29" who="AG"> minor corrections, tags in the Greek text</change>
+      <change when="2011-11-25" who="KFL">Automated creation from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="byz11">
+            <desc xml:lang="en">Photograph of face (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1902a--><ptr target="b0142"/>, 68, № <biblScope>13</biblScope></bibl> 
+               <bibl n="2"><!--Виноградов 2011a--><ptr target="b0386"/>, 219–220, № <biblScope>2</biblScope></bibl> 
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <p>
+               <app><rdg resp="b0142"><gap reason="lost" extent="unknown" unit="character"/>ΑΝΕΝ<gap reason="lost" extent="unknown" unit="character"/>ΠΗΒ<gap reason="lost" extent="unknown" unit="character"/></rdg></app>
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+               <p>Обн<supplied reason="lost">овлена стена (?)</supplied> при им<supplied reason="lost">ператоре
+                  Исааке (?)</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+               <p>Renovated: [a wall (?)], in the reign of Em[peror Isaac (?)]</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Найденный в том же районе, что и надпись Исаака I (<ref type="inscription">V 11</ref><!--byz010-->), данный фрагмент весьма близок ей и по шрифту (ср. особенно форму беты). 
+                  Вероятно, это надпись об укреплении стен при том же императоре. 
+                  Отметим некоторую разницу формул: «при Исааке, великом императоре» и «при императоре таком-то». Судя по размеру ваката внизу, 2-я строка была 
+                  последней, и поэтому маловероятно восстановление «в царствование Исаака + титулатура».</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+               <p>Found in the same area as the inscription of Isaac I (<ref type="inscription">V 11</ref><!--byz010-->), this fragment is close to the latter in script (see, e.g., the shape of beta).
+               This might be an inscription about the renovation of walls during the reign of the same emperor. There is a slight difference in formulae, however:
+               "in the reign of Isaac.., the Great King and Emperor" versus "in the reign of emperor Isaac." Judging by the size of vacat at the bottom, the second line
+               must have been the last, and therefore the restoration "in the reign of Isaac (+ extensive titles)" is unlikely.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+                  <lb n="1"/><supplied reason="lost"><g type="stauros"/></supplied>
+                  <w lemma="ἀνανεόομαι">Ἀνεν<supplied reason="lost" cert="low">εώθη</supplied></w>
+                  <supplied reason="lost" cert="low"><w lemma="ὁ">τὸ</w> <w lemma="τεῖχος">τεῖχος</w></supplied>
+                  <lb n="2"/><w lemma="ἐπί"><unclear>ἐ</unclear>πὴ</w> 
+                  <persName type="ruler" key="isaak1"><w lemma="βασιλεύς">β<unclear>α</unclear><supplied reason="lost" cert="low">σιλέως</supplied></w>
+                     <supplied reason="lost" cert="low"><name nymRef="Ἰσαάκιος">Ἰσακίου</name></supplied></persName>.
+               </ab>
+         </div>
+      </body>
+   </text>
+</TEI>
