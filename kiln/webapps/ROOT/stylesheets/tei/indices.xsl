@@ -199,6 +199,7 @@
       </xsl:if>
       <xsl:call-template name="formatInscrNum">
         <xsl:with-param name="num" select="str[@name='tei-id']"/>
+        <xsl:with-param name="printCorpus" select="true()"/>
       </xsl:call-template>
       <xsl:if test="arr[@name='divloc']">
         <xsl:for-each select="arr[@name='divloc']/str">

@@ -26,6 +26,7 @@
           <dd>
             <xsl:call-template name="formatInscrNum">
               <xsl:with-param name="num" select="ancestor::doc/str[@name='tei-id']"/>
+              <xsl:with-param name="printCorpus" select="true()"/>
             </xsl:call-template>
             <xsl:text> </xsl:text>
             <a href="/{ancestor::doc/str[@name='file']}.html">
