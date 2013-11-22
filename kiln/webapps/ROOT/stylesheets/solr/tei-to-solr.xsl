@@ -1421,9 +1421,9 @@
   <xsl:template match="tei:origPlace" mode="document-metadata">
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
-
+      
       <xsl:for-each
-        select="$location/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
