@@ -187,7 +187,7 @@
           </xsl:otherwise>
         </xsl:choose>
       </li>
-      <li>
+      <!--<li>
         <xsl:choose>
           <xsl:when test="//death//result[@numFound &gt; 0]">
             <a href="death{$kiln:url-lang-suffix}.html">
@@ -201,7 +201,7 @@
             </em>
           </xsl:otherwise>
         </xsl:choose>
-      </li>
+      </li>-->
     </ul>
 
     <h4>
