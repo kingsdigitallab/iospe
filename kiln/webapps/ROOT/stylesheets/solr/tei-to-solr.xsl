@@ -77,6 +77,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <xsl:if
         test="translate(normalize-space(ancestor::tei:TEI//tei:titleStmt/tei:title[@xml:lang='en']), ' ', '') != ''">
         <field name="inscription-title-en">
@@ -151,6 +154,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <xsl:if test="descendant::tei:*[@cert='low'] or ancestor-or-self::tei:*[@cert='low']">
         <field name="cert">low</field>
       </xsl:if>
@@ -224,6 +230,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <xsl:if test="descendant::tei:*[@cert='low'] or ancestor-or-self::tei:*[@cert='low']">
         <field name="cert">low</field>
       </xsl:if>
@@ -245,9 +254,6 @@
         <xsl:text>inscription-</xsl:text>
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>-->
-      <field name="inscription">
-        <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
-      </field>
       <field name="tei-id">
         <xsl:value-of select="descendant::tei:idno[@type='filename']"/>
       </field>
@@ -305,6 +311,9 @@
       </field>
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
+      </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
       </field>
       <xsl:if
         test="translate(normalize-space(ancestor::tei:TEI/descendant::tei:titleStmt/tei:title[@xml:lang='en']), ' ', '') != ''">
@@ -385,6 +394,9 @@
       </field>
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
+      </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
       </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
@@ -489,6 +501,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
         <field name="divloc">
@@ -528,6 +543,9 @@
       </field>
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
+      </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
       </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
@@ -633,6 +651,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
         <field name="divloc">
@@ -727,6 +748,10 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
+
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
         <field name="divloc">
@@ -774,6 +799,9 @@
       </field>
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
+      </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
       </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
@@ -827,6 +855,9 @@
       </field>
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
+      </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
       </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
@@ -956,6 +987,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
         <field name="divloc">
@@ -1067,6 +1101,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
         <field name="divloc">
@@ -1115,6 +1152,9 @@
       </field>
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
+      </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
       </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
@@ -1192,6 +1232,9 @@
       <field name="tei-id">
         <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
       </field>
+      <field name="sortable-id">
+        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
+      </field>
       <!-- Indexed Item Location -->
       <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
         <field name="divloc">
@@ -1250,6 +1293,14 @@
         <field name="tei-id">
           <xsl:value-of select="$idno"/>
         </field>
+        <field name="inscription">
+          <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
+        </field>
+
+        <field name="sortable-id">
+          <xsl:value-of select="local:sort_id($idno)"/>
+        </field>
+
         <field name="dt">i</field>
 
         <xsl:apply-templates mode="document-metadata" select="/aggregation/tei:TEI/tei:teiHeader"/>
@@ -1311,6 +1362,27 @@
       <xsl:value-of select="local:clean(.)"/>
     </field>
   </xsl:template>
+
+  <xsl:function as="xs:string" name="local:sort_id">
+    <xsl:param name="tei_id"/>
+
+    <xsl:variable name="b_sort" as="xs:integer">
+      <xsl:value-of select="substring-before($tei_id, '.')"/>
+    </xsl:variable>
+
+    <xsl:variable name="i_sort" as="xs:integer">
+      <xsl:value-of select="substring-after($tei_id, '.')"/>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="not($i_sort = 0) and not($b_sort = 0)">
+        <xsl:value-of select="(1000 * $b_sort) + $i_sort"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>0</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
 
   <xsl:function as="xs:string" name="local:clean">
     <xsl:param name="value"/>
@@ -1421,7 +1493,7 @@
   <xsl:template match="tei:origPlace" mode="document-metadata">
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
-      
+
       <xsl:for-each
         select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
         <field name="location">

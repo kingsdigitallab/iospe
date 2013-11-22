@@ -201,6 +201,7 @@
   </xsl:template>
 
   <xsl:template match="result/doc" mode="search-results">
+
     <xsl:variable name="id">
       <xsl:number value="substring-before(str[@name = 'tei-id'],'.')" format="I"/>
       <xsl:text>&#xa0;</xsl:text>
@@ -215,7 +216,7 @@
           <xsl:value-of select="$kiln:url-lang-suffix"/>
           <xsl:text>.html</xsl:text>
         </xsl:attribute>
-        
+
         <xsl:choose>
           <xsl:when test="contains($id, '.')">
             <strong>
@@ -230,8 +231,8 @@
         </xsl:choose>
         <xsl:text> </xsl:text>
         <xsl:value-of select="arr[@name=concat('document-title-', $lang)]/str[1]"/>
-        
-        
+
+
       </a>
     </li>
   </xsl:template>
