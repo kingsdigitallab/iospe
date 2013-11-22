@@ -49,10 +49,11 @@
             <h3>
               <i18n:text>Selected searches</i18n:text>
             </h3>
+
             <ul class="inline-list">
               <xsl:choose>
                 <xsl:when
-                  test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']) = 0">
+                  test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']/str[not(substring-before(text(), ':') = ('not-before', 'not-after'))]) = 0">
                   <li class="muted">
                     <i18n:text>No filters</i18n:text>
                   </li>
