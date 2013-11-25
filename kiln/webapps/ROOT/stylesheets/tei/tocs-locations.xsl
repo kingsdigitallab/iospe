@@ -23,6 +23,7 @@
         </dt>
 
         <xsl:for-each select="//doc/arr[@name='origin-ref']/str[.=current()/@xml:id]">
+          <xsl:sort select="ancestor::doc/str[@name='sortable-id']" />
           <dd>
             <xsl:call-template name="formatInscrNum">
               <xsl:with-param name="num" select="ancestor::doc/str[@name='tei-id']"/>
