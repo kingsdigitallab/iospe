@@ -1367,15 +1367,15 @@
     <xsl:param name="tei_id"/>
 
     <xsl:variable name="b_sort" as="xs:integer">
-      <xsl:value-of select="substring-before($tei_id, '.')"/>
+      <xsl:value-of select="concat('0', substring-before($tei_id, '.'))"/>
     </xsl:variable>
 
     <xsl:variable name="i_sort" as="xs:integer">
-      <xsl:value-of select="substring-after($tei_id, '.')"/>
+      <xsl:value-of select="concat('0', substring-after($tei_id, '.'))"/>
     </xsl:variable>
     <xsl:choose>
       <xsl:when test="not($i_sort = 0) and not($b_sort = 0)">
-        <xsl:value-of select="(1000 * $b_sort) + $i_sort"/>
+        <xsl:value-of select="(10000 * $b_sort) + $i_sort"/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:text>0</xsl:text>
