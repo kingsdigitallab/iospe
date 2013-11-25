@@ -139,12 +139,12 @@
         <!-- Type of monument (if exists) -->
         <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Разновидность' else 'Type'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of select="//tei:objectType[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
@@ -157,12 +157,12 @@
         <!-- Material (if exists) -->
         <xsl:if test="//tei:support/tei:material[@xml:lang=$lang]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Материал' else 'Material'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of select="//tei:material[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
@@ -174,14 +174,14 @@
         <!-- Description and condition (if exists) -->
         <xsl:if test="//tei:support/tei:p[@xml:lang=$lang]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Описание и состояние' else 'Description and condition'"
                 />
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:apply-templates select="//tei:p[@xml:lang=$lang]/node()"/>
                 <xsl:text>&#160;</xsl:text>
@@ -214,13 +214,13 @@
         <!-- Find place -->
         <xsl:for-each select="//tei:provenance[@type='found'][@n=current()/@n or not(@n)]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Место  находки' else 'Find place'"/>
               </h6>
             </div>
 
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of
                   select="tei:seg[@xml:lang=$lang]/tei:placeName[@type='ancientFindspot']"/>
@@ -231,14 +231,14 @@
 
           <!-- Find Circumnstances -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Условия  находки' else 'Find circumstances'"/>
               </h6>
             </div>
 
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of select="tei:seg[@xml:lang=$lang]/tei:rs[@type='circumstances']"/>
                 <xsl:text>&#160;</xsl:text>
@@ -248,13 +248,13 @@
 
           <!-- Find context -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Контекст находки' else 'Find context'"/>
               </h6>
             </div>
 
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of select="tei:seg[@xml:lang=$lang]/tei:rs[@type='context']"/>
                 <xsl:text>&#160;</xsl:text>
@@ -266,14 +266,14 @@
         <!-- Modern Location (if exists) -->
         <xsl:if test="//tei:provenance[@type='observed'][@n = current()/@n or not(@n)]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Место хранения' else 'Modern location'"
                 />
               </h6>
             </div>
 
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of
                   select="//tei:provenance[@type='observed'][@n = current()/@n or not(@n)]/tei:seg[@xml:lang=$lang]"/>
@@ -286,12 +286,12 @@
         <!-- Dimensions -->
         <xsl:for-each select="//tei:support/tei:dimensions[@n = current()/@n or not(@n)]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Размеры' else 'Dimensions'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:choose>
                   <xsl:when test="not(tei:height) and not(tei:width) and not(tei:depth)">
@@ -372,12 +372,12 @@
         <!-- Autopsy -->
         <xsl:if test="//tei:provenance[@type = 'autopsy']">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Автопсия' else 'Autopsy'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of select="//tei:provenance[@type = 'autopsy']/tei:seg[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
@@ -389,14 +389,14 @@
         <!-- Institution and Inventory -->
         <xsl:if test="//tei:altIdentifier[@n = current()/@n or not(@n)]">
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Институт  хранения' else 'Institution and inventory'"
                 />
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of
                   select="//tei:altIdentifier[@n = current()/@n or not(@n)][@xml:lang=$lang]/tei:repository"/>
@@ -561,12 +561,12 @@
 
               <!-- Faces code -->
               <div class="row">
-                <div class="large-2 columns">
+                <div class="large-3 columns">
                   <h6>
                     <xsl:value-of select="if ($lang='ru') then 'Код фаса' else 'Faces code'"/>
                   </h6>
                 </div>
-                <div class="large-10 columns">
+                <div class="large-9 columns">
                   <p>
                     <xsl:value-of select="@ana"/>
                     <xsl:text>.&#160;</xsl:text>
@@ -578,13 +578,13 @@
             <!-- Placement of text (If exists) -->
             <xsl:if test="tei:seg">
               <div class="row">
-                <div class="large-2 columns">
+                <div class="large-3 columns">
                   <h6>
                     <xsl:value-of
                       select="if ($lang='ru') then 'Местоположение' else 'Placement of text'"/>
                   </h6>
                 </div>
-                <div class="large-10 columns">
+                <div class="large-9 columns">
                   <p>
                     <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
                     <xsl:text>&#160;</xsl:text>
@@ -597,13 +597,13 @@
           <!-- Style of lettering (if exists) -->
           <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg">
             <div class="row">
-              <div class="large-2 columns">
+              <div class="large-3 columns">
                 <h6>
                   <xsl:value-of
                     select="if ($lang='ru') then 'Стиль  письма' else 'Style of lettering'"/>
                 </h6>
               </div>
-              <div class="large-10 columns">
+              <div class="large-9 columns">
                 <p>
                   <xsl:value-of
                     select="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
@@ -616,12 +616,12 @@
           <!-- Letterheights (if exists) -->
           <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height">
             <div class="row">
-              <div class="large-2 columns">
+              <div class="large-3 columns">
                 <h6>
                   <xsl:value-of select="if ($lang='ru') then 'Высота букв' else 'Letterheights'"/>
                 </h6>
               </div>
-              <div class="large-10 columns">
+              <div class="large-9 columns">
                 <p>
                   <xsl:choose>
                     <xsl:when
@@ -660,12 +660,12 @@
 
           <!-- Origin -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Происхождение текста' else 'Origin'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of
                   select="//tei:origPlace[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
@@ -676,12 +676,12 @@
 
           <!-- Category -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Характер документа' else 'Category'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of
                   select="//tei:msContents/tei:summary/tei:seg[@n = $fullN or not(@n)][@xml:lang=$lang]"/>
@@ -692,12 +692,12 @@
 
           <!-- Date -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Датировка текста' else 'Date'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:value-of
                   select="//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
@@ -708,13 +708,13 @@
 
           <!-- Dating Criteria -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of
                   select="if ($lang='ru') then 'Обоснование датировки' else 'Dating criteria'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:choose>
                   <xsl:when test="$lang='ru'">
@@ -767,12 +767,12 @@
 
           <!-- Editions -->
           <div class="row">
-            <div class="large-2 columns">
+            <div class="large-3 columns">
               <h6>
                 <xsl:value-of select="if ($lang='ru') then 'Издания' else 'Editions'"/>
               </h6>
             </div>
-            <div class="large-10 columns">
+            <div class="large-9 columns">
               <p>
                 <xsl:choose>
                   <xsl:when
