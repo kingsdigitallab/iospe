@@ -5,25 +5,21 @@ require(['common'], function(common) {
     function (main, highlightjs) {
 
       var parse_inscription = function (query) {
-        var n = query.match(/^(b?y?z?)?\s*(\d{1,3})(\.\d)?([a-j])?$/);
+        var n = query.match(/^(?:(\d?)\.)?(\d{1,3})$/);
 
         if (!n || !n[2]) {
           return false;
         }
 
-        return {'byz': 'byz',
-                'n': main.pad(n[2]),
-                'sub': '' + (n[3] || ''),
-                'suffix': '' + (n[4] || '')};
+        return {'pref': '' + (n[1] || '5') + '.',
+                'n': n[2]};
       };
 
       var build_inscription_doc = function(inscription, extension) {
         var ext = extension || '.html';
 
-        return ('' + inscription.byz +
+        return ('' + inscription.pref +
                    inscription.n +
-                   inscription.sub +
-                   inscription.suffix +
                    main.get_kiln_url_language_suffix() +
                    ext);
 
