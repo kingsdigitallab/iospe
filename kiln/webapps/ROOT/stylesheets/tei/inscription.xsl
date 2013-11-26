@@ -477,7 +477,7 @@
         <a href="{$filename}">
           <xsl:attribute name="title">
             <xsl:value-of
-              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;You may download this '"
+              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;Right-click to save this file'"
             />
           </xsl:attribute>
           <xsl:value-of
@@ -491,7 +491,7 @@
         <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
           <xsl:attribute name="title">
             <xsl:value-of
-              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;You may download this '"
+              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;Right-click to save this file'"
             />
           </xsl:attribute>
           <xsl:value-of select="if ($lang='ru') then 'RU-EpiDoc schema' else 'EpiDoc schema'"/>
@@ -515,11 +515,6 @@
         <xsl:value-of select="@n"/>
       </xsl:if>
     </xsl:variable>
-
-    <!-- <xsl:message>
-      <xsl:value-of select="$fullN"/>
-    </xsl:message> -->
-
 
     <!-- If there are multiple inscriptions, add title -->
     <div class="large-12 columns">
