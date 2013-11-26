@@ -430,32 +430,22 @@
 
     <div xsl:exclude-result-prefixes="tei" class="large-12 columns">
       <p>
-        <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
-          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
-        </a>
-        <xsl:value-of
-          select="if ($lang='ru') then 'RU-&#160;You may download this ' else '&#160;You may download this '"/>
+        <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license"
+          ><img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/></a>
+        <i18n:text>&#160;You may download this </i18n:text>
         <a href="{$filename}">
           <xsl:attribute name="title">
-            <xsl:value-of
-              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;Right-click to save this file'"
-            />
+            <i18n:text>Right-click to save this file</i18n:text>
           </xsl:attribute>
-          <xsl:value-of
-            select="if ($lang='ru') then 'RU-inscription in EpiDoc XML' else 'inscription in EpiDoc XML'"
-          />
+          <i18n:text>inscription in EpiDoc XML</i18n:text>
         </a>
         <xsl:text>.</xsl:text>
-
-        <xsl:value-of
-          select="if ($lang='ru') then 'RU- (This file should validate to the ' else ' (This file should validate to the '"/>
+        <i18n:text> (This file should validate to the </i18n:text>
         <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
           <xsl:attribute name="title">
-            <xsl:value-of
-              select="if ($lang='ru') then 'RU-Right-click to save this file' else '&#160;Right-click to save this file'"
-            />
+            <i18n:text>Right-click to save this file</i18n:text>
           </xsl:attribute>
-          <xsl:value-of select="if ($lang='ru') then 'RU-EpiDoc schema' else 'EpiDoc schema'"/>
+          <i18n:text>EpiDoc schema</i18n:text>
         </a>
         <xsl:text>.)</xsl:text>
       </p>
