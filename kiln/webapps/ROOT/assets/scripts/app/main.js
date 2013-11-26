@@ -23,6 +23,10 @@ define([], function() {
   };
 
   this.clean_corpus = function(parsed_corpus) {
+    if (!parsed_corpus) {
+      return false;
+    }
+
     var dictionary = [
       //['3', 'IIV'],
       //['4', 'IV'],
@@ -74,7 +78,7 @@ define([], function() {
       if (i) {
         location.href = build_inscription_doc(i);
       } else {
-        $('#numTxt', this).addClass('error').after('<small>Invalid id number</small>');
+        $('#numTxt', this).addClass('error').after('<small class="error">Invalid id number</small>');
       }
 
     });

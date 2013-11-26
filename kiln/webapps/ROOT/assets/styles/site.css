@@ -227,7 +227,16 @@ a#griffin:active {
     top              : 2px;
     background-color : #9f9f9f;
     color            : #344f5f;
-    border           : none;
+    border           : 0;
+    border-bottom    : 1px solid #555555;
+    border-top    : 1px solid #555555;
+    border-left    : 1px solid #555555;
+}
+
+.top-bar input[type='submit'] {
+    background-color : #555555;
+    color            : #9f9f9f;
+    border-right    : 1px solid #555555;
 }
 
 .top-bar input:focus {
