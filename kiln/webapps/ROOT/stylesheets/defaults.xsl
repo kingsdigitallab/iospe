@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
   <!--
       Defaults stylesheet. Defines default globals and reads
       parameters from the sitemap.
@@ -80,6 +81,22 @@
     </li>
     <li class="lang py">
       <a class="py" href="/{$url_base}-ru.html" title="Русский">Русский</a>
+    </li>
+  </xsl:template>
+
+  <xsl:template name="jump-to-inscription">
+    <!-- searchform -->
+    <li class="has-form">
+      <form id="jumpForm">
+        <div class="row collapse">
+          <div class="small-8 columns">
+            <input id="numTxt" name="numTxt" type="text" placeholder="Inscription number" i18n:attr="placeholder"/>
+          </div>
+          <div class="small-4 columns">
+            <input href="#" type="submit" value="Go" i18n:attr="value" />
+          </div>
+        </div>
+      </form>
     </li>
   </xsl:template>
 

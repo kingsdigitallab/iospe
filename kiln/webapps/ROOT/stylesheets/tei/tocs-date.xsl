@@ -39,7 +39,10 @@
                 <xsl:when test="str[@name=concat($toc,'-',$lang)]!=''">
                   <xsl:value-of select="str[@name=concat($toc,'-',$lang)]"/>
                 </xsl:when>
-                <xsl:otherwise> [<i18n:text>date specified, but not spelled out</i18n:text>]
+                <xsl:otherwise>
+                  <xsl:text>[</xsl:text>
+                  <i18n:text>date specified, but not spelled out</i18n:text>
+                  <xsl:text>]</xsl:text>
                 </xsl:otherwise>
               </xsl:choose>
             </dt>
@@ -54,7 +57,7 @@
                   <xsl:choose>
                     <xsl:when
                       test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''"
-                      > [<i18n:text>no title</i18n:text>] </xsl:when>
+                      > <xsl:text>[</xsl:text><i18n:text>no title</i18n:text><xsl:text>]</xsl:text> </xsl:when>
                     <xsl:otherwise>
                       <xsl:text/>
                       <xsl:value-of select="str[@name=concat('inscription-title-', $lang)]"/>

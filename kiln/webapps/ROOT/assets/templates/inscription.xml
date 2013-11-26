@@ -32,9 +32,6 @@
       </xsl:choose>
     </kiln:block>
 
-    <kiln:block name="page-pre-header">
-      <xsl:call-template name="inscriptionnav"/>
-    </kiln:block>
 
     <kiln:block name="page-heading">
       <kiln:super/>
@@ -51,6 +48,9 @@
     <kiln:block name="content">
       <div class="row">
         <div class="large-12 columns inscription">
+          <!-- navigation -->
+          <xsl:call-template name="inscriptionnav"/>
+          
           <!-- Support is the only always-one element in the metadata -->
           <xsl:call-template name="inscriptionSupport"/>
 
@@ -58,7 +58,8 @@
 
           <!-- anything else -->
           <!-- <xsl:apply-templates select="//inscription/tei:TEI" /> -->
-
+          <!-- navigation -->
+          <xsl:call-template name="inscriptionnav"/>
         </div>
       </div>
     </kiln:block>

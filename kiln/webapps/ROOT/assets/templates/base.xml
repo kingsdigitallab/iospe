@@ -16,23 +16,21 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <meta content="IE=edge,chrome=IE8" http-equiv="X-UA-Compatible"/>
           <title>
-            <kiln:block name="title">Kiln: </kiln:block>
+            <kiln:block name="title">IOSPE: </kiln:block>
           </title>
           <kiln:block name="css">
-            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/normalize.css" rel="stylesheet"
-                  type="text/css"/>
-            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/foundation.min.css" rel="stylesheet"
-                  type="text/css"/>
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/normalize.css"
+              rel="stylesheet" type="text/css"/>
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/foundation.min.css"
+              rel="stylesheet" type="text/css"/>
             <link href="{$kiln:assets-path}/scripts/vendor/font-awesome/css/font-awesome.min.css"
-                  rel="stylesheet"
-                  type="text/css"/>
+              rel="stylesheet" type="text/css"/>
 
             <link href="{$kiln:assets-path}/styles/base.css" rel="stylesheet" type="text/css"/>
             <link href="{$kiln:assets-path}/styles/site.css" rel="stylesheet" type="text/css"/>
           </kiln:block>
           <kiln:block name="js">
-            <script src="{$kiln:assets-path}/scripts/vendor/modernizr/modernizr.js"
-              >&#160;</script>
+            <script src="{$kiln:assets-path}/scripts/vendor/modernizr/modernizr.js">&#160;</script>
 
           </kiln:block>
           <kiln:block name="head-extra"/>
@@ -56,7 +54,7 @@
                     <nav class="top-bar">
                       <kiln:block name="main-navigation">
                         <ul class="title-area large-2">
-                          <li class="name">
+                          <li class="name show-for-large-up">
                             <a id="griffin" href="{$kiln:context-path}/"> &#160; </a>
                           </li>
                           <li class="toggle-topbar menu-icon right">
@@ -71,7 +69,11 @@
                           </ul>
 
                         </section>
-
+                        <section class="top-bar-section jump-to-inscription">
+                          <ul class="left">
+                            <xsl:call-template name="jump-to-inscription"/>
+                          </ul>
+                        </section>
                         <section class="top-bar-section">
                           <ul class="right language-choice">
                             <kiln:block name="menu-languages">
@@ -87,7 +89,7 @@
 
               </div>
               <div id="body-wrapper" class="row">
-                <div id="rock" class="large-2 columns">&#160;</div>
+                <div id="rock" class="large-2 columns show-for-medium-up">&#160;</div>
 
                 <div id="main-content" class="large-10 columns ">
                   <kiln:block name="page-pre-header"/>
@@ -135,10 +137,14 @@
                      is no reason to use Foundation's check whether to use
                      jQuery or Zepto. -->
                 <script src="{$kiln:assets-path}/scripts/vendor/jquery/jquery.js">&#160;</script>
-                <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js">&#160;</script>
-                <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.dropdown.js"
+                <script
+                  src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js"
                   >&#160;</script>
-                <script src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.topbar.js"
+                <script
+                  src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.dropdown.js"
+                  >&#160;</script>
+                <script
+                  src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.topbar.js"
                   >&#160;</script>
 
                 <kiln:block name="mainjs">

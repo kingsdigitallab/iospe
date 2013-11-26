@@ -1,7 +1,8 @@
 // Base specific functions
 
 require(['common'], function(common) {
-  require(['app/main'],
-    function (main) {
-  });
+    require(['app/main'],
+        function(main) {
+
+        });
 });

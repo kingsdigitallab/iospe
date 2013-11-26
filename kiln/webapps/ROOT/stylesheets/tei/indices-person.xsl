@@ -318,7 +318,7 @@
       test="count(//persons/descendant::tei:relation[substring-after(@active, '#')=current()/@xml:id]) > 0">
       <dd class="relations">
         <span class="person_detail_label">
-          <i18n:text>Relationship</i18n:text>
+          <i18n:text>Relationships</i18n:text>
         </span>
         <xsl:text> </xsl:text>
 

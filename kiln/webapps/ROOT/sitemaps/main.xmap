@@ -118,9 +118,9 @@
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
           <map:part element="prev_inscr"
-            src="cocoon://_internal/solr/query/q=inscription%3A%7B*+TO+{1}%7D&amp;sort=inscription+desc&amp;start=0&amp;rows=1"/>
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B*+TO+{1}%7D&amp;sort=sortable-id+desc&amp;start=0&amp;rows=1"/>
           <map:part element="next_inscr"
-            src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=inscription+asc&amp;start=0&amp;rows=1"/>
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=sortable-id+asc&amp;start=0&amp;rows=1"/>
           <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
           <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
           <!-- verse -->
@@ -146,9 +146,9 @@
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
           <map:part element="prev_inscr"
-            src="cocoon://_internal/solr/query/q=inscription%3A%7B*+TO+{1}%7D&amp;sort=inscription+desc&amp;start=0&amp;rows=1"/>
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B*+TO+{1}%7D&amp;sort=sortable-id+desc&amp;start=0&amp;rows=1"/>
           <map:part element="next_inscr"
-            src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=inscription+asc&amp;start=0&amp;rows=1"/>
+            src="cocoon://_internal/solr/query/q=inscription%3A%7B{1}+TO+*%7D&amp;sort=sortable-id+asc&amp;start=0&amp;rows=1"/>
           <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
           <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
           <!-- verse -->
@@ -184,6 +184,9 @@
           <map:parameter name="url" value="inscriptions/{1}-{2}.html"/>
           <map:parameter name="lang" value="{2}"/>
         </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -196,6 +199,9 @@
         <map:transform src="cocoon://_internal/template/tei.xsl">
           <map:parameter name="url" value="inscriptions/{1}.html"/>
           <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -210,6 +216,9 @@
         <map:transform src="cocoon://_internal/template/tei.xsl">
           <map:parameter name="url" value="doc/{1}.html"/>
           <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
@@ -226,6 +235,9 @@
           <map:parameter name="url" value="{1}/{2}-{3}.html"/>
           <map:parameter name="lang" value="{3}"/>
         </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{3}"/>
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
@@ -238,6 +250,9 @@
         <map:transform src="cocoon://_internal/template/tei.xsl">
           <map:parameter name="url" value="{1}/{2}.html"/>
           <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
