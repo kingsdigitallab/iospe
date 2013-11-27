@@ -47,17 +47,28 @@
               </xsl:choose>
             </dt>
             <xsl:for-each select="current-group()">
+              <xsl:sort select="int[@name='sortable-id']"/>
               <dd>
                 <a href="/{str[@name='file']}.html">
                   <xsl:number value="substring-before(str[@name='tei-id'],'.')" format="I"/>
                   <xsl:text>&#xa0;</xsl:text>
                   <xsl:number value="substring-after(str[@name='tei-id'],'.')" format="1"/>
-                  <!--<xsl:value-of select="substring-after(str[@name='tei-id'],'byz')"/>-->
+
+                  <!--
+                    DEBUG: WAITING FOR INDEX REFACTORING, issue IOSPE-87
+                    https://jira.dighum.kcl.ac.uk/browse/IOSPE-87
+                    
+                    <xsl:text> </xsl:text>
+                  <xsl:value-of select="str[@name=concat('origin-', $lang)]"/>
+                  -->
                   <xsl:text> </xsl:text>
                   <xsl:choose>
                     <xsl:when
-                      test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''"
-                      > <xsl:text>[</xsl:text><i18n:text>no title</i18n:text><xsl:text>]</xsl:text> </xsl:when>
+                      test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
+                      <xsl:text>[</xsl:text>
+                      <i18n:text>no title</i18n:text>
+                      <xsl:text>]</xsl:text>
+                    </xsl:when>
                     <xsl:otherwise>
                       <xsl:text/>
                       <xsl:value-of select="str[@name=concat('inscription-title-', $lang)]"/>

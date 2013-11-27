@@ -9,20 +9,37 @@
     <xsl:param name="next_inscr"/>
     <xsl:param name="prev_inscr"/>
 
+    <xsl:variable name="filename">
+      <xsl:value-of select="//tei:idno[@type='filename']"/>
+    </xsl:variable>
+
+    <xsl:variable name="prev"
+      select="/aggregation/order//result/doc[str[@name='tei-id' and text() = $filename]]/preceding-sibling::doc[1]/str/text()"/>
+    <xsl:variable name="next"
+      select="/aggregation/order//result/doc[str[@name='tei-id' and text() = $filename]]/following-sibling::doc[1]/str/text()"/>
+  
 
     <div class="row">
       <div class="large-12 columns">
+        <xsl:value-of select="$prev = ''"/>
+        <xsl:value-of select="$next = ''"/>
         <ul class="pagination right">
           <!-- prev -->
           <li class="arrow">
             <xsl:attribute name="class">
               <xsl:text>arrow</xsl:text>
-              <xsl:if test="not(//prev_inscr//result/doc/str[@name='inscription']/text())">
+              <xsl:if test="not($prev)">
                 <xsl:text> unavailable</xsl:text>
               </xsl:if>
             </xsl:attribute>
-            <a
-              href="{concat(//prev_inscr//result/doc/str[@name='inscription'], $kiln:url-lang-suffix)}.html">
+            <a>
+              <xsl:attribute name="href">
+                <xsl:if test="$prev">
+                  <xsl:value-of select="$prev"/>
+                  <xsl:value-of select="$kiln:url-lang-suffix"/>
+                  <xsl:text>.html</xsl:text>
+                </xsl:if>
+              </xsl:attribute>
               <xsl:text>&#171;</xsl:text>
               <i18n:text>Previous</i18n:text>
             </a>
@@ -31,12 +48,18 @@
           <li class="arrow">
             <xsl:attribute name="class">
               <xsl:text>arrow</xsl:text>
-              <xsl:if test="not(//next_inscr//result/doc/str[@name='inscription']/text())">
+              <xsl:if test="not($next)">
                 <xsl:text> unavailable</xsl:text>
               </xsl:if>
             </xsl:attribute>
-            <a
-              href="{concat(//next_inscr//result/doc/str[@name='inscription'], $kiln:url-lang-suffix)}.html">
+            <a>
+              <xsl:attribute name="href">
+                <xsl:if test="$next">
+                  <xsl:value-of select="$next"/>
+                  <xsl:value-of select="$kiln:url-lang-suffix"/>
+                  <xsl:text>.html</xsl:text>
+                </xsl:if>
+              </xsl:attribute>
               <i18n:text>Next</i18n:text>
               <xsl:text>&#187;</xsl:text>
             </a>
@@ -430,8 +453,9 @@
 
     <div xsl:exclude-result-prefixes="tei" class="large-12 columns">
       <p>
-        <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license"
-          ><img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/></a>
+        <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
+          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
+        </a>
         <i18n:text>&#160;You may download this </i18n:text>
         <a href="{$filename}">
           <xsl:attribute name="title">
