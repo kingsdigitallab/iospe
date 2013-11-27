@@ -46,6 +46,17 @@
         <div class="large-8 columns">
           <!-- List of currently applied facets. -->
           <div class="panel">
+            <xsl:if test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']/str[not(substring-before(text(), ':') = ('not-before', 'not-after'))]) > 0">
+              <div class="right">
+                <a href="../../">
+                  <i class="fa fa-times">
+                    <xsl:text> </xsl:text>
+                  </i>
+                  <xsl:text> </xsl:text>
+                  <i18n:text>Reset</i18n:text>
+                </a>
+              </div>              
+            </xsl:if>
             <h3>
               <i18n:text>Selected searches</i18n:text>
             </h3>

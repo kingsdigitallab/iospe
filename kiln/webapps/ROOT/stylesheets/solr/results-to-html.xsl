@@ -397,29 +397,38 @@
       <xsl:when test="$type = 'not-before' or $type = 'not-after'"/>
       <xsl:otherwise>
         <li>
-          <a class="info secondary button small">
-            <xsl:attribute name="href">
-              <xsl:text>?</xsl:text>
-              <xsl:call-template name="create_facet_button_url">
-                <xsl:with-param name="r_q_name">fq</xsl:with-param>
-                <xsl:with-param name="r_q_value">
+          <ul class="button-group">
+            <li>
+              <a class="info secondary button small">
+                <xsl:attribute name="href">
+                  <xsl:text>?fq=</xsl:text>
                   <xsl:value-of select="text()"/>
-                </xsl:with-param>
-                <xsl:with-param name="start" select="'0'"/>
-              </xsl:call-template>
-            </xsl:attribute>
-            <xsl:value-of select="$type"/>
-            <xsl:text>:</xsl:text>
-            <xsl:value-of select="$label"/>
-            <xsl:if test="$label = ''">
-              <i18n:text>Empty</i18n:text>
-            </xsl:if>
-            <xsl:text>&#160;</xsl:text>
-            <!-- Create a link to unapply the facet. -->
-            <span>
-              <i class="icon-remove">&#160;</i>
-            </span>
-          </a>
+                </xsl:attribute>
+                <xsl:value-of select="$type"/>
+                <xsl:text>:</xsl:text>
+                <xsl:value-of select="$label"/>
+                <xsl:if test="$label = ''">
+                  <i18n:text>Empty</i18n:text>
+                </xsl:if>
+              </a>
+            </li>
+            <li>
+              <a class="info secondary button small">
+                <xsl:attribute name="href">
+                  <xsl:text>?</xsl:text>
+                  <xsl:call-template name="create_facet_button_url">
+                    <xsl:with-param name="r_q_name">fq</xsl:with-param>
+                    <xsl:with-param name="r_q_value">
+                      <xsl:value-of select="text()"/>
+                    </xsl:with-param>
+                    <xsl:with-param name="start" select="'0'"/>
+                  </xsl:call-template>
+                </xsl:attribute>
+                <!-- Create a link to unapply the facet. -->
+                <i class="fa fa-times" ><xsl:text> </xsl:text></i>
+              </a>
+            </li>
+          </ul>
         </li>
       </xsl:otherwise>
     </xsl:choose>
