@@ -25,14 +25,14 @@
     </xsl:choose>
   </xsl:template>
   <xsl:template name="group_pagination">
-    <xsl:param name="prefix" select="''" />
+    <xsl:param name="prefix" select="''"/>
     <ul class="pagination">
       <xsl:for-each select="//AL//tei:listPerson">
         <li>
           <a>
             <xsl:attribute name="href">
               <xsl:text>#</xsl:text>
-              <xsl:value-of select="$prefix" />
+              <xsl:value-of select="$prefix"/>
               <xsl:value-of select="iospe:normalise_id(tei:head[@xml:lang=$lang])"/>
             </xsl:attribute>
             <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
@@ -197,6 +197,19 @@
       </xsl:choose>
     </dt>
 
+    <xsl:if test="tei:floruit">
+      <dd class="floruit">
+
+        <span class="person_detail_label">
+          <i18n:text>Attested</i18n:text>
+        </span>
+        <xsl:text> </xsl:text>
+
+        <xsl:value-of select="tei:floruit"/>
+        <xsl:text> </xsl:text>
+      </dd>
+    </xsl:if>
+
     <xsl:choose>
       <xsl:when test="@xml:id">
         <xsl:for-each-group select="//result//doc[str[@name='persName-key']=current()/@xml:id]"
@@ -204,43 +217,31 @@
           <xsl:variable name="persName-key">
             <xsl:value-of select="str[@name='persName-key']"/>
           </xsl:variable>
-          <dd>
-
-            <span class="person_detail_label">
-              <i18n:text>Full Name</i18n:text>
-            </span>
-            <xsl:text> </xsl:text>
-
-            <xsl:value-of select="current-grouping-key()"/>
-          </dd>
-          <xsl:if test="//tei:person[@xml:id=$persName-key]/tei:floruit">
-            <dd class="floruit">
-
+          <dd class="row">
+            <div class="large-4 columns">
               <span class="person_detail_label">
-                <i18n:text>Attested</i18n:text>
+                <i18n:text>Full Name</i18n:text>
               </span>
               <xsl:text> </xsl:text>
 
-              <xsl:value-of select="//tei:person[@xml:id=$persName-key]/tei:floruit"/>
+              <xsl:value-of select="current-grouping-key()"/>
+            </div>
+            <div class="large-8 columns inscriptions">
+
+              <span class="person_detail_label">
+                <i18n:text>Inscriptions</i18n:text>
+              </span>
               <xsl:text> </xsl:text>
-            </dd>
-          </xsl:if>
 
-          <dd class="inscriptions">
-
-            <span class="person_detail_label">
-              <i18n:text>Inscriptions</i18n:text>
-            </span>
-            <xsl:text> </xsl:text>
-
-            <ul class="inline-list">
-              <xsl:for-each select="current-group()">
-                <xsl:sort select="str[@name='tei-id']"/>
-                <li>
-                  <xsl:call-template name="link2inscription"/>
-                </li>
-              </xsl:for-each>
-            </ul>
+              <ul class="inline-list">
+                <xsl:for-each select="current-group()">
+                  <xsl:sort select="str[@name='tei-id']"/>
+                  <li>
+                    <xsl:call-template name="link2inscription"/>
+                  </li>
+                </xsl:for-each>
+              </ul>
+            </div>
           </dd>
 
         </xsl:for-each-group>
