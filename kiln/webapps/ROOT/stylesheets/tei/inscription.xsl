@@ -456,15 +456,16 @@
         <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
           <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
         </a>
-        <i18n:text>&#160;You may download this </i18n:text>
+        <xsl:text>&#160;</xsl:text>
+        <i18n:text>You may download this </i18n:text>
         <a href="{$filename}">
           <xsl:attribute name="title">
             <i18n:text>Right-click to save this file</i18n:text>
           </xsl:attribute>
           <i18n:text>inscription in EpiDoc XML</i18n:text>
         </a>
-        <xsl:text>.</xsl:text>
-        <i18n:text> (This file should validate to the </i18n:text>
+        <xsl:text>. (</xsl:text>
+        <i18n:text>This file should validate to the </i18n:text>
         <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
           <xsl:attribute name="title">
             <i18n:text>Right-click to save this file</i18n:text>
