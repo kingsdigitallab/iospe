@@ -25,20 +25,20 @@
         <dt>
           <xsl:choose>
             <xsl:when test="count(tei:placeName[@xml:lang])>1">
-              <xsl:value-of select="translate(tei:placeName[@xml:lang='grc'][1],'.','')"/>
+              <xsl:value-of select="translate(string-join(tei:placeName[@xml:lang='grc'], ','),'.','')"/>
               <xsl:if test="tei:placeName[@xml:lang='la']">
                 <xsl:text> / </xsl:text>
-                <xsl:value-of select="translate(tei:placeName[@xml:lang='la'][1],'.','')"/>
+                <xsl:value-of select="translate(string-join(tei:placeName[@xml:lang='la'], ', '),'.','')"/>
               </xsl:if>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:value-of select="translate(tei:placeName[1],'.','')"/>
+              <xsl:value-of select="translate(string-join(tei:placeName, ', '),'.','')"/>
             </xsl:otherwise>
           </xsl:choose>
           <xsl:if test="tei:placeName[@xml:lang=$lang]">
             <xsl:text> (</xsl:text>
             <xsl:value-of
-              select="string-join(translate(tei:placeName[@xml:lang=$lang],'.',''), ', ')"/>
+              select="translate(string-join(tei:placeName[@xml:lang=$lang], ', ') ,'.','')"/>
             <xsl:text>)</xsl:text>
           </xsl:if>
           <xsl:if test="tei:idno[@type='pleiades']">

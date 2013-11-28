@@ -17,12 +17,10 @@
       select="/aggregation/order//result/doc[str[@name='tei-id' and text() = $filename]]/preceding-sibling::doc[1]/str/text()"/>
     <xsl:variable name="next"
       select="/aggregation/order//result/doc[str[@name='tei-id' and text() = $filename]]/following-sibling::doc[1]/str/text()"/>
-  
+
 
     <div class="row">
       <div class="large-12 columns">
-        <xsl:value-of select="$prev = ''"/>
-        <xsl:value-of select="$next = ''"/>
         <ul class="pagination right">
           <!-- prev -->
           <li class="arrow">

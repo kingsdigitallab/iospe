@@ -63,7 +63,7 @@
         <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
           <section>
             <xsl:attribute name="class">
-              <xsl:if test="$sort=('date')">
+              <xsl:if test="$sort=('date', '')">
                 <xsl:text>active</xsl:text>
               </xsl:if>
             </xsl:attribute>
@@ -97,7 +97,7 @@
           </section>
           <section>
             <xsl:attribute name="class">
-              <xsl:if test="$sort=('name', '')">
+              <xsl:if test="$sort=('name')">
                 <xsl:text>active</xsl:text>
               </xsl:if>
             </xsl:attribute>
@@ -185,14 +185,14 @@
     <dt>
       <xsl:choose>
         <xsl:when test="count(tei:persName[not(@type)][@xml:lang])>1">
-          <xsl:value-of select="tei:persName[not(@type)][@xml:lang='grc'][1]"/>
+          <xsl:value-of select="string-join( tei:persName[not(@type)][@xml:lang='grc'], ', ')"/>
           <xsl:if test="tei:persName[not(@type)][@xml:lang='la']">
             <xsl:text> / </xsl:text>
-            <xsl:value-of select="tei:persName[not(@type)][@xml:lang='la'][1]"/>
+            <xsl:value-of select="string-join(tei:persName[not(@type)][@xml:lang='la'], ', ')"/>
           </xsl:if>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="tei:persName[not(@type)][1]"/>
+          <xsl:value-of select="string-join(tei:persName[not(@type)], ', ')"/>
         </xsl:otherwise>
       </xsl:choose>
     </dt>
@@ -272,7 +272,7 @@
 
   <xsl:template name="person">
     <dt id="{@xml:id}">
-      <xsl:value-of select="tei:persName[@xml:lang=$lang]"/>
+      <xsl:value-of select="string-join(tei:persName[@xml:lang=$lang], ', ')"/>
     </dt>
 
 

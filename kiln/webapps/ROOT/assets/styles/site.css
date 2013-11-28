@@ -159,7 +159,9 @@ a#griffin:active {
 }
 
 .top-bar-section li a:link,
-.top-bar-section li a:visited {
+.top-bar-section li a:visited,
+.top-bar .toggle-topbar.menu-icon a:link,
+.top-bar .toggle-topbar.menu-icon a:visited {
     color       : #344f5f;
     font-weight : 700;
 }
@@ -169,7 +171,9 @@ a#griffin:active {
 .top-bar-section li a:not(.button):hover,
 .top-bar-section li a:not(.button):active,
 .top-bar-section li a:hover,
-.top-bar-section li a:active {
+.top-bar-section li a:active,
+.top-bar .toggle-topbar.menu-icon a:hover,
+.top-bar .toggle-topbar.menu-icon a:active {
     background : #e1e1e1;
     color      : #344f5f
 }
@@ -218,6 +222,17 @@ a#griffin:active {
 
 .top-bar-section .language-choice li.lang.en a {
     background : url(../images/en-button.png) no-repeat scroll 0 -1px transparent;
+}
+
+.top-bar .toggle-topbar.menu-icon {
+
+}
+
+.top-bar .toggle-topbar.menu-icon a {
+    font-weight : normal;
+    font-size   : .7em;
+    line-height : 1.35em;
+
 }
 
 /* jumpform */
