@@ -1333,45 +1333,38 @@
   <!-- Unit: SYMBOL -->
 
   <xsl:template match="tei:div[@type='edition']//tei:g" mode="symbol">
-    <doc>
-      <xsl:comment>Symbol</xsl:comment>
-      <!--<field name="id">
-        <xsl:text>symbol-</xsl:text>
-        <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
-        <xsl:if test="count(tei:div[@type='edition']//tei:g) &gt; 1">
-          <xsl:message>symbol: <xsl:number level="any"/></xsl:message>
-          <xsl:number count="tei:div[@type='edition']//tei:g" level="any" />
-        </xsl:if>
-      </field>-->
-      <!-- File Information -->
-      <field name="file">
-        <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
-      </field>
-      <field name="tei-id">
-        <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
-      </field>
-      <field name="sortable-id">
-        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
-      </field>
-      <!-- Indexed Item Location -->
-      <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
-        <field name="divloc">
-          <xsl:value-of select="@n"/>
+    <xsl:variable name="idno"
+      select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+    <xsl:if test="$idno">
+      <doc>
+        <field name="dt">symbol</field>
+        <xsl:apply-templates mode="common-data" select="/aggregation/tei:TEI"/>
+
+        <xsl:comment>Symbol</xsl:comment>
+
+        <!-- Indexed Item Location -->
+        <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
+          <field name="divloc">
+            <xsl:value-of select="@n"/>
+          </field>
+        </xsl:for-each>
+        <field name="line">
+          <xsl:value-of select="preceding::tei:lb[1]/@n"/>
         </field>
-      </xsl:for-each>
-      <field name="line">
-        <xsl:value-of select="preceding::tei:lb[1]/@n"/>
-      </field>
-      <!-- Indexed Item Information -->
-      <field name="lang">
-        <xsl:value-of select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
-      </field>
-      <!-- Indexed Item Value(s) -->
-      <field name="symbols">
-        <xsl:value-of select="@type"/>
-      </field>
-      <!-- symbols-sort is copy of symbols. See schema.xml -->
-    </doc>
+
+        <!-- Indexed Item Information -->
+        <field name="lang">
+          <xsl:value-of select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
+        </field>
+
+        <!-- Indexed Item Value(s) -->
+        <field name="symbols">
+          <xsl:value-of select="@type"/>
+        </field>
+
+        <!-- symbols-sort is copy of symbols. See schema.xml -->
+      </doc>
+    </xsl:if>
   </xsl:template>
 
   <!-- Unit: NUMERAL -->
@@ -1381,81 +1374,70 @@
     [translate(normalize-space(string-join(descendant::text(), '')),' ', '')!='']
     [@value or @atLeast or @atMost]"
     mode="num">
-    <doc>
-      <xsl:comment>Numeral</xsl:comment>
-      <!--<field name="id">
-        <xsl:text>num-</xsl:text>
-        <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
-        <xsl:if test="count(tei:div[@type='edition']//tei:num
-          [translate(normalize-space(string-join(descendant::text(), '')),' ', '')!='']
-          [@value or @atLeast or @atMost]) &gt; 1">
-          <xsl:message>num: <xsl:number level="any"/></xsl:message>
-          <xsl:number count="tei:div[@type='edition']//tei:num
-            [translate(normalize-space(string-join(descendant::text(), '')),' ', '')!='']
-            [@value or @atLeast or @atMost]" level="any" />
+
+    <xsl:variable name="idno"
+      select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+    <xsl:if test="$idno">
+      <doc>
+        <field name="dt">num</field>
+        <xsl:apply-templates mode="common-data" select="/aggregation/tei:TEI"/>
+
+        <xsl:comment>Numeral</xsl:comment>
+
+        <!-- Indexed Item Location -->
+        <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
+          <field name="divloc">
+            <xsl:value-of select="@n"/>
+          </field>
+        </xsl:for-each>
+        <field name="line">
+          <xsl:value-of select="preceding::tei:lb[1]/@n"/>
+        </field>
+
+        <!-- Indexed Item Information -->
+        <field name="lang">
+          <xsl:value-of select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
+        </field>
+
+        <!-- Indexed Item Value(s) -->
+        <field name="numerals">
+          <xsl:value-of select="normalize-space(.)"/>
+        </field>
+        <xsl:if test="@value">
+          <field name="num-value">
+            <xsl:value-of select="@value"/>
+          </field>
         </xsl:if>
-      </field>-->
-      <!-- File Information -->
-      <field name="file">
-        <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
-      </field>
-      <field name="tei-id">
-        <xsl:value-of select="ancestor::tei:TEI//tei:idno[@type='filename']"/>
-      </field>
-      <field name="sortable-id">
-        <xsl:value-of select="local:sort_id(ancestor::tei:TEI//tei:idno[@type='filename'])"/>
-      </field>
-      <!-- Indexed Item Location -->
-      <xsl:for-each select="ancestor::tei:div[@type='textpart'][@n]">
-        <field name="divloc">
-          <xsl:value-of select="@n"/>
-        </field>
-      </xsl:for-each>
-      <field name="line">
-        <xsl:value-of select="preceding::tei:lb[1]/@n"/>
-      </field>
-      <!-- Indexed Item Information -->
-      <field name="lang">
-        <xsl:value-of select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
-      </field>
-      <!-- Indexed Item Value(s) -->
-      <field name="numerals">
-        <xsl:value-of select="normalize-space(.)"/>
-      </field>
-      <xsl:if test="@value">
-        <field name="num-value">
-          <xsl:value-of select="@value"/>
-        </field>
-      </xsl:if>
-      <xsl:if test="@atLeast">
-        <field name="num-atleast">
-          <xsl:value-of select="@atLeast"/>
-        </field>
-      </xsl:if>
-      <xsl:if test="@atMost">
-        <field name="num-atmost">
-          <xsl:value-of select="@atMost"/>
-        </field>
-      </xsl:if>
-      <xsl:if test="@value or @atLeast or @atMost">
-        <field name="numerals-sort">
-          <xsl:choose>
-            <xsl:when test="@value">
-              <xsl:value-of select="@value"/>
-            </xsl:when>
-            <xsl:when test="@atLeast">
-              <xsl:value-of select="@atLeast"/>
-            </xsl:when>
-            <xsl:when test="@atMost">
-              <xsl:value-of select="@atMost"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="@atMost"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </field>
-      </xsl:if>
-    </doc>
+        <xsl:if test="@atLeast">
+          <field name="num-atleast">
+            <xsl:value-of select="@atLeast"/>
+          </field>
+        </xsl:if>
+        <xsl:if test="@atMost">
+          <field name="num-atmost">
+            <xsl:value-of select="@atMost"/>
+          </field>
+        </xsl:if>
+        <xsl:if test="@value or @atLeast or @atMost">
+          <field name="numerals-sort">
+            <xsl:choose>
+              <xsl:when test="@value">
+                <xsl:value-of select="@value"/>
+              </xsl:when>
+              <xsl:when test="@atLeast">
+                <xsl:value-of select="@atLeast"/>
+              </xsl:when>
+              <xsl:when test="@atMost">
+                <xsl:value-of select="@atMost"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@atMost"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </field>
+        </xsl:if>
+      </doc>
+    </xsl:if>
   </xsl:template>
 
   <!-- Unit: PLACE -->
@@ -1464,13 +1446,12 @@
     match="tei:div[@type='edition']//tei:placeName[@key]
     | tei:div[@type='edition']//tei:geogName[@key]"
     mode="place">
-    
+
     <xsl:variable name="idno"
       select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-
     <xsl:if test="$idno">
       <doc>
-        <field name="dt">p</field>
+        <field name="dt">place</field>
         <xsl:apply-templates mode="common-data" select="/aggregation/tei:TEI"/>
 
         <xsl:comment>Place</xsl:comment>
