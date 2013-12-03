@@ -217,6 +217,11 @@
     <field indexed="true" multiValued="true" name="diplomatic" required="false" stored="true" type="text_general" />
     <field indexed="true" multiValued="true" name="lemma" required="false" stored="true" type="text_general" />
 
+    <!-- catchall field, containing all other searchable text fields
+        (implemented via copyField further on in this schema -->
+    <field name="text" type="text_general" indexed="true"
+      stored="false" multiValued="true"/>
+
     <copyField source="document-title" dest="text" />
     <copyField source="evidence" dest="text" />
     <copyField source="monument-type" dest="text" />
@@ -257,10 +262,7 @@
    <field indexed="true" multiValued="false" name="eats_entity_name"
           required="false" stored="true" type="text_general" />
 
-   <!-- catchall field, containing all other searchable text fields
-        (implemented via copyField further on in this schema -->
-   <field name="text" type="text_general" indexed="true"
-          stored="false" multiValued="true"/>
+   
 
    <!-- catchall text field that indexes tokens both normally and in
         reverse for efficient leading wildcard queries. -->
