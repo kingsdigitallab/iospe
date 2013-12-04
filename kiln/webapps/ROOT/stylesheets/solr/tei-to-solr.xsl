@@ -50,17 +50,12 @@
 
   <xsl:template match="text()" mode="#all" priority="-1"/>
 
-
-
-
-
-
   <!-- Unit: PUBLICATION (Concordances) -->
   <xsl:template match="tei:bibl[tei:biblScope][descendant::tei:ptr]" mode="publication">
     <xsl:variable name="target" select="descendant::tei:ptr[1]/@target"/>
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'publication'"/>
@@ -127,7 +122,7 @@
   <xsl:template match="tei:origin/tei:origPlace[@ref][1]" mode="origin">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'origin'"/>
@@ -185,7 +180,7 @@
   <xsl:template match="tei:provenance[@type='found'][descendant::tei:placeName]" mode="findspot">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'findspot'"/>
@@ -216,10 +211,11 @@
 
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'inscription'"/>
+          <xsl:with-param name="full" select="true()"/>
         </xsl:apply-templates>
         <xsl:comment>Inscription</xsl:comment>
       </doc>
@@ -251,7 +247,7 @@
     </xsl:variable>
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'date'"/>
@@ -351,10 +347,10 @@
 
     <xsl:for-each select="tokenize(normalize-space(@lemma), ' ')">
 
-      <xsl:if test="$idno">
+      <xsl:if test="not($idno = '')">
         <doc>
           <xsl:apply-templates mode="common-data" select="$document">
-            <xsl:with-param name="dt" select="'word'"/>
+            <xsl:with-param name="dt" select="'words'"/>
             <xsl:with-param name="suffix"
               select="concat(normalize-space($line),
                            '_',
@@ -434,7 +430,7 @@
   <xsl:template match="tei:div[@type='edition']//tei:date[@dur]" mode="death">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'death'"/>
@@ -478,7 +474,7 @@
   <xsl:template match="tei:div[@type='edition']//tei:expan/tei:abbr[1]" mode="abbr">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'abbr'"/>
@@ -586,10 +582,10 @@
 
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
-          <xsl:with-param name="dt" select="'fragment'"/>
+          <xsl:with-param name="dt" select="'fragments'"/>
           <xsl:with-param name="suffix"
             select="concat(normalize-space(preceding::tei:lb[1]/@n),
                            '_',
@@ -680,7 +676,7 @@
   <xsl:template match="tei:div[@type='edition']//tei:hi[@rend='ligature']" mode="ligature">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'ligature'"/>
@@ -730,10 +726,10 @@
   <xsl:template match="tei:div[@type='edition']//tei:rs[@type='month'][@ref]" mode="month">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
-          <xsl:with-param name="dt" select="'month'"/>
+          <xsl:with-param name="dt" select="'months'"/>
           <xsl:with-param name="suffix"
             select="concat(normalize-space(preceding::tei:lb[1]/@n),
                            '_',
@@ -787,7 +783,7 @@
     mode="name">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
           <xsl:with-param name="dt" select="'name'"/>
@@ -923,7 +919,7 @@
     mode="attested">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <xsl:variable name="line" select="preceding::tei:lb[1]/@n"/>
       <xsl:variable name="lang" select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
       <xsl:variable name="doc" select="ancestor::aggregation/tei:TEI"/>
@@ -1039,10 +1035,10 @@
   <xsl:template match="tei:div[@type='edition']//tei:g" mode="symbol">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
-          <xsl:with-param name="dt" select="'symbol'"/>
+          <xsl:with-param name="dt" select="'symbols'"/>
           <xsl:with-param name="suffix"
             select="concat(normalize-space(preceding::tei:lb[1]/@n),
                            '_',
@@ -1094,7 +1090,7 @@
     <xsl:if test="$idno != ''">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
-          <xsl:with-param name="dt" select="'num'"/>
+          <xsl:with-param name="dt" select="'numerals'"/>
           <xsl:with-param name="suffix"
             select="concat(normalize-space(preceding::tei:lb[1]/@n),
                            '_',
@@ -1174,10 +1170,10 @@
 
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="$idno">
+    <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/tei:TEI">
-          <xsl:with-param name="dt" select="'place'"/>
+          <xsl:with-param name="dt" select="'places'"/>
           <xsl:with-param name="suffix"
             select="concat(normalize-space(preceding::tei:lb[1]/@n),
                            '_',
@@ -1240,59 +1236,4 @@
       </doc>
     </xsl:if>
   </xsl:template>
-
-  <xsl:template match="tei:app" mode="edition">
-    <xsl:apply-templates mode="#current" select="tei:lem"/>
-  </xsl:template>
-  <xsl:template match="tei:app" mode="diplomatic">
-    <xsl:apply-templates mode="#current" select="tei:rdg"/>
-  </xsl:template>
-
-  <xsl:template match="tei:choice" mode="edition">
-    <xsl:apply-templates mode="#current" select="tei:corr"/>
-    <xsl:apply-templates mode="#current" select="tei:reg"/>
-  </xsl:template>
-  <xsl:template match="tei:choice" mode="diplomatic">
-    <xsl:apply-templates mode="#current" select="tei:sic"/>
-    <xsl:apply-templates mode="#current" select="tei:orig"/>
-  </xsl:template>
-
-  <xsl:template match="*" mode="edition diplomatic">
-    <xsl:apply-templates mode="#current"/>
-  </xsl:template>
-
-  <xsl:template match="text()" mode="apparatus edition diplomatic">
-    <xsl:value-of select="."/>
-  </xsl:template>
-
-  <xsl:template match="tei:w[@lemma]" mode="lemma">
-    <xsl:value-of select="@lemma"/>
-    <xsl:text> </xsl:text>
-  </xsl:template>
-
-  <xsl:template match="tei:name[@nymRef] | tei:placeName[@nymRef]" mode="lemma">
-    <xsl:choose>
-      <xsl:when test="contains(@nymRef, '#')">
-        <xsl:value-of select="substring-after(@nymRef, '#')"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="@nymRef"/>
-      </xsl:otherwise>
-    </xsl:choose>
-    <xsl:text> </xsl:text>
-  </xsl:template>
-
-
-  <xsl:template match="tei:app" mode="apparatus">
-    <xsl:apply-templates mode="#current" select="tei:lem"/>
-    <xsl:text> </xsl:text>
-    <xsl:apply-templates mode="#current" select="tei:rdg"/>
-  </xsl:template>
-
-  <xsl:template match="tei:rdg" mode="apparatus">
-    <xsl:apply-templates mode="#current"/>
-    <xsl:text> </xsl:text>
-  </xsl:template>
-
-  <xsl:template match="tei:note" mode="apparatus"/>
 </xsl:stylesheet>

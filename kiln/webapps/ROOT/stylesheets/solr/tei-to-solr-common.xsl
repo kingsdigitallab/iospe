@@ -25,11 +25,25 @@
   </xsl:variable>
 
 
+  <!--performed at import -->
+  <xsl:variable name="memoized-common-data">
+    <xsl:apply-templates mode="document-metadata" select="/aggregation/tei:TEI/tei:teiHeader"/>
+    <xsl:apply-templates mode="document-metadata" select="/aggregation/tei:TEI/tei:text/tei:body"/>    
+    <xsl:apply-templates mode="document-body" select="/aggregation/tei:TEI/tei:text/tei:body"/>
+  </xsl:variable>
+  
+  <xsl:variable name="memoized-indispensible-data">
+    <xsl:apply-templates mode="document-metadata-indispensible" select="/aggregation/tei:TEI/tei:teiHeader"/>
+    <xsl:apply-templates mode="document-metadata-indispensible" select="/aggregation/tei:TEI/tei:text/tei:body"/>
+  </xsl:variable>
+  
+  
   <xsl:template
     match="/aggregation/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]"
     mode="common-data">
     <xsl:param name="dt" select="'none'"/>
     <xsl:param name="suffix" select="''"/>
+    <xsl:param name="full" select="false()"/>
 
     <field name="dt">
       <xsl:value-of select="$dt"/>
@@ -46,13 +60,18 @@
         <xsl:value-of select="$suffix"/>
       </xsl:if>
     </field>
-
-    <xsl:apply-templates mode="document-metadata" select="./tei:teiHeader"/>
-    <xsl:apply-templates mode="document-metadata" select="./tei:text/tei:body"/>
-    <xsl:apply-templates mode="document-body" select="./tei:text/tei:body"/>
+    <xsl:choose>
+      <xsl:when test="$full">
+        <xsl:sequence select="$memoized-common-data"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:sequence select="$memoized-indispensible-data"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    
   </xsl:template>
 
-  <xsl:template match="tei:publicationStmt/tei:idno[@type = 'filename']" mode="document-metadata">
+  <xsl:template match="tei:publicationStmt/tei:idno[@type = 'filename']" mode="document-metadata document-metadata-indispensible">
     <field name="file">
       <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
     </field>
@@ -68,7 +87,7 @@
     </field>
   </xsl:template>
 
-  <xsl:template match="tei:titleStmt/tei:title[@xml:lang]" mode="document-metadata">
+  <xsl:template match="tei:titleStmt/tei:title[@xml:lang]" mode="document-metadata document-metadata-indispensible">
     <field name="document-title">
       <xsl:value-of select="local:clean(.)"/>
     </field>
@@ -249,6 +268,8 @@
     <field name="lemma">
       <xsl:apply-templates mode="lemma"/>
     </field>
+    
+    <xsl:apply-templates mode="#current"/>
   </xsl:template>
 
   <xsl:template
@@ -292,5 +313,60 @@
       <xsl:value-of select="local:replace-spaces('other person')"/>
     </field>
   </xsl:template>
+  
+  <xsl:template match="tei:app" mode="edition">
+    <xsl:apply-templates mode="#current" select="tei:lem"/>
+  </xsl:template>
+  <xsl:template match="tei:app" mode="diplomatic">
+    <xsl:apply-templates mode="#current" select="tei:rdg"/>
+  </xsl:template>
+  
+  <xsl:template match="tei:choice" mode="edition">
+    <xsl:apply-templates mode="#current" select="tei:corr"/>
+    <xsl:apply-templates mode="#current" select="tei:reg"/>
+  </xsl:template>
+  <xsl:template match="tei:choice" mode="diplomatic">
+    <xsl:apply-templates mode="#current" select="tei:sic"/>
+    <xsl:apply-templates mode="#current" select="tei:orig"/>
+  </xsl:template>
+  
+  <xsl:template match="*" mode="edition diplomatic">
+    <xsl:apply-templates mode="#current"/>
+  </xsl:template>
+  
+  <xsl:template match="text()" mode="apparatus edition diplomatic">
+    <xsl:value-of select="."/>
+  </xsl:template>
+  
+  <xsl:template match="tei:w[@lemma]" mode="lemma">
+    <xsl:value-of select="@lemma"/>
+    <xsl:text> </xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="tei:name[@nymRef] | tei:placeName[@nymRef]" mode="lemma">
+    <xsl:choose>
+      <xsl:when test="contains(@nymRef, '#')">
+        <xsl:value-of select="substring-after(@nymRef, '#')"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="@nymRef"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text> </xsl:text>
+  </xsl:template>
+  
+  
+  <xsl:template match="tei:app" mode="apparatus">
+    <xsl:apply-templates mode="#current" select="tei:lem"/>
+    <xsl:text> </xsl:text>
+    <xsl:apply-templates mode="#current" select="tei:rdg"/>
+  </xsl:template>
+  
+  <xsl:template match="tei:rdg" mode="apparatus">
+    <xsl:apply-templates mode="#current"/>
+    <xsl:text> </xsl:text>
+  </xsl:template>
+  
+  <xsl:template match="tei:note" mode="apparatus"/>
 
 </xsl:stylesheet>

@@ -22,7 +22,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/bynum-{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=inscription:*&amp;sort=inscription%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
@@ -40,7 +40,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/bynum.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=inscription:*&amp;sort=inscription%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
@@ -59,10 +59,10 @@
       <map:match pattern="date/(\w+-B?CE)-(\w+)\.html" type="regexp">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
-          <map:part src="cocoon:/getLetters/date-type:*"/>
+          <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/date/{1}-{2}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -80,10 +80,10 @@
       <map:match pattern="date/(\w+-B?CE)\.html" type="regexp">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
-          <map:part src="cocoon:/getLetters/date-type:*"/>
+          <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -101,10 +101,10 @@
       <map:match pattern="date/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
-          <map:part src="cocoon:/getLetters/date-type:*"/>
+          <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/date/{1}-{2}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -122,10 +122,10 @@
       <map:match pattern="date/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
-          <map:part src="cocoon:/getLetters/date-type:*"/>
+          <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=date-en:*%20AND%20date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -146,7 +146,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q={1}-ru:*&amp;sort={1}-ru%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-{2}:*&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs.xsl">
           <map:parameter name="url" value="indices/{1}-{2}.html"/>
@@ -163,7 +164,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q={1}-en:*&amp;sort={1}-en%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq-en{1}-en:*&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs.xsl">
           <map:parameter name="url" value="indices/{1}.html"/>
@@ -182,23 +184,23 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/index.html"/>
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <!-- Determine first available letters -->
-          <map:part element="attested" src="cocoon:/getFirstLetter/attested:*"/>
-          <map:part element="words-grc" src="cocoon:/getFirstLetter/words:*%20AND%20lang:grc"/>
-          <map:part element="words-lat" src="cocoon:/getFirstLetter/words:*%20AND%20lang:lat"/>
-          <map:part element="fragments-grc"
-            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:grc"/>
-          <map:part element="fragments-lat"
-            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:lat"/>
-          <map:part element="places" src="cocoon:/isAvailable/places:*"/>
-          <map:part element="divine" src="cocoon:/isAvailable/names:*%20AND%20persName-type:divine"/>
-          <map:part element="ruler" src="cocoon:/isAvailable/names:*%20AND%20persName-type:ruler"/>
-          <map:part element="months" src="cocoon:/isAvailable/months:*"/>
-          <map:part element="symbols" src="cocoon:/isAvailable/symbols:*"/>
-          <map:part element="ligatures" src="cocoon:/isAvailable/ligatures:*"/>
-          <map:part element="numerals" src="cocoon:/isAvailable/numerals:*"/>
-          <map:part element="abbr" src="cocoon:/isAvailable/abbr:*"/>
-          <map:part element="death" src="cocoon:/isAvailable/death:*"/>
-          <map:part element="findspot" src="cocoon:/isAvailable/findspot-en:*"/>
+
+          <map:part element="attested" src="cocoon:/getFirstLetter/attested"/>
+          <map:part element="words-grc" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="words-lat" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="fragments-grc" src="cocoon:/getFirstLetter-grc/fragments"/>
+          <map:part element="fragments-lat" src="cocoon:/getFirstLetter-lat/fragments"/>
+
+          <map:part element="places" src="cocoon:/isAvailable/places"/>
+          <map:part element="divine" src="cocoon:/isAvailable/name/persName-type:divine"/>
+          <map:part element="ruler" src="cocoon:/isAvailable/name/persName-type:ruler"/>
+          <map:part element="months" src="cocoon:/isAvailable/months"/>
+          <map:part element="symbols" src="cocoon:/isAvailable/symbols"/>
+          <map:part element="ligatures" src="cocoon:/isAvailable/ligature"/>
+          <map:part element="numerals" src="cocoon:/isAvailable/numerals"/>
+          <map:part element="abbr" src="cocoon:/isAvailable/abbr"/>
+          <map:part element="death" src="cocoon:/isAvailable/death"/>
+          <map:part element="findspot" src="cocoon:/isAvailable/findspot"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-home.xsl">
           <map:parameter name="url" value="indices/index.html"/>
@@ -216,23 +218,22 @@
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/index-{1}.html"/>
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <!-- Determine first available letters -->
-          <map:part element="attested" src="cocoon:/getFirstLetter/attested:*"/>
-          <map:part element="words-grc" src="cocoon:/getFirstLetter/words:*%20AND%20lang:grc"/>
-          <map:part element="words-lat" src="cocoon:/getFirstLetter/words:*%20AND%20lang:lat"/>
-          <map:part element="fragments-grc"
-            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:grc"/>
-          <map:part element="fragments-lat"
-            src="cocoon:/getFirstLetter/fragments:*%20AND%20lang:lat"/>
-          <map:part element="places" src="cocoon:/isAvailable/places:*"/>
-          <map:part element="divine" src="cocoon:/isAvailable/names:*%20AND%20persName-type:divine"/>
-          <map:part element="ruler" src="cocoon:/isAvailable/names:*%20AND%20persName-type:ruler"/>
-          <map:part element="months" src="cocoon:/isAvailable/months:*"/>
-          <map:part element="symbols" src="cocoon:/isAvailable/symbols:*"/>
-          <map:part element="ligatures" src="cocoon:/isAvailable/ligatures:*"/>
-          <map:part element="numerals" src="cocoon:/isAvailable/numerals:*"/>
-          <map:part element="abbr" src="cocoon:/isAvailable/abbr:*"/>
-          <map:part element="death" src="cocoon:/isAvailable/death:*"/>
-          <map:part element="findspot" src="cocoon:/isAvailable/findspot-ru:*"/>
+          <map:part element="attested" src="cocoon:/getFirstLetter/attested"/>
+          <map:part element="words-grc" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="words-lat" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="fragments-grc" src="cocoon:/getFirstLetter-grc/fragments"/>
+          <map:part element="fragments-lat" src="cocoon:/getFirstLetter-lat/fragments"/>
+
+          <map:part element="places" src="cocoon:/isAvailable/places"/>
+          <map:part element="divine" src="cocoon:/isAvailable/name/persName-type:divine"/>
+          <map:part element="ruler" src="cocoon:/isAvailable/name/persName-type:ruler"/>
+          <map:part element="months" src="cocoon:/isAvailable/months"/>
+          <map:part element="symbols" src="cocoon:/isAvailable/symbols"/>
+          <map:part element="ligatures" src="cocoon:/isAvailable/ligature"/>
+          <map:part element="numerals" src="cocoon:/isAvailable/numerals"/>
+          <map:part element="abbr" src="cocoon:/isAvailable/abbr"/>
+          <map:part element="death" src="cocoon:/isAvailable/death"/>
+          <map:part element="findspot" src="cocoon:/isAvailable/findspot"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-home.xsl">
           <map:parameter name="url" value="indices/index-{1}.html"/>
@@ -253,7 +254,7 @@
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/person/other-{1}.html"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=persName-ref:*&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:name&amp;fq=persName-ref:*&amp;rows=999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-person.xsl">
           <map:parameter name="url" value="indices/person/other-{1}.html"/>
@@ -272,7 +273,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/other.html"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=persName-ref:*&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:name&amp;fq=persName-ref:*&amp;rows=999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-person.xsl">
           <map:parameter name="url" value="indices/person/other.html"/>
@@ -292,7 +293,7 @@
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/person/{1}-{2}.html"/>
           <map:part src="../content/xml/tei/alists/{1}.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:name&amp;fq=name:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-person.xsl">
@@ -312,7 +313,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/{1}.html"/>
           <map:part src="../content/xml/tei/alists/{1}.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:name&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-person.xsl">
@@ -332,9 +333,9 @@
       <map:match pattern="names/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/names/{1}-{2}.html"/>
-          <map:part src="cocoon:/getLetters/attested:*"/>
+          <map:part src="cocoon:/getLetters/attested"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:attested&amp;fq=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -352,9 +353,9 @@
       <map:match pattern="names/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/names/{1}.html"/>
-          <map:part src="cocoon:/getLetters/attested:*"/>
+          <map:part src="cocoon:/getLetters/attested"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:attested&amp;fq=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -374,9 +375,9 @@
       <map:match pattern="*/*/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{4}.xml?url=indices/{1}/{2}/{3}-{4}.html"/>
-          <map:part src="cocoon:/getLetters-{2}/{1}:*"/>
+          <map:part src="cocoon:/getLetters-{2}/{1}"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -394,9 +395,9 @@
       <map:match pattern="*/*/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}/{2}/{3}.html"/>
-          <map:part src="cocoon:/getLetters-{2}/{1}:*"/>
+          <map:part src="cocoon:/getLetters-{2}/{1}"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -417,7 +418,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/months-{1}.html"/>
           <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=months:*&amp;rows=999"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-months.xsl">
           <map:parameter name="url" value="indices/months-{1}.html"/>
@@ -434,7 +436,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/months.html"/>
           <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=months:*&amp;rows=999"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-months.xsl">
           <map:parameter name="url" value="indices/months.html"/>
@@ -452,7 +455,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/places-{1}.html"/>
           <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=places:*&amp;rows=999"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-places.xsl">
           <map:parameter name="url" value="indices/places-{1}.html"/>
@@ -469,7 +473,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/places.html"/>
           <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=places:*&amp;rows=999"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-places.xsl">
           <map:parameter name="url" value="indices/places.html"/>
@@ -488,7 +493,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/findspot-{1}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=findspot-{1}:*&amp;sort=findspot-ru%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-{1}:*&amp;sort=findspot-{1}%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -506,7 +511,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/findspot.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -525,7 +530,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/abbr-{1}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"
+          />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-abbr.xsl">
           <map:parameter name="url" value="indices/abbr-{1}.html"/>
@@ -542,7 +548,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/abbr.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"
+          />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-abbr.xsl">
           <map:parameter name="url" value="indices/abbr.html"/>
@@ -562,7 +569,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-type-{2}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q={1}-type:*&amp;sort={1}-type-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -580,7 +587,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}-type.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q={1}-type:*&amp;sort={1}-type-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -601,7 +608,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
+          />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/{1}-{2}.html"/>
@@ -618,7 +626,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
+          />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/{1}.html"/>
@@ -636,38 +645,36 @@
     <map:pipeline internal-only="true">
       <!-- general check to test wether index is available (can be removed when all indices are available) -->
       <map:match pattern="isAvailable/*">
-        <map:generate src="cocoon://_internal/solr/query/q={1}&amp;rows=1"/>
+        <map:generate src="cocoon://_internal/solr/query/q=dt:{1}&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+
+      <map:match pattern="isAvailable/*/*">
+        <map:generate src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={2}&amp;rows=1"/>
         <map:serialize/>
       </map:match>
       <!-- get first available letter: index query-->
       <map:match pattern="getFirstLetter/*">
         <map:generate
-          src="cocoon://_internal/solr/query/q={1}%20AND%20first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
+          src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+      <map:match pattern="getFirstLetter-*/*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=dt:{2}&amp;fq=lang:{1}%20AND%20first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
         <map:serialize/>
       </map:match>
       <!-- generate list of available letter: index query -->
       <map:match pattern="getLetters/*">
         <map:generate
-          src="cocoon://_internal/solr/query/q={1}&amp;sort=first-letter%20asc&amp;rows=9999"/>
+          src="cocoon://_internal/solr/query/q=dt:{1}&amp;sort=first-letter%20asc&amp;rows=9999"/>
         <map:transform src="../stylesheets/getLetters.xsl"/>
         <map:serialize/>
       </map:match>
-      <map:match pattern="getLetters-lat/*">
+      <map:match pattern="getLetters-*/*">
         <map:generate
-          src="cocoon://_internal/solr/query/q={1}%20AND%20lang:lat&amp;sort=first-letter%20asc&amp;rows=9999"/>
-        <map:transform src="../stylesheets/getLetters.xsl">
-          <!--<map:parameter name="lang" value="grc"/>
-          -->
-        </map:transform>
-        <map:serialize/>
-      </map:match>
-      <map:match pattern="getLetters-grc/*">
-        <map:generate
-          src="cocoon://_internal/solr/query/q={1}%20AND%20lang:grc&amp;sort=first-letter-grc%20asc&amp;rows=9999"/>
-        <map:transform src="../stylesheets/getLetters.xsl">
-          <!--<map:parameter name="lang" value="grc"/>
-          -->
-        </map:transform>
+          src="cocoon://_internal/solr/query/q=dt:{2}&amp;fq=lang:{1}&amp;sort=first-letter%20asc&amp;rows=9999"/>
+        <map:transform src="../stylesheets/getLetters.xsl"> </map:transform>
         <map:serialize/>
       </map:match>
     </map:pipeline>
