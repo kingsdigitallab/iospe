@@ -32,6 +32,8 @@
                      <seg xml:lang="en" n="1">Invocative inscription.</seg>
                      <seg xml:lang="ru" n="2">Инвокативная надпись.</seg>
                      <seg xml:lang="en" n="2">Invocative inscription.</seg>
+                     <seg xml:lang="ru" n="3">Инвокативная надпись.</seg>
+                     <seg xml:lang="en" n="3">Invocative inscription.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -61,10 +63,14 @@
                               <seg xml:lang="ru">Справа, на середине высоты, справа от надписи 2.</seg>
                               <seg xml:lang="en"></seg>
                            </layout>
+                        <layout ana="f5" n="3">
+                           <seg xml:lang="ru">Слева внизу.</seg>
+                           <seg xml:lang="en"></seg>
+                        </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
-                     <handNote>
+                     <handNote n="1">
                         <seg xml:lang="ru" n="1"><rs type="execution" ref="execution.xml#scalpro">Граффито</rs>, минускул.</seg>
                         <seg xml:lang="en"></seg>
                         <height unit="cm">0,5-0,7.</height>
@@ -74,6 +80,11 @@
                            <seg xml:lang="en"></seg>
                         <height unit="cm">0,5-0,7.</height>
                       </handNote>
+                     <handNote n="3">
+                        <seg xml:lang="ru" n="3"><rs type="execution" ref="execution.xml#scalpro">Граффито</rs>, минускул.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">0,5-0,7.</height>
+                     </handNote>
                   </handDesc>
                </physDesc>
                <history>
@@ -82,7 +93,7 @@
                         <seg xml:lang="ru">Феодоро.</seg>
                         <seg xml:lang="en">Theodoro.</seg>
                      </origPlace>
-                     <origDate notBefore="0801" notAfter="1100" precision="medium" evidence="палеография">
+                     <origDate n="1" notBefore="0801" notAfter="1100" precision="medium" evidence="палеография">
                         <seg xml:lang="ru">IX–XI вв.</seg>
                         <seg xml:lang="en">IX–XI centuries C.E.</seg>
                      </origDate>
@@ -90,9 +101,17 @@
                         <seg xml:lang="ru">Феодоро.</seg>
                         <seg xml:lang="en">Theodoro.</seg>
                      </origPlace>
-                     <origDate notBefore="0801" notAfter="1000" precision="medium" evidence="палеография">
+                     <origDate n="2" notBefore="0801" notAfter="1000" precision="medium" evidence="палеография">
                         <seg xml:lang="ru">IX–X вв.</seg>
                         <seg xml:lang="en">IX–X centuries C.E.</seg>
+                     </origDate>
+                     <origPlace ref="origPlace.xml#p020" n="3">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate n="3" notBefore="0801" notAfter="1100" precision="medium" evidence="палеография">
+                        <seg xml:lang="ru">IX–XI вв.</seg>
+                        <seg xml:lang="en">IX–XI centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="autopsy">
@@ -140,20 +159,48 @@
                <bibl n="L1"><!--Яйленко 1987--><ptr target="b0257"/>,  <biblScope>163</biblScope></bibl>
                <bibl n="1.1"><!--SEG--><title>SEG</title>,  <biblScope>XXXIX, 700</biblScope></bibl>
             </listBibl>
+            <listBibl n="3">
+               <bibl> ined.</bibl>
+            </listBibl>
          </div>
-         <div type="apparatus">
+         <div type="apparatus" n="1">
+            <p/>
+         </div>
+         <div type="apparatus" n="2">
              <p>
                <app loc="1"><rdg resp="b0257">ὅ ἐστι πρεσβεῖα</rdg></app>
                <app loc="1"><rdg resp="seg">τῖ τῇ</rdg></app>
             </p>
+            <div type="apparatus" n="3">
+               <p/>
+            </div>
          </div>
-         <div type="translation" xml:lang="ru">
+         <div type="translation" xml:lang="ru" n="1">
+            <p>Господи, помоги (?)] Агапию, недостойному протопопу.</p>
+         </div>
+         <div type="translation" xml:lang="en" n="1">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru" n="2">
             <p>Боже, по заступничеству святого Иоанна спаси раба Твоего попа Григория, грешного чтеца, аминь.</p>
          </div>
-         <div type="translation" xml:lang="en">
+         <div type="translation" xml:lang="en" n="2">
             <p><!--God-->, upon <!--intercedence--> of St. John, save your servant <!--priest -->Gregorios, sinful reader. Amen.</p>
          </div>
-         <div type="commentary" xml:lang="ru">
+         <div type="translation" xml:lang="ru" n="3">
+            <p>Помоги рабу Своему, Отче мой, пресвитеру Иоанну… Прокопия.</p>
+         </div>
+         <div type="translation" xml:lang="en" n="3">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru" n="1">
+            <p> Камень представляет часть того же вторично использованного ранневизантийского карниза, что и № <ref type="inscription">V 193</ref> <!--byz182.--> Видимо, два фрагмента ранневизантийского 
+               рельефа были вмурованы в стену верхней стороной наружу и использовались для графитти. К сожалению, записи, сделанные во время автопсии 
+               надпиcей на камне, оказались утрачены, и они даются по фотографии. Сверху слева находится еще одна надпись, но она содержит явно негреческие 
+               (готские?) буквы.</p>
+            <p> Титул протопоп известен в Северном Причерноморье по № <ref type="inscriotion">V 345</ref> <!--byz332--> с Боспора 2 пол. XI в.</p>
+         </div>
+         <div type="commentary" xml:lang="ru" n="2">
             <p> Надпись издана без изображения; судя по всему, в момент находки ее правый край еще был цел.</p>
             <p> Тиханова (Тиханова 1953, 386, прим. 1) не дает чтения надписи, но только перевод: «О Боже, [услышь] просьбу святого 
                     Иоанна и спаси раба его, отца Григория, чтеца грешника».</p>
@@ -178,6 +225,10 @@
                     XI веком в силу употребления при слове чтец титула "поп" (см. Sophocles 1914, 839; однако, 
                     попытка Айбабина датировать этим же временем и крещальню связана с ошибкой Яйленко).</p>
          </div>
+         <div type="commentary" xml:lang="ru" n="3">
+            <p> Такой вариант инвокативной формулы в эпиграфике нам неизвестен. </p>
+            <p>2.Строка читается неуверенно. Имя Прокопий известно также средневизантийских граффити из Херсона (№ <ref type="inscription">89</ref>.3 и <ref type="inscriptio">V 90</ref>.1).</p>
+         </div>
          <div type="commentary" xml:lang="en">
             <p>Mangup</p>
              <p>Tikhanova</p>
@@ -185,6 +236,10 @@
              <p>Tikhanova Taman Aybabin Yaylenko Mangup</p>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab><!--<w>Κ(ύρι)ε</w>, <w>βοήθει</w> <note>e.g.</note>]<w>Ἀγα[πί]ο</w> <w>ἀναξ(ί)ο</w> <w>πρ(ω)το<supplied reason="lost">π</supplied>α[π]ᾷ</w> <note>?</note>--></ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
             <ab>
                <lb n="1"/><g type="stauros"/> <w lemma="ὁ">Ὁ</w> <w lemma="θεός">θεός</w>, <w>τῖ</w>
                <w>πρ<choice><corr>ε</corr><sic>ο</sic></choice>σβείᾳ</w> <w lemma="ὁ">τοῦ</w>
@@ -196,6 +251,12 @@
                <w><supplied reason="lost">ἀναγνόσ</supplied><lb n="4" break="no"/>την</w> <w lemma="ἁμαρτολός">ἁμαρτολόν</w>, <w lemma="ἀμήν"><supplied reason="lost">ἀμήν</supplied></w>.
              <!--Ориг. :  1: ΠΡΟΣΒΕΙΑ.-->
             </ab>
+            </div>
+                <div type="textpart" subtype="inscription" n="3">
+               <!--<ab><w>Βοή]θη</w> <w>τὸν</w><w> δοῦλόν</w> <w>σου</w>, <w>πατήρ</w> <w>μου</w>, 
+                  <w>πρεσβύτερον</w> <persName type="attested"><name>Ἰω[άννην</name></persName> <w>...]ετον</w> <space extent="unknown" unit="character"/> 
+                  <persName type="attested"><name>Προκωπίου</name></persName> <note>(?)</note>.</ab>-->
+            </div>
          </div>
       </body>
    </text>
