@@ -75,6 +75,10 @@
     <field name="document-title-{@xml:lang}">
       <xsl:value-of select="local:clean(.)"/>
     </field>
+
+    <field name="inscription-title-{@xml:lang}">
+      <xsl:value-of select="local:clean(.)"/>
+    </field>
   </xsl:template>
 
 

@@ -23,7 +23,7 @@
     <xsl:value-of
       select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"/>
   </xsl:variable>
-  <xsl:variable name="default_search_query" select="'dt:i'"/>
+  <xsl:variable name="default_search_query" select="'dt:inscription'"/>
 
   <xsl:template name="search_form">
     <form id="search_form" action="." method="get">
