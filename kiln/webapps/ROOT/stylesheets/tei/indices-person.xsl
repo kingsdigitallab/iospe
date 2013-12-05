@@ -51,7 +51,13 @@
             <xsl:for-each
               select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
               <xsl:sort
-                select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
+                select="concat( 
+                          upper-case(
+                            replace(
+                              normalize-unicode(
+                                normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),
+                              '[^A-Za-z0-9А-Яа-я ]','')), 
+                          'ЯЯЯ')"/>
               <xsl:call-template name="character"/>
             </xsl:for-each>
           </dl>
@@ -388,7 +394,7 @@
 
       <ul class="inline-list">
         <xsl:for-each
-          select="//result/doc[substring-after(arr[@name='persName-ref']/str, '#') = current()/@xml:id]">
+          select="//result/doc[arr[@name='persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
           <xsl:sort select="str[@name='tei-id']"/>
           <li>
             <xsl:call-template name="link2inscription"/>
