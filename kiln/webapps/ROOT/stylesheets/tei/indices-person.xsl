@@ -49,7 +49,7 @@
         <xsl:for-each select="//AL//tei:listPerson">
           <dl class="indices indices-person">
             <xsl:for-each
-              select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
+              select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
               <xsl:sort
                 select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
               <xsl:call-template name="character"/>
@@ -86,7 +86,7 @@
                 </h3>
                 <dl class="indices indices-person">
                   <xsl:for-each
-                    select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
+                    select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
                     <xsl:sort select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
                     <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
                     <xsl:call-template name="character"/>
@@ -120,7 +120,7 @@
                 </h3>
                 <dl class="indices indices-person">
                   <xsl:for-each
-                    select="tei:person[not(@xml:id) or @xml:id=(//result//doc/str[@name='persName-key'])]">
+                    select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
                     <xsl:sort
                       select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
                     <xsl:call-template name="character"/>
@@ -212,11 +212,8 @@
 
     <xsl:choose>
       <xsl:when test="@xml:id">
-        <xsl:for-each-group select="//result//doc[str[@name='persName-key']=current()/@xml:id]"
-          group-by="str[@name='persName-full']">
-          <xsl:variable name="persName-key">
-            <xsl:value-of select="str[@name='persName-key']"/>
-          </xsl:variable>
+        <xsl:for-each-group select="//result//doc[arr[@name='persName-key']/str=current()/@xml:id]"
+          group-by="arr[@name='persName-full']/str">
           <dd class="row">
             <div class="large-4 columns">
               <span class="person_detail_label">
@@ -391,7 +388,7 @@
 
       <ul class="inline-list">
         <xsl:for-each
-          select="//result/doc[substring-after(str[@name='persName-ref'], '#') = current()/@xml:id]">
+          select="//result/doc[substring-after(arr[@name='persName-ref']/str, '#') = current()/@xml:id]">
           <xsl:sort select="str[@name='tei-id']"/>
           <li>
             <xsl:call-template name="link2inscription"/>

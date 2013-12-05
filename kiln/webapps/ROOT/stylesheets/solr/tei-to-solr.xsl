@@ -861,22 +861,25 @@
         <field name="name-type">
           <xsl:value-of select="@type"/>
         </field>
-        <field name="persName-type">
-          <xsl:value-of select="ancestor::tei:persName[1]/@type"/>
-        </field>
-        <field name="persName-key">
-          <xsl:value-of select="ancestor::tei:persName[1]/@key"/>
-        </field>
-        <xsl:if test="ancestor::tei:persName[1]/@ref">
-          <field name="persName-ref">
-            <xsl:value-of select="ancestor::tei:persName[1]/@ref"/>
+        <xsl:for-each select="ancestor::tei:persName">
+          <field name="persName-type">
+            <xsl:value-of select="@type"/>
           </field>
-        </xsl:if>
+          <field name="persName-key">
+            <xsl:value-of select="@key"/>
+          </field>
+          <xsl:if test="@ref">
+            <field name="persName-ref">
+              <xsl:value-of select="@ref"/>
+            </field>
+          </xsl:if>
+        </xsl:for-each>
+        
         <field name="persName-full">
           <!-- IF IT CONTAINS CHOICE/CORR, GET CORR -->
           <xsl:value-of
             select="normalize-space(
-                      string-join(ancestor::tei:persName[1]//text()[not(parent::tei:sic)][not(parent::tei:orig[parent::tei:choice])], ''))"
+                      string-join(ancestor::tei:persName[last()]//text()[not(parent::tei:sic)][not(parent::tei:orig[parent::tei:choice])], ''))"
           />
         </field>
         <field name="name-nymRef">

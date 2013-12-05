@@ -134,7 +134,7 @@
     <field indexed="true" multiValued="false" name="places-sort" required="false" stored="true" type="string" />
     <field indexed="true" multiValued="false" name="death" required="false" stored="true" type="string" />
 
-    <dynamicField indexed="true" name="persName-*" stored="true" type="string" />
+    <dynamicField indexed="true" multiValued="true" name="persName-*" stored="true" type="string" />
 
     <copyField source="date" dest="date-sort" />
     <copyField source="ligatures" dest="ligatures-sort" />
