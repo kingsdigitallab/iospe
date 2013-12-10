@@ -19,6 +19,7 @@
     </kiln:block>
 
     <kiln:block name="title">
+      <kiln:super/>
       <xsl:choose>
         <xsl:when
           test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang] != ''">

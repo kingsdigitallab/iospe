@@ -6,7 +6,18 @@
   <xsl:strip-space elements="*"/>
 
   <xsl:template match="/">
-    <xsl:apply-templates select="//div[@type='edition']"/>
+    <xsl:choose>
+      <xsl:when test="//div[@type='edition']/div[@n]">
+        <xsl:for-each select="//div[@type='edition']/div[@n]">
+          <div type="edition" n="{@n}">
+            <xsl:apply-templates select="."/>
+          </div>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates select="//div[@type='edition']"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template

@@ -13,6 +13,7 @@
 
   <kiln:child>
     <kiln:block name="title">
+      <kiln:super/>
       <xsl:value-of select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@xml:lang=$lang]" />
       &#160;
     </kiln:block>

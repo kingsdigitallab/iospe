@@ -13,10 +13,10 @@
   <!-- set title -->
   <xsl:template name="indexTitlePerson">
     <xsl:choose>
-      <xsl:when test="$index='ruler' and //str[@name='persName-type']='ruler'">
+      <xsl:when test="$index='ruler' and //arr[@name='persName-type']/str='ruler'">
         <i18n:text>Rulers of Rome, Byzantium or Bosporan Kingdoms</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='divine' and //str[@name='persName-type']='divine'">
+      <xsl:when test="$index='divine' and //arr[@name='persName-type']/str='divine'">
         <i18n:text>Divine, religious or mythic figures</i18n:text>
       </xsl:when>
       <xsl:when test="$index='persons'">

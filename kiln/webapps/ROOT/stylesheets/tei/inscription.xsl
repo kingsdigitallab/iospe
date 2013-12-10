@@ -896,7 +896,19 @@
                   </p>
                   <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml"
                     data-section-content="true">
-                    <pre><code class="language-xml"><xsl:copy-of select="//v_ep/node()"/></code></pre>
+                    <xsl:variable name="n" select="@n"/>
+                    <pre>
+                      <code class="language-xml">
+                      <xsl:choose>
+                        <xsl:when test="$n">
+                          <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$n]/node()"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:copy-of select="/aggregation/v_ep/node()"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </code>
+                    </pre>
                   </div>
                 </section>
 
