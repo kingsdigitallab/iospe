@@ -874,14 +874,22 @@
             </field>
           </xsl:if>
         </xsl:for-each>
-        
+
         <field name="persName-full">
-          <!-- IF IT CONTAINS CHOICE/CORR, GET CORR -->
-          <xsl:value-of
-            select="normalize-space(
-                      string-join(ancestor::tei:persName[last()]//text()[not(parent::tei:sic)][not(parent::tei:orig[parent::tei:choice])], ''))"
-          />
+          <xsl:for-each
+            select="ancestor::tei:persName[last()]//tei:name[@nymRef] | ancestor::tei:persName[last()]//tei:roleName/tei:w[@lemma]">
+            <xsl:if test="@nymRef">
+              <xsl:value-of select="@nymRef"/>
+            </xsl:if>
+            <xsl:if test="@lemma">
+              <xsl:value-of select="@lemma"/>
+            </xsl:if>
+            <xsl:if test="not(position() = last())">
+              <xsl:text> </xsl:text>
+            </xsl:if>
+          </xsl:for-each>
         </field>
+
         <field name="name-nymRef">
           <xsl:value-of select="normalize-space(@nymRef)"/>
         </field>
