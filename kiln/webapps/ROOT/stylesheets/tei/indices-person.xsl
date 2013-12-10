@@ -152,16 +152,18 @@
             <p class="title" data-section-title="true">
               <a href="?sort=date">Date</a>
             </p>
-            <div class="content" data-section-content="true">
-              <dl class="indices indices-person">
-                <xsl:for-each select="//persons//tei:person">
-                  <xsl:sort select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
-                  <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
-                  <xsl:call-template name="person"/>
+            <xsl:if test="$sort='date'">
+              <div class="content" data-section-content="true">
+                <dl class="indices indices-person">
+                  <xsl:for-each select="//persons//tei:person">
+                    <xsl:sort select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
+                    <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
+                    <xsl:call-template name="person"/>
 
-                </xsl:for-each>
-              </dl>
-            </div>
+                  </xsl:for-each>
+                </dl>
+              </div>
+            </xsl:if>
           </section>
           <section>
             <xsl:attribute name="class">
@@ -172,15 +174,17 @@
             <p class="title" data-section-title="true">
               <a href="?sort=name">Name</a>
             </p>
-            <div class="content" data-section-content="true">
-              <dl class="indices indices-person">
-                <xsl:for-each select="//persons//tei:person">
-                  <xsl:sort
-                    select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
-                  <xsl:call-template name="person"/>
-                </xsl:for-each>
-              </dl>
-            </div>
+            <xsl:if test="$sort=('name', '')">
+              <div class="content" data-section-content="true">
+                <dl class="indices indices-person">
+                  <xsl:for-each select="//persons//tei:person">
+                    <xsl:sort
+                      select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
+                    <xsl:call-template name="person"/>
+                  </xsl:for-each>
+                </dl>
+              </div>
+            </xsl:if>
           </section>
         </div>
       </xsl:when>
