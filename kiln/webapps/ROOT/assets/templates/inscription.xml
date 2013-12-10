@@ -20,17 +20,20 @@
 
     <kiln:block name="title">
       <kiln:super/>
-      <xsl:choose>
-        <xsl:when
-          test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang] != ''">
-          <xsl:value-of
-            select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"
-          />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>&#160;</xsl:text>
-        </xsl:otherwise>
-      </xsl:choose>
+      
+      <xsl:call-template name="formatInscrNum">
+        <xsl:with-param name="num" select="//tei:publicationStmt/tei:idno[@type='filename']"/>
+        <xsl:with-param name="printCorpus" select="true()"/>
+        <xsl:with-param name="txt" select="true()"/>
+      </xsl:call-template>
+      <xsl:text>. </xsl:text>
+      <xsl:value-of
+        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang=$lang]"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of
+        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"
+      />
+      
     </kiln:block>
 
 

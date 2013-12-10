@@ -9,9 +9,21 @@
     <xsl:choose>
       <xsl:when test="//div[@type='edition']/div[@n]">
         <xsl:for-each select="//div[@type='edition']/div[@n]">
-          <div type="edition" n="{@n}">
-            <xsl:apply-templates select="."/>
-          </div>
+          <xsl:choose>
+            <xsl:when test="child::div[@n]">
+              <xsl:for-each select="//div[@type='edition']/div[@n]">
+                <div type="edition" n="{parent::div/@n}.{@n}">
+                  <xsl:apply-templates select="."/>
+                </div>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+              <div type="edition" n="{@n}">
+                <xsl:apply-templates select="."/>
+              </div>
+            </xsl:otherwise>
+          </xsl:choose>
+          
         </xsl:for-each>
       </xsl:when>
       <xsl:otherwise>

@@ -72,6 +72,7 @@
   <xsl:template name="formatInscrNum">
     <xsl:param name="num"/>
     <xsl:param name="printCorpus" select="false()"/>
+    <xsl:param name="txt" select="false()"/>
 
     <xsl:analyze-string regex="(\d)\.(\d+)" select="$num">
       <xsl:matching-substring>
@@ -79,9 +80,17 @@
           <xsl:number value="regex-group(1)" format="I"/>
           <xsl:text>&#160;</xsl:text>
         </xsl:if>
-        <strong>
-          <xsl:number format="1" value="number(regex-group(2))"/>
-        </strong>
+        <xsl:choose>
+          <xsl:when test="$txt">
+            <xsl:number format="1" value="number(regex-group(2))"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <strong>
+              <xsl:number format="1" value="number(regex-group(2))"/>
+            </strong>
+          </xsl:otherwise>
+        </xsl:choose>
+
       </xsl:matching-substring>
     </xsl:analyze-string>
   </xsl:template>
@@ -896,17 +905,19 @@
                   </p>
                   <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml"
                     data-section-content="true">
-                    <xsl:variable name="n" select="@n"/>
+                    <xsl:variable name="n"
+                      select="if (parent::div[@n]) then (concat(parent::div/@n,'.',@n)) else (@n)"/>
                     <pre>
                       <code class="language-xml">
-                      <xsl:choose>
-                        <xsl:when test="$n">
-                          <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$n]/node()"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:copy-of select="/aggregation/v_ep/node()"/>
-                        </xsl:otherwise>
-                      </xsl:choose>
+                        <xsl:choose>
+                          <xsl:when test="$n">
+                            <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$n]/node()"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:copy-of select="/aggregation/v_ep/node()"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text> </xsl:text>
                     </code>
                     </pre>
                   </div>
