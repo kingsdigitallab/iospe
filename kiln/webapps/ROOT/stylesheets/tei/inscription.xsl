@@ -1217,38 +1217,47 @@
                 <xsl:sequence select="$docSubset//tei:biblStruct[@xml:id=current()/@target]"/>
               </xsl:for-each>
             </xsl:variable>
-            <xsl:variable name="cur-surname">
-              <xsl:value-of
-                select="$biblio-subset//tei:biblStruct[@xml:id=current()][1]/(
-                descendant::tei:surname[if (@xml:lang=$lang) 
-                                        then @xml:lang 
-                                        else if (not(@xml:lang)) 
-                                          then true() 
-                                          else false()])[1]"
-              />
-            </xsl:variable>
-            <xsl:variable name="norm-surname">
-              <xsl:if
-                test="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:surname[@corresp]">
-                <xsl:value-of
-                  select="$surnames/tei:person[@xml:id=substring-after($biblio-subset//tei:biblStruct[@xml:id=current()]//tei:surname/@corresp, 'surnames.xml#')]"
+            <xsl:variable name="cur-surname" as="xs:string *">
+              <xsl:for-each select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:author">
+                <xsl:sequence
+                  select=".//tei:surname[if (@xml:lang=$lang) 
+                                                                                      then @xml:lang 
+                                                                                      else if (not(@xml:lang)) 
+                                                                                        then true() 
+                                                                                        else false()]"
                 />
-              </xsl:if>
+              </xsl:for-each>
             </xsl:variable>
+
+            <xsl:variable name="norm-surname" as="xs:string *">
+              <xsl:for-each select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:author">
+                <xsl:variable name="person-id"
+                  select="substring-after(.//tei:surname/@corresp, 'surnames.xml#')"/>
+                <xsl:sequence
+                  select="$surnames/tei:person[@xml:id=$person-id]//tei:persName/tei:surname/text()"
+                />
+              </xsl:for-each>
+            </xsl:variable>
+
             <xsl:variable name="bibDate">
               <xsl:if
-                test="count($biblio-subset//tei:biblStruct//tei:author[1]//tei:surname[if (@xml:lang=$lang) then @xml:lang=$lang else if (not(@xml:lang)) then true() else false()][normalize-space(.)=normalize-space($cur-surname)]) &gt; 1">
+                test="count($biblio-subset//tei:biblStruct//tei:author//tei:surname[if (@xml:lang=$lang) 
+                                                                                    then @xml:lang=$lang 
+                                                                                    else if (not(@xml:lang)) 
+                                                                                      then true() 
+                                                                                      else false()][.=($cur-surname)]) &gt; count($cur-surname)">
                 <xsl:value-of
                   select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:imprint[1]//tei:date"
                 />
               </xsl:if>
             </xsl:variable>
+
             <xsl:choose>
               <xsl:when test="$norm-surname = ''">
-                <xsl:value-of select="normalize-space($cur-surname)"/>
+                <xsl:value-of select="string-join($cur-surname, ', ')"/>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="normalize-space($norm-surname)"/>
+                <xsl:value-of select="string-join($norm-surname, ', ')"/>
               </xsl:otherwise>
             </xsl:choose>
 
