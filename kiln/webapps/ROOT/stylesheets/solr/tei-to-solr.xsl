@@ -779,7 +779,8 @@
 
   <!-- Unit: NAME -->
 
-  <xsl:template match="tei:div[@type='edition']//tei:name[not(preceding-sibling::tei:name = .)]"
+  <xsl:template match="tei:div[@type='edition']//tei:name[not(preceding-sibling::tei:name = .)] 
+    | tei:div[@type='edition']//tei:roleName"
     mode="name">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
@@ -792,7 +793,7 @@
                            '_',
                            normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
                            '_',
-                           normalize-space(@nymRef),
+                           if (self::tei:name) then (normalize-space(@nymRef)) else (normalize-space(child::tei:w/@lemma)),
                            '_',
                            position())"
           />
@@ -891,7 +892,7 @@
         </field>
 
         <field name="name-nymRef">
-          <xsl:value-of select="normalize-space(@nymRef)"/>
+          <xsl:value-of select="if (self::tei:name) then (normalize-space(@nymRef)) else (normalize-space(child::tei:w/@lemma))"/>
         </field>
         <field name="names-sort">
           <xsl:choose>
