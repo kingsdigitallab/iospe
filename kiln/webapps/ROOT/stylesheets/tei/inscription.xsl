@@ -617,7 +617,7 @@
               </div>
             </div>
           </xsl:if>
-
+          <xsl:text>&#160;</xsl:text>
 
         </div>
       </div>
@@ -1042,6 +1042,7 @@
               </xsl:choose>
             </xsl:otherwise>
           </xsl:choose>
+          <xsl:text>&#160;</xsl:text>
         </div>
       </div>
 
@@ -1072,6 +1073,7 @@
               <xsl:value-of select="if ($lang='ru') then 'RU-no comment.' else 'no comment.'"/>
             </xsl:otherwise>
           </xsl:choose>
+          <xsl:text>&#160;</xsl:text>
         </div>
       </div>
 
