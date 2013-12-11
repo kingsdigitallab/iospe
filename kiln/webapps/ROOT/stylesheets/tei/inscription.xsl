@@ -752,6 +752,9 @@
             </div>
             <div class="large-9 columns">
               <p>
+                <xsl:variable name="surnames">
+                  <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
+                </xsl:variable>
                 <xsl:choose>
                   <xsl:when
                     test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//text()[not(normalize-space(.)='')]]">
@@ -778,9 +781,23 @@
                             </xsl:element>
                           </xsl:when>
                           <xsl:when test="descendant::tei:author[1]/tei:surname">
-                            <xsl:value-of
-                              select="normalize-space(descendant::tei:author[1]//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-                            />
+                            <xsl:choose>
+                              <xsl:when test="descendant::tei:author[1]/tei:surname[@corresp]">
+                                <xsl:variable name="person_id">
+                                  <xsl:value-of
+                                    select="substring-after(descendant::tei:author[1]/tei:surname/@corresp, 'surnames.xml#')"
+                                  />
+                                </xsl:variable>
+                                <xsl:value-of
+                                  select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname"
+                                />
+                              </xsl:when>
+                              <xsl:otherwise>
+                                <xsl:value-of
+                                  select="normalize-space(descendant::tei:author[1]//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
+                                />
+                              </xsl:otherwise>
+                            </xsl:choose>
                           </xsl:when>
                           <xsl:when test="descendant::tei:author[1]/tei:forename">
                             <xsl:value-of
@@ -800,9 +817,23 @@
                           <xsl:text>, </xsl:text>
                           <xsl:choose>
                             <xsl:when test="descendant::tei:author[2]/tei:surname">
-                              <xsl:value-of
-                                select="normalize-space(descendant::tei:author[2]//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-                              />
+                              <xsl:choose>
+                                <xsl:when test="descendant::tei:author[2]/tei:surname[@corresp]">
+                                  <xsl:variable name="person_id">
+                                    <xsl:value-of
+                                      select="substring-after(descendant::tei:author[2]/tei:surname/@corresp, 'surnames.xml#')"
+                                    />
+                                  </xsl:variable>
+                                  <xsl:value-of
+                                    select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname"
+                                  />
+                                </xsl:when>
+                                <xsl:otherwise>
+                                  <xsl:value-of
+                                    select="normalize-space(descendant::tei:author[2]//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
+                                  />
+                                </xsl:otherwise>
+                              </xsl:choose>
                             </xsl:when>
                             <xsl:when test="descendant::tei:author[2]/tei:forename">
                               <xsl:value-of
@@ -1171,6 +1202,10 @@
         <xsl:sequence select="//bib"/>
         <xsl:sequence select="//tei:TEI[descendant::tei:div[@type='bibliography']]"/>
       </xsl:variable>
+      <xsl:variable name="surnames">
+        <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
+      </xsl:variable>
+
       <xsl:for-each select="$resps//tei:resp">
         <xsl:choose>
           <xsl:when test="$docSubset//tei:biblStruct[@xml:id=current()]">
@@ -1182,18 +1217,39 @@
             </xsl:variable>
             <xsl:variable name="cur-surname">
               <xsl:value-of
-                select="normalize-space($biblio-subset//tei:biblStruct[@xml:id=current()][1]/(descendant::tei:surname[if (@xml:lang=$lang) then @xml:lang else if (not(@xml:lang)) then true() else false()])[1])"
+                select="$biblio-subset//tei:biblStruct[@xml:id=current()][1]/(
+                descendant::tei:surname[if (@xml:lang=$lang) 
+                                        then @xml:lang 
+                                        else if (not(@xml:lang)) 
+                                          then true() 
+                                          else false()])[1]"
               />
+            </xsl:variable>
+            <xsl:variable name="norm-surname">
+              <xsl:if
+                test="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:surname[@corresp]">
+                <xsl:value-of
+                  select="$surnames/tei:person[@xml:id=substring-after($biblio-subset//tei:biblStruct[@xml:id=current()]//tei:surname/@corresp, 'surnames.xml#')]"
+                />
+              </xsl:if>
             </xsl:variable>
             <xsl:variable name="bibDate">
               <xsl:if
-                test="count($biblio-subset//tei:biblStruct//tei:author[1]//tei:surname[if (@xml:lang=$lang) then @xml:lang=$lang else if (not(@xml:lang)) then true() else false()][normalize-space(.)=$cur-surname]) &gt; 1">
+                test="count($biblio-subset//tei:biblStruct//tei:author[1]//tei:surname[if (@xml:lang=$lang) then @xml:lang=$lang else if (not(@xml:lang)) then true() else false()][normalize-space(.)=normalize-space($cur-surname)]) &gt; 1">
                 <xsl:value-of
                   select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:imprint[1]//tei:date"
                 />
               </xsl:if>
             </xsl:variable>
-            <xsl:value-of select="$cur-surname"/>
+            <xsl:choose>
+              <xsl:when test="$norm-surname = ''">
+                <xsl:value-of select="normalize-space($cur-surname)"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="normalize-space($norm-surname)"/>
+              </xsl:otherwise>
+            </xsl:choose>
+
             <xsl:if test="$bibDate != ''">
               <xsl:text> </xsl:text>
               <xsl:value-of select="$bibDate"/>
