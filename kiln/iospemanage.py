@@ -415,11 +415,13 @@ def update_references(doc, c_index, type='inscription'):
 
         key = ref.text
 
+        print key.strip()
+
         try:
             conv = c_index.find(key.strip())
         except IOSPENotFoundError:
             raise ReferenceNotFound(
-                u'Reference: "{}" not found in index!'.format(key.strip()))
+                u'Reference: "{}" in line {} not found in index!'.format(key.strip(), ref.sourceline))
 
         ref.text = conv.destination.to_reference()
         ref.addnext(etree.Comment(conv.source.to_filename(ext=False)))
