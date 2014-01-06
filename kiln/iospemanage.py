@@ -402,8 +402,15 @@ def write_xml(et, filepath):
         xml_declaration=True)
 
 
-def update_references(doc, c_index):
-    for ref in doc.xpath(u'//TEI:ref[@type="inscription"]',
+def update_references(doc, c_index, type='inscription'):
+    if type:
+        t = (u'[@type="{type}"]').format(type=type)
+    else:
+        t = u''
+
+    p = (u'//TEI:ref{typed}').format(typed=t)
+
+    for ref in doc.xpath(p,
                          namespaces={u'TEI': TEI_NAMESPACE}):
 
         key = ref.text
@@ -485,13 +492,7 @@ An svn repair file was generated: '{filename}'
 =====================================================""".format(filename=filename))
 
 
-@manager.arg(
-    'conversions',
-    help='file which contains the document conversions')
-@manager.arg('path', help='path to documents')
-@manager.arg('conversion_type', help='type of conversion')
-@manager.command
-def convert(conversions, path, conversion_type):
+def check_valid_conversion(conversion_type):
     if conversion_type == 'IOSPE':
         conv_type = IOSPEConversion
     elif conversion_type == 'IRCyr':
@@ -499,6 +500,21 @@ def convert(conversions, path, conversion_type):
     else:
         raise InvalidConversionType
         exit()
+
+    return conv_type
+
+
+@manager.arg(
+    'conversions',
+    help='file which contains the document conversions')
+@manager.arg('path', help='path to documents')
+@manager.arg('conversion_type', help='type of conversion')
+@manager.command
+def convert(conversions, path, conversion_type):
+    """
+    Convert a series of files and update references within them
+    """
+    conv_type  = check_valid_conversion(conversion_type)
 
     c_index = load_conversion_file(conversions, conv_type)
 
@@ -544,6 +560,36 @@ def convert(conversions, path, conversion_type):
 
     for ref, errtype, mess in accumulate_errors:
         print u'ERROR: {} {} {}'.format(ref, errtype, mess)
+
+
+
+@manager.arg(
+    'conversions',
+    help='file which contains the document conversions')
+@manager.arg('filename', help='path to document')
+@manager.arg('conversion_type', help='type of conversion')
+@manager.command
+def update_refs(conversions, filename, conversion_type):
+    """
+    Update references within a single file
+    """
+    conv_type  = check_valid_conversion(conversion_type)
+
+    c_index = load_conversion_file(conversions, conv_type)
+
+    write_dictionary(c_index, u'dictionary.txt')
+
+    doc = open_xml(filename)
+
+    print 'updating references. ',
+    doc = update_references(doc, c_index, type=False)
+
+    print u'Writing {}.'.format(filename),
+    write_xml(doc, filename)
+
+
+
+
 
 
 if __name__ == '__main__':
