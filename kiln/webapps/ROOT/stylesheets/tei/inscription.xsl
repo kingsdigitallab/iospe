@@ -121,7 +121,7 @@
       <div class="large-2 columns">
         <!-- would be better in stylesheet -->
         <h2>
-          <xsl:value-of select="if ($lang='ru') then 'Носитель' else 'Monument'"/>
+          <i18n:text>Monument</i18n:text>
         </h2>
       </div>
 
@@ -132,7 +132,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Разновидность' else 'Type'"/>
+                <i18n:text>Type</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -150,7 +150,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Материал' else 'Material'"/>
+                <i18n:text>Material</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -167,9 +167,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of
-                  select="if ($lang='ru') then 'Описание и состояние' else 'Description and condition'"
-                />
+                <i18n:text>Description and condition</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -194,7 +192,8 @@
       <div class="large-2 columns">
         <xsl:if test="@n">
           <h2 class="part">
-            <xsl:value-of select="if ($lang='ru') then 'Фрагмент ' else 'Fragment '"/>
+            <i18n:text>Fragment</i18n:text>
+            <xsl:text>&#160;</xsl:text>
             <xsl:value-of select="@n"/>
           </h2>
         </xsl:if>
@@ -207,7 +206,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Место  находки' else 'Find place'"/>
+                <i18n:text>Find place</i18n:text>
               </h6>
             </div>
 
@@ -224,8 +223,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of
-                  select="if ($lang='ru') then 'Условия  находки' else 'Find circumstances'"/>
+                <i18n:text>Find circumstances</i18n:text>
               </h6>
             </div>
 
@@ -241,7 +239,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Контекст находки' else 'Find context'"/>
+                <i18n:text>Find context</i18n:text>
               </h6>
             </div>
 
@@ -259,8 +257,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Место хранения' else 'Modern location'"
-                />
+                <i18n:text>Modern location</i18n:text>
               </h6>
             </div>
 
@@ -279,21 +276,21 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Размеры' else 'Dimensions'"/>
+                <i18n:text>Dimensions</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
               <p>
                 <xsl:choose>
                   <xsl:when test="not(tei:height) and not(tei:width) and not(tei:depth)">
-                    <xsl:value-of select="if ($lang='ru') then 'Неизвестны' else 'Unknown'"/>
+                    <i18n:text>Unknown</i18n:text>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:if test="tei:height">
-                      <xsl:value-of select="if ($lang='ru') then 'Высота ' else 'H. '"/>
+                      <i18n:text>H. </i18n:text>
                       <xsl:choose>
                         <xsl:when test="tei:height[.='?']">
-                          <xsl:value-of select="if ($lang='ru') then 'неизвестна' else 'unknown'"/>
+                          <i18n:text>unknown</i18n:text>
                         </xsl:when>
                         <xsl:otherwise>
                           <xsl:value-of
@@ -303,13 +300,13 @@
                       </xsl:choose>
                     </xsl:if>
                     <xsl:if test="tei:width">
-                      <xsl:value-of
-                        select="if (tei:height)
-                      then (if ($lang='ru') then '; ширина ' else ', W. ')
-                      else (if ($lang='ru') then 'Ширина ' else 'W. ')"/>
+                      <xsl:if test="tei:height">
+                        <i18n:text>, W. </i18n:text>
+                        <i18n:text>W. </i18n:text>
+                      </xsl:if>
                       <xsl:choose>
                         <xsl:when test="tei:width[.='?']">
-                          <xsl:value-of select="if ($lang='ru') then 'неизвестна' else 'unknown'"/>
+                          <i18n:text>unknown</i18n:text>
                         </xsl:when>
                         <xsl:otherwise>
                           <xsl:value-of
@@ -325,7 +322,7 @@
                       else (if ($lang='ru') then 'Толщина ' else 'Th. ')"/>
                       <xsl:choose>
                         <xsl:when test="tei:depth[.='?']">
-                          <xsl:value-of select="if ($lang='ru') then 'неизвестна' else 'unknown'"/>
+                          <i18n:text>unknown</i18n:text>
                         </xsl:when>
                         <xsl:otherwise>
                           <xsl:value-of
@@ -342,7 +339,7 @@
 
                       <xsl:choose>
                         <xsl:when test="tei:dim[@type = 'diameter'][.='?']">
-                          <xsl:value-of select="if ($lang='ru') then 'неизвестна' else 'unknown'"/>
+                          <i18n:text>unknown</i18n:text>
                         </xsl:when>
                         <xsl:otherwise>
                           <xsl:value-of
@@ -365,7 +362,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Автопсия' else 'Autopsy'"/>
+                <i18n:text>Autopsy</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -382,9 +379,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of
-                  select="if ($lang='ru') then 'Институт  хранения' else 'Institution and inventory'"
-                />
+                <i18n:text>Institution and inventory</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -464,7 +459,8 @@
           <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
         </a>
         <xsl:text>&#160;</xsl:text>
-        <i18n:text>You may download this </i18n:text>
+        <i18n:text>You may download this</i18n:text>
+        <xsl:text>&#160;</xsl:text>
         <a href="{$filename}">
           <xsl:attribute name="title">
             <i18n:text>Right-click to save this file</i18n:text>
@@ -472,7 +468,8 @@
           <i18n:text>inscription in EpiDoc XML</i18n:text>
         </a>
         <xsl:text>. (</xsl:text>
-        <i18n:text>This file should validate to the </i18n:text>
+        <i18n:text>This file should validate to the</i18n:text>
+        <xsl:text> </xsl:text>
         <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
           <xsl:attribute name="title">
             <i18n:text>Right-click to save this file</i18n:text>
@@ -511,7 +508,7 @@
               <xsl:attribute name="class">
                 <xsl:text>part</xsl:text>
               </xsl:attribute>
-              <xsl:value-of select="if ($lang='ru') then 'Надпись ' else 'Inscription '"/>
+              <i18n:text>Inscription</i18n:text>
               <xsl:value-of select="@n"/>
               <xsl:text>.&#160;</xsl:text>
             </xsl:element>
@@ -528,8 +525,7 @@
             <xsl:attribute name="class">
               <xsl:text>field</xsl:text>
             </xsl:attribute>
-            <xsl:value-of select="if ($lang='ru') then 'Эпиграфическое поле' else 'Inscribed field'"
-            />
+            <i18n:text>Inscribed field</i18n:text>
           </xsl:element>
         </div>
 
@@ -541,7 +537,7 @@
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
-                    <xsl:value-of select="if ($lang='ru') then 'Код фаса' else 'Faces code'"/>
+                    <i18n:text>Faces code</i18n:text>
                   </h6>
                 </div>
                 <div class="large-9 columns">
@@ -558,8 +554,7 @@
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
-                    <xsl:value-of
-                      select="if ($lang='ru') then 'Местоположение' else 'Placement of text'"/>
+                    <i18n:text>Placement of text</i18n:text>
                   </h6>
                 </div>
                 <div class="large-9 columns">
@@ -577,8 +572,7 @@
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <xsl:value-of
-                    select="if ($lang='ru') then 'Стиль  письма' else 'Style of lettering'"/>
+                  <i18n:text>Style of lettering</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
@@ -596,7 +590,7 @@
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <xsl:value-of select="if ($lang='ru') then 'Высота букв' else 'Letterheights'"/>
+                  <i18n:text>Letterheights</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
@@ -609,7 +603,7 @@
                       />
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:value-of select="if ($lang='ru') then 'неизвестна' else 'unknown'"/>
+                      <i18n:text>unknown</i18n:text>
                     </xsl:otherwise>
                   </xsl:choose>
                   <xsl:text>&#160;</xsl:text>
@@ -630,7 +624,7 @@
             <xsl:attribute name="class">
               <xsl:text>field</xsl:text>
             </xsl:attribute>
-            <xsl:value-of select="if ($lang='ru') then 'Текст' else 'Text'"/>
+            <i18n:text>Text</i18n:text>
           </xsl:element>
         </div>
 
@@ -640,7 +634,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Происхождение текста' else 'Origin'"/>
+                <i18n:text>Origin</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -656,7 +650,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Характер документа' else 'Category'"/>
+                <i18n:text>Category</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -672,7 +666,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Датировка текста' else 'Date'"/>
+                <i18n:text key="__inscription_date">Date</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -688,8 +682,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of
-                  select="if ($lang='ru') then 'Обоснование датировки' else 'Dating criteria'"/>
+                <i18n:text>Dating criteria</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -747,7 +740,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <xsl:value-of select="if ($lang='ru') then 'Издания' else 'Editions'"/>
+                <i18n:text>Editions</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -861,7 +854,7 @@
 
                   </xsl:when>
                   <xsl:otherwise>
-                    <xsl:value-of select="if ($lang='ru') then 'ined' else 'Unpublished'"/>
+                    <i18n:text>Unpublished</i18n:text>
                   </xsl:otherwise>
                 </xsl:choose>
                 <xsl:text>.&#160;</xsl:text>
@@ -880,7 +873,7 @@
                 <section class="active">
                   <p class="title" data-section-title="true">
                     <a href="#edition{if (@n) then @n else '1'}">
-                      <xsl:value-of select="if ($lang='ru') then 'Критическое' else 'Edition'"/>
+                      <i18n:text>Edition</i18n:text>
                     </a>
                   </p>
                   <div id="edition{if (@n) then @n else '1'}" class="content"
@@ -905,8 +898,7 @@
                 <section>
                   <p class="title" data-section-title="true">
                     <a href="#diplomatic{if (@n) then @n else '1'}">
-                      <xsl:value-of
-                        select="if ($lang='ru') then 'Дипломатическое' else 'Diplomatic'"/>
+                      <i18n:text>Diplomatic</i18n:text>
                     </a>
                   </p>
                   <div id="diplomatic{if (@n) then @n else '1'}" class="content"
@@ -930,8 +922,7 @@
                 <section>
                   <p class="title" data-section-title="true">
                     <a href="#epidoc{if (@n) then @n else '1'}">
-                      <xsl:value-of select="if ($lang='ru') then 'EpiDoc (XML)' else 'EpiDoc (XML)'"
-                      />
+                      <i18n:text>EpiDoc (XML)</i18n:text>
                     </a>
                   </p>
                   <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml"
@@ -959,9 +950,7 @@
                   <section>
                     <p class="title" data-section-title="true">
                       <a href="#verse{if (@n) then @n else '1'}">
-                        <xsl:value-of
-                          select="if ($lang='ru') then 'В стихотворной форме' else 'Edition in Verse'"
-                        />
+                        <i18n:text>Edition in Verse</i18n:text>
                       </a>
                     </p>
                     <div id="verse{if (@n) then @n else '1'}" class="content"
@@ -996,8 +985,7 @@
         <div class="row">
           <div class="large-2 columns">
             <h2>
-              <xsl:value-of
-                select="if ($lang='ru') then 'Критический аппарат' else 'Apparatus criticus'"/>
+              <i18n:text>Apparatus criticus</i18n:text>
             </h2>
           </div>
           <div class="large-10 columns details">
@@ -1012,21 +1000,17 @@
       <div class="row">
         <div class="large-2 columns">
           <h2>
-            <xsl:value-of select="if ($lang='ru') then 'Перевод' else 'Translation'"/>
+            <i18n:text>Translation</i18n:text>
           </h2>
         </div>
         <div class="large-10 columns details">
           <!-- N.B. Leaving @n=none and @n=notyet even though they are not used in corpus yet -->
           <xsl:choose>
             <xsl:when test="//tei:div[@type='translation'][@n='none'][@xml:lang=$lang]">
-              <xsl:value-of
-                select="if ($lang='ru') then 'RU-not usefully translatable.' else ' not usefully translatable.'"
-              />
+              <i18n:text>not usefully translatable</i18n:text>.
             </xsl:when>
             <xsl:when test="//tei:div[@type='translation'][@n='notyet'][@xml:lang=$lang]">
-              <xsl:value-of
-                select="if ($lang='ru') then 'RU-No translation yet (2012).:' else 'No translation yet (2010).'"
-              />
+              <i18n:text>No translation yet (2010)</i18n:text>.
             </xsl:when>
             <xsl:otherwise>
               <xsl:choose>
@@ -1051,7 +1035,7 @@
       <div class="row">
         <div class="large-2 columns">
           <h2>
-            <xsl:value-of select="if ($lang='ru') then 'Комментарий' else 'Commentary'"/>
+            <i18n:text>Commentary</i18n:text>
           </h2>
         </div>
         <div class="large-10 columns details">
@@ -1070,7 +1054,7 @@
               </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:value-of select="if ($lang='ru') then 'RU-no comment.' else 'no comment.'"/>
+              <i18n:text>no comment</i18n:text>.
             </xsl:otherwise>
           </xsl:choose>
           <xsl:text>&#160;</xsl:text>
@@ -1083,7 +1067,7 @@
         <div class="row">
           <div class="large-2 columns">
             <h2>
-              <xsl:value-of select="if ($lang='ru') then 'Изображения' else 'Images'"/>
+              <i18n:text>Images</i18n:text>
             </h2>
           </div>
           <div class="large-10 columns details">
@@ -1220,10 +1204,10 @@
             <xsl:variable name="cur-surname" as="xs:string *">
               <xsl:for-each select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:author">
                 <xsl:sequence
-                  select=".//tei:surname[if (@xml:lang=$lang) 
-                                                                                      then @xml:lang 
-                                                                                      else if (not(@xml:lang)) 
-                                                                                        then true() 
+                  select=".//tei:surname[if (@xml:lang=$lang)
+                                                                                      then @xml:lang
+                                                                                      else if (not(@xml:lang))
+                                                                                        then true()
                                                                                         else false()]"
                 />
               </xsl:for-each>
@@ -1241,10 +1225,10 @@
 
             <xsl:variable name="bibDate">
               <xsl:if
-                test="count($biblio-subset//tei:biblStruct//tei:author//tei:surname[if (@xml:lang=$lang) 
-                                                                                    then @xml:lang=$lang 
-                                                                                    else if (not(@xml:lang)) 
-                                                                                      then true() 
+                test="count($biblio-subset//tei:biblStruct//tei:author//tei:surname[if (@xml:lang=$lang)
+                                                                                    then @xml:lang=$lang
+                                                                                    else if (not(@xml:lang))
+                                                                                      then true()
                                                                                       else false()][.=($cur-surname)]) &gt; count($cur-surname)">
                 <xsl:value-of
                   select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:imprint[1]//tei:date"
@@ -1282,23 +1266,23 @@
 
 
     <xsl:if test="tei:height">
-      <xsl:value-of select="if ($lang='ru') then 'высота: ' else 'h:'"/>
+      <i18n:text>h:</i18n:text>
       <xsl:value-of select="tei:height"/>
       <xsl:text> x </xsl:text>
     </xsl:if>
 
     <xsl:if test="tei:width">
-      <xsl:value-of select="if ($lang='ru') then 'ширина: ' else 'w:'"/>
+      <i18n:text>w:</i18n:text>
       <xsl:value-of select="tei:width"/>
     </xsl:if>
 
     <xsl:if test="tei:depth">
-      <xsl:value-of select="if ($lang='ru') then ' x толщина:' else ' x d:'"/>
+      <i18n:text> x d:</i18n:text>
       <xsl:value-of select="tei:depth"/>
     </xsl:if>
 
     <xsl:if test="tei:dim[@type = 'diameter']">
-      <xsl:value-of select="if ($lang='ru') then 'диам.:' else ' x diam.:'"/>
+      <i18n:text> x diam.:</i18n:text>
       <xsl:value-of select="tei:dim[@type = 'diameter']"/>
     </xsl:if>
 
@@ -1385,9 +1369,7 @@
       <xsl:when test="tei:title='PHI' and @n">
         <a class="intNew" rel="external" target="_blank" xsl:exclude-result-prefixes="tei">
           <xsl:attribute name="title">
-            <xsl:value-of
-              select="if ($lang='ru') then 'RU-Link to PHI Inscriptions (opens in new window)' else 'Link to PHI Inscriptions (opens in new window)'"
-            />
+            <i18n:text>Link to PHI Inscriptions (opens in new window)</i18n:text>
           </xsl:attribute>
           <xsl:attribute name="href">
             <xsl:text>http://epigraphy.packhum.org/inscriptions/oi?ikey=</xsl:text>
@@ -1399,9 +1381,7 @@
       <xsl:when test="tei:title='EDH' and @n">
         <a class="intNew" rel="external" target="_blank" xsl:exclude-result-prefixes="tei">
           <xsl:attribute name="title">
-            <xsl:value-of
-              select="if ($lang='ru') then 'RU-Link to EDH Inscriptions (opens in new window)' else 'Link to EDH Inscriptions (opens in new window)'"
-            />
+            <i18n:text>Link to EDH Inscriptions (opens in new window)</i18n:text>
           </xsl:attribute>
           <xsl:attribute name="href">
             <xsl:text>http://edh-www.adw.uni-heidelberg.de/EDH/servlet/EgrForm?aktion=eingabe&amp;benutzer=gast&amp;kennwort=g2dhst&amp;f_id_nr='</xsl:text>
