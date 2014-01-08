@@ -985,9 +985,11 @@
               <xsl:value-of
                 select="substring(
                           translate(
-                            translate(normalize-space(.), $lowercase, $uppercase),
-                            $grkb4, $grkafter),
-                           1, 1)"
+                            translate(
+                              translate(normalize-space(.), $lowercase, $uppercase),
+                              $grkb4, $grkafter),
+                            '-.,?', ''),
+                          1, 1)"
               />
             </field>
           </xsl:if>
@@ -998,9 +1000,11 @@
                   select="substring(
                             translate(
                               translate(
-                                translate(normalize-space(.), $lowercase, $uppercase),
-                                $grkb4, $grkafter),
-                              $unicode, $betacode),
+                                translate(
+                                  translate(normalize-space(.), $lowercase, $uppercase),
+                                  $grkb4, $grkafter),
+                                $unicode, $betacode),
+                              '-.,?', ''),
                             1, 1)"
                 />
               </xsl:when>
