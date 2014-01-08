@@ -44,11 +44,11 @@
         <xsl:text>/&gt;</xsl:text>
       </xsl:when>
       <!-- seg and w exceptions -->
-      <xsl:when test="self::seg or self::w">
+      <!--<xsl:when test="self::seg or self::w">
         <xsl:value-of select="concat('&lt;',name())"/>
         <xsl:apply-templates select="@part"/>
         <xsl:text>/&gt;</xsl:text>
-      </xsl:when>
+      </xsl:when>-->
       <!-- not empty -->
       <xsl:otherwise>
         <xsl:value-of select="concat('&lt;',name())"/>
