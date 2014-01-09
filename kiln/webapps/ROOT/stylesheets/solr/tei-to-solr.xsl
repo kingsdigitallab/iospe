@@ -988,7 +988,7 @@
                             translate(
                               translate(normalize-space(.), $lowercase, $uppercase),
                               $grkb4, $grkafter),
-                            '-.,?', ''),
+                            '-', ''),
                           1, 1)"
               />
             </field>
@@ -1004,7 +1004,7 @@
                                   translate(normalize-space(.), $lowercase, $uppercase),
                                   $grkb4, $grkafter),
                                 $unicode, $betacode),
-                              '-.,?', ''),
+                              '-', ''),
                             1, 1)"
                 />
               </xsl:when>
