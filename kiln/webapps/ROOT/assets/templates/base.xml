@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kiln:root xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <!-- Imports the default variables. -->
   <xsl:import href="cocoon://_internal/template/xsl/stylesheets/defaults.xsl"/>
@@ -112,14 +114,13 @@
               <kiln:block name="footer">
                 <footer>
                   <p>
-                    <xsl:choose>
-                      <xsl:when test="$lang='en'">
-                        <a href="#logo" title="#">Top of Page</a>
-                      </xsl:when>
-                      <xsl:when test="$lang='ru'">
-                        <a href="#logo" title="#">К началу страницы</a>
-                      </xsl:when>
-                    </xsl:choose>
+                    <a href="#logo" title="#">
+                      <i18n:text>Top of Page</i18n:text>
+                    </a>
+                  </p>
+                  <p>
+                    <xsl:text>&#xa9; </xsl:text>
+                    <i18n:text>King's College London</i18n:text>
                   </p>
 
                   <xsl:choose>

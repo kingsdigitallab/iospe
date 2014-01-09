@@ -27,7 +27,9 @@
             <xsl:choose>
               <xsl:when
                 test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
-                <xsl:value-of select="if ($lang='en') then '[no title]' else 'RU: [no title]'"/>
+                <xsl:text>[</xsl:text>
+                <i18n:text>no title</i18n:text>
+                <xsl:text>]</xsl:text>
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of select="str[@name=concat('inscription-title-', $lang)]"/>

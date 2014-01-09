@@ -132,12 +132,12 @@
             <!--<xsl:number format="1" value="$volume"/>-->
             <xsl:text>.</xsl:text>
             <xsl:number format="1" value="$num1"/>
-            <xsl:value-of select="if ($lang='ru') then '-ru' else ()"/>
+            <xsl:value-of select="$kiln:url-lang-suffix"/>
             <xsl:text>.html</xsl:text>
           </xsl:attribute>
           <xsl:attribute name="title">
-            <xsl:value-of
-              select="if ($lang='ru') then 'переход к надписи № ' else 'Link to inscription '"/>
+            <i18n:text>Link to inscription</i18n:text>
+            <xsl:text> </xsl:text>
             <xsl:value-of select="normalize-space(.)"/>
           </xsl:attribute>
           <xsl:attribute name="style">
@@ -152,9 +152,7 @@
             <!-- this needs to be parametrized, and to cater for other "volumes" -->
             <xsl:text>/</xsl:text>
             <xsl:text>corpora/byzantine/introduction</xsl:text>
-            <xsl:if test="$lang='ru'">
-              <xsl:text>-ru</xsl:text>
-            </xsl:if>
+            <xsl:value-of select="$kiln:url-lang-suffix"/>
             <xsl:text>.html#</xsl:text>
             <xsl:value-of select="translate(normalize-space(.),'.','-')"/>
             <xsl:text>-</xsl:text>
