@@ -114,73 +114,97 @@
     <xsl:apply-templates/>
   </xsl:template>
 
+  <xsl:template name="inscriptionSupportSection">
+    <xsl:param name="n"/>
+    <!-- Stone -->
+    <div class="large-2 columns">
+      <!-- would be better in stylesheet -->
+      <h2>
+        <xsl:choose>
+          <xsl:when test="$n">
+            <i18n:text>Fragment</i18n:text>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$n"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <i18n:text>Monument</i18n:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </h2>
+    </div>
+
+    <div class="large-10 columns details">
+      <!-- Type of monument (if exists) -->
+      <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+        <div class="row">
+          <div class="large-3 columns">
+            <h6>
+              <i18n:text>Type</i18n:text>
+            </h6>
+          </div>
+          <div class="large-9 columns">
+            <p>
+              <xsl:value-of select="//tei:objectType[@xml:lang=$lang][@n = $n or not(@n or $n)]"/>
+              <xsl:text>&#160;</xsl:text>
+            </p>
+          </div>
+        </div>
+      </xsl:if>
+
+      <!-- Material (if exists) -->
+      <xsl:if test="//tei:support/tei:material[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+        <div class="row">
+          <div class="large-3 columns">
+            <h6>
+              <i18n:text>Material</i18n:text>
+            </h6>
+          </div>
+          <div class="large-9 columns">
+            <p>
+              <xsl:value-of select="//tei:material[@xml:lang=$lang][@n = $n or not(@n or $n)]"/>
+              <xsl:text>&#160;</xsl:text>
+            </p>
+          </div>
+        </div>
+      </xsl:if>
+
+      <!-- Description and condition (if exists) -->
+      <xsl:if test="//tei:support/tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+        <div class="row">
+          <div class="large-3 columns">
+            <h6>
+              <i18n:text>Description and condition</i18n:text>
+            </h6>
+          </div>
+          <div class="large-9 columns">
+            <p>
+              <xsl:apply-templates
+                select="//tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]/node()"/>
+              <xsl:text>&#160;</xsl:text>
+            </p>
+          </div>
+        </div>
+      </xsl:if>
+      <xsl:text>&#160;</xsl:text>
+    </div>
+  </xsl:template>
+
   <xsl:template name="inscriptionSupport">
 
-    <!-- Stone -->
     <div class="row">
-      <div class="large-2 columns">
-        <!-- would be better in stylesheet -->
-        <h2>
-          <i18n:text>Monument</i18n:text>
-        </h2>
-      </div>
-
-      <div class="large-10 columns details">
-
-        <!-- Type of monument (if exists) -->
-        <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang]">
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Type</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:value-of select="//tei:objectType[@xml:lang=$lang]"/>
-                <xsl:text>&#160;</xsl:text>
-              </p>
-            </div>
-          </div>
-        </xsl:if>
-
-
-        <!-- Material (if exists) -->
-        <xsl:if test="//tei:support/tei:material[@xml:lang=$lang]">
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Material</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:value-of select="//tei:material[@xml:lang=$lang]"/>
-                <xsl:text>&#160;</xsl:text>
-              </p>
-            </div>
-          </div>
-        </xsl:if>
-
-        <!-- Description and condition (if exists) -->
-        <xsl:if test="//tei:support/tei:p[@xml:lang=$lang]">
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Description and condition</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:apply-templates select="//tei:p[@xml:lang=$lang]/node()"/>
-                <xsl:text>&#160;</xsl:text>
-              </p>
-            </div>
-          </div>
-        </xsl:if>
-      </div>
-
+      <xsl:call-template name="inscriptionSupportSection"/>
     </div>
+    
+    <xsl:for-each-group
+      select="//tei:support/tei:objectType[@n] | //tei:support/tei:material[@n] | //tei:support/tei:p[@n]"
+      group-by="@n">
+      <div class="row">
+        <xsl:call-template name="inscriptionSupportSection">
+          <xsl:with-param name="n" select="@n"/>
+        </xsl:call-template>
+      </div>
+    </xsl:for-each-group>
+
   </xsl:template>
 
   <xsl:template name="objectData">
