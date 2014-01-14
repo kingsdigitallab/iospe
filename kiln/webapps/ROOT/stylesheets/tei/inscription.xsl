@@ -188,7 +188,7 @@
             </div>
           </div>
         </xsl:if>
-        
+
 
         <xsl:call-template name="objectData">
           <xsl:with-param name="n" select="$n"/>
@@ -471,8 +471,8 @@
           <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
           <xsl:for-each select="//tei:div[@type='edition']">
             <xsl:choose>
-              <xsl:when test="descendant::tei:div[@subtype='inscription']">
-                <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
+              <xsl:when test="descendant::tei:div[@type='textpart']">
+                <xsl:for-each select="descendant::tei:div[@type='textpart']">
                   <xsl:call-template name="inscriptionData">
                     <xsl:with-param name="nestedTitles" select="false()"/>
                   </xsl:call-template>
@@ -528,12 +528,7 @@
     <xsl:param name="nestedTitles" select="false()"/>
 
     <xsl:variable name="fullN">
-      <xsl:if test="ancestor::tei:div[@subtype='fragment']">
-        <xsl:value-of select="ancestor::tei:div[@subtype='fragment'][1]/@n"/>
-        <xsl:text>.</xsl:text>
-      </xsl:if>
-
-      <xsl:if test="self::tei:div[@subtype='fragment'] or self::tei:div[@subtype='inscription']">
+      <xsl:if test="self::tei:div[@type='textpart']">
         <xsl:value-of select="@n"/>
       </xsl:if>
     </xsl:variable>
@@ -542,23 +537,30 @@
     <div class="large-12 columns">
       <div class="row">
         <div class="large-2 columns">
-          <xsl:if test="self::tei:div[@subtype='inscription']/@n">
-            <xsl:attribute name="class">
-              <xsl:text>large-2 columns wrap</xsl:text>
-            </xsl:attribute>
-            <xsl:element name="{if ($nestedTitles=true()) then 'h4' else 'h2'}">
+          <xsl:choose>
+            <xsl:when test="self::tei:div[@type='textpart']/@n">
               <xsl:attribute name="class">
-                <xsl:text>part</xsl:text>
+                <xsl:text>large-2 columns wrap</xsl:text>
               </xsl:attribute>
-              <i18n:text>Inscription</i18n:text>
-              <xsl:value-of select="@n"/>
-              <xsl:text>.&#160;</xsl:text>
-            </xsl:element>
-          </xsl:if>
+              <xsl:element name="{if ($nestedTitles=true()) then 'h4' else 'h2'}">
+                <xsl:attribute name="class">
+                  <xsl:text>part</xsl:text>
+                </xsl:attribute>
+                <i18n:text>Text</i18n:text>
+                <xsl:text>&#160;</xsl:text>
+                <xsl:value-of select="@n"/>
+              </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+              <h2>
+                <i18n:text>Text</i18n:text>
+              </h2>
+            </xsl:otherwise>
+          </xsl:choose>
           <!-- Inscribed field -->
 
           <xsl:element
-            name="{if (self::tei:div[@subtype='inscription']/@n)
+            name="{if (self::tei:div[@type='textpart']/@n)
                           then
                           if ($nestedTitles=true())
                           then 'h4'
@@ -1244,10 +1246,10 @@
               <xsl:for-each select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:author">
                 <xsl:sequence
                   select=".//tei:surname[if (@xml:lang=$lang)
-                                                                                      then @xml:lang
-                                                                                      else if (not(@xml:lang))
-                                                                                        then true()
-                                                                                        else false()]"
+                                          then @xml:lang
+                                          else if (not(@xml:lang))
+                                            then true()
+                                            else false()]"
                 />
               </xsl:for-each>
             </xsl:variable>
