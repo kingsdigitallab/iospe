@@ -170,13 +170,115 @@
             </div>
           </div>
         </xsl:if>
+        <!-- Dimensions -->
+        <xsl:for-each select="//tei:support/tei:dimensions[@n = $n or not(@n or $n)]">
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Dimensions</i18n:text>
+              </h6>
+            </div>
+            <div class="large-9 columns">
+              <p>
+                <xsl:choose>
+                  <xsl:when test="not(tei:height) and not(tei:width) and not(tei:depth)">
+                    <i18n:text>Unknown</i18n:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:if test="tei:height">
+                      <i18n:text key="__Height">H.</i18n:text>
+                      <xsl:text> </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="tei:height[.='?']">
+                          <i18n:text>unknown</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of
+                            select="if ($lang='ru') then tei:height else translate(tei:height, ',', '.')"
+                          />
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:if>
+                    <xsl:if test="tei:width">
+                      <xsl:choose>
+                        <xsl:when test="tei:height">
+                          <i18n:text key="__dim_separator">, </i18n:text>
+                          <i18n:text key="__width">W.</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <i18n:text key="__Width">W.</i18n:text>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                      <xsl:text> </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="tei:width[.='?']">
+                          <i18n:text>unknown</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of
+                            select="if ($lang='ru') then tei:width else translate(tei:width, ',', '.')"
+                          />
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:if>
+                    <xsl:if test="tei:depth">
+                      <xsl:choose>
+                        <xsl:when test="tei:height or tei:width">
+                          <i18n:text key="__dim_separator">, </i18n:text>
+                          <i18n:text key="__depth">Th.</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <i18n:text key="__Depth">Th.</i18n:text>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                      <xsl:text> </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="tei:depth[.='?']">
+                          <i18n:text>unknown</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of
+                            select="if ($lang='ru') then tei:depth else translate(tei:depth, ',', '.')"
+                          />
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:if>
+                    <xsl:if test="tei:dim[@type = 'diameter']">
+                      <xsl:choose>
+                        <xsl:when test="tei:height or tei:width or tei:depth">
+                          <i18n:text key="__dim_separator">, </i18n:text>
+                          <i18n:text key="__diameter">Diam.</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <i18n:text key="__Diameter">Diam.</i18n:text>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                      <xsl:text> </xsl:text>
+                      <xsl:choose>
+                        <xsl:when test="tei:dim[@type = 'diameter'][.='?']">
+                          <i18n:text>unknown</i18n:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of
+                            select="if ($lang='ru') then tei:dim[@type = 'diameter'] else translate(tei:dim[@type = 'diameter'], ',', '.')"
+                          />
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:if>
+                  </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text>.</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:for-each>
 
         <!-- Description and condition (if exists) -->
         <xsl:if test="//tei:support/tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <i18n:text>Description and condition</i18n:text>
+                <i18n:text>Additional description</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -189,6 +291,13 @@
           </div>
         </xsl:if>
 
+        <xsl:if
+          test="//tei:support/tei:objectType[@xml:lang=$lang][@n = $n or not(@n or $n)]
+                | //tei:support/tei:material[@xml:lang=$lang][@n = $n or not(@n or $n)]
+                | //tei:support/tei:dimensions[@n = $n or not(@n or $n)]
+                | //tei:support/tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+          <br/>
+        </xsl:if>
 
         <xsl:call-template name="objectData">
           <xsl:with-param name="n" select="$n"/>
@@ -205,6 +314,24 @@
 
     <!-- If the object is in fragments, add title -->
 
+    <!-- Origin -->
+    <xsl:if test="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]">
+      <div class="row">
+        <div class="large-3 columns">
+          <h6>
+            <i18n:text>Place of Origin</i18n:text>
+          </h6>
+        </div>
+        <div class="large-9 columns">
+          <p>
+            <xsl:value-of
+              select="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
+            <xsl:text>&#160;</xsl:text>
+          </p>
+        </div>
+      </div>
+    </xsl:if>
+
     <!-- Find place -->
     <xsl:if test="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]">
 
@@ -219,6 +346,23 @@
           <p>
             <xsl:value-of
               select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:placeName[@type='ancientFindspot']"/>
+            <xsl:text>&#160;</xsl:text>
+          </p>
+        </div>
+      </div>
+
+      <!-- Find context -->
+      <div class="row">
+        <div class="large-3 columns">
+          <h6>
+            <i18n:text>Find context</i18n:text>
+          </h6>
+        </div>
+
+        <div class="large-9 columns">
+          <p>
+            <xsl:value-of
+              select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:rs[@type='context']"/>
             <xsl:text>&#160;</xsl:text>
           </p>
         </div>
@@ -241,22 +385,12 @@
         </div>
       </div>
 
-      <!-- Find context -->
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Find context</i18n:text>
-          </h6>
-        </div>
+    </xsl:if>
 
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:rs[@type='context']"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
+    <xsl:if
+      test="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]
+            | //tei:provenance[@type='found'][@n = $n or not(@n or $n)]">
+      <br/>
     </xsl:if>
 
     <!-- Modern Location (if exists) -->
@@ -272,128 +406,6 @@
           <p>
             <xsl:value-of
               select="//tei:provenance[@type='observed'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:if>
-
-    <!-- Dimensions -->
-    <xsl:for-each select="//tei:support/tei:dimensions[@n = $n or not(@n or $n)]">
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Dimensions</i18n:text>
-          </h6>
-        </div>
-        <div class="large-9 columns">
-          <p>
-            <xsl:choose>
-              <xsl:when test="not(tei:height) and not(tei:width) and not(tei:depth)">
-                <i18n:text>Unknown</i18n:text>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:if test="tei:height">
-                  <i18n:text key="__Height">H.</i18n:text>
-                  <xsl:text> </xsl:text>
-                  <xsl:choose>
-                    <xsl:when test="tei:height[.='?']">
-                      <i18n:text>unknown</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of
-                        select="if ($lang='ru') then tei:height else translate(tei:height, ',', '.')"
-                      />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:if>
-                <xsl:if test="tei:width">
-                  <xsl:choose>
-                    <xsl:when test="tei:height">
-                      <i18n:text key="__dim_separator">, </i18n:text>
-                      <i18n:text key="__width">W.</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <i18n:text key="__Width">W.</i18n:text>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                  <xsl:text> </xsl:text>
-                  <xsl:choose>
-                    <xsl:when test="tei:width[.='?']">
-                      <i18n:text>unknown</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of
-                        select="if ($lang='ru') then tei:width else translate(tei:width, ',', '.')"
-                      />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:if>
-                <xsl:if test="tei:depth">
-                  <xsl:choose>
-                    <xsl:when test="tei:height or tei:width">
-                      <i18n:text key="__dim_separator">, </i18n:text>
-                      <i18n:text key="__depth">Th.</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <i18n:text key="__Depth">Th.</i18n:text>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                  <xsl:text> </xsl:text>
-                  <xsl:choose>
-                    <xsl:when test="tei:depth[.='?']">
-                      <i18n:text>unknown</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of
-                        select="if ($lang='ru') then tei:depth else translate(tei:depth, ',', '.')"
-                      />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:if>
-                <xsl:if test="tei:dim[@type = 'diameter']">
-                  <xsl:choose>
-                    <xsl:when test="tei:height or tei:width or tei:depth">
-                      <i18n:text key="__dim_separator">, </i18n:text>
-                      <i18n:text key="__diameter">Diam.</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <i18n:text key="__Diameter">Diam.</i18n:text>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                  <xsl:text> </xsl:text>
-                  <xsl:choose>
-                    <xsl:when test="tei:dim[@type = 'diameter'][.='?']">
-                      <i18n:text>unknown</i18n:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of
-                        select="if ($lang='ru') then tei:dim[@type = 'diameter'] else translate(tei:dim[@type = 'diameter'], ',', '.')"
-                      />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:if>
-              </xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>.</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:for-each>
-
-
-    <!-- Autopsy -->
-    <xsl:if test="//tei:provenance[@type = 'autopsy'][@n = $n or not(@n or $n)]">
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Autopsy</i18n:text>
-          </h6>
-        </div>
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type = 'autopsy'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
             <xsl:text>&#160;</xsl:text>
           </p>
         </div>
@@ -423,6 +435,24 @@
         </div>
       </div>
     </xsl:if>
+
+    <!-- Autopsy -->
+    <xsl:if test="//tei:provenance[@type = 'autopsy'][@n = $n or not(@n or $n)]">
+      <div class="row">
+        <div class="large-3 columns">
+          <h6>
+            <i18n:text>Autopsy</i18n:text>
+          </h6>
+        </div>
+        <div class="large-9 columns">
+          <p>
+            <xsl:value-of
+              select="//tei:provenance[@type = 'autopsy'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
+            <xsl:text>&#160;</xsl:text>
+          </p>
+        </div>
+      </div>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="inscriptionSupport">
@@ -435,7 +465,8 @@
               | //tei:support/tei:p[@n] 
               | //tei:provenance[@n] 
               | //tei:support/tei:dimensions[@n] 
-              | //tei:altIdentifier[@n]"
+              | //tei:altIdentifier[@n]
+              | //tei:origPlace[@n]"
       group-by="@n">
       <xsl:call-template name="inscriptionSupportSection">
         <xsl:with-param name="n" select="@n"/>
@@ -557,20 +588,6 @@
               </h2>
             </xsl:otherwise>
           </xsl:choose>
-          <!-- Inscribed field -->
-
-          <xsl:element
-            name="{if (self::tei:div[@type='textpart']/@n)
-                          then
-                          if ($nestedTitles=true())
-                          then 'h4'
-                          else 'h2'
-                          else 'h2'}">
-            <xsl:attribute name="class">
-              <xsl:text>field</xsl:text>
-            </xsl:attribute>
-            <i18n:text>Inscribed field</i18n:text>
-          </xsl:element>
         </div>
 
         <div class="large-10 columns details">
@@ -598,7 +615,7 @@
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
-                    <i18n:text>Placement of text</i18n:text>
+                    <i18n:text>Position</i18n:text>
                   </h6>
                 </div>
                 <div class="large-9 columns">
@@ -616,7 +633,7 @@
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <i18n:text>Style of lettering</i18n:text>
+                  <i18n:text>Lettering</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
@@ -655,40 +672,8 @@
               </div>
             </div>
           </xsl:if>
-          <xsl:text>&#160;</xsl:text>
 
-        </div>
-      </div>
-
-      <!-- Text -->
-      <div class="row">
-        <div class="large-2 columns">
-          <!-- Text -->
-          <xsl:element name="{if (@n) then if ($nestedTitles=true()) then 'h4' else 'h2' else 'h2'}">
-            <xsl:attribute name="class">
-              <xsl:text>field</xsl:text>
-            </xsl:attribute>
-            <i18n:text>Text</i18n:text>
-          </xsl:element>
-        </div>
-
-        <div class="large-10 columns details">
-
-          <!-- Origin -->
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Origin</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:value-of
-                  select="//tei:origPlace[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
-                <xsl:text>&#160;</xsl:text>
-              </p>
-            </div>
-          </div>
+          <br/>
 
           <!-- Category -->
           <div class="row">
@@ -1072,35 +1057,36 @@
         </div>
       </div>
 
-      <!-- Commenttary -->
-
-      <div class="row">
-        <div class="large-2 columns">
-          <h2>
-            <i18n:text>Commentary</i18n:text>
-          </h2>
+      <xsl:if test="//tei:div[@type='bibliography'][@subtype='commentaries']">
+        <!-- Commenttary -->
+        <div class="row">
+          <div class="large-2 columns">
+            <h2>
+              <i18n:text>Commentaries</i18n:text>
+            </h2>
+          </div>
+          <div class="large-10 columns details">
+            <xsl:choose>
+              <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
+                <xsl:choose>
+                  <xsl:when test="@n">
+                    <xsl:apply-templates mode="multipara"
+                      select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
+                    />
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:apply-templates mode="multipara"
+                      select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                <i18n:text>no comment</i18n:text>. </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>&#160;</xsl:text>
+          </div>
         </div>
-        <div class="large-10 columns details">
-          <xsl:choose>
-            <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
-              <xsl:choose>
-                <xsl:when test="@n">
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
-                  />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-              <i18n:text>no comment</i18n:text>. </xsl:otherwise>
-          </xsl:choose>
-          <xsl:text>&#160;</xsl:text>
-        </div>
-      </div>
+      </xsl:if>
 
       <!-- Images -->
 
