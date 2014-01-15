@@ -1004,6 +1004,25 @@
             </div>
 
           </div>
+          
+          <!-- Commentaries -->
+          <xsl:if
+            test="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]">
+            <div class="row">
+              <div class="large-3 columns">
+                <h6>
+                  <i18n:text>Commentaries</i18n:text>
+                </h6>
+              </div>
+              <div class="large-9 columns">
+                <p>
+                  <xsl:value-of
+                    select="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]"/>
+                  <xsl:text>&#160;</xsl:text>
+                </p>
+              </div>
+            </div>
+          </xsl:if>
         </div>
       </div>
 
@@ -1057,36 +1076,36 @@
         </div>
       </div>
 
-      <xsl:if test="//tei:div[@type='bibliography'][@subtype='commentaries']">
-        <!-- Commenttary -->
-        <div class="row">
-          <div class="large-2 columns">
-            <h2>
-              <i18n:text>Commentaries</i18n:text>
-            </h2>
-          </div>
-          <div class="large-10 columns details">
-            <xsl:choose>
-              <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
-                <xsl:choose>
-                  <xsl:when test="@n">
-                    <xsl:apply-templates mode="multipara"
-                      select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
-                    />
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:apply-templates mode="multipara"
-                      select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </xsl:when>
-              <xsl:otherwise>
-                <i18n:text>no comment</i18n:text>. </xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>&#160;</xsl:text>
-          </div>
+
+      <!-- Commenttary -->
+      <div class="row">
+        <div class="large-2 columns">
+          <h2>
+            <i18n:text>Commentary</i18n:text>
+          </h2>
         </div>
-      </xsl:if>
+        <div class="large-10 columns details">
+          <xsl:choose>
+            <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
+              <xsl:choose>
+                <xsl:when test="@n">
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
+                  />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <i18n:text>no comment</i18n:text>. </xsl:otherwise>
+          </xsl:choose>
+          <xsl:text>&#160;</xsl:text>
+        </div>
+      </div>
+
 
       <!-- Images -->
 
