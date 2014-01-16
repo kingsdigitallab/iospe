@@ -783,8 +783,11 @@
                     <xsl:for-each
                       select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl">
                       <xsl:if test="@n">
-                        <xsl:value-of select="@n"/>
-                        <xsl:text>. </xsl:text>
+                        <em>
+                          <i18n:text>Fragment </i18n:text>
+                          <xsl:value-of select="@n"/>
+                          <xsl:text>. </xsl:text>
+                        </em>
                       </xsl:if>
                       <xsl:variable name="target" select="tei:ptr/@target"/>
                       <xsl:for-each
@@ -1004,7 +1007,7 @@
             </div>
 
           </div>
-          
+
           <!-- Commentaries -->
           <xsl:if
             test="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]">
@@ -1117,7 +1120,8 @@
             </h2>
           </div>
           <div class="large-10 columns details">
-            <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]" mode="photograph"/>
+            <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]"
+              mode="photograph"/>
 
           </div>
         </div>
