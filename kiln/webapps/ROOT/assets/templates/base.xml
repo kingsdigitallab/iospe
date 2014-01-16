@@ -51,41 +51,43 @@
               </div>
               <div class="row">
 
-                <div class="contain-to-grid">
-                  <kiln:block name="navigation">
-                    <nav class="top-bar">
-                      <kiln:block name="main-navigation">
-                        <ul class="title-area large-2">
-                          <li class="name show-for-medium-up">
-                            <a id="griffin" href="{$kiln:context-path}/"> &#160; </a>
-                          </li>
-                          <li class="toggle-topbar menu-icon right">
-                            <a href="#">
-                              <span>Menu</span>
-                            </a>
-                          </li>
-                        </ul>
-                        <section class="top-bar-section">
-                          <ul class="left">
-                            <xsl:apply-templates mode="main-menu" select="/aggregation/kiln:nav"/>
-                          </ul>
+                <div id="griffin_container" class="large-2 columns show-for-medium-up">
+                  <a id="griffin" title="IOSPE">&#160;</a>
+                </div>
 
-                        </section>
-                        <section class="top-bar-section jump-to-inscription">
-                          <ul class="left">
-                            <xsl:call-template name="jump-to-inscription"/>
-                          </ul>
-                        </section>
-                        <section class="top-bar-section">
-                          <ul class="right language-choice">
-                            <kiln:block name="menu-languages">
-                              <xsl:call-template name="menu-languages"/>
-                            </kiln:block>
-                          </ul>
-                        </section>
+                <div class="large-10 columns">
+                  <div class="row">
+                    <div class="contain-to-grid">
+                      <kiln:block name="navigation">
+                        <nav class="top-bar">
+                          <kiln:block name="main-navigation">
+                            <ul class="title-area">
+                              <li class="toggle-topbar menu-icon right">
+                                <a href="#">
+                                  <span>Menu</span>
+                                </a>
+                              </li>
+                            </ul>
+                            <section class="top-bar-section">
+                              <ul class="left">
+                                <xsl:apply-templates mode="main-menu" select="/aggregation/kiln:nav"/>
+                              </ul>
+
+                              <ul class="left">
+                                <xsl:call-template name="jump-to-inscription"/>
+                              </ul>
+
+                              <ul class="right language-choice">
+                                <kiln:block name="menu-languages">
+                                  <xsl:call-template name="menu-languages"/>
+                                </kiln:block>
+                              </ul>
+                            </section>
+                          </kiln:block>
+                        </nav>
                       </kiln:block>
-                    </nav>
-                  </kiln:block>
+                    </div>
+                  </div>
                 </div>
                 <!-- fixed and contained to the grid -->
 

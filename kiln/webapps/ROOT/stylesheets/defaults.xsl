@@ -78,10 +78,10 @@
   <xsl:template name="menu-languages">
     <xsl:variable name="url_base" select="replace($url, '(^.+?)(-ru)?(\.html)$', '$1')"/>
     <li class="lang en">
-      <a class="en" href="/{$url_base}.html" title="English">English</a>
+      <a class="en" href="/{$url_base}.html" title="English">en</a>
     </li>
     <li class="lang py">
-      <a class="py" href="/{$url_base}-ru.html" title="Русский">Русский</a>
+      <a class="py" href="/{$url_base}-ru.html" title="Русский">py</a>
     </li>
   </xsl:template>
 

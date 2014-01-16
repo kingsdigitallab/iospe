@@ -102,29 +102,25 @@ p {color: #333333;}
 
   height              : 143px;
   margin-top          : -108px;
-  margin-right        : 20px;
 
   background          : url(../images/griffin.png) no-repeat scroll transparent;
-  background-position : bottom right;
-}
-
-@media only screen and (max-width: 767px) {
-#griffin {
-background: none;
-height: 0;
-}
+  background-position : right bottom;
 }
 
 @media only screen and (min-width: 1240px) {
 #griffin {
-background-position: -8px bottom;
+background-position: left  bottom;
 }
 }
 
 
-a#logo:hover,
-a#logo:visited,
-a#logo:active,
+#griffin_container {
+  background : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 0;
+}
+
 a#griffin:hover,
 a#griffin:visited,
 a#griffin:active {
@@ -140,11 +136,6 @@ a#griffin:active {
 .top-bar {
   background : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
   font-size  : 1.3em;
-}
-
-.top-bar .name {
-  height        : 143px;
-  margin-bottom : -4px;
 }
 
 .top-bar-section ul,
@@ -204,7 +195,26 @@ a#griffin:active {
 
 /* language menu */
 
-.top-bar-section .language-choice {
+.top-bar-section .language-choice li.lang a {
+  background-color : #555555;
+  color            : #9f9f9f;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
+
+.top-bar-section .language-choice li.lang {
+  margin-right: 5px;
+  background: transparent;
+}
+
+/*.top-bar-section .language-choice {
   margin-right : 20px;
 }
 
@@ -226,7 +236,7 @@ a#griffin:active {
 
 .top-bar-section .language-choice li.lang.en a {
   background : url(../images/en-button.png) no-repeat scroll 0 -1px transparent;
-}
+}*/
 
 .top-bar .toggle-topbar.menu-icon {
 }
