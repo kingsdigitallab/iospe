@@ -1109,7 +1109,7 @@
 
       <!-- Images -->
 
-      <xsl:if test="//tei:facsimile//tei:graphic">
+      <xsl:if test="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]">
         <div class="row">
           <div class="large-2 columns">
             <h2>
@@ -1117,7 +1117,7 @@
             </h2>
           </div>
           <div class="large-10 columns details">
-            <xsl:apply-templates select="//tei:facsimile//tei:graphic" mode="photograph"/>
+            <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]" mode="photograph"/>
 
           </div>
         </div>
