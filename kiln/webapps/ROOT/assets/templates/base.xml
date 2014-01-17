@@ -57,7 +57,7 @@
 
                 <div class="large-10 columns">
                   <div class="row">
-                    <div class="contain-to-grid">
+                    <div class="contain-to-grid sticky">
                       <kiln:block name="navigation">
                         <nav class="top-bar">
                           <kiln:block name="main-navigation">
@@ -70,11 +70,12 @@
                             </ul>
                             <section class="top-bar-section">
                               <ul class="left">
-                                <xsl:apply-templates mode="main-menu" select="/aggregation/kiln:nav"/>
-                              </ul>
 
-                              <ul class="left">
+                                <xsl:apply-templates mode="main-menu" select="/aggregation/kiln:nav"/>
+                                <li class="divider show-for-small"/>
+
                                 <xsl:call-template name="jump-to-inscription"/>
+                                <li class="divider show-for-small"/>
                               </ul>
 
                               <ul class="right language-choice">
