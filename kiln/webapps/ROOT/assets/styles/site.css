@@ -115,10 +115,11 @@ background-position: left  bottom;
 
 
 #griffin_container {
-  background : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 0;
+  padding-right  : 10px;
+  padding-bottom : 10px;
+  padding-left   : 0;
+
+  background     : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
 }
 
 a#griffin:hover,
@@ -133,14 +134,19 @@ a#griffin:active {
   background : transparent;
 }
 
-.top-bar {
+.top-bar,
+.top-bar.expanded .title-area {
   background : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
-  font-size  : 1.3em;
+  font-size  : 1.3rem;
 }
 
 .top-bar-section ul,
 .top-bar-section .has-form {
   background : transparent;
+}
+
+.top-bar.expanded {
+  background : #f4f4f4;
 }
 
 .top-bar > section > ul > li {
@@ -166,11 +172,24 @@ a#griffin:active {
 .top-bar-section li a:not(.button):hover,
 .top-bar-section li a:not(.button):active,
 .top-bar-section li a:hover,
-.top-bar-section li a:active,
-.top-bar .toggle-topbar.menu-icon a:hover,
-.top-bar .toggle-topbar.menu-icon a:active {
+.top-bar-section li a:active {
   background : #e1e1e1;
-  color      : #344f5f
+  color      : #344f5f;
+}
+
+.top-bar .toggle-topbar a {
+  text-transform : none;
+}
+
+.top-bar .toggle-topbar.menu-icon a:hover,
+.top-bar .toggle-topbar.menu-icon a:active{
+  background : transparent;
+  color      : #344f5f;
+}
+
+.top-bar .toggle-topbar.menu-icon a span {
+  box-shadow         : 0 10px 0 1px #344f5f, 0 16px 0 1px #344f5f, 0 22px 0 1px #344f5f;
+  -webkit-box-shadow : 0 10px 0 1px #344f5f, 0 16px 0 1px #344f5f, 0 22px 0 1px #344f5f;
 }
 
 .top-bar-section .dropdown  {
@@ -193,67 +212,65 @@ a#griffin:active {
   border  : none;
 }
 
+
+.top-bar-section ul li>a {
+  padding-top    : 0;
+  padding-bottom : 0;
+}
 /* language menu */
 
+@media only screen and (min-width: 940px) {
 .top-bar-section .language-choice li.lang a {
-  background-color : #555555;
-  color            : #9f9f9f;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: none;
-  font-family: 'Times New Roman', serif;
-  font-size: 1.5rem;
-  font-weight: normal;
-  padding-left: .4rem;
-  padding-right: .4rem;
+  padding-right         : .4rem;
+  padding-left          : .4rem;
+
+  background-color      : #555555;
+  font-family           : 'Times New Roman', serif;
+  font-size             : 1.5rem;
+  font-weight           : normal;
+  color                 : #9f9f9f;
+  border                : none;
+  border-radius         : 5px;
+
+  -webkit-border-radius : 5px;
+  -moz-border-radius    : 5px;
 }
 
 .top-bar-section .language-choice li.lang {
-  margin-right: 5px;
-  background: transparent;
+  margin-right : 5px;
+  background   : transparent;
 }
 
-/*.top-bar-section .language-choice {
-  margin-right : 20px;
 }
 
-.top-bar-section .language-choice li {
-  background : transparent;
-}
-
-.top-bar-section .language-choice li.lang a {
-  width : 45px;
-}
-
-.top-bar-section .language-choice li.lang a {
-  text-indent : -5000px;
-}
-
-.top-bar-section .language-choice li.lang.py a {
-  background : url(../images/py-button.png) no-repeat scroll 0 -1px transparent;
-}
-
-.top-bar-section .language-choice li.lang.en a {
-  background : url(../images/en-button.png) no-repeat scroll 0 -1px transparent;
-}*/
+/* menu icon */
 
 .top-bar .toggle-topbar.menu-icon {
+  margin-top : -24px;
 }
 
 .top-bar .toggle-topbar.menu-icon a {
   font-size   : .7em;
   font-weight : normal;
-  line-height : 1.35em;
+  line-height : 33px;
 }
 
+
+
+
 /* jumpform */
+@media only screen and (min-width: 940px) {
+.top-bar-section .has-form {
+  width: 186px;
+}
+}
 
 .top-bar input,
 .top-bar .button {
   top              : 2px;
 
   background-color : #9f9f9f;
+  font-size        : .8rem;
   color            : #344f5f;
   border           : 0;
   border-top       : 1px solid #555555;
@@ -341,22 +358,23 @@ background-position: left  -65px;
 }
 
 .row.inscription-data {
-  margin-top: 2em;
+  margin-top : 2em;
 }
 
 .inscription-data .section-container section p.title {
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-right-radius         : 5px;
+  border-top-left-radius          : 5px;
+
+  -webkit-border-top-left-radius  : 5px;
+  -webkit-border-top-right-radius : 5px;
+  -moz-border-radius-topleft      : 5px;
+  -moz-border-radius-topright     : 5px;
 }
 
 .inscription-data .section-container section.active p.title,
 .inscription-data .section-container section.active div.content,
 .inscription-data .section-container section.active div.content code {
-  background: #ddd;
+  background : #ddd;
 }
 
 .inscription-data .section-container.tabs .content.epidoc_xml {
