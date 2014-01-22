@@ -241,12 +241,19 @@
               <xsl:text> </xsl:text>
 
               <ul class="inline-list">
-                <xsl:for-each select="current-group()">
+                <xsl:for-each-group select="current-group()"
+                  group-by="concat(str[@name='tei-id'], 
+                                   '.', 
+                                   string-join(arr[@name='divloc']/str, '.'), 
+                                   '.', 
+                                   str[@name='line'], 
+                                   str[@name='sup'])">
+
                   <xsl:sort select="str[@name='tei-id']"/>
                   <li>
                     <xsl:call-template name="link2inscription"/>
                   </li>
-                </xsl:for-each>
+                </xsl:for-each-group>
               </ul>
             </div>
           </dd>
