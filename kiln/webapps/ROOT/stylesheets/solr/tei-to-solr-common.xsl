@@ -118,7 +118,7 @@
         <field name="monument-type">
           <xsl:value-of select="local:replace-spaces(tei:term)"/>
         </field>
-        <field name="monument-type-{@xml:lang}">
+        <field name="monument-type-{tei:term/@xml:lang}">
           <xsl:value-of select="local:replace-spaces(tei:term)"/>
         </field>
 
