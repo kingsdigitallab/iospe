@@ -64,6 +64,28 @@ define([], function() {
     return '' + Array(wi - ni.length + 1).join(ci) + ni;
   };
 
+  this.go_to_person = function(id) {
+    var $person_row = $(id).parents('tr');
+
+     $('html, body').animate({
+        scrollTop: $person_row.offset().top - 50
+    }, 2000, function () {
+      console.log($person_row);
+      $person_row.animate({
+        backgroundColor: '#ffff66'
+      },
+      100,
+      function() {
+        // complete
+        $person_row.animate({
+          backgroundColor: ''
+        }, 3000);
+      }
+      );
+    });
+
+
+  }
 
 
   $('#jumpForm').on('submit',
@@ -86,6 +108,12 @@ define([], function() {
   $('#jumpForm .button.submit').on('click', function(e) {
     e.preventDefault();
     $('#jumpForm').trigger('submit');
+  });
+
+  $('.relation_link').on('click', function(e) {
+    e.preventDefault();
+    console.log($(this).attr('href'));
+    go_to_person($(this).attr('href'));
   });
 
   return this;

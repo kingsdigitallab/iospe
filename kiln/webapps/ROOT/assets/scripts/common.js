@@ -6,6 +6,8 @@
 //except for 'app' ones, which are in a sibling
 //directory.
 requirejs.config({
+    // for debug purposes
+    urlArgs: "bust=" + (new Date()).getTime(),
     baseUrl: "/assets/scripts",
     paths: {
         "jquery-ui": "vendor/jquery-ui/ui/jquery-ui",

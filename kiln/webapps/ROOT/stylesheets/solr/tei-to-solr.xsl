@@ -818,7 +818,7 @@
         <xsl:if test="descendant::tei:*/@cert='low' or ancestor-or-self::tei:*/@cert='low'">
           <field name="cert">low</field>
         </xsl:if>
-        <xsl:if test="descendant::tei:supplied or ancestor::tei:supplied">
+        <xsl:if test="ancestor::tei:persName[1][descendant::tei:supplied or ancestor::tei:supplied]">
           <field name="sup">yes</field>
         </xsl:if>
         <xsl:if test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
