@@ -194,6 +194,8 @@
     <dynamicField indexed="true" multiValued="true" name="document-title-*" required="false" stored="true" type="text_general" />
     <field indexed="true" multiValued="true" name="persnames" required="false" stored="true" type="string" />
     <dynamicField indexed="true" multiValued="true" name="persnames-*" required="false" stored="true" type="string" />
+    <field indexed="true" multiValued="true" name="origDate" required="false" stored="true" type="string" />
+    <dynamicField indexed="true" multiValued="true" name="origDate-*" required="false" stored="true" type="string" />
     <field indexed="true" multiValued="true" name="evidence" required="false" stored="true" type="string" />
     <dynamicField indexed="true" multiValued="true" name="evidence-*" required="false" stored="true" type="string" />
     <field indexed="true" multiValued="true" name="not-before" required="false" stored="true" type="tint" />
@@ -262,7 +264,7 @@
    <field indexed="true" multiValued="false" name="eats_entity_name"
           required="false" stored="true" type="text_general" />
 
-   
+
 
    <!-- catchall text field that indexes tokens both normally and in
         reverse for efficient leading wildcard queries. -->

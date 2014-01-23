@@ -33,8 +33,10 @@
   </xsl:variable>
 
   <xsl:variable name="memoized-indispensible-data">
-    <xsl:apply-templates mode="document-metadata-indispensible" select="/aggregation/tei:TEI/tei:teiHeader"/>
-    <xsl:apply-templates mode="document-metadata-indispensible" select="/aggregation/tei:TEI/tei:text/tei:body"/>
+    <xsl:apply-templates mode="document-metadata-indispensible"
+      select="/aggregation/tei:TEI/tei:teiHeader"/>
+    <xsl:apply-templates mode="document-metadata-indispensible"
+      select="/aggregation/tei:TEI/tei:text/tei:body"/>
   </xsl:variable>
 
 
@@ -71,7 +73,8 @@
 
   </xsl:template>
 
-  <xsl:template match="tei:publicationStmt/tei:idno[@type = 'filename']" mode="document-metadata document-metadata-indispensible">
+  <xsl:template match="tei:publicationStmt/tei:idno[@type = 'filename']"
+    mode="document-metadata document-metadata-indispensible">
     <field name="file">
       <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
     </field>
@@ -87,7 +90,8 @@
     </field>
   </xsl:template>
 
-  <xsl:template match="tei:titleStmt/tei:title[@xml:lang]" mode="document-metadata document-metadata-indispensible">
+  <xsl:template match="tei:titleStmt/tei:title[@xml:lang]"
+    mode="document-metadata document-metadata-indispensible">
     <field name="document-title">
       <xsl:value-of select="local:clean(.)"/>
     </field>
@@ -202,7 +206,17 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="tei:origDate" mode="document-metadata">
+  <xsl:template match="tei:origDate" mode="document-metadata document-metadata-indispensible">
+    <xsl:for-each select="tei:seg">
+      <field name="origDate">
+        <xsl:value-of select="."/>
+      </field>
+
+      <field name="origDate-{@xml:lang}">
+        <xsl:value-of select="."/>
+      </field>
+    </xsl:for-each>
+
     <xsl:if test="normalize-space(@notBefore)">
       <field name="not-before">
         <xsl:value-of select="local:get-year-from-date(@notBefore)"/>
