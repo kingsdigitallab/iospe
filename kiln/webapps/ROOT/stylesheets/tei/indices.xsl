@@ -172,7 +172,7 @@
                 -->
           <xsl:when test="//doc/str[@name=$index]">
             <xsl:for-each-group select="//doc"
-              group-by="translate(translate(normalize-space(str[@name=$index]), '[].?-', ''), $lowercase, $transformation)">
+              group-by="translate(translate(normalize-space(str[@name=$index]), '[].?', ''), $lowercase, $transformation)">
               <xsl:sort order="ascending" select="current-grouping-key()"/>
               <xsl:call-template name="index_group"/>
             </xsl:for-each-group>
