@@ -46,22 +46,40 @@
     <xsl:choose>
       <!-- divine -->
       <xsl:when test="$index='divine'">
-        <xsl:for-each select="//AL//tei:listPerson">
-          <dl class="indices indices-person">
-            <xsl:for-each
-              select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
-              <xsl:sort
-                select="concat( 
+        <table class="indices indices-person">
+          <thead>
+            <tr>
+              <th class="large-3 columns">
+                <i18n:text key="__person_index_name">English name</i18n:text>
+              </th>
+              <th class="large-2 columns">
+                <xsl:text> </xsl:text>
+              </th>
+              <th class="large-3 columns">
+                <i18n:text>Full name</i18n:text>
+              </th>
+              <th class="large-4 columns">
+                <i18n:text>Inscriptions</i18n:text>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <xsl:for-each select="//AL//tei:listPerson">
+              <xsl:for-each
+                select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
+                <xsl:sort
+                  select="concat( 
                           upper-case(
                             replace(
                               normalize-unicode(
                                 normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),
                               '[^A-Za-z0-9А-Яа-я ]','')), 
                           'ЯЯЯ')"/>
-              <xsl:call-template name="character"/>
+                <xsl:call-template name="character"/>
+              </xsl:for-each>
             </xsl:for-each>
-          </dl>
-        </xsl:for-each>
+          </tbody>
+        </table>
       </xsl:when>
 
       <!-- ruler -->
@@ -74,7 +92,9 @@
               </xsl:if>
             </xsl:attribute>
             <p class="title" data-section-title="true">
-              <a href="?sort=date">Date</a>
+              <a href="?sort=date">
+                <i18n:text>Sort by date</i18n:text>
+              </a>
             </p>
             <div class="content" data-section-content="true">
               <xsl:call-template name="group_pagination">
@@ -90,14 +110,33 @@
                     <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
                   </a>
                 </h3>
-                <dl class="indices indices-person">
-                  <xsl:for-each
-                    select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
-                    <xsl:sort select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
-                    <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
-                    <xsl:call-template name="character"/>
-                  </xsl:for-each>
-                </dl>
+                <table class="indices indices-person">
+                  <thead>
+                    <tr>
+                      <th class="large-3 columns">
+                        <i18n:text key="__person_index_name">English name</i18n:text>
+                      </th>
+                      <th class="large-2 columns">
+                        <i18n:text>Plus Date</i18n:text>
+                      </th>
+                      <th class="large-3 columns">
+                        <i18n:text>Attested From</i18n:text>
+                      </th>
+                      <th class="large-4 columns">
+                        <i18n:text>Inscriptions</i18n:text>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <xsl:for-each
+                      select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
+                      <xsl:sort
+                        select="concat(tei:floruit[tei:seg[@xml:lang=$lang]]/@notBefore, 'X')"/>
+                      <xsl:sort select="tei:floruit[tei:seg[@xml:lang=$lang]]/@notAfter"/>
+                      <xsl:call-template name="character"/>
+                    </xsl:for-each>
+                  </tbody>
+                </table>
               </xsl:for-each>
             </div>
           </section>
@@ -108,7 +147,9 @@
               </xsl:if>
             </xsl:attribute>
             <p class="title" data-section-title="true">
-              <a href="?sort=name">Name</a>
+              <a href="?sort=name">
+                <i18n:text>Sort by name</i18n:text>
+              </a>
             </p>
             <div class="content" data-section-content="true">
               <xsl:call-template name="group_pagination">
@@ -124,14 +165,32 @@
                     <xsl:value-of select="tei:head[@xml:lang=$lang]"/>
                   </a>
                 </h3>
-                <dl class="indices indices-person">
-                  <xsl:for-each
-                    select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
-                    <xsl:sort
-                      select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
-                    <xsl:call-template name="character"/>
-                  </xsl:for-each>
-                </dl>
+                <table class="indices indices-person">
+                  <thead>
+                    <tr>
+                      <th class="large-3 columns">
+                        <i18n:text key="__person_index_name">English name</i18n:text>
+                      </th>
+                      <th class="large-2 columns">
+                        <i18n:text>Plus Date</i18n:text>
+                      </th>
+                      <th class="large-3 columns">
+                        <i18n:text>Attested From</i18n:text>
+                      </th>
+                      <th class="large-4 columns">
+                        <i18n:text>Inscriptions</i18n:text>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <xsl:for-each
+                      select="tei:person[not(@xml:id) or @xml:id=(//result//doc/arr[@name='persName-key']/str)]">
+                      <xsl:sort
+                        select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
+                      <xsl:call-template name="character"/>
+                    </xsl:for-each>
+                  </tbody>
+                </table>
               </xsl:for-each>
             </div>
           </section>
@@ -150,7 +209,9 @@
               </xsl:if>
             </xsl:attribute>
             <p class="title" data-section-title="true">
-              <a href="?sort=date">sort by date</a>
+              <a href="?sort=date">
+                <i18n:text>Sort by date</i18n:text>
+              </a>
             </p>
             <xsl:if test="$sort='date'">
               <div class="content" data-section-content="true">
@@ -197,7 +258,9 @@
               </xsl:if>
             </xsl:attribute>
             <p class="title" data-section-title="true">
-              <a href="?sort=name">sort by name</a>
+              <a href="?sort=name">
+                <i18n:text>Sort by name</i18n:text>
+              </a>
             </p>
             <xsl:if test="$sort=('name', '')">
               <div class="content" data-section-content="true">
@@ -242,7 +305,7 @@
   </xsl:template>
 
   <xsl:template name="character">
-    <dt>
+    <xsl:variable name="group_header">
       <xsl:choose>
         <xsl:when test="count(tei:persName[not(@type)][@xml:lang])>1">
           <xsl:value-of select="string-join( tei:persName[not(@type)][@xml:lang='grc'], ', ')"/>
@@ -255,40 +318,43 @@
           <xsl:value-of select="string-join(tei:persName[not(@type)], ', ')"/>
         </xsl:otherwise>
       </xsl:choose>
-    </dt>
+    </xsl:variable>
 
-    <xsl:if test="tei:floruit">
-      <dd class="floruit">
-
-        <span class="person_detail_label">
-          <i18n:text>Attested</i18n:text>
-        </span>
-        <xsl:text> </xsl:text>
-
-        <xsl:value-of select="tei:floruit"/>
-        <xsl:text> </xsl:text>
-      </dd>
-    </xsl:if>
+    <xsl:variable name="floruit">
+      <xsl:value-of select="tei:floruit"/>
+      <xsl:text> </xsl:text>
+    </xsl:variable>
 
     <xsl:choose>
       <xsl:when test="@xml:id">
         <xsl:for-each-group select="//result//doc[arr[@name='persName-key']/str=current()/@xml:id]"
           group-by="arr[@name='persName-full']/str">
-          <dd class="row">
-            <div class="large-4 columns">
-              <span class="person_detail_label">
-                <i18n:text>Full Name</i18n:text>
-              </span>
-              <xsl:text> </xsl:text>
+          <tr class="index_row row">
+            <xsl:if test="position() = 1">
+              <th class="large-3 columns">
+                <xsl:attribute name="rowspan" select="count(current-group())"/>
+                <xsl:value-of select="$group_header"/>
+                <xsl:text> </xsl:text>
+              </th>
 
+              <td class="large-2 columns floruit">
+                <xsl:attribute name="rowspan" select="count(current-group())"/>
+                <xsl:value-of select="$floruit"/>
+                <xsl:text> </xsl:text>
+              </td>
+            </xsl:if>
+
+
+            <xsl:variable name="offset">
+              <xsl:if test="position() > 1">
+                <xsl:text>large-offset-5</xsl:text>
+              </xsl:if>
+            </xsl:variable>
+
+            <td class="large-3 {$offset} columns full_name ">
               <xsl:value-of select="current-grouping-key()"/>
-            </div>
-            <div class="large-8 columns inscriptions">
-
-              <span class="person_detail_label">
-                <i18n:text>Inscriptions</i18n:text>
-              </span>
-              <xsl:text> </xsl:text>
+            </td>
+            <td class="large-4 columns inscriptions">
 
               <ul class="inline-list">
                 <xsl:for-each-group select="current-group()"
@@ -303,33 +369,52 @@
                     <xsl:call-template name="link2inscription"/>
                   </li>
                 </xsl:for-each-group>
+                <xsl:text> </xsl:text>
               </ul>
-            </div>
-          </dd>
+            </td>
+          </tr>
 
         </xsl:for-each-group>
       </xsl:when>
       <xsl:otherwise>
-        <dd> See: <xsl:choose>
-            <xsl:when
-              test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">
-              <xsl:value-of
-                select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='grc'][1]"/>
-              <xsl:if
-                test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[not(@type)][@xml:lang='la']">
-                <xsl:text> / </xsl:text>
+        <tr class="index_row row">
+          <th class="large-3 columns">
+            <xsl:value-of select="$group_header"/>
+          </th>
+
+          <td class="large-2 columns floruit">
+            <xsl:value-of select="$floruit"/>
+          </td>
+
+          <td class="large-3 columns full_name">
+            <xsl:text> </xsl:text>
+          </td>
+          <td class="large-4 columns inscriptions">
+
+            <i18n:text>See:</i18n:text>
+            <xsl:text> </xsl:text>
+            <xsl:choose>
+              <xsl:when
+                test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">
                 <xsl:value-of
-                  select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='la'][1]"
+                  select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='grc'][1]"/>
+                <xsl:if
+                  test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[not(@type)][@xml:lang='la']">
+                  <xsl:text> / </xsl:text>
+                  <xsl:value-of
+                    select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='la'][1]"
+                  />
+                </xsl:if>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of
+                  select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[1]"
                 />
-              </xsl:if>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of
-                select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[1]"
-              />
-            </xsl:otherwise>
-          </xsl:choose>
-        </dd>
+              </xsl:otherwise>
+            </xsl:choose>
+          </td>
+        </tr>
+
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
