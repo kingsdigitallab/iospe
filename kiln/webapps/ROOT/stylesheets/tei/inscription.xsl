@@ -1035,13 +1035,23 @@
         test="//tei:div[@type='apparatus'][@n = $fullN or not(@n)][descendant::tei:app[descendant::text() or descendant::tei:*]]">
         <div class="row">
           <div class="large-2 columns">
-            <h2>
-              <i18n:text>Apparatus criticus</i18n:text>
-            </h2>
+            <xsl:text>&#160;</xsl:text>
           </div>
           <div class="large-10 columns details">
-            <xsl:apply-templates mode="multipara"
-              select="//tei:div[@type='apparatus'][@n = $fullN or not(@n)]"/>
+            <div class="row">
+              <div class="large-3 columns">
+                <h6>
+                  <i18n:text>Apparatus criticus</i18n:text>
+                </h6>
+              </div>
+              <div class="large-9 columns">
+                <p>
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type='apparatus'][@n = $fullN or not(@n)]"/>
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </xsl:if>
@@ -1051,7 +1061,16 @@
       <div class="row">
         <div class="large-2 columns">
           <h2>
-            <i18n:text>Translation</i18n:text>
+            <xsl:choose>
+              <xsl:when test="not($fullN = '')">
+                <em>
+                  <i18n:text>Translation</i18n:text>
+                </em>
+              </xsl:when>
+              <xsl:otherwise>
+                <i18n:text>Translation</i18n:text>
+              </xsl:otherwise>
+            </xsl:choose>
           </h2>
         </div>
         <div class="large-10 columns details">
@@ -1084,8 +1103,18 @@
       <div class="row">
         <div class="large-2 columns">
           <h2>
-            <i18n:text>Commentary</i18n:text>
+            <xsl:choose>
+              <xsl:when test="not($fullN = '')">
+                <em>
+                  <i18n:text>Commentary</i18n:text>
+                </em>
+              </xsl:when>
+              <xsl:otherwise>
+                <i18n:text>Commentary</i18n:text>
+              </xsl:otherwise>
+            </xsl:choose>
           </h2>
+
         </div>
         <div class="large-10 columns details">
           <xsl:choose>
@@ -1116,7 +1145,16 @@
         <div class="row">
           <div class="large-2 columns">
             <h2>
-              <i18n:text>Images</i18n:text>
+              <xsl:choose>
+                <xsl:when test="not($fullN = '')">
+                  <em>
+                    <i18n:text>Images</i18n:text>
+                  </em>
+                </xsl:when>
+                <xsl:otherwise>
+                  <i18n:text>Images</i18n:text>
+                </xsl:otherwise>
+              </xsl:choose>
             </h2>
           </div>
           <div class="large-10 columns details">

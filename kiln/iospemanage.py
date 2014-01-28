@@ -565,12 +565,15 @@ def convert(conversions, path, conversion_type):
 
 
 
+
+
 @manager.arg(
     'conversions',
     help='file which contains the document conversions')
 @manager.arg('filename', help='path to document')
 @manager.arg('conversion_type', help='type of conversion')
 @manager.command
+
 def update_refs(conversions, filename, conversion_type):
     """
     Update references within a single file
