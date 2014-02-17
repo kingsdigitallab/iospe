@@ -113,14 +113,20 @@
                 <table class="indices indices-person">
                   <thead>
                     <tr>
-                      <th class="large-3 columns">
-                        <i18n:text key="__person_index_name">English name</i18n:text>
+                      <th class="large-1 columns">
+                        <i18n:text key="__person_index_ruler">Ruler</i18n:text>
+                      </th>
+                      <th class="large-1 columns">
+                        <i18n:text key="__person_index_greek_name">Greek name</i18n:text>
+                      </th>
+                      <th class="large-1 columns">
+                        <i18n:text key="__person_index_latin_name">Latin name</i18n:text>
                       </th>
                       <th class="large-2 columns">
-                        <i18n:text>Plus Date</i18n:text>
+                        <i18n:text>Date</i18n:text>
                       </th>
                       <th class="large-3 columns">
-                        <i18n:text>Attested From</i18n:text>
+                        <i18n:text>Attested Form</i18n:text>
                       </th>
                       <th class="large-4 columns">
                         <i18n:text>Inscriptions</i18n:text>
@@ -168,14 +174,20 @@
                 <table class="indices indices-person">
                   <thead>
                     <tr>
-                      <th class="large-3 columns">
-                        <i18n:text key="__person_index_name">English name</i18n:text>
+                      <th class="large-1 columns">
+                        <i18n:text key="__person_index_ruler">Ruler</i18n:text>
+                      </th>
+                      <th class="large-1 columns">
+                        <i18n:text key="__person_index_greek_name">Greek name</i18n:text>
+                      </th>
+                      <th class="large-1 columns">
+                        <i18n:text key="__person_index_latin_name">Latin name</i18n:text>
                       </th>
                       <th class="large-2 columns">
-                        <i18n:text>Plus Date</i18n:text>
+                        <i18n:text>Date</i18n:text>
                       </th>
                       <th class="large-3 columns">
-                        <i18n:text>Attested From</i18n:text>
+                        <i18n:text>Attested Form</i18n:text>
                       </th>
                       <th class="large-4 columns">
                         <i18n:text>Inscriptions</i18n:text>
@@ -222,17 +234,17 @@
                         <xsl:text> </xsl:text>
                       </th>
                       <th>
-                        <i18n:text>Name</i18n:text>
+                        <i18n:text>Attested Form</i18n:text>
                       </th>
                       <th>
-                        <i18n:text>Flourit</i18n:text>
+                        <i18n:text>Date</i18n:text>
                       </th>
                       <th>
                         <i18n:text>Relationships</i18n:text>
                       </th>
 
                       <th>
-                        <i18n:text>Occupation</i18n:text>
+                        <i18n:text>Occupation/Title</i18n:text>
                       </th>
                       <th>
                         <i18n:text>Inscriptions</i18n:text>
@@ -271,17 +283,17 @@
                         <xsl:text> </xsl:text>
                       </th>
                       <th>
-                        <i18n:text>Name</i18n:text>
+                        <i18n:text>Attested Form</i18n:text>
                       </th>
                       <th>
-                        <i18n:text>Flourit</i18n:text>
+                        <i18n:text>Date</i18n:text>
                       </th>
                       <th>
                         <i18n:text>Relationships</i18n:text>
                       </th>
 
                       <th>
-                        <i18n:text>Occupation</i18n:text>
+                        <i18n:text>Occupation/Title</i18n:text>
                       </th>
                       <th>
                         <i18n:text>Inscriptions</i18n:text>
