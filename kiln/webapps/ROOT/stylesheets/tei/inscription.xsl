@@ -485,15 +485,11 @@
             <xsl:choose>
               <xsl:when test="descendant::tei:div[@subtype='inscription']">
                 <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
-                  <xsl:call-template name="inscriptionData">
-                    <xsl:with-param name="nestedTitles" select="true()"/>
-                  </xsl:call-template>
+                  <xsl:call-template name="inscriptionData" />
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:call-template name="inscriptionData">
-                  <xsl:with-param name="nestedTitles" select="true()"/>
-                </xsl:call-template>
+                <xsl:call-template name="inscriptionData"/>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:for-each>
@@ -504,9 +500,7 @@
             <xsl:choose>
               <xsl:when test="descendant::tei:div[@type='textpart']">
                 <xsl:for-each select="descendant::tei:div[@type='textpart']">
-                  <xsl:call-template name="inscriptionData">
-                    <xsl:with-param name="nestedTitles" select="false()"/>
-                  </xsl:call-template>
+                  <xsl:call-template name="inscriptionData"/>
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
@@ -573,14 +567,11 @@
               <xsl:attribute name="class">
                 <xsl:text>large-2 columns wrap</xsl:text>
               </xsl:attribute>
-              <xsl:element name="{if ($nestedTitles=true()) then 'h4' else 'h2'}">
-                <xsl:attribute name="class">
-                  <xsl:text>part</xsl:text>
-                </xsl:attribute>
+              <h2 class="part">
                 <i18n:text>Text</i18n:text>
                 <xsl:text>&#160;</xsl:text>
                 <xsl:value-of select="@n"/>
-              </xsl:element>
+              </h2>
             </xsl:when>
             <xsl:otherwise>
               <h2>
