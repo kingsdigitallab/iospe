@@ -498,8 +498,8 @@
           <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
           <xsl:for-each select="//tei:div[@type='edition']">
             <xsl:choose>
-              <xsl:when test="descendant::tei:div[@type='textpart']">
-                <xsl:for-each select="descendant::tei:div[@type='textpart']">
+              <xsl:when test="descendant::tei:div[@type='textpart'][@n]">
+                <xsl:for-each select="descendant::tei:div[@type='textpart'][@n]">
                   <xsl:call-template name="inscriptionData"/>
                 </xsl:for-each>
               </xsl:when>
