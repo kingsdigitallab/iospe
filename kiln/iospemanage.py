@@ -516,7 +516,7 @@ def convert(conversions, path, conversion_type):
     """
     Convert a series of files and update references within them
     """
-    conv_type  = check_valid_conversion(conversion_type)
+    conv_type = check_valid_conversion(conversion_type)
 
     c_index = load_conversion_file(conversions, conv_type)
 
@@ -564,21 +564,17 @@ def convert(conversions, path, conversion_type):
         print u'ERROR: {} {} {}'.format(ref, errtype, mess)
 
 
-
-
-
 @manager.arg(
     'conversions',
     help='file which contains the document conversions')
 @manager.arg('filename', help='path to document')
 @manager.arg('conversion_type', help='type of conversion')
 @manager.command
-
 def update_refs(conversions, filename, conversion_type):
     """
     Update references within a single file
     """
-    conv_type  = check_valid_conversion(conversion_type)
+    conv_type = check_valid_conversion(conversion_type)
 
     c_index = load_conversion_file(conversions, conv_type)
 
@@ -591,10 +587,6 @@ def update_refs(conversions, filename, conversion_type):
 
     print u'Writing {}.'.format(filename),
     write_xml(doc, filename)
-
-
-
-
 
 
 if __name__ == '__main__':
