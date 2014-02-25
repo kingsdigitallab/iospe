@@ -485,7 +485,7 @@
             <xsl:choose>
               <xsl:when test="descendant::tei:div[@subtype='inscription']">
                 <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
-                  <xsl:call-template name="inscriptionData" />
+                  <xsl:call-template name="inscriptionData"/>
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
@@ -888,6 +888,9 @@
 
           <!-- Actual Inscription Data -->
           <div class="row inscription-data">
+            <xsl:variable name="n"
+              select="if (parent::div[@n]) then (concat(parent::div/@n,'.',@n)) else (@n)"/>
+
             <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
             <div class="large-12 columns">
               <div class="section-container tabs" data-section="tabs">
@@ -902,11 +905,11 @@
                   <div id="edition{if (@n) then @n else '1'}" class="content"
                     data-section-content="true">
                     <!-- Only get current text part (inscription) if necessary -->
+
                     <xsl:choose>
-                      <xsl:when test="@n">
-                        <xsl:variable name="tet" select="@n"/>
+                      <xsl:when test="$n">
                         <xsl:apply-templates
-                          select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
+                          select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$n, '-'))]"
                           mode="copyEpidoc"/>
                       </xsl:when>
                       <xsl:otherwise>
@@ -927,10 +930,9 @@
                   <div id="diplomatic{if (@n) then @n else '1'}" class="content"
                     data-section-content="true">
                     <xsl:choose>
-                      <xsl:when test="@n">
-                        <xsl:variable name="tet" select="@n"/>
+                      <xsl:when test="$n">
                         <xsl:apply-templates
-                          select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
+                          select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$n, '-'))]"
                           mode="copyEpidoc"/>
                       </xsl:when>
                       <xsl:otherwise>
@@ -938,6 +940,7 @@
                           mode="copyEpidoc"/>
                       </xsl:otherwise>
                     </xsl:choose>
+                    
                   </div>
                 </section>
 
@@ -950,8 +953,6 @@
                   </p>
                   <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml"
                     data-section-content="true">
-                    <xsl:variable name="n"
-                      select="if (parent::div[@n]) then (concat(parent::div/@n,'.',@n)) else (@n)"/>
                     <pre>
                       <code class="language-xml">
                         <xsl:choose>
