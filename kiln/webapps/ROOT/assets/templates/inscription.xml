@@ -30,12 +30,12 @@
       <xsl:value-of
         select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang=$lang]"/>
       <xsl:text> </xsl:text>
-      <xsl:value-of
-        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"/>
-      <xsl:text> </xsl:text>
 
       <xsl:value-of
         select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"/>
+      <xsl:text>. </xsl:text>
+      <xsl:value-of
+        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"/>
 
     </kiln:block>
 
@@ -52,12 +52,11 @@
       <xsl:text> </xsl:text>
 
       <xsl:value-of
-        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"/>
-      <xsl:text> </xsl:text>
-
+        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"/>
+      <xsl:text>. </xsl:text>
       <xsl:value-of
-        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"
-      />
+        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"/>
+
     </kiln:block>
 
     <kiln:block name="content">
