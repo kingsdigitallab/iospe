@@ -37,10 +37,6 @@
               <xsl:value-of select="ancestor::doc/str[@name=concat('origin-', $lang)]"/>
               <xsl:text> </xsl:text>
               
-              <!-- origDate -->
-              <xsl:value-of select="ancestor::doc/arr[@name=concat('origDate-', $lang)]"/>
-              <xsl:text>. </xsl:text>
-              
               <!-- title -->
               <xsl:choose>
                 <xsl:when
@@ -54,6 +50,11 @@
                     select="ancestor::doc/str[@name=concat('inscription-title-', $lang)]"/>
                 </xsl:otherwise>
               </xsl:choose>
+              <xsl:text>. </xsl:text>
+              
+              <!-- origDate -->
+              <xsl:value-of select="ancestor::doc/arr[@name=concat('origDate-', $lang)]/str[1]"/>
+              
             </a>
           </dd>
         </xsl:for-each>
