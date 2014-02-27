@@ -460,11 +460,11 @@
     <xsl:call-template name="inscriptionSupportSection"/>
 
     <xsl:for-each-group
-      select="//tei:support/tei:objectType[@n] 
-              | //tei:support/tei:material[@n] 
-              | //tei:support/tei:p[@n] 
-              | //tei:provenance[@n] 
-              | //tei:support/tei:dimensions[@n] 
+      select="//tei:support/tei:objectType[@n]
+              | //tei:support/tei:material[@n]
+              | //tei:support/tei:p[@n]
+              | //tei:provenance[@n]
+              | //tei:support/tei:dimensions[@n]
               | //tei:altIdentifier[@n]
               | //tei:origPlace[@n]"
       group-by="@n">
@@ -905,7 +905,7 @@
                       <i18n:text>Edition</i18n:text>
                     </a>
                   </p>
-                  <div id="edition{if (@n) then @n else '1'}" class="content"
+                  <div id="edition{if (@n) then @n else '1'}" class="content edition"
                     data-section-content="true">
                     <!-- Only get current text part (inscription) if necessary -->
 
@@ -930,7 +930,7 @@
                       <i18n:text>Diplomatic</i18n:text>
                     </a>
                   </p>
-                  <div id="diplomatic{if (@n) then @n else '1'}" class="content"
+                  <div id="diplomatic{if (@n) then @n else '1'}" class="content diplomatic"
                     data-section-content="true">
                     <xsl:choose>
                       <xsl:when test="$n">
@@ -943,7 +943,7 @@
                           mode="copyEpidoc"/>
                       </xsl:otherwise>
                     </xsl:choose>
-                    
+
                   </div>
                 </section>
 
@@ -954,7 +954,7 @@
                       <i18n:text>EpiDoc (XML)</i18n:text>
                     </a>
                   </p>
-                  <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml"
+                  <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml epidoc"
                     data-section-content="true">
                     <pre>
                       <code class="language-xml">

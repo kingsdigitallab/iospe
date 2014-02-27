@@ -1,3 +1,32 @@
+/* fonts */
+
+/* fonts come from http://ucbclassics.dreamhosters.com/djm/greekkeys/NAUdownload.html */
+
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathu405.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathuBold405.woff);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathuItalic405.woff);
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathuBoldItalic405.woff);
+  font-weight: bold;
+  font-style: italic, oblique;
+}
 
 /* defaults */
 body { background-color: white; color: black;
@@ -543,8 +572,19 @@ dl.indices.indices-locations  dd {
 }
 
 *[lang="grc"] {
-  font-family                                                                                               : "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode",
+  font-family                                                                                               :  "New Athena",
+  "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode",
+  "Palatino Linotype", "Titus Cyberbit Basic", "Cardo", "Vusillus Old Face", "Alphabetum", "Galatia SIL",
+  "Code 2000", "GentiumAlt", "Gentium", "Minion Pro", "GeorgiaGreek", "Vusillus Old Face Italic",
+  "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon",
+  "Verdana", "Tahoma";
+}
 
+
+.edition,
+.diplomatic {
+  font-family:   "New Athena",
+  "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode",
   "Palatino Linotype", "Titus Cyberbit Basic", "Cardo", "Vusillus Old Face", "Alphabetum", "Galatia SIL",
   "Code 2000", "GentiumAlt", "Gentium", "Minion Pro", "GeorgiaGreek", "Vusillus Old Face Italic",
   "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon",
