@@ -1357,21 +1357,21 @@
 
     <xsl:if test="tei:width">
       <i18n:text key="__width">w</i18n:text>
-      <xsl:text>:</xsl:text>
+      <xsl:text>: </xsl:text>
       <xsl:value-of select="tei:width"/>
     </xsl:if>
 
     <xsl:if test="tei:depth">
       <xsl:text> </xsl:text>
       <i18n:text key="__depth">x d</i18n:text>
-      <xsl:text>:</xsl:text>
+      <xsl:text>: </xsl:text>
       <xsl:value-of select="tei:depth"/>
     </xsl:if>
 
     <xsl:if test="tei:dim[@type = 'diameter']">
       <xsl:text> </xsl:text>
       <i18n:text key="__x_diameter">x diam</i18n:text>
-      <xsl:text>:.</xsl:text>
+      <xsl:text>: </xsl:text>
       <xsl:value-of select="tei:dim[@type = 'diameter']"/>
     </xsl:if>
 
