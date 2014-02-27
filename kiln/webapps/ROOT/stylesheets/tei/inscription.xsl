@@ -613,6 +613,9 @@
                   <p>
                     <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
                     <xsl:text>&#160;</xsl:text>
+                    <xsl:if test="tei:dimensions">
+                      <xsl:apply-templates select="tei:dimensions"/>
+                    </xsl:if>
                   </p>
                 </div>
               </div>
