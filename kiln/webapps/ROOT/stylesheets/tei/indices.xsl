@@ -6,6 +6,7 @@
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
+  <xsl:param name="current"/>
   <xsl:param name="ancient-lang" select="'n/a'"/>
 
   <xsl:import href="../common/conversions.xsl"/>
@@ -66,8 +67,8 @@
   </xsl:function>
 
   <xsl:function name="iospe:normalise_id">
-    <xsl:param name="string" />
-    <xsl:value-of select="lower-case(replace($string, '\W+', '_'))" />
+    <xsl:param name="string"/>
+    <xsl:value-of select="lower-case(replace($string, '\W+', '_'))"/>
   </xsl:function>
 
   <!-- set title -->
@@ -120,37 +121,47 @@
   </xsl:template>
 
   <xsl:template name="letterList">
-    <ul class="pagination">
-      <xsl:for-each select="//letters/letter">
-        <li>
-          <a>
-            <xsl:attribute name="href">
-              <xsl:choose>
-                <xsl:when test="$ancient-lang=('grc', 'all')">
-                  <xsl:value-of
-                    select="translate(translate(., $unicode, $betacode),$lowercase, $uppercase)"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="."/>
-                </xsl:otherwise>
-              </xsl:choose>
-              <xsl:value-of select="$kiln:url-lang-suffix"/>
-              <xsl:text>.html</xsl:text>
-            </xsl:attribute>
-
+    <div class="pagination-centered">
+      <ul class="pagination">
+        <xsl:for-each select="//letters/letter">
+          <xsl:variable name="location">
             <xsl:choose>
               <xsl:when test="$ancient-lang=('grc', 'all')">
                 <xsl:value-of
-                  select="translate(translate(., $betacode, $unicode),$lowercase, $uppercase)"/>
+                  select="translate(translate(., $unicode, $betacode),$lowercase, $uppercase)"/>
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of select="."/>
               </xsl:otherwise>
             </xsl:choose>
-          </a>
-        </li>
-      </xsl:for-each>
-    </ul>
+          </xsl:variable>
+          <li>
+            <xsl:attribute name="class">
+              <xsl:if test="$current = $location">
+                <xsl:text>current</xsl:text>
+              </xsl:if>
+            </xsl:attribute>
+            <a>
+              <xsl:attribute name="href">
+                <xsl:value-of select="$location"/>
+                <xsl:value-of select="$kiln:url-lang-suffix"/>
+                <xsl:text>.html</xsl:text>
+              </xsl:attribute>
+
+              <xsl:choose>
+                <xsl:when test="$ancient-lang=('grc', 'all')">
+                  <xsl:value-of
+                    select="translate(translate(., $betacode, $unicode),$lowercase, $uppercase)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="."/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </a>
+          </li>
+        </xsl:for-each>
+      </ul>
+    </div>
   </xsl:template>
 
   <!-- Generate Index -->
@@ -320,7 +331,7 @@
             <xsl:for-each select="current-group()">
               <xsl:sort select="number(substring-before(str[@name='tei-id'], '.'))"/>
               <xsl:sort select="number(substring-after(str[@name='tei-id'], '.'))"/>
-              
+
               <li>
                 <xsl:call-template name="link2inscription"/>
               </li>

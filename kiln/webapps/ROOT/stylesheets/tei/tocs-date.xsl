@@ -11,18 +11,86 @@
   <!-- set title -->
   <xsl:template name="tocTitleDate">
     <i18n:text>Inscriptions by Date</i18n:text>
-
-    <xsl:choose>
-      <xsl:when test="$date-type='dated'">
-        <xsl:text> -</xsl:text>
-        <i18n:text>Dated by year</i18n:text>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:text> -</xsl:text>
-        <xsl:value-of select="//list[@xml:lang=$lang]/century[@url=$date-type]"/>
-      </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
+
+  <xsl:template name="tocNav">
+    <div class="pagination-centered">
+      <ul class="date pagination">
+        <xsl:choose>
+          <xsl:when test="//century">
+            <!-- list of available date groups  -->
+            <li>
+              <xsl:attribute name="class">
+                <xsl:if test="$date-type='dated'">
+                  <xsl:text>current</xsl:text>
+                </xsl:if>
+              </xsl:attribute>
+              <a href="dated.html">
+                <i18n:text>Dated by year</i18n:text>
+              </a>
+            </li>
+
+            <xsl:if test="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
+              <li class="unavailable">
+                <a href="#">
+                  <i18n:text>By century: BCE</i18n:text>
+                </a>
+              </li>
+              <xsl:for-each
+                select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
+                <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num"
+                  data-type="number" order="descending"/>
+                <li>
+                  <xsl:attribute name="class">
+                    <xsl:if test="current() = $date-type">
+                      <xsl:text>current</xsl:text>
+                    </xsl:if>
+                  </xsl:attribute>
+                  <a href="{.}.html">
+                    <xsl:value-of select="substring-before(., '-')"/>
+                  </a>
+                </li>
+              </xsl:for-each>
+            </xsl:if>
+
+            <xsl:if test="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'CE']">
+              <li class="unavailable">
+                <a href="#">
+                  <i18n:text>By century: CE</i18n:text>
+                </a>
+              </li>
+              <xsl:for-each
+                select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'CE']">
+                <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num"
+                  data-type="number"/>
+                <li>
+                  <xsl:attribute name="class">
+                    <xsl:if test="current() = $date-type">
+                      <xsl:text>current</xsl:text>
+                    </xsl:if>
+                  </xsl:attribute>
+                  <a href="{.}.html">
+                    <xsl:value-of select="substring-before(., '-')"/>
+                  </a>
+                </li>
+              </xsl:for-each>
+            </xsl:if>
+          </xsl:when>
+          <xsl:when test="//letters">
+            <!-- list of available letters  -->
+            <xsl:for-each select="//letters/letter">
+              <li>
+                <a href="{.}{$kiln:url-lang-suffix}.html">
+                  <xsl:value-of select="."/>
+                </a>
+              </li>
+            </xsl:for-each>
+          </xsl:when>
+        </xsl:choose>
+      </ul>
+    </div>
+  </xsl:template>
+
 
   <xsl:template name="generateTocDate">
     <!-- exclude duplicates (caused by multiple inscriptions within the same file with the same date) -->
@@ -31,7 +99,9 @@
         select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
                                   and not(str[@name='file'] = preceding-sibling::doc/str[@name='file']) ]"
         group-by="int[@name='date-notBefore']">
+        <xsl:sort select="int[@name='date-notBefore']"/>
         <xsl:for-each-group select="current-group()" group-by="int[@name='date-notAfter']">
+          <xsl:sort select="int[@name='date-notAfter']"/>
           <xsl:if test="not(str[@name='tei-id'] = '')">
             <!-- Remove empty elements which might have been indexed -->
             <dt>
@@ -61,7 +131,7 @@
                   <xsl:choose>
                     <xsl:when
                       test="translate(
-                              normalize-space(str[@name=concat('inscription-title-', $lang)]), 
+                              normalize-space(str[@name=concat('inscription-title-', $lang)]),
                               ' ', '') = ''">
                       <xsl:text>[</xsl:text>
                       <i18n:text>no title</i18n:text>

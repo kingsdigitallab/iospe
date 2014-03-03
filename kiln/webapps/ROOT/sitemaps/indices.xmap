@@ -342,6 +342,7 @@
           <map:parameter name="url" value="indices/names/{1}-{2}.html"/>
           <map:parameter name="index" value="attested"/>
           <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="current" value="{1}"/>
           <map:parameter name="lang" value="{2}"/>
         </map:transform>
         <map:transform type="i18n">
@@ -363,6 +364,7 @@
           <map:parameter name="ancient-lang" value="all"/>
           <map:parameter name="index" value="attested"/>
           <map:parameter name="lang" value="en"/>
+          <map:parameter name="current" value="{1}"/>
         </map:transform>
         <map:transform type="i18n">
           <map:parameter name="locale" value="en"/>
@@ -384,6 +386,7 @@
           <map:parameter name="url" value="indices/{1}/{2}/{3}-{4}.html"/>
           <map:parameter name="index" value="{1}"/>
           <map:parameter name="ancient-lang" value="{2}"/>
+          <map:parameter name="current" value="{3}"/>
           <map:parameter name="lang" value="{4}"/>
         </map:transform>
         <map:transform type="i18n">
@@ -402,8 +405,9 @@
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/{1}/{2}/{3}.html"/>
-          <map:parameter name="ancient-lang" value="{2}"/>
           <map:parameter name="index" value="{1}"/>
+          <map:parameter name="ancient-lang" value="{2}"/>
+          <map:parameter name="current" value="{3}"/>
           <map:parameter name="lang" value="en"/>
         </map:transform>
         <map:transform type="i18n">
