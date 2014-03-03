@@ -1320,7 +1320,7 @@
             </xsl:variable>
 
             <xsl:choose>
-              <xsl:when test="$norm-surname = ''">
+              <xsl:when test="count($norm-surname) = 0">
                 <xsl:value-of select="string-join($cur-surname, ', ')"/>
               </xsl:when>
               <xsl:otherwise>
