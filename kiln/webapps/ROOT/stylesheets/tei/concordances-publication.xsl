@@ -26,8 +26,7 @@
       </xsl:for-each-group>
     </xsl:variable>
 
-
-    <xsl:variable name="item-count" select="count($distinct-bibls/*)"/>
+    <xsl:variable name="item-count" select="count($distinct-publications/*)"/>
     <table class="concordance">
       <tbody>
         <xsl:choose>
