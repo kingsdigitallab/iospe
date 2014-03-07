@@ -13,21 +13,10 @@
   </xsl:template>
 
   <xsl:template name="generatePublicationConcordance">
-    <xsl:variable name="distinct-bibls">
-      <xsl:for-each-group select="//doc" group-by="str[@name='tei-id']">
-        <!-- Sorting here: too complex to determine one sorting field in Solr! -->
-        <xsl:sort select="iospe:mixedSort(str[@name='publications'])" data-type="number"
-          order="ascending"/>
-
-        <doc>
-          <xsl:sequence select="str[@name='tei-id']"/>
-          <xsl:sequence select="str[@name='publications']"/>
-        </doc>
-      </xsl:for-each-group>
-    </xsl:variable>
-
     <xsl:variable name="distinct-publications">
-      <xsl:for-each-group select="$distinct-bibls/doc" group-by="str[@name='publications']">
+      <xsl:for-each-group select="//doc" group-by="str[@name='publications']">
+        <xsl:sort select="iospe:mixedSort(current-grouping-key())" data-type="number"
+          order="ascending"/>
         <publication>
           <xsl:attribute name="publication-id">
             <xsl:value-of select="current-grouping-key()"/>
@@ -73,7 +62,7 @@
 
           <td>
             <ul class="inline-list">
-              <xsl:for-each select="str[@name='tei-id']">
+              <xsl:for-each select="distinct-values(str[@name='tei-id'])">
                 <li>
                   <a href="../../{.}.html">
                     <xsl:number value="substring-before(.,'.')" format="I"/>
