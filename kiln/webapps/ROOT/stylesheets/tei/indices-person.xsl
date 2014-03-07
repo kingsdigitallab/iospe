@@ -534,6 +534,15 @@
             <xsl:when test="@name = 'wife'">
               <i18n:text>wife of</i18n:text>
             </xsl:when>
+            <xsl:when test="@name = 'grandfather'">
+              <i18n:text>grandfather of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'grandson'">
+              <i18n:text>grandson of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'granddaughter'">
+              <i18n:text>granddaughter of</i18n:text>
+            </xsl:when>
           </xsl:choose>
           <!-- space after relationship -->
           <xsl:text> </xsl:text>
