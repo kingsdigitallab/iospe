@@ -26,88 +26,74 @@
       </xsl:for-each-group>
     </xsl:variable>
 
+    <xsl:variable name="distinct-publications">
+      <xsl:for-each-group select="$distinct-bibls/doc" group-by="str[@name='publications']">
+        <publication>
+          <xsl:attribute name="publication-id">
+            <xsl:value-of select="current-grouping-key()"/>
+          </xsl:attribute>
+          <xsl:sequence select="current-group()/str[@name='tei-id']"/>
+        </publication>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+
     <xsl:variable name="item-count" select="count($distinct-bibls/*)"/>
+    <table class="concordance">
+      <tbody>
+        <xsl:choose>
+          <xsl:when test="$item-count >= 30">
 
-    <xsl:choose>
-      <xsl:when test="$item-count >= 30">
-        <div class="concordance">
-          <xsl:call-template name="tpl-dl">
-            <xsl:with-param name="col" select="1"/>
-            <xsl:with-param name="item-count" select="$item-count"/>
-            <xsl:with-param name="bibls" select="$distinct-bibls"/>
-          </xsl:call-template>
-          <xsl:call-template name="tpl-dl">
-            <xsl:with-param name="col" select="2"/>
-            <xsl:with-param name="item-count" select="$item-count"/>
-            <xsl:with-param name="bibls" select="$distinct-bibls"/>
-          </xsl:call-template>
-          <xsl:call-template name="tpl-dl">
-            <xsl:with-param name="col" select="3"/>
-            <xsl:with-param name="item-count" select="$item-count"/>
-            <xsl:with-param name="bibls" select="$distinct-bibls"/>
-          </xsl:call-template>
-        </div>
-      </xsl:when>
-      <xsl:otherwise>
-        <div class="concordance">
-
-          <dl>
             <xsl:call-template name="tpl-dl">
-              <xsl:with-param name="col" select="1"/>
-              <xsl:with-param name="item-count" select="$item-count"/>
-              <xsl:with-param name="bibls" select="$distinct-bibls"/>
+              <xsl:with-param name="ncols" select="3"/>
+              <xsl:with-param name="pubs" select="$distinct-publications"/>
             </xsl:call-template>
-          </dl>
-        </div>
-
-      </xsl:otherwise>
-    </xsl:choose>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="tpl-dl">
+              <xsl:with-param name="ncols" select="1"/>
+              <xsl:with-param name="pubs" select="$distinct-publications"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
+      </tbody>
+    </table>
   </xsl:template>
 
   <xsl:template name="tpl-dl">
-    <xsl:param name="col"/>
-    <xsl:param name="item-count"/>
-    <xsl:param name="bibls"/>
+    <xsl:param name="ncols"/>
+    <xsl:param name="pubs"/>
 
-    <xsl:variable name="div">
-      <xsl:number value="ceiling($item-count div 3)"/>
-    </xsl:variable>
-    <xsl:variable name="bottom-limit">
-      <xsl:number value="$div * ($col - 1)" format="0001"/>
-    </xsl:variable>
-    <xsl:variable name="top-limit">
-      <xsl:number value="$div * $col" format="0001"/>
-    </xsl:variable>
-    <div class="large-4 columns col{$col}" xsl:exclude-result-prefixes="#all">
+    <xsl:for-each select="$pubs/*[name()='publication'][position() mod $ncols = 1 or $ncols = 1]">
+      <tr xsl:exclude-result-prefixes="#all">
+        <xsl:for-each select=". | following-sibling::publication[position() &lt; $ncols]">
+          <td>
 
-      <dl>
-        <xsl:for-each-group select="$bibls/*[name()='doc']" group-by="str[@name='publications']">
-          <xsl:variable name="item-pos">
-            <xsl:number format="0001"/>
-          </xsl:variable>
-          <xsl:if test="$top-limit >= $item-pos and $item-pos > $bottom-limit">
-            <dt>
-              <xsl:value-of select="current-grouping-key()"/>
-            </dt>
-            <dd>
-              <ul class="inline-list">
-                <xsl:for-each select="current-group()">
-                  <li>
-                    <a href="../../{str[@name='tei-id']}.html">
-                      <xsl:number value="substring-before(str[@name='tei-id'],'.')" format="I"/>
-                      <xsl:text>&#xa0;</xsl:text>
-                      <xsl:number value="substring-after(str[@name='tei-id'],'.')" format="1"/>
-                      <!--<xsl:value-of select="substring-after(str[@name='tei-id'],'byz')"/>-->
-                    </a>
-                  </li>
+            <strong>
+              <xsl:value-of select="@publication-id"/>
+            </strong>
+          </td>
 
-                </xsl:for-each>
-              </ul>
-            </dd>
-          </xsl:if>
-        </xsl:for-each-group>
-      </dl>
-    </div>
+          <td>
+            <ul class="inline-list">
+              <xsl:for-each select="str[@name='tei-id']">
+                <li>
+                  <a href="../../{.}.html">
+                    <xsl:number value="substring-before(.,'.')" format="I"/>
+                    <xsl:text>&#xa0;</xsl:text>
+                    <xsl:number value="substring-after(.,'.')" format="1"/>
+                    <!--<xsl:value-of select="substring-after(str[@name='tei-id'],'byz')"/>-->
+                  </a>
+                </li>
+
+              </xsl:for-each>
+            </ul>
+          </td>
+
+        </xsl:for-each>
+      </tr>
+    </xsl:for-each>
+
   </xsl:template>
 
   <xsl:function name="iospe:mixedSort">
