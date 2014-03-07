@@ -67,11 +67,8 @@
     <xsl:for-each select="$pubs/*[name()='publication'][position() mod $ncols = 1 or $ncols = 1]">
       <tr xsl:exclude-result-prefixes="#all">
         <xsl:for-each select=". | following-sibling::publication[position() &lt; $ncols]">
-          <td>
-
-            <strong>
-              <xsl:value-of select="@publication-id"/>
-            </strong>
+          <td class="head">
+            <xsl:value-of select="@publication-id"/>
           </td>
 
           <td>
@@ -89,6 +86,17 @@
               </xsl:for-each>
             </ul>
           </td>
+          <xsl:if test="position() = last() and last() &lt; $ncols">
+            <!-- Fill with empty td's if table not complete -->
+            <xsl:for-each select="position() + 1 to $ncols">
+              <td class="head">
+                <xsl:text> </xsl:text>
+              </td>
+              <td>
+                <xsl:text> </xsl:text>
+              </td>
+            </xsl:for-each>
+          </xsl:if>
 
         </xsl:for-each>
       </tr>
