@@ -414,6 +414,29 @@
           <th>
             <xsl:value-of select="$persname_lang"/>
             <xsl:text> </xsl:text>
+            <small>
+              <i18n:text>See:</i18n:text>
+              <xsl:text> </xsl:text>
+              <xsl:choose>
+                <xsl:when
+                  test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">
+                  <xsl:value-of
+                    select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='grc'][1]"/>
+                  <xsl:if
+                    test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[not(@type)][@xml:lang='la']">
+                    <xsl:text> / </xsl:text>
+                    <xsl:value-of
+                      select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='la'][1]"
+                    />
+                  </xsl:if>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of
+                    select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[1]"
+                  />
+                </xsl:otherwise>
+              </xsl:choose>
+            </small>
           </th>
 
           <xsl:if test="$index='ruler'">
@@ -441,28 +464,7 @@
             <xsl:text> </xsl:text>
           </td>
           <td class="inscriptions">
-
-            <i18n:text>See:</i18n:text>
             <xsl:text> </xsl:text>
-            <xsl:choose>
-              <xsl:when
-                test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">
-                <xsl:value-of
-                  select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='grc'][1]"/>
-                <xsl:if
-                  test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[not(@type)][@xml:lang='la']">
-                  <xsl:text> / </xsl:text>
-                  <xsl:value-of
-                    select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[@xml:lang='la'][1]"
-                  />
-                </xsl:if>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of
-                  select="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/tei:persName[1]"
-                />
-              </xsl:otherwise>
-            </xsl:choose>
           </td>
         </tr>
 
@@ -488,7 +490,7 @@
 
       <td class="flourit">
         <xsl:value-of select="tei:floruit/tei:seg[@xml:lang=$lang]"/>
-        <xsl:text> </xsl:text>st
+        <xsl:text> </xsl:text>
       </td>
 
       <td class="relations">
