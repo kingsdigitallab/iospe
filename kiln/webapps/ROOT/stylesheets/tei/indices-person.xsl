@@ -50,22 +50,13 @@
           <table class="indices indices-person">
             <thead>
               <tr>
-                
-                <th>
-                  <i18n:text key="__person_index_devine">English name</i18n:text>
-                </th>
-                <th>
-                  <i18n:text>Greek name</i18n:text>
-                </th>
-                <th>
-                  <i18n:text>Latin name</i18n:text>
-                </th>
-                
+
                 <th>
                   <xsl:text> </xsl:text>
                 </th>
+
                 <th>
-                  <i18n:text>Full name</i18n:text>
+                  <i18n:text>Attested Form</i18n:text>
                 </th>
                 <th>
                   <i18n:text>Inscriptions</i18n:text>
@@ -125,16 +116,13 @@
                     <thead>
                       <tr>
                         <th>
-                          <i18n:text key="__person_index_ruler">Ruler and Title</i18n:text>
+                          <xsl:text> </xsl:text>
                         </th>
                         <th>
-                          <i18n:text>Greek name</i18n:text>
+                          <i18n:text>Full Name and Titles</i18n:text>
                         </th>
                         <th>
-                          <i18n:text>Latin name</i18n:text>
-                        </th>
-                        <th>
-                          <i18n:text>Date</i18n:text>
+                          <i18n:text>Reign</i18n:text>
                         </th>
                         <th>
                           <i18n:text>Attested Form</i18n:text>
@@ -188,16 +176,13 @@
                     <thead>
                       <tr>
                         <th>
-                          <i18n:text key="__person_index_ruler">Ruler and Title</i18n:text>
+                          <xsl:text> </xsl:text>
                         </th>
                         <th>
-                          <i18n:text>Greek name</i18n:text>
+                          <i18n:text>Full Name and Titles</i18n:text>
                         </th>
                         <th>
-                          <i18n:text>Latin name</i18n:text>
-                        </th>
-                        <th>
-                          <i18n:text>Date</i18n:text>
+                          <i18n:text>Reign</i18n:text>
                         </th>
                         <th>
                           <i18n:text>Attested Form</i18n:text>
@@ -370,25 +355,28 @@
                 <xsl:text> </xsl:text>
               </th>
 
-              <td>
-                <xsl:attribute name="rowspan" select="last()"/>
-                <xsl:value-of select="$persname_grc"/>
-                <xsl:text> </xsl:text>
-              </td>
+              <xsl:if test="$index='ruler'">
+                <td>
+                  <xsl:attribute name="rowspan" select="last()"/>
+                  <xsl:choose>
+                    <xsl:when test="not(normalize-space($persname_la) = '')">
+                      <xsl:value-of select="$persname_la"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="$persname_grc"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:text> </xsl:text>
+                </td>
 
-              <td>
-                <xsl:attribute name="rowspan" select="last()"/>
-                <xsl:value-of select="$persname_la"/>
-                <xsl:text> </xsl:text>
-              </td>
-
-              <td>
-                <xsl:attribute name="rowspan" select="last()"/>
-                <xsl:value-of select="$floruit"/>
-                <xsl:text> </xsl:text>
-              </td>
+                <td>
+                  <xsl:attribute name="rowspan" select="last()"/>
+                  <xsl:value-of select="$floruit"/>
+                  <xsl:text> </xsl:text>
+                </td>
+              </xsl:if>
             </xsl:if>
-            
+
 
             <xsl:variable name="offset">
               <xsl:if test="position() > 1">
@@ -428,20 +416,26 @@
             <xsl:text> </xsl:text>
           </th>
 
-          <td>
-            <xsl:value-of select="$persname_grc"/>
-            <xsl:text> </xsl:text>
-          </td>
+          <xsl:if test="$index='ruler'">
+            <td>
+              <xsl:attribute name="rowspan" select="last()"/>
+              <xsl:choose>
+                <xsl:when test="not(normalize-space($persname_la) = '')">
+                  <xsl:value-of select="$persname_la"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="$persname_grc"/>
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:text> </xsl:text>
+            </td>
 
-          <td>
-            <xsl:value-of select="$persname_la"/>
-            <xsl:text> </xsl:text>
-          </td>
-
-          <td class="floruit">
-            <xsl:value-of select="$floruit"/>
-            <xsl:text> </xsl:text>
-          </td>
+            <td>
+              <xsl:attribute name="rowspan" select="last()"/>
+              <xsl:value-of select="$floruit"/>
+              <xsl:text> </xsl:text>
+            </td>
+          </xsl:if>
 
           <td class="full_name">
             <xsl:text> </xsl:text>
@@ -494,7 +488,7 @@
 
       <td class="flourit">
         <xsl:value-of select="tei:floruit/tei:seg[@xml:lang=$lang]"/>
-        <xsl:text> </xsl:text>
+        <xsl:text> </xsl:text>st
       </td>
 
       <td class="relations">
