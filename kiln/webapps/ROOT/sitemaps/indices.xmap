@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- search sitemap. -->
-<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <map:views>
     <map:view from-label="content" name="content">
@@ -334,9 +335,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/names/{1}-{2}.html"/>
           <map:part src="cocoon:/getLetters/attested"/>
-          <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:attested&amp;fq=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999"
-          />
+          <map:part src="cocoon:/getIndex/attested/{1}"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/names/{1}-{2}.html"/>
@@ -355,9 +354,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/names/{1}.html"/>
           <map:part src="cocoon:/getLetters/attested"/>
-          <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:attested&amp;fq=attested:*%20AND%20first-letter:{1}&amp;sort=attested-sort%20asc&amp;rows=999"
-          />
+          <map:part src="cocoon:/getIndex/attested/{1}"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/names/{1}.html"/>
@@ -679,6 +676,25 @@
         <map:generate
           src="cocoon://_internal/solr/query/q=dt:{2}&amp;fq=lang:{1}&amp;sort=first-letter%20asc&amp;rows=9999"/>
         <map:transform src="../stylesheets/getLetters.xsl"> </map:transform>
+        <map:serialize/>
+      </map:match>
+
+      <map:match pattern="getIndex/*/*">
+
+        <map:select type="parameter">
+          <map:parameter name="parameter-selector-test" value="{2}"/>
+
+          <map:when test="—">
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:%E2%80%94&amp;sort={1}-sort%20asc&amp;rows=999"/>
+          </map:when>
+
+          <map:otherwise>
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:&quot;{2}&quot;&amp;sort={1}-sort%20asc&amp;rows=999"/>
+          </map:otherwise>
+
+        </map:select>
         <map:serialize/>
       </map:match>
     </map:pipeline>

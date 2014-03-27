@@ -368,10 +368,12 @@
             <field name="first-letter-grc">
               <xsl:value-of
                 select="substring(
-                        translate(
-                          translate(normalize-space(.), $lowercase, $uppercase),
-                          $grkb4, $grkafter),
-                        1,1)"
+                          translate(
+                            translate(
+                              translate(normalize-space(.), $lowercase, $uppercase),
+                              $grkb4, $grkafter),
+                            '?.-', '—'),
+                          1,1)"
               />
             </field>
           </xsl:if>
@@ -380,19 +382,25 @@
               <xsl:when test="$lang = 'grc'">
                 <xsl:value-of
                   select="substring(
-                          translate(
                             translate(
-                              translate(normalize-space(.), $lowercase, $uppercase),
-                              $grkb4, $grkafter),
-                            $unicode, $betacode),
-                          1,1)"
+                              translate(
+                                translate(
+                                  translate(normalize-space(.), $lowercase, $uppercase),
+                                  $grkb4, $grkafter),
+                                $unicode, $betacode),
+                              '?.-', '—'),
+                            1,1)"
                 />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of
                   select="substring(
-                          translate(normalize-space(.), $lowercase, $uppercase),
-                          1,1)"
+                            translate(
+                              translate(
+                                normalize-space(.), 
+                                $lowercase, $uppercase),
+                              '?.-', '—'),
+                            1,1)"
                 />
               </xsl:otherwise>
             </xsl:choose>
@@ -614,8 +622,10 @@
             <xsl:value-of
               select="substring(
                         translate(
-                          translate(normalize-space(.), $lowercase, $uppercase),
-                          $grkb4, $grkafter),
+                          translate(
+                            translate(normalize-space(.), $lowercase, $uppercase),
+                            $grkb4, $grkafter),
+                          '?.-', '—'),
                         1,1)"
             />
           </field>
@@ -627,16 +637,22 @@
                 select="substring(
                           translate(
                             translate(
-                              translate(normalize-space(.), $lowercase, $uppercase),
-                              $grkb4, $grkafter),
-                            $unicode, $betacode),
+                              translate(
+                                translate(normalize-space(.), $lowercase, $uppercase),
+                                $grkb4, $grkafter),
+                              $unicode, $betacode),
+                            '?.-', '—'),
                           1,1)"
               />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
                 select="substring(
-                          translate(normalize-space(.), $lowercase, $uppercase),
+                          translate(
+                            translate(
+                              normalize-space(.), 
+                              $lowercase, $uppercase),
+                            '?.-', '—'),
                           1,1)"
               />
             </xsl:otherwise>
@@ -779,7 +795,7 @@
 
   <!-- Unit: NAME -->
 
-  <xsl:template match="tei:div[@type='edition']//tei:name[not(preceding-sibling::tei:name = .)] 
+  <xsl:template match="tei:div[@type='edition']//tei:name[not(preceding-sibling::tei:name = .)]
     | tei:div[@type='edition']//tei:roleName"
     mode="name">
     <xsl:variable name="idno"
@@ -826,8 +842,10 @@
             <xsl:value-of
               select="substring(
                         translate(
-                          translate(normalize-space(.), $lowercase, $uppercase),
-                          $grkb4, $grkafter),
+                          translate(
+                            translate(normalize-space(.), $lowercase, $uppercase),
+                            $grkb4, $grkafter),
+                          '?.-', '—'),
                         1,1)"
             />
           </field>
@@ -839,16 +857,22 @@
                 select="substring(
                           translate(
                             translate(
-                              translate(normalize-space(.), $lowercase, $uppercase),
-                              $grkb4, $grkafter),
-                            $unicode, $betacode),
+                              translate(
+                                translate(normalize-space(.), $lowercase, $uppercase),
+                                $grkb4, $grkafter),
+                              $unicode, $betacode),
+                            '?.-', '—'),
                           1,1)"
               />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
                 select="substring(
-                          translate(normalize-space(.), $lowercase, $uppercase),
+                          translate(
+                            translate(
+                              normalize-space(.), 
+                              $lowercase, $uppercase),
+                            '?.-', '—'),
                           1,1)"
               />
             </xsl:otherwise>
@@ -988,7 +1012,7 @@
                             translate(
                               translate(normalize-space(.), $lowercase, $uppercase),
                               $grkb4, $grkafter),
-                            '-', ''),
+                            '-.?', '—'),
                           1, 1)"
               />
             </field>
@@ -1004,14 +1028,18 @@
                                   translate(normalize-space(.), $lowercase, $uppercase),
                                   $grkb4, $grkafter),
                                 $unicode, $betacode),
-                              '-', ''),
+                              '-.?', '—'),
                             1, 1)"
                 />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of
                   select="substring(
-                            translate(normalize-space(.), $lowercase, $uppercase),
+                            translate(
+                              translate(  
+                                normalize-space(.), 
+                                $lowercase, $uppercase),
+                              '?.-', '—'),
                             1,1)"
                 />
               </xsl:otherwise>
