@@ -305,7 +305,18 @@
                     <tbody>
                       <xsl:for-each select="//persons//tei:person">
                         <xsl:sort
-                          select="concat(upper-case(replace(normalize-unicode(normalize-space(tei:persName[@xml:lang=$lang]),'NFKD'),'[^A-Za-z0-9А-Яа-я ]','')), 'ЯЯЯ')"/>
+                          select="concat(
+                                    upper-case(
+                                      replace(
+                                        replace(
+                                          normalize-unicode(
+                                            normalize-space(tei:persName[@xml:lang=$lang]),
+                                            'NFKD'),
+                                          '[?\-\.]', '–'),
+                                        '[^A-Za-z0-9А-Яа-я –]','')
+                                      ), 
+                                    'ЯЯЯ')"/>
+                        
                         <xsl:call-template name="person"/>
                       </xsl:for-each>
                     </tbody>
