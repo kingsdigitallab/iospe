@@ -68,6 +68,13 @@
       </map:match>
     </map:pipeline>
 
+    <map:pipeline>
+      <!-- Inscriptions -->
+      <map:match pattern="inscriptions/**">
+        <map:mount check-reload="yes" src="inscriptions.xmap" uri-prefix="inscriptions/"/>
+      </map:match>
+    </map:pipeline>
+
     <!-- Main display pipeline. -->
     <map:pipeline>
       <map:match pattern="">
@@ -168,40 +175,6 @@
       <map:match pattern="*.xml">
         <map:generate src="../content/xml/tei/inscriptions/{1}.xml"/>
         <map:serialize type="xml"/>
-      </map:match>
-
-      <!-- Inscriptions -->
-
-      <map:match pattern="inscriptions/*-*.html">
-        <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=inscriptions/{1}-{2}.html"/>
-          <map:part src="cocoon://internal/metadata/files.xml"/>
-          <map:part src="../content/xml/tei/nadpisi/index.xml" label="tei"/>
-        </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tei.xsl">
-          <map:parameter name="url" value="inscriptions/{1}-{2}.html"/>
-          <map:parameter name="lang" value="{2}"/>
-        </map:transform>
-        <map:transform type="i18n">
-          <map:parameter name="locale" value="{2}"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>
-
-      <map:match pattern="inscriptions/*.html">
-        <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.xml?url=inscriptions/{1}.html"/>
-          <map:part src="cocoon://internal/metadata/files.xml"/>
-          <map:part src="../content/xml/tei/nadpisi/{1}.xml" label="tei"/>
-        </map:aggregate>
-        <map:transform src="cocoon://_internal/template/tei.xsl">
-          <map:parameter name="url" value="inscriptions/{1}.html"/>
-          <map:parameter name="lang" value="en"/>
-        </map:transform>
-        <map:transform type="i18n">
-          <map:parameter name="locale" value="en"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
       </map:match>
 
       <!-- documentation -->
