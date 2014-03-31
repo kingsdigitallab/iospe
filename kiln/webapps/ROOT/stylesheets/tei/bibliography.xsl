@@ -27,7 +27,7 @@
     <span>
       <xsl:attribute name="name" select="@xml:id"/>
     </span>
-    
+
     <xsl:variable name="analytic" select="./tei:analytic"/>
     <xsl:variable name="monogr" select="./tei:monogr"/>
     <xsl:variable name="series" select="./tei:series"/>
@@ -48,7 +48,14 @@
 
     <!-- Date -->
     <xsl:text> (</xsl:text>
-    <xsl:value-of select=".//tei:imprint/tei:date"/>
+    <xsl:choose>
+      <xsl:when test=".//tei:imprint/tei:date[1]">
+        <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <i18n:text key="__date_nd">n.d.</i18n:text>
+      </xsl:otherwise>
+    </xsl:choose>
     <xsl:text>). </xsl:text>
 
     <!-- Title -->
@@ -67,6 +74,7 @@
       <xsl:text>. </xsl:text>
     </em>
 
+    <!-- secondary titles -->
     <xsl:if test="$analytic">
       <xsl:apply-templates select="$monogr" mode="secondary"/>
       <xsl:apply-templates select="$series" mode="secondary"/>
@@ -80,7 +88,7 @@
     <xsl:apply-templates select="$analytic" mode="scope"/>
 
 
-    <!-- Place & Publisher-->
+    <!-- Location & Publisher-->
     <xsl:if test=".//tei:imprint/tei:pubPlace">
       <xsl:value-of select=".//tei:imprint/tei:pubPlace[@xml:lang=$lang or not(@xml:lang)]"/>
       <xsl:if test=".//tei:imprint/tei:publisher">
@@ -142,10 +150,12 @@
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="scope">
     <xsl:for-each select="./tei:biblScope">
-      <xsl:value-of select="@type"/>
+      <i18n:text>
+        <xsl:value-of select="normalize-space(@type)"/>
+      </i18n:text>
       <xsl:text> </xsl:text>
       <xsl:value-of select="."/>
-      <i18n:text>. </i18n:text>
+      <xsl:text>. </xsl:text>
     </xsl:for-each>
   </xsl:template>
 
