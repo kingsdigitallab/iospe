@@ -4,7 +4,11 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
   xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0">
 
+
   <xsl:param name="concordance"/>
+
+
+  <xsl:import href="bibliography.xsl"/>
 
   <xsl:template match="/"/>
 
@@ -13,6 +17,11 @@
   </xsl:template>
 
   <xsl:template name="generatePublicationConcordance">
+    <p class="reference">
+      <xsl:apply-templates
+        select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()//str[@name='bibl-target']]"/>
+    </p>
+    
     <xsl:variable name="distinct-publications">
       <xsl:for-each-group select="//doc" group-by="str[@name='publications']">
         <xsl:sort select="iospe:mixedSort(current-grouping-key())" data-type="number"

@@ -17,6 +17,7 @@
       <map:match pattern="index-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=conc/index-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
             src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"
           />
@@ -35,6 +36,7 @@
       <map:match pattern="index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=conc/index.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
             src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"
           />
@@ -54,6 +56,7 @@
       <map:match pattern="publications/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=conc/publications/{1}-{2}.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
             src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999"
           />
@@ -72,6 +75,7 @@
       <map:match pattern="publications/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=conc/publications/{1}.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
             src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999"
           />

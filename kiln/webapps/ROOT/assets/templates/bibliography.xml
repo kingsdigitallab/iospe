@@ -25,7 +25,11 @@
     </kiln:block>
 
     <kiln:block name="content">
-      <xsl:call-template name="generateBibliography"/>
+      <div class="row">
+        <div class="large-8 medium-12 small-11 columns">
+          <xsl:call-template name="generateBibliography"/>
+        </div>
+      </div>
     </kiln:block>
 
   </kiln:child>
