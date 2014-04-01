@@ -135,7 +135,8 @@
       </xsl:choose>
 
       <xsl:if test="./local-name() = 'editor'">
-        <i18n:text> (Ed.)</i18n:text>
+        <xsl:text> </xsl:text>
+        <i18n:text key="__bibliography_editor">(Ed.)</i18n:text>
       </xsl:if>
 
       <xsl:if test="not(position() = last())">
@@ -161,7 +162,8 @@
 
   <xsl:template match="tei:monogr | tei:series" mode="secondary">
 
-    <i18n:text>In </i18n:text>
+    <i18n:text>In</i18n:text>
+    <xsl:text> </xsl:text>
 
     <!-- Authors -->
     <xsl:if test="./(tei:author | tei:editor)">
