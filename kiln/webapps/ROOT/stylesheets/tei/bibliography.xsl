@@ -56,23 +56,29 @@
         <i18n:text key="__date_nd">n.d.</i18n:text>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:text>). </xsl:text>
+    <xsl:text>) </xsl:text>
 
     <!-- Title -->
-    <em>
-      <xsl:choose>
-        <xsl:when test="$analytic">
+
+    <xsl:choose>
+      <xsl:when test="$analytic">
+        <em>
           <xsl:apply-templates select="$analytic" mode="title"/>
-        </xsl:when>
-        <xsl:when test="not($analytic) and  $monogr">
-          <xsl:apply-templates select="$monogr" mode="title"/>
-        </xsl:when>
-        <xsl:when test="not($analytic | $monogr) and $series">
-          <xsl:apply-templates select="$series" mode="title"/>
-        </xsl:when>
-      </xsl:choose>
-      <xsl:text>. </xsl:text>
-    </em>
+        </em>
+      </xsl:when>
+      <xsl:when test="not($analytic) and  $monogr">
+        <xsl:text>"</xsl:text>
+        <xsl:apply-templates select="$monogr" mode="title"/>
+        <xsl:text>"</xsl:text>
+      </xsl:when>
+      <xsl:when test="not($analytic | $monogr) and $series">
+        <xsl:text>"</xsl:text>
+        <xsl:apply-templates select="$series" mode="title"/>
+        <xsl:text>"</xsl:text>
+      </xsl:when>
+    </xsl:choose>
+    <xsl:text>. </xsl:text>
+
 
     <!-- secondary titles -->
     <xsl:if test="$analytic">
