@@ -208,7 +208,7 @@
                                             'NFKD'),
                                           '[?\-\.]', '–'),
                                         '[^A-Za-z0-9А-Яа-я ]','')
-                                      ), 
+                                      ),
                                     'ЯЯЯ')"/>
                         <xsl:call-template name="character"/>
                       </xsl:for-each>
@@ -327,9 +327,9 @@
                                             'NFKD'),
                                           '[?\-\.]', '–'),
                                         '[^A-Za-z0-9А-Яа-я –]','')
-                                      ), 
+                                      ),
                                     'ЯЯЯ')"/>
-                        
+
                         <xsl:call-template name="person"/>
                       </xsl:for-each>
                     </tbody>
@@ -439,8 +439,8 @@
             <xsl:value-of select="$persname_lang"/>
             <xsl:text> </xsl:text>
             <small>
-              <i18n:text>See:</i18n:text>
-              <xsl:text> </xsl:text>
+              <i18n:text>see</i18n:text>
+              <xsl:text>: </xsl:text>
               <xsl:choose>
                 <xsl:when
                   test="//AL//tei:person[@xml:id=substring-after(current()/@sameAs,'#')]/count(tei:persName[@xml:lang])>1">

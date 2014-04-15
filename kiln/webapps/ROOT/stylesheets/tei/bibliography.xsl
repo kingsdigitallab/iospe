@@ -25,7 +25,7 @@
   <xsl:template match="tei:biblStruct">
 
     <span>
-      <xsl:attribute name="name" select="@xml:id"/>
+      <xsl:attribute name="id" select="@xml:id"/>
     </span>
 
     <xsl:variable name="analytic" select="./tei:analytic"/>
