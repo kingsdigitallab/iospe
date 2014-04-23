@@ -1645,9 +1645,9 @@
     <span style="font-style: normal; important!" xsl:exclude-result-prefixes="tei">
       <xsl:choose>
         <xsl:when test="ancestor::tei:app">
-          <xsl:if test="parent::tei:lem or parent::tei:rdg">
+          <!--<xsl:if test="parent::tei:lem or parent::tei:rdg">
             <xsl:text>:</xsl:text>
-          </xsl:if>
+          </xsl:if>-->
           <xsl:apply-templates/>
           <xsl:if test="preceding-sibling::tei:rdg and following-sibling::tei:rdg">
             <xsl:text>; </xsl:text>
