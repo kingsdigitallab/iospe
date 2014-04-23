@@ -785,7 +785,7 @@
                       select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl">
                       <xsl:if test="@n">
                         <xsl:value-of select="@n"/>
-                        <xsl:text> </xsl:text>
+                        <xsl:text>. </xsl:text>
                       </xsl:if>
                       <xsl:variable name="target" select="tei:ptr/@target"/>
                       <xsl:for-each
