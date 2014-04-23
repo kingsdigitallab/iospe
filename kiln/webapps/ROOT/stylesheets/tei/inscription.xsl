@@ -774,14 +774,18 @@
                 <xsl:choose>
                   <xsl:when
                     test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//text()[not(normalize-space(.)='')]]">
-                    <xsl:for-each
-                      select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl">
-                      <xsl:if test="@n">
+                    <xsl:if test="@n">
                         <em>
                           <i18n:text>Fragment </i18n:text>
                           <xsl:value-of select="@n"/>
                           <xsl:text>. </xsl:text>
                         </em>
+                      </xsl:if>
+                    <xsl:for-each
+                      select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl">
+                      <xsl:if test="@n">
+                        <xsl:value-of select="@n"/>
+                        <xsl:text>. </xsl:text>
                       </xsl:if>
                       <xsl:variable name="target" select="tei:ptr/@target"/>
                       <xsl:for-each
