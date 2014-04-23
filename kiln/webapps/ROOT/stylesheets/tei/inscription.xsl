@@ -1249,7 +1249,9 @@
   <xsl:template match="tei:lem">
     <xsl:apply-templates/>
     <xsl:call-template name="resp"/>
-    <xsl:text>: </xsl:text>
+    <xsl:if test="not(following-sibling::tei:note) and not(@resp)">
+      <xsl:text>: </xsl:text>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="tei:rdg">
