@@ -85,12 +85,16 @@
     <!-- title -->
     <xsl:value-of
       select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"/>
-    <xsl:text>, </xsl:text>
 
-    <!-- origDate -->
-    <xsl:value-of
-      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"
-    />
+    <xsl:if
+      test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]//tei:origDate)">
+      <xsl:text>, </xsl:text>
+
+      <!-- origDate -->
+      <xsl:value-of
+        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"
+      />
+    </xsl:if>
   </xsl:template>
 
   <!-- format inscription number -->

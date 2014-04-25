@@ -42,7 +42,7 @@
                 <xsl:when
                   test="translate(normalize-space(ancestor::doc/str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
                   <xsl:text>[</xsl:text>
-                  <i18n:text>no title</i18n:text>
+                  <i18n:text>ERROR: no title</i18n:text>
                   <xsl:text>]</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
