@@ -67,6 +67,32 @@
     </div>
   </xsl:template>
 
+
+  <xsl:template name="inscription-title">
+    <!-- inscription number -->
+    <xsl:call-template name="formatInscrNum">
+      <xsl:with-param name="num" select="//tei:publicationStmt/tei:idno[@type='filename']"/>
+      <xsl:with-param name="printCorpus" select="true()"/>
+      <xsl:with-param name="txt" select="true()"/>
+    </xsl:call-template>
+    <xsl:text>. </xsl:text>
+
+    <!-- origin -->
+    <xsl:value-of
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang=$lang]"/>
+    <xsl:text> </xsl:text>
+
+    <!-- title -->
+    <xsl:value-of
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"/>
+    <xsl:text>, </xsl:text>
+
+    <!-- origDate -->
+    <xsl:value-of
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"
+    />
+  </xsl:template>
+
   <!-- format inscription number -->
 
   <xsl:template name="formatInscrNum">
@@ -775,12 +801,12 @@
                   <xsl:when
                     test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//text()[not(normalize-space(.)='')]]">
                     <xsl:if test="@n">
-                        <em>
-                          <i18n:text>Fragment </i18n:text>
-                          <xsl:value-of select="@n"/>
-                          <xsl:text>. </xsl:text>
-                        </em>
-                      </xsl:if>
+                      <em>
+                        <i18n:text>Fragment </i18n:text>
+                        <xsl:value-of select="@n"/>
+                        <xsl:text>. </xsl:text>
+                      </em>
+                    </xsl:if>
                     <xsl:for-each
                       select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl">
                       <xsl:if test="@n">
