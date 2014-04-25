@@ -27,9 +27,8 @@
   <xsl:template name="generateConcordance">
     <xsl:variable name="distinct-bibls">
       <xsl:for-each-group select="//doc" group-by="str[@name=concat('bibl-short-',$lang)]">
-        <xsl:sort select="str[@name=concat('bibl-short-',$lang)]"/>
-        <!-- sorting here or solr?? -->
-        <!-- THIS MAY BE DONE IN SOLR if sorting value is bibl-short -->
+        <xsl:sort
+          select="normalize-space(/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id=current()/str[@name='bibl-target']]/*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/(tei:surname | tei:forename[not(following-sibling::tei:surname)])[@xml:lang=$lang or not(@xml:lang)][1])"/>
         <doc>
           <xsl:sequence select="str[@name=concat('bibl-short-',$lang)]"/>
           <xsl:sequence select="str[@name='bibl-target']"/>
@@ -37,90 +36,34 @@
       </xsl:for-each-group>
     </xsl:variable>
 
-    <xsl:variable name="item-count" select="count($distinct-bibls/*)"/>
+    <div class="large-8 medium-12 small-11 columns concordance" xsl:exclude-result-prefixes="#all">
+      <ul class="no-bullet">
+        <xsl:call-template name="tpl-list">
+          <xsl:with-param name="bibls" select="$distinct-bibls"/>
+          <xsl:with-param name="master-bib" select="/aggregation/bib"/>
+        </xsl:call-template>
+      </ul>
+    </div>
 
-    <xsl:choose>
-      <xsl:when test="$item-count >= 30">
-        <div class="concordance">
-          <xsl:call-template name="tpl-list">
-            <xsl:with-param name="col" select="1"/>
-            <xsl:with-param name="item-count" select="$item-count"/>
-            <xsl:with-param name="bibls" select="$distinct-bibls"/>
-            <xsl:with-param name="master-bib" select="/aggregation/bib"/>
-          </xsl:call-template>
-          <xsl:call-template name="tpl-list">
-            <xsl:with-param name="col" select="2"/>
-            <xsl:with-param name="item-count" select="$item-count"/>
-            <xsl:with-param name="bibls" select="$distinct-bibls"/>
-            <xsl:with-param name="master-bib" select="/aggregation/bib"/>
-          </xsl:call-template>
-          <xsl:call-template name="tpl-list">
-            <xsl:with-param name="col" select="3"/>
-            <xsl:with-param name="item-count" select="$item-count"/>
-            <xsl:with-param name="bibls" select="$distinct-bibls"/>
-            <xsl:with-param name="master-bib" select="/aggregation/bib"/>
-          </xsl:call-template>
-        </div>
-      </xsl:when>
-      <xsl:otherwise>
-
-        <div class="concordance">
-          <dl>
-            <xsl:call-template name="tpl-list">
-              <xsl:with-param name="col" select="1"/>
-              <xsl:with-param name="item-count" select="$item-count"/>
-              <xsl:with-param name="bibls" select="$distinct-bibls"/>
-              <xsl:with-param name="master-bib" select="/aggregation/bib"/>
-            </xsl:call-template>
-          </dl>
-        </div>
-
-      </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
 
 
   <xsl:template name="tpl-list">
-    <xsl:param name="col"/>
-    <xsl:param name="item-count"/>
     <xsl:param name="bibls"/>
     <xsl:param name="master-bib"/>
+    <xsl:for-each select="$bibls/*[name()='doc']">
+      <li>
+        <p class="reference">
+          <xsl:apply-templates
+            select="$master-bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()/str[@name='bibl-target']]"/>
 
-    <xsl:variable name="div">
-      <xsl:number value="ceiling($item-count div 3)"/>
-    </xsl:variable>
-    <xsl:variable name="bottom-limit">
-      <xsl:number value="$div * ($col - 1)" format="0001"/>
-    </xsl:variable>
-    <xsl:variable name="top-limit">
-      <xsl:number value="$div * $col" format="0001"/>
-    </xsl:variable>
-    <div class="large-4 columns col{$col}" xsl:exclude-result-prefixes="#all">
-
-      <ul class="no-bullet">
-        <xsl:for-each select="$bibls/*[name()='doc']">
-          <xsl:variable name="item-pos">
-            <xsl:number format="0001"/>
-          </xsl:variable>
-          <xsl:if test="$top-limit >= $item-pos and $item-pos > $bottom-limit">
-            <li>
-              <p class="reference">
-                <xsl:apply-templates
-                  select="$master-bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()/str[@name='bibl-target']]"/>
-                
-                <xsl:text> [</xsl:text>
-                <a href="publications/{(str[@name='bibl-target'])[1]}.html">
-                  <xsl:value-of select="normalize-space(str[@name=concat('bibl-short-',$lang)])"/>
-                </a>
-                <xsl:text>] </xsl:text>
-              </p>
-            </li>
-          </xsl:if>
-        </xsl:for-each>
-      </ul>
-    </div>
+          <xsl:text> [</xsl:text>
+          <a href="publications/{(str[@name='bibl-target'])[1]}.html">
+            <xsl:value-of select="normalize-space(str[@name=concat('bibl-short-',$lang)])"/>
+          </a>
+          <xsl:text>] </xsl:text>
+        </p>
+      </li>
+    </xsl:for-each>
   </xsl:template>
-
-
-
 </xsl:stylesheet>
