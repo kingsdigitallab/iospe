@@ -150,6 +150,12 @@
         <field name="origin-ru">
           <xsl:value-of select="tei:seg[@xml:lang='ru']"/>
         </field>
+        
+        <field name="inscription-has-date">
+          <xsl:if test="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
+            <xsl:text>yes</xsl:text>
+          </xsl:if>
+        </field>
         <!--<field name="origin-en">
         <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='en']"/>
       </field>
