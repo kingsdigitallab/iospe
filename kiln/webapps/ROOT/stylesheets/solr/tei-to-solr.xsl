@@ -516,9 +516,9 @@
         <field name="abbr">
           <xsl:variable name="aggr">
             <xsl:for-each
-              select="parent::tei:expan/descendant::tei:abbr/descendant::node()[self::text() or self::tei:g]">
+              select="parent::tei:expan/descendant::tei:abbr/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:del[parent::tei:subst])]">
               <xsl:sequence select="normalize-space(.)"/>
-            </xsl:for-each>
+            </xsl:for-each> 
           </xsl:variable>
 
           <xsl:for-each select="$aggr//node()">
@@ -538,42 +538,13 @@
             </xsl:for-each>
           </field>
         </xsl:if>
+        
+        
         <field name="expan">
-          <xsl:value-of select="normalize-space(ancestor::tei:expan)"/>
-        </field>
-        <!--<field name="abbr-sort">
-        <xsl:choose>
-          <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
-            <xsl:value-of select="translate(
-              translate(
-              translate(
-              string-join(normalize-space(.), for $a in following-sibling::tei:abbr return normalize-space($a)), $uppercase, $lowercase)
-              , $grkb4, $grkafter), ' ', '')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="translate(translate(normalize-space(ancestor::tei:expan), $uppercase, $lowercase), ' ', '')"/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </field>-->
-        <field name="expan-sort">
-          <xsl:choose>
-            <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
-              <xsl:value-of
-                select="translate(
-                        translate(
-                          translate(normalize-space(ancestor::tei:expan), $uppercase, $lowercase),
-                          $grkb4, $grkafter),
-                        ' ', '')"
-              />
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of
-                select="translate(
-                        translate(normalize-space(.), $uppercase, $lowercase),
-                        ' ', '')"
-              />
-            </xsl:otherwise>
-          </xsl:choose>
+          <xsl:for-each
+            select="parent::tei:expan/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:am or ancestor::tei:del[parent::tei:subst])]">
+            <xsl:value-of select="normalize-space(.)"/>
+          </xsl:for-each> 
         </field>
       </doc>
     </xsl:if>

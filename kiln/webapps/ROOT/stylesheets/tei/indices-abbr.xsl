@@ -39,6 +39,7 @@
 
         <xsl:for-each-group select="//doc"
           group-by="translate(translate(normalize-space(str[@name='abbr']), '[].? - ', ''), $lowercase, $transformation)">
+          <xsl:sort order="ascending" select="translate(normalize-unicode(current-grouping-key(),'NFD'),'&#x0301;&#x0313;&#x0314;&#x0342;','')"/>
 
 
           <xsl:if test="not(translate(str[@name='abbr'], ' ','') = '')">
@@ -49,7 +50,8 @@
             <xsl:for-each-group
               select="//doc[translate(translate(normalize-space(str[@name='abbr']), '[].? - ', ''), $lowercase, $transformation)=current-grouping-key()]"
               group-by="translate(normalize-space(str[@name='expan']), '[].? - ', '')">
-              <xsl:sort select="str[@name='expan-sort']"/>
+              <xsl:sort order="ascending" select="translate(normalize-unicode(str[@name='expan'],'NFD'),'&#x0301;&#x0313;&#x0314;&#x0342;','')"/>
+
               <tr class="index_row">
                 <xsl:choose>
                   <xsl:when test="position() = 1">
