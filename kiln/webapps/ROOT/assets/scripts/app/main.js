@@ -30,15 +30,15 @@ define([], function() {
     var dictionary = [
       //['3', 'IIV'],
       //['4', 'IV'],
-      ['5', 'V']//,
+      ['5', 'V'] //,
       //['6', 'VI'],
     ];
 
     var found = dictionary.filter(function(n, i) {
-      return n[0] == parsed_corpus || n[1] == parsed_corpus || n[1]== parsed_corpus.toUpperCase();
+      return n[0] == parsed_corpus || n[1] == parsed_corpus || n[1] == parsed_corpus.toUpperCase();
     });
 
-    return (found && found.length > 0)? found[0][0]: false;
+    return (found && found.length > 0) ? found[0][0] : false;
   };
 
   this.build_inscription_doc = function(inscription, extension) {
@@ -67,23 +67,17 @@ define([], function() {
   this.go_to_person = function(id) {
     var $person_row = $(id).parents('tr');
 
-     $('html, body').animate({
-        scrollTop: $person_row.offset().top - 50
-    }, 2000, function () {
-      console.log($person_row);
-      $person_row.animate({
-        backgroundColor: '#ffff66'
-      },
-      100,
-      function() {
-        // complete
-        $person_row.animate({
-          backgroundColor: ''
-        }, 3000);
-      }
-      );
-    });
+    $('html, body').animate({
+      scrollTop: $person_row.offset().top - 50
+    }, 2000, function() {
+      //
+      $('tr.yellow').css('background', '').removeClass('yellow');
 
+      $person_row.addClass('yellow').animate({
+          backgroundColor: '#ffff66'
+        },
+        100);
+    });
 
   }
 
