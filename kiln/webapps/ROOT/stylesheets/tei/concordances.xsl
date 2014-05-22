@@ -16,7 +16,7 @@
         <i18n:text>Concordances</i18n:text>
       </xsl:when>
       <xsl:when test="$concordance='publications'">
-        <i18n:text>Epigraphic editions of inscriptions, by author</i18n:text>
+        <i18n:text>Concordance and comparatio numerorum of previous publications of all inscriptions</i18n:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:text> </xsl:text>
