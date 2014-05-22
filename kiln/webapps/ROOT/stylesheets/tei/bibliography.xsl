@@ -14,7 +14,10 @@
   <xsl:template name="generateBibliography">
     <xsl:for-each select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct">
       <xsl:sort
-        select="normalize-space(./*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/(tei:surname | tei:forename[not(following-sibling::tei:surname)])[@xml:lang=$lang or not(@xml:lang)][1])"/>
+        select="normalize-space(./*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/(tei:surname | tei:forename[not(following-sibling::tei:surname)])[@xml:lang=$lang or not(@xml:lang)][1]/(@n | text())[1])"/>
+      <xsl:sort
+        select="normalize-space(./*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
+
       <p class="reference">
         <xsl:apply-templates select="."/>
       </p>
@@ -23,15 +26,12 @@
 
 
   <xsl:template match="tei:biblStruct">
-
     <span>
       <xsl:attribute name="id" select="@xml:id"/>
     </span>
-
     <xsl:variable name="analytic" select="./tei:analytic"/>
     <xsl:variable name="monogr" select="./tei:monogr"/>
     <xsl:variable name="series" select="./tei:series"/>
-
 
     <!-- Authors -->
     <xsl:choose>
@@ -59,50 +59,56 @@
     <xsl:text>) </xsl:text>
 
     <!-- Title -->
-
     <xsl:choose>
       <xsl:when test="$analytic">
-        <em>
-          <xsl:apply-templates select="$analytic" mode="title"/>
-        </em>
+        <xsl:text>"</xsl:text>
+        <xsl:apply-templates select="$analytic" mode="title"/>
+        <xsl:text>." </xsl:text>
       </xsl:when>
       <xsl:when test="not($analytic) and  $monogr">
-        <xsl:text>"</xsl:text>
-        <xsl:apply-templates select="$monogr" mode="title"/>
-        <xsl:text>"</xsl:text>
+        <em>
+          <xsl:apply-templates select="$monogr" mode="title"/>
+        </em>
+        <xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="not($analytic | $monogr) and $series">
-        <xsl:text>"</xsl:text>
-        <xsl:apply-templates select="$series" mode="title"/>
-        <xsl:text>"</xsl:text>
+        <em>
+          <xsl:apply-templates select="$series" mode="title"/>
+        </em>
+        <xsl:text>. </xsl:text>
       </xsl:when>
     </xsl:choose>
-    <xsl:text>. </xsl:text>
 
-
-    <!-- secondary titles -->
-    <xsl:if test="$analytic">
-      <xsl:apply-templates select="$monogr" mode="secondary"/>
-      <xsl:apply-templates select="$series" mode="secondary"/>
-    </xsl:if>
-
-    <xsl:if test="not($analytic) and $monogr">
-      <xsl:apply-templates select="$series" mode="secondary"/>
-    </xsl:if>
-
-    <!-- scope -->
-    <xsl:apply-templates select="$analytic" mode="scope"/>
-
+    <!-- secondary and tertiary titles -->
+    <xsl:choose>
+      <xsl:when test="$analytic and $monogr and not($series)">
+        <xsl:apply-templates select="$monogr" mode="secondary"/>
+      </xsl:when>
+      <xsl:when test="$analytic and $series and not($monogr)">
+        <xsl:apply-templates select="$series" mode="secondary"/>
+      </xsl:when>
+      <xsl:when test="$analytic and $series and $monogr">
+        <xsl:apply-templates select="$monogr" mode="secondary"/>
+        <xsl:apply-templates select="$series" mode="tertiary"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates select="$series" mode="tertiary"/>
+      </xsl:otherwise>
+    </xsl:choose>
 
     <!-- Location & Publisher-->
-    <xsl:if test=".//tei:imprint/tei:pubPlace">
+    <xsl:if test="not($analytic) and .//tei:imprint/tei:pubPlace">
       <xsl:value-of select=".//tei:imprint/tei:pubPlace[@xml:lang=$lang or not(@xml:lang)]"/>
       <xsl:if test=".//tei:imprint/tei:publisher">
         <xsl:text>: </xsl:text>
         <xsl:value-of select=".//tei:imprint/tei:publisher[@xml:lang=$lang or not(@xml:lang)]"/>
       </xsl:if>
-      <xsl:text>. </xsl:text>
+      <xsl:text> </xsl:text>
     </xsl:if>
+
+    <!-- scope -->
+
+    <xsl:apply-templates select="$monogr | $analytic " mode="scope"/>
 
 
     <!-- debugging -->
@@ -115,10 +121,13 @@
         <xsl:value-of select="./local-name()"/><br/>
       </xsl:for-each>
     </pre>-->
-
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="author_list">
+    <xsl:variable name="editor_only_list"
+      select="count(./tei:editor[not(following-sibling::tei:author) and not(preceding-sibling::tei:author)]) &gt; 1"/>
+
+
     <xsl:for-each select="./tei:author | ./tei:editor">
       <xsl:choose>
         <xsl:when test="position() = 1">
@@ -140,13 +149,17 @@
         </xsl:otherwise>
       </xsl:choose>
 
-      <xsl:if test="./local-name() = 'editor'">
+      <xsl:if test="./local-name() = 'editor' and not($editor_only_list)">
         <xsl:text> </xsl:text>
         <i18n:text key="__bibliography_editor">(Ed.)</i18n:text>
       </xsl:if>
 
       <xsl:if test="not(position() = last())">
         <xsl:text>, </xsl:text>
+      </xsl:if>
+
+      <xsl:if test="$editor_only_list and position() = last()">
+        <i18n:text key="__bibliography_editors">, eds.</i18n:text>
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
@@ -156,34 +169,78 @@
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="scope">
-    <xsl:for-each select="./tei:biblScope">
-      <i18n:text>
-        <xsl:value-of select="normalize-space(@type)"/>
-      </i18n:text>
+
+    <xsl:if test="./tei:biblScope[@type='series']">
+      <xsl:text>(</xsl:text>
+      <i18n:text>Series</i18n:text>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="."/>
-      <xsl:text>. </xsl:text>
-    </xsl:for-each>
+      <xsl:value-of select="./tei:biblScope[@type='series']"/>
+      <xsl:text>) </xsl:text>
+    </xsl:if>
+
+    <xsl:if test="./tei:biblScope[@type='vol']">
+      <xsl:value-of select="./tei:biblScope[@type='vol']"/>
+    </xsl:if>
+    <xsl:if test="./tei:biblScope[@type='vol'] and ./tei:biblScope[@type='issue']">
+      <xsl:text>.</xsl:text>
+    </xsl:if>
+    <xsl:if test="./tei:biblScope[@type='issue']">
+      <xsl:value-of select="./tei:biblScope[@type='issue']"/>
+    </xsl:if>
+
+    <xsl:if test="./tei:biblScope[@type='pp']">
+      <xsl:if test="./tei:biblScope[@type='vol'] or ./tei:biblScope[@type='issue']">
+        <xsl:text>:</xsl:text>
+      </xsl:if>
+      <xsl:value-of select="./tei:biblScope[@type='pp']"/>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="tei:monogr | tei:series" mode="secondary">
 
-    <i18n:text>In</i18n:text>
-    <xsl:text> </xsl:text>
-
     <!-- Authors -->
     <xsl:if test="./(tei:author | tei:editor)">
       <xsl:apply-templates select="." mode="author_list"/>
-      <xsl:text>. </xsl:text>
+      <xsl:text>, </xsl:text>
     </xsl:if>
 
     <!-- Title -->
     <xsl:if test="./tei:title">
-      <xsl:apply-templates select="." mode="title"/>
-      <xsl:text>. </xsl:text>
+      <em>
+        <xsl:apply-templates select="." mode="title"/>
+      </em>
+      <xsl:text> </xsl:text>
     </xsl:if>
 
-    <!-- scope -->
+    <!-- Scope -->
+    <xsl:if test="self::node()/local-name() = 'series'">
+      <xsl:apply-templates select="." mode="scope"/>
+      <xsl:text> </xsl:text>
+    </xsl:if>
+
+  </xsl:template>
+
+  <xsl:template match="tei:series" mode="tertiary">
+
+    <!-- Authors -->
+    <xsl:if test="./(tei:author | tei:editor)">
+      <xsl:apply-templates select="." mode="author_list"/>
+      <xsl:text>, </xsl:text>
+    </xsl:if>
+
+
+    <xsl:text>(</xsl:text>
+    <!-- Title -->
+    <xsl:if test="./tei:title">
+      <xsl:apply-templates select="." mode="title"/>
+      <xsl:text> </xsl:text>
+    </xsl:if>
+
+    <!-- Scope -->
     <xsl:apply-templates select="." mode="scope"/>
+    <xsl:text>)</xsl:text>
+    <xsl:text> </xsl:text>
+
+
   </xsl:template>
 </xsl:stylesheet>
