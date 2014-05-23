@@ -1376,18 +1376,21 @@
                 <xsl:value-of select="string-join($norm-surname, ', ')"/>
               </xsl:otherwise>
             </xsl:choose>
+
             <xsl:if test="$bibDate != ''">
               <xsl:text> </xsl:text>
               <xsl:value-of select="$bibDate"/>
             </xsl:if>
-            <xsl:if test="following-sibling::tei:resp">
-              <xsl:text>, </xsl:text>
-            </xsl:if>
+
           </xsl:when>
+
           <xsl:otherwise>
             <xsl:value-of select="."/>
           </xsl:otherwise>
         </xsl:choose>
+        <xsl:if test="not(position() = last())">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
       </xsl:for-each>
     </xsl:if>
   </xsl:template>
