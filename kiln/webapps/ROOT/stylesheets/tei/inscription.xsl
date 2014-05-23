@@ -1314,12 +1314,25 @@
       <xsl:for-each select="$resps//tei:resp">
         <xsl:choose>
           <xsl:when test="$docSubset//tei:biblStruct[@xml:id=current()]">
+            <xsl:variable name="current_id" select="current()"/>
             <xsl:variable name="biblio-subset">
-              <xsl:for-each
-                select="$docSubset//tei:body//tei:div[@type='bibliography']/tei:listBibl[if (@n) then @n=$cur-n else true()]/tei:bibl//tei:ptr">
-                <xsl:sequence select="$docSubset//tei:biblStruct[@xml:id=current()/@target]"/>
-              </xsl:for-each>
+              <xsl:variable name="from-bib">
+                <xsl:for-each
+                  select="$docSubset//tei:body//tei:div[@type='bibliography']/tei:listBibl[if (@n) then @n=$cur-n else true()]/tei:bibl//tei:ptr">
+                  <xsl:sequence select="$docSubset//tei:biblStruct[@xml:id=current()/@target]"/>
+                </xsl:for-each>
+              </xsl:variable>
+              <xsl:choose>
+                <xsl:when test="count($from-bib)">
+                  <!-- this is the case when citation not in bibliography -->
+                  <xsl:sequence select="$docSubset//tei:biblStruct[@xml:id=$current_id]"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:sequence select="$from-bib"/>
+                </xsl:otherwise>
+              </xsl:choose>
             </xsl:variable>
+
             <xsl:variable name="cur-surname" as="xs:string *">
               <xsl:for-each select="$biblio-subset//tei:biblStruct[@xml:id=current()]//tei:author">
                 <xsl:sequence
@@ -1363,7 +1376,6 @@
                 <xsl:value-of select="string-join($norm-surname, ', ')"/>
               </xsl:otherwise>
             </xsl:choose>
-
             <xsl:if test="$bibDate != ''">
               <xsl:text> </xsl:text>
               <xsl:value-of select="$bibDate"/>
