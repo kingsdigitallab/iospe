@@ -1285,7 +1285,24 @@
             </xsl:if>
 
           </xsl:when>
-
+          <xsl:when test="$docSubset//tei:listBibl/tei:bibl[@xml:id=current()]">
+            
+            <xsl:variable name="current-bibl" select="$docSubset//tei:listBibl/tei:bibl[@xml:id=current()]"/>
+            <xsl:choose>
+              <xsl:when test="current()='IOSPE2'">
+                <xsl:text>IOSPE I</xsl:text>
+                <xsl:element name="sup">
+                  <xsl:text>2</xsl:text>
+                </xsl:element>
+              </xsl:when>
+              <xsl:when test="$current-bibl//tei:surname">
+                <xsl:value-of select="$current-bibl//tei:surname[@xml:lang=$lang or not(@xml:lang)]"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="$current-bibl//tei:title[@type='abbreviated'][@xml:lang=$lang or not(@xml:lang)]"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="."/>
           </xsl:otherwise>
@@ -1479,10 +1496,7 @@
         </xsl:when>
         <xsl:when test="@xml:id='IOSPE2'">
           <xsl:text>IOSPE I</xsl:text>
-          <xsl:element name="span">
-            <xsl:attribute name="style">
-              <xsl:text>position: relative; bottom: 0.5em; font-size: 0.8em;</xsl:text>
-            </xsl:attribute>
+          <xsl:element name="sup">
             <xsl:text>2</xsl:text>
           </xsl:element>
         </xsl:when>
