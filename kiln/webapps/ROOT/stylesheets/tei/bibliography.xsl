@@ -71,18 +71,22 @@
     <!-- Title -->
     <xsl:variable name="main-title">
       <xsl:choose>
-        <xsl:when test="$analytic">
+        <xsl:when test="$analytic/tei:title">
           <xsl:text>"</xsl:text>
           <xsl:apply-templates select="$analytic" mode="title"/>
           <xsl:text>." </xsl:text>
         </xsl:when>
-        <xsl:when test="not($analytic) and  $monogr">
+        <xsl:when test="$analytic">
+          <xsl:apply-templates select="$analytic" mode="title"/>
+          <xsl:text>. </xsl:text>
+        </xsl:when>
+        <xsl:when test="$monogr">
           <em>
             <xsl:apply-templates select="$monogr" mode="title"/>
           </em>
           <xsl:text>. </xsl:text>
         </xsl:when>
-        <xsl:when test="not($analytic | $monogr) and $series">
+        <xsl:when test="$series">
           <em>
             <xsl:apply-templates select="$series" mode="title"/>
           </em>
@@ -94,30 +98,23 @@
     <!-- Date -->
 
     <xsl:variable name="year">
-      <xsl:choose>
-        <xsl:when test=".//tei:imprint/tei:date[1]">
-          <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <i18n:text key="__date_nd">n.d.</i18n:text>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
+      <xsl:apply-templates select="." mode="date"/>
+    </xsl:variable> 
 
     <!-- Reference Heading -->
     <xsl:choose>
       <xsl:when test="normalize-space($main-author-list) = ''">
-        <xsl:value-of select="$main-title"/>
+        <xsl:copy-of select="$main-title"/>
         <xsl:text> (</xsl:text>
-        <xsl:value-of select="$year"/>
+        <xsl:copy-of select="$year"/>
         <xsl:text>) </xsl:text>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="$main-author-list"/>
+        <xsl:copy-of select="$main-author-list"/>
         <xsl:text> (</xsl:text>
-        <xsl:value-of select="$year"/>
+        <xsl:copy-of select="$year"/>
         <xsl:text>) </xsl:text>
-        <xsl:value-of select="$main-title"/>
+        <xsl:copy-of select="$main-title"/>
       </xsl:otherwise>
     </xsl:choose>
 
@@ -205,9 +202,42 @@
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
+  
+  <xsl:template match="tei:biblStruct" mode="date">
+    <xsl:choose>
+      <xsl:when test=".//tei:imprint/tei:date[1]">
+        <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <i18n:text key="__date_nd">n.d.</i18n:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="title">
-    <xsl:value-of select="./tei:title"/>
+    <xsl:choose>
+      <xsl:when test="./tei:title">
+        <xsl:value-of select="./tei:title"/>
+      </xsl:when>
+      <xsl:when test="following-sibling::tei:relatedItem">
+        <xsl:variable name="rel_item" select="following-sibling::tei:relatedItem/@target"/>
+        <i18n:text>Review of</i18n:text>
+        <xsl:text>: </xsl:text>
+        <a href="{$rel_item}">
+          <xsl:variable name="referenced_biblstruct"
+            select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = substring-after($rel_item, '#')]"/>
+
+          <xsl:apply-templates
+            select="$referenced_biblstruct/(tei:analytic | tei:monogr | tei:series)[1]"
+            mode="author_list"/>
+          <xsl:text> </xsl:text>
+          <xsl:apply-templates
+            select="$referenced_biblstruct"
+            mode="date"/>
+          
+        </a>
+      </xsl:when>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="scope">
