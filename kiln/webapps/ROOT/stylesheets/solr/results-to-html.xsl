@@ -37,7 +37,7 @@
       <xsl:text>&amp;fq=</xsl:text>
       <xsl:value-of select="../@name"/>
       <xsl:text>:"</xsl:text>
-      <xsl:value-of select="@name"/>
+      <xsl:value-of select="encode-for-uri(@name)"/>
       <xsl:text>"</xsl:text>
     </xsl:variable>
     <xsl:variable name="escaped-fq">
