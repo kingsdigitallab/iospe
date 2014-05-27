@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:import href="../common/conversions.xsl"/>
 
@@ -11,10 +12,29 @@
     <i18n:text>Bibliography</i18n:text>
   </xsl:template>
 
+  <xsl:function name="iospe:sort-bibliography">
+    <xsl:param name="node"/>
+    <xsl:variable name="author"
+      select="normalize-space($node/(*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/(tei:surname | tei:forename[not(following-sibling::tei:surname)])[@xml:lang=$lang or not(@xml:lang)][1]/(@n | text())[1]))"/>
+    <xsl:variable name="title"
+      select="normalize-space($node/(*[tei:title][1]/tei:title[@xml:lang=$lang or not(@xml:lang)][1]/(@n | text())[1]))"/>
+    <xsl:variable name="sort-string" select="if($author != '') then $author else $title"/>
+
+    <xsl:choose>
+      <xsl:when
+        test="$lang = 'ru' and string-to-codepoints($sort-string)[1] &gt;= 1024 and string-to-codepoints($sort-string)[1] &lt;= 1279">
+        <xsl:value-of select="concat('00000', $sort-string)"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$sort-string"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+
   <xsl:template name="generateBibliography">
     <xsl:for-each select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct">
-      <xsl:sort
-        select="normalize-space(./*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/(tei:surname | tei:forename[not(following-sibling::tei:surname)])[@xml:lang=$lang or not(@xml:lang)][1]/(@n | text())[1])"/>
+      <xsl:sort select="iospe:sort-bibliography(.)"/>
       <xsl:sort
         select="normalize-space(./*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
 
@@ -34,49 +54,71 @@
     <xsl:variable name="series" select="./tei:series"/>
 
     <!-- Authors -->
-    <xsl:choose>
-      <xsl:when test="$analytic">
-        <xsl:apply-templates select="$analytic" mode="author_list"/>
-      </xsl:when>
-      <xsl:when test="not($analytic) and  $monogr">
-        <xsl:apply-templates select="$monogr" mode="author_list"/>
-      </xsl:when>
-      <xsl:when test="not($analytic | $monogr) and $series">
-        <xsl:apply-templates select="$series" mode="author_list"/>
-      </xsl:when>
-    </xsl:choose>
-
-    <!-- Date -->
-    <xsl:text> (</xsl:text>
-    <xsl:choose>
-      <xsl:when test=".//tei:imprint/tei:date[1]">
-        <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <i18n:text key="__date_nd">n.d.</i18n:text>
-      </xsl:otherwise>
-    </xsl:choose>
-    <xsl:text>) </xsl:text>
+    <xsl:variable name="main-author-list">
+      <xsl:choose>
+        <xsl:when test="$analytic">
+          <xsl:apply-templates select="$analytic" mode="author_list"/>
+        </xsl:when>
+        <xsl:when test="not($analytic) and  $monogr">
+          <xsl:apply-templates select="$monogr" mode="author_list"/>
+        </xsl:when>
+        <xsl:when test="not($analytic | $monogr) and $series">
+          <xsl:apply-templates select="$series" mode="author_list"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
 
     <!-- Title -->
+    <xsl:variable name="main-title">
+      <xsl:choose>
+        <xsl:when test="$analytic">
+          <xsl:text>"</xsl:text>
+          <xsl:apply-templates select="$analytic" mode="title"/>
+          <xsl:text>." </xsl:text>
+        </xsl:when>
+        <xsl:when test="not($analytic) and  $monogr">
+          <em>
+            <xsl:apply-templates select="$monogr" mode="title"/>
+          </em>
+          <xsl:text>. </xsl:text>
+        </xsl:when>
+        <xsl:when test="not($analytic | $monogr) and $series">
+          <em>
+            <xsl:apply-templates select="$series" mode="title"/>
+          </em>
+          <xsl:text>. </xsl:text>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+
+    <!-- Date -->
+
+    <xsl:variable name="year">
+      <xsl:choose>
+        <xsl:when test=".//tei:imprint/tei:date[1]">
+          <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <i18n:text key="__date_nd">n.d.</i18n:text>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <!-- Reference Heading -->
     <xsl:choose>
-      <xsl:when test="$analytic">
-        <xsl:text>"</xsl:text>
-        <xsl:apply-templates select="$analytic" mode="title"/>
-        <xsl:text>." </xsl:text>
+      <xsl:when test="normalize-space($main-author-list) = ''">
+        <xsl:value-of select="$main-title"/>
+        <xsl:text> (</xsl:text>
+        <xsl:value-of select="$year"/>
+        <xsl:text>) </xsl:text>
       </xsl:when>
-      <xsl:when test="not($analytic) and  $monogr">
-        <em>
-          <xsl:apply-templates select="$monogr" mode="title"/>
-        </em>
-        <xsl:text>. </xsl:text>
-      </xsl:when>
-      <xsl:when test="not($analytic | $monogr) and $series">
-        <em>
-          <xsl:apply-templates select="$series" mode="title"/>
-        </em>
-        <xsl:text>. </xsl:text>
-      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="$main-author-list"/>
+        <xsl:text> (</xsl:text>
+        <xsl:value-of select="$year"/>
+        <xsl:text>) </xsl:text>
+        <xsl:value-of select="$main-title"/>
+      </xsl:otherwise>
     </xsl:choose>
 
     <!-- secondary and tertiary titles -->
