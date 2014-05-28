@@ -15,9 +15,9 @@
   <!-- Home -->
   <xsl:template name="indexHome">
 
-    <h4>
+    <h2>
       <i18n:text>Words and Names</i18n:text>
-    </h4>
+    </h2>
     <ul class="no-bullet">
       <li>
         <xsl:choose>
@@ -67,9 +67,9 @@
       </li>
     </ul>
 
-    <h4>
+    <h2>
       <i18n:text>Prosopography and Geography</i18n:text>
-    </h4>
+    </h2>
     <ul class="no-bullet">
       <li>
         <a href="person/other{$kiln:url-lang-suffix}.html">
@@ -123,9 +123,9 @@
       </li>
     </ul>
 
-    <h4>
+    <h2>
       <i18n:text>Other Features</i18n:text>
-    </h4>
+    </h2>
     <ul class="no-bullet">
       <li>
         <xsl:choose>
@@ -204,9 +204,9 @@
       </li>-->
     </ul>
 
-    <h4>
+    <h2>
       <i18n:text>Inscriptions</i18n:text>
-    </h4>
+    </h2>
     <ul class="no-bullet">
       <li>
         <a href="date/dated{$kiln:url-lang-suffix}.html">

@@ -74,23 +74,23 @@
         <xsl:when test="$analytic/tei:title">
           <xsl:text>"</xsl:text>
           <xsl:apply-templates select="$analytic" mode="title"/>
-          <xsl:text>." </xsl:text>
+          <xsl:text>."</xsl:text>
         </xsl:when>
         <xsl:when test="$analytic">
           <xsl:apply-templates select="$analytic" mode="title"/>
-          <xsl:text>. </xsl:text>
+          <xsl:text>.</xsl:text>
         </xsl:when>
         <xsl:when test="$monogr">
           <em>
             <xsl:apply-templates select="$monogr" mode="title"/>
           </em>
-          <xsl:text>. </xsl:text>
+          <xsl:text>.</xsl:text>
         </xsl:when>
         <xsl:when test="$series">
           <em>
             <xsl:apply-templates select="$series" mode="title"/>
           </em>
-          <xsl:text>. </xsl:text>
+          <xsl:text>.</xsl:text>
         </xsl:when>
       </xsl:choose>
     </xsl:variable>
@@ -99,7 +99,7 @@
 
     <xsl:variable name="year">
       <xsl:apply-templates select="." mode="date"/>
-    </xsl:variable> 
+    </xsl:variable>
 
     <!-- Reference Heading -->
     <xsl:choose>
@@ -107,7 +107,7 @@
         <xsl:copy-of select="$main-title"/>
         <xsl:text> (</xsl:text>
         <xsl:copy-of select="$year"/>
-        <xsl:text>) </xsl:text>
+        <xsl:text>)</xsl:text>
       </xsl:when>
       <xsl:otherwise>
         <xsl:copy-of select="$main-author-list"/>
@@ -121,28 +121,48 @@
     <!-- secondary and tertiary titles -->
     <xsl:choose>
       <xsl:when test="$analytic and $monogr and not($series)">
+        <xsl:text> </xsl:text>
+        <xsl:if test="$monogr/tei:title[@level='m']">
+          <xsl:text>In </xsl:text>
+        </xsl:if>
         <xsl:apply-templates select="$monogr" mode="secondary"/>
       </xsl:when>
       <xsl:when test="$analytic and $series and not($monogr)">
+        <xsl:text> </xsl:text>
         <xsl:apply-templates select="$series" mode="secondary"/>
       </xsl:when>
       <xsl:when test="$analytic and $series and $monogr">
+        <xsl:text> </xsl:text>
+        <xsl:if test="$monogr/tei:title[@level='m']">
+          <xsl:text>In </xsl:text>
+        </xsl:if>
         <xsl:apply-templates select="$monogr" mode="secondary"/>
+        <xsl:text> </xsl:text>
         <xsl:apply-templates select="$series" mode="tertiary"/>
       </xsl:when>
       <xsl:otherwise>
+        <xsl:text> </xsl:text>
         <xsl:apply-templates select="$series" mode="tertiary"/>
       </xsl:otherwise>
     </xsl:choose>
 
     <!-- Location & Publisher-->
-    <xsl:if test="not($analytic) and .//tei:imprint/tei:pubPlace">
-      <xsl:value-of select=".//tei:imprint/tei:pubPlace[@xml:lang=$lang or not(@xml:lang)]"/>
+    <xsl:if test=".//tei:imprint/tei:pubPlace">
+      
+      <xsl:if test="$analytic and ($monogr and not($series) or not($monogr) and $series)">
+        <xsl:text>. </xsl:text>
+      </xsl:if>
+      
+      <xsl:for-each select=".//tei:imprint/tei:pubPlace[@xml:lang=$lang or not(@xml:lang)]">
+        <xsl:value-of select="."/>
+        <xsl:if test="position() != last()">
+          <xsl:text>,</xsl:text>
+        </xsl:if>
+      </xsl:for-each>
       <xsl:if test=".//tei:imprint/tei:publisher">
         <xsl:text>: </xsl:text>
         <xsl:value-of select=".//tei:imprint/tei:publisher[@xml:lang=$lang or not(@xml:lang)]"/>
       </xsl:if>
-      <xsl:text> </xsl:text>
     </xsl:if>
 
     <!-- scope -->
@@ -202,7 +222,7 @@
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
-  
+
   <xsl:template match="tei:biblStruct" mode="date">
     <xsl:choose>
       <xsl:when test=".//tei:imprint/tei:date[1]">
@@ -216,8 +236,8 @@
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="title">
     <xsl:choose>
-      <xsl:when test="./tei:title">
-        <xsl:value-of select="./tei:title"/>
+      <xsl:when test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
+        <xsl:value-of select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
       </xsl:when>
       <xsl:when test="following-sibling::tei:relatedItem">
         <xsl:variable name="rel_item" select="following-sibling::tei:relatedItem/@target"/>
@@ -231,40 +251,66 @@
             select="$referenced_biblstruct/(tei:analytic | tei:monogr | tei:series)[1]"
             mode="author_list"/>
           <xsl:text> </xsl:text>
-          <xsl:apply-templates
-            select="$referenced_biblstruct"
-            mode="date"/>
-          
+          <xsl:apply-templates select="$referenced_biblstruct" mode="date"/>
         </a>
       </xsl:when>
     </xsl:choose>
+
+    <xsl:if test="self::tei:monogr/tei:biblScope[@type='vol']">
+      <xsl:if test="tei:title[@level='m']">
+        <xsl:text>, </xsl:text>
+        <i18n:text>vol</i18n:text>
+      </xsl:if>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="./tei:biblScope[@type='vol']"/>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="scope">
 
     <xsl:if test="./tei:biblScope[@type='series']">
-      <xsl:text>(</xsl:text>
+      <xsl:text> (</xsl:text>
       <i18n:text>Series</i18n:text>
       <xsl:text> </xsl:text>
       <xsl:value-of select="./tei:biblScope[@type='series']"/>
-      <xsl:text>) </xsl:text>
+      <xsl:text>)</xsl:text>
     </xsl:if>
 
-    <xsl:if test="./tei:biblScope[@type='vol']">
+    <xsl:if test="*[not(self::tei:monogr)]/tei:biblScope[@type='vol']">
+      <xsl:text> </xsl:text>
       <xsl:value-of select="./tei:biblScope[@type='vol']"/>
     </xsl:if>
-    <xsl:if test="./tei:biblScope[@type='vol'] and ./tei:biblScope[@type='issue']">
-      <xsl:text>.</xsl:text>
-    </xsl:if>
+
+    <xsl:choose>
+      <xsl:when
+        test="*[not(self::tei:monogr)]/tei:biblScope[@type='vol'] and ./tei:biblScope[@type='issue']">
+        <xsl:text>.</xsl:text>
+      </xsl:when>
+      <xsl:when test="./tei:biblScope[@type='issue']">
+        <xsl:text> </xsl:text>
+      </xsl:when>
+    </xsl:choose>
+
     <xsl:if test="./tei:biblScope[@type='issue']">
       <xsl:value-of select="./tei:biblScope[@type='issue']"/>
     </xsl:if>
 
     <xsl:if test="./tei:biblScope[@type='pp']">
-      <xsl:if test="./tei:biblScope[@type='vol'] or ./tei:biblScope[@type='issue']">
-        <xsl:text>:</xsl:text>
-      </xsl:if>
-      <xsl:value-of select="./tei:biblScope[@type='pp']"/>
+      <xsl:choose>
+        <xsl:when
+          test="*[not(self::tei:monogr)]/tei:biblScope[@type='vol'] or ./tei:biblScope[@type='issue']">
+          <xsl:text>:</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>, </xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+      <xsl:for-each select="./tei:biblScope[@type='pp']">
+        <xsl:value-of select="."/>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
+      </xsl:for-each>
     </xsl:if>
   </xsl:template>
 
@@ -281,19 +327,17 @@
       <em>
         <xsl:apply-templates select="." mode="title"/>
       </em>
-      <xsl:text> </xsl:text>
     </xsl:if>
 
     <!-- Scope -->
-    <xsl:if test="self::node()/local-name() = 'series'">
-      <xsl:apply-templates select="." mode="scope"/>
+    <xsl:if test="self::tei:series">
       <xsl:text> </xsl:text>
+      <xsl:apply-templates select="." mode="scope"/>
     </xsl:if>
 
   </xsl:template>
 
   <xsl:template match="tei:series" mode="tertiary">
-
     <!-- Authors -->
     <xsl:if test="./(tei:author | tei:editor)">
       <xsl:apply-templates select="." mode="author_list"/>
@@ -305,7 +349,6 @@
     <!-- Title -->
     <xsl:if test="./tei:title">
       <xsl:apply-templates select="." mode="title"/>
-      <xsl:text> </xsl:text>
     </xsl:if>
 
     <!-- Scope -->

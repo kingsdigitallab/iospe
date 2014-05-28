@@ -97,10 +97,19 @@
     </field>
     <field name="document-title-{@xml:lang}">
       <xsl:value-of select="local:clean(.)"/>
+      
+      <xsl:if test="tei:certainty[@cert='low']">
+        <xsl:text> (?)</xsl:text>
+      </xsl:if>
     </field>
 
     <field name="inscription-title-{@xml:lang}">
       <xsl:value-of select="local:clean(.)"/>
+      
+      <xsl:if test="tei:certainty[@cert='low']">
+        <xsl:text> (?)</xsl:text>
+      </xsl:if>
+      
     </field>
   </xsl:template>
 
