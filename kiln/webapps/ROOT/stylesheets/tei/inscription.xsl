@@ -86,6 +86,12 @@
     <xsl:value-of
       select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"/>
 
+
+    <xsl:if
+      test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]/tei:certainty[@cert = 'low']">
+      <xsl:text> (?)</xsl:text>
+    </xsl:if>
+
     <xsl:if
       test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]//tei:origDate)">
       <xsl:text>, </xsl:text>
@@ -813,7 +819,7 @@
                     </xsl:if>
                     <xsl:apply-templates
                       select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
-                      />
+                    />
                   </xsl:when>
                   <xsl:otherwise>
                     <i18n:text>Unpublished</i18n:text>
@@ -992,16 +998,9 @@
       <div class="row">
         <div class="large-2 columns">
           <h2>
-            <xsl:choose>
-              <xsl:when test="not($fullN = '')">
-                <em>
-                  <i18n:text>Translation</i18n:text>
-                </em>
-              </xsl:when>
-              <xsl:otherwise>
-                <i18n:text>Translation</i18n:text>
-              </xsl:otherwise>
-            </xsl:choose>
+            <em>
+              <i18n:text>Translation</i18n:text>
+            </em>
           </h2>
         </div>
         <div class="large-10 columns details">
@@ -1034,16 +1033,9 @@
       <div class="row">
         <div class="large-2 columns">
           <h2>
-            <xsl:choose>
-              <xsl:when test="not($fullN = '')">
-                <em>
-                  <i18n:text>Commentary</i18n:text>
-                </em>
-              </xsl:when>
-              <xsl:otherwise>
-                <i18n:text>Commentary</i18n:text>
-              </xsl:otherwise>
-            </xsl:choose>
+            <em>
+              <i18n:text>Commentary</i18n:text>
+            </em>
           </h2>
 
         </div>
@@ -1076,16 +1068,9 @@
         <div class="row">
           <div class="large-2 columns">
             <h2>
-              <xsl:choose>
-                <xsl:when test="not($fullN = '')">
-                  <em>
-                    <i18n:text>Images</i18n:text>
-                  </em>
-                </xsl:when>
-                <xsl:otherwise>
-                  <i18n:text>Images</i18n:text>
-                </xsl:otherwise>
-              </xsl:choose>
+              <em>
+                <i18n:text>Images</i18n:text>
+              </em>
             </h2>
           </div>
           <div class="large-10 columns details">
@@ -1286,8 +1271,9 @@
 
           </xsl:when>
           <xsl:when test="$docSubset//tei:listBibl/tei:bibl[@xml:id=current()]">
-            
-            <xsl:variable name="current-bibl" select="$docSubset//tei:listBibl/tei:bibl[@xml:id=current()]"/>
+
+            <xsl:variable name="current-bibl"
+              select="$docSubset//tei:listBibl/tei:bibl[@xml:id=current()]"/>
             <xsl:choose>
               <xsl:when test="current()='IOSPE2'">
                 <xsl:text>IOSPE I</xsl:text>
@@ -1296,10 +1282,13 @@
                 </xsl:element>
               </xsl:when>
               <xsl:when test="$current-bibl//tei:surname">
-                <xsl:value-of select="$current-bibl//tei:surname[@xml:lang=$lang or not(@xml:lang)]"/>
+                <xsl:value-of select="$current-bibl//tei:surname[@xml:lang=$lang or not(@xml:lang)]"
+                />
               </xsl:when>
               <xsl:otherwise>
-                <xsl:value-of select="$current-bibl//tei:title[@type='abbreviated'][@xml:lang=$lang or not(@xml:lang)]"/>
+                <xsl:value-of
+                  select="$current-bibl//tei:title[@type='abbreviated'][@xml:lang=$lang or not(@xml:lang)]"
+                />
               </xsl:otherwise>
             </xsl:choose>
           </xsl:when>
@@ -1483,7 +1472,7 @@
   </xsl:template>
 
 
-  <xsl:template match="tei:bibl" >
+  <xsl:template match="tei:bibl">
     <xsl:if test="@n">
       <xsl:value-of select="@n"/>
       <xsl:text>. </xsl:text>
@@ -1570,7 +1559,7 @@
       <xsl:value-of select="normalize-space(descendant::tei:imprint[1]/tei:date[1])"/>
     </xsl:for-each>
     <xsl:apply-templates/>
-    
+
     <xsl:if test="following-sibling::tei:bibl[child::node()]">
       <xsl:text>; </xsl:text>
     </xsl:if>
