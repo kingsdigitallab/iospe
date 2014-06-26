@@ -148,11 +148,11 @@
 
     <!-- Location & Publisher-->
     <xsl:if test=".//tei:imprint/tei:pubPlace">
-      
+
       <xsl:if test="$analytic and ($monogr and not($series) or not($monogr) and $series)">
         <xsl:text>. </xsl:text>
       </xsl:if>
-      
+
       <xsl:for-each select=".//tei:imprint/tei:pubPlace[@xml:lang=$lang or not(@xml:lang)]">
         <xsl:value-of select="."/>
         <xsl:if test="position() != last()">
@@ -209,8 +209,7 @@
       </xsl:choose>
 
       <xsl:if test="./local-name() = 'editor' and not($editor_only_list)">
-        <xsl:text> </xsl:text>
-        <i18n:text key="__bibliography_editor">(Ed.)</i18n:text>
+        <i18n:text key="__bibliography_editor">, ed.</i18n:text>
       </xsl:if>
 
       <xsl:if test="not(position() = last())">
@@ -235,26 +234,30 @@
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="title">
-    <xsl:choose>
-      <xsl:when test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
-        <xsl:value-of select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
-      </xsl:when>
-      <xsl:when test="following-sibling::tei:relatedItem">
-        <xsl:variable name="rel_item" select="following-sibling::tei:relatedItem/@target"/>
-        <i18n:text>Review of</i18n:text>
-        <xsl:text>: </xsl:text>
-        <a href="{$rel_item}">
-          <xsl:variable name="referenced_biblstruct"
-            select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = substring-after($rel_item, '#')]"/>
 
-          <xsl:apply-templates
-            select="$referenced_biblstruct/(tei:analytic | tei:monogr | tei:series)[1]"
-            mode="author_list"/>
-          <xsl:text> </xsl:text>
-          <xsl:apply-templates select="$referenced_biblstruct" mode="date"/>
-        </a>
-      </xsl:when>
-    </xsl:choose>
+    <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
+      <xsl:value-of select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
+    </xsl:if>
+    
+    <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != ''] and self::tei:analytic and following-sibling::tei:relatedItem">
+      <xsl:text> </xsl:text>
+    </xsl:if>
+    
+    <xsl:if test="self::tei:analytic and following-sibling::tei:relatedItem">
+      <xsl:variable name="rel_item" select="following-sibling::tei:relatedItem/@target"/>
+      <i18n:text>Review of</i18n:text>
+      <xsl:text>: </xsl:text>
+      <a href="{$rel_item}">
+        <xsl:variable name="referenced_biblstruct"
+          select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = substring-after($rel_item, '#')]"/>
+        <xsl:apply-templates
+          select="$referenced_biblstruct/(tei:analytic | tei:monogr | tei:series)[1]"
+          mode="author_list"/>
+        <xsl:text> </xsl:text>
+        <xsl:apply-templates select="$referenced_biblstruct" mode="date"/>
+      </a>
+    </xsl:if>
+
 
     <xsl:if test="self::tei:monogr/tei:biblScope[@type='vol']">
       <xsl:if test="tei:title[@level='m']">
