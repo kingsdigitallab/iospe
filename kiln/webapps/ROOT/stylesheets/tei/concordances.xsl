@@ -59,6 +59,9 @@
       <li class="concordance_item">
         <p class="concordance_link right">
           <a href="publications/{(str[@name='bibl-target'])[1]}.html">
+            <xsl:attribute name="title">
+              <i18n:text>View Concordance</i18n:text>
+            </xsl:attribute>
             <i class="fa fa-list fa-3x">
               <xsl:text> </xsl:text>
             </i>
