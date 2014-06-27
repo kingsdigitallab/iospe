@@ -1477,6 +1477,9 @@
       <xsl:value-of select="@n"/>
       <xsl:text>. </xsl:text>
     </xsl:if>
+    <xsl:variable name="surnames">
+      <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
+    </xsl:variable>
     <xsl:variable name="target" select="tei:ptr/@target"/>
     <xsl:for-each select="//bib//tei:biblStruct[@xml:id=$target]|//bib//tei:bibl[@xml:id=$target]">
       <xsl:choose>
