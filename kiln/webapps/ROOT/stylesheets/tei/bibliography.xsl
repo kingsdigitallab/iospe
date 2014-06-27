@@ -11,14 +11,19 @@
   <xsl:template name="bibliographyTitle">
     <i18n:text>Bibliography</i18n:text>
   </xsl:template>
+  
+  <xsl:variable name="surnames" select="/aggregation/surnames"/>
 
   <xsl:function name="iospe:sort-bibliography">
     <xsl:param name="node"/>
+    <xsl:variable name="normalised_author"
+      select="normalize-space($surnames//tei:listPerson/tei:person[@xml:id=substring-after($node/*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/tei:surname[1]/@corresp, 'surnames.xml#')]//tei:surname[@xml:lang=$lang or not(@xml:lang)])"/>
     <xsl:variable name="author"
       select="normalize-space($node/(*[tei:author | tei:editor][1]/(tei:author | tei:editor)[1]/(tei:surname | tei:forename[not(following-sibling::tei:surname)])[@xml:lang=$lang or not(@xml:lang)][1]/(@n | text())[1]))"/>
     <xsl:variable name="title"
       select="normalize-space($node/(*[tei:title][1]/tei:title[@xml:lang=$lang or not(@xml:lang)][1]/(@n | text())[1]))"/>
-    <xsl:variable name="sort-string" select="if($author != '') then $author else $title"/>
+    <xsl:variable name="sort-string"
+      select="if($normalised_author !='') then $normalised_author else if($author != '') then $author else $title"/>
 
     <xsl:choose>
       <xsl:when
@@ -37,7 +42,7 @@
       <xsl:sort select="iospe:sort-bibliography(.)"/>
       <xsl:sort
         select="normalize-space(./*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
-
+    
       <p class="reference">
         <xsl:apply-templates select="."/>
       </p>
@@ -182,29 +187,86 @@
     </pre>-->
   </xsl:template>
 
-  <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="author_list">
+  <xsl:template name="print_name">
+    <xsl:param name="name"/>
+    <xsl:param name="normalised_name"/>
+
+    <xsl:if test="$name">
+      <xsl:choose>
+        <xsl:when test="$normalised_name">
+          <xsl:value-of select="$normalised_name"/>
+          <xsl:text> (</xsl:text>
+          <xsl:value-of select="$name"/>
+          <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$name"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:if>
+
+  </xsl:template>
+
+  <xsl:template match="tei:analytic | tei:monogr | tei:series | tei:bibl" mode="author_list">
     <xsl:variable name="editor_only_list"
       select="count(./tei:editor[not(following-sibling::tei:author) and not(preceding-sibling::tei:author)]) &gt; 1"/>
 
 
     <xsl:for-each select="./tei:author | ./tei:editor">
+      <xsl:variable name="roleName" select="./tei:roleName[@xml:lang=$lang or not(@xml:lang)]"/>
+      <xsl:variable name="forename" select="./tei:forename[@xml:lang=$lang or not(@xml:lang)]"/>
+      <xsl:variable name="surname" select="./tei:surname[@xml:lang=$lang or not(@xml:lang)]"/>
+
+      <xsl:variable name="normalised_forename"
+        select="/aggregation/surnames//tei:listPerson/tei:person[@xml:id=substring-after(current()/tei:surname/@corresp, 'surnames.xml#')]//tei:forename[@xml:lang=$lang or not(@xml:lang)]"/>
+
+      <xsl:variable name="normalised_surname"
+        select="/aggregation/surnames//tei:listPerson/tei:person[@xml:id=substring-after(current()/tei:surname/@corresp, 'surnames.xml#')]//tei:surname[@xml:lang=$lang or not(@xml:lang)]"/>
+
+
       <xsl:choose>
         <xsl:when test="position() = 1">
-          <xsl:if test="./tei:surname[@xml:lang=$lang or not(@xml:lang)]">
-            <xsl:value-of select="./tei:surname[@xml:lang=$lang or not(@xml:lang)]"/>
+          <xsl:call-template name="print_name">
+            <xsl:with-param name="name" select="$surname"/>
+            <xsl:with-param name="normalised_name" select="$normalised_surname"/>
+          </xsl:call-template>
+
+          <xsl:if test="$surname and ($roleName or $forename)">
             <xsl:text>, </xsl:text>
           </xsl:if>
-          <xsl:value-of select="./tei:roleName[@xml:lang=$lang or not(@xml:lang)]"/>
+
+          <xsl:if test="$roleName">
+            <xsl:value-of select="$roleName"/>
+            <xsl:text> </xsl:text>
+          </xsl:if>
+
+
+          <xsl:call-template name="print_name">
+            <xsl:with-param name="name" select="$forename"/>
+            <xsl:with-param name="normalised_name" select="$normalised_forename"/>
+          </xsl:call-template>
           <xsl:text> </xsl:text>
-          <xsl:value-of select="./tei:forename[@xml:lang=$lang or not(@xml:lang)]"/>
 
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="./tei:roleName[@xml:lang=$lang or not(@xml:lang)]"/>
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="./tei:forename[@xml:lang=$lang or not(@xml:lang)]"/>
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="./tei:surname[@xml:lang=$lang or not(@xml:lang)]"/>
+          <xsl:if test="$roleName">
+            <xsl:value-of select="$roleName"/>
+            <xsl:text> </xsl:text>
+          </xsl:if>
+
+          <xsl:if test="$forename">
+            <xsl:call-template name="print_name">
+              <xsl:with-param name="name" select="$forename"/>
+              <xsl:with-param name="normalised_name" select="$normalised_forename"/>
+            </xsl:call-template>
+            <xsl:text> </xsl:text>
+          </xsl:if>
+
+
+          <xsl:call-template name="print_name">
+            <xsl:with-param name="name" select="$surname"/>
+            <xsl:with-param name="normalised_name" select="$normalised_surname"/>
+          </xsl:call-template>
         </xsl:otherwise>
       </xsl:choose>
 
@@ -233,29 +295,46 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="title">
+  <xsl:template match="tei:analytic | tei:monogr | tei:series | tei:bibl" mode="title">
 
     <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
       <xsl:value-of select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
     </xsl:if>
-    
-    <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != ''] and self::tei:analytic and following-sibling::tei:relatedItem">
+
+    <xsl:if
+      test="./tei:title[@xml:lang=$lang and text() != '' or text() != ''] and self::tei:analytic and following-sibling::tei:relatedItem">
       <xsl:text> </xsl:text>
     </xsl:if>
-    
+
     <xsl:if test="self::tei:analytic and following-sibling::tei:relatedItem">
       <xsl:variable name="rel_item" select="following-sibling::tei:relatedItem/@target"/>
       <i18n:text>Review of</i18n:text>
       <xsl:text>: </xsl:text>
-      <a href="{$rel_item}">
-        <xsl:variable name="referenced_biblstruct"
-          select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = substring-after($rel_item, '#')]"/>
-        <xsl:apply-templates
-          select="$referenced_biblstruct/(tei:analytic | tei:monogr | tei:series)[1]"
-          mode="author_list"/>
-        <xsl:text> </xsl:text>
-        <xsl:apply-templates select="$referenced_biblstruct" mode="date"/>
-      </a>
+      <xsl:choose>
+        <xsl:when
+          test="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = substring-after($rel_item, '#')]">
+          <a href="{$rel_item}">
+            <xsl:variable name="referenced_biblstruct"
+              select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = substring-after($rel_item, '#')]"/>
+            <xsl:apply-templates
+              select="$referenced_biblstruct/(tei:analytic | tei:monogr | tei:series)[1]"
+              mode="author_list"/>
+            <xsl:text> </xsl:text>
+            <xsl:apply-templates select="$referenced_biblstruct" mode="date"/>
+          </a>
+        </xsl:when>
+
+        <xsl:when
+          test="/aggregation/bib/tei:TEI//tei:listBibl[@type='corpora']/tei:bibl[@xml:id = substring-after($rel_item, '#')]">
+          <xsl:variable name="referenced_corpora_bibl"
+            select="/aggregation/bib/tei:TEI//tei:listBibl[@type='corpora']/tei:bibl[@xml:id = substring-after($rel_item, '#')]"/>
+          <xsl:apply-templates select="$referenced_corpora_bibl" mode="author_list"/>
+          <xsl:text> </xsl:text>
+          <xsl:apply-templates select="$referenced_corpora_bibl" mode="title"/>
+
+        </xsl:when>
+      </xsl:choose>
+
     </xsl:if>
 
 
