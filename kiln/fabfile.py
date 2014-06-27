@@ -17,7 +17,7 @@ env.hosts = ['iospe.cch.kcl.ac.uk']
 env.root_path = '/vol/iospe/webroot/'
 env.envs_path = os.path.join(env.root_path, 'envs')
 
-INDEX_ALL_URI = '/admin/solr/index/all.htmlss'
+INDEX_ALL_URI = '/admin/solr/index/all.html'
 USERNAME = 'agiacometti'
 
 
@@ -61,7 +61,7 @@ def deploy():
 
 @task
 def update():
-    require('srvr', 'path' 'password', provided_by=[dev, stg, liv])
+    require('srvr', 'path', 'password', provided_by=[dev, stg, liv])
 
     with cd(os.path.join(env.path, 'kiln')):
         run('svn up')
@@ -71,7 +71,7 @@ def update():
 def index():
     require('srvr', 'path', 'password', 'url', provided_by=[dev, stg, liv])
 
-    local(('curl'
+    run(('curl'
            ' --insecure'
            ' -u {user}'
            ' --fail'
