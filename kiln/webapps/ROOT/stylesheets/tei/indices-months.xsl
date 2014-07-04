@@ -20,6 +20,7 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexMonths">
+    <xsl:call-template name="indices_bracket_info"/>
     <table class="indices indices-months">
       <xsl:for-each select="//AL//list">
 

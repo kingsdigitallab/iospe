@@ -40,6 +40,7 @@
                 select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
                 <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num"
                   data-type="number" order="descending"/>
+
                 <li>
                   <xsl:attribute name="class">
                     <xsl:if test="current() = $date-type">
@@ -118,11 +119,25 @@
             </dt>
             <xsl:for-each select="current-group()">
               <xsl:sort select="int[@name='sortable-id']"/>
+
+              <xsl:variable name="formatted-tei-id">
+                <xsl:analyze-string select="str[@name='tei-id']" regex="\d\.\d{{1,3}}">
+                  <xsl:matching-substring>
+                    <xsl:number value="concat('0', substring-before(., '.'))" format="I"/>
+                    <xsl:text>&#xa0;</xsl:text>
+                    <xsl:number value="concat('0', substring-after(., '.'))" format="1"/>
+                  </xsl:matching-substring>
+                  <xsl:non-matching-substring>
+                    <xsl:value-of select="."/>
+                  </xsl:non-matching-substring>
+                </xsl:analyze-string>
+              </xsl:variable>
+
+
+
               <dd>
                 <a href="/{str[@name='file']}.html">
-                  <xsl:number value="substring-before(str[@name='tei-id'],'.')" format="I"/>
-                  <xsl:text>&#xa0;</xsl:text>
-                  <xsl:number value="substring-after(str[@name='tei-id'],'.')" format="1"/>
+                  <xsl:value-of select="$formatted-tei-id"/>
 
                   <xsl:text> </xsl:text>
                   <xsl:value-of select="arr[@name=concat('location-', $lang)]/str[1]"/>

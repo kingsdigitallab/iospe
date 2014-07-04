@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
   <!--
       Defaults stylesheet. Defines default globals and reads
       parameters from the sitemap.
@@ -221,6 +220,17 @@
         <xsl:apply-templates/>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <xsl:template name="indices_bracket_info">
+    <div data-alert="data-alert" class="alert-box secondary">
+      <i class="fa fa-info-circle">
+        <xsl:text> </xsl:text>
+      </i>
+      <xsl:text> </xsl:text>
+      <i18n:text key="__indices_bracket_info">Inscription numbers in square brackets '[', ']'
+        indicate that the term is partially or completely restored in the text.</i18n:text>
+    </div>
   </xsl:template>
 
 

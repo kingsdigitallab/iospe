@@ -43,6 +43,9 @@
   </xsl:template>
   <!-- Generate Index -->
   <xsl:template name="generateIndexPerson">
+    
+    <xsl:call-template name="indices_bracket_info"/>
+    
     <xsl:choose>
       <!-- divine -->
       <xsl:when test="$index='divine'">

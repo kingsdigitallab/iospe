@@ -20,15 +20,18 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexPlaces">
+    <xsl:call-template name="indices_bracket_info"/>
     <dl class="indices indices-places">
       <xsl:for-each select="//AL//tei:place[@xml:id=(//result//doc//str[@name='places-key'])]">
         <dt>
           <xsl:choose>
             <xsl:when test="count(tei:placeName[@xml:lang])>1">
-              <xsl:value-of select="translate(string-join(tei:placeName[@xml:lang='grc'], ','),'.','')"/>
+              <xsl:value-of
+                select="translate(string-join(tei:placeName[@xml:lang='grc'], ','),'.','')"/>
               <xsl:if test="tei:placeName[@xml:lang='la']">
                 <xsl:text> / </xsl:text>
-                <xsl:value-of select="translate(string-join(tei:placeName[@xml:lang='la'], ', '),'.','')"/>
+                <xsl:value-of
+                  select="translate(string-join(tei:placeName[@xml:lang='la'], ', '),'.','')"/>
               </xsl:if>
             </xsl:when>
             <xsl:otherwise>
