@@ -78,7 +78,7 @@
     <xsl:text>. </xsl:text>
 
     <!-- origin -->
-    <xsl:value-of
+    <xsl:apply-templates
       select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang=$lang]"/>
     <xsl:text> </xsl:text>
 
@@ -360,7 +360,7 @@
         </div>
         <div class="large-9 columns">
           <p>
-            <xsl:value-of
+            <xsl:apply-templates
               select="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
             <xsl:text>&#160;</xsl:text>
           </p>
