@@ -33,7 +33,7 @@
 
     <!-- collect all sources -->
     <xsl:variable name="sources">
-      <xsl:for-each select="tokenize(@resp, ' ')">
+      <xsl:for-each select="tokenize(@source, ' ')">
         <xsl:call-template name="source">
           <xsl:with-param name="root" select="$root"/>
         </xsl:call-template>
@@ -88,16 +88,17 @@
   <xsl:template name="source">
     <xsl:param name="root"/>
 
-    <!--<xsl:variable name="pref" select="'bib:'"/>-->
-    <xsl:variable name="pref" select="''"/>
+    <xsl:variable name="pref" select="'bib:'"/>
     <tei:ref>
       <xsl:choose>
         <xsl:when test="starts-with(., $pref)">
+          <!-- all bibl or biblstruct elements referenced in apparatus which come from the main bibliography.xml -->
           <xsl:apply-templates
             select="$root//bib//(tei:bibl | tei:biblStruct)[@xml:id=substring-after(current(), $pref)]"
             mode="parse-name-year"/>
         </xsl:when>
         <xsl:otherwise>
+          <!-- all bibl or biblstruct elements referenced only in apparatus which come from the local div#bibliography -->
           <xsl:apply-templates
             select="$root//tei:div[@type='bibliography']//(tei:bibl | tei:biblStruct)[@xml:id=current()]"
             mode="parse-name-year"/>
@@ -211,7 +212,7 @@
     </xsl:call-template>
 
     <xsl:if
-      test="following-sibling::tei:* and not(following-sibling::tei:*[1][self::tei:note]) and not(@resp)">
+      test="following-sibling::tei:* and not(following-sibling::tei:*[1][self::tei:note]) and not(@source)">
       <xsl:text>: </xsl:text>
     </xsl:if>
   </xsl:template>

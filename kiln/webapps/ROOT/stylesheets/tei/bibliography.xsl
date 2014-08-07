@@ -298,7 +298,7 @@
   <xsl:template match="tei:analytic | tei:monogr | tei:series | tei:bibl" mode="title">
 
     <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
-      <xsl:value-of select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
+      <xsl:apply-templates select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
     </xsl:if>
 
     <xsl:if
