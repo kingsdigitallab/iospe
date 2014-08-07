@@ -75,6 +75,13 @@
       </map:match>
     </map:pipeline>
 
+    <map:pipeline>
+      <!-- Inscriptions -->
+      <map:match pattern="alists/**">
+        <map:mount check-reload="yes" src="alists.xmap" uri-prefix="alists/"/>
+      </map:match>
+    </map:pipeline>
+
     <!-- Main display pipeline. -->
     <map:pipeline>
       <map:match pattern="">
