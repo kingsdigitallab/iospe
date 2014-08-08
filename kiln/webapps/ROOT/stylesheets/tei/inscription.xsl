@@ -1105,7 +1105,7 @@
 
   <!-- BIBLIOGRAPHY (pointers) -->
   <xsl:template match="tei:bibl//tei:ptr">
-    <xsl:apply-templates select="//bib//tei:bibl[@id=current()/@target]"/>
+    <xsl:apply-templates select="//bib//tei:bibl[@id=substring-after(current()/@target, 'bib:')]"/>
   </xsl:template>
 
   <xsl:template match="tei:bibl//tei:seg[@xml:lang]">
@@ -1321,7 +1321,7 @@
     <xsl:variable name="surnames">
       <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
     </xsl:variable>
-    <xsl:variable name="target" select="tei:ptr/@target"/>
+    <xsl:variable name="target" select="substring-after(tei:ptr/@target, 'bib:')"/>
     <xsl:for-each select="//bib//tei:biblStruct[@xml:id=$target]|//bib//tei:bibl[@xml:id=$target]">
       <xsl:choose>
         <xsl:when test="@xml:id='IOSPE'">
@@ -1400,12 +1400,18 @@
       </xsl:if>
       <xsl:if test="count(//tei:biblStruct[@xml:id=$target]//tei:author[1])>2">, et al.</xsl:if>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="normalize-space(descendant::tei:imprint[1]/tei:date[1])"/>
+      <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
     </xsl:for-each>
     <xsl:apply-templates/>
 
     <xsl:if test="following-sibling::tei:bibl[child::node()]">
       <xsl:text>; </xsl:text>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template match="tei:seg[ancestor::tei:date]">
+    <xsl:if test="current()[not(@xml:lang) or @xml:lang=$lang]">
+      <xsl:apply-templates />
     </xsl:if>
   </xsl:template>
 
