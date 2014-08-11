@@ -1400,7 +1400,7 @@
       </xsl:if>
       <xsl:if test="count(//tei:biblStruct[@xml:id=$target]//tei:author[1])>2">, et al.</xsl:if>
       <xsl:text> </xsl:text>
-      <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
+      <xsl:apply-templates select="descendant::tei:monograph[1]/tei:imprint[1]/tei:date[1]"/>
     </xsl:for-each>
     <xsl:apply-templates/>
 
