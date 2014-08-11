@@ -2,7 +2,7 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
+
   <xsl:import href="inscription-apparatus.xsl"/>
 
   <xsl:template match="/"/>
@@ -213,7 +213,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <i18n:text>Dimensions (cm)</i18n:text>
+                <i18n:text>Dimensions</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -683,7 +683,7 @@
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <i18n:text>Letterheights (cm)</i18n:text>
+                  <i18n:text>Letterheights</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
@@ -811,14 +811,28 @@
                 </xsl:variable>
                 <xsl:choose>
                   <xsl:when
+                    test="normalize-space($fullN) = '' and 
+                          //tei:div[@type='bibliography'][tei:listBibl//text()[not(normalize-space(.)='')]]">
+
+                    <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
+                      <xsl:if test="@n">
+                        <em>
+                          <i18n:text>Fragment </i18n:text>
+                          <xsl:value-of select="@n"/>
+                          <xsl:text>. </xsl:text>
+                        </em>
+                      </xsl:if>
+                      <xsl:apply-templates/>
+                      <xsl:if test="not(string(normalize-space(self::tei:listBibl)))">
+                        <i18n:text>Unpublished</i18n:text>
+                      </xsl:if>
+                      <xsl:if test="position() != last()">
+                        <xsl:text>.&#160;</xsl:text>
+                      </xsl:if>
+                    </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when
                     test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//text()[not(normalize-space(.)='')]]">
-                    <xsl:if test="@n">
-                      <em>
-                        <i18n:text>Fragment </i18n:text>
-                        <xsl:value-of select="@n"/>
-                        <xsl:text>. </xsl:text>
-                      </em>
-                    </xsl:if>
                     <xsl:apply-templates
                       select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
                     />
@@ -1406,12 +1420,6 @@
 
     <xsl:if test="following-sibling::tei:bibl[child::node()]">
       <xsl:text>; </xsl:text>
-    </xsl:if>
-  </xsl:template>
-  
-  <xsl:template match="tei:seg[ancestor::tei:date]">
-    <xsl:if test="current()[not(@xml:lang) or @xml:lang=$lang]">
-      <xsl:apply-templates />
     </xsl:if>
   </xsl:template>
 
@@ -2031,7 +2039,7 @@
       <xsl:text>?</xsl:text>
     </xsl:if>
   </xsl:template>
-  
+
   <xsl:template match="tei:certainty[@cert='low']">
     <xsl:text>(?)</xsl:text>
   </xsl:template>

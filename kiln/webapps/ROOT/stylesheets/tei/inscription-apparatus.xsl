@@ -146,15 +146,12 @@
       </xsl:for-each>
     </tei:name>
     <tei:date>
-      <xsl:choose>
-        <xsl:when test=".//tei:imprint[1]">
-          <xsl:apply-templates select=".//tei:imprint[1]//tei:date"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:apply-templates select=".//tei:date[1]"/>
-        </xsl:otherwise>
-      </xsl:choose>
-
+      <xsl:variable name="all_dates">
+        <xsl:for-each select="current()//tei:date">
+          <xsl:copy-of select="self::tei:date"/>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:apply-templates select="$all_dates/tei:date[1]"/>
     </tei:date>
   </xsl:template>
 
