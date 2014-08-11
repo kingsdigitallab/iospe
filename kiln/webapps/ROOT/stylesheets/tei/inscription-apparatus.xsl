@@ -147,8 +147,8 @@
     </tei:name>
     <tei:date>
       <xsl:choose>
-        <xsl:when test=".//tei:imprint[1]">
-          <xsl:apply-templates select=".//tei:imprint[1]//tei:date"/>
+        <xsl:when test=".//tei:monograph//tei:imprint">
+          <xsl:apply-templates select=".//tei:monograph[1]//tei:imprint[1]//tei:date[1]"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:apply-templates select=".//tei:date[1]"/>
