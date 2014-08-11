@@ -62,7 +62,7 @@
               test="$n_authors_with_same_name_in_local_bib != 1 
               and not($n_authors_with_same_name_in_local_bib_and_current_sources = $n_authors_with_same_name_in_current_sources)">
 
-              <xsl:sequence select="./tei:date[1]"/>
+              <xsl:sequence select="./tei:date"/>
             </xsl:if>
           </tei:ref>
         </xsl:if>
@@ -76,7 +76,7 @@
 
       <xsl:if test="tei:date">
         <xsl:text> </xsl:text>
-        <xsl:apply-templates select="tei:date[1]/node()"/>
+        <xsl:apply-templates select="tei:date/node()"/>
       </xsl:if>
       <xsl:if test="not(position() = last())">
         <xsl:text>, </xsl:text>
@@ -147,8 +147,8 @@
     </tei:name>
     <tei:date>
       <xsl:choose>
-        <xsl:when test=".//tei:monograph//tei:imprint">
-          <xsl:apply-templates select=".//tei:monograph[1]//tei:imprint[1]//tei:date[1]"/>
+        <xsl:when test=".//tei:imprint[1]">
+          <xsl:apply-templates select=".//tei:imprint[1]//tei:date"/>
         </xsl:when>
         <xsl:otherwise>
           <xsl:apply-templates select=".//tei:date[1]"/>
