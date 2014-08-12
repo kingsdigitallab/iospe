@@ -564,7 +564,7 @@
                 </div>
                 <div class="large-9 columns">
                   <p>
-                   <xsl:if test="normalize-space(tei:seg)=''">
+                    <xsl:if test="tei:seg[@xml:lang=$lang][normalize-space(.)!='']">
                      <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
                     <xsl:text>&#160;</xsl:text>
                     </xsl:if>
