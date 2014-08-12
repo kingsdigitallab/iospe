@@ -219,95 +219,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates select="self::tei:dimensions"/>
-                <!--
-                  <xsl:choose>
-                  <xsl:when test="not(tei:height) and not(tei:width) and not(tei:depth)">
-                    <i18n:text>Unknown</i18n:text>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:if test="tei:height">
-                      <i18n:text key="__Height">H.</i18n:text>
-                      <xsl:text> </xsl:text>
-                      <xsl:choose>
-                        <xsl:when test="tei:height[.='?']">
-                          <i18n:text>unknown</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of
-                            select="if ($lang='ru') then tei:height else translate(tei:height, ',', '.')"
-                          />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:if>
-                    <xsl:if test="tei:width">
-                      <xsl:choose>
-                        <xsl:when test="tei:height">
-                          <i18n:text key="__dim_separator">, </i18n:text>
-                          <i18n:text key="__width">W.</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <i18n:text key="__Width">W.</i18n:text>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                      <xsl:text> </xsl:text>
-                      <xsl:choose>
-                        <xsl:when test="tei:width[.='?']">
-                          <i18n:text>unknown</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of
-                            select="if ($lang='ru') then tei:width else translate(tei:width, ',', '.')"
-                          />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:if>
-                    <xsl:if test="tei:depth">
-                      <xsl:choose>
-                        <xsl:when test="tei:height or tei:width">
-                          <i18n:text key="__dim_separator">, </i18n:text>
-                          <i18n:text key="__depth">Th.</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <i18n:text key="__Depth">Th.</i18n:text>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                      <xsl:text> </xsl:text>
-                      <xsl:choose>
-                        <xsl:when test="tei:depth[.='?']">
-                          <i18n:text>unknown</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of
-                            select="if ($lang='ru') then tei:depth else translate(tei:depth, ',', '.')"
-                          />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:if>
-                    <xsl:if test="tei:dim[@type = 'diameter']">
-                      <xsl:choose>
-                        <xsl:when test="tei:height or tei:width or tei:depth">
-                          <i18n:text key="__dim_separator">, </i18n:text>
-                          <i18n:text key="__diameter">Diam.</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <i18n:text key="__Diameter">Diam.</i18n:text>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                      <xsl:text> </xsl:text>
-                      <xsl:choose>
-                        <xsl:when test="tei:dim[@type = 'diameter'][.='?']">
-                          <i18n:text>unknown</i18n:text>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of
-                            select="if ($lang='ru') then tei:dim[@type = 'diameter'] else translate(tei:dim[@type = 'diameter'], ',', '.')"
-                          />
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </xsl:if>
-                  </xsl:otherwise>
-                </xsl:choose>
-                -->
+                <!-- moved xsl:choose from here to dimensions template below -->
                 <xsl:text>.</xsl:text>
               </p>
             </div>
@@ -652,8 +564,10 @@
                 </div>
                 <div class="large-9 columns">
                   <p>
-                    <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
+                   <xsl:if test="normalize-space(tei:seg)=''">
+                     <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
                     <xsl:text>&#160;</xsl:text>
+                    </xsl:if>
                     <xsl:if test="tei:dimensions">
                       <xsl:apply-templates select="tei:dimensions"/>
                     </xsl:if>
@@ -1251,41 +1165,7 @@
     </xsl:choose>
 
 
-    <!--<xsl:if test="tei:height">
-      <i18n:text key="__height">h</i18n:text>
-      <xsl:text>: </xsl:text>
-      <xsl:value-of select="tei:height"/>
-      <xsl:text> x </xsl:text>
-    </xsl:if>
-
-    <xsl:if test="tei:width">
-      <i18n:text key="__width">w</i18n:text>
-      <xsl:text>: </xsl:text>
-      <xsl:value-of select="tei:width"/>
-    </xsl:if>
-
-    <xsl:if test="tei:depth">
-      <xsl:text> </xsl:text>
-      <i18n:text key="__depth">x d</i18n:text>
-      <xsl:text>: </xsl:text>
-      <xsl:value-of select="tei:depth"/>
-    </xsl:if>
-
-    <xsl:if test="tei:dim[@type = 'diameter']">
-      <xsl:text> </xsl:text>
-      <i18n:text key="__x_diameter">x diam</i18n:text>
-      <xsl:text>: </xsl:text>
-      <xsl:value-of select="tei:dim[@type = 'diameter']"/>
-    </xsl:if>
-
-    <xsl:if test="tei:dim[@type != 'diameter']">
-      <xsl:for-each select="tei:dim[@type != 'diameter']">
-        <xsl:text> x </xsl:text>
-        <xsl:value-of select="@type"/>
-        <xsl:text>: </xsl:text>
-        <xsl:value-of select="."/>
-      </xsl:for-each>
-    </xsl:if>-->
+    <!-- replaced old content with choose from support/dimensions tests above -->
   </xsl:template>
 
   <xsl:template match="tei:lb">
