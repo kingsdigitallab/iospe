@@ -4,7 +4,7 @@ define([], function() {
   });
 
   this.parse_inscription = function(query) {
-    var n = query.match(/^(?:(\w+)[\.\s])?(\d{1,3})$/);
+    var n = query.match(/^(?:(\w+)[\.\s])?(\d{1,3})\s?(\w{0,1})$/);
 
     if (!n || !n[2]) {
       return false;
@@ -17,8 +17,9 @@ define([], function() {
     }
 
     return {
-      'pref': '' + n[1] + '.',
-      'n': n[2]
+      'corpus': '' + n[1] + '.',
+      'n': n[2],
+      'suffix': n[3]
     };
   };
 
@@ -30,8 +31,9 @@ define([], function() {
     var dictionary = [
       //['3', 'IIV'],
       //['4', 'IV'],
-      ['5', 'V'] //,
+      ['5', 'V'],
       //['6', 'VI'],
+      ['30', 'XXX']
     ];
 
     var found = dictionary.filter(function(n, i) {
@@ -44,8 +46,9 @@ define([], function() {
   this.build_inscription_doc = function(inscription, extension) {
     var ext = extension || '.html';
 
-    return ('/' + inscription.pref +
+    return ('/' + inscription.corpus +
       inscription.n +
+      inscription.suffix +
       this.get_kiln_url_language_suffix() +
       ext);
 

@@ -10,7 +10,8 @@ requirejs.config({
     urlArgs: "bust=" + (new Date()).getTime(),
     baseUrl: "/assets/scripts",
     paths: {
-        "jquery-ui": "vendor/jquery-ui/ui/jquery-ui",
+        "jquery": "vendor/jquery/dist/jquery",
+        "jquery-ui": "vendor/jquery-ui/jquery-ui.min",
         "highlightjs": "vendor/highlightjs/highlight.pack",
         "purl": "vendor/purl/purl",
         "app": "app"
@@ -18,7 +19,10 @@ requirejs.config({
     },
     shim: {
         "jquery-ui": {
-            exports: "$"
+            exports: "$",
+            deps: [
+            'jquery'
+            ]
         },
     }
 });
