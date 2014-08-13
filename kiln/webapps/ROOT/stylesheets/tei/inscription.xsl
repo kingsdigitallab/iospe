@@ -213,7 +213,7 @@
           <div class="row">
             <div class="large-3 columns">
               <h6>
-                <i18n:text>Dimensions</i18n:text>
+                <i18n:text>Dimensions (cm)</i18n:text>
               </h6>
             </div>
             <div class="large-9 columns">
@@ -600,7 +600,7 @@
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <i18n:text>Letterheights</i18n:text>
+                  <i18n:text>Letterheights (cm)</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
