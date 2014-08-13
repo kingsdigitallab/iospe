@@ -4,15 +4,34 @@
   xmlns:local="http://www.cch.kcl.ac.uk/kiln/local/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <xsl:import href="../epidoc-views/common.xsl"/>
+
 
   <xsl:function as="xs:string" name="local:sort_id">
     <xsl:param name="tei_id"/>
 
-    <!-- corpus number -->
-    <xsl:variable name="b_sort" as="xs:integer">
-      <xsl:analyze-string select="$tei_id" regex="\d\.\d{{1,3}}">
+    <xsl:variable name="sort-num">
+      <xsl:analyze-string select="normalize-space($tei_id)"
+        regex="([0-9]{{1,2}})\.([0-9]{{1,3}})([a-z]?)">
         <xsl:matching-substring>
-          <xsl:value-of select="concat('0', substring-before(., '.'))"/>
+          <!-- corpus number -->
+          <xsl:variable name="b_sort" as="xs:integer">
+            <xsl:value-of select="regex-group(1)"/>
+          </xsl:variable>
+
+          <!-- inscription number -->
+          <xsl:variable name="i_sort" as="xs:integer">
+            <xsl:value-of select="regex-group(2)"/>
+          </xsl:variable>
+
+          <!-- inscription letter index 0 if nothing, 1-26 if a-z-->
+          <xsl:variable name="s_sort" as="xs:integer">
+            <xsl:value-of
+              select="if (regex-group(3)) 
+                      then string-length(substring-before($lowercase, regex-group(3))) + 1 
+                      else 0"/>
+          </xsl:variable>
+          <xsl:value-of select="((($b_sort * 1000) + $i_sort) * 100) + $s_sort"/>
         </xsl:matching-substring>
         <xsl:non-matching-substring>
           <xsl:value-of select="0"/>
@@ -20,19 +39,7 @@
       </xsl:analyze-string>
     </xsl:variable>
 
-    <!-- inscription number -->
-    <xsl:variable name="i_sort" as="xs:integer">
-      <xsl:analyze-string select="$tei_id" regex="\d\.\d{{1,3}}">
-        <xsl:matching-substring>
-          <xsl:value-of select="concat('0', substring-after(., '.'))"/>
-        </xsl:matching-substring>
-        <xsl:non-matching-substring>
-          <xsl:value-of select="0"/>
-        </xsl:non-matching-substring>
-      </xsl:analyze-string>
-    </xsl:variable>
-
-    <xsl:value-of select="(10000 * $b_sort) + $i_sort"/>
+    <xsl:value-of select="$sort-num"/>
 
   </xsl:function>
 
