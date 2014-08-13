@@ -112,7 +112,7 @@
     <xsl:param name="printCorpus" select="false()"/>
     <xsl:param name="txt" select="false()"/>
 
-    <xsl:analyze-string regex="(\d)\.(\d+)" select="$num">
+    <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
       <xsl:matching-substring>
         <xsl:if test="$printCorpus">
           <xsl:number value="regex-group(1)" format="I"/>
@@ -120,11 +120,13 @@
         </xsl:if>
         <xsl:choose>
           <xsl:when test="$txt">
-            <xsl:number format="1" value="number(regex-group(2))"/>
+            <xsl:number format="1" value="number(translate(regex-group(2),'abcdefghijklmnopqrstuvwxyz',''))"/>
+            <xsl:value-of select="translate(regex-group(2),'0123456789','')"/>
           </xsl:when>
           <xsl:otherwise>
             <strong>
-              <xsl:number format="1" value="number(regex-group(2))"/>
+              <xsl:number format="1" value="number(translate(regex-group(2),'abcdefghijklmnopqrstuvwxyz',''))"/>
+            <xsl:value-of select="translate(regex-group(2),'0123456789','')"/>
             </strong>
           </xsl:otherwise>
         </xsl:choose>
