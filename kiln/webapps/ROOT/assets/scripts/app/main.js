@@ -41,7 +41,8 @@ define([], function() {
       //['4', 'IV'],
       ['5', 'V'],
       //['6', 'VI'],
-      ['30', 'XXX']
+      ['30', 'XXX'],
+      ['40', 'XL']
     ];
 
     var found = dictionary.filter(function(n, i) {
