@@ -12,7 +12,7 @@
 
     <xsl:variable name="sort-num">
       <xsl:analyze-string select="normalize-space($tei_id)"
-        regex="([0-9]{{1,2}})\.([0-9]{{1,3}})([a-z]?)">
+        regex="([0-9]{{1,2}})\.([0-9]{{1,4}})([a-z]?)">
         <xsl:matching-substring>
           <!-- corpus number -->
           <xsl:variable name="b_sort" as="xs:integer">
@@ -27,11 +27,11 @@
           <!-- inscription letter index 0 if nothing, 1-26 if a-z-->
           <xsl:variable name="s_sort" as="xs:integer">
             <xsl:value-of
-              select="if (regex-group(3)) 
-                      then string-length(substring-before($lowercase, regex-group(3))) + 1 
+              select="if (regex-group(3))
+                      then string-length(substring-before($lowercase, regex-group(3))) + 1
                       else 0"/>
           </xsl:variable>
-          <xsl:value-of select="((($b_sort * 1000) + $i_sort) * 100) + $s_sort"/>
+          <xsl:value-of select="((($b_sort * 10000) + $i_sort) * 100) + $s_sort"/>
         </xsl:matching-substring>
         <xsl:non-matching-substring>
           <xsl:value-of select="0"/>
