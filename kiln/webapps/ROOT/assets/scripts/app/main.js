@@ -4,7 +4,13 @@ define([], function() {
   });
 
   this.parse_inscription = function(query) {
-    var n = query.match(/^(?:(\w+)[\.\s])?(\d{1,3})\s?(\w{0,1})$/);
+
+    // Matches inscriptions in various forms:
+    // V 1 = 5.1 = v.0001
+    // 5.88a
+    // XXX 20 = 30.20
+
+    var n = query.match(/^(?:(\w+)[\.\s])?(\d{1,4})\s?(\w{0,1})$/);
 
     if (!n || !n[2]) {
       return false;
@@ -15,6 +21,8 @@ define([], function() {
     if (!n[1]) {
       return false;
     }
+
+    n[2] = parseInt(n[2]);
 
     return {
       'corpus': '' + n[1] + '.',
