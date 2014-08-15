@@ -349,7 +349,7 @@
     </xsl:if>
 
     <!-- Modern Location (if exists) -->
-    <xsl:if test="//tei:provenance[@type='observed'][@n = $n or not(@n or $n)]">
+    <xsl:if test="//tei:provenance[@type='observed'][not(@subtype)][@n = $n or not(@n or $n)]">
       <div class="row">
         <div class="large-3 columns">
           <h6>
@@ -360,7 +360,7 @@
         <div class="large-9 columns">
           <p>
             <xsl:value-of
-              select="//tei:provenance[@type='observed'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
+              select="//tei:provenance[@type='observed'][not(@subtype)][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
             <xsl:text>&#160;</xsl:text>
           </p>
         </div>
@@ -392,7 +392,7 @@
     </xsl:if>
 
     <!-- Autopsy -->
-    <xsl:if test="//tei:provenance[@type = 'autopsy'][@n = $n or not(@n or $n)]">
+    <xsl:if test="//tei:provenance[@type='observed'][@subtype='autopsy'][@n = $n or not(@n or $n)]">
       <div class="row">
         <div class="large-3 columns">
           <h6>
@@ -402,7 +402,7 @@
         <div class="large-9 columns">
           <p>
             <xsl:value-of
-              select="//tei:provenance[@type = 'autopsy'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
+              select="//tei:provenance[@type='observed'][@subtype='autopsy'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
             <xsl:text>&#160;</xsl:text>
           </p>
         </div>
@@ -1724,7 +1724,7 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="tei:provenance[@type='autopsy']">
+  <xsl:template match="tei:provenance[@type='observed'][@subtype='autopsy']">
     <span class="autopsy" xsl:exclude-result-prefixes="tei">
       <xsl:apply-templates/>
     </span>
