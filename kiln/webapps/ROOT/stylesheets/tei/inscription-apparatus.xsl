@@ -70,7 +70,7 @@
     </xsl:variable>
 
     <!-- print references -->
-    <xsl:if test="string($sources/tei:ref)"><xsl:text> </xsl:text></xsl:if>
+    <xsl:text> </xsl:text>
     <xsl:for-each select="$final_printing_sources/tei:ref">
       <xsl:apply-templates select="tei:name/node()"/>
 
