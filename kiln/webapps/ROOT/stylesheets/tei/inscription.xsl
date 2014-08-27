@@ -668,7 +668,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:choose>
-                  <xsl:when test="$lang='ru'">
+                  <xsl:when test="$lang='ru' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
                     <xsl:for-each
                       select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
                       <xsl:variable name="token">
@@ -689,7 +689,7 @@
                     </xsl:for-each>
                     <xsl:text>.&#160;</xsl:text>
                   </xsl:when>
-                  <xsl:otherwise>
+                  <xsl:when test="$lang='en' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
                     <xsl:variable name="crit" select="/aggregation/crit"/>
                     <xsl:for-each
                       select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
@@ -709,6 +709,10 @@
                         <xsl:text>, </xsl:text>
                       </xsl:if>
                     </xsl:for-each>
+                    <xsl:text>.&#160;</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <i18n:text>Not applicable</i18n:text>
                     <xsl:text>.&#160;</xsl:text>
                   </xsl:otherwise>
                 </xsl:choose>
