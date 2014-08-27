@@ -379,12 +379,16 @@
           <p>
             <xsl:value-of
               select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository"/>
-            <xsl:if
-              test="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno/text()">
-              <xsl:text>,&#160;</xsl:text>
-            </xsl:if>
-            <xsl:value-of
-              select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno"/>
+            <xsl:choose>
+              <xsl:when test="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno/text()">
+                <xsl:text>,&#160;</xsl:text>
+                <xsl:value-of select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno"/>
+              </xsl:when>
+              <xsl:when test="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository[. = 'Unknown']">
+                <xsl:text>,&#160;</xsl:text>
+                <i18n:text>no inventory number</i18n:text>
+              </xsl:when>
+            </xsl:choose>
             <xsl:text>.&#160;</xsl:text>
           </p>
         </div>
