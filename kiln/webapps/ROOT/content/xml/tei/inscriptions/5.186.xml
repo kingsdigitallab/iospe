@@ -2,7 +2,7 @@
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt> <!-- \d+\. -->
+            <titleStmt>
                 <title xml:lang="ru">Прошение Константина</title>
                 <title xml:lang="en">Invocation of Konstantinos</title>
                 <editor xml:id="ayv2012">
@@ -154,13 +154,13 @@
     </teiHeader>
     <facsimile>
         <surface>
-            <graphic url="5.186-1">
-                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"/>
+            <graphic url="5.186-1" n="1">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"></desc>
             </graphic>
-            <graphic url="5.186-2">
-                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
-                <desc xml:lang="ru"/>
+            <graphic url="5.186-2" n="1">
+                <desc xml:lang="en">Drawing of face</desc>
+                <desc xml:lang="ru"></desc>
             </graphic>            
         </surface>
     </facsimile>
@@ -239,12 +239,8 @@
         </div>
         </div>
 
-            <div type="apparatus">
-                <!-- Критич. аппарат -->
-                <p/>
-            </div>
-
-            <div type="commentary" xml:lang="ru" n="1">
+        <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
                 <p>Описание, прорисовка и частичная протирка надписи были любезно переданны автору Т.А. Матанцевой.</p>
                 <p>Первоначально на концах рукавов креста была выполнена надпись 1 с типичной формулой «свет, жизнь» (о ней см. <ref type="introduction">IV.3.C.b</ref>). Затем, поверх букв надписи 1, была
                         вырезана надпись 2 с формулой «Иисус побеждает» (о ней см. <ref type="introduction">IV.3.C.e</ref>), причем резчик, судя по всему, забыл вырезать на нижнем рукаве хи.
@@ -257,16 +253,18 @@
                 <p>Камень, очевидно, предназначался для закладки в стену. Первоиздатель датировал надпись, как и всю базилику, 2 пол. VI в., однако ее палеография ясно указывает
                     на средневизантийский период.</p>
             </div>
-            <div type="commentary" xml:lang="ru" n="2">
+            <div type="textpart" n="2">
                 <p>Смотри № 1.</p>
             </div>
-            <div type="commentary" xml:lang="ru" n="3">
+            <div type="textpart" n="3">
                 <p>Смотри № 1.</p>
             </div>
-            <div type="commentary" xml:lang="ru" n="4">
+            <div type="textpart" n="4">
                 <p>Смотри № 1.</p>
             </div>
-            <div type="commentary" xml:lang="en" n="1">
+            </div>
+            <div type="commentary" xml:lang="en">
+                <div type="textpart" n="1">
                 <p>The description, line drawing and a partial rubbing were kindly given to the author by Т.А. Matantseva.</p>
                 <p>Originally, Text 1 with a typical formula "Life, light" was inscribed on the tips of the arms of the cross (on the formula, see Introduction <ref type="introduction">IV.3.C.b</ref>). 
                     Subsequently, over the letters of Text 1, a second inscription was cut, with the formula "Jesus is victorious (see Introduction <ref type="introduction">IV.3.C.e</ref>), 
@@ -282,15 +280,16 @@
                     half of the VIth century, but its palaeographic features clearly indicate the Middle Byzantine period.</p>
                 <p/>
             </div>
-            <div type="commentary" xml:lang="en" n="2">
+            <div type="textpart" n="2">
                 <p>See Text 1.</p>
             </div>
-            <div type="commentary" xml:lang="en" n="3">
+            <div type="textpart" n="3">
                 <p>See Text 1.</p>
             </div>
-            <div type="commentary" xml:lang="en" n="4">
+            <div type="textpart" n="4">
                 <p>See Text 1.</p>
             </div>
+        </div>
         </body>
     </text>
 </TEI>
