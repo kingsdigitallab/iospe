@@ -3,6 +3,9 @@
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <xsl:param name="lang" select="$lang"/>
+  <xsl:param name="kiln-assets-path" select="$kiln-assets-path"/>
+
   <xsl:import href="inscription-apparatus.xsl"/>
 
   <xsl:template match="/"/>
@@ -120,13 +123,15 @@
         </xsl:if>
         <xsl:choose>
           <xsl:when test="$txt">
-            <xsl:number format="1" value="number(translate(regex-group(2),'abcdefghijklmnopqrstuvwxyz',''))"/>
+            <xsl:number format="1"
+              value="number(translate(regex-group(2),'abcdefghijklmnopqrstuvwxyz',''))"/>
             <xsl:value-of select="translate(regex-group(2),'0123456789','')"/>
           </xsl:when>
           <xsl:otherwise>
             <strong>
-              <xsl:number format="1" value="number(translate(regex-group(2),'abcdefghijklmnopqrstuvwxyz',''))"/>
-            <xsl:value-of select="translate(regex-group(2),'0123456789','')"/>
+              <xsl:number format="1"
+                value="number(translate(regex-group(2),'abcdefghijklmnopqrstuvwxyz',''))"/>
+              <xsl:value-of select="translate(regex-group(2),'0123456789','')"/>
             </strong>
           </xsl:otherwise>
         </xsl:choose>
@@ -379,13 +384,16 @@
           <p>
             <xsl:value-of
               select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository"/>
-            
+
             <xsl:choose>
-              <xsl:when test="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno/text()">
+              <xsl:when
+                test="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno/text()">
                 <xsl:text>,&#160;</xsl:text>
-                <xsl:value-of select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno"/>
+                <xsl:value-of
+                  select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno"/>
               </xsl:when>
-              <xsl:when test="not(//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository[.=('Unknown','Неизвестен')])">
+              <xsl:when
+                test="not(//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository[.=('Unknown','Неизвестен')])">
                 <xsl:text>,&#160;</xsl:text>
                 <i18n:text>no inventory number</i18n:text>
               </xsl:when>
@@ -436,6 +444,12 @@
   </xsl:template>
 
   <xsl:template match="tei:body">
+
+    <!-- Support is the only always-one element in the metadata -->
+    <xsl:call-template name="inscriptionSupport"/>
+    
+    
+    <!--<hr/>-->
     <div class="row">
       <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
       <xsl:choose>
@@ -572,8 +586,8 @@
                 <div class="large-9 columns">
                   <p>
                     <xsl:if test="tei:seg[@xml:lang=$lang][normalize-space(.)!='']">
-                     <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
-                    <xsl:text>&#160;</xsl:text>
+                      <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
+                      <xsl:text>&#160;</xsl:text>
                     </xsl:if>
                     <xsl:if test="tei:dimensions">
                       <xsl:apply-templates select="tei:dimensions"/>
@@ -673,7 +687,8 @@
             <div class="large-9 columns">
               <p>
                 <xsl:choose>
-                  <xsl:when test="$lang='ru' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
+                  <xsl:when
+                    test="$lang='ru' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
                     <xsl:for-each
                       select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
                       <xsl:variable name="token">
@@ -694,7 +709,8 @@
                     </xsl:for-each>
                     <xsl:text>.&#160;</xsl:text>
                   </xsl:when>
-                  <xsl:when test="$lang='en' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
+                  <xsl:when
+                    test="$lang='en' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
                     <xsl:variable name="crit" select="/aggregation/crit"/>
                     <xsl:for-each
                       select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
@@ -1101,8 +1117,7 @@
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="if ($lang='ru') then tei:height else translate(tei:height, ',', '.')"
-              />
+                select="if ($lang='ru') then tei:height else translate(tei:height, ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -1123,8 +1138,7 @@
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="if ($lang='ru') then tei:width else translate(tei:width, ',', '.')"
-              />
+                select="if ($lang='ru') then tei:width else translate(tei:width, ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -1145,8 +1159,7 @@
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="if ($lang='ru') then tei:depth else translate(tei:depth, ',', '.')"
-              />
+                select="if ($lang='ru') then tei:depth else translate(tei:depth, ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>

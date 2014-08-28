@@ -37,9 +37,6 @@
           <!-- navigation -->
           <xsl:call-template name="inscriptionnav"/>
 
-          <!-- Support is the only always-one element in the metadata -->
-          <xsl:call-template name="inscriptionSupport"/>
-
           <xsl:apply-templates select="//inscription/tei:TEI//tei:body"/>
 
           <!-- anything else -->
