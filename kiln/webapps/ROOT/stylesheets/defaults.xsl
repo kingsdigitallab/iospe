@@ -232,6 +232,20 @@
         indicate that the term is partially or completely restored in the text.</i18n:text>
     </div>
   </xsl:template>
+  
+  <!-- GREEK -->
+  <xsl:template match="tei:foreign[@xml:lang='grc']|tei:term[@xml:lang='grc']">
+    <span lang="grc" xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  
+  <!-- Old Church Slavonic -->
+  <xsl:template match="tei:foreign[@xml:lang='cu']|tei:term[@xml:lang='cu']">
+    <span lang="cu" xsl:exclude-result-prefixes="tei">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
 
 
 </xsl:stylesheet>

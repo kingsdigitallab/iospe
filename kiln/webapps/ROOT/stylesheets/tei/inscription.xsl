@@ -1225,13 +1225,6 @@
     </dl>-->
   </xsl:template>
 
-  <!-- GREEK -->
-  <xsl:template match="tei:foreign[@lang='grc']|tei:term[@lang='grc']">
-    <span class="greek" xsl:exclude-result-prefixes="tei">
-      <xsl:apply-templates/>
-    </span>
-  </xsl:template>
-
   <xsl:template name="lang-grc">
     <xsl:if test="ancestor-or-self::tei:div[@lang='grc']">
       <xsl:attribute name="class">
@@ -1531,7 +1524,7 @@
   </xsl:template>
 
   <xsl:template match="tei:note">
-    <span style="font-style: normal; important!" xsl:exclude-result-prefixes="tei">
+    <span class="default-lang" xsl:exclude-result-prefixes="tei">
       <xsl:choose>
         <xsl:when test="ancestor::tei:app">
           <!--<xsl:if test="parent::tei:lem or parent::tei:rdg">

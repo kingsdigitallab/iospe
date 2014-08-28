@@ -166,17 +166,13 @@
   </xsl:template>
 
   <xsl:template match="tei:div[@type='apparatus']//tei:app">
-    <span>
-      <xsl:attribute name="class">
-        <xsl:value-of select="@loc"/>
-      </xsl:attribute>
-      <xsl:if
-        test="@loc and (not(preceding-sibling::tei:app) or @loc != preceding-sibling::tei:app[1]/@loc)">
-        <xsl:value-of select="translate(@loc, ' ', '.')"/>
-        <xsl:text>: </xsl:text>
-      </xsl:if>
-      <xsl:apply-templates/>
-    </span>
+
+    <xsl:if
+      test="@loc and (not(preceding-sibling::tei:app) or @loc != preceding-sibling::tei:app[1]/@loc)">
+      <xsl:value-of select="translate(@loc, ' ', '.')"/>
+      <xsl:text>: </xsl:text>
+    </xsl:if>
+    <xsl:apply-templates/>
 
     <xsl:choose>
       <xsl:when test="@loc != following-sibling::tei:app[1]/@loc">
@@ -189,7 +185,25 @@
   </xsl:template>
 
   <xsl:template match="tei:div[@type = 'apparatus']//tei:rdg">
-    <xsl:apply-templates/>
+    <xsl:variable name="curr-n" select="ancestor::tei:div[@type='apparatus']/@n"/>
+    <span>
+      <xsl:choose>
+        <xsl:when test="@xml:lang">
+          <xsl:attribute name="lang" select="@xml:lang"/>
+        </xsl:when>
+        <xsl:when test="not(normalize-space($curr-n) = '') and //tei:div[@type='edition']//tei:div[@type='textpart'][@n=$curr-n]/@xml:lang">
+          <xsl:attribute name="lang" select="//tei:div[@type='edition']//tei:div[@type='textpart'][@n=$curr-n]/@xml:lang"/>
+        </xsl:when>
+        <xsl:when test="//tei:div[@type='edition']/@xml:lang">
+          <xsl:attribute name="lang" select="//tei:div[@type='edition']/@xml:lang"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name="lang" select="'grc'"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      
+      <xsl:apply-templates/>
+    </span>
 
     <xsl:call-template name="sources">
       <xsl:with-param name="root" select="/"/>

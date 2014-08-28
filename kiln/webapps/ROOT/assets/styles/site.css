@@ -28,6 +28,15 @@
   font-style: italic, oblique;
 }
 
+@font-face {
+  font-family: "BukyVede";
+  src: url(../fonts/BukyVede-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 /* defaults */
 body {
   background-color : white;
@@ -660,6 +669,18 @@ p.reference {
   "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon",
   "Verdana", "Tahoma";
   font-size: 1.1em;
+}
+
+*[lang="cu"] {
+  font-family: "BukyVede";
+  font-size: 1.3em;
+}
+
+.default-lang {
+  font-family: arial,helvetica,clean,sans-serif;
+  font-size: 1rem;
+  font-size: 13px;
+  font-style: normal !important;
 }
 
 
