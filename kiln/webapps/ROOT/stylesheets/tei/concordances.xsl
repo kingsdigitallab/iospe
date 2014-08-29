@@ -4,10 +4,11 @@
   xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
-  <xsl:param name="concordance"/>
-
   <xsl:import href="../common/conversions.xsl"/>
   <xsl:import href="bibliography.xsl"/>
+  
+  <xsl:param name="concordance"/>
+
 
   <xsl:template match="/"/>
 

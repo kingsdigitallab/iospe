@@ -4,7 +4,7 @@
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:param name="lang" select="$lang"/>
-  <xsl:param name="kiln-assets-path" select="$kiln-assets-path"/>
+  <xsl:param name="kiln:assets-path" select="$kiln:assets-path"/>
 
   <xsl:import href="inscription-apparatus.xsl"/>
 
@@ -423,58 +423,72 @@
     </xsl:if>
   </xsl:template>
 
-  <xsl:template name="inscriptionSupport">
-
-    <xsl:call-template name="inscriptionSupportSection"/>
-
-    <xsl:for-each-group
-      select="//tei:support/tei:objectType[@n]
-              | //tei:support/tei:material[@n]
-              | //tei:support/tei:p[@n]
-              | //tei:provenance[@n]
-              | //tei:support/tei:dimensions[@n]
-              | //tei:altIdentifier[@n]
-              | //tei:origPlace[@n]"
-      group-by="@n">
-      <xsl:call-template name="inscriptionSupportSection">
-        <xsl:with-param name="n" select="@n"/>
-      </xsl:call-template>
-    </xsl:for-each-group>
-
-  </xsl:template>
 
   <xsl:template match="tei:body">
+    <!-- monument information, common to all fragments -->
+    <xsl:call-template name="inscriptionSupportSection"/>
 
-    <!-- Support is the only always-one element in the metadata -->
-    <xsl:call-template name="inscriptionSupport"/>
-    
-    
+
     <!--<hr/>-->
-    <div class="row">
-      <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
-      <xsl:choose>
-        <xsl:when test="//tei:div[@type='edition']/tei:div[@subtype='fragment']">
-          <xsl:for-each select="//tei:div[@type='edition']//tei:div[@subtype='fragment']">
-            <!-- Render metadata about inscriptions in current fragment, if any -->
+
+    <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
+    <xsl:choose>
+      <xsl:when
+        test="//tei:div[@type='edition'][descendant::tei:div[@subtype='fragment'][descendant::tei:div[@subtype='inscription']]]">
+
+        <xsl:for-each select="//tei:div[@type='edition']//tei:div[@subtype='fragment']">
+          <!-- Render metadata about inscriptions in current fragment, if any -->
+          <xsl:variable name="f-n" select="@n"/>
+          
+          <xsl:call-template name="inscriptionSupportSection">
+            <xsl:with-param name="n" select="$f-n"/>
+          </xsl:call-template>
+          
+          <div class="row">
             <xsl:choose>
-              <xsl:when test="descendant::tei:div[@subtype='inscription']">
-                <xsl:for-each select="descendant::tei:div[@subtype='inscription']">
-                  <xsl:call-template name="inscriptionData"/>
+              <xsl:when test="tei:div[@subtype='inscription'][@n]">
+                <xsl:for-each select="tei:div[@subtype='inscription'][@n]">
+                  <xsl:call-template name="inscriptionData">
+                    <xsl:with-param name="fullN" select="concat($f-n,'.', @n)"/>
+                  </xsl:call-template>
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:call-template name="inscriptionData"/>
+                <xsl:call-template name="inscriptionData">
+                  <xsl:with-param name="fullN" select="concat($f-n,'.')"/>
+                </xsl:call-template>
               </xsl:otherwise>
             </xsl:choose>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:otherwise>
-          <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
+
+            <xsl:text> </xsl:text>
+          </div>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise>
+        <!-- support section per fragment, if any -->
+        <xsl:for-each-group
+          select="//tei:support/tei:objectType[@n]
+            | //tei:support/tei:material[@n]
+            | //tei:support/tei:p[@n]
+            | //tei:provenance[@n]
+            | //tei:support/tei:dimensions[@n]
+            | //tei:altIdentifier[@n]
+            | //tei:origPlace[@n]"
+          group-by="@n">
+          <xsl:call-template name="inscriptionSupportSection">
+            <xsl:with-param name="n" select="@n"/>
+          </xsl:call-template>
+        </xsl:for-each-group>
+
+        <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
+        <div class="row">
           <xsl:for-each select="//tei:div[@type='edition']">
             <xsl:choose>
               <xsl:when test="descendant::tei:div[@type='textpart'][@n]">
                 <xsl:for-each select="descendant::tei:div[@type='textpart'][@n]">
-                  <xsl:call-template name="inscriptionData"/>
+                  <xsl:call-template name="inscriptionData">
+                    <xsl:with-param name="fullN" select="@n"/>
+                  </xsl:call-template>
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
@@ -482,8 +496,11 @@
               </xsl:otherwise>
             </xsl:choose>
           </xsl:for-each>
-        </xsl:otherwise>
-      </xsl:choose>
+          <xsl:text> </xsl:text>
+        </div>
+      </xsl:otherwise>
+    </xsl:choose>
+    <div class="row">
       <xsl:call-template name="download_xml_link"/>
     </div>
   </xsl:template>
@@ -525,12 +542,7 @@
 
   <xsl:template name="inscriptionData">
     <xsl:param name="nestedTitles" select="false()"/>
-
-    <xsl:variable name="fullN">
-      <xsl:if test="self::tei:div[@type='textpart']">
-        <xsl:value-of select="@n"/>
-      </xsl:if>
-    </xsl:variable>
+    <xsl:param name="fullN"/>
 
     <!-- If there are multiple inscriptions, add title -->
     <div class="large-12 columns">
