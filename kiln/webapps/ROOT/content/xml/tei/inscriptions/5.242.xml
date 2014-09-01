@@ -122,13 +122,13 @@
    </teiHeader>
     <facsimile>
        <surface>
-          <graphic url="5.242-1">
-             <desc xml:lang="en">Photograph of face</desc>
-             <desc xml:lang="ru"/>
+          <graphic url="5.242-1" n="1">
+             <desc xml:lang="en">Photograph of face 1</desc>
+             <desc xml:lang="ru"></desc>
           </graphic>
-          <graphic url="5.242-2">
-             <desc xml:lang="en">Photograph of face</desc>
-             <desc xml:lang="ru"/>
+          <graphic url="5.242-2" n="2">
+             <desc xml:lang="en">Photograph of face 2</desc>
+             <desc xml:lang="ru"></desc>
           </graphic>
         </surface>
     </facsimile>
@@ -142,10 +142,32 @@
                <bibl><!--Латышев 1896--><ptr target="bib:b0132"/>, № <biblScope>71</biblScope></bibl>
             </listBibl>
          </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="ἐνθάδε">Ἐ<supplied reason="lost" cert="low">νθάδε</supplied></w> 
+                  <lb n="2"/><w lemma="κατάκειμαι"><supplied reason="lost" cert="low">κατακ</supplied>υτε</w> <w lemma="κτήτωρ"><supplied reason="lost">κ</supplied>τύτορ</w> <persName type="attested" ref="#person305"><name nymRef="Ἰωάννης"><expan><abbr>Ἠ<unclear>ω</unclear></abbr><ex>άννης</ex></expan></name></persName>.
+                  <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ας</w> <w lemma="καί">κ<supplied reason="lost">ὲ</supplied></w> <w lemma="τέλειος">τελύαν</w>
+                  <lb n="4"/><w lemma="καταλείπω"><expan><abbr><supplied reason="lost">κατ</supplied>αλιπ</abbr><ex>ών</ex></expan></w>, <w lemma="ἐκτόπιος">ἐκτοπίυς</w>
+                  <lb n="5"/><w lemma="κατακρύπτω"><supplied reason="lost">κατ</supplied>άκριψ<unclear>ε</unclear></w> <date><num value="6980">ςϠπ</num>,
+                  <lb n="6"/><rs type="month" ref="sep"><w lemma="Σεπτέμβριος"><expan><abbr><supplied reason="lost">σεπ</supplied></abbr><abbr><unclear>τ</unclear></abbr><abbr>εβρ</abbr><ex>ίῳ</ex></expan></w></rs> 
+                     <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ῇ</ex></expan></w> <num value="5">ε</num> <space unit="character"/> <w lemma="πέμπτος">πέ<supplied reason="lost">μ</supplied><lb n="7" break="no"/><unclear>π</unclear><unclear>τ</unclear><supplied reason="lost">ῃ</supplied></w></date>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="δέησις">Δέησ<lb n="2" break="no"/><supplied reason="lost">ι</supplied>ς</w>
+                  <lb n="3"/><w lemma="ὁ">τοῦ</w>
+                  <lb n="4"/><persName type="attested" ref="#person306"><name nymRef="Κυριακός"><expan><abbr>Κυρια</abbr><supplied reason="lost"><abbr>κ</abbr><ex>οῦ</ex></supplied></expan></name></persName>
+                  <lb n="5"/><w lemma="ἱερεύς"><supplied reason="lost">ἱ</supplied><unclear>ε</unclear>ρέ<supplied reason="lost">ως</supplied></w>.
+               </ab>
+            </div>
+         </div>
          <div type="apparatus" n="2">
-             <p>
-              <app loc="1-4"> <rdg source="bib:b0132">... τοῦ κυρί[ου</rdg></app>
-            </p>
+             <listApp>
+              <app loc="1-4"> <rdg source="bib:b0132">... τοῦ κυρί[ου]</rdg></app>
+            </listApp>
          </div>
          <div type="translation" xml:lang="ru">
             <div type="textpart" n="1">
@@ -199,27 +221,6 @@
                   On the formula, see Introduction <ref type="introduction">IV.3.B.a</ref>.  </p>
                <p> 3. On the name Kyriakos, see commentary to <ref type="inscription">V 72</ref><!--byz072-->. </p>
                <p>4. The word hiereus in this case most likely indicates a priest rather than a bishop.</p>
-            </div>
-         </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="inscription" n="1">
-               <ab>
-                  <lb n="1"/><w lemma="ἐνθάδε">Ἐ<supplied reason="lost" cert="low">νθάδε</supplied></w> 
-                  <lb n="2"/><w lemma="κατάκειμαι"><supplied reason="lost" cert="low">κατακ</supplied>υτε</w> <w lemma="κτήτωρ"><supplied reason="lost">κ</supplied>τύτορ</w> <persName type="attested" ref="#person305"><name nymRef="Ἰωάννης"><expan><abbr>Ἠ<unclear>ω</unclear></abbr><ex>άννης</ex></expan></name></persName>.
-                  <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ας</w> <w lemma="καί">κ<supplied reason="lost">ὲ</supplied></w> <w lemma="τέλειος">τελύαν</w>
-                  <lb n="4"/><w lemma="καταλείπω"><expan><abbr><supplied reason="lost">κατ</supplied>αλιπ</abbr><ex>ών</ex></expan></w>, <w lemma="ἐκτόπιος">ἐκτοπίυς</w>
-                  <lb n="5"/><w lemma="κατακρύπτω"><supplied reason="lost">κατ</supplied>άκριψ<unclear>ε</unclear></w> <date><num value="6980">ςϠπ</num>,
-                  <lb n="6"/><rs type="month" ref="sep"><w lemma="Σεπτέμβριος"><expan><abbr><supplied reason="lost">σεπ</supplied></abbr><abbr><unclear>τ</unclear></abbr><abbr>εβρ</abbr><ex>ίῳ</ex></expan></w></rs> 
-                     <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ῇ</ex></expan></w> <num value="5">ε</num> <space unit="character"/> <w lemma="πέμπτος">πέ<supplied reason="lost">μ</supplied><lb n="7" break="no"/><unclear>π</unclear><unclear>τ</unclear><supplied reason="lost">ῃ</supplied></w></date>.
-               </ab>
-            </div>
-            <div type="textpart" subtype="inscription" n="2">
-               <ab>
-                  <lb n="1"/><w lemma="δέησις">Δέησ<lb n="2" break="no"/><supplied reason="lost">ι</supplied>ς</w>
-                  <lb n="3"/><w lemma="ὁ">τοῦ</w>
-                  <lb n="4"/><persName type="attested" ref="#person306"><name nymRef="Κυριακός"><expan><abbr>Κυρια</abbr><supplied reason="lost"><abbr>κ</abbr><ex>οῦ</ex></supplied></expan></name></persName>
-                  <lb n="5"/><w lemma="ἱερεύς"><supplied reason="lost">ἱ</supplied><unclear>ε</unclear>ρέ<supplied reason="lost">ως</supplied></w>.
-               </ab>
             </div>
          </div>
       </body>
