@@ -7,30 +7,40 @@
   <xsl:variable name="default-language" select="'en'"/>
 
   <xsl:variable name="local-bibliography">
-    <xsl:for-each select="//tei:div[@type='bibliography']//(tei:bibl | tei:biblStruct)">
-      <xsl:choose>
-        <xsl:when test="tei:ptr/@target">
-          <!-- I know there is only one, we use for-each only to change context -->
-          <xsl:for-each select="tei:ptr/@target">
-            <xsl:call-template name="source">
-              <xsl:with-param name="root" select="/"/>
-            </xsl:call-template>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:otherwise>
-          <tei:ref>
-            <xsl:apply-templates select="." mode="parse-name-year"/>
-          </tei:ref>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:for-each>
+    <xsl:for-each-group select="//tei:div[@type='bibliography']//tei:listBibl"
+      group-by="if(@n) then @n else ''">
+      <tei:lref>
+        <xsl:if test="current-grouping-key() != ''">
+          <xsl:attribute name="n" select="current-grouping-key()"/>
+        </xsl:if>
+
+        <xsl:for-each select="current-group()//(tei:bibl | tei:biblStruct)">
+          <xsl:choose>
+            <xsl:when test="tei:ptr/@target">
+              <!-- I know there is only one, we use for-each only to change context -->
+              <xsl:for-each select="tei:ptr/@target">
+                <xsl:call-template name="source">
+                  <xsl:with-param name="root" select="/"/>
+                </xsl:call-template>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+              <tei:ref>
+                <xsl:apply-templates select="." mode="parse-name-year"/>
+              </tei:ref>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+      </tei:lref>
+    </xsl:for-each-group>
   </xsl:variable>
+
 
   <xsl:variable name="surnames" select="//surnames"/>
 
   <xsl:template name="sources">
     <xsl:param name="root"/>
-
+    <xsl:param name="n"/>
     <!-- collect all sources -->
     <xsl:variable name="sources">
       <xsl:for-each select="tokenize(@source, ' ')">
@@ -39,19 +49,17 @@
         </xsl:call-template>
       </xsl:for-each>
     </xsl:variable>
-
     <!-- preselect sources to be printed -->
     <xsl:variable name="final_printing_sources">
       <xsl:for-each select="$sources/tei:ref">
         <xsl:variable name="n_authors_with_same_name_in_local_bib_and_current_sources"
-          select="count($local-bibliography/tei:ref[tei:name/text() = $sources/tei:ref[tei:name/text() = current()/tei:name/text()]/tei:name/text()])"/>
+          select="count($local-bibliography/tei:lref[@n = $n or not(@n)]/tei:ref[tei:name/text() = $sources/tei:ref[tei:name/text() = current()/tei:name/text()]/tei:name/text()])"/>
         <xsl:variable name="n_authors_with_same_name_in_current_sources"
           select="count($sources/tei:ref[tei:name/text() = current()/tei:name/text()])"/>
         <xsl:variable name="first_occurrence_of_this_author_in_sources"
           select="$sources/tei:ref[tei:name/text() = current()/tei:name/text()][1] = current()"/>
         <xsl:variable name="n_authors_with_same_name_in_local_bib"
-          select="count($local-bibliography/tei:ref[tei:name/text() = current()/tei:name/text()])"/>
-
+          select="count($local-bibliography/tei:lref[@n = $n or not(@n)]/tei:ref[tei:name/text() = current()/tei:name/text()])"/>
         <xsl:if
           test="not($n_authors_with_same_name_in_local_bib_and_current_sources = $n_authors_with_same_name_in_current_sources) 
           or $first_occurrence_of_this_author_in_sources">
@@ -61,7 +69,6 @@
             <xsl:if
               test="$n_authors_with_same_name_in_local_bib != 1 
               and not($n_authors_with_same_name_in_local_bib_and_current_sources = $n_authors_with_same_name_in_current_sources)">
-
               <xsl:sequence select="./tei:date"/>
             </xsl:if>
           </tei:ref>
@@ -73,7 +80,6 @@
     <xsl:for-each select="$final_printing_sources/tei:ref">
       <xsl:text> </xsl:text>
       <xsl:apply-templates select="tei:name/node()"/>
-
       <xsl:if test="tei:date and normalize-space(tei:date/text()) != ''">
         <xsl:text> </xsl:text>
         <xsl:apply-templates select="tei:date/node()"/>
@@ -82,7 +88,6 @@
         <xsl:text>,</xsl:text>
       </xsl:if>
     </xsl:for-each>
-
   </xsl:template>
 
   <xsl:template name="source">
@@ -191,8 +196,10 @@
         <xsl:when test="@xml:lang">
           <xsl:attribute name="lang" select="@xml:lang"/>
         </xsl:when>
-        <xsl:when test="not(normalize-space($curr-n) = '') and //tei:div[@type='edition']//tei:div[@type='textpart'][@n=$curr-n]/@xml:lang">
-          <xsl:attribute name="lang" select="//tei:div[@type='edition']//tei:div[@type='textpart'][@n=$curr-n]/@xml:lang"/>
+        <xsl:when
+          test="not(normalize-space($curr-n) = '') and //tei:div[@type='edition']//tei:div[@type='textpart'][@n=$curr-n]/@xml:lang">
+          <xsl:attribute name="lang"
+            select="//tei:div[@type='edition']//tei:div[@type='textpart'][@n=$curr-n]/@xml:lang"/>
         </xsl:when>
         <xsl:when test="//tei:div[@type='edition']/@xml:lang">
           <xsl:attribute name="lang" select="//tei:div[@type='edition']/@xml:lang"/>
@@ -201,12 +208,13 @@
           <xsl:attribute name="lang" select="'grc'"/>
         </xsl:otherwise>
       </xsl:choose>
-      
+
       <xsl:apply-templates/>
     </span>
 
     <xsl:call-template name="sources">
       <xsl:with-param name="root" select="/"/>
+      <xsl:with-param name="n" select="$curr-n"/>
     </xsl:call-template>
 
     <xsl:if test="following-sibling::tei:rdg and not(following-sibling::*[1][self::tei:note])">
