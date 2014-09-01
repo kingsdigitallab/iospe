@@ -11,7 +11,7 @@
         <xsl:for-each select="//div[@type='edition']/div[@n]">
           <xsl:choose>
             <xsl:when test="child::div[@n]">
-              <xsl:for-each select="//div[@type='edition']/div[@n]">
+              <xsl:for-each select="child::div[@n]">
                 <div type="edition" n="{parent::div/@n}.{@n}">
                   <xsl:apply-templates select="."/>
                 </div>

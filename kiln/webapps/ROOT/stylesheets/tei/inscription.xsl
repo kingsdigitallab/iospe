@@ -159,20 +159,38 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template name="inscriptionSupportSection">
+  <xsl:template name="do_fragment_or_monument">
     <xsl:param name="n"/>
-    <div class="row">
+    <xsl:param name="nestedTitles" select="true()"/>
+    <div>
+      <xsl:attribute name="class">
+        <xsl:text>row</xsl:text>
+        <xsl:choose>
+          <xsl:when test="$n">
+            <xsl:text> fragment</xsl:text>
+            <xsl:text> fragment</xsl:text>
+            <xsl:value-of select="$n"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text> monument</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
       <!-- Stone -->
       <div class="large-2 columns">
         <!-- would be better in stylesheet -->
         <h2>
+          <xsl:attribute name="class">
+            <xsl:if test="$n and $nestedTitles">
+              <xsl:text>subpart</xsl:text>
+            </xsl:if>
+          </xsl:attribute>
+
           <xsl:choose>
             <xsl:when test="$n">
-              <em>
-                <i18n:text>Fragment</i18n:text>
-                <xsl:text> </xsl:text>
-                <xsl:value-of select="$n"/>
-              </em>
+              <i18n:text>Fragment</i18n:text>
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$n"/>
             </xsl:when>
             <xsl:otherwise>
               <i18n:text>Monument</i18n:text>
@@ -426,7 +444,7 @@
 
   <xsl:template match="tei:body">
     <!-- monument information, common to all fragments -->
-    <xsl:call-template name="inscriptionSupportSection"/>
+    <xsl:call-template name="do_fragment_or_monument"/>
 
 
     <!--<hr/>-->
@@ -439,29 +457,32 @@
         <xsl:for-each select="//tei:div[@type='edition']//tei:div[@subtype='fragment']">
           <!-- Render metadata about inscriptions in current fragment, if any -->
           <xsl:variable name="f-n" select="@n"/>
-          
-          <xsl:call-template name="inscriptionSupportSection">
-            <xsl:with-param name="n" select="$f-n"/>
-          </xsl:call-template>
-          
-          <div class="row">
-            <xsl:choose>
-              <xsl:when test="tei:div[@subtype='inscription'][@n]">
-                <xsl:for-each select="tei:div[@subtype='inscription'][@n]">
-                  <xsl:call-template name="inscriptionData">
-                    <xsl:with-param name="fullN" select="concat($f-n,'.', @n)"/>
-                  </xsl:call-template>
-                </xsl:for-each>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:call-template name="inscriptionData">
-                  <xsl:with-param name="fullN" select="concat($f-n,'.')"/>
-                </xsl:call-template>
-              </xsl:otherwise>
-            </xsl:choose>
 
-            <xsl:text> </xsl:text>
-          </div>
+
+          <xsl:call-template name="do_fragment_or_monument">
+            <xsl:with-param name="n" select="$f-n"/>
+            <xsl:with-param name="nestedTitles" select="false()"/>
+          </xsl:call-template>
+
+          <xsl:choose>
+            <xsl:when test="tei:div[@subtype='inscription'][@n]">
+              <xsl:for-each select="tei:div[@subtype='inscription'][@n]">
+                <xsl:call-template name="do_textpart">
+                  <xsl:with-param name="fullN" select="concat($f-n,'.', @n)"/>
+                  <xsl:with-param name="nestedTitles" select="true()"/>
+                </xsl:call-template>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:call-template name="do_textpart">
+                <xsl:with-param name="fullN" select="concat($f-n,'.')"/>
+                <xsl:with-param name="nestedTitles" select="true()"/>
+              </xsl:call-template>
+            </xsl:otherwise>
+          </xsl:choose>
+
+          <xsl:text> </xsl:text>
+
         </xsl:for-each>
       </xsl:when>
       <xsl:otherwise>
@@ -475,29 +496,28 @@
             | //tei:altIdentifier[@n]
             | //tei:origPlace[@n]"
           group-by="@n">
-          <xsl:call-template name="inscriptionSupportSection">
+          <xsl:call-template name="do_fragment_or_monument">
             <xsl:with-param name="n" select="@n"/>
           </xsl:call-template>
         </xsl:for-each-group>
 
         <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
-        <div class="row">
-          <xsl:for-each select="//tei:div[@type='edition']">
-            <xsl:choose>
-              <xsl:when test="descendant::tei:div[@type='textpart'][@n]">
-                <xsl:for-each select="descendant::tei:div[@type='textpart'][@n]">
-                  <xsl:call-template name="inscriptionData">
-                    <xsl:with-param name="fullN" select="@n"/>
-                  </xsl:call-template>
-                </xsl:for-each>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:call-template name="inscriptionData"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:for-each>
-          <xsl:text> </xsl:text>
-        </div>
+        <xsl:for-each select="//tei:div[@type='edition']">
+          <xsl:choose>
+            <xsl:when test="descendant::tei:div[@type='textpart'][@n]">
+              <xsl:for-each select="descendant::tei:div[@type='textpart'][@n]">
+                <xsl:call-template name="do_textpart">
+                  <xsl:with-param name="fullN" select="@n"/>
+                </xsl:call-template>
+              </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:call-template name="do_textpart"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:for-each>
+        <xsl:text> </xsl:text>
+
       </xsl:otherwise>
     </xsl:choose>
     <div class="row">
@@ -540,341 +560,381 @@
   </xsl:template>
 
 
-  <xsl:template name="inscriptionData">
+  <xsl:template name="do_textpart">
     <xsl:param name="nestedTitles" select="false()"/>
     <xsl:param name="fullN"/>
+    <div>
+      <xsl:attribute name="class">
+        <xsl:text>row</xsl:text>
+        <xsl:text> textpart</xsl:text>
+        <xsl:if test="$fullN">
+          <xsl:text> textpart</xsl:text>
+          <xsl:value-of select="$fullN"/>
+        </xsl:if>
+      </xsl:attribute>
 
-    <!-- If there are multiple inscriptions, add title -->
-    <div class="large-12 columns">
-      <div class="row">
-        <div class="large-2 columns">
-          <xsl:choose>
-            <xsl:when test="self::tei:div[@type='textpart']/@n">
-              <xsl:attribute name="class">
-                <xsl:text>large-2 columns wrap</xsl:text>
-              </xsl:attribute>
-              <h2 class="part">
-                <i18n:text>Text</i18n:text>
-                <xsl:text>&#160;</xsl:text>
-                <xsl:value-of select="@n"/>
-              </h2>
-            </xsl:when>
-            <xsl:otherwise>
-              <h2>
-                <i18n:text>Text</i18n:text>
-              </h2>
-            </xsl:otherwise>
-          </xsl:choose>
-        </div>
+      <!-- If there are multiple inscriptions, add title -->
+      <div class="large-12 columns">
+        <div class="row">
+          <div class="large-2 columns">
+            <xsl:choose>
+              <xsl:when test="self::tei:div[@type='textpart']/@n">
+                <xsl:attribute name="class">
+                  <xsl:text>large-2 columns wrap</xsl:text>
+                </xsl:attribute>
+                <h2>
+                  <xsl:attribute name="class">
+                    <xsl:text>part</xsl:text>
+                    <xsl:if test="$nestedTitles">
+                      <xsl:text> subpart</xsl:text>
+                    </xsl:if>
+                  </xsl:attribute>
 
-        <div class="large-10 columns details">
-          <xsl:for-each select="//tei:layout[@n=$fullN or not(@n)]">
-            <xsl:if test="@ana">
+                  <i18n:text>Text</i18n:text>
+                  <xsl:text>&#160;</xsl:text>
+                  <xsl:choose>
+                    <xsl:when test="contains($fullN, '.')">
+                      <xsl:value-of select="substring-after($fullN, '.')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="@n"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </h2>
+              </xsl:when>
+              <xsl:otherwise>
+                <h2>
+                  <i18n:text>Text</i18n:text>
+                </h2>
+              </xsl:otherwise>
+            </xsl:choose>
+          </div>
 
-              <!-- Faces code -->
+          <div class="large-10 columns details">
+            <xsl:for-each select="//tei:layout[@n=$fullN or not(@n)]">
+              <xsl:if test="@ana">
+
+                <!-- Faces code -->
+                <div class="row">
+                  <div class="large-3 columns">
+                    <h6>
+                      <i18n:text>Faces code</i18n:text>
+                    </h6>
+                  </div>
+                  <div class="large-9 columns">
+                    <p>
+                      <xsl:value-of select="@ana"/>
+                      <xsl:text>.&#160;</xsl:text>
+                    </p>
+                  </div>
+                </div>
+              </xsl:if>
+
+              <!-- Placement of text (If exists) -->
+              <xsl:if test="tei:seg">
+                <div class="row">
+                  <div class="large-3 columns">
+                    <h6>
+                      <i18n:text>Position</i18n:text>
+                    </h6>
+                  </div>
+                  <div class="large-9 columns">
+                    <p>
+                      <xsl:if test="tei:seg[@xml:lang=$lang][normalize-space(.)!='']">
+                        <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
+                        <xsl:text>&#160;</xsl:text>
+                      </xsl:if>
+                      <xsl:if test="tei:dimensions">
+                        <xsl:apply-templates select="tei:dimensions"/>
+                      </xsl:if>
+                    </p>
+                  </div>
+                </div>
+              </xsl:if>
+            </xsl:for-each>
+
+            <!-- Style of lettering (if exists) -->
+            <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
-                    <i18n:text>Faces code</i18n:text>
+                    <i18n:text>Lettering</i18n:text>
                   </h6>
                 </div>
                 <div class="large-9 columns">
                   <p>
-                    <xsl:value-of select="@ana"/>
-                    <xsl:text>.&#160;</xsl:text>
+                    <xsl:value-of
+                      select="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
+                    <xsl:text>&#160;</xsl:text>
                   </p>
                 </div>
               </div>
             </xsl:if>
 
-            <!-- Placement of text (If exists) -->
-            <xsl:if test="tei:seg">
+            <!-- Letterheights (if exists) -->
+            <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
-                    <i18n:text>Position</i18n:text>
+                    <i18n:text>Letterheights (cm)</i18n:text>
                   </h6>
                 </div>
                 <div class="large-9 columns">
                   <p>
-                    <xsl:if test="tei:seg[@xml:lang=$lang][normalize-space(.)!='']">
-                      <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
-                      <xsl:text>&#160;</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="tei:dimensions">
-                      <xsl:apply-templates select="tei:dimensions"/>
-                    </xsl:if>
+                    <xsl:choose>
+                      <xsl:when
+                        test="string(//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height)">
+                        <xsl:value-of
+                          select="if ($lang='ru') then //tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height else translate(//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height, ',', '.')"
+                        />
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <i18n:text>unknown</i18n:text>
+                      </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text>&#160;</xsl:text>
                   </p>
                 </div>
               </div>
             </xsl:if>
-          </xsl:for-each>
 
-          <!-- Style of lettering (if exists) -->
-          <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg">
+            <br/>
+
+            <!-- Category -->
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <i18n:text>Lettering</i18n:text>
+                  <i18n:text>Category</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
                 <p>
                   <xsl:value-of
-                    select="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
+                    select="//tei:msContents/tei:summary/tei:seg[@n = $fullN or not(@n)][@xml:lang=$lang]"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
             </div>
-          </xsl:if>
 
-          <!-- Letterheights (if exists) -->
-          <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height">
+            <!-- Date -->
             <div class="row">
               <div class="large-3 columns">
                 <h6>
-                  <i18n:text>Letterheights (cm)</i18n:text>
+                  <i18n:text key="__inscription_date">Date</i18n:text>
+                </h6>
+              </div>
+              <div class="large-9 columns">
+                <p>
+                  <xsl:value-of
+                    select="//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
+                  <xsl:text>&#160;</xsl:text>
+                </p>
+              </div>
+            </div>
+
+            <!-- Dating Criteria -->
+            <div class="row">
+              <div class="large-3 columns">
+                <h6>
+                  <i18n:text>Dating criteria</i18n:text>
                 </h6>
               </div>
               <div class="large-9 columns">
                 <p>
                   <xsl:choose>
                     <xsl:when
-                      test="string(//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height)">
-                      <xsl:value-of
-                        select="if ($lang='ru') then //tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height else translate(//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height, ',', '.')"
-                      />
+                      test="$lang='ru' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
+                      <xsl:for-each
+                        select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
+                        <xsl:variable name="token">
+                          <xsl:value-of select="translate(.,'_',' ')"/>
+                        </xsl:variable>
+                        <xsl:choose>
+                          <xsl:when test="position()=1">
+                            <xsl:value-of select="upper-case(substring($token,1,1))"/>
+                            <xsl:value-of select="substring($token,2)"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="lower-case($token)"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                      <xsl:text>.&#160;</xsl:text>
+                    </xsl:when>
+                    <xsl:when
+                      test="$lang='en' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
+                      <xsl:variable name="crit" select="/aggregation/crit"/>
+                      <xsl:for-each
+                        select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
+                        <xsl:variable name="term"
+                          select="$crit//tei:label[lower-case(.)=lower-case(normalize-space(translate(current(),'_',' ')))]
+                      /following-sibling::tei:item[1]"/>
+                        <xsl:choose>
+                          <xsl:when test="position()=1">
+                            <xsl:value-of select="upper-case(substring($term,1,1))"/>
+                            <xsl:value-of select="substring($term,2)"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="lower-case($term)"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                      <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
-                      <i18n:text>unknown</i18n:text>
+                      <i18n:text>Not applicable</i18n:text>
+                      <xsl:text>.&#160;</xsl:text>
                     </xsl:otherwise>
                   </xsl:choose>
-                  <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
             </div>
-          </xsl:if>
 
-          <br/>
-
-          <!-- Category -->
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Category</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:value-of
-                  select="//tei:msContents/tei:summary/tei:seg[@n = $fullN or not(@n)][@xml:lang=$lang]"/>
-                <xsl:text>&#160;</xsl:text>
-              </p>
-            </div>
-          </div>
-
-          <!-- Date -->
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text key="__inscription_date">Date</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:value-of
-                  select="//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
-                <xsl:text>&#160;</xsl:text>
-              </p>
-            </div>
-          </div>
-
-          <!-- Dating Criteria -->
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Dating criteria</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:choose>
-                  <xsl:when
-                    test="$lang='ru' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
-                    <xsl:for-each
-                      select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
-                      <xsl:variable name="token">
-                        <xsl:value-of select="translate(.,'_',' ')"/>
-                      </xsl:variable>
-                      <xsl:choose>
-                        <xsl:when test="position()=1">
-                          <xsl:value-of select="upper-case(substring($token,1,1))"/>
-                          <xsl:value-of select="substring($token,2)"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of select="lower-case($token)"/>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                      <xsl:if test="position() != last()">
-                        <xsl:text>, </xsl:text>
-                      </xsl:if>
-                    </xsl:for-each>
-                    <xsl:text>.&#160;</xsl:text>
-                  </xsl:when>
-                  <xsl:when
-                    test="$lang='en' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
-                    <xsl:variable name="crit" select="/aggregation/crit"/>
-                    <xsl:for-each
-                      select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
-                      <xsl:variable name="term"
-                        select="$crit//tei:label[lower-case(.)=lower-case(normalize-space(translate(current(),'_',' ')))]
-                      /following-sibling::tei:item[1]"/>
-                      <xsl:choose>
-                        <xsl:when test="position()=1">
-                          <xsl:value-of select="upper-case(substring($term,1,1))"/>
-                          <xsl:value-of select="substring($term,2)"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of select="lower-case($term)"/>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                      <xsl:if test="position() != last()">
-                        <xsl:text>, </xsl:text>
-                      </xsl:if>
-                    </xsl:for-each>
-                    <xsl:text>.&#160;</xsl:text>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <i18n:text>Not applicable</i18n:text>
-                    <xsl:text>.&#160;</xsl:text>
-                  </xsl:otherwise>
-                </xsl:choose>
-              </p>
-            </div>
-          </div>
-
-          <!-- Editions -->
-          <div class="row">
-            <div class="large-3 columns">
-              <h6>
-                <i18n:text>Editions</i18n:text>
-              </h6>
-            </div>
-            <div class="large-9 columns">
-              <p>
-                <xsl:variable name="surnames">
-                  <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
-                </xsl:variable>
-                <xsl:choose>
-                  <xsl:when
-                    test="normalize-space($fullN) = '' and 
+            <!-- Editions -->
+            <div class="row">
+              <div class="large-3 columns">
+                <h6>
+                  <i18n:text>Editions</i18n:text>
+                </h6>
+              </div>
+              <div class="large-9 columns">
+                <p>
+                  <xsl:variable name="surnames">
+                    <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
+                  </xsl:variable>
+                  <xsl:choose>
+                    <xsl:when
+                      test="normalize-space($fullN) = '' and 
                           //tei:div[@type='bibliography'][tei:listBibl//text()[not(normalize-space(.)='')]]">
 
-                    <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
-                      <xsl:if test="@n">
-                        <em>
-                          <i18n:text>Fragment </i18n:text>
-                          <xsl:value-of select="@n"/>
-                          <xsl:text>. </xsl:text>
-                        </em>
-                      </xsl:if>
-                      <xsl:apply-templates/>
-                      <xsl:if test="not(string(normalize-space(self::tei:listBibl)))">
-                        <i18n:text>Unpublished</i18n:text>
-                      </xsl:if>
-                      <xsl:if test="position() != last()">
-                        <xsl:text>.&#160;</xsl:text>
-                      </xsl:if>
-                    </xsl:for-each>
-                  </xsl:when>
-                  <xsl:when
-                    test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//text()[not(normalize-space(.)='')]]">
-                    <xsl:apply-templates
-                      select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
-                    />
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <i18n:text>Unpublished</i18n:text>
-                  </xsl:otherwise>
-                </xsl:choose>
-                <xsl:text>.&#160;</xsl:text>
-              </p>
+                      <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
+                        <xsl:if test="@n">
+                          <em>
+                            <i18n:text>Fragment </i18n:text>
+                            <xsl:value-of select="@n"/>
+                            <xsl:text>. </xsl:text>
+                          </em>
+                        </xsl:if>
+                        <xsl:apply-templates/>
+                        <xsl:if test="not(string(normalize-space(self::tei:listBibl)))">
+                          <i18n:text>Unpublished</i18n:text>
+                        </xsl:if>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>.&#160;</xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                    </xsl:when>
+                    <xsl:when
+                      test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//text()[not(normalize-space(.)='')]]">
+                      <xsl:apply-templates
+                        select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
+                      />
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <i18n:text>Unpublished</i18n:text>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:text>.&#160;</xsl:text>
+                </p>
+              </div>
             </div>
-          </div>
 
 
-          <!-- Actual Inscription Data -->
-          <div class="row inscription-data">
-            <xsl:variable name="n"
-              select="if (parent::div[@n]) then (concat(parent::div/@n,'.',@n)) else (@n)"/>
+            <!-- Actual Inscription Data -->
+            <div class="row inscription-data">
+              <xsl:variable name="f_n"
+                select="if (contains($fullN, '.')) 
+                                               then substring-before($fullN, '.')
+                                               else $fullN"/>
+              <xsl:variable name="tx_n" select="substring-after($fullN, '.')"/>
 
-            <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
-            <div class="large-12 columns">
-              <div class="section-container tabs" data-section="tabs">
+              <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
+              <div class="large-12 columns">
+                <div class="section-container tabs" data-section="tabs">
 
-                <!-- Edition -->
-                <section class="active">
-                  <p class="title" data-section-title="true">
-                    <a href="#edition{if (@n) then @n else '1'}">
-                      <i18n:text>Edition</i18n:text>
-                    </a>
-                  </p>
-                  <div id="edition{if (@n) then @n else '1'}" class="content edition"
-                    data-section-content="true">
-                    <!-- Only get current text part (inscription) if necessary -->
+                  <!-- Edition -->
+                  <section class="active">
+                    <p class="title" data-section-title="true">
+                      <a href="#edition{if (@n) then @n else '1'}">
+                        <i18n:text>Edition</i18n:text>
+                      </a>
+                    </p>
+                    <div id="edition{if (@n) then @n else '1'}" class="content edition"
+                      data-section-content="true">
+                      <!-- Only get current text part (inscription) if necessary -->
+                      <xsl:choose>
+                        <xsl:when test="$f_n and $tx_n">
+                          <xsl:apply-templates
+                            select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
+                        </xsl:when>
+                        <xsl:when test="$f_n">
+                          <xsl:apply-templates
+                            select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-'))]"
+                            mode="copyEpidoc"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id='edition'][1]/*[not(self::h2)]"
+                            mode="copyEpidoc"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </div>
+                  </section>
 
-                    <xsl:choose>
-                      <xsl:when test="$n">
-                        <xsl:apply-templates
-                          select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$n, '-'))]"
-                          mode="copyEpidoc"/>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:apply-templates select="//v_in//div[@id='edition'][1]/*[not(self::h2)]"
-                          mode="copyEpidoc"/>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </div>
-                </section>
+                  <!-- Diplomatic -->
+                  <section>
+                    <p class="title" data-section-title="true">
+                      <a href="#diplomatic{if (@n) then @n else '1'}">
+                        <i18n:text>Diplomatic</i18n:text>
+                      </a>
+                    </p>
+                    <div id="diplomatic{if (@n) then @n else '1'}" class="content diplomatic"
+                      data-section-content="true">
+                      <xsl:choose>
+                        <xsl:when test="$f_n and $tx_n">
+                          <xsl:apply-templates
+                            select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
+                        </xsl:when>
+                        <xsl:when test="$f_n">
+                          <xsl:apply-templates
+                            select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-'))]"
+                            mode="copyEpidoc"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id='edition'][1]/*[not(self::h2)]"
+                            mode="copyEpidoc"/>
+                        </xsl:otherwise>
+                      </xsl:choose>
 
-                <!-- Diplomatic -->
-                <section>
-                  <p class="title" data-section-title="true">
-                    <a href="#diplomatic{if (@n) then @n else '1'}">
-                      <i18n:text>Diplomatic</i18n:text>
-                    </a>
-                  </p>
-                  <div id="diplomatic{if (@n) then @n else '1'}" class="content diplomatic"
-                    data-section-content="true">
-                    <xsl:choose>
-                      <xsl:when test="$n">
-                        <xsl:apply-templates
-                          select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$n, '-'))]"
-                          mode="copyEpidoc"/>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:apply-templates select="//v_di//div[@id='edition'][1]/*[not(self::h2)]"
-                          mode="copyEpidoc"/>
-                      </xsl:otherwise>
-                    </xsl:choose>
+                    </div>
+                  </section>
 
-                  </div>
-                </section>
-
-                <!-- Epidoc XML -->
-                <section>
-                  <p class="title" data-section-title="true">
-                    <a href="#epidoc{if (@n) then @n else '1'}">
-                      <i18n:text>EpiDoc (XML)</i18n:text>
-                    </a>
-                  </p>
-                  <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml epidoc"
-                    data-section-content="true">
-                    <pre>
+                  <!-- Epidoc XML -->
+                  <section>
+                    <p class="title" data-section-title="true">
+                      <a href="#epidoc{if (@n) then @n else '1'}">
+                        <i18n:text>EpiDoc (XML)</i18n:text>
+                      </a>
+                    </p>
+                    <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml epidoc"
+                      data-section-content="true">
+                      <pre>
                       <code class="language-xml">
                         <xsl:choose>
-                          <xsl:when test="$n">
-                            <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$n]/node()"/>
+                          <xsl:when test="$f_n and $tx_n">                          
+                            <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$fullN]/node()"/>
+                        </xsl:when>
+                          <xsl:when test="$f_n">
+                            <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$f_n]/node()"/>
                           </xsl:when>
                           <xsl:otherwise>
                             <xsl:copy-of select="/aggregation/v_ep/node()"/>
@@ -883,179 +943,173 @@
                         <xsl:text> </xsl:text>
                     </code>
                     </pre>
-                  </div>
-                </section>
-
-                <!-- Edition in Verse (If it exists)-->
-                <xsl:if test="descendant::tei:lg">
-                  <section>
-                    <p class="title" data-section-title="true">
-                      <a href="#verse{if (@n) then @n else '1'}">
-                        <i18n:text>Edition in Verse</i18n:text>
-                      </a>
-                    </p>
-                    <div id="verse{if (@n) then @n else '1'}" class="content"
-                      data-section-content="true">
-                      <xsl:choose>
-                        <xsl:when test="@n">
-                          <xsl:variable name="tet" select="@n"/>
-                          <xsl:apply-templates
-                            select="//v_ve//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
-                            mode="copyEpidoc"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:apply-templates
-                            select="//v_ve//div[@id='edition'][1]/*[not(self::h2)]"
-                            mode="copyEpidoc"/>
-                        </xsl:otherwise>
-                      </xsl:choose>
                     </div>
                   </section>
-                </xsl:if>
+
+                  <!-- Edition in Verse (If it exists)-->
+                  <xsl:if test="descendant::tei:lg">
+                    <section>
+                      <p class="title" data-section-title="true">
+                        <a href="#verse{if (@n) then @n else '1'}">
+                          <i18n:text>Edition in Verse</i18n:text>
+                        </a>
+                      </p>
+                      <div id="verse{if (@n) then @n else '1'}" class="content"
+                        data-section-content="true">
+                        <xsl:choose>
+                          <xsl:when test="@n">
+                            <xsl:variable name="tet" select="@n"/>
+                            <xsl:apply-templates
+                              select="//v_ve//div[@id='edition'][1]//div[starts-with(@id,concat('div',$tet))]"
+                              mode="copyEpidoc"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:apply-templates
+                              select="//v_ve//div[@id='edition'][1]/*[not(self::h2)]"
+                              mode="copyEpidoc"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                      </div>
+                    </section>
+                  </xsl:if>
+                </div>
               </div>
+
             </div>
 
+            <!-- Commentaries -->
+            <xsl:if
+              test="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]">
+              <div class="row">
+                <div class="large-3 columns">
+                  <h6>
+                    <i18n:text>Commentaries</i18n:text>
+                  </h6>
+                </div>
+                <div class="large-9 columns">
+                  <p>
+                    <xsl:value-of
+                      select="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]"/>
+                    <xsl:text>&#160;</xsl:text>
+                  </p>
+                </div>
+              </div>
+            </xsl:if>
           </div>
+        </div>
 
-          <!-- Commentaries -->
-          <xsl:if
-            test="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]">
-            <div class="row">
-              <div class="large-3 columns">
-                <h6>
-                  <i18n:text>Commentaries</i18n:text>
-                </h6>
-              </div>
-              <div class="large-9 columns">
-                <p>
-                  <xsl:value-of
-                    select="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]"/>
-                  <xsl:text>&#160;</xsl:text>
-                </p>
-              </div>
+        <!-- Apparatus Criticus -->
+
+        <xsl:if
+          test="//tei:div[@type='apparatus'][@n = $fullN or not(@n)][descendant::tei:app[descendant::text() or descendant::tei:*]]">
+          <div class="row">
+            <div class="large-2 columns">
+              <xsl:text>&#160;</xsl:text>
             </div>
-          </xsl:if>
-        </div>
-      </div>
-
-      <!-- Apparatus Criticus -->
-
-      <xsl:if
-        test="//tei:div[@type='apparatus'][@n = $fullN or not(@n)][descendant::tei:app[descendant::text() or descendant::tei:*]]">
-        <div class="row">
-          <div class="large-2 columns">
-            <xsl:text>&#160;</xsl:text>
-          </div>
-          <div class="large-10 columns details">
-            <div class="row">
-              <div class="large-3 columns">
-                <h6>
-                  <i18n:text>Apparatus criticus</i18n:text>
-                </h6>
+            <div class="large-10 columns details">
+              <div class="row">
+                <div class="large-3 columns">
+                  <h6>
+                    <i18n:text>Apparatus criticus</i18n:text>
+                  </h6>
+                </div>
+                <div class="large-9 columns">
+                  <p>
+                    <xsl:apply-templates mode="multipara"
+                      select="//tei:div[@type='apparatus'][@n = $fullN or not(@n)]"/>
+                  </p>
+                </div>
               </div>
-              <div class="large-9 columns">
-                <p>
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='apparatus'][@n = $fullN or not(@n)]"/>
-                </p>
-              </div>
+
             </div>
-
           </div>
-        </div>
-      </xsl:if>
+        </xsl:if>
 
-      <!-- Translation -->
+        <!-- Translation -->
 
-      <div class="row">
-        <div class="large-2 columns">
-          <h2>
-            <em>
-              <i18n:text>Translation</i18n:text>
-            </em>
-          </h2>
-        </div>
-        <div class="large-10 columns details">
-          <!-- N.B. Leaving @n=none and @n=notyet even though they are not used in corpus yet -->
-          <xsl:choose>
-            <xsl:when test="//tei:div[@type='translation'][@n='none'][@xml:lang=$lang]">
-              <i18n:text>not usefully translatable</i18n:text>. </xsl:when>
-            <xsl:when test="//tei:div[@type='translation'][@n='notyet'][@xml:lang=$lang]">
-              <i18n:text>No translation yet (2010)</i18n:text>. </xsl:when>
-            <xsl:otherwise>
-              <xsl:choose>
-                <xsl:when test="@n">
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='translation'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
-                  />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='translation'][@xml:lang=$lang]"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:otherwise>
-          </xsl:choose>
-          <xsl:text>&#160;</xsl:text>
-        </div>
-      </div>
-
-
-      <!-- Commenttary -->
-      <div class="row">
-        <div class="large-2 columns">
-          <h2>
-            <em>
-              <i18n:text>Commentary</i18n:text>
-            </em>
-          </h2>
-
-        </div>
-        <div class="large-10 columns details">
-          <xsl:choose>
-            <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
-              <xsl:choose>
-                <xsl:when test="@n">
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
-                  />
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:apply-templates mode="multipara"
-                    select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-              <i18n:text>no comment</i18n:text>. </xsl:otherwise>
-          </xsl:choose>
-          <xsl:text>&#160;</xsl:text>
-        </div>
-      </div>
-
-
-      <!-- Images -->
-
-      <xsl:if test="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]">
         <div class="row">
           <div class="large-2 columns">
             <h2>
               <em>
-                <i18n:text>Images</i18n:text>
+                <i18n:text>Translation</i18n:text>
               </em>
             </h2>
           </div>
           <div class="large-10 columns details">
-            <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]"
-              mode="photograph"/>
-
+            <!-- N.B. Leaving @n=none and @n=notyet even though they are not used in corpus yet -->
+            <xsl:choose>
+              <xsl:when test="//tei:div[@type='translation'][@n='none'][@xml:lang=$lang]">
+                <i18n:text>not usefully translatable</i18n:text>. </xsl:when>
+              <xsl:when test="//tei:div[@type='translation'][@n='notyet'][@xml:lang=$lang]">
+                <i18n:text>No translation yet (2010)</i18n:text>. </xsl:when>
+              <xsl:otherwise>
+                <xsl:choose>
+                  <xsl:when test="@n">
+                    <xsl:apply-templates mode="multipara"
+                      select="//tei:div[@type='translation'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
+                    />
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:apply-templates mode="multipara"
+                      select="//tei:div[@type='translation'][@xml:lang=$lang]"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>&#160;</xsl:text>
           </div>
         </div>
-      </xsl:if>
-    </div>
 
-    <!--     <xsl:apply-templates/>
- -->
+
+        <!-- Commentary -->
+        <div class="row">
+          <div class="large-2 columns">
+            <h2>
+              <em>
+                <i18n:text>Commentary</i18n:text>
+              </em>
+            </h2>
+
+          </div>
+          <div class="large-10 columns details">
+            <xsl:choose>
+              <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]">
+                <xsl:apply-templates mode="multipara"
+                  select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
+                />
+              </xsl:when>
+              <xsl:when test="not($fullN) and //tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
+                <xsl:apply-templates mode="multipara"
+                  select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <i18n:text>no comment</i18n:text>. </xsl:otherwise>
+            </xsl:choose>
+            <xsl:text>&#160;</xsl:text>
+          </div>
+        </div>
+
+
+        <!-- Images -->
+
+        <xsl:if test="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]">
+          <div class="row">
+            <div class="large-2 columns">
+              <h2>
+                <em>
+                  <i18n:text>Images</i18n:text>
+                </em>
+              </h2>
+            </div>
+            <div class="large-10 columns details">
+              <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]"
+                mode="photograph"/>
+
+            </div>
+          </div>
+        </xsl:if>
+      </div>
+    </div>
   </xsl:template>
 
   <!--DIVS-->
