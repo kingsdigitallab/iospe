@@ -70,16 +70,16 @@
     </xsl:variable>
 
     <!-- print references -->
-    <xsl:text> </xsl:text>
     <xsl:for-each select="$final_printing_sources/tei:ref">
+      <xsl:text> </xsl:text>
       <xsl:apply-templates select="tei:name/node()"/>
 
-      <xsl:if test="tei:date">
+      <xsl:if test="tei:date and normalize-space(tei:date/text()) != ''">
         <xsl:text> </xsl:text>
         <xsl:apply-templates select="tei:date/node()"/>
       </xsl:if>
       <xsl:if test="not(position() = last())">
-        <xsl:text>, </xsl:text>
+        <xsl:text>,</xsl:text>
       </xsl:if>
     </xsl:for-each>
 
