@@ -167,12 +167,12 @@
         <xsl:text>row</xsl:text>
         <xsl:choose>
           <xsl:when test="$n">
-            <xsl:text> fragment</xsl:text>
-            <xsl:text> fragment</xsl:text>
+            <xsl:text> fragment-section</xsl:text>
+            <xsl:text> fragment-section</xsl:text>
             <xsl:value-of select="$n"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:text> monument</xsl:text>
+            <xsl:text> monument-section</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -566,9 +566,9 @@
     <div>
       <xsl:attribute name="class">
         <xsl:text>row</xsl:text>
-        <xsl:text> textpart</xsl:text>
+        <xsl:text> textpart-section</xsl:text>
         <xsl:if test="$fullN">
-          <xsl:text> textpart</xsl:text>
+          <xsl:text> textpart-section</xsl:text>
           <xsl:value-of select="$fullN"/>
         </xsl:if>
       </xsl:attribute>
