@@ -99,12 +99,21 @@
 
     <xsl:if
       test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]//tei:origDate)">
-      <xsl:text>, </xsl:text>
 
-      <!-- origDate -->
-      <xsl:value-of
-        select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"
-      />
+      <xsl:choose>
+        <xsl:when
+          test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang='en'] = 'Unknown.' ">
+          <xsl:text>.</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>, </xsl:text>
+          <!-- origDate -->
+          <xsl:value-of
+            select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang=$lang]"
+          />
+        </xsl:otherwise>
+      </xsl:choose>
+
     </xsl:if>
   </xsl:template>
 
@@ -1073,12 +1082,14 @@
           </div>
           <div class="large-10 columns details">
             <xsl:choose>
-              <xsl:when test="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]">
+              <xsl:when
+                test="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]">
                 <xsl:apply-templates mode="multipara"
                   select="//tei:div[@type='commentary'][@xml:lang=$lang]/tei:div[@type='textpart'][@n=$fullN]"
                 />
               </xsl:when>
-              <xsl:when test="not($fullN) and //tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
+              <xsl:when
+                test="not($fullN) and //tei:div[@type='commentary'][@xml:lang=$lang]//tei:p/text()">
                 <xsl:apply-templates mode="multipara"
                   select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
               </xsl:when>

@@ -51,9 +51,18 @@
                 </xsl:otherwise>
               </xsl:choose>
               <xsl:if test="not(ancestor::doc/str[@name='inscription-has-date'] = 'yes')">
-                <xsl:text>, </xsl:text>
-                <!-- origDate -->
-                <xsl:value-of select="ancestor::doc/arr[@name=concat('origDate-', $lang)]/str[1]"/>
+                <xsl:choose>
+                  <xsl:when
+                    test="ancestor::doc/arr[@name=concat('origDate-', 'en')]/str[1] = 'Unknown.'">
+                    <xsl:text>.</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:text>, </xsl:text>
+                    <!-- origDate -->
+                    <xsl:value-of
+                      select="ancestor::doc/arr[@name=concat('origDate-', $lang)]/str[1]"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </xsl:if>
 
             </a>
