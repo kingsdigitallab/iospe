@@ -1419,7 +1419,7 @@
                 />
               </xsl:variable>
               <xsl:value-of
-                select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname"/>
+                select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname[@xml:lang = $lang or not(@xml:lang)]"/>
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
