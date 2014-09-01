@@ -572,6 +572,14 @@
   <xsl:template name="do_textpart">
     <xsl:param name="nestedTitles" select="false()"/>
     <xsl:param name="fullN"/>
+    
+    <xsl:variable name="f_n"
+      select="if (contains($fullN, '.')) 
+      then substring-before($fullN, '.')
+      else $fullN"/>
+    <xsl:variable name="tx_n" select="substring-after($fullN, '.')"/>
+    
+    
     <div>
       <xsl:attribute name="class">
         <xsl:text>row</xsl:text>
@@ -857,12 +865,6 @@
 
             <!-- Actual Inscription Data -->
             <div class="row inscription-data">
-              <xsl:variable name="f_n"
-                select="if (contains($fullN, '.')) 
-                                               then substring-before($fullN, '.')
-                                               else $fullN"/>
-              <xsl:variable name="tx_n" select="substring-after($fullN, '.')"/>
-
               <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
               <div class="large-12 columns">
                 <div class="section-container tabs" data-section="tabs">
@@ -1103,7 +1105,7 @@
 
         <!-- Images -->
 
-        <xsl:if test="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]">
+        <xsl:if test="//tei:facsimile//tei:graphic[@n = $f_n or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
               <h2>
@@ -1113,7 +1115,7 @@
               </h2>
             </div>
             <div class="large-10 columns details">
-              <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]"
+              <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $f_n or not(@n)]"
                 mode="photograph"/>
 
             </div>
