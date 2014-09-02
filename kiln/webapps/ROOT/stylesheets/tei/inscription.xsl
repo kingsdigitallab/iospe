@@ -743,7 +743,9 @@
               <div class="large-9 columns">
                 <p>
                   <xsl:value-of
-                    select="//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
+                    select="upper-case(substring(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang],1,1))"/>
+                  <xsl:value-of
+                    select="substring(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang],2)"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
