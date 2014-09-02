@@ -886,10 +886,16 @@
                           <xsl:apply-templates
                             select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-', $tx_n, '-'))]"
                             mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id='edition'][1]//p[starts-with(@id,concat('miniapp',$f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:when test="$f_n">
                           <xsl:apply-templates
                             select="//v_in//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-'))]"
+                            mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id='edition'][1]//p[starts-with(@id,concat('miniapp',$f_n, '-'))]"
                             mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:otherwise>
@@ -915,10 +921,16 @@
                           <xsl:apply-templates
                             select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-', $tx_n, '-'))]"
                             mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id='edition'][1]//p[starts-with(@id,concat('miniapp',$f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:when test="$f_n">
                           <xsl:apply-templates
                             select="//v_di//div[@id='edition'][1]//div[starts-with(@id,concat('div',$f_n, '-'))]"
+                            mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id='edition'][1]//p[starts-with(@id,concat('miniapp',$f_n, '-'))]"
                             mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:otherwise>
