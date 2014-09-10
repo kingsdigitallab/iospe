@@ -1293,7 +1293,7 @@
     <span
       style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
       <!-- Full size popup -->
-      <a class="x87" href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
+      <a class="x87" target="_blank" href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
         <!-- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -->
         <span>&#160;</span>
         <!-- Thumbnail image -->
@@ -1301,6 +1301,9 @@
           <!-- @alt info -->
           <xsl:if test="string(tei:desc[@xml:lang=$lang])">
             <xsl:attribute name="alt">
+              <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
               <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
             </xsl:attribute>
           </xsl:if>
