@@ -6,7 +6,6 @@
   <xsl:param name="lang" select="$lang"/>
   <xsl:param name="kiln:assets-path" select="$kiln:assets-path"/>
 
-  <xsl:import href="inscription-apparatus.xsl"/>
 
   <xsl:template match="/"/>
 
@@ -830,7 +829,8 @@
                   <xsl:choose>
                     <xsl:when
                       test="normalize-space($fullN) = '' and 
-                      //tei:div[@type='bibliography'][tei:listBibl//text()[not(normalize-space(.)='')] or descendant::tei:ptr]">
+                      (//tei:div[@type='bibliography'][tei:listBibl//text()[not(normalize-space(.)='')] or descendant::tei:ptr]
+                      or //tei:div[@type='bibliography'][tei:listBibl//tei:ptr])">
                       <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
                         <xsl:if test="@n">
                           <em>
