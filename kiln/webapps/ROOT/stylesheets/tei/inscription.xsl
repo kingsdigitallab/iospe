@@ -2,11 +2,11 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  
+  <xsl:import href="inscription-apparatus.xsl"/>
 
   <xsl:param name="lang" select="$lang"/>
   <xsl:param name="kiln:assets-path" select="$kiln:assets-path"/>
-
-  <xsl:import href="inscription-apparatus.xsl"/>
 
   <xsl:template match="/"/>
 
