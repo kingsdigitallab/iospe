@@ -831,7 +831,6 @@
                     <xsl:when
                       test="normalize-space($fullN) = '' and 
                       //tei:div[@type='bibliography'][tei:listBibl//text()[not(normalize-space(.)='')] or descendant::tei:ptr]">
-
                       <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
                         <xsl:if test="@n">
                           <em>
@@ -850,7 +849,8 @@
                       </xsl:for-each>
                     </xsl:when>
                     <xsl:when
-                      test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.)='')] or descendant::tei:ptr)]">
+                      test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.)='')] 
+                      or descendant::tei:ptr)]">
                       <xsl:apply-templates
                         select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
                       />
