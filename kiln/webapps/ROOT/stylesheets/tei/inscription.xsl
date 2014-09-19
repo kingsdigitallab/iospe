@@ -88,14 +88,14 @@
     <xsl:text> </xsl:text>
 
     <!-- title -->
-    <xsl:value-of
+    <xsl:apply-templates
       select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]"/>
 
 
-    <xsl:if
+    <!--<xsl:if
       test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]/tei:certainty[@cert = 'low']">
       <xsl:text> (?)</xsl:text>
-    </xsl:if>
+    </xsl:if>-->
 
     <xsl:if
       test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]//tei:origDate)">
