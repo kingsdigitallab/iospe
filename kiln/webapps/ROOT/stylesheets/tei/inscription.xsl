@@ -840,7 +840,7 @@
                           </em>
                         </xsl:if>
                         <xsl:apply-templates/>
-                        <xsl:if test="not(string(normalize-space(self::tei:listBibl)) or descendant::tei:ptr)">
+                        <xsl:if test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
                           <i18n:text>Unpublished</i18n:text>
                         </xsl:if>
                         <xsl:if test="position() != last()">
@@ -849,8 +849,8 @@
                       </xsl:for-each>
                     </xsl:when>
                     <xsl:when
-                      test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.)='')] 
-                      or descendant::tei:ptr)]">
+                      test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.)='')])]
+                      or //tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
                       <xsl:apply-templates
                         select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
                       />
