@@ -1735,7 +1735,7 @@
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="tei:sic[@n='superfluous']">
+  <xsl:template match="tei:surplus">
     <xsl:text>{</xsl:text>
     <xsl:apply-templates/>
     <xsl:text>}</xsl:text>

@@ -246,6 +246,10 @@
       <xsl:apply-templates/>
     </span>
   </xsl:template>
-
+  
+  <!-- SUPERSCRIPT -->
+  <xsl:template match="tei:hi[@rend='superscript']">
+    <sup><xsl:apply-templates/></sup>
+  </xsl:template>
 
 </xsl:stylesheet>
