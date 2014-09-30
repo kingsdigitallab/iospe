@@ -119,6 +119,16 @@
   </xsl:template>
 
   <!-- Unit: ORIGIN (Tables of Content) -->
+
+  <xsl:template match="tei:origin/tei:origPlace//tei:certainty[@cert='low']" mode="origin">
+    <xsl:text>(?)</xsl:text>
+  </xsl:template>
+
+
+  <xsl:template match="tei:origin/tei:origPlace//tei:seg/text()" mode="origin">
+    <xsl:value-of select="."/>
+  </xsl:template>
+
   <xsl:template match="tei:origin/tei:origPlace[@ref][1]" mode="origin">
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
@@ -145,12 +155,12 @@
           </field>
         </xsl:for-each>
         <field name="origin-en">
-          <xsl:value-of select="tei:seg[@xml:lang='en']"/>
+          <xsl:apply-templates select="tei:seg[@xml:lang='en']" mode="origin"/>
         </field>
         <field name="origin-ru">
-          <xsl:value-of select="tei:seg[@xml:lang='ru']"/>
+          <xsl:apply-templates select="tei:seg[@xml:lang='ru']" mode="origin"/>
         </field>
-        
+
         <field name="inscription-has-date">
           <xsl:if test="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
             <xsl:text>yes</xsl:text>
@@ -403,7 +413,7 @@
                   select="substring(
                             translate(
                               translate(
-                                normalize-space(.), 
+                                normalize-space(.),
                                 $lowercase, $uppercase),
                               '?.-', '—'),
                             1,1)"
@@ -524,7 +534,7 @@
             <xsl:for-each
               select="parent::tei:expan/descendant::tei:abbr/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:del[parent::tei:subst])]">
               <xsl:sequence select="normalize-space(.)"/>
-            </xsl:for-each> 
+            </xsl:for-each>
           </xsl:variable>
 
           <xsl:for-each select="$aggr//node()">
@@ -544,13 +554,13 @@
             </xsl:for-each>
           </field>
         </xsl:if>
-        
-        
+
+
         <field name="expan">
           <xsl:for-each
             select="parent::tei:expan/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:am or ancestor::tei:del[parent::tei:subst])]">
             <xsl:value-of select="normalize-space(.)"/>
-          </xsl:for-each> 
+          </xsl:for-each>
         </field>
       </doc>
     </xsl:if>
@@ -627,7 +637,7 @@
                 select="substring(
                           translate(
                             translate(
-                              normalize-space(.), 
+                              normalize-space(.),
                               $lowercase, $uppercase),
                             '?.-', '—'),
                           1,1)"
@@ -847,7 +857,7 @@
                 select="substring(
                           translate(
                             translate(
-                              normalize-space(.), 
+                              normalize-space(.),
                               $lowercase, $uppercase),
                             '?.-', '—'),
                           1,1)"
@@ -1013,8 +1023,8 @@
                 <xsl:value-of
                   select="substring(
                             translate(
-                              translate(  
-                                normalize-space(.), 
+                              translate(
+                                normalize-space(.),
                                 $lowercase, $uppercase),
                               '?.-', '—'),
                             1,1)"
