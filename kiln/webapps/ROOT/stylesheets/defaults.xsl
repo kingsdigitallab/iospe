@@ -106,44 +106,53 @@
   <xsl:template match="tei:ref">
     <xsl:choose>
       <xsl:when test="@type='inscription'">
-        <xsl:element name="a">
-          <xsl:attribute name="href">
-            <xsl:text>/</xsl:text>
-            <xsl:variable name="volume" select="substring-before(normalize-space(.),' ')"/>
-            <xsl:variable name="num1" select="substring-after(normalize-space(.),' ')"/>
-            <xsl:choose>
-              <xsl:when test="$volume='I'">
-                <xsl:number value="1"/>
-              </xsl:when>
-              <xsl:when test="$volume='II'">
-                <xsl:number value="2"/>
-              </xsl:when>
-              <xsl:when test="$volume='III'">
-                <xsl:number value="3"/>
-              </xsl:when>
-              <xsl:when test="$volume='IV'">
-                <xsl:number value="4"/>
-              </xsl:when>
-              <xsl:when test="$volume='V'">
-                <xsl:number value="5"/>
-              </xsl:when>
-            </xsl:choose>
-            <!--<xsl:number format="1" value="$volume"/>-->
-            <xsl:text>.</xsl:text>
-            <xsl:number format="1" value="$num1"/>
-            <xsl:value-of select="$kiln:url-lang-suffix"/>
-            <xsl:text>.html</xsl:text>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <i18n:text>Link to inscription</i18n:text>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="normalize-space(.)"/>
-          </xsl:attribute>
-          <xsl:attribute name="style">
-            <xsl:text>font-weight:bold;</xsl:text>
-          </xsl:attribute>
-          <xsl:apply-templates/>
-        </xsl:element>
+
+
+        <xsl:analyze-string regex="([IV]{{1,3}})\s(\d{{1,3}}[a-z]?)" select="normalize-space(.)">
+          <xsl:matching-substring>
+            <xsl:variable name="volume" select="regex-group(1)"/>
+            <xsl:variable name="num1" select="regex-group(2)"/>
+
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:text>/</xsl:text>
+                <xsl:choose>
+                  <xsl:when test="$volume='I'">
+                    <xsl:number value="1"/>
+                  </xsl:when>
+                  <xsl:when test="$volume='II'">
+                    <xsl:number value="2"/>
+                  </xsl:when>
+                  <xsl:when test="$volume='III'">
+                    <xsl:number value="3"/>
+                  </xsl:when>
+                  <xsl:when test="$volume='IV'">
+                    <xsl:number value="4"/>
+                  </xsl:when>
+                  <xsl:when test="$volume='V'">
+                    <xsl:number value="5"/>
+                  </xsl:when>
+                </xsl:choose>
+                <xsl:text>.</xsl:text>
+                <xsl:value-of select="$num1"/>
+                <xsl:value-of select="$kiln:url-lang-suffix"/>
+                <xsl:text>.html</xsl:text>
+              </xsl:attribute>
+              <xsl:attribute name="title">
+                <i18n:text>Link to inscription</i18n:text>
+                <xsl:text> </xsl:text>
+                <xsl:value-of select="regex-group(0)"/>
+              </xsl:attribute>
+              <xsl:attribute name="style">
+                <xsl:text>font-weight:bold;</xsl:text>
+              </xsl:attribute>
+              <xsl:value-of select="regex-group(0)"/>
+            </xsl:element>
+          </xsl:matching-substring>
+          <xsl:non-matching-substring>
+            <xsl:value-of select="."/>
+          </xsl:non-matching-substring>
+        </xsl:analyze-string>
       </xsl:when>
       <xsl:when test="@type='introduction'">
         <xsl:element name="a">
@@ -232,24 +241,26 @@
         indicate that the term is partially or completely restored in the text.</i18n:text>
     </div>
   </xsl:template>
-  
+
   <!-- GREEK -->
   <xsl:template match="tei:foreign[@xml:lang='grc']|tei:term[@xml:lang='grc']">
     <span lang="grc" xsl:exclude-result-prefixes="tei">
       <xsl:apply-templates/>
     </span>
   </xsl:template>
-  
+
   <!-- Old Church Slavonic -->
   <xsl:template match="tei:foreign[@xml:lang='cu']|tei:term[@xml:lang='cu']">
     <span lang="cu" xsl:exclude-result-prefixes="tei">
       <xsl:apply-templates/>
     </span>
   </xsl:template>
-  
+
   <!-- SUPERSCRIPT -->
   <xsl:template match="tei:hi[@rend='superscript']">
-    <sup><xsl:apply-templates/></sup>
+    <sup>
+      <xsl:apply-templates/>
+    </sup>
   </xsl:template>
 
 </xsl:stylesheet>
