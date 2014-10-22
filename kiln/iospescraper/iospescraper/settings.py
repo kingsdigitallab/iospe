@@ -26,9 +26,10 @@ NEWSPIDER_MODULE = 'iospescraper.spiders'
 # }
 
 AUTH = {
-    'user': '',
+    'user': 'agiacometti',
 }
 
 ITEM_PIPELINES = {
-    'iospescraper.pipelines.HTMLExporterPipeline': 100,
+    'iospescraper.pipelines.PreprocessorPipeline': 100,
+    'iospescraper.pipelines.HTMLExporterPipeline': 200,
 }

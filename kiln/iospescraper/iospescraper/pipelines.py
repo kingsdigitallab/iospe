@@ -10,6 +10,64 @@ from iospescraper import settings
 
 from scrapy import log
 
+from lxml import html
+from lxml.etree import XMLSyntaxError
+
+
+class PreprocessorPipeline(object):
+
+    def remove_content_sections(self, etree):
+        for content_section in etree.xpath(
+            (u"//div[contains(@class, 'inscription-data')]"
+             u"//section["
+             u"descendant::div["
+             u"contains(@class, 'content') and "
+             u"(contains(@class, 'diplomatic') or "
+             u"contains(@class, 'epidoc_xml'))]]")):
+            content_section.getparent().remove(content_section)
+
+        return etree
+
+    def remove_edition_title(self, etree):
+        for edition_title in etree.xpath(
+            (u"//div[contains(@class, 'inscription-data')]"
+             u"//section["
+             u"descendant::div["
+             u"contains(@class, 'content') and "
+             u"contains(@class, 'edition')]]"
+             u"//p[contains(@class, 'title')]")):
+            edition_title.getparent().remove(edition_title)
+
+        return etree
+
+
+    def remove_images_section(self, etree):
+        for images_section in etree.xpath(
+            (u"//div[contains(@class, 'row')]["
+             u"div[contains(@class, 'details')]"
+             u"[descendant::img]]")):
+            images_section.getparent().remove(images_section)
+
+        return etree
+
+    def process_item(self, item, spider):
+        try:
+
+            tree = html.fromstring(item['body'])
+
+        except XMLSyntaxError:
+            log.msg('Unable to parse XML tree', level=log.INFO)
+
+            return item
+
+        tree = self.remove_content_sections(tree)
+        tree = self.remove_edition_title(tree)
+        tree = self.remove_images_section(tree)
+
+        item['body'] = html.tostring(tree)
+
+        return item
+
 
 class HTMLExporterPipeline(object):
     outfile = settings.OUTFILE
@@ -48,7 +106,6 @@ class HTMLExporterPipeline(object):
     def process_item(self, item, spider):
         inscr_html = u"""
         <h1>{title}</h1>
-        <span>from URL: {link}</span>
 
         <div class="inscription">
         {body}
