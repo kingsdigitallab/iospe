@@ -162,7 +162,8 @@
         </field>
 
         <field name="inscription-has-date">
-          <xsl:if test="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
+          <xsl:if
+            test="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
             <xsl:text>yes</xsl:text>
           </xsl:if>
         </field>
@@ -782,7 +783,8 @@
 
   <!-- Unit: NAME -->
 
-  <xsl:template match="tei:div[@type='edition']//tei:name[not(preceding-sibling::tei:name = .)]
+  <xsl:template
+    match="tei:div[@type='edition']//tei:name[not(preceding-sibling::tei:name = .)]
     | tei:div[@type='edition']//tei:roleName"
     mode="name">
     <xsl:variable name="idno"
@@ -903,7 +905,9 @@
         </field>
 
         <field name="name-nymRef">
-          <xsl:value-of select="if (self::tei:name) then (normalize-space(@nymRef)) else (normalize-space(child::tei:w/@lemma))"/>
+          <xsl:value-of
+            select="if (self::tei:name) then (normalize-space(@nymRef)) else (normalize-space(child::tei:w/@lemma))"
+          />
         </field>
         <field name="names-sort">
           <xsl:choose>
@@ -972,6 +976,8 @@
         <xsl:apply-templates/>
       </xsl:variable>
 
+      <xsl:variable name="is-surname" select="@type = 'surname'" type="xs:boolean"/>
+
       <xsl:for-each select="tokenize(normalize-space(@nymRef), ' ')">
         <doc>
 
@@ -1034,6 +1040,9 @@
           </field>
           <field name="attested">
             <xsl:value-of select="."/>
+            <xsl:if test="$is-surname">
+              <xsl:text> (surname)</xsl:text>
+            </xsl:if>
           </field>
 
           <field name="attested-sort">
