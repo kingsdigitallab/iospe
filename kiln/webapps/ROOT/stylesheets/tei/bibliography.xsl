@@ -435,7 +435,7 @@
 
     <!-- Scope -->
     <xsl:apply-templates select="." mode="scope"/>
-    <xsl:text>)</xsl:text>
+    <xsl:text>.)</xsl:text>
     <xsl:text> </xsl:text>
 
 
