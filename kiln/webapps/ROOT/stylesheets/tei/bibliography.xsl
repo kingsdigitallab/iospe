@@ -11,7 +11,7 @@
   <xsl:template name="bibliographyTitle">
     <i18n:text>Bibliography</i18n:text>
   </xsl:template>
-  
+
   <xsl:variable name="surnames" select="/aggregation/surnames"/>
 
   <xsl:function name="iospe:sort-bibliography">
@@ -42,7 +42,17 @@
       <xsl:sort select="iospe:sort-bibliography(.)"/>
       <xsl:sort
         select="normalize-space(./*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
-    
+
+      <xsl:if test="/aggregation/concordance//doc/str[@name='bibl-target']/text() = @xml:id">
+        <p class="concordance_link right">
+          <a href="/conc/publications/{@xml:id}{$kiln:url-lang-suffix}.html" i18n:attr="title" title="View Concordance">
+            <i class="fa fa-list fa-3x">
+              <xsl:text> </xsl:text>
+            </i>
+          </a>
+        </p>
+      </xsl:if>
+
       <p class="reference">
         <xsl:apply-templates select="."/>
       </p>
@@ -298,7 +308,8 @@
   <xsl:template match="tei:analytic | tei:monogr | tei:series | tei:bibl" mode="title">
 
     <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
-      <xsl:apply-templates select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"/>
+      <xsl:apply-templates select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"
+      />
     </xsl:if>
 
     <xsl:if

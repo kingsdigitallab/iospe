@@ -16,9 +16,12 @@
       <!-- Bibliography Pages -->
       <map:match pattern="bibliography-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=inscriptions/bibliography-{1}.html"/>
+          <map:part
+            src="cocoon://_internal/menu/main.{1}.xml?url=inscriptions/bibliography-{1}.html"/>
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"/>
           <map:part src="../content/xml/tei/alists/surnames.xml" element="surnames"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/bibliography.xsl">
@@ -36,6 +39,8 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=inscriptions/bibliography.html"/>
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"/>
           <map:part src="../content/xml/tei/alists/surnames.xml" element="surnames"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/bibliography.xsl">
@@ -84,6 +89,6 @@
         <map:serialize type="xhtml"/>
       </map:match>
     </map:pipeline>
-</map:pipelines>
+  </map:pipelines>
 
 </map:sitemap>
