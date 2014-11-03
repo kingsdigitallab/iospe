@@ -76,8 +76,12 @@
         <field name="bibl-target">
           <xsl:value-of select="$target"/>
         </field>
+        
+        <field name="bibl-list">
+          <xsl:value-of select="//tei:listBibl[(descendant::tei:biblStruct | descendant::tei:bibl)[@xml:id=$target]]/@type"/>
+        </field>
         <!-- From AL bibliography.xml -->
-        <xsl:for-each select="//tei:biblStruct[@xml:id=$target]">
+        <xsl:for-each select="//(tei:biblStruct | tei:bibl)[@xml:id=$target]">
           <field name="bibl-short-en">
             <xsl:value-of
               select="descendant::tei:author[1]//tei:surname[@xml:lang='en' or not(@xml:lang)]"/>
@@ -86,7 +90,7 @@
               <xsl:value-of
                 select="descendant::tei:author[2]//tei:surname[@xml:lang='en' or not(@xml:lang)]"/>
             </xsl:if>
-            <xsl:if test="count(//tei:biblStruct[@xml:id=$target]//tei:author[1])>2">, et
+            <xsl:if test="count(descendant::tei:author[1])>2">, et
               al.</xsl:if>
             <xsl:text> </xsl:text>
             <xsl:value-of select="descendant::tei:imprint/tei:date"/>
@@ -99,7 +103,7 @@
               <xsl:value-of
                 select="descendant::tei:author[2]//tei:surname[@xml:lang='ru' or not(@xml:lang)]"/>
             </xsl:if>
-            <xsl:if test="count(//tei:biblStruct[@xml:id=$target]//tei:author[1])>2">, и
+            <xsl:if test="count(//(tei:biblStruct | tei:bibl)[@xml:id=$target]//tei:author[1])>2">, и
               др.</xsl:if>
             <xsl:text> </xsl:text>
             <xsl:value-of select="descendant::tei:imprint/tei:date"/>
@@ -108,7 +112,7 @@
             <xsl:text>(FIXME) </xsl:text>
             <xsl:for-each select="descendant::tei:title">
               <xsl:value-of select="."/>
-              <xsl:if test="following::tei:title[ancestor::tei:biblStruct[@xml:id=$target]]">
+              <xsl:if test="following::tei:title[(ancestor::tei:biblStruct | ancestor::tei:bibl)[@xml:id=$target]]">
                 <xsl:text>, </xsl:text>
               </xsl:if>
             </xsl:for-each>
