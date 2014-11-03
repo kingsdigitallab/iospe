@@ -29,11 +29,11 @@
 
   <xsl:template name="generateConcordance">
     <xsl:variable name="distinct-bibls">
-      <xsl:for-each-group select="//doc" group-by="str[@name=concat('bibl-short-',$lang)]">
+      <xsl:for-each-group select="//doc[str[@name='bibl-list'] = 'corpora']" group-by="str[@name=concat('bibl-short-',$lang)]">
         <xsl:sort
-          select="iospe:sort-bibliography(/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id=current()/str[@name='bibl-target']])"/>
+          select="iospe:sort-bibliography(/aggregation/bib/tei:TEI//tei:listBibl/(tei:biblStruct | tei:bibl)[@xml:id=current()/str[@name='bibl-target']])"/>
         <xsl:sort
-          select="normalize-space(/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id=current()/str[@name='bibl-target']]/*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
+          select="normalize-space(/aggregation/bib/tei:TEI//tei:listBibl/(tei:biblStruct | tei:bibl)[@xml:id=current()/str[@name='bibl-target']]/*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
         <doc>
           <xsl:sequence select="str[@name=concat('bibl-short-',$lang)]"/>
           <xsl:sequence select="str[@name='bibl-target']"/>
@@ -67,7 +67,7 @@
         </p>
         <p class="reference">
           <xsl:apply-templates
-            select="$master-bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()/str[@name='bibl-target']]"/>
+            select="$master-bib/tei:TEI//tei:listBibl/(tei:biblStruct | tei:bibl)[@xml:id = current()/str[@name='bibl-target']]"/>
 
         </p>
       </li>
