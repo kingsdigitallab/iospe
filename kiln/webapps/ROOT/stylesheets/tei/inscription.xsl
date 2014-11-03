@@ -2,7 +2,7 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
+
   <xsl:import href="inscription-apparatus.xsl"/>
 
   <xsl:param name="lang" select="$lang"/>
@@ -572,14 +572,14 @@
   <xsl:template name="do_textpart">
     <xsl:param name="nestedTitles" select="false()"/>
     <xsl:param name="fullN"/>
-    
+
     <xsl:variable name="f_n"
-      select="if (contains($fullN, '.')) 
+      select="if (contains($fullN, '.'))
       then substring-before($fullN, '.')
       else $fullN"/>
     <xsl:variable name="tx_n" select="substring-after($fullN, '.')"/>
-    
-    
+
+
     <div>
       <xsl:attribute name="class">
         <xsl:text>row</xsl:text>
@@ -829,7 +829,7 @@
                   </xsl:variable>
                   <xsl:choose>
                     <xsl:when
-                      test="normalize-space($fullN) = '' and 
+                      test="normalize-space($fullN) = '' and
                       (//tei:div[@type='bibliography'][tei:listBibl//text()[not(normalize-space(.)='')]]
                       or //tei:div[@type='bibliography'][tei:listBibl//tei:ptr])">
                       <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
@@ -956,7 +956,7 @@
                       <pre>
                       <code class="language-xml">
                         <xsl:choose>
-                          <xsl:when test="$f_n and $tx_n">                          
+                          <xsl:when test="$f_n and $tx_n">
                             <xsl:copy-of select="/aggregation/v_ep/div[@type='edition'][@n=$fullN]/node()"/>
                         </xsl:when>
                           <xsl:when test="$f_n">
@@ -1350,7 +1350,7 @@
   </xsl:template>
 
   <!-- BIBLIO -->
-  <xsl:template match="tei:bibl[title='PHI' or title='EDH']//tei:biblScope">
+  <xsl:template match="tei:bibl[title='PHI' or title='EDH']//tei:citedRange">
     <xsl:choose>
       <xsl:when test="tei:title='PHI' and @n">
         <a class="intNew" rel="external" target="_blank" xsl:exclude-result-prefixes="tei">

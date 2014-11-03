@@ -51,7 +51,7 @@
   <xsl:template match="text()" mode="#all" priority="-1"/>
 
   <!-- Unit: PUBLICATION (Concordances) -->
-  <xsl:template match="tei:bibl[tei:biblScope][descendant::tei:ptr]" mode="publication">
+  <xsl:template match="tei:bibl[tei:citedRange][descendant::tei:ptr]" mode="publication">
     <xsl:variable name="target" select="substring-after(descendant::tei:ptr[1]/@target, 'bib:')"/>
     <xsl:variable name="idno"
       select="ancestor::aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
@@ -69,7 +69,7 @@
         <xsl:comment>Publication</xsl:comment>
 
         <field name="publications">
-          <xsl:value-of select="tei:biblScope"/>
+          <xsl:value-of select="tei:citedRange"/>
         </field>
         <!-- SORTING IN POST-QUERY XSLT to account for mix of numeric and string values -->
         <xsl:variable name="target" select="substring-after(descendant::tei:ptr[1]/@target, 'bib:')"/>
