@@ -45,7 +45,8 @@
 
       <xsl:if test="/aggregation/concordance//doc/str[@name='bibl-target']/text() = @xml:id">
         <p class="concordance_link right">
-          <a href="/conc/publications/{@xml:id}{$kiln:url-lang-suffix}.html" i18n:attr="title" title="View Concordance">
+          <a href="/conc/publications/{@xml:id}{$kiln:url-lang-suffix}.html" i18n:attr="title"
+            title="View Concordance">
             <i class="fa fa-list fa-3x">
               <xsl:text> </xsl:text>
             </i>
@@ -294,10 +295,13 @@
     </xsl:for-each>
   </xsl:template>
 
-  <xsl:template match="tei:biblStruct" mode="date">
+  <xsl:template match="tei:biblStruct | tei:bibl" mode="date">
     <xsl:choose>
       <xsl:when test=".//tei:imprint/tei:date[1]">
         <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
+      </xsl:when>
+      <xsl:when test=".//tei:date[1]">
+        <xsl:value-of select=".//tei:date[1]"/>
       </xsl:when>
       <xsl:otherwise>
         <i18n:text key="__date_nd">n.d.</i18n:text>
