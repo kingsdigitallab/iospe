@@ -1111,7 +1111,7 @@
                   select="//tei:div[@type='commentary'][@xml:lang=$lang]"/>
               </xsl:when>
               <xsl:otherwise>
-                <i18n:text>no comment</i18n:text>. </xsl:otherwise>
+                <i18n:text>Not offered</i18n:text>. </xsl:otherwise>
             </xsl:choose>
             <xsl:text>&#160;</xsl:text>
           </div>
