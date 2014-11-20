@@ -1654,12 +1654,15 @@
         <xsl:when test="ancestor::tei:l">
           <xsl:call-template name="note-par"/>
         </xsl:when>
-        <xsl:when test="ancestor::tei:translation">
+        <xsl:when test="ancestor::tei:div[@type='translation'] and parent::tei:p">
           <xsl:text>(</xsl:text>
           <em>
             <xsl:apply-templates/>
           </em>
           <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:when test="parent::tei:div[@type='translation']">
+          <xsl:apply-templates/>
         </xsl:when>
         <xsl:when test="ancestor::tei:ab">
           <xsl:choose>
