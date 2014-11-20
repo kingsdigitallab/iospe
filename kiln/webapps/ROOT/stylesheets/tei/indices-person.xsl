@@ -43,9 +43,9 @@
   </xsl:template>
   <!-- Generate Index -->
   <xsl:template name="generateIndexPerson">
-    
+
     <xsl:call-template name="indices_bracket_info"/>
-    
+
     <xsl:choose>
       <!-- divine -->
       <xsl:when test="$index='divine'">
@@ -228,6 +228,8 @@
       <!-- attested persons -->
 
       <xsl:when test="$index='persons'">
+        <xsl:call-template name="indices_dashes_info"/>
+
         <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
           <section>
             <xsl:attribute name="class">
@@ -250,7 +252,7 @@
                           <xsl:text> </xsl:text>
                         </th>
                         <th>
-                          <i18n:text>Attested Form</i18n:text>
+                          <i18n:text>Greek</i18n:text>
                         </th>
                         <th>
                           <i18n:text>Date</i18n:text>
@@ -301,7 +303,7 @@
                           <xsl:text> </xsl:text>
                         </th>
                         <th>
-                          <i18n:text>Attested Form</i18n:text>
+                          <i18n:text>Greek</i18n:text>
                         </th>
                         <th>
                           <i18n:text>Date</i18n:text>

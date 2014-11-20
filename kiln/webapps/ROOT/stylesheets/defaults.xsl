@@ -242,6 +242,20 @@
     </div>
   </xsl:template>
 
+
+  <xsl:template name="indices_dashes_info">
+    <div data-alert="data-alert" class="alert-box secondary">
+      <i class="fa fa-info-circle">
+        <xsl:text> </xsl:text>
+      </i>
+      <xsl:text> </xsl:text>
+      <i18n:text key="__indices_dashes_info">
+        For names where the initial letter(s) are lost, see under emdash (—) in the alphabet bar.
+        An emdash indicates missing letters at the beginning, middle or end of a name.
+        A single hyphen in the middle of a name indicates a hyphenated name.</i18n:text>
+    </div>
+  </xsl:template>
+
   <!-- GREEK -->
   <xsl:template match="tei:foreign[@xml:lang='grc']|tei:term[@xml:lang='grc']">
     <span lang="grc" xsl:exclude-result-prefixes="tei">

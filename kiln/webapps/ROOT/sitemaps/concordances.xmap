@@ -62,7 +62,7 @@
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/concordances-publication.xsl">
-          <map:parameter name="filedir" value="conc/publications/{1}-{2}.html"/>
+          <map:parameter name="url" value="conc/publications/{1}-{2}.html"/>
           <map:parameter name="concordance" value="publication"/>
           <map:parameter name="lang" value="{2}"/>
         </map:transform>
