@@ -5,7 +5,8 @@
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:import href="../common/conversions.xsl"/>
-
+  <xsl:param name="lang" select="$lang"/>
+  <xsl:param name="kiln:url-lang-suffix" select="$kiln:url-lang-suffix"/>
   <xsl:template match="/"/>
 
   <xsl:template name="bibliographyTitle">
@@ -96,16 +97,21 @@
           <xsl:apply-templates select="$analytic" mode="title"/>
           <xsl:text>.</xsl:text>
         </xsl:when>
+        <xsl:when test="$monogr and $series">
+          <xsl:apply-templates select="$monogr" mode="title">
+            <xsl:with-param name="emphasized" select="true()"/>
+          </xsl:apply-templates>
+        </xsl:when>
         <xsl:when test="$monogr">
-          <em>
-            <xsl:apply-templates select="$monogr" mode="title"/>
-          </em>
+          <xsl:apply-templates select="$monogr" mode="title">
+            <xsl:with-param name="emphasized" select="true()"/>
+          </xsl:apply-templates>
           <xsl:text>.</xsl:text>
         </xsl:when>
         <xsl:when test="$series">
-          <em>
-            <xsl:apply-templates select="$series" mode="title"/>
-          </em>
+          <xsl:apply-templates select="$series" mode="title">
+            <xsl:with-param name="emphasized" select="true()"/>
+          </xsl:apply-templates>
           <xsl:text>.</xsl:text>
         </xsl:when>
       </xsl:choose>
@@ -165,14 +171,15 @@
     <!-- Location & Publisher-->
     <xsl:if test=".//tei:imprint/tei:pubPlace">
 
-      <xsl:if test="$analytic and ($monogr and not($series) or not($monogr) and $series)">
+      <xsl:if
+        test="$analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series)">
         <xsl:text>. </xsl:text>
       </xsl:if>
 
       <xsl:for-each select=".//tei:imprint/tei:pubPlace[@xml:lang=$lang or not(@xml:lang)]">
         <xsl:value-of select="."/>
         <xsl:if test="position() != last()">
-          <xsl:text>,</xsl:text>
+          <xsl:text>, </xsl:text>
         </xsl:if>
       </xsl:for-each>
       <xsl:if test=".//tei:imprint/tei:publisher">
@@ -295,13 +302,17 @@
     </xsl:for-each>
   </xsl:template>
 
+  <xsl:template match="tei:biblStruct//tei:date">
+    <xsl:apply-templates select="child::node()[@xml:lang=$lang or not(@xml:lang)]"/>
+  </xsl:template>
+
   <xsl:template match="tei:biblStruct | tei:bibl" mode="date">
     <xsl:choose>
       <xsl:when test=".//tei:imprint/tei:date[1]">
-        <xsl:value-of select=".//tei:imprint/tei:date[1]"/>
+        <xsl:apply-templates select=".//tei:imprint/tei:date[1]"/>
       </xsl:when>
       <xsl:when test=".//tei:date[1]">
-        <xsl:value-of select=".//tei:date[1]"/>
+        <xsl:apply-templates select=".//tei:date[1]"/>
       </xsl:when>
       <xsl:otherwise>
         <i18n:text key="__date_nd">n.d.</i18n:text>
@@ -309,11 +320,27 @@
     </xsl:choose>
   </xsl:template>
 
+  <xsl:template match="tei:biblStruct//tei:title">
+    <xsl:param name="emphasized" select="false()"/>
+    <xsl:choose>
+      <xsl:when test="$emphasized">
+        <em>
+          <xsl:apply-templates/>
+        </em>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <xsl:template match="tei:analytic | tei:monogr | tei:series | tei:bibl" mode="title">
+    <xsl:param name="emphasized" select="false()"/>
 
     <xsl:if test="./tei:title[@xml:lang=$lang and text() != '' or text() != '']">
-      <xsl:apply-templates select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]"
-      />
+      <xsl:apply-templates select="./tei:title[@xml:lang=$lang and text() != '' or text() != ''][1]">
+        <xsl:with-param name="emphasized" select="$emphasized"/>
+      </xsl:apply-templates>
     </xsl:if>
 
     <xsl:if
@@ -373,14 +400,14 @@
       <xsl:text>)</xsl:text>
     </xsl:if>
 
-    <xsl:if test="*[not(self::tei:monogr)]/tei:biblScope[@type='vol']">
+    <xsl:if test=".[not(self::tei:monogr)]/tei:biblScope[@type='vol']">
       <xsl:text> </xsl:text>
       <xsl:value-of select="./tei:biblScope[@type='vol']"/>
     </xsl:if>
 
     <xsl:choose>
       <xsl:when
-        test="*[not(self::tei:monogr)]/tei:biblScope[@type='vol'] and ./tei:biblScope[@type='issue']">
+        test=".[not(self::tei:monogr)]/tei:biblScope[@type='vol'] and (./tei:biblScope[@type='issue'] or ./tei:biblScope[@type='part'])">
         <xsl:text>.</xsl:text>
       </xsl:when>
       <xsl:when test="./tei:biblScope[@type='issue']">
@@ -389,13 +416,16 @@
     </xsl:choose>
 
     <xsl:if test="./tei:biblScope[@type='issue']">
-      <xsl:value-of select="./tei:biblScope[@type='issue']"/>
+      <xsl:value-of select="./tei:biblScope[@type='issue'][@xml:lang=$lang or not(@xml:lang)]"/>
+    </xsl:if>
+    <xsl:if test="./tei:biblScope[@type='part']">
+      <xsl:value-of select="./tei:biblScope[@type='part'][@xml:lang=$lang or not(@xml:lang)]"/>
     </xsl:if>
 
     <xsl:if test="./tei:biblScope[@type='pp']">
       <xsl:choose>
         <xsl:when
-          test="*[not(self::tei:monogr)]/tei:biblScope[@type='vol'] or ./tei:biblScope[@type='issue']">
+          test=".[not(self::tei:monogr)]/tei:biblScope[@type='vol'] or ./tei:biblScope[@type='issue']">
           <xsl:text>:</xsl:text>
         </xsl:when>
         <xsl:otherwise>
@@ -421,9 +451,9 @@
 
     <!-- Title -->
     <xsl:if test="./tei:title">
-      <em>
-        <xsl:apply-templates select="." mode="title"/>
-      </em>
+      <xsl:apply-templates select="." mode="title">
+        <xsl:with-param name="emphasized" select="true()"/>
+      </xsl:apply-templates>
     </xsl:if>
 
     <!-- Scope -->
@@ -450,9 +480,7 @@
 
     <!-- Scope -->
     <xsl:apply-templates select="." mode="scope"/>
-    <xsl:text>.)</xsl:text>
-    <xsl:text> </xsl:text>
-
+    <xsl:text>)</xsl:text>
 
   </xsl:template>
 </xsl:stylesheet>
