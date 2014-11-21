@@ -1661,7 +1661,7 @@
           </em>
           <xsl:text>)</xsl:text>
         </xsl:when>
-        <xsl:when test="parent::tei:div[@type='translation']">
+        <xsl:when test="parent::tei:div[@type='translation'] or parent::tei:div[@type='textpart'][parent::tei:div[@type='translation']]">
           <xsl:apply-templates/>
         </xsl:when>
         <xsl:when test="ancestor::tei:ab">
