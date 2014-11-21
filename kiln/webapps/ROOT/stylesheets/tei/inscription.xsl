@@ -841,7 +841,8 @@
                           </em>
                         </xsl:if>
                         <xsl:apply-templates/>
-                        <xsl:if test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
+                        <xsl:if
+                          test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
                           <i18n:text>Unpublished</i18n:text>
                         </xsl:if>
                         <xsl:if test="position() != last()">
@@ -1294,7 +1295,8 @@
     <span
       style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
       <!-- Full size popup -->
-      <a class="x87" target="_blank" href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
+      <a class="x87" target="_blank"
+        href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
         <!-- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -->
         <span>&#160;</span>
         <!-- Thumbnail image -->
@@ -1409,6 +1411,42 @@
     <xsl:apply-templates/>
   </xsl:template>
 
+  <xsl:template name="editions_author_name">
+    <xsl:param name="surnames"/>
+    <xsl:param name="author"/>
+    <xsl:choose>
+      <xsl:when test="$author/tei:surname">
+        <xsl:choose>
+          <xsl:when test="$author/tei:surname[@corresp]">
+            <xsl:variable name="person_id">
+              <xsl:value-of select="substring-after($author/tei:surname/@corresp, 'surnames.xml#')"
+              />
+            </xsl:variable>
+            <xsl:value-of
+              select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname[@xml:lang = $lang or not(@xml:lang)]"
+            />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of
+              select="normalize-space($author//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
+            />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <xsl:when test="$author/tei:forename">
+        <xsl:value-of
+          select="normalize-space($author//tei:forename[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
+        />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of
+          select="normalize-space($author//tei:*[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
+        />
+      </xsl:otherwise>
+    </xsl:choose>
+
+  </xsl:template>
+
 
   <xsl:template match="tei:bibl">
     <xsl:if test="@n">
@@ -1430,75 +1468,64 @@
             <xsl:text>2</xsl:text>
           </xsl:element>
         </xsl:when>
-        <xsl:when test="descendant::tei:author[1]/tei:surname">
-          <xsl:choose>
-            <xsl:when test="descendant::tei:author[1]/tei:surname[@corresp]">
-              <xsl:variable name="person_id">
-                <xsl:value-of
-                  select="substring-after(descendant::tei:author[1]/tei:surname/@corresp, 'surnames.xml#')"
-                />
-              </xsl:variable>
-              <xsl:value-of
-                select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname[@xml:lang = $lang or not(@xml:lang)]"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of
-                select="normalize-space(descendant::tei:author[1]//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-              />
-            </xsl:otherwise>
-          </xsl:choose>
+        <xsl:when test="descendant::tei:analytic//tei:author">
+          <xsl:call-template name="editions_author_name">
+            <xsl:with-param name="author" select="descendant::tei:analytic//tei:author[1]"/>
+            <xsl:with-param name="surnames" select="$surnames"/>
+          </xsl:call-template>
         </xsl:when>
-        <xsl:when test="descendant::tei:author[1]/tei:forename">
-          <xsl:value-of
-            select="normalize-space(descendant::tei:author[1]//tei:forename[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-          />
+        <xsl:when test="descendant::tei:monogr//tei:author">
+          <xsl:call-template name="editions_author_name">
+            <xsl:with-param name="author" select="descendant::tei:monogr//tei:author[1]"/>
+            <xsl:with-param name="surnames" select="$surnames"/>
+          </xsl:call-template>
         </xsl:when>
         <xsl:when test="descendant::tei:author">
-          <xsl:value-of
-            select="normalize-space(descendant::tei:author[1]//tei:*[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-          />
+          <xsl:call-template name="editions_author_name">
+            <xsl:with-param name="author" select="descendant::tei:author[1]"/>
+            <xsl:with-param name="surnames" select="$surnames"/>
+          </xsl:call-template>
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="@xml:id"/>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:if test="descendant::tei:author[2]">
-        <xsl:text>, </xsl:text>
-        <xsl:choose>
-          <xsl:when test="descendant::tei:author[2]/tei:surname">
-            <xsl:choose>
-              <xsl:when test="descendant::tei:author[2]/tei:surname[@corresp]">
-                <xsl:variable name="person_id">
-                  <xsl:value-of
-                    select="substring-after(descendant::tei:author[2]/tei:surname/@corresp, 'surnames.xml#')"
-                  />
-                </xsl:variable>
-                <xsl:value-of
-                  select="$surnames/tei:person[@xml:id=$person_id]/tei:persName/tei:surname"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of
-                  select="normalize-space(descendant::tei:author[2]//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-                />
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:when>
-          <xsl:when test="descendant::tei:author[2]/tei:forename">
-            <xsl:value-of
-              select="normalize-space(descendant::tei:author[2]//tei:forename[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-            />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of
-              select="normalize-space(descendant::tei:author[2]//tei:*[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
-            />
-          </xsl:otherwise>
-        </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="descendant::tei:analytic//tei:author[2]">
+          <xsl:text>, </xsl:text>
+          <xsl:call-template name="editions_author_name">
+            <xsl:with-param name="author" select="descendant::tei:analytic//tei:author[2]"/>
+            <xsl:with-param name="surnames" select="$surnames"/>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:when
+          test="not(descendant::tei:analytic//tei:author) and descendant::tei:monogr//tei:author[2]">
+          <xsl:text>, </xsl:text>
+          <xsl:call-template name="editions_author_name">
+            <xsl:with-param name="author" select="descendant::tei:monogr//tei:author[2]"/>
+            <xsl:with-param name="surnames" select="$surnames"/>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:when
+          test="not(descendant::tei:analytic//tei:author) and not(descendant::tei:monogr//tei:author) and descendant::tei:author[2]">
+          <xsl:text>, </xsl:text>
+          <xsl:call-template name="editions_author_name">
+            <xsl:with-param name="author" select="descendant::tei:author[2]"/>
+            <xsl:with-param name="surnames" select="$surnames"/>
+          </xsl:call-template>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:if
+        test="descendant::tei:analytic//tei:author[3] or 
+                    (not(descendant::tei:analytic//tei:author) and descendant::tei:monogr//tei:author[3]) or 
+                    (not(descendant::tei:analytic//tei:author) and not(descendant::tei:monogr//tei:author) and descendant::tei:author[3])">
+        <xsl:text>, et al.</xsl:text>
       </xsl:if>
-      <xsl:if test="count(//tei:biblStruct[@xml:id=$target]//tei:author[1])>2">, et al.</xsl:if>
+
       <xsl:text> </xsl:text>
       <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
     </xsl:for-each>
+
     <xsl:apply-templates/>
 
     <xsl:if test="following-sibling::tei:bibl[child::node()]">
@@ -1661,7 +1688,8 @@
           </em>
           <xsl:text>)</xsl:text>
         </xsl:when>
-        <xsl:when test="parent::tei:div[@type='translation'] or parent::tei:div[@type='textpart'][parent::tei:div[@type='translation']]">
+        <xsl:when
+          test="parent::tei:div[@type='translation'] or parent::tei:div[@type='textpart'][parent::tei:div[@type='translation']]">
           <xsl:apply-templates/>
         </xsl:when>
         <xsl:when test="ancestor::tei:ab">
