@@ -2,7 +2,7 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
-  xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0">
+  xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 
   <xsl:param name="concordance"/>
@@ -16,20 +16,90 @@
     <xsl:value-of select="(//str[@name=concat('bibl-short-',$lang)])[1]"/>
   </xsl:template>
 
+  <xsl:function name="iospe:roman-character-impl-value" as="xs:double">
+    <xsl:param name="character" as="xs:string"/>
+    <xsl:choose>
+      <xsl:when test="lower-case($character) = 'i'">
+        <xsl:number value="1" format="1"/>
+      </xsl:when>
+      <xsl:when test="lower-case($character) = 'v'">
+        <xsl:number value="5" format="1"/>
+      </xsl:when>
+      <xsl:when test="lower-case($character) = 'x'">
+        <xsl:number value="10" format="1"/>
+      </xsl:when>
+      <xsl:when test="lower-case($character) = 'l'">
+        <xsl:number value="50" format="1"/>
+      </xsl:when>
+      <xsl:when test="lower-case($character) = 'c'">
+        <xsl:number value="100" format="1"/>
+      </xsl:when>
+      <xsl:when test="lower-case($character) = 'd'">
+        <xsl:number value="500" format="1"/>
+      </xsl:when>
+      <xsl:when test="lower-case($character) = 'm'">
+        <xsl:number value="1000" format="1"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:number value="0" format="1"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:function>
+
+  <xsl:function name="iospe:roman-to-arabic-impl" as="xs:double">
+    <xsl:param name="roman" as="xs:string"/>
+    <xsl:param name="i" as="xs:double"/>
+    <xsl:param name="prev" as="xs:double"/>
+
+    <xsl:variable name="current-value" as="xs:double"
+      select="if ($i &gt; 0 and $i &lt;= string-length($roman)) 
+              then iospe:roman-character-impl-value(substring($roman, $i, 1)) 
+              else 0"/>
+
+
+    <xsl:choose>
+
+      <xsl:when test="$i = 0">
+        <xsl:sequence select="0"/>
+      </xsl:when>
+      <xsl:when test="$prev &lt;= $current-value ">
+        <xsl:sequence
+          select="iospe:roman-to-arabic-impl($roman, $i - 1, $current-value) + $current-value"/>
+      </xsl:when>
+      <xsl:when test="$prev &gt; $current-value ">
+        <xsl:sequence
+          select="iospe:roman-to-arabic-impl($roman, $i - 1, $current-value) - $current-value"/>
+      </xsl:when>
+    </xsl:choose>
+
+  </xsl:function>
+
+  <xsl:function name="iospe:roman-to-arabic" as="xs:integer">
+    <xsl:param name="roman" as="xs:string"/>
+    <xsl:number value="iospe:roman-to-arabic-impl($roman, string-length($roman), 0)"/>
+
+  </xsl:function>
+
+
   <xsl:template name="generatePublicationConcordance">
     <p class="reference">
       <xsl:apply-templates
-        select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()//str[@name='bibl-target']]"/>
+        select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()//str[@name='bibl-target']]"
+      />
     </p>
-    
+
     <xsl:variable name="distinct-publications">
       <xsl:for-each-group select="//doc" group-by="str[@name='publications']">
-        <xsl:sort select="iospe:mixedSort(current-grouping-key())" data-type="number"
-          order="ascending"/>
+        <xsl:sort
+          select="iospe:roman-to-arabic(substring-before(normalize-space(current-grouping-key()), ' '))"
+          data-type="number" order="ascending"/>
+        <!--<xsl:sort select="iospe:mixedSort(current-grouping-key())" data-type="number"
+          order="ascending"/>-->
         <publication>
           <xsl:attribute name="publication-id">
             <xsl:value-of select="current-grouping-key()"/>
           </xsl:attribute>
+
           <xsl:sequence select="current-group()/str[@name='tei-id']"/>
         </publication>
       </xsl:for-each-group>
@@ -67,7 +137,6 @@
           <td class="head">
             <xsl:value-of select="@publication-id"/>
           </td>
-
           <td>
             <ul class="inline-list">
               <xsl:for-each select="distinct-values(str[@name='tei-id'])">
