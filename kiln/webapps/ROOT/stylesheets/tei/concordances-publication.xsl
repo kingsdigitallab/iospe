@@ -197,7 +197,7 @@
             number(concat('0', iospe:roman-to-arabic(regex-group(2)))) * 100000000 +
             number(concat('0', regex-group(3))) * 10000 +
             number(concat('0', regex-group(5))) +
-            number(concat('0.', string-join(for $x in string-to-codepoints(regex-group(6)) return string($x), '')))"
+            number(concat('0.', string-join(for $x in string-to-codepoints(regex-group(6)) return string(format-number($x, '0000')), '')))"
           />
         </xsl:matching-substring>
         <xsl:non-matching-substring>
