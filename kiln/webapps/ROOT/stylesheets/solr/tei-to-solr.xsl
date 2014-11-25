@@ -76,43 +76,81 @@
         <field name="bibl-target">
           <xsl:value-of select="$target"/>
         </field>
-        
+
         <field name="bibl-list">
-          <xsl:value-of select="//tei:listBibl[(descendant::tei:biblStruct | descendant::tei:bibl)[@xml:id=$target]]/@type"/>
+          <xsl:value-of
+            select="//tei:listBibl[(descendant::tei:biblStruct | descendant::tei:bibl)[@xml:id=$target]]/@type"
+          />
         </field>
         <!-- From AL bibliography.xml -->
         <xsl:for-each select="//(tei:biblStruct | tei:bibl)[@xml:id=$target]">
+
           <field name="bibl-short-en">
-            <xsl:value-of
-              select="descendant::tei:author[1]//tei:surname[@xml:lang='en' or not(@xml:lang)]"/>
-            <xsl:if test="descendant::tei:author[2]">
-              <xsl:text>, </xsl:text>
-              <xsl:value-of
-                select="descendant::tei:author[2]//tei:surname[@xml:lang='en' or not(@xml:lang)]"/>
-            </xsl:if>
-            <xsl:if test="count(descendant::tei:author[1])>2">, et
-              al.</xsl:if>
+            <xsl:choose>
+              <xsl:when test="descendant::tei:author">
+                <xsl:value-of
+                  select="descendant::tei:author[1]//tei:surname[@xml:lang='en' or not(@xml:lang)]"/>
+                <xsl:if test="descendant::tei:author[2]">
+                  <xsl:text>, </xsl:text>
+                  <xsl:value-of
+                    select="descendant::tei:author[2]//tei:surname[@xml:lang='en' or not(@xml:lang)]"
+                  />
+                </xsl:if>
+                <xsl:if test="count(descendant::tei:author[1]) &gt; 2">
+                  <xsl:text>, et al.</xsl:text>
+                </xsl:if>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@xml:id"/>
+              </xsl:otherwise>
+            </xsl:choose>
+
             <xsl:text> </xsl:text>
-            <xsl:value-of select="descendant::tei:imprint/tei:date"/>
+            <xsl:choose>
+              <xsl:when test="descendant::tei:imprint/tei:date">
+                <xsl:value-of select="descendant::tei:imprint/tei:date"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="descendant::tei:date"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </field>
           <field name="bibl-short-ru">
-            <xsl:value-of
-              select="descendant::tei:author[1]//tei:surname[@xml:lang='ru' or not(@xml:lang)]"/>
-            <xsl:if test="descendant::tei:author[2]">
-              <xsl:text>, </xsl:text>
-              <xsl:value-of
-                select="descendant::tei:author[2]//tei:surname[@xml:lang='ru' or not(@xml:lang)]"/>
-            </xsl:if>
-            <xsl:if test="count(//(tei:biblStruct | tei:bibl)[@xml:id=$target]//tei:author[1])>2">, и
-              др.</xsl:if>
+            <xsl:choose>
+              <xsl:when test="descendant::tei:author">
+                <xsl:value-of
+                  select="descendant::tei:author[1]//tei:surname[@xml:lang='ru' or not(@xml:lang)]"/>
+                <xsl:if test="descendant::tei:author[2]">
+                  <xsl:text>, </xsl:text>
+                  <xsl:value-of
+                    select="descendant::tei:author[2]//tei:surname[@xml:lang='ru' or not(@xml:lang)]"
+                  />
+                </xsl:if>
+                <xsl:if test="count(descendant::tei:author[1]) &gt; 2">
+                  <xsl:text>, и др.</xsl:text>
+                </xsl:if>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@xml:id"/>
+              </xsl:otherwise>
+            </xsl:choose>
+
             <xsl:text> </xsl:text>
-            <xsl:value-of select="descendant::tei:imprint/tei:date"/>
+            <xsl:choose>
+              <xsl:when test="descendant::tei:imprint/tei:date">
+                <xsl:value-of select="descendant::tei:imprint/tei:date"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="descendant::tei:date"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </field>
           <field name="bibl-title">
             <xsl:text>(FIXME) </xsl:text>
             <xsl:for-each select="descendant::tei:title">
               <xsl:value-of select="."/>
-              <xsl:if test="following::tei:title[(ancestor::tei:biblStruct | ancestor::tei:bibl)[@xml:id=$target]]">
+              <xsl:if
+                test="following::tei:title[(ancestor::tei:biblStruct | ancestor::tei:bibl)[@xml:id=$target]]">
                 <xsl:text>, </xsl:text>
               </xsl:if>
             </xsl:for-each>

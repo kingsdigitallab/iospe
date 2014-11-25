@@ -4,15 +4,15 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
   xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <xsl:import href="bibliography.xsl"/>
 
   <xsl:param name="concordance"/>
 
 
-  <xsl:import href="bibliography.xsl"/>
-
   <xsl:template match="/"/>
 
   <xsl:template name="concordancePublicationTitle">
+    
     <xsl:value-of select="(//str[@name=concat('bibl-short-',$lang)])[1]"/>
   </xsl:template>
 
@@ -20,7 +20,7 @@
   <xsl:template name="generatePublicationConcordance">
     <p class="reference">
       <xsl:apply-templates
-        select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct[@xml:id = current()//str[@name='bibl-target']]"
+        select="/aggregation/bib/tei:TEI//tei:listBibl/(tei:biblStruct | tei:bibl)[@xml:id = current()//str[@name='bibl-target']]"
       />
     </p>
 
@@ -178,7 +178,7 @@
     <xsl:param name="i" as="xs:string"/>
 
     <xsl:variable name="broken_i">
-      <!-- xpath 2.0 regex cannot handle zero length matching strings, appending a bogus 
+      <!-- xpath 2.0 regex cannot handle zero length matching strings, appending a bogus
         string to the end of $i is a hack to deal with that. -->
       <xsl:analyze-string select="concat(normalize-space($i), ' !!END!!')"
         regex="^(([ivxlcdmIVXLCDM]+)[\s\.])?(\d+)?([-–](\d+))?(\w+)?(\s!!END!!)$">
@@ -189,14 +189,14 @@
               - a second arabic numeral set, separated by a hyphen (e.g -398)
               - a set of letters, converted to unicode code points and treated as decimal numbers. (abc)
             for example:
-            20 (XX) * 100000000 + 544 * 10000 + 398 + 0.616263 (a = 61, b = 62, c = 63) = 2,005,440,398.61626, 
-            
+            20 (XX) * 100000000 + 544 * 10000 + 398 + 0.616263 (a = 61, b = 62, c = 63) = 2,005,440,398.61626,
+
             That number is used as the sorting key. Every part of the number is optional. -->
           <xsl:sequence
             select="
-            number(concat('0', iospe:roman-to-arabic(regex-group(2)))) * 100000000 + 
-            number(concat('0', regex-group(3))) * 10000 + 
-            number(concat('0', regex-group(5))) + 
+            number(concat('0', iospe:roman-to-arabic(regex-group(2)))) * 100000000 +
+            number(concat('0', regex-group(3))) * 10000 +
+            number(concat('0', regex-group(5))) +
             number(concat('0.', string-join(for $x in string-to-codepoints(regex-group(6)) return string($x), '')))"
           />
         </xsl:matching-substring>
