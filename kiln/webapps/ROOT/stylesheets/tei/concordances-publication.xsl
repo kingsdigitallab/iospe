@@ -181,12 +181,12 @@
       <!-- xpath 2.0 regex cannot handle zero length matching strings, appending a bogus
         string to the end of $i is a hack to deal with that. -->
       <xsl:analyze-string select="concat(normalize-space($i), ' !!END!!')"
-        regex="^(([ivxlcdmIVXLCDM]+)[\s\.])?(\d+)?([-–](\d+))?(\w+)?(\s!!END!!)$">
+        regex="^(([ivxlcdmIVXLCDM]+)[\s\.])?(\d+)?([-–\.](\d+))?(\w+)?(\s!!END!!)$">
         <xsl:matching-substring>
           <!-- this sequence contains a large decimal number, it is composed of the addition of:
               - a conversion of roman numerals to decimal (e.g. XX) multiplied by a large number
               - a first arabic numeral set, separated by a space or a dot (e.g. 544) multiplied by a smaller number
-              - a second arabic numeral set, separated by a hyphen (e.g -398)
+              - a second arabic numeral set, separated by a hyphen or a dot (e.g -398)
               - a set of letters, converted to unicode code points and treated as decimal numbers. (abc)
             for example:
             20 (XX) * 100000000 + 544 * 10000 + 398 + 0.616263 (a = 61, b = 62, c = 63) = 2,005,440,398.61626,
