@@ -1082,8 +1082,17 @@
           </field>
           <field name="attested">
             <xsl:value-of select="."/>
+          </field>
+          <field name="attested-en">
+            <xsl:value-of select="."/>
             <xsl:if test="$is-surname">
               <xsl:text> (surname)</xsl:text>
+            </xsl:if>
+          </field>
+          <field name="attested-ru">
+            <xsl:value-of select="."/>
+            <xsl:if test="$is-surname">
+              <xsl:text> (родовое)</xsl:text>
             </xsl:if>
           </field>
 

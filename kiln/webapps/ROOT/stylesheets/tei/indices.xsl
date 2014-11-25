@@ -261,6 +261,9 @@
       <tr class="index_row row">
         <th class="large-2">
           <xsl:choose>
+            <xsl:when test="$index='attested'">
+              <xsl:value-of select="str[@name=concat('attested-', $lang)]"/>
+            </xsl:when>
             <xsl:when test="str[@name='num-value']">
               <xsl:value-of select="$display_key"/>
               <small>
