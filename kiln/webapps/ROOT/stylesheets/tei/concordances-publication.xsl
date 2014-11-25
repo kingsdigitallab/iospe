@@ -16,70 +16,6 @@
     <xsl:value-of select="(//str[@name=concat('bibl-short-',$lang)])[1]"/>
   </xsl:template>
 
-  <xsl:function name="iospe:roman-character-impl-value" as="xs:double">
-    <xsl:param name="character" as="xs:string"/>
-    <xsl:choose>
-      <xsl:when test="lower-case($character) = 'i'">
-        <xsl:number value="1" format="1"/>
-      </xsl:when>
-      <xsl:when test="lower-case($character) = 'v'">
-        <xsl:number value="5" format="1"/>
-      </xsl:when>
-      <xsl:when test="lower-case($character) = 'x'">
-        <xsl:number value="10" format="1"/>
-      </xsl:when>
-      <xsl:when test="lower-case($character) = 'l'">
-        <xsl:number value="50" format="1"/>
-      </xsl:when>
-      <xsl:when test="lower-case($character) = 'c'">
-        <xsl:number value="100" format="1"/>
-      </xsl:when>
-      <xsl:when test="lower-case($character) = 'd'">
-        <xsl:number value="500" format="1"/>
-      </xsl:when>
-      <xsl:when test="lower-case($character) = 'm'">
-        <xsl:number value="1000" format="1"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:number value="0" format="1"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:function>
-
-  <xsl:function name="iospe:roman-to-arabic-impl" as="xs:double">
-    <xsl:param name="roman" as="xs:string"/>
-    <xsl:param name="i" as="xs:double"/>
-    <xsl:param name="prev" as="xs:double"/>
-
-    <xsl:variable name="current-value" as="xs:double"
-      select="if ($i &gt; 0 and $i &lt;= string-length($roman)) 
-              then iospe:roman-character-impl-value(substring($roman, $i, 1)) 
-              else 0"/>
-
-
-    <xsl:choose>
-
-      <xsl:when test="$i = 0">
-        <xsl:sequence select="0"/>
-      </xsl:when>
-      <xsl:when test="$prev &lt;= $current-value ">
-        <xsl:sequence
-          select="iospe:roman-to-arabic-impl($roman, $i - 1, $current-value) + $current-value"/>
-      </xsl:when>
-      <xsl:when test="$prev &gt; $current-value ">
-        <xsl:sequence
-          select="iospe:roman-to-arabic-impl($roman, $i - 1, $current-value) - $current-value"/>
-      </xsl:when>
-    </xsl:choose>
-
-  </xsl:function>
-
-  <xsl:function name="iospe:roman-to-arabic" as="xs:integer">
-    <xsl:param name="roman" as="xs:string"/>
-    <xsl:number value="iospe:roman-to-arabic-impl($roman, string-length($roman), 0)"/>
-
-  </xsl:function>
-
 
   <xsl:template name="generatePublicationConcordance">
     <p class="reference">
@@ -90,15 +26,16 @@
 
     <xsl:variable name="distinct-publications">
       <xsl:for-each-group select="//doc" group-by="str[@name='publications']">
-        <xsl:sort
-          select="iospe:roman-to-arabic(substring-before(normalize-space(current-grouping-key()), ' '))"
+        <xsl:sort select="iospe:publication-sort(normalize-space(current-grouping-key()))"
           data-type="number" order="ascending"/>
-        <!--<xsl:sort select="iospe:mixedSort(current-grouping-key())" data-type="number"
-          order="ascending"/>-->
+
         <publication>
           <xsl:attribute name="publication-id">
             <xsl:value-of select="current-grouping-key()"/>
           </xsl:attribute>
+          <!--<debug>
+            <xsl:value-of select="iospe:publication-sort(current-grouping-key())"/>
+          </debug>-->
 
           <xsl:sequence select="current-group()/str[@name='tei-id']"/>
         </publication>
@@ -137,6 +74,9 @@
           <td class="head">
             <xsl:value-of select="@publication-id"/>
           </td>
+          <!--<td>
+            <xsl:value-of select="debug"/>
+          </td>-->
           <td>
             <ul class="inline-list">
               <xsl:for-each select="distinct-values(str[@name='tei-id'])">
@@ -169,33 +109,96 @@
     </xsl:for-each>
 
   </xsl:template>
-
-  <xsl:function name="iospe:mixedSort">
-    <!-- Sorts mixed content for biblScope. Since the calling sort sorts by number,
-            this function "cheats" by transforming strings into numbers > 10000 -->
-    <xsl:param name="i"/>
-
+  <xsl:function name="iospe:roman-character-impl-value" as="xs:double">
+    <xsl:param name="character" as="xs:string"/>
+    <xsl:variable name="lcharacter" select="lower-case($character)"/>
     <xsl:choose>
-      <!-- String -->
-      <xsl:when test="string(number($i)) = 'NaN'">
-        <xsl:choose>
-          <!-- When range, try to get a number -->
-          <xsl:when test="contains($i, '-') and string(number(substring-before($i, '-'))) != 'NaN'">
-            <xsl:value-of select="substring-before($i, '-')"/>
-          </xsl:when>
-          <!-- Otherwise just compute an order for letters -->
-          <xsl:otherwise>
-            <xsl:value-of
-              select="number(string-join(for $x in string-to-codepoints($i) return string($x), ''))"
-            />
-          </xsl:otherwise>
-        </xsl:choose>
+      <xsl:when test="$lcharacter = 'i'">
+        <xsl:number value="1" format="1"/>
+      </xsl:when>
+      <xsl:when test="$lcharacter = 'v'">
+        <xsl:number value="5" format="1"/>
+      </xsl:when>
+      <xsl:when test="$lcharacter = 'x'">
+        <xsl:number value="10" format="1"/>
+      </xsl:when>
+      <xsl:when test="$lcharacter = 'l'">
+        <xsl:number value="50" format="1"/>
+      </xsl:when>
+      <xsl:when test="$lcharacter = 'c'">
+        <xsl:number value="100" format="1"/>
+      </xsl:when>
+      <xsl:when test="$lcharacter = 'd'">
+        <xsl:number value="500" format="1"/>
+      </xsl:when>
+      <xsl:when test="$lcharacter = 'm'">
+        <xsl:number value="1000" format="1"/>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="$i"/>
+        <xsl:number value="0" format="1"/>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:function>
 
+  <xsl:function name="iospe:roman-to-arabic-impl" as="xs:double">
+    <xsl:param name="roman" as="xs:string"/>
+    <xsl:param name="i" as="xs:double"/>
+    <xsl:param name="prev" as="xs:double"/>
+
+    <xsl:variable name="current-value" as="xs:double"
+      select="if ($i &gt; 0 and $i &lt;= string-length($roman))
+      then iospe:roman-character-impl-value(substring($roman, $i, 1))
+      else 0"/>
+
+
+    <xsl:choose>
+
+      <xsl:when test="$i = 0">
+        <xsl:sequence select="0"/>
+      </xsl:when>
+      <xsl:when test="$prev &lt;= $current-value ">
+        <xsl:sequence
+          select="iospe:roman-to-arabic-impl($roman, $i - 1, $current-value) + $current-value"/>
+      </xsl:when>
+      <xsl:when test="$prev &gt; $current-value ">
+        <xsl:sequence
+          select="iospe:roman-to-arabic-impl($roman, $i - 1, $current-value) - $current-value"/>
+      </xsl:when>
+    </xsl:choose>
+
+  </xsl:function>
+
+  <xsl:function name="iospe:roman-to-arabic" as="xs:integer">
+    <xsl:param name="roman" as="xs:string"/>
+    <xsl:number value="iospe:roman-to-arabic-impl($roman, string-length($roman), 0)"/>
+
+  </xsl:function>
+
+  <xsl:function name="iospe:publication-sort">
+    <xsl:param name="i" as="xs:string"/>
+
+    <xsl:variable name="broken_i">
+      <!-- xpath 2.0 regex cannot handle zero length matching strings, appending a bogus 
+        string to the end of $i is a hack to deal with that. -->
+      <xsl:analyze-string select="concat(normalize-space($i), ' !!END!!')"
+        regex="^(([ivxlcdmIVXLCDM]+)[\s\.])?(\d+)?([-–](\d+))?(\w+)?(\s!!END!!)$">
+        <xsl:matching-substring>
+          <xsl:sequence
+            select="
+            number(concat('0', iospe:roman-to-arabic(regex-group(2)))) * 100000000 + 
+            number(concat('0', regex-group(3))) * 10000 + 
+            number(concat('0', regex-group(5))) + 
+            number(concat('0.', string-join(for $x in string-to-codepoints(regex-group(6)) return string($x), '')))"
+          />
+        </xsl:matching-substring>
+        <xsl:non-matching-substring>
+          <xsl:sequence
+            select="number(concat('0.', string-join(for $x in string-to-codepoints($i) return string($x), '')))"
+          />
+        </xsl:non-matching-substring>
+      </xsl:analyze-string>
+    </xsl:variable>
+    <xsl:value-of select="$broken_i"/>
   </xsl:function>
 
 
