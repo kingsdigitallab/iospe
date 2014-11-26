@@ -204,7 +204,7 @@
                 <xsl:with-param name="title" select="$title"/>
               </xsl:call-template>
               <xsl:attribute name="href">
-                <xsl:value-of select="$xmp:context-path"/>
+                <xsl:value-of select="$kiln:context-path"/>
                 <xsl:text>/</xsl:text>
                 <xsl:value-of select="$path"/>
               </xsl:attribute>
@@ -217,7 +217,7 @@
         <a>
           <xsl:attribute name="href">
             <xsl:if test="starts-with(@target, '/')">
-              <xsl:value-of select="$xmp:context-path"/>
+              <xsl:value-of select="$kiln:context-path"/>
             </xsl:if>
             <!-- This is well dodgy. -->
             <xsl:value-of select="@target"/>
@@ -249,10 +249,10 @@
         <xsl:text> </xsl:text>
       </i>
       <xsl:text> </xsl:text>
-      <i18n:text key="__indices_dashes_info">
-        For names where the initial letter(s) are lost, see under emdash (—) in the alphabet bar.
-        An emdash indicates missing letters at the beginning, middle or end of a name.
-        A single hyphen in the middle of a name indicates a hyphenated name.</i18n:text>
+      <i18n:text key="__indices_dashes_info">For names where the initial letter(s) are lost, see
+        under emdash (—) in the alphabet bar. An emdash indicates missing letters at the beginning,
+        middle or end of a name. A single hyphen in the middle of a name indicates a hyphenated
+        name.</i18n:text>
     </div>
   </xsl:template>
 
@@ -275,6 +275,19 @@
     <sup>
       <xsl:apply-templates/>
     </sup>
+  </xsl:template>
+
+  <xsl:template match="tei:divGen[@type='pleiadesmap']">
+    <iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      src="//maps.google.com/maps?q=http:%2F%2Fepiduke.cch.kcl.ac.uk%2Fblacksea.kml&amp;ie=UTF8&amp;t=h&amp;vpsrc=6&amp;ll=44.824708,34.584961&amp;spn=7.48047,14.0625&amp;z=5&amp;output=embed">
+      <xsl:comment>testing</xsl:comment>
+    </iframe>
+    <br/>
+    <small>
+      <a
+        href="//maps.google.com/maps?q=http:%2F%2Fepiduke.cch.kcl.ac.uk%2Fblacksea.kml&amp;ie=UTF8&amp;t=h&amp;vpsrc=6&amp;ll=44.824708,34.584961&amp;spn=7.48047,14.0625&amp;z=6&amp;source=embed"
+        style="color:#0000FF;text-align:left">View Larger Map</a>
+    </small>
   </xsl:template>
 
 </xsl:stylesheet>
