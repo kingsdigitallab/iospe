@@ -179,7 +179,9 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
+      <!-- ======================================================================================================================== -->
       <!-- debug pattern for newstyle inscriptions -->
+      <!-- ======================================================================================================================== -->
       <map:match pattern="new/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url={1}-{2}.html"/>
@@ -233,9 +235,9 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
+      <!-- ======================================================================================================================== -->
       <!-- END debug pattern for newstyle inscriptions -->
-
-
+      <!-- ======================================================================================================================== -->
 
       <map:match pattern="*.xml">
         <map:generate src="../content/xml/tei/inscriptions/{1}.xml"/>
