@@ -25,7 +25,7 @@
         <xsl:for-each select="//doc/arr[@name='origin-ref']/str[.=current()/@xml:id]">
           <xsl:sort select="ancestor::doc/int[@name='sortable-id']"/>
           <dd>
-            <a href="/{ancestor::doc/str[@name='file']}.html">
+            <a href="/{ancestor::doc/str[@name='file']}{$kiln:url-lang-suffix}.html">
               <!-- inscription number -->
               <xsl:call-template name="formatInscrNum">
                 <xsl:with-param name="num" select="ancestor::doc/str[@name='tei-id']"/>
