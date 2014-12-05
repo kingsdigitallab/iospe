@@ -1428,7 +1428,7 @@
           </xsl:when>
           <xsl:otherwise>
             <xsl:value-of
-              select="normalize-space($author//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1])"
+              select="$author//tei:surname[if (not(@xml:lang)) then true() else @xml:lang=$lang][1]"
             />
           </xsl:otherwise>
         </xsl:choose>
@@ -1470,7 +1470,7 @@
         </xsl:when>
         <xsl:when test="descendant::tei:analytic//tei:author">
           <xsl:call-template name="editions_author_name">
-            <xsl:with-param name="author" select="descendant::tei:analytic//tei:author[1]"/>
+            <xsl:with-param name="author" select="descendant::tei:analytic[1]//tei:author[1]"/>
             <xsl:with-param name="surnames" select="$surnames"/>
           </xsl:call-template>
         </xsl:when>
@@ -1491,7 +1491,7 @@
         </xsl:otherwise>
       </xsl:choose>
       <xsl:choose>
-        <xsl:when test="descendant::tei:analytic//tei:author[2]">
+        <xsl:when test="descendant::tei:analytic[1]//tei:author[2]">
           <xsl:text>, </xsl:text>
           <xsl:call-template name="editions_author_name">
             <xsl:with-param name="author" select="descendant::tei:analytic//tei:author[2]"/>
