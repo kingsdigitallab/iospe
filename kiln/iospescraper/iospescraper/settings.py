@@ -13,6 +13,12 @@ LOG_LEVEL = 'INFO'
 BOT_NAME = 'iospescraper'
 
 OUTFILE = 'inscriptions.html'
+# OUTFILE = 'inscriptions-ru.html'
+
+START_URLS = [
+    "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations.html",
+    # "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations-ru.html"
+]
 
 SPIDER_MODULES = ['iospescraper.spiders']
 NEWSPIDER_MODULE = 'iospescraper.spiders'

@@ -13,6 +13,8 @@ from scrapy import log
 from lxml import html
 from lxml.etree import XMLSyntaxError
 
+from scrapy.exceptions import DropItem
+
 
 class PreprocessorPipeline(object):
 
@@ -58,7 +60,7 @@ class PreprocessorPipeline(object):
         except XMLSyntaxError:
             log.msg('Unable to parse XML tree', level=log.INFO)
 
-            return item
+            raise DropItem("Unable to parse SML tree in item {}".format(item))
 
         tree = self.remove_content_sections(tree)
         tree = self.remove_edition_title(tree)

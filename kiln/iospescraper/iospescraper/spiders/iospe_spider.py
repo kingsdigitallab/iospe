@@ -18,14 +18,13 @@ class InscriptionSpider(CrawlSpider):
 
     name = "inscription"
     allowed_domains = ["iospe-dev.cch.kcl.ac.uk"]
-    start_urls = [
-        "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations.html"
-    ]
+    start_urls = settings.START_URLS
+
 
     rules = (
         Rule(
             LxmlLinkExtractor(
-                allow=("\d\.\d{1,3}\w?.html", ),
+                allow=("\d\.\d{1,3}\w?(?:-ru)?.html", ),
                 restrict_xpaths=(
                     '//dl[@class="indices indices-locations tocs"]',)
             ),
@@ -76,6 +75,11 @@ class InscriptionSpider(CrawlSpider):
 
                 # inscription letter
                 r'(?P<subletter>\w?)'
+
+                # language suffix
+                r'(?:-ru)?'
+
+                # extension
                 r'\.html'
 
                 # end of the string
