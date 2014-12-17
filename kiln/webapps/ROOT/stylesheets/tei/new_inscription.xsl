@@ -168,9 +168,10 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template name="do_fragment_or_monument">
+  <xsl:template match="tei:msDesc | tei:msPart" mode="do_fragment_or_monument">
     <xsl:param name="n"/>
     <xsl:param name="nestedTitles" select="true()"/>
+
     <div>
       <xsl:attribute name="class">
         <xsl:text>row</xsl:text>
@@ -210,7 +211,8 @@
 
       <div class="large-10 columns details">
         <!-- Type of monument (if exists) -->
-        <xsl:if test="//tei:support/tei:objectType[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang=$lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -219,7 +221,8 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:value-of select="//tei:objectType[@xml:lang=$lang][@n = $n or not(@n or $n)]"/>
+                <xsl:value-of
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -227,7 +230,8 @@
         </xsl:if>
 
         <!-- Material (if exists) -->
-        <xsl:if test="//tei:support/tei:material[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang=$lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -236,14 +240,16 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:value-of select="//tei:material[@xml:lang=$lang][@n = $n or not(@n or $n)]"/>
+                <xsl:value-of
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
           </div>
         </xsl:if>
         <!-- Dimensions -->
-        <xsl:for-each select="//tei:support/tei:dimensions[@n = $n or not(@n or $n)]">
+        <xsl:for-each
+          select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:dimensions">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -261,7 +267,8 @@
         </xsl:for-each>
 
         <!-- Description and condition (if exists) -->
-        <xsl:if test="//tei:support/tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang=$lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -271,7 +278,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="//tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]/node()"/>
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang=$lang]/node()"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -279,181 +286,160 @@
         </xsl:if>
 
         <xsl:if
-          test="//tei:support/tei:objectType[@xml:lang=$lang][@n = $n or not(@n or $n)]
-                | //tei:support/tei:material[@xml:lang=$lang][@n = $n or not(@n or $n)]
-                | //tei:support/tei:dimensions[@n = $n or not(@n or $n)]
-                | //tei:support/tei:p[@xml:lang=$lang][@n = $n or not(@n or $n)]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/(tei:objectType | tei:material | tei:dimensions | tei:p)[@xml:lang=$lang]">
           <br/>
         </xsl:if>
 
-        <xsl:call-template name="objectData">
-          <xsl:with-param name="n" select="$n"/>
-        </xsl:call-template>
+        <!-- Origin -->
+        <xsl:if test="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang=$lang]">
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Place of Origin</i18n:text>
+              </h6>
+            </div>
+            <div class="large-9 columns">
+              <p>
+                <xsl:apply-templates
+                  select="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang=$lang]"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:if>
 
+        <xsl:for-each select="tei:history/tei:provenance[@type='found']">
+
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Find place</i18n:text>
+              </h6>
+            </div>
+
+            <div class="large-9 columns">
+              <p>
+                <xsl:value-of
+                  select="tei:seg[@xml:lang=$lang]/tei:placeName[@type='ancientFindspot']"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+
+          <!-- Find context -->
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Find context</i18n:text>
+              </h6>
+            </div>
+
+            <div class="large-9 columns">
+              <p>
+                <xsl:value-of select="tei:seg[@xml:lang=$lang]/tei:rs[@type='context']"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+
+          <!-- Find Circumnstances -->
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Find circumstances</i18n:text>
+              </h6>
+            </div>
+
+            <div class="large-9 columns">
+              <p>
+                <xsl:value-of select="tei:seg[@xml:lang=$lang]/tei:rs[@type='circumstances']"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:for-each>
+
+        <!-- Find place -->
+        <xsl:if
+          test="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang=$lang]
+                | tei:history/tei:provenance[@type='found']">
+          <br/>
+        </xsl:if>
+
+        <!-- Modern Location (if exists) -->
+        <xsl:if test="tei:history/tei:provenance[@type='observed'][not(@subtype)]">
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Modern location</i18n:text>
+              </h6>
+            </div>
+
+            <div class="large-9 columns">
+              <p>
+                <xsl:value-of
+                  select="tei:history/tei:provenance[@type='observed'][not(@subtype)]/tei:seg[@xml:lang=$lang]"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:if>
+
+        <!-- Institution and Inventory -->
+        <xsl:for-each select="tei:msIdentifier/tei:altIdentifier[@xml:lang=$lang or not(@xml:lang)]">
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Institution and inventory</i18n:text>
+              </h6>
+            </div>
+            <div class="large-9 columns">
+              <p>
+                <xsl:value-of select="tei:repository"/>
+
+                <xsl:choose>
+                  <xsl:when test="tei:idno/text()">
+                    <xsl:text>,&#160;</xsl:text>
+                    <xsl:value-of select="tei:idno"/>
+                  </xsl:when>
+                  <xsl:when test="not(tei:repository[.=('Unknown','Неизвестен')])">
+                    <xsl:text>,&#160;</xsl:text>
+                    <i18n:text>no inventory number</i18n:text>
+                  </xsl:when>
+                </xsl:choose>
+                <xsl:text>.&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:for-each>
+
+        <!-- Autopsy -->
+        <xsl:if test="tei:history/tei:provenance[@type='observed'][@subtype='autopsy']">
+          <div class="row">
+            <div class="large-3 columns">
+              <h6>
+                <i18n:text>Autopsy</i18n:text>
+              </h6>
+            </div>
+            <div class="large-9 columns">
+              <p>
+                <xsl:value-of
+                  select="tei:history/tei:provenance[@type='observed'][@subtype='autopsy']/tei:seg[@xml:lang=$lang]"/>
+                <xsl:text>&#160;</xsl:text>
+              </p>
+            </div>
+          </div>
+        </xsl:if>
       </div>
     </div>
 
 
   </xsl:template>
 
-  <xsl:template name="objectData">
-    <xsl:param name="n"/>
-
-    <!-- If the object is in fragments, add title -->
-
-    <!-- Origin -->
-    <xsl:if test="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]">
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Place of Origin</i18n:text>
-          </h6>
-        </div>
-        <div class="large-9 columns">
-          <p>
-            <xsl:apply-templates
-              select="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:if>
-
-    <!-- Find place -->
-    <xsl:if test="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]">
-
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Find place</i18n:text>
-          </h6>
-        </div>
-
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:placeName[@type='ancientFindspot']"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-
-      <!-- Find context -->
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Find context</i18n:text>
-          </h6>
-        </div>
-
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:rs[@type='context']"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-
-      <!-- Find Circumnstances -->
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Find circumstances</i18n:text>
-          </h6>
-        </div>
-
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:rs[@type='circumstances']"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-
-    </xsl:if>
-
-    <xsl:if
-      test="//tei:origPlace[@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]
-            | //tei:provenance[@type='found'][@n = $n or not(@n or $n)]">
-      <br/>
-    </xsl:if>
-
-    <!-- Modern Location (if exists) -->
-    <xsl:if test="//tei:provenance[@type='observed'][not(@subtype)][@n = $n or not(@n or $n)]">
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Modern location</i18n:text>
-          </h6>
-        </div>
-
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type='observed'][not(@subtype)][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:if>
-
-    <!-- Institution and Inventory -->
-    <xsl:if test="//tei:altIdentifier[@n = $n or not(@n or $n)]">
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Institution and inventory</i18n:text>
-          </h6>
-        </div>
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository"/>
-
-            <xsl:choose>
-              <xsl:when
-                test="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno/text()">
-                <xsl:text>,&#160;</xsl:text>
-                <xsl:value-of
-                  select="//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:idno"/>
-              </xsl:when>
-              <xsl:when
-                test="not(//tei:altIdentifier[@n = $n or not(@n or $n)][@xml:lang=$lang]/tei:repository[.=('Unknown','Неизвестен')])">
-                <xsl:text>,&#160;</xsl:text>
-                <i18n:text>no inventory number</i18n:text>
-              </xsl:when>
-            </xsl:choose>
-            <xsl:text>.&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:if>
-
-    <!-- Autopsy -->
-    <xsl:if test="//tei:provenance[@type='observed'][@subtype='autopsy'][@n = $n or not(@n or $n)]">
-      <div class="row">
-        <div class="large-3 columns">
-          <h6>
-            <i18n:text>Autopsy</i18n:text>
-          </h6>
-        </div>
-        <div class="large-9 columns">
-          <p>
-            <xsl:value-of
-              select="//tei:provenance[@type='observed'][@subtype='autopsy'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]"/>
-            <xsl:text>&#160;</xsl:text>
-          </p>
-        </div>
-      </div>
-    </xsl:if>
-  </xsl:template>
-
 
   <xsl:template match="tei:body">
     <!-- monument information, common to all fragments -->
-    <xsl:call-template name="do_fragment_or_monument"/>
+    <xsl:apply-templates mode="do_fragment_or_monument" select="//tei:msDesc"/>
 
 
     <!--<hr/>-->
@@ -467,11 +453,12 @@
           <!-- Render metadata about inscriptions in current fragment, if any -->
           <xsl:variable name="f-n" select="@n"/>
 
-
-          <xsl:call-template name="do_fragment_or_monument">
-            <xsl:with-param name="n" select="$f-n"/>
-            <xsl:with-param name="nestedTitles" select="false()"/>
-          </xsl:call-template>
+          <xsl:for-each select="//tei:msDesc/tei:msPart">
+            <xsl:apply-templates select="." mode="do_fragment_or_monument">
+              <xsl:with-param name="n" select="$f-n"/>
+              <xsl:with-param name="nestedTitles" select="false()"/>
+            </xsl:apply-templates>
+          </xsl:for-each>
 
           <xsl:choose>
             <xsl:when test="tei:div[@subtype='inscription'][@n]">
@@ -496,19 +483,20 @@
       </xsl:when>
       <xsl:otherwise>
         <!-- support section per fragment, if any -->
-        <xsl:for-each-group
-          select="//tei:support/tei:objectType[@n]
-            | //tei:support/tei:material[@n]
-            | //tei:support/tei:p[@n]
-            | //tei:provenance[@n]
-            | //tei:support/tei:dimensions[@n]
-            | //tei:altIdentifier[@n]
-            | //tei:origPlace[@n]"
-          group-by="@n">
-          <xsl:call-template name="do_fragment_or_monument">
-            <xsl:with-param name="n" select="@n"/>
-          </xsl:call-template>
-        </xsl:for-each-group>
+        <xsl:for-each select="//tei:msDesc/tei:msPart">
+          <xsl:if
+            test="tei:support/tei:objectType
+            | tei:support/tei:material
+            | tei:support/tei:p
+            | tei:provenance
+            | tei:support/tei:dimensions
+            | tei:origPlace">
+            <xsl:apply-templates select="." mode="do_fragment_or_monument">
+              <xsl:with-param name="n" select="@n"/>
+            </xsl:apply-templates>
+          </xsl:if>
+        </xsl:for-each>
+
 
         <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
         <xsl:for-each select="//tei:div[@type='edition']">
@@ -579,6 +567,7 @@
       else $fullN"/>
     <xsl:variable name="tx_n" select="substring-after($fullN, '.')"/>
 
+    <xsl:variable name="ms_context" select="//tei:msPart[@n=$fullN] | //tei:msDesc[not($fullN)]"/>
 
     <div>
       <xsl:attribute name="class">
@@ -628,7 +617,7 @@
           </div>
 
           <div class="large-10 columns details">
-            <xsl:for-each select="//tei:layout[@n=$fullN or not(@n)]">
+            <xsl:for-each select="$ms_context/tei:physDesc//tei:layout[@n=$fullN or not(@n)]">
               <xsl:if test="@ana">
 
                 <!-- Faces code -->
@@ -671,7 +660,7 @@
             </xsl:for-each>
 
             <!-- Style of lettering (if exists) -->
-            <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg">
+            <xsl:if test="$ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:seg">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
@@ -681,7 +670,7 @@
                 <div class="large-9 columns">
                   <p>
                     <xsl:value-of
-                      select="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:seg[@xml:lang=$lang]"/>
+                      select="$ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:seg[@xml:lang=$lang]"/>
                     <xsl:text>&#160;</xsl:text>
                   </p>
                 </div>
@@ -689,7 +678,7 @@
             </xsl:if>
 
             <!-- Letterheights (if exists) -->
-            <xsl:if test="//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height">
+            <xsl:if test="$ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:height">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
@@ -700,9 +689,11 @@
                   <p>
                     <xsl:choose>
                       <xsl:when
-                        test="string(//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height)">
+                        test="string($ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
                         <xsl:value-of
-                          select="if ($lang='ru') then //tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height else translate(//tei:handDesc/tei:handNote[@n=$fullN or not(@n)]/tei:height, ',', '.')"
+                          select="if ($lang='ru') 
+                                  then $ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:height 
+                                  else translate($ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:height, ',', '.')"
                         />
                       </xsl:when>
                       <xsl:otherwise>
@@ -727,7 +718,7 @@
               <div class="large-9 columns">
                 <p>
                   <xsl:value-of
-                    select="//tei:msContents/tei:summary/tei:seg[@n = $fullN or not(@n)][@xml:lang=$lang]"/>
+                    select="$ms_context/tei:msContents/tei:summary/tei:seg[@xml:lang=$lang]"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
@@ -743,9 +734,9 @@
               <div class="large-9 columns">
                 <p>
                   <xsl:value-of
-                    select="upper-case(substring(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang],1,1))"/>
+                    select="upper-case(substring($ms_context/tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang=$lang],1,1))"/>
                   <xsl:value-of
-                    select="substring(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/tei:seg[@xml:lang=$lang],2)"/>
+                    select="substring($ms_context/tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang=$lang],2)"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
@@ -762,9 +753,9 @@
                 <p>
                   <xsl:choose>
                     <xsl:when
-                      test="$lang='ru' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
+                      test="$lang='ru' and $ms_context/tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:for-each
-                        select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
+                        select="tokenize(normalize-space($ms_context/tei:history/tei:origin/tei:origDate/@evidence),' ')">
                         <xsl:variable name="token">
                           <xsl:value-of select="translate(.,'_',' ')"/>
                         </xsl:variable>
@@ -784,13 +775,15 @@
                       <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
                     <xsl:when
-                      test="$lang='en' and //tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence">
+                      test="$lang='en' and $ms_context/tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:variable name="crit" select="/aggregation/crit"/>
                       <xsl:for-each
-                        select="tokenize(normalize-space(//tei:history/tei:origin/tei:origDate[@n = $fullN or not(@n)]/@evidence),' ')">
+                        select="tokenize(normalize-space($ms_context/tei:history/tei:origin/tei:origDate/@evidence),' ')">
                         <xsl:variable name="term"
-                          select="$crit//tei:label[lower-case(.)=lower-case(normalize-space(translate(current(),'_',' ')))]
-                      /following-sibling::tei:item[1]"/>
+                          select="$crit//tei:label[
+                                    lower-case(.)=lower-case(normalize-space(translate(current(),'_',' ')))
+                                  ]/following-sibling::tei:item[1]"/>
+
                         <xsl:choose>
                           <xsl:when test="position()=1">
                             <xsl:value-of select="upper-case(substring($term,1,1))"/>
