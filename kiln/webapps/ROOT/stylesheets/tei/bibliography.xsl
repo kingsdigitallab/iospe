@@ -39,26 +39,29 @@
 
 
   <xsl:template name="generateBibliography">
-    <xsl:for-each select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct">
-      <xsl:sort select="iospe:sort-bibliography(.)"/>
-      <xsl:sort
-        select="normalize-space(./*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
+    <ul class="no-bullet">
+      <xsl:for-each select="/aggregation/bib/tei:TEI//tei:listBibl/tei:biblStruct">
+        <xsl:sort select="iospe:sort-bibliography(.)"/>
+        <xsl:sort
+          select="normalize-space(./*[tei:imprint[tei:date]][1]/tei:imprint[tei:date][1]/tei:date[1])"/>
+        <li class="concordance_item">
+          <xsl:if test="/aggregation/concordance//doc/str[@name='bibl-target']/text() = @xml:id">
+            <p class="concordance_link right">
+              <a href="/conc/publications/{@xml:id}{$kiln:url-lang-suffix}.html" i18n:attr="title"
+                title="View Concordance">
+                <i class="fa fa-list fa-3x">
+                  <xsl:text> </xsl:text>
+                </i>
+              </a>
+            </p>
+          </xsl:if>
 
-      <xsl:if test="/aggregation/concordance//doc/str[@name='bibl-target']/text() = @xml:id">
-        <p class="concordance_link right">
-          <a href="/conc/publications/{@xml:id}{$kiln:url-lang-suffix}.html" i18n:attr="title"
-            title="View Concordance">
-            <i class="fa fa-list fa-3x">
-              <xsl:text> </xsl:text>
-            </i>
-          </a>
-        </p>
-      </xsl:if>
-
-      <p class="reference">
-        <xsl:apply-templates select="."/>
-      </p>
-    </xsl:for-each>
+          <p class="reference">
+            <xsl:apply-templates select="."/>
+          </p>
+        </li>
+      </xsl:for-each>
+    </ul>
   </xsl:template>
 
 
