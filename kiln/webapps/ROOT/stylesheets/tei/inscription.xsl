@@ -837,10 +837,10 @@
                           <em>
                             <i18n:text>Fragment </i18n:text>
                             <xsl:value-of select="@n"/>
-                            <xsl:text>. </xsl:text>
+                            <xsl:text>.&#160;</xsl:text>
                           </em>
                         </xsl:if>
-                        <xsl:apply-templates/>
+                        <xsl:apply-templates select="tei:bibl"/>
                         <xsl:if
                           test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
                           <i18n:text>Unpublished</i18n:text>
@@ -852,7 +852,7 @@
                     </xsl:when>
                     <xsl:when
                       test="//tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.)='')])]
-                      or //tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
+                            or //tei:div[@type='bibliography'][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
                       <xsl:apply-templates
                         select="//tei:div[@type='bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
                       />
@@ -1522,8 +1522,10 @@
         <xsl:text>, et al.</xsl:text>
       </xsl:if>
 
-      <xsl:text> </xsl:text>
-      <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
+      <xsl:if test="descendant::tei:imprint[1]/tei:date[1]">
+        <xsl:text> </xsl:text>
+        <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
+      </xsl:if>
     </xsl:for-each>
 
     <xsl:apply-templates/>
