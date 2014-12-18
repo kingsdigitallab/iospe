@@ -7,6 +7,7 @@
 
   <xsl:param name="lang" select="$lang"/>
   <xsl:param name="kiln:assets-path" select="$kiln:assets-path"/>
+  <xsl:param name="kiln:url-lang-suffix" select="$kiln:url-lang-suffix"/>
 
   <xsl:template match="/"/>
 
@@ -1114,7 +1115,8 @@
 
         <!-- Images -->
 
-        <xsl:if test="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]">
+        <xsl:if
+          test="//tei:facsimile//tei:graphic[contains(concat(' ', @n, ' '), $fullN) or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
               <h2>
@@ -1124,7 +1126,8 @@
               </h2>
             </div>
             <div class="large-10 columns details">
-              <xsl:apply-templates select="//tei:facsimile//tei:graphic[@n = $fullN or not(@n)]"
+              <xsl:apply-templates
+                select="//tei:facsimile//tei:graphic[contains(concat(' ', @n, ' '), $fullN) or not(@n)]"
                 mode="photograph"/>
 
             </div>
