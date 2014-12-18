@@ -228,7 +228,6 @@
       <!-- attested persons -->
 
       <xsl:when test="$index='persons'">
-        <xsl:call-template name="indices_dashes_info"/>
 
         <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
           <section>

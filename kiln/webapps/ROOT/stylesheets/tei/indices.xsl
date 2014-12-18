@@ -173,6 +173,10 @@
 
     <xsl:call-template name="indices_bracket_info"/>
 
+    <xsl:if test="$index='attested'">
+      <xsl:call-template name="indices_dashes_info"/>
+    </xsl:if>
+
 
 
     <!-- grouping is typically done on the field named after the index,
