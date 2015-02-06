@@ -331,7 +331,7 @@
 
         <div class="large-9 columns">
           <p>
-            <xsl:value-of
+            <xsl:apply-templates
               select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:placeName[@type='ancientFindspot']"/>
             <xsl:text>&#160;</xsl:text>
           </p>
@@ -348,7 +348,7 @@
 
         <div class="large-9 columns">
           <p>
-            <xsl:value-of
+            <xsl:apply-templates
               select="//tei:provenance[@type='found'][@n = $n or not(@n or $n)]/tei:seg[@xml:lang=$lang]/tei:rs[@type='context']"/>
             <xsl:text>&#160;</xsl:text>
           </p>
