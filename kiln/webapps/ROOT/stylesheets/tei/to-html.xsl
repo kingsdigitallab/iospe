@@ -20,6 +20,18 @@
       </div>
     </div>
   </xsl:template>
+  
+  <xsl:template match="tei:list[@rend='bulleted']">
+    <xsl:element name="ul">
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+  
+  <xsl:template match="tei:list[@rend='bulleted']/tei:item">
+    <xsl:element name="li">
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
 
   <xsl:template match="tei:list[@type='logo']//tei:ref[@target]">
     <a href="{@target}">
