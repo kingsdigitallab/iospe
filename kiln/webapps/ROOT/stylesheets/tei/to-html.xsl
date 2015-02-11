@@ -23,6 +23,8 @@
   
   <xsl:template match="tei:list[@rend='bulleted']">
     <xsl:element name="ul">
+      <xsl:attribute name="class" select="'bulleted'">
+      </xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
