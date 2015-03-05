@@ -1788,36 +1788,36 @@
       <!-- condition -->
       <xsl:when test="@reason='lost'">
         <xsl:call-template name="lost-opener"/>
-        <xsl:call-template name="cert-low"/>
         <xsl:apply-templates/>
+        <xsl:call-template name="cert-low"/>
         <xsl:call-template name="lost-closer"/>
       </xsl:when>
       <!-- condition -->
       <xsl:when test="@reason='omitted'">
         <xsl:text>&lt;</xsl:text>
-        <xsl:call-template name="cert-low"/>
         <xsl:apply-templates/>
+        <xsl:call-template name="cert-low"/>
         <xsl:text>&gt;</xsl:text>
       </xsl:when>
       <!-- condition -->
       <xsl:when test="@reason='subaudible'">
         <xsl:text>(</xsl:text>
-        <xsl:call-template name="cert-low"/>
         <xsl:apply-templates/>
+        <xsl:call-template name="cert-low"/>
         <xsl:text>)</xsl:text>
       </xsl:when>
       <!-- condition -->
       <xsl:when test="@reason='abbreviation'">
         <xsl:text>(</xsl:text>
-        <xsl:call-template name="cert-low"/>
         <xsl:apply-templates/>
+        <xsl:call-template name="cert-low"/>
         <xsl:text>)</xsl:text>
       </xsl:when>
       <!-- condition -->
       <xsl:when test="@reason='explanation'">
         <xsl:text>(i.e. </xsl:text>
-        <xsl:call-template name="cert-low"/>
         <xsl:apply-templates/>
+        <xsl:call-template name="cert-low"/>
         <xsl:text>)</xsl:text>
       </xsl:when>
       <!-- default -->
