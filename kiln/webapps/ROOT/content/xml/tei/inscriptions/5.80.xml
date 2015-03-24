@@ -100,6 +100,7 @@
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-03-24" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-04-23" who="NG">lGreek lemmata corrected</change>
          <change when="2012-10-10" who="AL">small corrections in Russian text</change>
@@ -131,10 +132,9 @@
             <listBibl>
                <bibl n="L1"><!--IOSPE I--><ptr target="bib:IOSPE"/> <citedRange>I 229</citedRange></bibl> 
                <bibl n="1.1"><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>496</citedRange></bibl>
-               <bibl n="2"><!--Виноградов 2010a--><ptr target="bib:b0399"/> 90-92, № <citedRange>а</citedRange></bibl> 
+               <bibl n="2"><!--Виноградов 2010a--><ptr target="bib:b0399"/>, 90-92, № <citedRange>а</citedRange></bibl> 
             </listBibl>
          </div>
-         
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                <lb n="1"/><supplied cert="low" reason="lost"><w lemma="ἐπί">Ἐπὶ</w>
@@ -143,7 +143,7 @@
                <persName type="ruler" key="constantius2"><name nymRef="Φλάβιος">Φλαβίου</name>
                <lb n="2"/><supplied reason="lost"><name nymRef=" Ἰούλιος">Ἰουλίου</name></supplied> 
                   <name nymRef="Κωνστάντιος"><supplied reason="lost">Κωνσ</supplied>ταντί<unclear>ο</unclear><supplied reason="lost">υ</supplied></name></persName>
-               <lb n="3"/><w lemma="ὁ">ὁ</w> <w lemma="δεῖνα">δεῖνα</w>
+               <lb n="3"/><supplied reason="lost"><w lemma="ὁ">ὁ</w> <w lemma="δεῖνα">δεῖνα</w></supplied>
                <w lemma="ἑαυτοῦ"><supplied reason="lost">ἑ</supplied>αυτῷ</w>
                <lb n="4"/><supplied reason="lost" cert="low"><w lemma="οὗτος">τοῦτο</w> <w lemma="ὁ">τὸ</w></supplied>
                <w lemma="μεμόριον">μημόριν</w>
@@ -153,10 +153,10 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><lem>[Ἐπὶ βασιλείας (vel ὑπατείας)]</lem><rdg source="bib:IOSPE bib:IOSPE2"><note>om.</note></rdg></app>
-               <app loc="2"><rdg source="bib:IOSPE bib:IOSPE2">[Κωνσ]ταντίν[ου]</rdg></app>
-               <app loc="3"><rdg source="bib:IOSPE bib:IOSPE2">[...] αὐτῷ</rdg></app>
-               <app loc="4"><lem>τοῦτο τὸ</lem><rdg source="bib:IOSPE bib:IOSPE2"><note>om.</note></rdg></app>
+               <app loc="1"><lem>[Ἐπὶ βασιλείας (vel ὑπατείας)]</lem><rdg source="bib:IOSPE"><note>om.</note></rdg></app>
+               <app loc="2"><rdg source="bib:IOSPE">[Κωνσ]ταντίν[ου]</rdg></app>
+               <app loc="3"><rdg source="bib:IOSPE">[...] αὐτῷ</rdg></app>
+               <app loc="4"><lem>τοῦτο τὸ</lem><rdg source="bib:IOSPE"><note>om.</note></rdg></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
