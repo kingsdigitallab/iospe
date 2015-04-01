@@ -101,6 +101,7 @@
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
          <change when="2013-04-17" who="AG">comments updated</change>
          <change when="2012-08-29" who="AFS">added Greek lemmata</change>
@@ -123,7 +124,7 @@
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!-- Сборник--><ptr target="bib:b0132"/>,  <citedRange>43a-z</citedRange></bibl>
+               <bibl n="L1"><!-- Сборник--><ptr target="bib:b0132"/>, 124–125, № <citedRange>43a-z</citedRange></bibl>
                <bibl n="1.1"><!-- Латышев 1897--><ptr target="bib:b0133"/>, <citedRange>152</citedRange></bibl>
                 <bibl n="2"><!--Виноградов 2004--><ptr target="bib:b0042"/>, <citedRange>129</citedRange></bibl>
             </listBibl>
@@ -131,7 +132,7 @@
          <div type="apparatus">
              <listApp>
                <app loc="1"><rdg source="bib:b0132 bib:b0133">Ἐκοιμήθη</rdg> </app>
-               <app loc="1-2"><lem>[ἡ ... δεῖνα</lem><rdg><note>om. alii</note></rdg></app>
+                <app loc="1-2"><lem>[ἡ ... δεῖνα</lem><rdg><note>om. Latyshev, Kulakovsky apud Latyshev</note></rdg></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -151,7 +152,9 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                <lb n="1"/><w lemma="κοιμάω">Ἐκοιμήθη</w> <supplied reason="lost"><w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w></supplied>
-               <lb n="2"/><w lemma="ὁ">τοῦ</w> <supplied reason="lost"><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> <w lemma="ὁ">ἡ</w> <w lemma="δεῖνα">δεῖνα</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> 
+               <supplied reason="lost"><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+                  <w lemma="ὁ">ἡ</w> <w lemma="δεῖνα">δεῖνα</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>.
             </ab>
          </div>
       </body>

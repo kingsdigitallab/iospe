@@ -101,6 +101,7 @@
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
          <change when="2012-09-26" who="AG">correction in the commentary</change>
          <change when="2012-08-29" who="AFS">added Greek lemmata</change>
@@ -126,10 +127,12 @@
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!--Waxel 1803--><ptr target="bib:b0378"/>, 11. Tab, № <citedRange>23</citedRange></bibl>
-               <bibl n="1.1"><!--CIG--><ptr target="bib:CIG"/>  <citedRange> IV, 8757</citedRange> Tab XIV</bibl>
-               <bibl n="2"><!--Сборник--><ptr target="bib:b0132"/>,  <citedRange>32</citedRange></bibl>
-               <bibl n="2.1"><!--Латышев 1898a--><ptr target="bib:b0134"/>, <citedRange>228–229</citedRange></bibl>
+               <!--<bibl n="L1"><!-\-Waxel 1803-\-><ptr target="bib:b0378"/>, 11. Tab, № <citedRange>23</citedRange></bibl>-->
+               <bibl n="L1"><!--CIG--><ptr target="bib:CIG"/> <citedRange> IV, 8757</citedRange>, tab XIV</bibl>
+               <bibl n="2"><!--Bertier 1886--><ptr target="bib:b0027"/>, <citedRange>222</citedRange></bibl>
+               <bibl n="2.1"><!--Сборник--><ptr target="bib:b0132"/>, 37–40, № <citedRange>32</citedRange></bibl>
+               <bibl n="2.2"><!--Латышев 1898a--><ptr target="bib:b0134"/>, <citedRange>228–229</citedRange></bibl>
+               
             </listBibl>
          </div>
          
@@ -142,8 +145,8 @@
             <div type="apparatus">
              <listApp>
                 <app><rdg source="bib:CIG">[Κ(ύρι)ε μνησθ]ῇς</rdg> 
-                  <rdg source="bib:CIG">δούλου θ(εο)ῦ</rdg> <rdg source="bib:CIG">Σο..ηκου</rdg> <rdg source="bib:b0027">ΣΟΚΡΙΤΙΚΟΥ <note>Gavriil</note></rdg> 
-                  <rdg source="bib:b0132">Σο[τ]ικοῦ (?)</rdg> <rdg source="bib:b0134">Σοτιρικοῦ (?)</rdg> <rdg source="bib:CIG">τι s.l.; [κ(αὶ) τ]ῆ[ς] σηνβήου</rdg> <rdg>ἔτ(ους) ςψπ´</rdg></app>
+                   <rdg source="bib:CIG">δούλου θ(εο)ῦ</rdg> <rdg source="bib:CIG">Σο..ηκου</rdg> <rdg source="bib:b0027">ΣΟΚΡΙΤΙΚΟΥ <note>Gavriil apud</note></rdg> 
+                  <rdg source="bib:b0132">Σο[τ]ικοῦ (?)</rdg> <rdg source="bib:b0134">Σοτιρικοῦ (?)</rdg> <rdg source="bib:CIG">τι s.l.; [κ(αὶ) τ]ῆ[ς] σηνβήου</rdg> <rdg source="bib:CIG">ἔτ(ους) ςψπ´</rdg></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
