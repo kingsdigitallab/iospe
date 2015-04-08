@@ -102,6 +102,7 @@
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
        <revisionDesc>
+          <change when="2015-04-08" who="CB">Andrey's corrections</change>
          <change when="2013-10-24" who="TW">Added image code</change>
          <change when="2012-09-24" who="AG">tags in the inscription corrected, key added</change>
          <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
@@ -127,7 +128,7 @@
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>,  <citedRange>47</citedRange></bibl>
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 56–57, № <citedRange>47</citedRange></bibl>
                <bibl n="1.1"><!--Латышев 1901a--><ptr target="bib:b0138"/>,   <citedRange>76</citedRange></bibl>
                <bibl n="2"><!--Малицкий 1933--><ptr target="bib:b0163"/>, 15–19, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>3–4</citedRange></bibl>
                <bibl n="3"><!--Виноградов 2005а--><ptr target="bib:b0043"/>, <citedRange>434–436</citedRange></bibl>
@@ -178,7 +179,7 @@
                            reason="illegible" quantity="1" unit="character"/><orig>ου</orig><gap
                               reason="lost" extent="unknown" unit="character"/>
                <lb n="8"/><w lemma="ἐπί">ἐ<unclear>π</unclear>ὶ</w> <date><w lemma="ἔτος">ἔτους</w>
-                     <num value="6811">ςω<supplied reason="lost" cert="low">ι</supplied>α</num>,</date>
+                     <num value="6811">ςψϞα</num>,</date>
                      <gap reason="illegible" extent="unknown" unit="character"/>
                      <orig>ε</orig><gap reason="lost" quantity="3" unit="character"/><orig>σι</orig><gap
                         reason="illegible" extent="unknown" unit="character"/><orig>οσ</orig>.
@@ -191,7 +192,7 @@
          <div type="apparatus">
              <listApp>
                 <app loc="1"><rdg source="bib:b0132 bib:b0138 bib:b0163">....ΘΕ....Α.ΝΘ..ΑΝ ὑ</rdg> <rdg source="bib:b0043">υ´ (?)</rdg></app>
-               <app loc="1"><rdg source="bib:b0163">...καν? <note>vel</note> ...ψαν ? <note>vel</note> ἐν Πόηκαν ?</rdg></app>
+               <app loc="1"><rdg source="bib:b0163">...καν? <note>resp.</note> ...ψαν ? <note>resp.</note> ἐν Πόηκαν ?</rdg></app>
                <app loc="1"><rdg source="bib:b0132 bib:b0138">ἰσ-</rdg></app>
                <app loc="2"><rdg source="bib:b0132 bib:b0138">......ΚΑΒΑ.........</rdg> <rdg source="bib:b0163">.... η καβαλαρηα ....</rdg> <rdg source="bib:b0043">καβαλαρίων</rdg></app> 
                <app loc="2"><rdg source="bib:b0043">ἔπειραν</rdg></app>
@@ -203,7 +204,7 @@
                 <app loc="4"><rdg source="bib:b0132 bib:b0138">μεγάλους ?</rdg></app>
                 <app loc="4"><rdg source="bib:b0132">ΟΡΗ.ΟΛΥ...</rdg><rdg source="bib:b0138"><note>corr.</note></rdg></app> 
                <app loc="4"><rdg source="bib:b0132 bib:b0138">Νεώρου</rdg><rdg source="bib:b0163">Μηδηους</rdg></app>
-               <app loc="5"><lem>κ(αὶ) τέο[ς]</lem><rdg><note>om. alii</note></rdg></app>
+                <app loc="5"><rdg source="bib:b0043">κ(αὶ) τέο[ς]</rdg><rdg><note>om. alii</note></rdg></app>
                 <app loc="5-6"><rdg source="bib:b0132 bib:b0138">ΚΑΚ...ΙΣΟΑΝ</rdg> <rdg source="bib:b0043">καὶ ... ἤκουσεν</rdg></app>
                 <app loc="6"><rdg source="bib:b0132 bib:b0138">[κ]ατέ[κ]οψαν ? </rdg></app>
                 <app loc="6"><rdg source="bib:b0132 bib:b0138">ΕΟ.</rdg></app> 
@@ -211,7 +212,7 @@
                <app loc="6"><rdg source="bib:b0163">μερης</rdg></app>
                <app loc="6"><rdg source="bib:b0163">κὲ ?</rdg></app>
                 <app loc="7"><rdg source="bib:b0132 bib:b0138"> ............... αὐτὸν ...........</rdg> <rdg source="bib:b0163">...</rdg></app>
-               <app loc="8"><lem>ἐπὶ (?)</lem><rdg><note>om. alii</note></rdg></app>
+               <app loc="8"><rdg source="bib:b0043">ἐπὶ (?)</rdg><note>om. alii</note></app>
                 <app loc="8"><rdg source="bib:b0132 bib:b0138 bib:b0163">ςω.. ?</rdg> <rdg source="bib:b0043">ςωι(?)α</rdg> <rdg source="bib:b0184">ςωθ(?)α</rdg></app>
                 <app loc="8"><rdg source="bib:b0132 bib:b0138">........μος κὲ φανερὰς ..</rdg></app>
                 <app loc="9"><rdg source="bib:b0132 bib:b0138">... θ(εο)ῦ ..............ΤΟΡΕΟ..</rdg> <rdg source="bib:b0163">...</rdg></app>
