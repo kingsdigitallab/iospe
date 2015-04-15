@@ -15,17 +15,17 @@
     <map:pipeline>
       <!-- Redirect search index to basic search -->
       <map:match pattern="index.html">
-        <map:redirect-to uri="en/200/1800/"/>
+        <map:redirect-to uri="en/200/1800/?{request:queryString}"/>
       </map:match>
       <map:match pattern="index-ru.html">
-        <map:redirect-to uri="ru/200/1800/"/>
+        <map:redirect-to uri="ru/200/1800/?{request:queryString}"/>
       </map:match>
 
       <map:match pattern="en/">
-        <map:redirect-to uri="200/1800/"/>
+        <map:redirect-to uri="200/1800/?{request:queryString}"/>
       </map:match>
       <map:match pattern="ru/">
-        <map:redirect-to uri="200/1800/"/>
+        <map:redirect-to uri="200/1800/?{request:queryString}"/>
       </map:match>
 
       <map:match pattern="*/*/*/">

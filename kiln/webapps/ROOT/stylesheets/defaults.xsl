@@ -89,12 +89,23 @@
     <li class="has-form">
       <form id="jumpForm">
         <div class="row collapse">
-          <div class="small-8 columns">
+          <div class="small-12 columns">
             <input id="numTxt" name="numTxt" type="text" placeholder="Inscription number"
               i18n:attr="placeholder"/>
           </div>
-          <div class="small-4 columns">
-            <input href="#" type="submit" value="Go" i18n:attr="value"/>
+        </div>
+      </form>
+    </li>
+  </xsl:template>
+
+  <xsl:template name="simple-search">
+    <!-- searchform -->
+    <li class="has-form">
+      <form id="simpleSearchForm" method='get' action="{concat('/search/', $lang, '/')}">
+        <div class="row collapse">
+          <div class="small-12 columns">
+            <input id="query" name="query" type="text" placeholder="Search"
+              i18n:attr="placeholder"/>
           </div>
         </div>
       </form>
