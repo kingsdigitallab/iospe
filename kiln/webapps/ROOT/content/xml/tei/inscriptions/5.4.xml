@@ -98,6 +98,7 @@
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-16" who="CB">Andrey's corrections</change>
          <change when="2013-07-19" who="GB">tagged inside app</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
          <change when="2012-07-11" who="AG">small corrections</change>
@@ -122,14 +123,14 @@
       <body>
          <div type="bibliography">
             <listBibl>
-               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>,  <citedRange>5</citedRange></bibl> 
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 5–6, № <citedRange>5</citedRange></bibl> 
             </listBibl>  
          </div>
 
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                 <lb n="1"/><persName type="attested" ref="#person4"><name nymRef="Νικόλαος">Νικόλα<supplied reason="lost">ος</supplied></name>
-                <lb n="2"/> <w lemma="υἱός"><expan><abbr>γίο</abbr><ex cert="low">ς</ex></expan></w>
+                <lb n="2"/> <w lemma="υἱός"><expan><abbr>γιὸ</abbr><ex cert="low">ς</ex></expan></w>
                    <w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person5"><name nymRef="Βάσιλος">Βασ
                 <lb n="3" break="no"/>ίλο<supplied reason="lost">υ</supplied></name></persName></persName>
                 <lb n="4"/><orig>Ε</orig>
@@ -138,7 +139,6 @@
          
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg source="bib:b0132">Νικόλα<supplied reason="lost">ος</supplied></rdg></app>
                <app loc="2-3"><rdg source="bib:b0132">ΠΟΥΟΥΒΑΕΙΔΟ</rdg></app>
             </listApp>
          </div>
