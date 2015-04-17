@@ -86,7 +86,7 @@
 
   <xsl:template name="jump-to-inscription">
     <!-- searchform -->
-    <li class="has-form">
+    <li class="has-form jump-form-container">
       <form id="jumpForm">
         <div class="row collapse">
           <div class="small-12 columns">
