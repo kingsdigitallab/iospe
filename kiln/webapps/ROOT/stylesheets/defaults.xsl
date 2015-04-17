@@ -101,11 +101,11 @@
   <xsl:template name="simple-search">
     <!-- searchform -->
     <li class="has-form">
-      <form id="simpleSearchForm" method='get' action="{concat('/search/', $lang, '/')}">
+      <form id="simpleSearchForm" method="get" action="{concat('/search/', $lang, '/')}">
         <div class="row collapse">
           <div class="small-12 columns">
-            <input id="query" name="query" type="text" placeholder="Search"
-              i18n:attr="placeholder"/>
+            <input id="query" name="query" type="text" placeholder="Search" i18n:attr="placeholder"/>
+            <input id="top-bar-search-dummy" name="top-bar-search-dummy" type="hidden" value="1"/>
           </div>
         </div>
       </form>

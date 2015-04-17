@@ -111,17 +111,6 @@ define([], function() {
 
     });
 
-  $('#simpleSearchForm').on('submit',
-    function(e) {
-      // Rewrite query to conform to the format of the faceted kiln search API
-      e.preventDefault();
-      var query_value = $('#query').val(),
-        action = $(this).attr('action'),
-        query_string = '?fq=text:' + window.encodeURIComponent(query_value);
-
-      location.href = action + query_string;
-    });
-
   $('.relation_link').on('click', function(e) {
     e.preventDefault();
     console.log($(this).attr('href'));
