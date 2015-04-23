@@ -16,7 +16,8 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country/>
+               <msIdentifier>
+                   <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Национальный заповедник "Херсонес Таврический"</repository>
                      <idno>37068</idno>
@@ -26,14 +27,6 @@
                      <idno>37068</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
-                  <summary corresp="document-search.xml#doc1 document-search.xml#doc4">
-                     <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
-                     <seg xml:lang="en" n="1">Demonstrative.</seg>
-                     <seg xml:lang="ru" n="2">Строительная надпись.</seg>
-                     <seg xml:lang="en" n="2">Building inscription.</seg>
-                  </summary>
-               </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
@@ -53,71 +46,99 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
-                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">По всей поверхности, кроме левого верхнего угла.</seg>
-                           <seg xml:lang="en">On the entire front surface, except the top left corner.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы неравной высоты, строки неравномерные.
-                           Альфа с петлей, дельта, лямбда и сигма минускульные, эта с прогнутыми внутрь вертикалями, ню И-образное, пи с удлиненной перекладиной.
-                           Лигатуры омикрон-ипсилон, пи-ро; нерегулярные и ошибочные ударения.</seg>
-                        <seg xml:lang="en">Lapidary. Letters are of varying heights; lines are uneven. Alpha with a loop; delta, minuscule lambda and sigma;
-                           eta with inward bent verticals; И-shaped nu; pi with extended horizontal. Ligatures: omicron-upsilon, pi-rho; irregular and faulty accents.</seg>
-                        <height unit="cm">1,5.</height>
-                     </handNote>
-                     <handNote n="2">
-                        <height unit="cm">1,5–5,0.</height>
-                     </handNote>
-                  </handDesc>
                </physDesc>
-               <history>
-                  <origin>
-                     <origPlace ref="origPlace.xml#p003">
-                        <seg xml:lang="ru">Херсон.</seg>
-                        <seg xml:lang="en">Cherson.</seg>
-                     </origPlace>
-                     <origDate n="1" notBefore="0701" notAfter="0900" precision="medium" evidence="палеография">
-                        <seg xml:lang="ru">VIII–IX вв.</seg>
-                        <seg xml:lang="en">VIII–IXth centuries C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="0701" notAfter="0900" precision="medium" evidence="палеография">
-                        <seg xml:lang="ru">VIII–IX вв.</seg>
-                        <seg xml:lang="en">VIII–IXth centuries C.E.</seg>
-                     </origDate>
-                  </origin>
-                  <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
-                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
-                  </provenance>
-                  <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">1983 г., раскопки С.Г. Pыжова.</rs>
-                        <rs type="context">Северный район, IX кв., II продольная ул., забутовка стены.</rs>
-                     </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">1983, excavations of S.G. Ryzhov.</rs>
-                        <rs type="context">North sector, Block IX, 2nd longitudinal street, wall infill.</rs>
-                     </seg>
-                  </provenance>
-                  <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь, Крым.</seg>
-                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
-                  </provenance>
-               </history>
+                <history>
+                    <origin>
+                        <origPlace ref="origPlace.xml#p003">
+                            <seg xml:lang="ru">Херсон.</seg>
+                            <seg xml:lang="en">Cherson.</seg>
+                        </origPlace>
+                        <origDate notBefore="0701" notAfter="0900" precision="medium" evidence="палеография">
+                            <seg xml:lang="ru">VIII–IX вв.</seg>
+                            <seg xml:lang="en">VIII–IXth centuries C.E.</seg>
+                        </origDate>
+                </origin>
+                    <provenance type="observed" subtype="autopsy">
+                        <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                        <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                    </provenance>
+                    <provenance type="found">
+                        <seg xml:lang="ru">
+                            <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                            <rs type="circumstances">1983 г., раскопки С.Г. Pыжова.</rs>
+                            <rs type="context">Северный район, IX кв., II продольная ул., забутовка стены.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                            <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                            <rs type="circumstances">1983, excavations of S.G. Ryzhov.</rs>
+                            <rs type="context">North sector, Block IX, 2nd longitudinal street, wall infill.</rs>
+                        </seg>
+                    </provenance>
+                    <provenance type="observed">
+                        <seg xml:lang="ru">Севастополь, Крым.</seg>
+                        <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                    </provenance>
+                </history>
+                <msPart n="1">
+                    <altIdentifier>
+                        <idno/>
+                    </altIdentifier>
+                    <msContents>
+                        <summary corresp="document-search.xml#doc1 document-search.xml#doc4">
+                            <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
+                            <seg xml:lang="en" n="1">Demonstrative.</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc><objectDesc>
+                        <layoutDesc>
+                            <layout ana="f1" n="1">
+                                <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                                <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                            </layout>
+                        </layoutDesc>
+                    </objectDesc>
+                        <handDesc>
+                            <handNote n="1">
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы неравной высоты, строки неравномерные.
+                                    Альфа с петлей, дельта, лямбда и сигма минускульные, эта с прогнутыми внутрь вертикалями, ню И-образное, пи с удлиненной перекладиной.
+                                    Лигатуры омикрон-ипсилон, пи-ро; нерегулярные и ошибочные ударения.</seg>
+                                <seg xml:lang="en">Lapidary. Letters are of varying heights; lines are uneven. Alpha with a loop; delta, minuscule lambda and sigma;
+                                    eta with inward bent verticals; И-shaped nu; pi with extended horizontal. Ligatures: omicron-upsilon, pi-rho; irregular and faulty accents.</seg>
+                                <height unit="cm">1,5.</height>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                </msPart>
+                       <msPart n="2">
+                        <altIdentifier>
+                            <idno/>
+                        </altIdentifier>
+                        <msContents>
+                            <summary corresp="document-search.xml#doc4">
+                                <seg xml:lang="ru" n="2">Строительная надпись.</seg>
+                                <seg xml:lang="en" n="2">Building inscription.</seg>
+                            </summary>
+                        </msContents>
+                           <physDesc><objectDesc><layoutDesc>
+                               <layout ana="f1" n="2">
+                                   <seg xml:lang="ru">По всей поверхности, кроме левого верхнего угла.</seg>
+                                   <seg xml:lang="en">On the entire front surface, except the top left corner.</seg>
+                               </layout>
+                               </layoutDesc>
+                           </objectDesc>
+                               <handDesc>
+                                   <handNote n="2">
+                                       <height unit="cm">1,5–5,0.</height>
+                                   </handNote>
+                               </handDesc>
+                        </physDesc>
+                       </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+          <change when="2015-04-23" who="CB">corrected metadata in textparts</change>
           <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
          <change when="2012-08-16" who="AG">Greek lemmata added</change>
          <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
