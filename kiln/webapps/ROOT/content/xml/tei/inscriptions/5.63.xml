@@ -47,30 +47,7 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">На верхнем рукаве креста.</seg>
-                           <seg xml:lang="en">On the top arm of the cross.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">На перекрестье, крестообразно.</seg>
-                           <seg xml:lang="en">On the intersection, crosswise.</seg>
-                        </layout>
-                     </layoutDesc>
-                  </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклоненной влево перекладиной, эпсилон и
-                           сигма прямоугольные, мю с укороченной серединой, омикрон круглый и ромбовидный, удлиненное ро.</seg>
-                        <seg xml:lang="en">Lapidary. Alpha with crossbar slanting left, rectangular epsilon and sigma, mu with short central hastae, round and diamond omicron,
-                        elongated rho.</seg>
-                        <height unit="cm">1,0–1,3.</height>
-                     </handNote>
-                     <handNote n="2">
-                        <height unit="cm">3,7–5,0.</height>
-                     </handNote>
-                  </handDesc>
-               </physDesc>
+                  </objectDesc></physDesc>
                <history>
                   <origin>
                      <origPlace ref="origPlace.xml#p003">
@@ -107,10 +84,81 @@
                      <seg xml:lang="en">Sevastopol, Crimea.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru">Надгробная надпись.</seg>
+                        <seg xml:lang="en">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1">
+                              <seg xml:lang="ru">На верхнем рукаве креста.</seg>
+                              <seg xml:lang="en">On the top arm of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклоненной влево перекладиной, эпсилон и
+                              сигма прямоугольные, мю с укороченной серединой, омикрон круглый и ромбовидный, удлиненное ро.</seg>
+                           <seg xml:lang="en">Lapidary. Alpha with crossbar slanting left, rectangular epsilon and sigma, mu with short central hastae, round and diamond omicron,
+                              elongated rho.</seg>
+                           <height unit="cm">1,0–1,3.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="0301" notAfter="0500" precision="medium" evidence="палеография">
+                           <seg xml:lang="ru">IV–V вв.</seg>
+                           <seg xml:lang="en">IV–Vth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru">Демонстративная надпись.</seg>
+                        <seg xml:lang="en">Acclamation.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1">
+                              <seg xml:lang="ru">На перекрестье, крестообразно.</seg>
+                              <seg xml:lang="en">On the intersection, crosswise.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <height unit="cm">3,7–5,0.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="0301" notAfter="0500" precision="medium" evidence="палеография">
+                           <seg xml:lang="ru">IV–V вв.</seg>
+                           <seg xml:lang="en">IV–Vth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
        <revisionDesc>
+          <change when="2015-04-24" who="CB">Textparts</change>
           <change when="2015-03-20" who="CB">Andrey's corrections</change>
          <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-03-13" who="NG">iminor corrections 9in Greek lemmata</change>

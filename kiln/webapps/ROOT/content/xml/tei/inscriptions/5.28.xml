@@ -16,17 +16,10 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country/>
-                  <altIdentifier xml:lang="ru" n="1">
-                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
-                     <idno>35117</idno>
-                  </altIdentifier>
-                  <altIdentifier xml:lang="en">
-                     <repository>National Preserve of Tauric Chersonesos</repository>
-                     <idno>35117</idno>
-                  </altIdentifier>
+               <msIdentifier>
+                  <idno/>
                </msIdentifier>
-               <msContents>
+                     <msContents>
                   <summary corresp="document-search.xml#doc5">
                      <seg xml:lang="ru">Посвятительная надпись.</seg>
                      <seg xml:lang="en">Dedication.</seg>
@@ -44,24 +37,8 @@
                               Разбит на части, сохранилось 2 фрагмента; фр. 1 обломан справа и снизу, сколот левый нижний угол; фр. 2 обломан со всех сторон, кроме верхней.</p>
                            <p xml:lang="en">Cornice with mouldings. Two dowel holes on the back. The front is polished. Broken into pieces, of which two fragments survive.
                               Fragment 1 is damaged on the top and right side, and the bottom left corner is chipped off; Fragment 2 is damaged on all sides except the top.</p>
-                           <dimensions n="1">
-                              <height>9,5</height>
-                              <width>31,0</width>
-                              <depth>13,5</depth>
-                           </dimensions>
-                           <dimensions n="2">
-                              <height>6,0</height>
-                              <width>18,0</width>
-                              <depth>13,5</depth>
-                           </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">На лицевой стороне.</seg>
-                           <seg xml:lang="en">On the front.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
@@ -87,7 +64,38 @@
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
                      <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
-                  </provenance><provenance type="found" n="1">
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            <msPart n="1">
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>35117</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35117</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <dimensions>
+                              <height>9,5</height>
+                              <width>31,0</width>
+                              <depth>13,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+               <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">1893 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
@@ -99,7 +107,25 @@
                         <rs type="context">Church 22 ("Northern basilica").</rs>
                      </seg>
                   </provenance>
-                  <provenance type="found" n="2">
+               </history>
+            </msPart>
+            <msPart n="2">
+               <msIdentifier></msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <dimensions>
+                              <height>6,0</height>
+                              <width>18,0</width>
+                              <depth>13,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Неизвестны.</rs>
@@ -111,15 +137,13 @@
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
-                  <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь, Крым.</seg>
-                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
-                  </provenance>
                </history>
-            </msDesc>
+            </msPart>
+         </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-24" who="CB">Textparts</change>
          <change when="2015-03-20" who="CB">Andrey's corrections</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
          <change when="2012-05-16" who="AG">tags corrected</change>

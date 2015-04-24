@@ -26,14 +26,6 @@
                      <idno>Х–1039</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
-                  <summary corresp="document-search.xml#doc4 document-search.xml#doc3">
-                     <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
-                     <seg xml:lang="en" n="1">Demonstrative.</seg>
-                     <seg xml:lang="ru" n="2">Инвокативная надпись.</seg>
-                     <seg xml:lang="en" n="2">Invocative inscription.</seg>
-                  </summary>
-               </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
@@ -53,26 +45,7 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">Между фигур рельефа.</seg>
-                           <seg xml:lang="en">Between the figures on the relief.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">По нижнему полю рамки.</seg>
-                           <seg xml:lang="en">On the frame below the relief.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы разной высоты. Альфа с ломаной перекладиной,
-                           бета с нижним штрихом, каппа с удлиненной вертикалью, ипсилон У-образный.</seg>
-                        <seg xml:lang="en">Lapidary. Letters are of varying heights. Alpha with broken crossbar; beta with bottom underline; kappa with extended vertical;
-                           У-shaped upsilon.</seg>
-                        <height unit="cm">1,2–6.</height>
-                     </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -80,14 +53,6 @@
                         <seg xml:lang="ru">Херсон.</seg>
                         <seg xml:lang="en">Cherson.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="0801" notAfter="1000" precision="medium" evidence="палеография орфография">
-                        <seg xml:lang="ru">IX–X вв.</seg>
-                        <seg xml:lang="en">IX–Xth centuries C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="0801" notAfter="1000" precision="medium" evidence="палеография орфография">
-                        <seg xml:lang="ru">IX–X вв.</seg>
-                        <seg xml:lang="en">IX–Xth centuries C.E.</seg>
-                     </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru"><date when="2001-10">Октябрь 2001</date>.</seg>
@@ -110,9 +75,69 @@
                      <seg xml:lang="en">Saint-Petersburg, Russia.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier>
+                     <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc3">
+                        <seg xml:lang="ru">Демонстративная надпись.</seg>
+                        <seg xml:lang="en">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1">
+                              <seg xml:lang="ru">Между фигур рельефа.</seg>
+                              <seg xml:lang="en">Between the figures on the relief.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы разной высоты. Альфа с ломаной перекладиной,
+                              бета с нижним штрихом, каппа с удлиненной вертикалью, ипсилон У-образный.</seg>
+                           <seg xml:lang="en">Lapidary. Letters are of varying heights. Alpha with broken crossbar; beta with bottom underline; kappa with extended vertical;
+                              У-shaped upsilon.</seg>
+                           <height unit="cm">1,2–6.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                     <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc3">
+                        <seg xml:lang="ru">Инвокативная надпись.</seg>
+                        <seg xml:lang="en">Invocative inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1">
+                              <seg xml:lang="ru">По нижнему полю рамки.</seg>
+                              <seg xml:lang="en">On the frame below the relief.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="0801" notAfter="1000" precision="medium" evidence="палеография орфография">
+                           <seg xml:lang="ru">IX–X вв.</seg>
+                           <seg xml:lang="en">IX–Xth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc></fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-24" who="CB">Textparts</change>
          <change when="2015-03-20" who="CB">Andrey's corrections</change>
          <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2013-02-20" who="NG">corrections in Greek lemata</change>
