@@ -597,7 +597,7 @@
                     </xsl:if>
                   </xsl:attribute>
 
-                  <i18n:text>Text</i18n:text>
+                  <i18n:text>Inscribed field</i18n:text>
                   <xsl:text>&#160;</xsl:text>
                   <xsl:choose>
                     <xsl:when test="contains($fullN, '.')">
@@ -611,7 +611,7 @@
               </xsl:when>
               <xsl:otherwise>
                 <h2>
-                  <i18n:text>Text</i18n:text>
+                  <i18n:text>Inscribed field</i18n:text>
                 </h2>
               </xsl:otherwise>
             </xsl:choose>
@@ -706,8 +706,47 @@
                 </div>
               </div>
             </xsl:if>
-
             <br/>
+          
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="large-2 columns">
+            <xsl:choose>
+              <xsl:when test="self::tei:div[@type='textpart']/@n">
+                <xsl:attribute name="class">
+                  <xsl:text>large-2 columns wrap</xsl:text>
+                </xsl:attribute>
+                <h2>
+                  <xsl:attribute name="class">
+                    <xsl:text>part</xsl:text>
+                    <xsl:if test="$nestedTitles">
+                      <xsl:text> subpart</xsl:text>
+                    </xsl:if>
+                  </xsl:attribute>
+                  
+                  <i18n:text>Text</i18n:text>
+                  <xsl:text>&#160;</xsl:text>
+                  <xsl:choose>
+                    <xsl:when test="contains($fullN, '.')">
+                      <xsl:value-of select="substring-after($fullN, '.')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:value-of select="@n"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </h2>
+              </xsl:when>
+              <xsl:otherwise>
+                <h2>
+                  <i18n:text>Text</i18n:text>
+                </h2>
+              </xsl:otherwise>
+            </xsl:choose>
+          </div>
+          
+          <div class="large-10 columns details">
 
             <!-- Category -->
             <div class="row">
