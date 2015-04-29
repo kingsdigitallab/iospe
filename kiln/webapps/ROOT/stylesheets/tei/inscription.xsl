@@ -597,7 +597,7 @@
                     </xsl:if>
                   </xsl:attribute>
 
-                  <i18n:text>Inscribed field</i18n:text>
+                  <i18n:text>Epigraphic field</i18n:text>
                   <xsl:text>&#160;</xsl:text>
                   <xsl:choose>
                     <xsl:when test="contains($fullN, '.')">
@@ -611,7 +611,7 @@
               </xsl:when>
               <xsl:otherwise>
                 <h2>
-                  <i18n:text>Inscribed field</i18n:text>
+                  <i18n:text>Epigraphic field</i18n:text>
                 </h2>
               </xsl:otherwise>
             </xsl:choose>
