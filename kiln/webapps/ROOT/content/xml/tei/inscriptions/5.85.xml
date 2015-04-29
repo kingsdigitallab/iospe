@@ -40,39 +40,9 @@
                            <material xml:lang="en">Plaster.</material>
                            <p xml:lang="ru">Повреждения в нижней части.</p>
                            <p xml:lang="en">Damaged at the bottom.</p>
-                           <dimensions>
-                              <height n="1" precision="low">21</height>
-                              <width n="1" precision="low">42</width>
-                           </dimensions>
-                           <dimensions>
-                              <height n="2" precision="low">27</height>
-                              <width n="2">63</width>
-                           </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">Над надписью 2.</seg>
-                           <seg xml:lang="en">Over text 2.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">Под надписью 1.</seg>
-                           <seg xml:lang="en">Below text 1.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>. Альфа с петлей и с прямой перекладиной (надпись 2), 
-                           бета, дзета и ро удлиненные, бета с несомкнутыми полукружиями, мю с наклонными крайними гастами.</seg>
-                        <seg xml:lang="en">Graffiti. Alpha with a loop, and with straight crossbar (inscription 2), elongated beta, zeta, and rho, 
-                           beta with vertically spaced loops, mu with slanting outer hastae.</seg>
-                        <height unit="cm" precision="low">2,5–7,0.</height>
-                     </handNote>
-                     <handNote n="2">
-                        <height unit="cm" precision="low">2,0–5,5.</height>
-                     </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -110,10 +80,81 @@
                      <seg xml:lang="en">In situ.</seg>
                   </provenance>
                </history>
+               
+               <msPart n="1">
+                  <msIdentifier>
+                     <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2">
+                        <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="1">Epitaph.</seg>
+                        <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="2">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions>
+                                 <height n="1" precision="low">21</height>
+                                 <width n="1" precision="low">42</width>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Над надписью 2.</seg>
+                              <seg xml:lang="en">Over text 2.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>. Альфа с петлей и с прямой перекладиной (надпись 2), 
+                              бета, дзета и ро удлиненные, бета с несомкнутыми полукружиями, мю с наклонными крайними гастами.</seg>
+                           <seg xml:lang="en">Graffiti. Alpha with a loop, and with straight crossbar (inscription 2), elongated beta, zeta, and rho, 
+                              beta with vertically spaced loops, mu with slanting outer hastae.</seg>
+                           <height unit="cm" precision="low">2,5–7,0.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
+               
+               <msPart n="2">
+                  <msIdentifier>
+                     <idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions>
+                                 <height n="2" precision="low">27</height>
+                                 <width n="2">63</width>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Под надписью 1.</seg>
+                              <seg xml:lang="en">Below text 1.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="2">
+                           <height unit="cm" precision="low">2,0–5,5.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-29" who="CB">Textparts</change>
          <change when="2015-03-31" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
          <change when="2012-08-22" who="AG">translation in 'context' corrected</change>
