@@ -15,16 +15,6 @@
       <profileDesc>
          <particDesc>
             <listPerson>
-               <!--<person xml:id="person1">
-                  <persName xml:lang="grc">Κόστας</persName> 
-                  <persName xml:lang="ru">Коста</persName>
-                  <persName xml:lang="en">Kostas</persName>
-                  <floruit notBefore="1451" notAfter="1452">
-                     <seg xml:lang="ru">1451–1452 гг.</seg>
-                     <seg xml:lang="en">1451–1452 C.E.</seg>
-                  </floruit>
-                  <!-\-<inscription>byz.1</inscription>-\->
-               </person>-->
                <person xml:id="person2">
                   <persName xml:lang="grc">Θεόδωρος</persName>
                   <persName xml:lang="ru">Феодор</persName>
@@ -628,8 +618,12 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.62.html</bibl>
-                     <relation active="#person47" name="husband" passive="#person48" cert="low"/>
-                     <relation active="#person47" name="father" passive="#person49" cert="low"/>
+                     <relation active="#person47" name="husband" passive="#person48" cert="low">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person47" name="father" passive="#person49" cert="low">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.62</inscription>-->
                </person>
@@ -644,8 +638,12 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.62.html</bibl>
-                     <relation active="#person48" name="wife" passive="#person47" cert="low"/>
-                     <relation active="#person48" name="mother" passive="#person49" cert="low"/>
+                     <relation active="#person48" name="wife" passive="#person47" cert="low">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person48" name="mother" passive="#person49" cert="low">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.62</inscription>-->
                </person>
@@ -660,8 +658,12 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.62.html</bibl>
-                     <relation active="#person49" name="daughter" passive="#person47 #person48" cert="low"/>
-                     <relation active="#person49" name="wife" passive="#person50"/>
+                     <relation active="#person49" name="daughter" passive="#person47 #person48" cert="low">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person49" name="wife" passive="#person50">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>                 
                   <!--<inscription>byz.62</inscription>-->
                </person>
@@ -676,7 +678,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.62.html</bibl>
-                     <relation active="#person50" name="husband" passive="#person49"/>
+                     <relation active="#person50" name="husband" passive="#person49">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.62</inscription>-->
                </person>
@@ -691,7 +695,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.63.html</bibl>
-                     <relation active="#person51" name="husband" passive="#person52"/>
+                     <relation active="#person51" name="husband" passive="#person52">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.63</inscription>-->
                </person>
@@ -706,7 +712,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.63.html</bibl>
-                     <relation active="#person52" name="wife" passive="#person51"/>
+                     <relation active="#person52" name="wife" passive="#person51">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.63</inscription>-->
                </person>
@@ -999,10 +1007,10 @@
                      <seg xml:lang="ru">X–XIII вв.</seg>
                      <seg xml:lang="en">X–XIII centuries C.E.</seg>
                   </floruit>
-                 <!-- <affiliation></affiliation>
+                  <affiliation>Cherson</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.70.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.70</inscription>-->
                </person>
                <person xml:id="person74">
@@ -1030,7 +1038,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.72.html</bibl>
-                     <relation active="#person75" name="son" passive="#person76"/>
+                     <relation active="#person75" name="son" passive="#person76">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.72</inscription>-->
                </person>
@@ -1045,7 +1055,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.72.html</bibl>
-                     <relation active="#person76" name="father" passive="#person75"/>
+                     <relation active="#person76" name="father" passive="#person75">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.72</inscription>-->
                </person>
@@ -1298,7 +1310,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.83.html</bibl>
-                     <relation active="#person95" name="son" passive="#person96"/>
+                     <relation active="#person95" name="son" passive="#person96">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.83</inscription>-->
                </person>
@@ -1313,7 +1327,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.83.html</bibl>
-                     <relation active="#person96" name="father" passive="#person95"/>
+                     <relation active="#person96" name="father" passive="#person95">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.83</inscription>-->
                </person>
@@ -1454,7 +1470,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.87.html</bibl>
-                     <relation active="#person106" name="son" passive="#person107"/>
+                     <relation active="#person106" name="son" passive="#person107">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.87</inscription>-->
                </person>
@@ -1469,7 +1487,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.87.html</bibl>
-                     <relation active="#person107" name="father" passive="#person106"/>
+                     <relation active="#person107" name="father" passive="#person106">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.87</inscription>-->
                </person>
@@ -1582,7 +1602,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.90.html</bibl>
-                     <relation active="#person115" name="related" passive="#person116"/>
+                     <relation active="#person115" name="related" passive="#person116">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.90</inscription>-->
                </person>
@@ -1598,7 +1620,9 @@
                   <affiliation>Cherson</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.90.html</bibl>
-                     <relation active="#person116" name="related" passive="#person115"/>
+                     <relation active="#person116" name="related" passive="#person115">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.90</inscription>-->
                </person>
@@ -1638,10 +1662,10 @@
                      <seg xml:lang="ru">X–XI вв.</seg>
                      <seg xml:lang="en">X–XI centuries C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Cherson</affiliation>
                   <listBibl>
-                    <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.90.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.90</inscription>-->
                </person>
                <person xml:id="person121">
@@ -1666,10 +1690,10 @@
                      <seg xml:lang="ru">кон. X – 1 пол. XI в.</seg>
                      <seg xml:lang="en">Late X – 1st half of XI century C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Cherson</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.91.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.91</inscription>-->
                </person>
                <person xml:id="person123">
@@ -1680,10 +1704,10 @@
                      <seg xml:lang="ru">кон. X – 1 пол. XI в.</seg>
                      <seg xml:lang="en">Late X – 1st half of XI century C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Cherson</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.91.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.91</inscription>-->
                </person>
                <person xml:id="person124">
@@ -1834,10 +1858,10 @@
                      <seg xml:lang="ru">кон. X – 1 пол. XI в.</seg>
                      <seg xml:lang="en">Late X – 1st half of XI century C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Cherson</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.91.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.91</inscription>-->
                </person>
                <person xml:id="person135">
@@ -1963,7 +1987,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person144" name="son" passive="#person145"/>
+                     <relation active="#person144" name="son" passive="#person145">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -1978,7 +2004,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person145" name="father" passive="#person144"/>
+                     <relation active="#person145" name="father" passive="#person144">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -1993,7 +2021,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person146" name="son" passive="#person147"/>
+                     <relation active="#person146" name="son" passive="#person147">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2008,7 +2038,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person147" name="father" passive="#person146"/>
+                     <relation active="#person147" name="father" passive="#person146">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2023,7 +2055,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person148" name="son" passive="#person149"/>
+                     <relation active="#person148" name="son" passive="#person149">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2038,7 +2072,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person149" name="father" passive="#person148"/>
+                     <relation active="#person149" name="father" passive="#person148">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2053,7 +2089,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person150" name="son" passive="#person151"/>
+                     <relation active="#person150" name="son" passive="#person151">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2068,7 +2106,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person151" name="father" passive="#person150"/>
+                     <relation active="#person151" name="father" passive="#person150">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2083,7 +2123,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person152" name="son" passive="#person153"/>
+                     <relation active="#person152" name="son" passive="#person153">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2098,7 +2140,9 @@
                   <affiliation>Bakla</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.121.html</bibl>
-                     <relation active="#person153" name="father" passive="#person152"/>
+                     <relation active="#person153" name="father" passive="#person152">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.117</inscription>-->
                </person>
@@ -2184,7 +2228,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.128.html</bibl>
-                     <relation active="#person159" name="mother" passive="#person160 #person161"/>
+                     <relation active="#person159" name="mother" passive="#person160 #person161">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.123</inscription>-->
                </person>
@@ -2199,8 +2245,12 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.128.html</bibl>
-                     <relation active="#person160" name="daughter" passive="#person159"/>
-                     <relation active="#person160" name="sister" passive="#person161"/>
+                     <relation active="#person160" name="daughter" passive="#person159">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person160" name="sister" passive="#person161">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.123</inscription>-->
                </person>
@@ -2215,8 +2265,12 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.128.html</bibl>
-                     <relation active="#person161" name="son" passive="#person159" />
-                     <relation active="#person161" name="brother" passive="#person160" />
+                     <relation active="#person161" name="son" passive="#person159" >
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person161" name="brother" passive="#person160" >
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.123</inscription>-->
                </person>
@@ -2245,7 +2299,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.130.html</bibl>
-                     <relation active="#person163" name="daughter" passive="#person164"/>
+                     <relation active="#person163" name="daughter" passive="#person164">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.125</inscription>-->
                </person>
@@ -2260,7 +2316,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.130.html</bibl>
-                     <relation active="#person164" name="father" passive="#person163"/>
+                     <relation active="#person164" name="father" passive="#person163">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.125</inscription>-->
                </person>
@@ -2331,7 +2389,9 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.135.html</bibl>
-                     <relation active="#person169" name="daughter" passive="#person171"/>
+                     <relation active="#person169" name="daughter" passive="#person171">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.130</inscription>-->
                </person>
@@ -2345,7 +2405,9 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.135.html</bibl>
-                     <relation active="#person171" name="father" passive="#person169"/>
+                     <relation active="#person171" name="father" passive="#person169">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.130</inscription>-->
                </person>
@@ -2360,8 +2422,12 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.136.html</bibl>
-                     <relation active="#person172" name="daughter" passive="#person174"/>
-                     <relation active="#person172" name="granddaughter" passive="#person175"/>
+                     <relation active="#person172" name="daughter" passive="#person174">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person172" name="granddaughter" passive="#person175">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.131</inscription>-->
                </person>
@@ -2376,8 +2442,12 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.136.html</bibl>
-                     <relation active="#person174" name="father" passive="#person172"/>
-                     <relation active="#person174" name="son" passive="#person175"/>
+                     <relation active="#person174" name="father" passive="#person172">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person174" name="son" passive="#person175">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.131</inscription>-->
                </person>
@@ -2392,8 +2462,12 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.136.html</bibl>
-                     <relation active="#person175" name="father" passive="#person174"/>
-                     <relation active="#person175" name="grandfather" passive="#person172"/>
+                     <relation active="#person175" name="father" passive="#person174">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person175" name="grandfather" passive="#person172">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.131</inscription>-->
                </person>
@@ -2418,7 +2492,9 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.138.html</bibl>
-                     <relation active="#person177" name="son" passive="#person179"/>
+                     <relation active="#person177" name="son" passive="#person179">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.133</inscription>-->
                </person>
@@ -2433,7 +2509,9 @@
                   <affiliation>Fot-Sala</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.138.html</bibl>
-                     <relation active="#person179" name="father" passive="#person177"/>
+                     <relation active="#person179" name="father" passive="#person177">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.133</inscription>-->
                </person>
@@ -2462,7 +2540,9 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.140.html</bibl>
-                     <relation active="#person181" name="daughter" passive="#person182"/>
+                     <relation active="#person181" name="daughter" passive="#person182">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.135</inscription>-->
                </person>
@@ -2477,7 +2557,9 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.140.html</bibl>
-                     <relation active="#person182" name="father" passive="#person181"/>
+                     <relation active="#person182" name="father" passive="#person181">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.135</inscription>-->
                </person>
@@ -2505,9 +2587,15 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.141.html</bibl>
-                     <relation active="#person184" name="brother" passive="#person185"/>
-                     <relation active="#person184" name="son" passive="#person186"/>
-                     <relation active="#person184" name="grandson" passive="#person187"/>  
+                     <relation active="#person184" name="brother" passive="#person185">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person184" name="son" passive="#person186">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person184" name="grandson" passive="#person187">
+                        <desc xml:lang="ru"></desc>
+                     </relation>  
                   </listBibl>
                   <!--<inscription>byz.136</inscription>-->
                </person>
@@ -2521,9 +2609,15 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.141.html</bibl>
-                     <relation active="#person185" name="brother" passive="#person184"/>
-                     <relation active="#person185" name="son" passive="#person186"/>
-                     <relation active="#person185" name="grandson" passive="#person187"/>
+                     <relation active="#person185" name="brother" passive="#person184">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person185" name="son" passive="#person186">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person185" name="grandson" passive="#person187">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.136</inscription>-->
                </person>
@@ -2537,8 +2631,12 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.141.html</bibl>
-                     <relation active="#person186" name="father" passive="#person184 #person185"/>
-                     <relation active="#person186" name="son" passive="#person187"/>
+                     <relation active="#person186" name="father" passive="#person184 #person185">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person186" name="son" passive="#person187">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.136</inscription>-->
                </person>
@@ -2552,8 +2650,12 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.141.html</bibl>
-                     <relation active="#person187" name="father" passive="#person186"/>
-                     <relation active="#person187" name="grandfather" passive="#person184 #person185"/>
+                     <relation active="#person187" name="father" passive="#person186">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person187" name="grandfather" passive="#person184 #person185">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.136</inscription>-->
                </person>
@@ -2610,7 +2712,9 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.144.html</bibl>
-                     <relation active="#person192" name="son" passive="#person193"/>
+                     <relation active="#person192" name="son" passive="#person193">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.139</inscription>-->
                </person>
@@ -2625,7 +2729,9 @@
                   <affiliation>Laki</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.144.html</bibl>
-                     <relation active="#person193" name="father" passive="#person192"/>
+                     <relation active="#person193" name="father" passive="#person192">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.139</inscription>-->
                </person>
@@ -2825,7 +2931,9 @@
                   <affiliation>Kachi-Kalyon</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.163.html</bibl>
-                     <relation active="#person207" name="son" passive="#person208"/>
+                     <relation active="#person207" name="son" passive="#person208">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.156</inscription>-->
                </person>
@@ -2840,7 +2948,9 @@
                   <affiliation>Kachi-Kalyon</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.163.html</bibl>
-                     <relation active="#person208" name="father" passive="#person207"/>
+                     <relation active="#person208" name="father" passive="#person207">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.156</inscription>-->
                </person>
@@ -2869,8 +2979,12 @@
                   <affiliation>Biyuk-Karalez or Eski-Kermen</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.166.html</bibl>
-                     <relation active="#person211" name="husband" passive="#person212"/>
-                     <relation active="#person211" name="father" passive="#person213"/>
+                     <relation active="#person211" name="husband" passive="#person212">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person211" name="father" passive="#person213">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.159</inscription>-->
                </person>
@@ -2885,8 +2999,12 @@
                   <affiliation>Biyuk-Karalez or Eski-Kermen</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.166.html</bibl>
-                     <relation active="#person212" name="wife" passive="#person211"/>
-                     <relation active="#person212" name="mother" passive="#person213"/>
+                     <relation active="#person212" name="wife" passive="#person211">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person212" name="mother" passive="#person213">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.159</inscription>-->
                </person>
@@ -2901,8 +3019,12 @@
                   <affiliation>Biyuk-Karalez or Eski-Kermen</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.166.html</bibl>
-                     <relation active="#person213" name="son" passive="#person211 #person212"/>
-                     <relation active="#person213" name="husband" passive="#person214"/>
+                     <relation active="#person213" name="son" passive="#person211 #person212">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person213" name="husband" passive="#person214">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.159</inscription>-->
                </person>
@@ -2917,7 +3039,9 @@
                   <affiliation>Biyuk-Karalez or Eski-Kermen</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.166.html</bibl>
-                     <relation active="#person214" name="wife" passive="#person213"/>
+                     <relation active="#person214" name="wife" passive="#person213">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.159</inscription>-->
                </person>
@@ -2932,7 +3056,9 @@
                   <affiliation>Shury</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.167.html</bibl>
-                     <relation active="#person215" name="son" passive="#person216"/>
+                     <relation active="#person215" name="son" passive="#person216">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.160</inscription>-->
                </person>
@@ -2947,7 +3073,9 @@
                   <affiliation>Shury</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.167.html</bibl>
-                     <relation active="#person216" name="father" passive="#person215"/>
+                     <relation active="#person216" name="father" passive="#person215">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.160</inscription>-->
                </person>
@@ -3006,7 +3134,9 @@
                   <affiliation>Theodoro</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.172.html</bibl>
-                     <relation active="#person220" name="son" passive="#person221"/>
+                     <relation active="#person220" name="son" passive="#person221">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.165</inscription>-->
                </person>
@@ -3021,7 +3151,9 @@
                   <affiliation>Theodoro</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.172.html</bibl>
-                     <relation active="#person221" name="father" passive="#person220"/>
+                     <relation active="#person221" name="father" passive="#person220">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.165</inscription>-->
                </person>
@@ -3048,10 +3180,10 @@
                         <seg xml:lang="ru">1302–1303 гг.</seg>
                         <seg xml:lang="en">1302–1303 гг.</seg>
                      </floruit>
-                     <!--<affiliation></affiliation>
+                     <affiliation>Theodoro</affiliation>
                      <listBibl>
-                        <bibl></bibl>
-                     </listBibl>-->
+                        <bibl>http://iospe.kcl.ac.uk/5.175.html</bibl>
+                     </listBibl>
                   <!--<inscription>byz.168</inscription>-->
                </person>
                <person xml:id="person222">
@@ -3110,7 +3242,9 @@
                   <affiliation>Theodoro</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.184.html</bibl>
-                     <relation active="#person225" name="daughter" passive="#person502"/>
+                     <relation active="#person225" name="daughter" passive="#person502">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.175</inscription>-->
                </person>
@@ -3127,7 +3261,9 @@
                      <affiliation>Theodoro</affiliation>
                      <listBibl>
                         <bibl>http://iospe.kcl.ac.uk/5.184.html</bibl>
-                        <relation active="#person502" name="father" passive="#person225"/>
+                        <relation active="#person502" name="father" passive="#person225">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                      </listBibl>
                   <!--<inscription>byz.175</inscription>-->
                </person>
@@ -3142,7 +3278,9 @@
                   <affiliation>Theodoro</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.184.html</bibl>
-                     <relation active="#person226" name="son" passive="#person227"/>
+                     <relation active="#person226" name="son" passive="#person227">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.175</inscription>-->
                </person>
@@ -3157,7 +3295,9 @@
                   <affiliation>Theodoro</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.184.html</bibl>
-                     <relation active="#person227" name="father" passive="#person226"/>
+                     <relation active="#person227" name="father" passive="#person226">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.175</inscription>-->
                </person>
@@ -3232,27 +3372,6 @@
                   </listBibl>
                   <!--<inscription>byz.182</inscription>-->
                </person>
-               <!--Removed from text by Andrey
-                  <person xml:id="person233">
-                  <persName xml:lang="grc">Στεφανικία</persName>
-                  <persName xml:lang="ru">Стефаникия</persName>
-                  <persName xml:lang="en">Stephanikia</persName>
-                  <floruit n="1" notBefore="0901" notAfter="1000" precision="medium">
-                     <seg xml:lang="ru">X–XI вв.</seg>
-                     <seg xml:lang="en">X–XI centuries C.E.</seg>
-                  </floruit>
-                  <!-\-<inscription>byz.182</inscription>-\->
-               </person>
-               <person xml:id="person234">
-                  <persName xml:lang="grc">Στεφια.?.</persName>
-                  <persName xml:lang="ru">Стефиа-</persName>
-                  <persName xml:lang="en">Stephia-</persName>
-                  <floruit n="1" notBefore="0901" notAfter="1000" precision="medium">
-                     <seg xml:lang="ru">X–XI вв.</seg>
-                     <seg xml:lang="en">X–XI centuries C.E.</seg>
-                  </floruit>
-                  <!-\-<inscription>byz.182</inscription>-\->
-               </person>-->
                <person xml:id="person235">
                   <persName xml:lang="grc">Ἰάκωβος</persName>
                   <persName xml:lang="ru">Иаков</persName>
@@ -3261,10 +3380,10 @@
                      <seg xml:lang="ru">X–XI вв.</seg>
                      <seg xml:lang="en">X–XI centuries C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Theodoro</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.193.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.182</inscription>-->
                </person>
                <person xml:id="person236">
@@ -3275,10 +3394,10 @@
                      <seg xml:lang="ru">X–XI вв.</seg>
                      <seg xml:lang="en">X–XI centuries C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Theodoro</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.193.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.182</inscription>-->
                </person>
                <person xml:id="person237">
@@ -3289,22 +3408,13 @@
                      <seg xml:lang="ru">X–XI вв.</seg>
                      <seg xml:lang="en">X–XI centuries C.E.</seg>
                   </floruit>
-                  <!--<affiliation></affiliation>
+                  <affiliation>Theodoro</affiliation>
                   <listBibl>
-                     <bibl></bibl>
-                  </listBibl>-->
+                     <bibl>http://iospe.kcl.ac.uk/5.193.html</bibl>
+                  </listBibl>
                   <!--<inscription>byz.182</inscription>-->
                </person>
-               <!--<person xml:id="person238">
-                  <persName xml:lang="grc">Νεα.?.</persName>
-                  <persName xml:lang="ru">Неа-</persName>
-                  <persName xml:lang="en">Nea-</persName>
-                  <floruit n="1" notBefore="0901" notAfter="1000" precision="medium">
-                     <seg xml:lang="ru">X–XI вв.</seg>
-                     <seg xml:lang="en">X–XI centuries C.E.</seg>
-                  </floruit>-->
-                  <!--<inscription>byz.182</inscription>-->
-               <!--</person>-->
+              
                <person xml:id="person239">
                   <persName xml:lang="grc">Ἰωάννης</persName>
                   <persName xml:lang="ru">Иоанн</persName>
@@ -3428,7 +3538,9 @@
                   <affiliation>Mariampol</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.197.html</bibl>
-                     <relation active="#person247" name="son" passive="#person443"/>
+                     <relation active="#person247" name="son" passive="#person443">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.186</inscription>-->
                </person>
@@ -3443,7 +3555,9 @@
                   <affiliation>Mariampol</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.197.html</bibl>
-                     <relation active="#person443" name="father" passive="#person247"/>
+                     <relation active="#person443" name="father" passive="#person247">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.186</inscription>-->
                </person>
@@ -3472,7 +3586,9 @@
                   <affiliation>Syuren fortress</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.200.html</bibl>
-                     <relation active="#person251" name="fiancée" passive="#person252"/>
+                     <relation active="#person251" name="fiancée" passive="#person252">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.188</inscription>-->
                </person>
@@ -3487,7 +3603,9 @@
                   <affiliation>Syuren fortress</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.200.html</bibl>
-                     <relation active="#person252" name="fiancé" passive="#person251"/>
+                     <relation active="#person252" name="fiancé" passive="#person251">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.188</inscription>-->
                </person>
@@ -3802,7 +3920,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.124.html</bibl>
-                     <relation active="#person276" name="father" passive="#person277 #person278 #person279 #person280 #person281"/>
+                     <relation active="#person276" name="father" passive="#person277 #person278 #person279 #person280 #person281">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.216</inscription>-->
                </person>
@@ -3817,7 +3937,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.124.html</bibl>
-                     <relation active="#person277" name="daughter" passive="#person276"/>
+                     <relation active="#person277" name="daughter" passive="#person276">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.216</inscription>-->
                </person>
@@ -3832,7 +3954,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.124.html</bibl>
-                     <relation active="#person278" name="son" passive="#person276"/>
+                     <relation active="#person278" name="son" passive="#person276">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.216</inscription>-->
                </person>
@@ -3847,7 +3971,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.124.html</bibl>
-                     <relation active="#person279" name="son" passive="#person276"/>
+                     <relation active="#person279" name="son" passive="#person276">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.216</inscription>-->
                </person>
@@ -3862,7 +3988,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.124.html</bibl>
-                     <relation active="#person280" name="son" passive="#person276"/>
+                     <relation active="#person280" name="son" passive="#person276">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.216</inscription>-->
                </person>
@@ -3877,7 +4005,9 @@
                   <affiliation>Kermenchik</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.124.html</bibl>
-                     <relation active="#person281" name="daughter" passive="#person276"/>
+                     <relation active="#person281" name="daughter" passive="#person276">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.216</inscription>-->
                </person>
@@ -3906,7 +4036,9 @@
                   <affiliation>Unknown (Mountainous Crimea?)</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.229.html</bibl>
-                     <relation active="#person283" name="daughter" passive="#person284"/>
+                     <relation active="#person283" name="daughter" passive="#person284">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.218</inscription>-->
                </person>
@@ -3921,7 +4053,9 @@
                   <affiliation>Unknown (Mountainous Crimea?)</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.229.html</bibl>
-                     <relation active="#person284" name="father" passive="#person283"/>
+                     <relation active="#person284" name="father" passive="#person283">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.218</inscription>-->
                </person>
@@ -3950,7 +4084,9 @@
                   <affiliation>Alouston</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.233.html</bibl>
-                     <relation active="#person286" name="son" passive="#person288"/>
+                     <relation active="#person286" name="son" passive="#person288">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.220</inscription>-->
                </person>
@@ -3965,7 +4101,9 @@
                   <affiliation>Alouston</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.233.html</bibl>
-                     <relation active="#person288" name="father" passive="#person286"/>
+                     <relation active="#person288" name="father" passive="#person286">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.220</inscription>-->
                </person>
@@ -3980,7 +4118,9 @@
                   <affiliation>Alouston</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.234.html</bibl>
-                     <relation active="#person289" name="son" passive="#person290"/>
+                     <relation active="#person289" name="son" passive="#person290">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.221</inscription>-->
                </person>
@@ -3995,7 +4135,9 @@
                   <affiliation>Alouston</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.234.html</bibl>
-                     <relation active="#person290" name="father" passive="#person289"/>
+                     <relation active="#person290" name="father" passive="#person289">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.221</inscription>-->
                </person>
@@ -4297,7 +4439,9 @@
                   <affiliation>Caffa</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.260.html</bibl>
-                     <relation active="#person319" name="son" passive="#person321"/>
+                     <relation active="#person319" name="son" passive="#person321">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.247</inscription>-->
                </person>
@@ -4312,7 +4456,9 @@
                   <affiliation>Caffa</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.260.html</bibl>
-                     <relation active="#person321" name="father" passive="#person319"/>
+                     <relation active="#person321" name="father" passive="#person319">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.247</inscription>-->
                </person>
@@ -4378,32 +4524,6 @@
                   </listBibl>
                   <!--<inscription>byz.251; 299; 318</inscription>-->
                </person>
-               <!--<person xml:id="person326">
-                  <persName xml:lang="grc">.?.</persName>
-                  <persName xml:lang="ru">?</persName>
-                  <persName xml:lang="en">?</persName>
-                  <floruit notBefore="0479" notAfter="0492">
-                     <seg xml:lang="ru">479–492 гг.</seg>
-                     <seg xml:lang="en">479–492 C.E.</seg>
-                  </floruit>
-                  <occupation>ἐπιμελετὴς ὁ ἐπὶ τοῦ ἔργου</occupation>
-                  <affiliation></affiliation>
-                  <listBibl>
-                     <bibl></bibl>
-                  </listBibl>
-                  <!-\-<inscription>byz.251</inscription>-\->
-               </person>-->
-               <!--<person xml:id="person563">
-                  <persName xml:lang="grc">.?.</persName>
-                  <persName xml:lang="ru">?</persName>
-                  <persName xml:lang="en">?</persName>
-                  <floruit notBefore="0479" notAfter="0492">
-                     <seg xml:lang="ru">479–492 гг.</seg>
-                     <seg xml:lang="en">479–492 C.E.</seg>
-                  </floruit>
-                  <occupation>μαγίστωρ</occupation>
-                  <!-\-<inscription>byz.251</inscription>-\->
-               </person>-->
                <person xml:id="person564">
                   <persName xml:lang="grc">Ζαχαρίας</persName>
                   <persName xml:lang="ru">Захария</persName>
@@ -4419,20 +4539,6 @@
                   </listBibl>
                   <!--<inscription>byz.252</inscription>-->
                </person>
-               <!--<person xml:id="person327">
-                  <persName xml:lang="grc">Πάππος</persName>
-                  <persName xml:lang="ru">Папп</persName>
-                  <persName xml:lang="en">Pappos</persName>
-                  <floruit notBefore="0401" notAfter="0600" precision="medium">
-                     <seg xml:lang="ru">V–VI вв.</seg>
-                     <seg xml:lang="en">V–VI centuries C.E.</seg>
-                  </floruit>
-                  <affiliation></affiliation>
-                  <listBibl>
-                     <bibl></bibl>
-                  </listBibl>
-                  <!-\-<inscription>byz.253</inscription>-\->
-               </person>-->
                <person xml:id="person328">
                   <persName xml:lang="grc">Ἀγόραστος</persName>
                   <persName xml:lang="ru">Агораст</persName>
@@ -4444,7 +4550,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.267.html</bibl>
-                     <relation active="#person328" name="son" passive="#person329"/>
+                     <relation active="#person328" name="son" passive="#person329">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.255</inscription>-->
                </person>
@@ -4459,7 +4567,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.267.html</bibl>
-                     <relation active="#person329" name="father" passive="#person328"/>
+                     <relation active="#person329" name="father" passive="#person328">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.255</inscription>-->
                </person>
@@ -4698,7 +4808,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.283.html</bibl>
-                     <relation active="#person346" name="son" passive="#person347"/>
+                     <relation active="#person346" name="son" passive="#person347">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.271</inscription>-->
                </person>
@@ -4713,7 +4825,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.283.html</bibl>
-                     <relation active="#person347" name="father" passive="#person346"/>
+                     <relation active="#person347" name="father" passive="#person346">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.271</inscription>-->
                </person>
@@ -4770,7 +4884,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.286.html</bibl>
-                     <relation active="#person351" name="son" passive="#person352"/>
+                     <relation active="#person351" name="son" passive="#person352">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.274</inscription>-->
                </person>
@@ -4785,7 +4901,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.286.html</bibl>
-                     <relation active="#person352" name="father" passive="#person351"/>
+                     <relation active="#person352" name="father" passive="#person351">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.274</inscription>-->
                </person>
@@ -4942,7 +5060,9 @@
                   <affiliation>Bosporus</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.316.html</bibl>
-                     <relation active="#person363" name="son" passive="#person364"/>
+                     <relation active="#person363" name="son" passive="#person364">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.282</inscription>-->
                </person>
@@ -4957,8 +5077,12 @@
                   <affiliation>Bosporus</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.316.html</bibl>
-                     <relation active="#person364" name="father" passive="#person363"/>
-                     <relation active="#person364" name="son" passive="#person365"/>
+                     <relation active="#person364" name="father" passive="#person363">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person364" name="son" passive="#person365">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.282</inscription>-->
                </person>
@@ -4973,8 +5097,12 @@
                   <affiliation>Bosporus</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.316.html</bibl>
-                     <relation active="#person365" name="grandfather" passive="#person363"/>
-                     <relation active="#person365" name="father" passive="#person364"/>
+                     <relation active="#person365" name="grandfather" passive="#person363">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
+                     <relation active="#person365" name="father" passive="#person364">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.282</inscription>-->
                </person>
@@ -5173,7 +5301,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.302.html</bibl>
-                     <relation active="#person379" name="son" passive="#person380"/>
+                     <relation active="#person379" name="son" passive="#person380">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.296</inscription>-->
                </person>
@@ -5188,7 +5318,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                     <bibl>http://iospe.kcl.ac.uk/5.302.html</bibl>
-                    <relation active="#person380" name="father" passive="#person379"/>
+                    <relation active="#person380" name="father" passive="#person379">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.296</inscription>-->
                </person>
@@ -5217,7 +5349,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.304.html</bibl>
-                     <relation active="#person382" name="son" passive="#person383"/>
+                     <relation active="#person382" name="son" passive="#person383">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.298</inscription>-->
                </person>
@@ -5232,7 +5366,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.304.html</bibl>
-                     <relation active="#person383" name="father" passive="#person382"/>
+                     <relation active="#person383" name="father" passive="#person382">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.298</inscription>-->
                </person>
@@ -5781,7 +5917,9 @@
                   <affiliation>Pantikapaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.312.html</bibl>
-                     <relation active="#person423" name="son" passive="#person561"/>
+                     <relation active="#person423" name="son" passive="#person561">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.326</inscription>-->
                </person>
@@ -5810,7 +5948,9 @@
                   <affiliation>Kytaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.323.html</bibl>
-                     <relation active="#person424" name="son" passive="#person562"/>
+                     <relation active="#person424" name="son" passive="#person562">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.327</inscription>-->
                </person>
@@ -5825,7 +5965,9 @@
                   <affiliation>Kytaion</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.323.html</bibl>
-                     <relation active="#person562" name="father" passive="#person424"/>
+                     <relation active="#person562" name="father" passive="#person424">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.327</inscription>-->
                </person>
@@ -5870,7 +6012,9 @@
                   <affiliation>Phanagoreia</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.328.html</bibl>
-                     <relation active="#person427" name="son" passive="#person428"/>
+                     <relation active="#person427" name="son" passive="#person428">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.330</inscription>-->
                </person>
@@ -5885,7 +6029,9 @@
                   <affiliation>Phanagoreia</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.328.html</bibl>
-                     <relation active="#person428" name="father" passive="#person427"/>
+                     <relation active="#person428" name="father" passive="#person427">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz.330</inscription>-->
                </person>
@@ -6054,7 +6200,9 @@
                   <affiliation>Mountainous Crimea</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.341.html</bibl>
-                     <relation active="#person441" name="son" passive="#person442"/>
+                     <relation active="#person441" name="son" passive="#person442">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz218a</inscription>-->
                </person>
@@ -6069,7 +6217,9 @@
                   <affiliation>Mountainous Crimea</affiliation>
                   <listBibl>
                      <bibl>http://iospe.kcl.ac.uk/5.341.html</bibl>
-                     <relation active="#person442" name="father" passive="#person441"/>
+                     <relation active="#person442" name="father" passive="#person441">
+                        <desc xml:lang="ru"></desc>
+                     </relation>
                   </listBibl>
                   <!--<inscription>byz218a</inscription>-->
                </person>
