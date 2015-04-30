@@ -28,10 +28,8 @@
                </msIdentifier>
                <msContents>
                   <summary corresp="document-search.xml#doc4">
-                     <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
-                     <seg xml:lang="en" n="1">Demonstrative.</seg>
-                     <seg xml:lang="ru" n="2">Неизвестен.</seg>
-                     <seg xml:lang="en" n="2">Unknown.</seg>
+                     <seg xml:lang="ru">Демонстративная надпись, Неизвестен.</seg>
+                     <seg xml:lang="en">Demonstrative, Unknown.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -53,23 +51,9 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">Над нижней нишей.</seg>
-                           <seg xml:lang="en">Above the lower niche.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">Под нижней нишей.</seg>
-                           <seg xml:lang="en">Below the lower niche.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
                   <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>.</seg>
-                        <seg xml:lang="en">Lapidary.</seg>
-                      </handNote>
-                     <handNote n="2">
+                     <handNote>
                         <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>.</seg>
                         <seg xml:lang="en">Lapidary.</seg>
                       </handNote>
@@ -81,13 +65,9 @@
                         <seg xml:lang="ru">Феодоро.</seg>
                         <seg xml:lang="en">Theodoro.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1301" notAfter="1500" precision="medium" evidence="художественное_оформление" cert="low">
+                     <origDate notBefore="1301" notAfter="1500" precision="medium" evidence="художественное_оформление" cert="low">
                         <seg xml:lang="ru">XIV–XV вв. </seg>
                         <seg xml:lang="en">XIVth–XVth centuries C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="1301" notAfter="1500" precision="medium" evidence="художественное_оформление" cert="low">
-                        <seg xml:lang="ru">XIV–XV вв.</seg>
-                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
@@ -111,10 +91,41 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Над нижней нишей.</seg>
+                              <seg xml:lang="en">Above the lower niche.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Под нижней нишей.</seg>
+                              <seg xml:lang="en">Below the lower niche.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-30" who="CB">Textparts</change>
          <change when="2015-04-08" who="CB">Andrey's corrections</change>
           <change when="2013-02-13" who="AG">repository corrected</change>
          <change when="2012-09-11" who="AG">several lines translated</change>
@@ -135,12 +146,10 @@
    <text>
       <body>
          <div type="bibliography">
-            <listBibl n="1">
+            <listBibl>
                <bibl/>
             </listBibl>
-            <listBibl n="2">
-               <bibl/>
-            </listBibl>
+            
          </div>
          <div type="translation" xml:lang="ru">
             <div type="textpart" n="1">
@@ -186,12 +195,12 @@
             </div>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="inscription" n="1">
+            <div type="textpart" subtype="section" n="1">
                <ab>
                   <lb n="1"/><w lemma="φῶς"><expan><abbr>Φ</abbr><ex>ῶς</ex></expan></w> <persName type="divine" key="iesous"><name nymRef="Χριστός"><supplied reason="lost"><expan><abbr>Χ</abbr><ex>ριστοῦ</ex></expan></supplied></name></persName> <w lemma="φαίνω"><expan><abbr>φ</abbr><ex>αίνει</ex></expan></w> <w lemma="πᾶς"><expan><abbr>π</abbr><ex cert="low">ᾶσιν</ex></expan></w>.
                </ab>
             </div>
-            <div type="textpart" subtype="inscription" n="2">
+            <div type="textpart" subtype="section" n="2">
                <ab>
                   <lb n="1"/><orig>ΤΟ</orig><orig><unclear>Η</unclear></orig><gap reason="illegible" quantity="4" unit="character"/><orig>ΟΥ</orig><note>?</note>
                </ab>

@@ -28,10 +28,8 @@
                </msIdentifier>
                <msContents>
                   <summary corresp="document-search.xml#doc2">
-                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
-                     <seg xml:lang="en" n="1">Epitaph.</seg>
-                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
-                     <seg xml:lang="en" n="2">Epitaph.</seg>
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -51,23 +49,7 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">В левом нижнем углу.</seg>
-                           <seg xml:lang="en">In the lower left corner.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">В правом нижнем углу.</seg>
-                           <seg xml:lang="en">In the lower right corner.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, мю в т.ч. минускульное. Лигатура мю-йота.</seg>
-                        <seg xml:lang="en">Lapidary. Alpha with a loop, mu minuscule, among others. Ligature: mu-iota.</seg>
-                      </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -75,13 +57,9 @@
                         <seg xml:lang="ru">Фот-Сала.</seg>
                         <seg xml:lang="en">Fot-Sala.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1291" notAfter="1292" evidence="указание_надписи">
+                     <origDate notBefore="1291" notAfter="1292" evidence="указание_надписи">
                         <seg xml:lang="ru">1291–1292 гг.</seg>
                         <seg xml:lang="en">1291–1292 C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="1291" notAfter="1382" precision="medium" evidence="указание_надписи">
-                        <seg xml:lang="ru">1291–1382 гг.</seg>
-                        <seg xml:lang="en">1291–1382 C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
@@ -105,10 +83,51 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">В левом нижнем углу.</seg>
+                              <seg xml:lang="en">In the lower left corner.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, мю в т.ч. минускульное. Лигатура мю-йота.</seg>
+                           <seg xml:lang="en">Lapidary. Alpha with a loop, mu minuscule, among others. Ligature: mu-iota.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">В правом нижнем углу.</seg>
+                              <seg xml:lang="en">In the lower right corner.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-30" who="CB">Textparts</change>
          <change when="2015-04-01" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
@@ -131,10 +150,7 @@
    <text>
       <body>
          <div type="bibliography">
-            <listBibl n="1">
-               <bibl n="L1"><!--Латышев 1916--><ptr target="bib:b0155"/>, 3–4, № 4, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>4</citedRange></bibl>
-            </listBibl>
-            <listBibl n="2">
+            <listBibl>
                <bibl n="L1"><!--Латышев 1916--><ptr target="bib:b0155"/>, 3–4, № 4, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>4</citedRange></bibl>
             </listBibl>
          </div>
@@ -186,7 +202,7 @@
             </div>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="inscription" n="1">
+            <div type="textpart" subtype="section" n="1">
                <ab>
                   <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκη<supplied reason="lost">μίθι</supplied></w>
                   <lb n="2"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκημίθι</w> <w lemma="ὁ">ἡ</w>
@@ -202,7 +218,7 @@
                      <num value="6800"><unclear>ς</unclear>ω</num></date>
                </ab>
             </div>
-            <div type="textpart" subtype="inscription" n="2">
+            <div type="textpart" subtype="section" n="2">
                <ab>
                   <lb n="1"/><g type="stauros"/> <w lemma="κοιμάω">Ἐκημίθι</w>
                   <lb n="2"/><gap reason="lost" extent="unknown" unit="line"/>.

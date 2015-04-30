@@ -28,10 +28,8 @@
                </msIdentifier>
                <msContents>
                   <summary corresp="document-search.xml#doc2">
-                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
-                     <seg xml:lang="en" n="1">Epitaph.</seg>
-                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
-                     <seg xml:lang="en" n="2">Epitaph.</seg>
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -46,23 +44,7 @@
                            <p xml:lang="en">On the front - Latin cross fourchée. Condition unknown.</p>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">Над крестом.</seg>
-                           <seg xml:lang="en">Above the cross.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
-                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Ипсилон прогнутый. Лигатура ипсилон-сигма.</seg>
-                        <seg xml:lang="en">Lapidary. Bowl-shaped upsilon. Ligature: upsilon-sigma.</seg>
-                      </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -70,13 +52,9 @@
                         <seg xml:lang="ru">Керменчик.</seg>
                         <seg xml:lang="en">Kermenchik.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1381" notAfter="1382" evidence="указание_надписи">
+                     <origDate notBefore="1381" notAfter="1382" evidence="указание_надписи">
                         <seg xml:lang="ru">1381–1382 гг.</seg>
                         <seg xml:lang="en">1381–1382 C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="1382" notAfter="1482" evidence="указание_надписи">
-                        <seg xml:lang="ru">1382–1482 гг.</seg>
-                        <seg xml:lang="en">1382–1482 C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
@@ -100,10 +78,45 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Над крестом.</seg>
+                              <seg xml:lang="en">Above the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Ипсилон прогнутый. Лигатура ипсилон-сигма.</seg>
+                           <seg xml:lang="en">Lapidary. Bowl-shaped upsilon. Ligature: upsilon-sigma.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                              <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-30" who="CB">Textparts</change>
          <change when="2015-03-31" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
           <change when="2012-10-16" who="AL">small corrections in Russian text</change>
@@ -128,10 +141,7 @@
    <text>
       <body>
          <div type="bibliography">
-            <listBibl n="1">
-               <bibl n="L1"><!--Латышев 1898a--><ptr target="bib:b0134"/>, 243, № <citedRange>64з</citedRange></bibl>
-            </listBibl>
-            <listBibl n="2">
+            <listBibl>
                <bibl n="L1"><!--Латышев 1898a--><ptr target="bib:b0134"/>, 243, № <citedRange>64з</citedRange></bibl>
             </listBibl>
          </div>
@@ -189,13 +199,13 @@
             </div>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="inscription" n="1">
+            <div type="textpart" subtype="section" n="1">
                <ab>
                   <lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
                   <lb n="2"/><date><w lemma="ἔτος"><unclear>ἔ</unclear>τους</w> <num value="6900">ς<unclear>Ϡ</unclear></num></date>.
                </ab>
             </div>
-            <div type="textpart" subtype="inscription" n="2">
+            <div type="textpart" subtype="section" n="2">
                <ab>
                   <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><choice><sic>ΣΙ</sic><corr><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></corr></choice></name> <name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><supplied reason="lost"><abbr>ς</abbr></supplied></expan></name></persName>
                   <lb n="2"/><w lemma="νικάω">νικᾷ</w>.

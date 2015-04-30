@@ -26,14 +26,6 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
-                  <summary corresp="document-search.xml#doc2 document-search.xml#doc8">
-                     <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
-                     <seg xml:lang="en" n="1">Epitaph.</seg>
-                     <seg xml:lang="ru" n="2">Памятная надпись.</seg>
-                     <seg xml:lang="en" n="2.">Commemoration.</seg>
-                  </summary>
-               </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
@@ -46,20 +38,7 @@
                            <p xml:lang="en">On the front - cross and two circles (sun and moon?). Condition unknown.</p>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">На лицевой стороне.</seg>
-                           <seg xml:lang="en">On the front.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа и дельта с верхним  штрихом. 
-                           Лигатуры омикрон-ипсилон, тау-эта, ипсилон-йота.</seg>
-                        <seg xml:lang="en">Lapidary. Alpha and delta with capping horizontal bar pointing left. Ligature omicron-upsilon, tau-eta, upsilon-iota.</seg>
-                      </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -67,14 +46,6 @@
                         <seg xml:lang="ru">Лаки.</seg>
                         <seg xml:lang="en">Laki.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1421" notAfter="1421" evidence="указание_надписи">
-                        <seg xml:lang="ru">1421 г.</seg>
-                        <seg xml:lang="en">1421 C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="1421" notAfter="1421" evidence="указание_надписи">
-                        <seg xml:lang="ru">1421 г.</seg>
-                        <seg xml:lang="en">1421 C.E.</seg>
-                     </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi.</seg>
@@ -97,10 +68,70 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="1">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">На лицевой стороне.</seg>
+                              <seg xml:lang="en">On the front.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа и дельта с верхним  штрихом. 
+                              Лигатуры омикрон-ипсилон, тау-эта, ипсилон-йота.</seg>
+                           <seg xml:lang="en">Lapidary. Alpha and delta with capping horizontal bar pointing left. Ligature omicron-upsilon, tau-eta, upsilon-iota.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1421" notAfter="1421" evidence="указание_надписи">
+                           <seg xml:lang="ru">1421 г.</seg>
+                           <seg xml:lang="en">1421 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="2">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="2.">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                     </objectDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1421" notAfter="1421" evidence="указание_надписи">
+                           <seg xml:lang="ru">1421 г.</seg>
+                           <seg xml:lang="en">1421 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-04-30" who="CB">Textparts</change>
           <change when="2013-10-24" who="TW">Added image code</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
          <change when="2012-07-18" who="AG">small correction</change>
