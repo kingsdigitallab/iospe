@@ -26,14 +26,6 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
-                  <summary corresp="document-search.xml#doc7">
-                     <seg xml:lang="ru" n="1">Подпись к изображению.</seg>
-                     <seg xml:lang="en" n="1">Image-related inscription.</seg>
-                     <seg xml:lang="ru" n="2">Подпись к изображению.</seg>
-                     <seg xml:lang="en" n="2">Image-related inscription.</seg>
-                  </summary>
-               </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
@@ -52,24 +44,7 @@
                          </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">Справа над св. Георгием.</seg>
-                           <seg xml:lang="en">Above and right of St. George.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">Слева над св. Георгием.</seg>
-                           <seg xml:lang="en">Above and left of St. George.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>.</seg>
-                        <seg xml:lang="en">Graffito.</seg>
-                        <height unit="cm">0,3–0,8.</height>
-                     </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -77,14 +52,6 @@
                         <seg xml:lang="ru">Сугдея.</seg>
                         <seg xml:lang="en">Sougdaia.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1301" notAfter="1500" precision="medium" evidence="характер_изображения">
-                        <seg xml:lang="ru">XIV–XV вв.</seg>
-                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
-                     </origDate>
-                      <origDate n="2" notBefore="1301" notAfter="1500" precision="medium" evidence="характер_изображения">
-                          <seg xml:lang="ru">XIV–XV вв.</seg>
-                         <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
-                     </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>, <date when="2009-09">сентябрь 2009</date>.</seg>
@@ -107,10 +74,76 @@
                      <seg xml:lang="en">Sudak, Crimea.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc7">
+                        <seg xml:lang="ru" n="1">Подпись к изображению.</seg>
+                        <seg xml:lang="en" n="1">Image-related inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Справа над св. Георгием.</seg>
+                              <seg xml:lang="en">Above and right of St. George.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>.</seg>
+                           <seg xml:lang="en">Graffito.</seg>
+                           <height unit="cm">0,3–0,8.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1301" notAfter="1500" precision="medium" evidence="характер_изображения">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc7">
+                        <seg xml:lang="ru" n="2">Подпись к изображению.</seg>
+                        <seg xml:lang="en" n="2">Image-related inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Слева над св. Георгием.</seg>
+                              <seg xml:lang="en">Above and left of St. George.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1301" notAfter="1500" precision="medium" evidence="характер_изображения">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-05-01" who="CB">Textparts</change>
          <change when="2015-04-08" who="CB">Andrey's corrections</change>
           <change when="2013-11-07" who="TW">Added image code</change>
          <change when="2012-08-14" who="AFS">inserted key name</change>

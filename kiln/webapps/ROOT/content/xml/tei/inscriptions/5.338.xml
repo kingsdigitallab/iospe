@@ -28,10 +28,8 @@
                </msIdentifier>
                <msContents>
                   <summary corresp="document-search.xml#doc5">
-                     <seg xml:lang="ru" n="1">Посвятительная надпись.</seg>
-                     <seg xml:lang="en" n="1">Dedication.</seg>
-                     <seg xml:lang="ru" n="2">Посвятительная надпись.</seg>
-                     <seg xml:lang="en" n="2">Dedication.</seg>
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedication.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -51,29 +49,7 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">Над надписью 2.</seg>
-                           <seg xml:lang="en">Above Text 2.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">Под надписью 1.</seg>
-                           <seg xml:lang="en">Below Text 1.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru">См. ниже.</seg>
-                        <seg xml:lang="en">See below.</seg>
-                     </handNote>
-                     <handNote n="2">
-                        <seg xml:lang="ru">Буквы вытянуты по вертикали. Эпсилон овальный, мю с Т-образной серединой, пи с удлиненной перекладиной. Лигатуры омикрон-ипсилон, 
-                           сигма-эпсилон; сокращения.</seg>
-                        <seg xml:lang="en">Elongated letters. Oval epsilon, mu with T-shaped middle, pi with extended horizontal. Ligatures omicron-upsilon, sigma-epsilon; 
-                           abbreviations.</seg>
-                      </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -81,11 +57,7 @@
                         <seg xml:lang="ru">Уташское городище <certainty cert="low" locus="value" match=".."/>.</seg>
                         <seg xml:lang="en">Utash settlement <certainty cert="low" locus="value" match=".."/>.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1201" notAfter="1500" precision="medium" evidence="палеография">
-                        <seg xml:lang="ru">XIII–XV вв.</seg>
-                        <seg xml:lang="en">XIII-XVth centuries C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="1201" notAfter="1500" precision="medium" evidence="палеография титулатура">
+                     <origDate notBefore="1201" notAfter="1500" precision="medium" evidence="палеография">
                         <seg xml:lang="ru">XIII–XV вв.</seg>
                         <seg xml:lang="en">XIII-XVth centuries C.E.</seg>
                      </origDate>
@@ -111,10 +83,54 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Над надписью 2.</seg>
+                              <seg xml:lang="en">Above Text 2.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru">См. ниже.</seg>
+                           <seg xml:lang="en">See below.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Под надписью 1.</seg>
+                              <seg xml:lang="en">Below Text 1.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                    <handDesc>
+                       <handNote n="2">
+                        <seg xml:lang="ru">Буквы вытянуты по вертикали. Эпсилон овальный, мю с Т-образной серединой, пи с удлиненной перекладиной. Лигатуры омикрон-ипсилон, 
+                           сигма-эпсилон; сокращения.</seg>
+                        <seg xml:lang="en">Elongated letters. Oval epsilon, mu with T-shaped middle, pi with extended horizontal. Ligatures omicron-upsilon, sigma-epsilon; 
+                           abbreviations.</seg>
+                     </handNote>
+                    </handDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-05-01" who="CB">Textparts</change>
          <change when="2015-04-09" who="CB">Andrey's corrections</change>
           <change when="2013-11-07" who="TW">Added image code</change>
          <change when="2012-09-05" who="AG">tags tidied up, several lines translated, lemmata added, text of the inscription corrected, metadata corrected</change>
@@ -140,10 +156,7 @@
    <text>
       <body>
          <div type="bibliography">
-            <listBibl n="1">
-               <bibl n="L1"><!-- Сборник  --><ptr target="bib:b0132"/>, 115–116, № <citedRange>107</citedRange></bibl>
-            </listBibl>
-            <listBibl n="2">
+            <listBibl>
                <bibl n="L1"><!-- Сборник  --><ptr target="bib:b0132"/>, 115–116, № <citedRange>107</citedRange></bibl>
             </listBibl>
          </div>
@@ -202,14 +215,14 @@
             </div>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="inscription" n="1">
+            <div type="textpart" subtype="section" n="1">
                <ab>
                   <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><supplied reason="lost"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex></expan>ς</supplied></name>
                   <lb n="2"/><w lemma="νικάω">ν<supplied reason="lost">ικᾷ</supplied></w>
                   <lb n="3"/><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστό</ex><abbr>ς</abbr></expan></name></persName>
                </ab>
             </div>
-            <div type="textpart" subtype="inscription" n="2">
+            <div type="textpart" subtype="section" n="2">
                <ab>
                   <lb n="1"/><w lemma="ὁ">Ἡ</w> <w lemma="μεταμόρφωσις"><expan><abbr>μετ</abbr><ex>α</ex><abbr>μ</abbr><ex>όρ</ex><abbr>φο<lb n="2" break="no"/>συς</abbr></expan></w> <w lemma="ὁ">τοῦ</w> 
                   <persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName>.

@@ -26,14 +26,6 @@
                      <idno>50449</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
-                  <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
-                     <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
-                     <seg xml:lang="en" n="1">Demonstrative.</seg>
-                     <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
-                     <seg xml:lang="en" n="2">Epitaph.</seg>
-                  </summary>
-               </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
@@ -53,28 +45,7 @@
                            </dimensions>
                         </support>
                      </supportDesc>
-                     <layoutDesc>
-                        <layout ana="f1" n="1">
-                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
-                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
-                        </layout>
-                        <layout ana="f1" n="2">
-                           <seg xml:lang="ru">Над и под крестом.</seg>
-                           <seg xml:lang="en">Above and below the cross.</seg>
-                        </layout>
-                     </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote n="1">
-                        <seg xml:lang="ru">См. ниже.</seg>
-                        <seg xml:lang="en">See below.</seg>
-                     </handNote>
-                     <handNote n="2">
-                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Лигатуры пи-ро, ро-тау.</seg>
-                        <seg xml:lang="en">Lapidary. Ligatures: pi-rho, rho-tau.</seg>
-                        <height unit="cm">0,8–2,8.</height>
-                     </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -82,14 +53,6 @@
                         <seg xml:lang="ru">Горный Крым <certainty cert="low" locus="value" match=".."/>.</seg>
                         <seg xml:lang="en">Mountainous Crimea <certainty cert="low" locus="value" match=".."/>.</seg>
                      </origPlace>
-                     <origDate n="1" notBefore="1413" notAfter="1413" evidence="указание_надписи">
-                        <seg xml:lang="ru">1413 г.</seg>
-                        <seg xml:lang="en">1413 C.E.</seg>
-                     </origDate>
-                     <origDate n="2" notBefore="1413" notAfter="1413" evidence="указание_надписи">
-                        <seg xml:lang="ru">1413 г.</seg>
-                        <seg xml:lang="en">1413 C.E.</seg>
-                     </origDate>
                   </origin>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru"><date when="1999-05">Май 1999 г</date>.</seg>
@@ -112,10 +75,80 @@
                      <seg xml:lang="en">Odessa, Ukraine.</seg>
                   </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
+                        <seg xml:lang="en" n="1">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                              <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru">См. ниже.</seg>
+                           <seg xml:lang="en">See below.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1413" notAfter="1413" evidence="указание_надписи">
+                           <seg xml:lang="ru">1413 г.</seg>
+                           <seg xml:lang="en">1413 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="2">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Над и под крестом.</seg>
+                              <seg xml:lang="en">Above and below the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="2">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Лигатуры пи-ро, ро-тау.</seg>
+                           <seg xml:lang="en">Lapidary. Ligatures: pi-rho, rho-tau.</seg>
+                           <height unit="cm">0,8–2,8.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1413" notAfter="1413" evidence="указание_надписи">
+                           <seg xml:lang="ru">1413 г.</seg>
+                           <seg xml:lang="en">1413 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
       <revisionDesc>
+         <change when="2015-05-01" who="CB">Textparts</change>
          <change when="2015-04-08" who="CB">Andrey's corrections</change>
          <change when="2012-09-11" who="AG">several lines translated, lemma added</change>
           <change when="2012-09-03" who="AL">checked metadata</change>
