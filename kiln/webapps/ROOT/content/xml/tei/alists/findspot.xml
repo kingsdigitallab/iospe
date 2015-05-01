@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Findspots Authority list for IOSPE</title>
+                <editor xml:id="GB">Gabriel Bodard</editor>
+                <editor xml:id="CB">Caroline Barron</editor>
+                <editor xml:id="VP">Vasiliki Papathanasiou</editor>
+            </titleStmt>
+            <publicationStmt>
+                <p>internal use only</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Generated from the tagged EpiDoc and <ref>https://iospe.kcl.ac.uk/indices/findspot.html</ref></p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="#GB" when="2015-05-01">Created outline, stubbed Alushta</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listPlace>
+                <place xml:id="alushta">
+                    <placeName xml:lang="en">Alushta</placeName>
+                    <placeName xml:lang="ru">Алушта</placeName>
+                    <idno type="geonames">http://sws.geonames.org/713513/</idno>
+                    <idno type="pleiades">http://pleiades.stoa.org/places/226517</idno>
+                </place>
+            </listPlace>
+        </body>
+    </text>
+</TEI>
