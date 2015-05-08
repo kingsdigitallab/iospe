@@ -90,7 +90,7 @@
       <form id="jumpForm">
         <div class="row collapse">
           <div class="small-12 columns">
-            <input id="numTxt" name="numTxt" type="text" placeholder="Inscription number"
+            <input id="numTxt" name="numTxt" type="text" placeholder="__jump_to_box_placeholder"
               i18n:attr="placeholder"/>
           </div>
         </div>
@@ -104,7 +104,7 @@
       <form id="simpleSearchForm" method="get" action="{concat('/search/', $lang, '/')}">
         <div class="row collapse">
           <div class="small-12 columns">
-            <input id="query" name="query" type="text" placeholder="Search" i18n:attr="placeholder"/>
+            <input id="query" name="query" type="text" placeholder="__search_box_placeholder" i18n:attr="placeholder"/>
             <input id="top-bar-search-dummy" name="top-bar-search-dummy" type="hidden" value="1"/>
           </div>
         </div>
