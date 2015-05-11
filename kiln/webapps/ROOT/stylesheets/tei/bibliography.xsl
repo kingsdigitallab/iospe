@@ -271,23 +271,21 @@
           <xsl:if test="$surname and ($roleName or $forename)">
             <xsl:text>,</xsl:text>
           </xsl:if>
+          <xsl:if test="$forename">
+            <xsl:text> </xsl:text>
+            <xsl:call-template name="print_name">
+              <xsl:with-param name="name" select="$forename"/>
+              <xsl:with-param name="normalised_name" select="$normalised_forename"/>
+            </xsl:call-template>
+          </xsl:if>
 
           <xsl:if test="$roleName">
             <xsl:text> </xsl:text>
             <xsl:value-of select="$roleName"/>
           </xsl:if>
 
-          <xsl:text> </xsl:text>
-          <xsl:call-template name="print_name">
-            <xsl:with-param name="name" select="$forename"/>
-            <xsl:with-param name="normalised_name" select="$normalised_forename"/>
-          </xsl:call-template>
-
         </xsl:when>
         <xsl:otherwise>
-          <xsl:if test="$roleName">
-            <xsl:value-of select="$roleName"/>
-          </xsl:if>
 
           <xsl:if test="$forename">
             <xsl:text> </xsl:text>
@@ -297,11 +295,18 @@
             </xsl:call-template>
           </xsl:if>
 
-          <xsl:text> </xsl:text>
-          <xsl:call-template name="print_name">
-            <xsl:with-param name="name" select="$surname"/>
-            <xsl:with-param name="normalised_name" select="$normalised_surname"/>
-          </xsl:call-template>
+          <xsl:if test="$surname">
+            <xsl:text> </xsl:text>
+            <xsl:call-template name="print_name">
+              <xsl:with-param name="name" select="$surname"/>
+              <xsl:with-param name="normalised_name" select="$normalised_surname"/>
+            </xsl:call-template>
+          </xsl:if>
+
+          <xsl:if test="$roleName">
+            <xsl:value-of select="$roleName"/>
+          </xsl:if>
+
         </xsl:otherwise>
       </xsl:choose>
 
@@ -339,9 +344,6 @@
 
   <xsl:template match="tei:biblStruct//tei:title">
     <xsl:param name="emphasized" select="false()"/>
-    <xsl:if test=".[@level='s']">
-      <i18n:text key="__series_title_prefix">vol. </i18n:text>
-    </xsl:if>
     <xsl:choose>
       <xsl:when test="$emphasized">
         <em>
@@ -412,6 +414,11 @@
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="scope">
+
+    <xsl:if test="./tei:title[@level = 's']">
+      <xsl:text> </xsl:text>
+      <i18n:text key="__series_title_prefix">vol. </i18n:text>
+    </xsl:if>
 
     <xsl:if test="./tei:biblScope[@type = 'series']">
       <xsl:text> (</xsl:text>
