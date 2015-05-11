@@ -339,6 +339,9 @@
 
   <xsl:template match="tei:biblStruct//tei:title">
     <xsl:param name="emphasized" select="false()"/>
+    <xsl:if test=".[@level='s']">
+      <i18n:text key="__series_title_prefix">vol. </i18n:text>
+    </xsl:if>
     <xsl:choose>
       <xsl:when test="$emphasized">
         <em>
@@ -444,7 +447,7 @@
       <xsl:choose>
         <xsl:when
           test=".[not(self::tei:monogr)]/tei:biblScope[@type = 'vol'] or ./tei:biblScope[@type = 'issue']">
-          <xsl:text>:</xsl:text>
+          <xsl:text>: </xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>, </xsl:text>
