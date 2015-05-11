@@ -155,7 +155,7 @@
       <xsl:when test="$analytic and $monogr and not($series)">
         <xsl:text> </xsl:text>
         <xsl:if test="$monogr/tei:title[@level = 'm']">
-          <xsl:text>In </xsl:text>
+          <i18n:text key="__edited_volumes_prefix">In </i18n:text>
         </xsl:if>
         <xsl:apply-templates select="$monogr" mode="secondary"/>
       </xsl:when>
@@ -166,7 +166,7 @@
       <xsl:when test="$analytic and $series and $monogr">
         <xsl:text> </xsl:text>
         <xsl:if test="$monogr/tei:title[@level = 'm']">
-          <xsl:text>In </xsl:text>
+          <i18n:text key="__edited_volumes_prefix">In </i18n:text>
         </xsl:if>
         <xsl:apply-templates select="$monogr" mode="secondary"/>
         <xsl:text> </xsl:text>
