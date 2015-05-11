@@ -178,29 +178,38 @@
       </xsl:otherwise>
     </xsl:choose>
 
+    <!-- scope (journal)-->
+    <xsl:if test="$monogr/tei:title[@level = 'j']">
+      <xsl:apply-templates select="$monogr" mode="scope"/>
+    </xsl:if>
+
+    <xsl:if
+      test="$analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series)">
+      <xsl:text>. </xsl:text>
+    </xsl:if>
+
     <!-- Location & Publisher-->
     <xsl:if test=".//tei:imprint/tei:pubPlace">
 
-      <xsl:if
-        test="$analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series)">
-        <xsl:text>. </xsl:text>
-      </xsl:if>
-
+      <!-- Location -->
       <xsl:for-each select=".//tei:imprint/tei:pubPlace[@xml:lang = $lang or not(@xml:lang)]">
         <xsl:value-of select="."/>
         <xsl:if test="position() != last()">
           <xsl:text>, </xsl:text>
         </xsl:if>
       </xsl:for-each>
+      <!-- Publisher -->
       <xsl:if test=".//tei:imprint/tei:publisher">
         <xsl:text>: </xsl:text>
         <xsl:value-of select=".//tei:imprint/tei:publisher[@xml:lang = $lang or not(@xml:lang)]"/>
       </xsl:if>
     </xsl:if>
 
-    <!-- scope -->
+    <!-- scope (not journals)-->
+    <xsl:if test="not($monogr/tei:title[@level = 'j'])">
+      <xsl:apply-templates select="$monogr | $analytic" mode="scope"/>
+    </xsl:if>
 
-    <xsl:apply-templates select="$monogr | $analytic" mode="scope"/>
 
 
     <!-- debugging -->
