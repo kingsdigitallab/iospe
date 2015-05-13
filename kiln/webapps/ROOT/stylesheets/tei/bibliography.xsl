@@ -344,16 +344,58 @@
 
   <xsl:template match="tei:biblStruct//tei:title">
     <xsl:param name="emphasized" select="false()"/>
+
+    <xsl:variable name="journal-name" select="normalize-space(.)"/>
+
     <xsl:choose>
-      <xsl:when test="$emphasized">
-        <em>
-          <xsl:apply-templates/>
-        </em>
+      <xsl:when
+        test="
+          @level = 'j' and
+          not(normalize-space(//tei:listBibl[@type = 'periodicals']/tei:bibl[@xml:id = $journal-name]) = '')">
+        <!-- journal is abbreviated -->
+
+        <xsl:variable name="full-journal-name"
+          select='//tei:listBibl[@type = "periodicals"]/tei:bibl[@xml:id = $journal-name]'/>
+        <xsl:choose>
+          <xsl:when test="$emphasized">
+            <em>
+              <xsl:call-template name="full-journal-name">
+                <xsl:with-param name="journal" select="$full-journal-name"/>
+              </xsl:call-template>
+            </em>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="full-journal-name">
+              <xsl:with-param name="journal" select="$full-journal-name"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:apply-templates/>
+        <xsl:choose>
+          <xsl:when test="$emphasized">
+            <em>
+              <xsl:apply-templates/>
+            </em>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates/>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
+
+  </xsl:template>
+
+  <xsl:template name="full-journal-name">
+    <xsl:param name="journal"/>
+    <span data-tooltip="data-tooltip" class="has-tip">
+      <xsl:attribute name="title">
+        <xsl:apply-templates select="$journal/tei:title"/>
+      </xsl:attribute>
+      <xsl:value-of select="$journal/@xml:id"/>
+    </span>
+
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series | tei:bibl" mode="title">
