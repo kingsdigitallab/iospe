@@ -2192,7 +2192,7 @@
   </xsl:template>
 
   <xsl:template match="tei:certainty[@cert='low']">
-    <xsl:text>(?)</xsl:text>
+    <xsl:text> (?)</xsl:text>
   </xsl:template>
 
 </xsl:stylesheet>
