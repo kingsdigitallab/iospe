@@ -868,7 +868,8 @@
                       <xsl:for-each select="//tei:div[@type='bibliography']/tei:listBibl">
                         <xsl:if test="@n">
                           <em>
-                            <i18n:text>Fragment </i18n:text>
+                            <i18n:text>Fragment</i18n:text>
+                            <xsl:text> </xsl:text>
                             <xsl:value-of select="@n"/>
                             <xsl:text>.&#160;</xsl:text>
                           </em>
