@@ -222,7 +222,7 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:value-of
+                <xsl:apply-templates
                   select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
@@ -241,7 +241,7 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:value-of
+                <xsl:apply-templates
                   select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
@@ -353,7 +353,7 @@
 
             <div class="large-9 columns">
               <p>
-                <xsl:value-of select="tei:seg[@xml:lang=$lang]/tei:rs[@type='circumstances']"/>
+                <xsl:apply-templates select="tei:seg[@xml:lang=$lang]/tei:rs[@type='circumstances']"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -378,7 +378,7 @@
 
             <div class="large-9 columns">
               <p>
-                <xsl:value-of
+                <xsl:apply-templates
                   select="tei:history/tei:provenance[@type='observed'][not(@subtype)]/tei:seg[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
@@ -396,7 +396,7 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:value-of select="tei:repository"/>
+                <xsl:apply-templates select="tei:repository"/>
 
                 <xsl:choose>
                   <xsl:when test="tei:idno/text()">
@@ -424,7 +424,7 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:value-of
+                <xsl:apply-templates
                   select="tei:history/tei:provenance[@type='observed'][@subtype='autopsy']/tei:seg[@xml:lang=$lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
@@ -648,7 +648,7 @@
                   <div class="large-9 columns">
                     <p>
                       <xsl:if test="tei:seg[@xml:lang=$lang][normalize-space(.)!='']">
-                        <xsl:value-of select="tei:seg[@xml:lang=$lang]"/>
+                        <xsl:apply-templates select="tei:seg[@xml:lang=$lang]"/>
                         <xsl:text>&#160;</xsl:text>
                       </xsl:if>
                       <xsl:if test="tei:dimensions">
@@ -670,7 +670,7 @@
                 </div>
                 <div class="large-9 columns">
                   <p>
-                    <xsl:value-of
+                    <xsl:apply-templates
                       select="$ms_context/tei:physDesc/tei:handDesc/tei:handNote/tei:seg[@xml:lang=$lang]"/>
                     <xsl:text>&#160;</xsl:text>
                   </p>
@@ -757,7 +757,7 @@
               </div>
               <div class="large-9 columns">
                 <p>
-                  <xsl:value-of
+                  <xsl:apply-templates
                     select="$ms_context/tei:msContents/tei:summary/tei:seg[@xml:lang=$lang]"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
@@ -1048,7 +1048,7 @@
                 </div>
                 <div class="large-9 columns">
                   <p>
-                    <xsl:value-of
+                    <xsl:apply-templates
                       select="//tei:div[@type='bibliography'][@subtype='commentaries'][@n = $fullN or not(@n)]"/>
                     <xsl:text>&#160;</xsl:text>
                   </p>
