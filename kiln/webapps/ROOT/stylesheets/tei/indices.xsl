@@ -18,7 +18,9 @@
   <!-- Pull the right transformation to keep the grouping key unchanged or make it uppercase -->
   <xsl:variable name="transformation">
     <xsl:choose>
-      <xsl:when test="$index=('fragments', 'abbr')">
+      <xsl:when test="
+          $index = ('fragments',
+          'abbr')">
         <xsl:sequence select="$uppercase"/>
       </xsl:when>
       <xsl:otherwise>
@@ -54,13 +56,13 @@
     </xsl:variable>
 
     <xsl:choose>
-      <xsl:when test="$request='Y'">
+      <xsl:when test="$request = 'Y'">
         <xsl:value-of select="$year"/>
       </xsl:when>
-      <xsl:when test="$request='M'">
+      <xsl:when test="$request = 'M'">
         <xsl:value-of select="$month"/>
       </xsl:when>
-      <xsl:when test="$request='D'">
+      <xsl:when test="$request = 'D'">
         <xsl:value-of select="$day"/>
       </xsl:when>
     </xsl:choose>
@@ -75,43 +77,43 @@
   <xsl:template name="indexTitle">
     <!-- KFL - Inscriptions by Date gets title from tocs.xsl, all the rest get the title here -->
     <xsl:choose>
-      <xsl:when test="$index='words' and //str[@name='lang']='lat'">
+      <xsl:when test="$index = 'words' and //str[@name = 'lang'] = 'lat'">
         <i18n:text>Latin Words</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='words' and //str[@name='lang']='grc'">
+      <xsl:when test="$index = 'words' and //str[@name = 'lang'] = 'grc'">
         <i18n:text>Greek Words</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='fragments' and //str[@name='lang']='lat'">
+      <xsl:when test="$index = 'fragments' and //str[@name = 'lang'] = 'lat'">
         <i18n:text>Fragments of Text in Latin</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='fragments' and //str[@name='lang']='grc'">
+      <xsl:when test="$index = 'fragments' and //str[@name = 'lang'] = 'grc'">
         <i18n:text>Fragments of Text in Greek</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='attested' and //str[@name='persName-type']='attested'">
+      <xsl:when test="$index = 'attested' and //str[@name = 'persName-type'] = 'attested'">
         <i18n:text>Personal Names</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='symbols'">
+      <xsl:when test="$index = 'symbols'">
         <i18n:text>Symbols</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='numerals'">
+      <xsl:when test="$index = 'numerals'">
         <i18n:text>Numerals</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='ligatures'">
+      <xsl:when test="$index = 'ligatures'">
         <i18n:text>Ligatured characters</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='death'">
+      <xsl:when test="$index = 'death'">
         <i18n:text>Age at Death</i18n:text>
       </xsl:when>
-      <xsl:when test="$index=concat('findspot-',$lang)">
+      <xsl:when test="$index = concat('findspot-', $lang)">
         <i18n:text>Find Places</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='attested'">
+      <xsl:when test="$index = 'attested'">
         <i18n:text>Personal names</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='monument-type'">
+      <xsl:when test="$index = 'monument-type'">
         <i18n:text>Inscriptions by Monument Type</i18n:text>
       </xsl:when>
-      <xsl:when test="$index='document-type'">
+      <xsl:when test="$index = 'document-type'">
         <i18n:text>Inscriptions by Category of Text</i18n:text>
       </xsl:when>
       <xsl:otherwise>
@@ -126,9 +128,11 @@
         <xsl:for-each select="//letters/letter">
           <xsl:variable name="location">
             <xsl:choose>
-              <xsl:when test="$ancient-lang=('grc', 'all')">
+              <xsl:when test="
+                  $ancient-lang = ('grc',
+                  'all')">
                 <xsl:value-of
-                  select="translate(translate(., $unicode, $betacode),$lowercase, $uppercase)"/>
+                  select="translate(translate(., $unicode, $betacode), $lowercase, $uppercase)"/>
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of select="."/>
@@ -149,9 +153,12 @@
               </xsl:attribute>
 
               <xsl:choose>
-                <xsl:when test="$ancient-lang=('grc', 'all')">
+                <xsl:when
+                  test="
+                    $ancient-lang = ('grc',
+                    'all')">
                   <xsl:value-of
-                    select="translate(translate(., $betacode, $unicode),$lowercase, $uppercase)"/>
+                    select="translate(translate(., $betacode, $unicode), $lowercase, $uppercase)"/>
                 </xsl:when>
                 <xsl:otherwise>
                   <xsl:value-of select="."/>
@@ -173,7 +180,7 @@
 
     <xsl:call-template name="indices_bracket_info"/>
 
-    <xsl:if test="$index='attested'">
+    <xsl:if test="$index = 'attested'">
       <xsl:call-template name="indices_dashes_info"/>
     </xsl:if>
 
@@ -188,37 +195,41 @@
           <!-- Tests if the index element is an array or a string
                 Some solr fields are multivalued, documents can belong to more than one category
                 -->
-          <xsl:when test="//doc/str[@name=$index]">
+          <xsl:when test="//doc/str[@name = $index]">
             <xsl:for-each-group select="//doc"
-              group-by="translate(
-                          translate(
-                            normalize-space(str[@name=$index]), 
-                            '[].', 
-                            ''), 
-                          $lowercase, 
-                          $transformation)">
+              group-by="
+                translate(
+                translate(
+                normalize-space(str[@name = $index]),
+                '[].',
+                ''),
+                $lowercase,
+                $transformation)">
               <xsl:sort order="ascending"
-                select="lower-case(
-                          translate(
-                            normalize-unicode(
-                              current-grouping-key(),
-                              'NFD'),
-                            '&#x0301;&#x0313;&#x0314;&#x0342;',
-                          '')
-                        )"/>
+                select="
+                  lower-case(
+                  translate(
+                  normalize-unicode(
+                  current-grouping-key(),
+                  'NFD'),
+                  '&#x0301;&#x0313;&#x0314;&#x0342;',
+                  '')
+                  )"/>
               <xsl:call-template name="index_group"/>
             </xsl:for-each-group>
           </xsl:when>
-          <xsl:when test="//doc/arr[@name=concat($index, '-', $lang)]">
-            <xsl:for-each-group select="//doc" group-by="arr[@name=concat($index, '-', $lang)]/str">
+          <xsl:when test="//doc/arr[@name = concat($index, '-', $lang)]">
+            <xsl:for-each-group select="//doc"
+              group-by="arr[@name = concat($index, '-', $lang)]/str">
               <xsl:sort order="ascending"
-                select="translate(  
-                          normalize-unicode(
-                            current-grouping-key(),
-                            'NFD'),
-                          '&#x0301;&#x0313;&#x0314;&#x0342;',
-                          '')
-                        "/>
+                select="
+                  translate(
+                  normalize-unicode(
+                  current-grouping-key(),
+                  'NFD'),
+                  '&#x0301;&#x0313;&#x0314;&#x0342;',
+                  '')
+                  "/>
               <xsl:call-template name="index_group"/>
             </xsl:for-each-group>
           </xsl:when>
@@ -232,18 +243,18 @@
 
   <xsl:template name="link2inscription">
     <a class="link2inscription" href="/{str[@name='file']}{$kiln:url-lang-suffix}.html">
-      <xsl:if test="str[@name='sup']">
+      <xsl:if test="str[@name = 'sup']">
         <xsl:text>[</xsl:text>
       </xsl:if>
-      <xsl:if test="str[@name='cert']">
+      <xsl:if test="str[@name = 'cert']">
         <xsl:text>?</xsl:text>
       </xsl:if>
       <xsl:call-template name="formatInscrNum">
-        <xsl:with-param name="num" select="str[@name='tei-id']"/>
+        <xsl:with-param name="num" select="str[@name = 'tei-id']"/>
         <xsl:with-param name="printCorpus" select="true()"/>
       </xsl:call-template>
-      <xsl:if test="arr[@name='divloc']">
-        <xsl:for-each select="arr[@name='divloc']/str">
+      <xsl:if test="arr[@name = 'divloc']">
+        <xsl:for-each select="arr[@name = 'divloc']/str">
           <xsl:if test="not(preceding-sibling::str)">
             <xsl:text>.</xsl:text>
           </xsl:if>
@@ -251,96 +262,126 @@
           <xsl:text>.</xsl:text>
         </xsl:for-each>
       </xsl:if>
-      <xsl:if test="not(str[@name='line']='0')">
+      <xsl:if test="not(str[@name = 'line'] = '0')">
         <xsl:choose>
-          <xsl:when test="not(str[@name='line'])"/>
-          <xsl:when test="arr[@name='divloc']"/>
+          <xsl:when test="not(str[@name = 'line'])"/>
+          <xsl:when test="arr[@name = 'divloc']"/>
           <xsl:otherwise>
             <xsl:text>.</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
-        <xsl:value-of select="str[@name='line']"/>
+        <xsl:value-of select="str[@name = 'line']"/>
       </xsl:if>
-      <xsl:if test="str[@name='sup']">
+      <xsl:if test="str[@name = 'sup']">
         <xsl:text>]</xsl:text>
       </xsl:if>
     </a>
   </xsl:template>
 
   <xsl:template name="index_group">
+    <xsl:sort
+      select="
+        if ($index = 'death') then
+          number(iospe:sort-dur(current-grouping-key(), 'Y'))
+        else
+          ()"/>
+    <xsl:sort
+      select="
+        if ($index = 'death') then
+          number(iospe:sort-dur(current-grouping-key(), 'M'))
+        else
+          ()"/>
+    <xsl:sort
+      select="
+        if ($index = 'death') then
+          number(iospe:sort-dur(current-grouping-key(), 'D'))
+        else
+          ()"/>
+    
     <!-- Only sort for death index (Solr does not handle ISO-duration -->
-    <xsl:sort
-      select="if ($index='death') then number(iospe:sort-dur(current-grouping-key(), 'Y')) else ()"/>
-    <xsl:sort
-      select="if ($index='death') then number(iospe:sort-dur(current-grouping-key(), 'M')) else ()"/>
-    <xsl:sort
-      select="if ($index='death') then number(iospe:sort-dur(current-grouping-key(), 'D')) else ()"/>
 
     <xsl:variable name="display_key">
-      <xsl:value-of select="replace(current-grouping-key(), '_' , ' ')"/>
+      <xsl:choose>
+        <xsl:when
+          test="$index = concat('findspot-', $lang) and /aggregation/AL//tei:listPlace/tei:place[@xml:id = lower-case(current-grouping-key())]">
+          <xsl:value-of
+            select="/aggregation/AL//tei:listPlace/tei:place[@xml:id = lower-case(current-grouping-key())]/tei:placeName[@xml:lang = $lang]"
+          />
+        </xsl:when>
+        <xsl:when
+          test="$index = 'symbols' and /aggregation/AL_symbols//tei:list/tei:item[@xml:id = current-grouping-key()]">
+          <xsl:value-of
+            select="/aggregation/AL_symbols//tei:list/tei:item[@xml:id = current-grouping-key()]/tei:*[@xml:lang = $lang]"
+          />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/>
+        </xsl:otherwise>
+      </xsl:choose>
+
     </xsl:variable>
 
-    <xsl:if test="str[@name='file'] != ''">
+    <xsl:if test="str[@name = 'file'] != ''">
       <tr class="index_row row">
         <th class="large-2">
           <xsl:choose>
-            <xsl:when test="$index='attested'">
-              <xsl:value-of select="str[@name=concat('attested-', $lang)]"/>
+            <xsl:when test="$index = 'attested'">
+              <xsl:value-of select="str[@name = concat('attested-', $lang)]"/>
             </xsl:when>
-            <xsl:when test="str[@name='num-value']">
+            <xsl:when test="str[@name = 'num-value']">
               <xsl:value-of select="$display_key"/>
               <small>
                 <xsl:text> (</xsl:text>
-                <xsl:value-of select="str[@name='num-value']"/>
+                <xsl:value-of select="str[@name = 'num-value']"/>
                 <xsl:text>)</xsl:text>
               </small>
             </xsl:when>
-            <xsl:when test="str[@name='num-atleast'] and str[@name='num-atmost']">
+            <xsl:when test="str[@name = 'num-atleast'] and str[@name = 'num-atmost']">
               <xsl:value-of select="$display_key"/>
               <small>
                 <xsl:text> (</xsl:text>
-                <xsl:value-of select="str[@name='num-atleast']"/>
+                <xsl:value-of select="str[@name = 'num-atleast']"/>
                 <xsl:text>-</xsl:text>
-                <xsl:value-of select="str[@name='num-atmost']"/>
+                <xsl:value-of select="str[@name = 'num-atmost']"/>
                 <xsl:text>)</xsl:text>
               </small>
             </xsl:when>
-            <xsl:when test="str[@name='num-atleast']">
+            <xsl:when test="str[@name = 'num-atleast']">
               <xsl:value-of select="$display_key"/>
               <small>
                 <xsl:text> (</xsl:text>
-                <xsl:value-of select="str[@name='num-atleast']"/>
+                <xsl:value-of select="str[@name = 'num-atleast']"/>
                 <xsl:text>)</xsl:text>
               </small>
             </xsl:when>
-            <xsl:when test="str[@name='num-atmost']">
+            <xsl:when test="str[@name = 'num-atmost']">
               <xsl:value-of select="$display_key"/>
               <small>
                 <xsl:text> (</xsl:text>
-                <xsl:value-of select="str[@name='num-atmost']"/>
+                <xsl:value-of select="str[@name = 'num-atmost']"/>
                 <xsl:text>)</xsl:text>
               </small>
             </xsl:when>
-            <xsl:when test="$index='death'">
+            <xsl:when test="$index = 'death'">
               <xsl:variable name="y" select="iospe:sort-dur(current-grouping-key(), 'Y')"/>
               <xsl:variable name="m" select="iospe:sort-dur(current-grouping-key(), 'M')"/>
               <xsl:variable name="d" select="iospe:sort-dur(current-grouping-key(), 'D')"/>
-              <xsl:if test="$y!=''">
+              <xsl:if test="$y != ''">
                 <xsl:value-of select="$y"/>
                 <xsl:text> year</xsl:text>
-                <xsl:if test="$y &gt; 1">s</xsl:if>
+                <xsl:if test="$y > 1">s</xsl:if>
                 <xsl:text> </xsl:text>
               </xsl:if>
-              <xsl:if test="$m!=''">
+              <xsl:if test="$m != ''">
                 <xsl:value-of select="$m"/>
                 <xsl:text> month</xsl:text>
-                <xsl:if test="$m &gt; 1">s</xsl:if>
+                <xsl:if test="$m > 1">s</xsl:if>
                 <xsl:text> </xsl:text>
               </xsl:if>
-              <xsl:if test="$d!=''">
+              <xsl:if test="$d != ''">
                 <xsl:value-of select="$m"/>
                 <xsl:text> day</xsl:text>
-                <xsl:if test="$m &gt; 1">s</xsl:if>
+                <xsl:if test="$m > 1">s</xsl:if>
                 <xsl:text> </xsl:text>
               </xsl:if>
             </xsl:when>
@@ -360,8 +401,8 @@
         <td class="large-10">
           <ul class="inline-list">
             <xsl:for-each select="current-group()">
-              <xsl:sort select="number(substring-before(str[@name='tei-id'], '.'))"/>
-              <xsl:sort select="number(substring-after(str[@name='tei-id'], '.'))"/>
+              <xsl:sort select="number(substring-before(str[@name = 'tei-id'], '.'))"/>
+              <xsl:sort select="number(substring-after(str[@name = 'tei-id'], '.'))"/>
 
               <li>
                 <xsl:call-template name="link2inscription"/>

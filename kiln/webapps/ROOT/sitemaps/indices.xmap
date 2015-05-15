@@ -493,6 +493,7 @@
       <map:match pattern="findspot-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/findspot-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/findspot.xml" element="AL"/>
           <map:part element="index"
             src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-{1}:*&amp;sort=findspot-{1}%20asc&amp;rows=999"
           />
@@ -511,6 +512,7 @@
       <map:match pattern="findspot.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/findspot.html"/>
+          <map:part src="../content/xml/tei/alists/findspot.xml" element="AL"/>
           <map:part element="index"
             src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999"
           />
@@ -608,6 +610,7 @@
       <map:match pattern="*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
+          <map:part src="../content/xml/tei/alists/symbols.xml" element="AL_symbols"/>
           <map:part element="index"
             src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
           />
@@ -626,6 +629,7 @@
       <map:match pattern="*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
+          <map:part src="../content/xml/tei/alists/symbols.xml" element="AL_symbols"/>
           <map:part element="index"
             src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
           />
