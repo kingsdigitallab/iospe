@@ -470,6 +470,10 @@
           <xsl:choose>
             <xsl:when test="tei:div[@subtype = 'inscription'][@n]">
               <xsl:for-each select="tei:div[@subtype = 'inscription'][@n]">
+                <xsl:call-template name="do_epigraphic_field">
+                  <xsl:with-param name="fullN" select="concat($f-n, '.', @n)"/>
+                  <xsl:with-param name="nestedTitles" select="true()"/>
+                </xsl:call-template>
                 <xsl:call-template name="do_textpart">
                   <xsl:with-param name="fullN" select="concat($f-n, '.', @n)"/>
                   <xsl:with-param name="nestedTitles" select="true()"/>
@@ -477,6 +481,10 @@
               </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
+              <xsl:call-template name="do_epigraphic_field">
+                <xsl:with-param name="fullN" select="concat($f-n, '.')"/>
+                <xsl:with-param name="nestedTitles" select="true()"/>
+              </xsl:call-template>
               <xsl:call-template name="do_textpart">
                 <xsl:with-param name="fullN" select="concat($f-n, '.')"/>
                 <xsl:with-param name="nestedTitles" select="true()"/>
@@ -511,12 +519,18 @@
           <xsl:choose>
             <xsl:when test="descendant::tei:div[@type = 'textpart'][@n]">
               <xsl:for-each select="descendant::tei:div[@type = 'textpart'][@n]">
+
+                <xsl:call-template name="do_epigraphic_field">
+                  <xsl:with-param name="fullN" select="@n"/>
+                </xsl:call-template>
                 <xsl:call-template name="do_textpart">
                   <xsl:with-param name="fullN" select="@n"/>
                 </xsl:call-template>
               </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
+
+              <xsl:call-template name="do_epigraphic_field"/>
               <xsl:call-template name="do_textpart"/>
             </xsl:otherwise>
           </xsl:choose>
@@ -565,7 +579,7 @@
   </xsl:template>
 
 
-  <xsl:template name="do_textpart">
+  <xsl:template name="do_epigraphic_field">
     <xsl:param name="nestedTitles" select="false()"/>
     <xsl:param name="fullN"/>
 
@@ -722,6 +736,22 @@
 
       </div>
     </div>
+  </xsl:template>
+
+  <xsl:template name="do_textpart">
+    <xsl:param name="nestedTitles" select="false()"/>
+    <xsl:param name="fullN"/>
+
+    <xsl:variable name="f_n"
+      select="
+        if (contains($fullN, '.'))
+        then
+          substring-before($fullN, '.')
+        else
+          $fullN"/>
+    <xsl:variable name="tx_n" select="substring-after($fullN, '.')"/>
+
+    <xsl:variable name="ms_context" select="//tei:msPart[@n = $fullN] | //tei:msDesc[not($fullN)]"/>
 
     <div>
       <xsl:attribute name="class">
