@@ -499,42 +499,55 @@
       <xsl:otherwise>
         <!-- support section per fragment, if any -->
         <xsl:for-each select="//tei:msDesc/tei:msPart">
+          <xsl:variable name="$context_mspart" select="."/>
+
           <xsl:if
             test="
-              tei:support/tei:objectType
-              | tei:support/tei:material
-              | tei:support/tei:p
-              | tei:provenance
-              | tei:support/tei:dimensions
-              | tei:origPlace">
+              descendant::tei:support/tei:objectType
+              | descendant::tei:support/tei:material
+              | descendant::tei:support/tei:p
+              | descendant::tei:provenance
+              | descendant::tei:support/tei:dimensions
+              | descendant::tei:origPlace">
             <xsl:apply-templates select="." mode="do_fragment_or_monument">
               <xsl:with-param name="n" select="@n"/>
             </xsl:apply-templates>
           </xsl:if>
         </xsl:for-each>
 
+        <xsl:choose>
+          <xsl:when
+            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n][descendant::tei:origDate][descendant::tei:msContents]">
+            <!-- multiple epigraphic fields, each with its corresponding textpart -->
+            <xsl:for-each
+              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n]">
+              <xsl:call-template name="do_epigraphic_field">
+                <xsl:with-param name="fullN" select="@n"/>
+              </xsl:call-template>
+              <xsl:call-template name="do_textpart">
+                <xsl:with-param name="fullN" select="@n"/>
+              </xsl:call-template>
+            </xsl:for-each>
+          </xsl:when>
+          <xsl:when
+            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n]">
+            <!-- multiple epigraphic fields, followed by a single textpart -->
+            <xsl:for-each
+              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n]">
+              <xsl:call-template name="do_epigraphic_field">
+                <xsl:with-param name="fullN" select="@n"/>
+              </xsl:call-template>
+            </xsl:for-each>
+            <xsl:call-template name="do_textpart"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <!-- single epigraphic field, followed by a single textpart -->
+            <xsl:call-template name="do_epigraphic_field"/>
+            <xsl:call-template name="do_textpart"/>
+          </xsl:otherwise>
 
-        <!-- Whole object: common entry point for physical obj metadata and inscription(s) -->
-        <xsl:for-each select="//tei:div[@type = 'edition']">
-          <xsl:choose>
-            <xsl:when test="descendant::tei:div[@type = 'textpart'][@n]">
-              <xsl:for-each select="descendant::tei:div[@type = 'textpart'][@n]">
+        </xsl:choose>
 
-                <xsl:call-template name="do_epigraphic_field">
-                  <xsl:with-param name="fullN" select="@n"/>
-                </xsl:call-template>
-                <xsl:call-template name="do_textpart">
-                  <xsl:with-param name="fullN" select="@n"/>
-                </xsl:call-template>
-              </xsl:for-each>
-            </xsl:when>
-            <xsl:otherwise>
-
-              <xsl:call-template name="do_epigraphic_field"/>
-              <xsl:call-template name="do_textpart"/>
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:for-each>
         <xsl:text> </xsl:text>
 
       </xsl:otherwise>
@@ -583,6 +596,8 @@
     <xsl:param name="nestedTitles" select="false()"/>
     <xsl:param name="fullN"/>
 
+    <!-- change context for this template to be the actual ms_context (mspart or msdesc) -->
+
     <xsl:variable name="f_n"
       select="
         if (contains($fullN, '.'))
@@ -608,7 +623,7 @@
 
       <div class="large-2 columns">
         <xsl:choose>
-          <xsl:when test="self::tei:div[@type = 'textpart']/@n">
+          <xsl:when test="$ms_context/@n">
             <xsl:attribute name="class">
               <xsl:text>large-2 columns wrap</xsl:text>
             </xsl:attribute>
@@ -769,7 +784,7 @@
 
           <div class="large-2 columns">
             <xsl:choose>
-              <xsl:when test="self::tei:div[@type = 'textpart']/@n">
+              <xsl:when test="$f_n">
                 <xsl:attribute name="class">
                   <xsl:text>large-2 columns wrap</xsl:text>
                 </xsl:attribute>
@@ -788,7 +803,7 @@
                       <xsl:value-of select="substring-after($fullN, '.')"/>
                     </xsl:when>
                     <xsl:otherwise>
-                      <xsl:value-of select="@n"/>
+                      <xsl:value-of select="$fullN"/>
                     </xsl:otherwise>
                   </xsl:choose>
                 </h2>
@@ -1133,10 +1148,9 @@
                   </h6>
                 </div>
                 <div class="large-9 columns">
-                  <p>
-                    <xsl:apply-templates mode="multipara"
-                      select="//tei:div[@type = 'apparatus'][@n = $fullN or not(@n)]"/>
-                  </p>
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type = 'apparatus'][@n = $fullN or not(@n)]"/>
+
                 </div>
               </div>
 
@@ -1161,18 +1175,23 @@
                 <i18n:text>not usefully translatable</i18n:text>. </xsl:when>
               <xsl:when test="//tei:div[@type = 'translation'][@n = 'notyet'][@xml:lang = $lang]">
                 <i18n:text>No translation yet (2010)</i18n:text>. </xsl:when>
+              <xsl:when test="@n">
+                <xsl:apply-templates mode="multipara"
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"
+                />
+              </xsl:when>
+              <xsl:when test="//tei:div[@type = 'translation']/tei:div[@type = 'textpart'][@n]">
+                <xsl:for-each
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n]">
+                  <span class="textpartnum">
+                    <xsl:value-of select="@n"/>
+                  </span>
+                  <xsl:apply-templates mode="multipara"/>
+                </xsl:for-each>
+              </xsl:when>
               <xsl:otherwise>
-                <xsl:choose>
-                  <xsl:when test="@n">
-                    <xsl:apply-templates mode="multipara"
-                      select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"
-                    />
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:apply-templates mode="multipara"
-                      select="//tei:div[@type = 'translation'][@xml:lang = $lang]"/>
-                  </xsl:otherwise>
-                </xsl:choose>
+                <xsl:apply-templates mode="multipara"
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]"/>
               </xsl:otherwise>
             </xsl:choose>
             <xsl:text>&#160;</xsl:text>
@@ -1281,6 +1300,7 @@
   </xsl:template>
 
   <xsl:template match="tei:div/tei:head"/>
+
 
   <!-- Mode multipara -->
   <xsl:template match="tei:p | tei:ab" mode="multipara">
