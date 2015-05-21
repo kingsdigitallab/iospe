@@ -517,10 +517,10 @@
 
         <xsl:choose>
           <xsl:when
-            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n][descendant::tei:origDate][descendant::tei:msContents]">
+            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n][descendant::tei:origDate][descendant::tei:msContents]">
             <!-- multiple epigraphic fields, each with its corresponding textpart -->
             <xsl:for-each
-              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n]">
+              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n]">
               <xsl:call-template name="do_epigraphic_field">
                 <xsl:with-param name="fullN" select="@n"/>
               </xsl:call-template>
@@ -530,10 +530,10 @@
             </xsl:for-each>
           </xsl:when>
           <xsl:when
-            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n]">
+            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n]">
             <!-- multiple epigraphic fields, followed by a single textpart -->
             <xsl:for-each
-              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][descendant::tei:handDesc][@n]">
+              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n]">
               <xsl:call-template name="do_epigraphic_field">
                 <xsl:with-param name="fullN" select="@n"/>
               </xsl:call-template>
