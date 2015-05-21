@@ -445,13 +445,13 @@
     </xsl:if>
 
 
-    <xsl:if test="self::tei:monogr/tei:biblScope[@type = 'vol']">
+    <xsl:if test="self::tei:monogr/tei:biblScope[@unit = 'vol']">
       <xsl:if test="tei:title[@level = 'm']">
         <xsl:text>, </xsl:text>
         <i18n:text>vol</i18n:text>
       </xsl:if>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="./tei:biblScope[@type = 'vol']"/>
+      <xsl:value-of select="./tei:biblScope[@unit = 'vol']"/>
     </xsl:if>
   </xsl:template>
 
@@ -462,47 +462,47 @@
       <i18n:text key="__series_title_prefix">vol. </i18n:text>
     </xsl:if>
 
-    <xsl:if test="./tei:biblScope[@type = 'series']">
+    <xsl:if test="./tei:biblScope[@unit = 'series']">
       <xsl:text> (</xsl:text>
       <i18n:text>Series</i18n:text>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="./tei:biblScope[@type = 'series']"/>
+      <xsl:value-of select="./tei:biblScope[@unit = 'series']"/>
       <xsl:text>)</xsl:text>
     </xsl:if>
 
-    <xsl:if test=".[not(self::tei:monogr)]/tei:biblScope[@type = 'vol']">
+    <xsl:if test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol']">
       <xsl:text> </xsl:text>
-      <xsl:value-of select="./tei:biblScope[@type = 'vol']"/>
+      <xsl:value-of select="./tei:biblScope[@unit = 'vol']"/>
     </xsl:if>
 
     <xsl:choose>
       <xsl:when
-        test=".[not(self::tei:monogr)]/tei:biblScope[@type = 'vol'] and (./tei:biblScope[@type = 'issue'] or ./tei:biblScope[@type = 'part'])">
+        test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] and (./tei:biblScope[@unit = 'issue'] or ./tei:biblScope[@unit = 'part'])">
         <xsl:text>.</xsl:text>
       </xsl:when>
-      <xsl:when test="./tei:biblScope[@type = 'issue']">
+      <xsl:when test="./tei:biblScope[@unit = 'issue']">
         <xsl:text> </xsl:text>
       </xsl:when>
     </xsl:choose>
 
-    <xsl:if test="./tei:biblScope[@type = 'issue']">
-      <xsl:value-of select="./tei:biblScope[@type = 'issue'][@xml:lang = $lang or not(@xml:lang)]"/>
+    <xsl:if test="./tei:biblScope[@unit = 'issue']">
+      <xsl:value-of select="./tei:biblScope[@unit = 'issue'][@xml:lang = $lang or not(@xml:lang)]"/>
     </xsl:if>
-    <xsl:if test="./tei:biblScope[@type = 'part']">
-      <xsl:value-of select="./tei:biblScope[@type = 'part'][@xml:lang = $lang or not(@xml:lang)]"/>
+    <xsl:if test="./tei:biblScope[@unit = 'part']">
+      <xsl:value-of select="./tei:biblScope[@unit = 'part'][@xml:lang = $lang or not(@xml:lang)]"/>
     </xsl:if>
 
-    <xsl:if test="./tei:biblScope[@type = 'pp']">
+    <xsl:if test="./tei:biblScope[@unit = 'pp']">
       <xsl:choose>
         <xsl:when
-          test=".[not(self::tei:monogr)]/tei:biblScope[@type = 'vol'] or ./tei:biblScope[@type = 'issue']">
+          test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] or ./tei:biblScope[@unit = 'issue']">
           <xsl:text>: </xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>, </xsl:text>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:for-each select="./tei:biblScope[@type = 'pp']">
+      <xsl:for-each select="./tei:biblScope[@unit = 'pp']">
         <xsl:value-of select="."/>
         <xsl:if test="position() != last()">
           <xsl:text>, </xsl:text>
