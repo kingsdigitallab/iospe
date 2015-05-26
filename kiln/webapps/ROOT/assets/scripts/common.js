@@ -14,7 +14,9 @@ requirejs.config({
         "jquery-ui": "vendor/jquery-ui/jquery-ui.min",
         "highlightjs": "vendor/highlightjs/highlight.pack",
         "purl": "vendor/purl/purl",
-        "app": "app"
+        "app": "app",
+        "leaflet": "vendor/leaflet/dist/leaflet",
+        "leaflet-groupedlayercontrol": "vendor/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min",
 
     },
     shim: {
