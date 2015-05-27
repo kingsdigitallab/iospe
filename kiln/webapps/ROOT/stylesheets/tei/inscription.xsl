@@ -657,9 +657,9 @@
 
       <div class="large-10 columns details">
         <xsl:for-each select="$ms_context/tei:physDesc//tei:layout[@n = $fullN or not(@n)]">
-          <xsl:if test="@ana">
+             <!-- Faces code deprecated -->
+         <!--<xsl:if test="@ana">
 
-            <!-- Faces code -->
             <div class="row">
               <div class="large-3 columns">
                 <h6>
@@ -673,7 +673,7 @@
                 </p>
               </div>
             </div>
-          </xsl:if>
+          </xsl:if>-->
 
           <!-- Placement of text (If exists) -->
           <xsl:if test="tei:seg">
