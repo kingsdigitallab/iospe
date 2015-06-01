@@ -289,10 +289,7 @@
   </xsl:template>
 
   <xsl:template match="tei:divGen[@type='pleiadesmap']">
-    <iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-      src="//maps.google.com/maps?q=http:%2F%2Fepiduke.cch.kcl.ac.uk%2Fblacksea.kml&amp;ie=UTF8&amp;t=h&amp;vpsrc=6&amp;ll=44.824708,34.584961&amp;spn=7.48047,14.0625&amp;z=5&amp;output=embed">
-      <xsl:comment>testing</xsl:comment>
-    </iframe>
+    <div id="pleiadesmap" style="height:400px"></div>
     <br/>
     <small>
       <a

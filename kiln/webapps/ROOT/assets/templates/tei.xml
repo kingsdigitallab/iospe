@@ -12,6 +12,19 @@
   </kiln:parent>
 
   <kiln:child>
+    
+    <kiln:block name="css">
+      <kiln:super/>
+      <link href="{$kiln:assets-path}/scripts/vendor/leaflet/dist/leaflet.css"
+        rel="stylesheet" type="text/css"/>
+    </kiln:block>
+
+    <kiln:block name="css">
+      <kiln:super/>
+      <link href="{$kiln:assets-path}/scripts/vendor/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min.css"
+        rel="stylesheet" type="text/css"/>
+    </kiln:block>
+
     <kiln:block name="title">
       <kiln:super/>
       <xsl:value-of select="/aggregation/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@xml:lang=$lang]" />

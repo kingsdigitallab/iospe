@@ -16,8 +16,7 @@ requirejs.config({
         "purl": "vendor/purl/purl",
         "app": "app",
         "leaflet": "vendor/leaflet/dist/leaflet",
-        "leaflet-groupedlayercontrol": "vendor/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min",
-
+        "leaflet-groupedlayercontrol": "vendor/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min"
     },
     shim: {
         "jquery-ui": {
@@ -26,6 +25,9 @@ requirejs.config({
             'jquery'
             ]
         },
+        "leaflet-groupedlayercontrol": {
+            deps: ['leaflet']
+        }
     }
 });
 
