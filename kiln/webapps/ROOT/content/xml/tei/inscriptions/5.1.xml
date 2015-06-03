@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -94,7 +94,52 @@
                </history>
             </msDesc>
          </sourceDesc>
-      </fileDesc><encodingDesc><listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef></encodingDesc>
+      </fileDesc>
+      <encodingDesc>
+         <listPrefixDef><prefixDef matchPattern="(.+)" replacementPattern="../alists/bibliography.xml#$1" ident="bib"/></listPrefixDef>
+            <charDecl>
+               <glyph xml:id="dipunct">
+                  <charProp>
+                     <localName>glyph-display</localName>
+                     <value>:</value>
+                  </charProp>
+                  <charProp>
+                     <localName>text-display</localName>
+                     <value>dipunct</value>
+                  </charProp>
+               </glyph>
+               <glyph xml:id="leaf">
+                  <charProp>
+                     <localName>glyph-display</localName>
+                     <value>&#x2766;</value>
+                  </charProp>
+                  <charProp>
+                     <localName>text-display</localName>
+                     <value>leaf</value>
+                  </charProp>
+               </glyph>
+               <glyph xml:id="stauros">
+                  <charProp>
+                     <localName>glyph-display</localName>
+                     <value>+</value>
+                  </charProp>
+                  <charProp>
+                     <localName>text-display</localName>
+                     <value>stauros</value>
+                  </charProp>
+               </glyph>
+               <glyph xml:id="staurogram">
+                  <charProp>
+                     <localName>glyph-display</localName>
+                     <value>&#x2ce8;</value>
+                  </charProp>
+                  <charProp>
+                     <localName>text-display</localName>
+                     <value>staurogram</value>
+                  </charProp>
+               </glyph>
+            </charDecl>
+      </encodingDesc>
       <revisionDesc>
          <change when="2012-11-27" who="AL">English toponyms in commentary inserted</change>
          <change when="2012-08-16" who="ΑG">Greek lemmata corrected</change>
@@ -139,7 +184,7 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
                <ab>
-                <lb n="1"/><date><num value="6960">ςϠξ</num>,
+                <lb n="1"/><date><num value="6960">ςϠξ</num>, <g ref="#stauros"/>
                 <lb n="2"/><w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w>
                    <app type="alternative"><lem><num value="13">ιγ</num></lem><rdg><num value="13">ι<surplus>γ</surplus></num></rdg></app></date>.
                 <lb n="3"/><w lemma="τέλος">Τέλος</w> <w lemma="λαμβάνω"><expan><abbr>ἔλα</abbr><ex>βε</ex></expan></w>
