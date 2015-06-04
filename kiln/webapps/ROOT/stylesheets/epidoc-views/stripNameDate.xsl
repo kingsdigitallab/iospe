@@ -8,7 +8,7 @@ description: simple stylesheet to run on the div[edition] as a preliminary step
     Strips out from the XML all <rs>, <persName>, <name>, <placeName> ...
 
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0">
 
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="no"/>
     

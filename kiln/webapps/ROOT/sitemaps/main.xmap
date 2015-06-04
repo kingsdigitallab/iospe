@@ -181,6 +181,7 @@
 
       <map:match pattern="*.xml">
         <map:generate src="../content/xml/tei/inscriptions/{1}.xml"/>
+        <map:transform type="xinclude" />
         <map:serialize type="xml"/>
       </map:match>
 
@@ -252,6 +253,7 @@
 
       <map:match pattern="stripNameDate/*">
         <map:generate src="../content/xml/tei/inscriptions/{1}"/>
+        <map:transform type="xinclude" />
         <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
