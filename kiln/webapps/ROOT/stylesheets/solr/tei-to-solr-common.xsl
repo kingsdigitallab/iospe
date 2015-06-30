@@ -90,7 +90,7 @@
     </field>
   </xsl:template>
 
-  <xsl:template match="tei:titleStmt/tei:title[@xml:lang]"
+  <xsl:template match="tei:titleStmt/tei:title[@xml:lang][not(@n=1)]"
     mode="document-metadata document-metadata-indispensible">
     <field name="document-title">
       <xsl:value-of select="local:clean(.)"/>
