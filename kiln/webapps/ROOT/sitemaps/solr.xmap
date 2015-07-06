@@ -101,10 +101,10 @@
           <map:part element="material" src="../content/xml/tei/alists/material-search.xml"/>
           <map:part element="monument" src="../content/xml/tei/alists/monument-search.xml"/>
           <map:part element="document" src="../content/xml/tei/alists/document-search.xml"/>
-          <map:part src="../content/xml/tei/alists/mentionedplace.xml"/>
-          <map:part src="../content/xml/tei/alists/months.xml"/>
-          <map:part src="../content/xml/tei/alists/bibliography.xml"/>
-          <map:part src="cocoon:/preprocess/{1}/{2}.xml" />
+          <map:part element="mentioned-place" src="../content/xml/tei/alists/mentionedplace.xml"/>
+          <map:part element="months" src="../content/xml/tei/alists/months.xml"/>
+          <map:part element="bibliography" src="../content/xml/tei/alists/bibliography.xml"/>
+          <map:part element="document" src="cocoon:/preprocess/{1}/{2}.xml" />
         </map:aggregate>
         <map:transform src="../stylesheets/solr/{1}-to-solr.xsl">
           <map:parameter name="file-path" value="{2}" />

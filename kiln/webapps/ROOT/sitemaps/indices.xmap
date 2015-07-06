@@ -500,7 +500,7 @@
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/findspot-{1}.html"/>
-          <map:parameter name="index" value="findspot-{1}"/>
+          <map:parameter name="index" value="findspot-ref"/>
           <map:parameter name="lang" value="{1}"/>
         </map:transform>
         <map:transform type="i18n">
@@ -519,7 +519,7 @@
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/findspot.html"/>
-          <map:parameter name="index" value="findspot-en"/>
+          <map:parameter name="index" value="findspot-ref"/>
           <map:parameter name="lang" value="en"/>
         </map:transform>
         <map:transform type="i18n">

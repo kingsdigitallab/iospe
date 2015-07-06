@@ -27,21 +27,21 @@
 
   <!--performed at import -->
   <xsl:variable name="memoized-common-data">
-    <xsl:apply-templates mode="document-metadata" select="/aggregation/tei:TEI/tei:teiHeader"/>
-    <xsl:apply-templates mode="document-metadata" select="/aggregation/tei:TEI/tei:text/tei:body"/>
-    <xsl:apply-templates mode="document-body" select="/aggregation/tei:TEI/tei:text/tei:body"/>
+    <xsl:apply-templates mode="document-metadata" select="/aggregation/document/tei:TEI/tei:teiHeader"/>
+    <xsl:apply-templates mode="document-metadata" select="/aggregation/document/tei:TEI/tei:text/tei:body"/>
+    <xsl:apply-templates mode="document-body" select="/aggregation/document/tei:TEI/tei:text/tei:body"/>
   </xsl:variable>
 
   <xsl:variable name="memoized-indispensible-data">
     <xsl:apply-templates mode="document-metadata-indispensible"
-      select="/aggregation/tei:TEI/tei:teiHeader"/>
+      select="/aggregation/document/tei:TEI/tei:teiHeader"/>
     <xsl:apply-templates mode="document-metadata-indispensible"
-      select="/aggregation/tei:TEI/tei:text/tei:body"/>
+      select="/aggregation/document/tei:TEI/tei:text/tei:body"/>
   </xsl:variable>
 
 
   <xsl:template
-    match="/aggregation/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]"
+    match="/aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]"
     mode="common-data">
     <xsl:param name="dt" select="'none'"/>
     <xsl:param name="suffix" select="''"/>
@@ -97,7 +97,7 @@
     </field>
     <field name="document-title-{@xml:lang}">
       <xsl:value-of select="local:clean(.)"/>
-      
+
       <xsl:if test="tei:certainty[@cert='low']">
         <xsl:text> (?)</xsl:text>
       </xsl:if>
@@ -105,11 +105,11 @@
 
     <field name="inscription-title-{@xml:lang}">
       <xsl:value-of select="local:clean(.)"/>
-      
+
       <xsl:if test="tei:certainty[@cert='low']">
         <xsl:text> (?)</xsl:text>
       </xsl:if>
-      
+
     </field>
   </xsl:template>
 
@@ -296,7 +296,7 @@
   </xsl:template>
 
   <xsl:template
-    match="/aggregation/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']"
+    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']"
     mode="document-body">
     <field name="persnames">
       <xsl:value-of select="local:replace-spaces('sacred or divine entity')"/>
@@ -310,7 +310,7 @@
   </xsl:template>
 
   <xsl:template
-    match="/aggregation/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']"
+    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']"
     mode="document-body">
     <field name="persnames">
       <xsl:value-of select="local:replace-spaces('emperor or ruler')"/>
@@ -324,7 +324,7 @@
   </xsl:template>
 
   <xsl:template
-    match="/aggregation/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']"
+    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']"
     mode="document-body">
     <field name="persnames">
       <xsl:value-of select="local:replace-spaces('other person')"/>

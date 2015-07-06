@@ -104,7 +104,7 @@
       <xsl:when test="$index = 'death'">
         <i18n:text>Age at Death</i18n:text>
       </xsl:when>
-      <xsl:when test="$index = concat('findspot-', $lang)">
+      <xsl:when test="$index = 'findspot-ref'">
         <i18n:text>Find Places</i18n:text>
       </xsl:when>
       <xsl:when test="$index = 'attested'">
@@ -195,6 +195,7 @@
           <!-- Tests if the index element is an array or a string
                 Some solr fields are multivalued, documents can belong to more than one category
                 -->
+
           <xsl:when test="//doc/str[@name = $index]">
             <xsl:for-each-group select="//doc"
               group-by="
@@ -297,21 +298,21 @@
           number(iospe:sort-dur(current-grouping-key(), 'D'))
         else
           ()"/>
-    
+
     <!-- Only sort for death index (Solr does not handle ISO-duration -->
 
     <xsl:variable name="display_key">
       <xsl:choose>
         <xsl:when
-          test="$index = concat('findspot-', $lang) and /aggregation/AL//tei:listPlace/tei:place[@xml:id = lower-case(current-grouping-key())]">
+          test="$index = 'findspot-ref' and /aggregation/AL//tei:listPlace/tei:place[@xml:id = lower-case(substring-after(current-grouping-key(), '#'))]">
           <xsl:value-of
-            select="/aggregation/AL//tei:listPlace/tei:place[@xml:id = lower-case(current-grouping-key())]/tei:placeName[@xml:lang = $lang]"
+            select="/aggregation/AL//tei:listPlace/tei:place[@xml:id = lower-case(substring-after(current-grouping-key(), '#'))]/tei:placeName[@xml:lang = $lang]"
           />
         </xsl:when>
         <xsl:when
-          test="$index = 'symbols' and /aggregation/AL_symbols//tei:list/tei:item[@xml:id = current-grouping-key()]">
+          test="$index = 'symbols' and /aggregation/AL_symbols//tei:list/tei:item[@xml:id = substring-after(current-grouping-key(), '#')]">
           <xsl:value-of
-            select="/aggregation/AL_symbols//tei:list/tei:item[@xml:id = current-grouping-key()]/tei:*[@xml:lang = $lang]"
+            select="/aggregation/AL_symbols//tei:list/tei:item[@xml:id = substring-after(current-grouping-key(), '#')]/tei:*[@xml:lang = $lang]"
           />
         </xsl:when>
         <xsl:otherwise>
