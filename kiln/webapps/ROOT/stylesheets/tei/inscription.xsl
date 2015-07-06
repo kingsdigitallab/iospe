@@ -1633,6 +1633,12 @@
             <xsl:with-param name="surnames" select="$surnames"/>
           </xsl:call-template>
         </xsl:when>
+        <xsl:when test="descendant::tei:title[@type='full']">
+          <xsl:apply-templates select="descendant::tei:title[@type='full']" />
+        </xsl:when>
+        <xsl:when test="descendant::tei:title">
+          <xsl:apply-templates select="descendant::tei:title[1]" />
+        </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="@xml:id"/>
         </xsl:otherwise>
