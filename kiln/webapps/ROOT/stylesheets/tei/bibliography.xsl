@@ -14,7 +14,7 @@
   </xsl:template>
 
   <xsl:variable name="surnames" select="/aggregation/surnames"/>
-
+vo
   <xsl:function name="iospe:sort-bibliography">
     <xsl:param name="node"/>
     <xsl:variable name="normalised_author"
@@ -455,9 +455,9 @@
 
 
     <xsl:if test="self::tei:monogr/tei:biblScope[@unit = 'vol']">
-      <xsl:if test="tei:title[@level = 'm']">
+      <xsl:if test="tei:title[@level = 'm' or @level ='s']">
         <xsl:text>, </xsl:text>
-        <i18n:text>vol</i18n:text>
+        <i18n:text key="__series_title_prefix">vol. </i18n:text>
       </xsl:if>
       <xsl:text> </xsl:text>
       <xsl:value-of select="./tei:biblScope[@unit = 'vol']"/>
@@ -465,11 +465,6 @@
   </xsl:template>
 
   <xsl:template match="tei:analytic | tei:monogr | tei:series" mode="scope">
-
-    <xsl:if test="./tei:title[@level = 's']">
-      <xsl:text> </xsl:text>
-      <i18n:text key="__series_title_prefix">vol. </i18n:text>
-    </xsl:if>
 
     <xsl:if test="./tei:biblScope[@unit = 'series']">
       <xsl:text> (</xsl:text>
@@ -480,6 +475,12 @@
     </xsl:if>
 
     <xsl:if test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol']">
+      
+      <xsl:if test="./tei:title[@level = 's' or @level = 'm']">
+        <xsl:text> </xsl:text>
+        <i18n:text key="__series_title_prefix">vol. </i18n:text>
+      </xsl:if>
+      
       <xsl:text> </xsl:text>
       <xsl:value-of select="./tei:biblScope[@unit = 'vol']"/>
     </xsl:if>
@@ -505,7 +506,7 @@
       <xsl:choose>
         <xsl:when
           test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] or ./tei:biblScope[@unit = 'issue']">
-          <xsl:text>: </xsl:text>
+          <xsl:text>:</xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>, </xsl:text>
