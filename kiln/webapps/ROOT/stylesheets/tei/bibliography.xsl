@@ -389,9 +389,18 @@
 
   <xsl:template name="full-journal-name">
     <xsl:param name="journal"/>
-    <span data-tooltip="data-tooltip" class="has-tip">
+    <span class="has-tip">
       <xsl:attribute name="title">
         <xsl:apply-templates select="$journal/tei:title"/>
+        <xsl:text>&#160;</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="data-id">
+        <xsl:text>tooltip_id_</xsl:text>
+        <xsl:value-of select="normalize-space($journal/@xml:id)"/>
+      </xsl:attribute>
+      <xsl:attribute name="data-tooltip">
+        <xsl:text>#tooltip_id_</xsl:text>
+        <xsl:value-of select="normalize-space($journal/@xml:id)"/>
       </xsl:attribute>
       <xsl:value-of select="$journal/@xml:id"/>
     </span>

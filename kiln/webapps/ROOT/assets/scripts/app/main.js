@@ -117,5 +117,10 @@ define([], function() {
     go_to_person($(this).attr('href'));
   });
 
+  $('.has-tip[title]').on('mouseenter', function(e){
+    e.preventDefault();
+    // console.log('prevented');
+  });
+
   return this;
 });
