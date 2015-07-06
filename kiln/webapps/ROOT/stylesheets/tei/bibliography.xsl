@@ -178,10 +178,9 @@ vo
       </xsl:otherwise>
     </xsl:choose>
 
-
-    <!-- scope (not journals)-->
-    <xsl:if test="not($monogr/tei:title[@level = 'j'])">
-      <xsl:apply-templates select="$monogr | $analytic" mode="scope"/>
+    <!-- scope (journal)-->
+    <xsl:if test="$monogr/tei:title[@level = 'j']">
+      <xsl:apply-templates select="$monogr" mode="scope"/>
     </xsl:if>
     
     <xsl:if
@@ -206,12 +205,11 @@ vo
         <xsl:value-of select=".//tei:imprint/tei:publisher[@xml:lang = $lang or not(@xml:lang)]"/>
       </xsl:if>
     </xsl:if>
-
-    <!-- scope (journal)-->
-    <xsl:if test="$monogr/tei:title[@level = 'j']">
-      <xsl:apply-templates select="$monogr" mode="scope"/>
+    
+    <!-- scope (not journals)-->
+    <xsl:if test="not($monogr/tei:title[@level = 'j'])">
+      <xsl:apply-templates select="$monogr | $analytic" mode="scope"/>
     </xsl:if>
-
 
 
     <!-- debugging -->
