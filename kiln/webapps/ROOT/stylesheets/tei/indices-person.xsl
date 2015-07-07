@@ -6,9 +6,11 @@
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
-  <xsl:param name="ancient-lang" select="'n/a'"/>
-
+  <xsl:param name="ancient-lang"/>
+  
   <xsl:param name="lang"/>
+  <xsl:param name="current"/>
+  <xsl:param name="kiln:url-lang-suffix" select="$kiln:url-lang-suffix"/>
   <xsl:template match="/"/>
 
   <!-- set title -->
@@ -94,22 +96,25 @@
       </section>
       <section>
         <xsl:attribute name="class">
-          <xsl:if test="
-              $sort = ('name',
-              '')">
+          <xsl:if test="$sort = 'letters'">
             <xsl:text>active</xsl:text>
           </xsl:if>
         </xsl:attribute>
         <p class="title" data-section-title="true">
-          <a href="?sort=name">
+          <a
+            href="../letters/{//first-letter//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
+
             <i18n:text>Sort by name</i18n:text>
           </a>
         </p>
-        <xsl:if test="
-            $sort = ('name',
-            '')">
+        <xsl:if test="$sort = 'letters'">
           <div class="content" data-section-content="true">
             <div class="row">
+
+              <xsl:if test="//letters">
+                <xsl:call-template name="letterList"/>
+              </xsl:if>
+
               <table class="indices indices-person">
                 <thead>
                   <tr>
@@ -135,7 +140,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <xsl:for-each select="//persons//tei:person">
+                  <xsl:for-each
+                    select="/aggregation/persons//tei:person[@xml:id = /aggregation/index//result/doc[str[@name = 'first-letter'] = $current]/arr[@name = 'persName-ref']/str/substring-after(text(), '#')]">
                     <xsl:sort
                       select="
                         concat(
@@ -261,7 +267,7 @@
 
         <ul class="inline-list">
           <xsl:for-each
-            select="//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
+            select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
             <xsl:sort select="str[@name = 'tei-id']"/>
             <li>
               <xsl:call-template name="link2inscription"/>
