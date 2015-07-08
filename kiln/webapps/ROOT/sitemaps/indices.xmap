@@ -279,8 +279,8 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/letters/{1}.html"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
-          <map:part element="first-letter" src="cocoon:/getFirstLetter/names"/>
-          <map:part src="cocoon:/getLetters/names"/>
+          <map:part element="first-letter" src="cocoon:/getFirstLetter-grc/names"/>
+          <map:part src="cocoon:/getLetters-grc/names"/>
           <map:part element="index" src="cocoon:/getIndex/names/{1}"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-person.xsl">

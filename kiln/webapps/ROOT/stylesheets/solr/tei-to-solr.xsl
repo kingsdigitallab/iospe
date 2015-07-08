@@ -957,7 +957,7 @@
         <field name="name-type">
           <xsl:value-of select="@type"/>
         </field>
-        <xsl:for-each select="ancestor::tei:persName">
+        <xsl:for-each select="ancestor::tei:persName[1]">
           <field name="persName-type">
             <xsl:value-of select="@type"/>
           </field>
