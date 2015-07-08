@@ -72,19 +72,9 @@
     </h2>
     <ul class="no-bullet">
       <li>
-        <xsl:choose>
-          <xsl:when test="//person//result[@numFound &gt; 0]">
-            <a href="person/letters/{//person//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
-              <i18n:text>Attested Persons</i18n:text>
-            </a>
-          </xsl:when>
-          <xsl:otherwise>
-            <i18n:text>Attested Persons</i18n:text>
-            <em>
-              <i18n:text>(no results found)</i18n:text>
-            </em>
-          </xsl:otherwise>
-        </xsl:choose>
+        <a href="person/other{$kiln:url-lang-suffix}.html">
+          <i18n:text>Attested Persons</i18n:text>
+        </a>
       </li>
       <li>
         <xsl:choose>
