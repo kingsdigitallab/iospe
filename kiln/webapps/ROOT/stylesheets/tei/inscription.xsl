@@ -703,8 +703,7 @@
       </div>
 
       <div class="large-10 columns details">
-        <xsl:for-each select="$ms_context//tei:physDesc//tei:layout"><!-- PC JULY 2015: not sure we need this predicate on tei:layout 
-          so commenting it out and we'll see if anything goes tits up as a result  [@n = $fullN or not(@n)] -->
+        <xsl:for-each select="$ms_context//tei:physDesc//tei:layout">
           
              <!-- Faces code deprecated -->
          <!--<xsl:if test="@ana">
@@ -1246,7 +1245,6 @@
               <xsl:when test="//tei:div[@type = 'translation'][@n = 'notyet'][@xml:lang = $lang]">
                 <i18n:text>No translation yet (2010)</i18n:text>. </xsl:when>
               <xsl:when test="@n">
-                HOBGOBLIN
                 <xsl:apply-templates mode="multipara"
                   select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"
                 />
@@ -1502,6 +1500,7 @@
       <!-- Full size popup -->
       <a class="x87" target="_blank"
         href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
+        <!-- PC JULY 2015: found this commented out line below; OK to delete? -->
         <!-- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -->
         <span>&#160;</span>
         <!-- Thumbnail image -->
@@ -1518,6 +1517,7 @@
         </img>
       </a>
     </span>
+    <!-- PC JULY 2015: found this commented out block of code below; OK to delete? -->
     <!--
     <dl style="width: 112px;" xsl:exclude-result-prefixes="tei">
       <dt>
@@ -1820,6 +1820,7 @@
             <xsl:apply-templates/>
             <xsl:text>&#xb7;&#xb7;&#xb7;</xsl:text>
           </xsl:when>
+          <!-- PC JULY 2015: found this commented out block of code below; OK to delete? -->
           <!--<xsl:when test="quantity(@quantity)>3">
             <xsl:apply-templates/>
             <xsl:text>&#xb7;&#xb7; c. </xsl:text>
@@ -1891,6 +1892,7 @@
     <span class="default-lang" xsl:exclude-result-prefixes="tei">
       <xsl:choose>
         <xsl:when test="ancestor::tei:app">
+          <!-- PC JULY 2015: found this commented out block of code below; OK to delete? -->
           <!--<xsl:if test="parent::tei:lem or parent::tei:rdg">
             <xsl:text>:</xsl:text>
           </xsl:if>-->
