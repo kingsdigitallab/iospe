@@ -64,13 +64,10 @@
                       <xsl:text> </xsl:text>
                     </th>
                     <th>
-                      <i18n:text>Full Name and Titles</i18n:text>
-                    </th>
-                    <th>
                       <i18n:text>Reign</i18n:text>
                     </th>
                     <th>
-                      <i18n:text>Attested Form</i18n:text>
+                      <i18n:text>Attested name and titles</i18n:text>
                     </th>
                     <th>
                       <i18n:text>Inscriptions</i18n:text>
@@ -124,13 +121,10 @@
                       <xsl:text> </xsl:text>
                     </th>
                     <th>
-                      <i18n:text>Full Name and Titles</i18n:text>
-                    </th>
-                    <th>
                       <i18n:text>Reign</i18n:text>
                     </th>
                     <th>
-                      <i18n:text>Attested Form</i18n:text>
+                      <i18n:text>Attested name and titles</i18n:text>
                     </th>
                     <th>
                       <i18n:text>Inscriptions</i18n:text>
@@ -164,8 +158,53 @@
     </div>
 
   </xsl:template>
+  
+  <xsl:template match="tei:idno" mode="prosopography-link">
+    
+  </xsl:template>
+
+
+  <xsl:template match="
+      tei:idno[@type = ('wp',
+      'wp-ru')]" mode="prosopography-link">
+
+    <xsl:choose>
+      <xsl:when
+        test="($lang = 'ru' and self::node()[@type = 'wp-ru']) or ($lang = 'en' and self::node()[@type = 'wp'])">
+        <sup>
+          <a>
+            <xsl:attribute name="href" select="text()"/>
+            <i class="fa fa-external-link">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>
+            <i18n:text>Wikipedia</i18n:text>
+          </a>
+        </sup>
+      </xsl:when>
+      <xsl:otherwise/>
+    </xsl:choose>
+
+  </xsl:template>
+
+  <xsl:template match="tei:idno[@type = 'snap']" mode="prosopography-link">
+
+    <sup>
+      <a>
+        <xsl:attribute name="href" select="text()"/>
+        <i class="fa fa-external-link">
+          <xsl:text> </xsl:text>
+        </i>
+        <xsl:text> </xsl:text>
+        <i18n:text>Snap</i18n:text>
+      </a>
+    </sup>
+
+  </xsl:template>
 
   <xsl:template name="character">
+
+    <xsl:variable name="person-xml-id" select="@xml:id"/>
 
     <xsl:variable name="persname_lang">
       <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
@@ -182,6 +221,10 @@
       <xsl:text> </xsl:text>
     </xsl:variable>
 
+    <xsl:variable name="persname-links">
+      <xsl:apply-templates select="tei:idno" mode="prosopography-link"/>
+    </xsl:variable>
+
 
     <xsl:variable name="floruit">
       <xsl:value-of select="tei:floruit"/>
@@ -195,25 +238,15 @@
           group-by="arr[@name = 'persName-full']/str">
           <tr class="index_row">
             <xsl:attribute name="data-group-index" select="position()"/>
+            <xsl:attribute name="id" select="concat('ruler.xml#', $person-xml-id)"/>
             <xsl:if test="position() = 1">
               <th>
                 <xsl:attribute name="rowspan" select="last()"/>
                 <xsl:value-of select="$persname_lang"/>
                 <xsl:text> </xsl:text>
-              </th>
 
-              <td>
-                <xsl:attribute name="rowspan" select="last()"/>
-                <xsl:choose>
-                  <xsl:when test="not(normalize-space($persname_la) = '')">
-                    <xsl:value-of select="$persname_la"/>
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="$persname_grc"/>
-                  </xsl:otherwise>
-                </xsl:choose>
-                <xsl:text> </xsl:text>
-              </td>
+                <xsl:sequence select="$persname-links"/>
+              </th>
 
               <td>
                 <xsl:attribute name="rowspan" select="last()"/>
