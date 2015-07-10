@@ -236,7 +236,7 @@
   </xsl:template>
 
   <!-- Unit: FINDSPOT (index) -->
-  <xsl:template match="tei:provenance[@type='found'][descendant::tei:placeName]" mode="findspot">
+  <xsl:template match="tei:provenance[@type='found'][descendant::tei:placeName[@ref]]" mode="findspot">
     <xsl:variable name="idno"
       select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
@@ -1023,7 +1023,7 @@
         <xsl:apply-templates/>
       </xsl:variable>
 
-      <xsl:variable name="is-surname" select="@type = 'surname'" type="xs:boolean"/>
+      <xsl:variable name="is-surname" select="@type = 'surname'" as="xs:boolean"/>
 
       <xsl:for-each select="tokenize(normalize-space(@nymRef), ' ')">
         <doc>
