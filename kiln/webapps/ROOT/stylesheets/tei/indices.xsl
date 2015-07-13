@@ -403,8 +403,7 @@
           <ul class="inline-list">
             <xsl:for-each select="current-group()">
               <xsl:sort select="number(substring-before(str[@name = 'tei-id'], '.'))"/>
-              <xsl:sort select="number(substring-after(str[@name = 'tei-id'], '.'))"/>
-
+              <xsl:sort select="number(int[@name = 'sortable-id'])"/>
               <li>
                 <xsl:call-template name="link2inscription"/>
               </li>
