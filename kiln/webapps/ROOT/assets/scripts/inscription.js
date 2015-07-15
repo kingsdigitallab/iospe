@@ -1,8 +1,8 @@
 // Inscriptions specific functions
 
 require(['common'], function(common) {
-  require(['app/main', 'highlightjs'],
-    function (main, highlightjs) {
+  require(['jquery', 'app/main', 'highlightjs'],
+    function ($, main, highlightjs) {
 
       $('pre code').each(function(i, e) {
         hljs.tabReplace = '    '; // 4 spaces

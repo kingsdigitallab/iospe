@@ -1,4 +1,4 @@
-define([], function() {
+define("app/main.js", ['jquery'], function($) {
   $('a.disabled').on('click', function(e) {
     e.preventDefault();
   });

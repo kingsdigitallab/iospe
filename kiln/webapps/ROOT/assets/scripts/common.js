@@ -7,22 +7,25 @@
 //directory.
 requirejs.config({
     // for debug purposes
-    urlArgs: "bust=" + (new Date()).getTime(),
+    // urlArgs: "bust=" + (new Date()).getTime(),
     baseUrl: "/assets/scripts",
     paths: {
-        "jquery": "vendor/jquery/dist/jquery",
+        "jquery": "vendor/jquery/dist/jquery.min",
         "jquery-ui": "vendor/jquery-ui/jquery-ui.min",
         "highlightjs": "vendor/highlightjs/highlight.pack",
-        "purl": "vendor/purl/purl",
+        "URIjs": "vendor/URIjs/src",
         "app": "app",
         "leaflet": "vendor/leaflet/dist/leaflet",
         "leaflet-groupedlayercontrol": "vendor/leaflet-groupedlayercontrol/dist/leaflet.groupedlayercontrol.min"
     },
     shim: {
+        "jquery": {
+            exports: "$",
+        },
         "jquery-ui": {
             exports: "$",
             deps: [
-            'jquery'
+                'jquery'
             ]
         },
         "leaflet-groupedlayercontrol": {
@@ -30,4 +33,3 @@ requirejs.config({
         }
     }
 });
-
