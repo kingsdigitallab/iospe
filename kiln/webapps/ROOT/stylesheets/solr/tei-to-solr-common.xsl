@@ -353,11 +353,11 @@
     <xsl:apply-templates mode="#current" select="tei:orig"/>
   </xsl:template>
 
-  <xsl:template match="node()" mode="edition diplomatic">
+  <!--<xsl:template match="*" mode="edition diplomatic">
     <xsl:apply-templates mode="#current"/>
-  </xsl:template>
+  </xsl:template>-->
 
-  <xsl:template match="text()" mode="apparatus edition diplomatic">
+  <xsl:template match="node()" mode="apparatus edition diplomatic">
     <xsl:value-of select="."/>
   </xsl:template>
 
