@@ -8,9 +8,14 @@
        to-html.xsl (which should not be changed). -->
 
   <xsl:import href="../../kiln/stylesheets/tei/to-html.xsl"/>
+  <xsl:import href="introTOC.xsl"/>
+
+  <xsl:template match="tei:divGen[@type='intro-toc']">
+    <xsl:sequence select="$introTOC-en"/>
+  </xsl:template>
 
 
-  <xsl:template match="tei:list[@type='logo']">
+  <xsl:template match="tei:list[@type = 'logo']">
     <xsl:variable name="n" select="count(child::tei:item)"/>
     <div class="row">
       <div class="large-12 columns">
@@ -20,22 +25,21 @@
       </div>
     </div>
   </xsl:template>
-  
-  <xsl:template match="tei:list[@rend='bulleted']">
+
+  <xsl:template match="tei:list[@rend = 'bulleted']">
     <xsl:element name="ul">
-      <xsl:attribute name="class" select="'bulleted'">
-      </xsl:attribute>
+      <xsl:attribute name="class" select="'bulleted'"> </xsl:attribute>
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
-  
-  <xsl:template match="tei:list[@rend='bulleted']/tei:item">
+
+  <xsl:template match="tei:list[@rend = 'bulleted']/tei:item">
     <xsl:element name="li">
       <xsl:apply-templates/>
     </xsl:element>
   </xsl:template>
 
-  <xsl:template match="tei:list[@type='logo']//tei:ref[@target]">
+  <xsl:template match="tei:list[@type = 'logo']//tei:ref[@target]">
     <a href="{@target}">
       <xsl:apply-templates select="@*"/>
       <xsl:if test="normalize-space(@title)">
@@ -51,19 +55,19 @@
     </a>
   </xsl:template>
 
-  <xsl:template match="tei:list[@type='gloss']">
+  <xsl:template match="tei:list[@type = 'gloss']">
     <dl>
       <xsl:apply-templates/>
     </dl>
   </xsl:template>
 
-  <xsl:template match="tei:list[@type='gloss']/tei:item">
+  <xsl:template match="tei:list[@type = 'gloss']/tei:item">
     <dd>
       <xsl:apply-templates/>
     </dd>
   </xsl:template>
 
-  <xsl:template match="tei:list[@type='gloss']/tei:label">
+  <xsl:template match="tei:list[@type = 'gloss']/tei:label">
     <dt>
       <xsl:apply-templates/>
     </dt>
@@ -77,7 +81,7 @@
   </xsl:template>
 
 
-  <xsl:template match="tei:list[@type='logo']//tei:figure">
+  <xsl:template match="tei:list[@type = 'logo']//tei:figure">
     <xsl:attribute name="id">
       <xsl:value-of select="@xml:id"/>
     </xsl:attribute>
