@@ -1,4 +1,5 @@
-define("app/main.js", ['jquery'], function($) {
+require(['jquery'],
+  function($) {
   $('a.disabled').on('click', function(e) {
     e.preventDefault();
   });
