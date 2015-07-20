@@ -18,7 +18,7 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='en/200/1800/?fq=text:{url-encode:{request-param:query}}'/>
+            <map:redirect-to uri='en/200/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>          
           </map:when>
           <map:otherwise>
             <map:redirect-to uri="en/200/1800/"/>
@@ -30,7 +30,7 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='ru/200/1800/?fq=text:{url-encode:{request-param:query}}'/>
+            <map:redirect-to uri='ru/200/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
           </map:when>
           <map:otherwise>
             <map:redirect-to uri="ru/200/1800/"/>
@@ -38,11 +38,12 @@
         </map:select>
       </map:match>
 
+<!-- THIS IS THE TEMPLATE HANDLING THE NAVBAR SEARCH BOX INPUT -->
       <map:match pattern="(en|ru)/$" type="regexp">
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='200/1800/?fq=text:{url-encode:{request-param:query}}'/>
+            <map:redirect-to uri='200/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
           </map:when>
           <map:otherwise>
             <map:redirect-to uri="200/1800/"/>
@@ -75,9 +76,9 @@
           <map:parameter name="max-year" value="{3}"/>
           <map:parameter name="query-string" value="{request:queryString}"/>
         </map:transform>
-        <map:transform type="i18n">
+        <!--<map:transform type="i18n">
           <map:parameter name="locale" value="{1}"/>
-        </map:transform>
+        </map:transform>-->
         <map:serialize type="xhtml"/>
       </map:match>
 
