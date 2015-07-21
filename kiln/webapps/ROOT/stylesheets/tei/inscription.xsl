@@ -187,6 +187,7 @@
 
   <xsl:template match="tei:msDesc | tei:msPart" mode="do_fragment_or_monument">
     <xsl:param name="n"/>
+    <xsl:param name="specialFrag" select="false()"/>
     <xsl:param name="nestedTitles" select="true()"/>
 
     <div>
@@ -208,9 +209,14 @@
         <!-- would be better in stylesheet -->
         <h2>
           <xsl:attribute name="class">
-            <xsl:if test="$n and $nestedTitles">
+            <xsl:choose>
+              <xsl:when test="$n and $nestedTitles and $specialFrag">
+                
+              </xsl:when>
+              <xsl:when test="$n and $nestedTitles">
               <xsl:text>subpart</xsl:text>
-            </xsl:if>
+            </xsl:when>
+            </xsl:choose>
           </xsl:attribute>
 
           <xsl:choose>
@@ -471,6 +477,7 @@
           <xsl:variable name="fragNum" select="@n"/>
           <xsl:apply-templates select="." mode="do_fragment_or_monument">
             <xsl:with-param name="n" select="$fragNum"/>
+            <xsl:with-param name="specialFrag" select="true()"/>
           </xsl:apply-templates>
           <xsl:for-each select="child::tei:msPart[@ana='text']">
             <xsl:call-template name="do_epigraphic_field">
