@@ -186,64 +186,79 @@
         <xsl:for-each
           select="//persons/descendant::tei:relation[substring-after(@active, '#') = current()/@xml:id]">
           <xsl:choose>
-            <xsl:when test="@name = 'father'">
-              <i18n:text>father of</i18n:text>
+            <!-- the child tei:desc should only be in Russian, so if $lang is ru we'll 
+              use the value of tei:desc because it will have the correct genitive form -->
+            <xsl:when test="tei:desc[@xml:lang = $lang]">
+              <xsl:value-of select="substring-before(tei:desc[@xml:lang = $lang], ' ')"/>
+              <xsl:text> </xsl:text>
+              <a class="relation-link" href="{@passive}">
+              <xsl:value-of select="substring-after(tei:desc[@xml:lang = $lang], ' ')"/>
+              </a>
             </xsl:when>
-            <xsl:when test="@name = 'son'">
-              <i18n:text>son of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'mother'">
-              <i18n:text>mother of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'daughter'">
-              <i18n:text>daughter of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'brother'">
-              <i18n:text>brother of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'sister'">
-              <i18n:text>sister of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'related'">
-              <i18n:text>related of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'fiancé'">
-              <i18n:text>fiancé of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'fiancée'">
-              <i18n:text>fiancée of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'husband'">
-              <i18n:text>husband of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'wife'">
-              <i18n:text>wife of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'grandfather'">
-              <i18n:text>grandfather of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'grandson'">
-              <i18n:text>grandson of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'granddaughter'">
-              <i18n:text>granddaughter of</i18n:text>
-            </xsl:when>
+
+            <!-- otherwise we just concat an appropriate phrase with the name pointed to by @passive -->
+            <xsl:otherwise>
+              <xsl:choose>
+                <xsl:when test="@name = 'father'">
+                  <i18n:text>father of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'son'">
+                  <i18n:text>son of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'mother'">
+                  <i18n:text>mother of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'daughter'">
+                  <i18n:text>daughter of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'brother'">
+                  <i18n:text>brother of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'sister'">
+                  <i18n:text>sister of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'related'">
+                  <i18n:text>related of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'fiancé'">
+                  <i18n:text>fiancé of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'fiancée'">
+                  <i18n:text>fiancée of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'husband'">
+                  <i18n:text>husband of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'wife'">
+                  <i18n:text>wife of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'grandfather'">
+                  <i18n:text>grandfather of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'grandson'">
+                  <i18n:text>grandson of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'granddaughter'">
+                  <i18n:text>granddaughter of</i18n:text>
+                </xsl:when>
+              </xsl:choose>
+              <!-- space after relationship -->
+              <xsl:text> </xsl:text>
+
+              <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
+                as="xs:sequence"/>
+
+              <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
+                <a href="#{@xml:id}" class="relation_link">
+                  <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
+                </a>
+                <xsl:if test="following::tei:person[@xml:id = $passives]">
+                  <xsl:text>, </xsl:text>
+                </xsl:if>
+              </xsl:for-each>
+            </xsl:otherwise>
           </xsl:choose>
-          <!-- space after relationship -->
-          <xsl:text> </xsl:text>
-
-          <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
-            as="xs:sequence"/>
-
-          <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-            <a href="#{@xml:id}" class="relation_link">
-              <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
-            </a>
-            <xsl:if test="following::tei:person[@xml:id = $passives]">
-              <xsl:text>, </xsl:text>
-            </xsl:if>
-          </xsl:for-each>
-
+          
           <xsl:if test="following::tei:relation[@active = current()/@active]">
             <xsl:text>; </xsl:text>
           </xsl:if>

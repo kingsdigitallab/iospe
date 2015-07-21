@@ -10,8 +10,13 @@
   <xsl:import href="../../kiln/stylesheets/tei/to-html.xsl"/>
   <xsl:import href="introTOC.xsl"/>
 
-  <xsl:template match="tei:divGen[@type='intro-toc']">
-    <xsl:sequence select="$introTOC-en"/>
+  <xsl:template match="tei:divGen[contains(@type, 'intro-toc')]">
+    <xsl:sequence select="
+      if (contains(@type, 'ru'))
+      then
+      $introTOC-ru
+      else
+      $introTOC-en"/>
   </xsl:template>
 
 

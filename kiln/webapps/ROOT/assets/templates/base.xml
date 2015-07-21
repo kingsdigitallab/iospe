@@ -33,9 +33,15 @@
           </kiln:block>
           <kiln:block name="js">
             <script src="{$kiln:assets-path}/scripts/vendor/modernizr/modernizr.js">&#160;</script>
-
+            
+            
           </kiln:block>
           <kiln:block name="head-extra"/>
+          <style type="text/css">
+            .hidden-content {
+            display: none;
+            }
+          </style>
         </head>
       </kiln:block>
       <kiln:block name="body">
@@ -156,6 +162,20 @@
                 </kiln:block>
 
                 <script>$(document).foundation();</script>
+                <!--<script type="text/javascript">
+                  $('a.toggler').bind("click", function() {
+                  $(this).next('div.expanded').slideToggle(400).removeClass('hidden-content');
+                  $("span", this).toggleClass("fa-caret-down fa-caret-right");
+                  return false;
+                  });
+                </script>-->
+                <script type="text/javascript">
+                  $('a.toggler').bind("click", function() {
+                  $(this).parent('p').next('div.expanded').slideToggle(400).removeClass('hidden-content');
+                  $("span", this).toggleClass("fa-caret-down fa-caret-right");
+                  return false;
+                  });
+                </script>
               </kiln:block>
             </div>
             <!-- 12 (no columns) -->

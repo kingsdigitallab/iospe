@@ -122,6 +122,5 @@ require(['jquery'],
     e.preventDefault();
     // console.log('prevented');
   });
-
-  return this;
+    return this;
 });
