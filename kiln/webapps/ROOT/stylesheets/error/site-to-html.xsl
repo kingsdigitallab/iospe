@@ -27,6 +27,8 @@
       <xsl:choose>
         <xsl:when test="*">
           <xsl:apply-templates />
+          
+          <p>[For convenience we'll show stacktrace info until live. Can hide it by commenting out lines 20-22 in site-to-html.xsl.]</p>
         </xsl:when>
         <xsl:otherwise>
           <p>

@@ -181,7 +181,7 @@
 
       <map:match pattern="*.xml">
         <map:generate src="../content/xml/tei/inscriptions/{1}.xml"/>
-        <map:transform type="xinclude" />
+        <map:transform type="xinclude"/>
         <map:serialize type="xml"/>
       </map:match>
 
@@ -253,7 +253,7 @@
 
       <map:match pattern="stripNameDate/*">
         <map:generate src="../content/xml/tei/inscriptions/{1}"/>
-        <map:transform type="xinclude" />
+        <map:transform type="xinclude"/>
         <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
         <map:serialize type="xml"/>
       </map:match>
@@ -281,13 +281,9 @@
          errors, handling will fall back to the default plain error
          handling in config.xmap. -->
     <map:handle-errors>
-      
       <map:generate type="exception"/>
       <map:select type="exception">
         <map:when test="not-found">
-          <map:aggregate element="aggregation" label="content">
-            <map:part src="cocoon://_internal/menu/main.xml?url=index.html"/>
-          </map:aggregate>
           <map:transform src="../stylesheets/error/add-not-found-messages.xsl"/>
           <map:transform src="cocoon://_internal/template/error.xsl">
             <map:parameter name="debug" value="{global:debug}"/>
