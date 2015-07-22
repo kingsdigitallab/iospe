@@ -11,9 +11,18 @@
   <xsl:param name="server" />
 
   <xsl:template match="ex:exception-report/ex:message">
-    <xsl:copy>
-      <p>The resource you requested was not found.</p>
-    </xsl:copy>
+    <xsl:choose>
+      <xsl:when test="contains(//ex:stacktrace, '/content/xml/tei/inscriptions/')">       
+        <xsl:copy>
+          <p>Sorry, we could not find that inscription.</p>
+        </xsl:copy>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy>
+          <p>Sorry, we could not find the page you requested.</p>
+        </xsl:copy>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="@*|node()">
