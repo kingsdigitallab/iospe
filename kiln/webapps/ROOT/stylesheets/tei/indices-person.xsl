@@ -260,7 +260,7 @@
           </xsl:choose>
           
           <xsl:if test="following::tei:relation[@active = current()/@active]">
-            <xsl:text>; </xsl:text>
+            <br/>
           </xsl:if>
 
         </xsl:for-each>
