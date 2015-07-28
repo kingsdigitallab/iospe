@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.124</idno>
+            <idno type="filename">5.124</idno><idno type="PE">PE5012400</idno>
             <idno type="AYV2012-number">byz216</idno>
          </publicationStmt>
          <sourceDesc>
@@ -105,7 +103,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-17" who="CB">Andrey's corrections</change>
          <change when="2015-03-31" who="CB">Andrey's corrections</change>
@@ -124,11 +122,11 @@
        <surface>
           <graphic url="5.124-1">
              <desc xml:lang="en">Photograph of face</desc>
-             <desc xml:lang="ru"></desc>
+             <desc xml:lang="ru"/>
           </graphic>
           <graphic url="5.124-2">
              <desc xml:lang="en">Photograph of face</desc>
-             <desc xml:lang="ru"></desc>
+             <desc xml:lang="ru"/>
           </graphic>
         </surface>
     </facsimile>
@@ -141,8 +139,7 @@
             <ab>
                <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω">Ἐκοιμήθησαν</w> <w lemma="ὁ">τοῦ</w>
                <lb n="2"/><persName type="attested" ref="#person276"><name nymRef="Γεώργιος"><expan><abbr>Γεωρ</abbr><ex>γίου</ex></expan></name></persName>
-               <w lemma="ὁ">τὰ</w> <w lemma="πεδίον">πεδία</w>· <w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δού<lb
-                  n="3" break="no"/>λι</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <w lemma="ὁ">τὰ</w> <w lemma="πεδίον">πεδία</w>· <w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δού<lb n="3" break="no"/>λι</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
                <persName type="attested" ref="#person277"><name nymRef="Ἀρχόντισσα">Ἀρχοτίσα</name></persName>
                <lb n="4"/><w lemma="καί">καὶ</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w>
                <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
@@ -153,14 +150,11 @@
                <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
                <lb n="7"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος"><expan><abbr>δοῦ</abbr><ex>λος</ex></expan></w>
                <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
-               <persName type="attested" ref="#person280"><name nymRef="Σιμεώνις">Συμε<lb
-                  n="8" break="no"/>όνις</name></persName> <w lemma="καί">καὶ</w> <w lemma="ὁ">ὑ</w>
+               <persName type="attested" ref="#person280"><name nymRef="Σιμεώνις">Συμε<lb n="8" break="no"/>όνις</name></persName> <w lemma="καί">καὶ</w> <w lemma="ὁ">ὑ</w>
                <w lemma="δοῦλος"><expan><abbr>δούλ</abbr><ex>η</ex></expan></w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
                <lb n="9"/><persName type="attested" ref="#person281"><name nymRef="Εἰρήνη Υ̓ρύνυ">̓Yρύνυ</name></persName>
                <w lemma="ἐν">ἐν</w> <date><w lemma="μήν"><expan><abbr>μιν</abbr><ex>ὴ</ex></expan></w>
-                  <rs type="month" ref="aug"><w lemma="Αὔγουστος">Αὐγού<lb
-                  n="10" break="no"/>στου</w></rs> <num value="3">γ</num>, <w lemma="ἡμέρα">ἡμέρᾳ</w> <num value="6">ς</num>, <w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔτος">ἔ<lb
-                  n="11" break="no"/>τους</w> <num value="6895">ςωϞε</num></date>.
+                  <rs type="month" ref="aug"><w lemma="Αὔγουστος">Αὐγού<lb n="10" break="no"/>στου</w></rs> <num value="3">γ</num>, <w lemma="ἡμέρα">ἡμέρᾳ</w> <num value="6">ς</num>, <w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔτος">ἔ<lb n="11" break="no"/>τους</w> <num value="6895">ςωϞε</num></date>.
             </ab>
          </div>
          <div type="translation" xml:lang="ru">

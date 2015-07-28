@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.262</idno>
+            <idno type="filename">5.262</idno><idno type="PE">PE5026200</idno>
             <idno type="AYV2012-number">byz249</idno>
          </publicationStmt>
          <sourceDesc>
@@ -105,7 +103,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
           <change when="2013-11-07" who="TW">Added image code</change>
          <change when="2012-07-19" who="GB">lemmatized Greek</change>
@@ -119,7 +117,7 @@
         <surface>
             <graphic url="5.262">
                 <desc xml:lang="en">Photograph of face</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -135,9 +133,7 @@
                <lb n="3"/><w lemma="ὁ">τοῦ</w>
                <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
                <gap reason="illegible" quantity="1" unit="character"/>
-               <lb n="4" break="no"/><gap reason="illegible" quantity="1" unit="character"
-               /><persName type="attested" ref="#person322"><name><seg part="Y">αμ</seg><gap
-                  reason="lost" quantity="4" unit="character"/></name></persName>
+               <lb n="4" break="no"/><gap reason="illegible" quantity="1" unit="character"/><persName type="attested" ref="#person322"><name><seg part="Y">αμ</seg><gap reason="lost" quantity="4" unit="character"/></name></persName>
             </ab>
          </div>
          <div type="translation" xml:lang="ru">

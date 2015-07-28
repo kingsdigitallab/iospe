@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-    <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -8,7 +6,7 @@
                 <title xml:lang="en">Building inscription of Mauricius</title>
             </titleStmt>
             <publicationStmt><authority>King's College London</authority>
-                <idno type="filename">5.330</idno>
+                <idno type="filename">5.330</idno><idno type="PE">PE5033000</idno>
                 <idno type="AYV2012-number">byz309</idno>
             </publicationStmt>
             <sourceDesc>
@@ -100,7 +98,7 @@
             </msDesc>
             </sourceDesc>
         </fileDesc>
-        <xi:include href="encoding-desc.xml" />
+        
         <revisionDesc>
             <change when="2015-04-09" who="CB">Andrey's corrections</change>
             <change when="2013-11-07" who="TW">Added image code</change>
@@ -115,7 +113,7 @@
         <surface>
             <graphic url="5.330">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -150,8 +148,7 @@
                 <lb n="4"/><w lemma="λαμπρός">λαμπρὸν</w> <w lemma="ἐν">ἐν</w>
                     <placeName key="bosporos">Βοοσπόρῳ</placeName>
                 <lb n="5"/><placeName key="kaisareion">Κεσάριον</placeName>  <w lemma="ἀνανεόω">ἀνενέωσεν</w>
-                <lb n="6"/><persName type="ruler" key="maurikios"><name nymRef="Μαυρίκις"
-                    ><unclear>Μ</unclear><supplied reason="lost"><del>αυρί</del></supplied>κις</name>
+                <lb n="6"/><persName type="ruler" key="maurikios"><name nymRef="Μαυρίκις"><unclear>Μ</unclear><supplied reason="lost"><del>αυρί</del></supplied>κις</name>
                     <w lemma="ὁ">ὁ</w>
                     <w lemma="εὐσεβής"><expan><abbr>εὐ</abbr><ex>σ</ex><abbr>εβ</abbr><abbr>εστάτος</abbr></expan></w>
                     <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>

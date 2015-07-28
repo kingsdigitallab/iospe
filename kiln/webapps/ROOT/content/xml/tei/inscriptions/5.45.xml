@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.45</idno>
+            <idno type="filename">5.45</idno><idno type="PE">PE5004500</idno>
             <idno type="AYV2012-number">byz045</idno>
          </publicationStmt>
          <sourceDesc>
@@ -103,7 +101,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2013-10-24" who="TW">Added imaging codes</change>
           <change when="2013-01-15" who="AL">inserted English names in commentary</change>
@@ -127,11 +125,11 @@
         <surface>
             <graphic url="5.45-1">
                 <desc xml:lang="en">Photograph of face 1 (from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
             <graphic url="5.45-2">
                 <desc xml:lang="en">Photograph of face 2 (from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -147,12 +145,9 @@
             <ab>
                <lb n="1"/><g ref="#stauros"/>
                <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
-               <w lemma="βοηθέω">βοή<lb
-                  n="2" break="no"/>θ<supplied reason="lost">ει</supplied></w>
-               <w lemma="ὁ">τὼ<supplied reason="lost">ν</supplied></w> <w lemma="δοῦλος">δοῦ <lb
-                  n="3" break="no"/>λ<supplied reason="lost">ό</supplied>ν</w> <w lemma="σύ">σου</w>
-               <persName type="attested" ref="#person34"><name nymRef="Γεώργιος">Γεώ<lb
-                  n="4" break="no"/>ργ<unclear>η</unclear>ν</name>
+               <w lemma="βοηθέω">βοή<lb n="2" break="no"/>θ<supplied reason="lost">ει</supplied></w>
+               <w lemma="ὁ">τὼ<supplied reason="lost">ν</supplied></w> <w lemma="δοῦλος">δοῦ <lb n="3" break="no"/>λ<supplied reason="lost">ό</supplied>ν</w> <w lemma="σύ">σου</w>
+               <persName type="attested" ref="#person34"><name nymRef="Γεώργιος">Γεώ<lb n="4" break="no"/>ργ<unclear>η</unclear>ν</name>
                 <name nymRef="Μαμσυ" type="surname">Μαμσυ</name></persName>.
             </ab>
          </div>

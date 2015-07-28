@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.48</idno>
+            <idno type="filename">5.48</idno><idno type="PE">PE5004800</idno>
             <idno type="AYV2012-number">byz048</idno>
          </publicationStmt>
          <sourceDesc>
@@ -103,7 +101,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-17" who="CB">Andrey's corrections</change>
          <change when="2013-10-24" who="TW">Added image codes</change>
@@ -128,11 +126,11 @@
         <surface>
             <graphic url="5.48-1">
                 <desc xml:lang="en">Photograph of face 1 (from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
             <graphic url="5.48-2">
                 <desc xml:lang="en">Drawing of face 1 (from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -146,16 +144,12 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/><g ref="#stauros"/> <persName type="divine" key="iesous"><name nymRef="Χριστός"
-                  ><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan></name></persName>, 
+               <lb n="1"/><g ref="#stauros"/> <persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan></name></persName>, 
                 <w lemma="βοηθέω"><expan><abbr>βοήθ</abbr><ex>ει</ex></expan></w>
-               <persName type="attested" ref="#person38"><name nymRef="Νικόλαος"
-                  >Νι<supplied reason="lost">κ</supplied>όλ<supplied reason="lost">αον</supplied></name></persName> 
+               <persName type="attested" ref="#person38"><name nymRef="Νικόλαος">Νι<supplied reason="lost">κ</supplied>όλ<supplied reason="lost">αον</supplied></name></persName> 
                 <w lemma="καί"><supplied reason="lost">κα</supplied>ὶ</w>
-               <persName type="attested" ref="#person39"><name nymRef="Νίκανδρος">Νί<supplied reason="lost">καν</supplied><lb
-                  n="2" break="no"/>δρον</name></persName> <w lemma="καί">καὶ</w>
-               <persName type="attested" ref="#person40"><name nymRef="Νίκων"
-                  ><supplied reason="lost">Ν</supplied>ίκον<supplied reason="lost">α</supplied></name></persName>.
+               <persName type="attested" ref="#person39"><name nymRef="Νίκανδρος">Νί<supplied reason="lost">καν</supplied><lb n="2" break="no"/>δρον</name></persName> <w lemma="καί">καὶ</w>
+               <persName type="attested" ref="#person40"><name nymRef="Νίκων"><supplied reason="lost">Ν</supplied>ίκον<supplied reason="lost">α</supplied></name></persName>.
                <gap reason="lost" quantity="3" unit="character"/> <date><num value="13">ιγ</num>.
                <lb n="3"/><g ref="#stauros"/> <w lemma="ἔτος"><expan><abbr>Ἔτ</abbr><ex>ους</ex></expan></w>
                   <num value="6711">ςψια</num></date>.

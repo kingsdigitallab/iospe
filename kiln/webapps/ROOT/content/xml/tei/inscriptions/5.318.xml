@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.318</idno>
+            <idno type="filename">5.318</idno><idno type="PE">PE5031800</idno>
             <idno type="AYV2012-number">byz286</idno>
          </publicationStmt>
          <sourceDesc>
@@ -149,7 +147,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-05-01" who="CB">Textparts</change>
          <change when="2015-04-09" who="CB">Andrey's corrections</change>
@@ -170,7 +168,7 @@
         <surface>
             <graphic url="5.318" n="1">
                 <desc xml:lang="en">Photograph of face</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -189,8 +187,7 @@
             <div type="textpart" subtype="inscription" n="1">
                <ab>
                   <lb n="1"/><w lemma="φῶς"><expan><abbr>Φ</abbr><ex>ῶς</ex></expan></w>
-                  <supplied reason="lost"><persName type="divine" key="iesous"><name nymRef="Χριστός"><expan
-                     ><abbr>Χ</abbr><ex>ριστοῦ</ex></expan></name></persName></supplied>
+                  <supplied reason="lost"><persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστοῦ</ex></expan></name></persName></supplied>
                   <lb n="2"/><w lemma="φαίνω"><expan><abbr>φ</abbr><ex>αίνει</ex></expan></w>
                   <w lemma="πᾶς"><expan><abbr>π</abbr><ex>ᾶσιν</ex></expan></w>.
                </ab>
@@ -198,19 +195,14 @@
             <div type="textpart" subtype="inscription" n="2">
                <ab>
                   <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω">Ἐκοιμήθη</w>
-                  <w lemma="ὁ"><supplied reason="lost">ἡ</supplied></w> <w lemma="δοῦλος">δού<lb
-                     n="2" break="no"/>λη</w> <w lemma="ὁ">τοῦ</w>
-                  <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr><supplied reason="lost"
-                     >θ</supplied></abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
-                  <persName type="attested" ref="#person369"><name nymRef="Εὐτροπία">Εὐ<lb
-                     n="3" break="no"/>τρωπ<supplied reason="lost">ία</supplied></name></persName>.
-                  <w lemma="κοιμάω">Ἐκοιμ<lb
-                     n="4" break="no"/>ήθι</w> <w part="I">κ<supplied reason="lost">αὶ</supplied></w>
+                  <w lemma="ὁ"><supplied reason="lost">ἡ</supplied></w> <w lemma="δοῦλος">δού<lb n="2" break="no"/>λη</w> <w lemma="ὁ">τοῦ</w>
+                  <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr><supplied reason="lost">θ</supplied></abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+                  <persName type="attested" ref="#person369"><name nymRef="Εὐτροπία">Εὐ<lb n="3" break="no"/>τρωπ<supplied reason="lost">ία</supplied></name></persName>.
+                  <w lemma="κοιμάω">Ἐκοιμ<lb n="4" break="no"/>ήθι</w> <w part="I">κ<supplied reason="lost">αὶ</supplied></w>
                   <w lemma="ὁ"><app type="alternative"><lem>ὁ</lem><rdg>ἡ</rdg></app></w>
                   <lb n="5"/><w lemma="δοῦλος"><app type="alternative"><lem>δοῦλ<unclear>ος</unclear></lem>
                      <rdg>δούλ<unclear>η</unclear></rdg></app></w> <supplied reason="lost"><w lemma="ὁ">τοῦ</w></supplied>
-                  <lb n="6"/><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan
-                     ><abbr>θ</abbr><ex>εο</ex><abbr><supplied reason="lost">ῦ</supplied></abbr></expan></w></roleName></persName>
+                  <lb n="6"/><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr><supplied reason="lost">ῦ</supplied></abbr></expan></w></roleName></persName>
                   <supplied reason="lost"><w lemma="ὁ"><app type="alternative"><lem>ὁ</lem><rdg>ἡ</rdg></app></w>
                      <w lemma="δεῖνα">δεῖνα</w></supplied>.
                </ab>

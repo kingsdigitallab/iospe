@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.328</idno>
+            <idno type="filename">5.328</idno><idno type="PE">PE5032800</idno>
             <idno type="AYV2012-number">byz330</idno>
          </publicationStmt>
          <sourceDesc>
@@ -102,7 +100,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-09" who="CB">Andrey's corrections</change>
           <change when="2012-10-13" who="AL">small corrections in Russian text</change>
@@ -135,15 +133,12 @@
          
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/><w lemma="ἐνθάδε"><expan><abbr>Ἐνθάδ</abbr><ex>η</ex></expan></w> <w lemma="τοξεύω">ἠ<lb
-                  n="2" break="no"/>τοξεύετ᾿</w>
+               <lb n="1"/><w lemma="ἐνθάδε"><expan><abbr>Ἐνθάδ</abbr><ex>η</ex></expan></w> <w lemma="τοξεύω">ἠ<lb n="2" break="no"/>τοξεύετ᾿</w>
                <lb n="3"/><persName type="attested" ref="#person427"><name nymRef="Οὐστανος">Οὐστανος</name>,
-               <lb n="4"/><w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="πρωτοκόμης">προτω<lb
-                     n="5" break="no"/>κομίτες</w>
+               <lb n="4"/><w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="πρωτοκόμης">προτω<lb n="5" break="no"/>κομίτες</w>
                <lb n="6"/><placeName key="chimiris">Χιμίρις</placeName>,
                <lb n="7"/><w lemma="υἱός">υεἱὸς</w>
-                  <persName type="attested" ref="#person428"><name nymRef="Ἀγαθός">Ἀγά<lb
-                     n="8" break="no"/>θου</name></persName></persName>
+                  <persName type="attested" ref="#person428"><name nymRef="Ἀγαθός">Ἀγά<lb n="8" break="no"/>θου</name></persName></persName>
                <w lemma="ὁ">τοῦ</w> <gap reason="lost" extent="unknown" unit="character"/>
             </ab>
          </div>

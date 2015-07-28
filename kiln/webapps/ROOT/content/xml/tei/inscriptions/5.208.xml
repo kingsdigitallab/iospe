@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.208</idno>
+            <idno type="filename">5.208</idno><idno type="PE">PE5020800</idno>
             <idno type="AYV2012-number">byz196</idno>
          </publicationStmt>
          <sourceDesc>
@@ -99,7 +97,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-01" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
@@ -116,14 +114,14 @@
         <surface>
             <graphic url="5.208">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
    <text>
       <body>
          <div type="bibliography">
-            <p></p>
+            <p/>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -136,12 +134,9 @@
                <lb n="6"/><gap reason="lost" extent="uncertain" unit="character"/><gap reason="illegible" quantity="2" unit="character"/> 
                <gap reason="lost" quantity="1" unit="character"/><w lemma="ἀπό"><supplied reason="lost">ἀπ</supplied>ὸ</w>
                <lb/><space unit="character"/>
-               <lb n="7"/><w lemma="ὁ">τοῦ</w> <w lemma="ἀγών">ἀγ<unclear>ῶν</unclear>ος</w> <w lemma="ἀβάστακτος">ἀ<lb
-                  n="8" break="no"/>βαστ<supplied reason="lost">άκτ</supplied><unclear>ου</unclear></w>
-               <w part="I"><unclear>τ</unclear><lb
-                  n="9" break="no"/>ο͂</w> <w lemma="σύ"><supplied reason="lost">σ</supplied>ου</w>
-               <w lemma="ἐλεέω"><unclear>ἐ</unclear><supplied reason="lost" cert="low">λέει</supplied><gap
-                  reason="illegible" quantity="3" unit="character"/></w> 
+               <lb n="7"/><w lemma="ὁ">τοῦ</w> <w lemma="ἀγών">ἀγ<unclear>ῶν</unclear>ος</w> <w lemma="ἀβάστακτος">ἀ<lb n="8" break="no"/>βαστ<supplied reason="lost">άκτ</supplied><unclear>ου</unclear></w>
+               <w part="I"><unclear>τ</unclear><lb n="9" break="no"/>ο͂</w> <w lemma="σύ"><supplied reason="lost">σ</supplied>ου</w>
+               <w lemma="ἐλεέω"><unclear>ἐ</unclear><supplied reason="lost" cert="low">λέει</supplied><gap reason="illegible" quantity="3" unit="character"/></w> 
                <lb n="10"/><orig>Σ</orig><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="11"/><orig>Π</orig><gap reason="lost" extent="unknown" unit="character"/>.
             </ab>

@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.14</idno>
+            <idno type="filename">5.14</idno><idno type="PE">PE5001400</idno>
             <idno type="AYV2012-number">byz013</idno>
          </publicationStmt>
          <sourceDesc>
@@ -104,7 +102,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
           <change when="2013-04-11" who="NG">Greek lemmata corrected</change>
           <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
@@ -131,7 +129,7 @@
       <surface>
          <graphic url="5.14">
             <desc xml:lang="en">Drawing of face (from ??)</desc>
-            <desc xml:lang="ru"></desc>
+            <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
@@ -162,8 +160,7 @@
                <w lemma="λοιπός">λοι<supplied reason="lost" cert="low">πῶν</supplied></w>, 
                <w lemma="ὑπό"><supplied reason="lost">ὑπὸ</supplied></w> 
                <w lemma="ἡμέρα"><supplied reason="lost">ἡμερῶν</supplied></w> <supplied reason="lost"><note>e.g.</note></supplied>
-               <persName type="ruler" key="isaak1Th"><name nymRef="Ἰσαάκιος"><supplied reason="lost">Ἰσαά</supplied><lb
-                  n="6" break="no"/>κ<unclear>ου</unclear></name> 
+               <persName type="ruler" key="isaak1Th"><name nymRef="Ἰσαάκιος"><supplied reason="lost">Ἰσαά</supplied><lb n="6" break="no"/>κ<unclear>ου</unclear></name> 
                   <w lemma="αὐθέντης">α<supplied reason="lost">ὐ</supplied>θ<supplied reason="lost">έν</supplied>τ<choice><corr>ο</corr><sic>α</sic></choice>υ</w>
                   <w lemma="πόλις"><supplied reason="lost">πόλεως</supplied></w>
                   <placeName key="theodoro"><supplied reason="lost">Θ</supplied>ε

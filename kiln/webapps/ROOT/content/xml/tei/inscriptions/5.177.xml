@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.177</idno>
+            <idno type="filename">5.177</idno><idno type="PE">PE5017700</idno>
             <idno type="AYV2012-number">byz170</idno>
          </publicationStmt>
          <sourceDesc>
@@ -105,7 +103,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-08" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
@@ -124,7 +122,7 @@
         <surface>
             <graphic url="5.177">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -142,14 +140,12 @@
             <ab>
                <lb n="1"/><g ref="#stauros"/> <w lemma="κτίζω">Ἐκ<supplied reason="lost">τίσθη</supplied></w>
                <w lemma="ἐκ"><supplied reason="lost">ἐκ</supplied></w>
-               <w lemma="βάθρον"><supplied reason="lost">β</supplied><lb
-                  n="2" break="no"/>άθρων</w> <w lemma="διά"><supplied reason="lost">διὰ</supplied></w>
+               <w lemma="βάθρον"><supplied reason="lost">β</supplied><lb n="2" break="no"/>άθρων</w> <w lemma="διά"><supplied reason="lost">διὰ</supplied></w>
                <lb n="3"/><w lemma="κόπος">κόπου</w>
                   <persName type="attested" ref="#person223"><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="4"/><name nymRef="—τζι"><seg part="F">τζι</seg></name></persName>
                <w lemma="ὁ">τ<unclear>ο</unclear><supplied reason="lost">ῦ</supplied></w>
-               <w lemma="ἑκατόνταρχος">ἑκα<lb
-                  n="5" break="no"/>τοντάρ<supplied reason="lost">χου</supplied></w>,
+               <w lemma="ἑκατόνταρχος">ἑκα<lb n="5" break="no"/>τοντάρ<supplied reason="lost">χου</supplied></w>,
                <lb n="6"/><w lemma="ἐπί">ἐπὶ</w> <w lemma="ὁ">τῆς</w>
                <w lemma="βασιλεία"><expan><abbr>β</abbr><supplied reason="lost"><abbr>ασιλί</abbr><ex>ας</ex></supplied></expan></w>
                <lb n="7"/><persName type="ruler" key="tokhtamysh"><name nymRef="Τοχταμής">Τοχταμ<unclear>ή</unclear><supplied reason="lost">ς</supplied></name></persName>.

@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.110</idno>
+            <idno type="filename">5.110</idno><idno type="PE">PE5011000</idno>
             <idno type="AYV2012-number">byz106</idno>
          </publicationStmt>
          <sourceDesc>
@@ -89,7 +87,7 @@
                         <rs type="context">Хутор Ревелиоти.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot" >Ay-Dimitry, Tract.</placeName>
+                        <placeName type="ancientFindspot">Ay-Dimitry, Tract.</placeName>
                         <rs type="circumstances">Before 1890, survey of A.K. Romanyuk.</rs>
                         <rs type="context">Revelioti farmstead.</rs>
                      </seg>
@@ -102,7 +100,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-03-31" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
@@ -120,7 +118,7 @@
         <surface>
             <graphic url="5.110">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -136,8 +134,7 @@
              <ab>
                 <lb n="1"/><supplied reason="lost" cert="low"><w lemma="κοιμάω">Ἐκοιμήθη</w></supplied>
                 <supplied reason="lost"><w lemma="ὁ">ὁ</w></supplied><w lemma="δοῦλος"> δοῦλος</w>
-                <w lemma="ὁ">τοῦ</w> <supplied reason="lost"><persName type="divine" key="theos"><roleName
-                   ><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName></supplied>
+                <w lemma="ὁ">τοῦ</w> <supplied reason="lost"><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName></supplied>
                 <persName type="attested" ref="#person137"><name nymRef="Σιμεώνις">Σιμεόνης</name></persName>
                 <lb n="2"/><date><supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied>
                    <gap reason="lost" extent="unknown" unit="character"/> <num value="19">θι</num></date>

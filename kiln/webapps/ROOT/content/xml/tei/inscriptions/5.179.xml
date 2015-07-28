@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.179</idno>
+            <idno type="filename">5.179</idno><idno type="PE">PE5017900</idno>
             <idno type="AYV2012-number">byz172</idno>
          </publicationStmt>
          <sourceDesc>
@@ -106,7 +104,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-08" who="CB">Andrey's corrections</change>
           <change when="2013-10-24" who="TW">Added image code</change>
@@ -125,7 +123,7 @@
         <surface>
             <graphic url="5.179">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -144,20 +142,16 @@
             <ab>
                <lb n="1"/><supplied reason="lost" cert="low"><w lemma="κτίζω">Ἐκτίσθη</w> <w lemma="ὁ">ὁ</w>
                   <w lemma="πύργος">πύργος</w></supplied> <w lemma="οὗτος"><supplied reason="lost">οὗ</supplied>τος</w>
-               <w lemma="μετά">μετὰ</w> <w lemma="ὁ">τοῦ</w> <w lemma="παλάτιον">παλατ<lb
-                  n="2" break="no"/><supplied reason="lost">ίου</supplied></w> <supplied reason="lost"><w lemma="καί">καὶ</w>
+               <w lemma="μετά">μετὰ</w> <w lemma="ὁ">τοῦ</w> <w lemma="παλάτιον">παλατ<lb n="2" break="no"/><supplied reason="lost">ίου</supplied></w> <supplied reason="lost"><w lemma="καί">καὶ</w>
                      <w lemma="σύν">σὺν</w> <w lemma="ὁ">τῷ</w></supplied>
-               <w lemma="εὐλογέω"><supplied reason="lost">εὐλ</supplied>ογημένῳ</w> <w lemma="κάστρον">κάστρ<lb
-                  n="3" break="no"/><supplied reason="lost">ῳ,</supplied></w><supplied reason="lost">
+               <w lemma="εὐλογέω"><supplied reason="lost">εὐλ</supplied>ογημένῳ</w> <w lemma="κάστρον">κάστρ<lb n="3" break="no"/><supplied reason="lost">ῳ,</supplied></w><supplied reason="lost">
                      <w lemma="ὁ">ὃ</w> <w lemma="νῦν">νῦν</w> <w lemma="ὁράω">ὁρᾶται</w>,
                      <w lemma="ὑπό">ὑπὸ</w></supplied> <w lemma="ἡμέρα">ἡμερῶν</w> <w lemma="κύριος">κυροῦ</w>
-               <persName type="ruler" key="alexios1Th"><name nymRef="Ἀλέξιος">Ἀλ<lb
-                  n="4" break="no"/><supplied reason="lost">εξίου</supplied></name></persName>
+               <persName type="ruler" key="alexios1Th"><name nymRef="Ἀλέξιος">Ἀλ<lb n="4" break="no"/><supplied reason="lost">εξίου</supplied></name></persName>
                <w lemma="αὐθέντης"><supplied reason="lost">αὐθέντου</supplied></w>
                <w lemma="πόλις"><supplied reason="lost">πόλεω</supplied>ς</w>
                <placeName key="theodoro">Θεοδώρους</placeName> <w lemma="καί">καὶ</w>
-               <w lemma="παραθαλάσσιος">πα<lb
-                  n="5" break="no"/><supplied reason="lost">ραθαλασσίας,</supplied></w>
+               <w lemma="παραθαλάσσιος">πα<lb n="5" break="no"/><supplied reason="lost">ραθαλασσίας,</supplied></w>
                <supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied>
                <rs type="month" ref="oct"><w lemma="Ὀκτώβριος"><supplied reason="lost">Ὀκτ</supplied>οβρίῳ</w></rs>,
                <w lemma="ἔτος">ἔτους</w> <num value="6934">ςϠλδ</num>.

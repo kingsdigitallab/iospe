@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.226</idno>
+            <idno type="filename">5.226</idno><idno type="PE">PE5022600</idno>
             <idno type="AYV2012-number">byz213</idno>
          </publicationStmt>
          <sourceDesc>
@@ -254,7 +252,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-05-28" who="CB">Minor additions to textparts</change>
          <change when="2015-05-01" who="CB">Textparts</change>
@@ -280,11 +278,11 @@
        <surface>
           <graphic url="5.226-1" n="2">
              <desc xml:lang="en">Photograph of face 2</desc>
-             <desc xml:lang="ru"></desc>
+             <desc xml:lang="ru"/>
           </graphic>
           <graphic url="5.226-2" n="2">
              <desc xml:lang="en">Photograph of face 2</desc>
-             <desc xml:lang="ru"></desc>
+             <desc xml:lang="ru"/>
           </graphic>
         </surface>
     </facsimile>
@@ -328,23 +326,15 @@
             <div type="textpart" subtype="inscription" n="2">
                <ab>
                   <lb n="1"/><w lemma="ἐπί"><supplied reason="lost">Ἐπὶ</supplied></w>
-                  <w lemma="βασιλεία"><supplied reason="lost">β</supplied><lb
-                     n="2" break="no"/><supplied reason="lost">ασιλή</supplied><lb
-                        n="3" break="no"/><unclear>α</unclear><supplied reason="lost" cert="low">ς</supplied></w>
-                  <persName type="ruler" key="outh"><name nymRef="—ουθου"><gap reason="illegible" quantity="2" unit="character"/><lb
-                     n="4" break="no"/><seg part="F">ου<unclear>θου</unclear></seg></name>
-                  <lb n="5"/><roleName><w lemma="Χαγαν">Χα<unclear>γ</unclear>α<lb
-                     n="6" break="no"/>ν</w></roleName></persName>,
+                  <w lemma="βασιλεία"><supplied reason="lost">β</supplied><lb n="2" break="no"/><supplied reason="lost">ασιλή</supplied><lb n="3" break="no"/><unclear>α</unclear><supplied reason="lost" cert="low">ς</supplied></w>
+                  <persName type="ruler" key="outh"><name nymRef="—ουθου"><gap reason="illegible" quantity="2" unit="character"/><lb n="4" break="no"/><seg part="F">ου<unclear>θου</unclear></seg></name>
+                  <lb n="5"/><roleName><w lemma="Χαγαν">Χα<unclear>γ</unclear>α<lb n="6" break="no"/>ν</w></roleName></persName>,
                   <persName type="ruler" key="ezos"><name nymRef="Ἦζος Ἠρζος"><app type="alternative"><lem>Ἠζου</lem><rdg>Ἠρζου</rdg></app></name>
-                  <lb n="7"/><w lemma="τουδούν">τουδού<lb
-                     n="8" break="no"/>ν</w></persName> <w lemma="ἀνεγείρω">ἀν<lb
-                        n="9" break="no"/>εχηρή<lb
-                           n="10" break="no"/>σθι</w> <w lemma="ὁ">ὁ</w>
+                  <lb n="7"/><w lemma="τουδούν">τουδού<lb n="8" break="no"/>ν</w></persName> <w lemma="ἀνεγείρω">ἀν<lb n="9" break="no"/>εχηρή<lb n="10" break="no"/>σθι</w> <w lemma="ὁ">ὁ</w>
                   <lb n="11"/><w lemma="ναός">ναὸς</w>
                   <lb n="12"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
                   <lb n="13"/><date><w lemma="μήν">μινὴ</w>
-                  <lb n="14"/><rs type="month" ref="apr"><w lemma="Ἀπρίλιος">Ἀπρη<lb
-                     n="15" break="no"/>λήο</w></rs>
+                  <lb n="14"/><rs type="month" ref="apr"><w lemma="Ἀπρίλιος">Ἀπρη<lb n="15" break="no"/>λήο</w></rs>
                   <lb n="16"/><w lemma="εἰμί">ἠς</w> <w lemma="ὁ">τὺ</w>
                   <lb n="17"/><num value="14">ιδ</num></date>.
                </ab>
@@ -355,23 +345,15 @@
                   <lb n="2"/><gap reason="lost" quantity="1" unit="line"/>
                   <lb n="3"/><gap reason="lost" quantity="1" unit="line"/>
                   <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>
-                  <lb n="5"/><gap reason="lost" quantity="1" unit="character"/><w>κατ<lb
-                     n="6" break="no"/><gap reason="lost" quantity="2" unit="character"/>ᾳ</w> <w lemma="δοῦλος">δου<lb
-                     n="7" break="no"/><supplied reason="lost">λ</supplied>ῳ</w>
-                  <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>υρίο</ex><lb
-                     n="8" break="no"/><abbr>υ</abbr></expan></w></roleName></persName>.
+                  <lb n="5"/><gap reason="lost" quantity="1" unit="character"/><w>κατ<lb n="6" break="no"/><gap reason="lost" quantity="2" unit="character"/>ᾳ</w> <w lemma="δοῦλος">δου<lb n="7" break="no"/><supplied reason="lost">λ</supplied>ῳ</w>
+                  <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>υρίο</ex><lb n="8" break="no"/><abbr>υ</abbr></expan></w></roleName></persName>.
                </ab>
             </div>
             <div type="textpart" subtype="inscription" n="4">
                <ab>
-                  <lb n="1"/><g ref="#stauros"/> <w>Ἥ<lb
-                     n="2" break="no"/>κ<note>?</note>ε</w>,
-                  <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><lb
-                     n="3" break="no"/><ex>ε</ex><abbr>έ</abbr></expan></w></roleName></persName>,
-                  <w lemma="ὁσπίτιον">ὀσπ<lb
-                     n="4" break="no"/>ίτια</w> <w lemma="τέσσαρες">τ<lb
-                        n="5" break="no"/>έσαρ<lb
-                           n="6" break="no"/>α</w> <g ref="#stauros"/>
+                  <lb n="1"/><g ref="#stauros"/> <w>Ἥ<lb n="2" break="no"/>κ<note>?</note>ε</w>,
+                  <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><lb n="3" break="no"/><ex>ε</ex><abbr>έ</abbr></expan></w></roleName></persName>,
+                  <w lemma="ὁσπίτιον">ὀσπ<lb n="4" break="no"/>ίτια</w> <w lemma="τέσσαρες">τ<lb n="5" break="no"/>έσαρ<lb n="6" break="no"/>α</w> <g ref="#stauros"/>
                </ab>
             </div>
             <div type="textpart" subtype="inscription" n="5">
@@ -710,7 +692,7 @@
                    that this inscription could have been cut during the construction of a church at Mangup which was under Khazar control some time at the end of the VIIIth or
                    early IXth century. Due to the lack of archaeological context for the find, the location of the church is impossible to determine:
                    of the buildings excavated shortly before 1940, the best candidate seems to be the Mangup basilica.</p>
-               <p></p>
+               <p/>
             </div>
          </div>
       </body>

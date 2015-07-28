@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.224</idno>
+            <idno type="filename">5.224</idno><idno type="PE">PE5022400</idno>
             <idno type="AYV2012-number">byz211</idno>
          </publicationStmt>
          <sourceDesc>
@@ -94,7 +92,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2013-11-07" who="TW">Added image code</change>
          <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
@@ -113,7 +111,7 @@
         <surface>
             <graphic url="5.224">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -131,8 +129,7 @@
                <lb n="2"/><w lemma="μακάριος">μακαρίᾳ</w> <w lemma="καί">κὲ</w>
                <lb n="3"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w>
                <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
-                <persName type="attested" ref="#person273"><name nymRef="Λα—ουλι-βει">Λα<gap reason="illegible" quantity="1" unit="character"/><lb
-                   n="4" break="no"/><gap reason="illegible" quantity="1" unit="character"/>ουλι-βει</name></persName>,
+                <persName type="attested" ref="#person273"><name nymRef="Λα—ουλι-βει">Λα<gap reason="illegible" quantity="1" unit="character"/><lb n="4" break="no"/><gap reason="illegible" quantity="1" unit="character"/>ουλι-βει</name></persName>,
                <w lemma="ὁ">ὡ</w> <w lemma="καί">κὲ</w> <w lemma="πρῶτος">πρ<unclear>ό</unclear><lb n="5" break="no"/>της</w>
                <w lemma="θέσις">θέσεος</w> <w lemma="ὁ">τοῦ</w> <num value="3">γ</num>
                <lb n="6"/><w lemma="μέρος"><unclear>μέρ</unclear>ους</w>, <date><w lemma="μήν">μηνὴ</w>

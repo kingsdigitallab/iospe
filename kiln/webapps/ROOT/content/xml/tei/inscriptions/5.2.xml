@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.2</idno>
+            <idno type="filename">5.2</idno><idno type="PE">PE5000200</idno>
             <idno type="AYV2012-number">byz002</idno>
          </publicationStmt>
          <sourceDesc>
@@ -177,7 +175,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-16" who="CB">Andrey's corrections</change>
           <change when="2012-11-27" who="AL">English toponyms in commentary inserted</change>
@@ -290,8 +288,7 @@
                   <w lemma="κῆλον">κήλον</w>
                   <w lemma="ὁ">τοῦ</w> <w lemma="δοῦλος">δούλου</w> <w lemma="σύ">σου</w>,
                   <w lemma="θεοτόκος"><expan><abbr>θ</abbr><ex>εοτό</ex><abbr>κε</abbr></expan></w> <g ref="#stauros"/>
-                  <lb n="7"/><date><rs type="month" ref="nou"><w lemma="Νοέμβριος"
-                     ><expan><abbr>Νο</abbr><ex>εμ</ex><abbr>βρή</abbr><ex>ου</ex></expan></w></rs>
+                  <lb n="7"/><date><rs type="month" ref="nou"><w lemma="Νοέμβριος"><expan><abbr>Νο</abbr><ex>εμ</ex><abbr>βρή</abbr><ex>ου</ex></expan></w></rs>
                   <num value="10">ι</num></date>.
                </ab>
             </div>

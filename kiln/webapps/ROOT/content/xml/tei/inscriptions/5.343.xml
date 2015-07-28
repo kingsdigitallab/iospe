@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-    <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt> <!-- \d+\. -->
@@ -12,7 +10,7 @@
                 </editor>
             </titleStmt>
             <publicationStmt><authority>King's College London</authority>
-                <idno type="filename">5.343</idno>
+                <idno type="filename">5.343</idno><idno type="PE">PE5034300</idno>
                 <idno type="AYV2012-number">byz319</idno>
             </publicationStmt>
             <sourceDesc>
@@ -126,7 +124,7 @@
             </msDesc>
             </sourceDesc>
         </fileDesc>
-        <xi:include href="encoding-desc.xml" />
+        
         <revisionDesc>
             <change when="2015-04-17" who="CB">Andrey's corrections</change>
             <change when="2015-04-09" who="CB">Andrey's corrections</change>
@@ -140,11 +138,11 @@
         <surface>
             <graphic url="5.343-1">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
             <graphic url="5.343-2">
                 <desc xml:lang="en">Photograph of face 2(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -158,8 +156,7 @@
 
         <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-                <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"
-                    ><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>
+                <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>
                 <choice><orig><w lemma="σύ"><expan><abbr>ὑ</abbr><ex cert="low">μῶν</ex></expan></w></orig>
                     <reg cert="low"><w lemma="ἐγώ"><expan><abbr>ἡ</abbr><ex cert="low">μῶν</ex></expan></w></reg></choice>,
                 <w lemma="δεσπότης">δέσπωτα</w> <w lemma="κακός">κακοῦ</w>, <w lemma="φθόνος">πθόνου</w> <w lemma="καί">καὶ</w> <w lemma="ζῆλος">ζήλου</w>
@@ -173,8 +170,7 @@
                 <persName type="attested" ref="#person419"><name nymRef="Μαρία"><expan><abbr>Μα</abbr><ex>ρίαν</ex></expan></name></persName>
                 <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
                 <persName type="attested" ref="#person550"><name nymRef="Κωνσταντῖνος">Κοσταντίνου</name></persName>
-                <w lemma="ἀπό"><unclear>ἀ</unclear><supplied reason="lost">π</supplied><lb
-                    n="5" break="no"/>ὼ</w> <w lemma="φθόνος">πθόνον</w>, <w lemma="ψόφος">ψοφης</w> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                <w lemma="ἀπό"><unclear>ἀ</unclear><supplied reason="lost">π</supplied><lb n="5" break="no"/>ὼ</w> <w lemma="φθόνος">πθόνον</w>, <w lemma="ψόφος">ψοφης</w> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
                 <w lemma="μαγεία">μα<unclear>γ</unclear><supplied reason="lost">είας</supplied></w>,
                 <lb n="6"/><w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <w lemma="φθόνος">πθόνος</w> <w lemma="οὐ">οὐκ</w>
                 <w lemma="ἅπτω"><unclear>ἅ</unclear><supplied reason="lost">ψῃ</supplied></w>

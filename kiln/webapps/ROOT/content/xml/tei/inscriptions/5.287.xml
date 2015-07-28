@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.287</idno>
+            <idno type="filename">5.287</idno><idno type="PE">PE5028700</idno>
             <idno type="AYV2012-number">byz275</idno>
          </publicationStmt>
          <sourceDesc>
@@ -102,7 +100,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-09" who="CB">Andrey's corrections</change>
           <change when="2013-11-07" who="TW">Added image code</change>
@@ -119,7 +117,7 @@
         <surface>
             <graphic url="5.287">
                 <desc xml:lang="en">Photograph of face 1(from ??)</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -134,24 +132,12 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab><cb n="A"/>
                <lb n="1"/><g ref="#stauros"/><w lemma="ἐνθάδε">Ἐν
-                <lb n="2"/>θά<lb
-                   n="3" break="no"/>δε</w>
-               <lb n="4"/><w lemma="κατάκειμαι">κα<lb
-                  n="5" break="no"/>τά<lb
-                     n="6" break="no"/>κι<lb
-                        n="7" break="no"/>τε</w>
+                <lb n="2"/>θά<lb n="3" break="no"/>δε</w>
+               <lb n="4"/><w lemma="κατάκειμαι">κα<lb n="5" break="no"/>τά<lb n="6" break="no"/>κι<lb n="7" break="no"/>τε</w>
                <cb n="B"/>
-               <lb n="8"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δο<lb
-                  n="9" break="no"/>ῦλος</w>
-               <lb n="10"/><w lemma="ὁ">τοῦ</w><lb
-                  n="11" break="no"/><persName type="divine" key="theos"><roleName><w lemma="θεός">Θ<lb
-                     n="12" break="no"/>ε<lb
-                        n="13" break="no"/>ο<lb
-                           n="14" break="no"/>ῦ</w></roleName></persName>
-               <lb n="15"/><persName type="attested" ref="#person353"><name nymRef="Ἀρχέλαος">Ἀ<supplied reason="lost">ρ</supplied><lb
-                  n="16" break="no"/>χέ<lb
-                     n="17" break="no"/>λα<lb
-                     n="18" break="no"/>ος</name></persName>.
+               <lb n="8"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δο<lb n="9" break="no"/>ῦλος</w>
+               <lb n="10"/><w lemma="ὁ">τοῦ</w><lb n="11" break="no"/><persName type="divine" key="theos"><roleName><w lemma="θεός">Θ<lb n="12" break="no"/>ε<lb n="13" break="no"/>ο<lb n="14" break="no"/>ῦ</w></roleName></persName>
+               <lb n="15"/><persName type="attested" ref="#person353"><name nymRef="Ἀρχέλαος">Ἀ<supplied reason="lost">ρ</supplied><lb n="16" break="no"/>χέ<lb n="17" break="no"/>λα<lb n="18" break="no"/>ος</name></persName>.
             </ab>
          </div>
          <div type="translation" xml:lang="ru">

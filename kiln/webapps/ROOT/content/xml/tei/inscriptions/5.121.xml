@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
             </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.121</idno>
+            <idno type="filename">5.121</idno><idno type="PE">PE5012100</idno>
             <idno type="AYV2012-number">byz117</idno>
          </publicationStmt>
          <sourceDesc>
@@ -103,7 +101,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-04-17" who="CB">Andrey's corrections</change>
          <change when="2015-03-31" who="CB">Andrey's corrections</change>
@@ -121,7 +119,7 @@
         <surface>
             <graphic url="5.121">
                 <desc xml:lang="en">Photograph of face</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -137,11 +135,9 @@
             <ab>
                <lb/><gap reason="lost" extent="unknown" unit="line"/>
                <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person142"><name nymRef="—έφρονος"><seg part="F">εφρόνου</seg></name></persName>,
-               <persName type="attested" ref="#person143"><name nymRef="Θεόδωρος">Θε<lb
-                  n="2" break="no"/><supplied reason="lost" cert="low">όδωρος</supplied></name></persName>, 
+               <persName type="attested" ref="#person143"><name nymRef="Θεόδωρος">Θε<lb n="2" break="no"/><supplied reason="lost" cert="low">όδωρος</supplied></name></persName>, 
                <persName type="attested" ref="#person144"><name nymRef="Παυλίνις"><supplied reason="lost" cert="low">Πα</supplied>ουλήνις</name> 
-                  <persName type="attested" ref="#person145"><name nymRef="Θεόδωρος">Θε<lb
-                     n="3" break="no"/><supplied reason="lost">οδ</supplied>όρου</name></persName></persName>,
+                  <persName type="attested" ref="#person145"><name nymRef="Θεόδωρος">Θε<lb n="3" break="no"/><supplied reason="lost">οδ</supplied>όρου</name></persName></persName>,
                <persName type="attested" ref="#person146"><name nymRef="Ἄνις">Ἄνις <certainty locus="value" match=".." cert="low"/></name>
                   <persName type="attested" ref="#person147"><name nymRef="Σωτήρικος">Σοτιρίκου</name></persName></persName>,
                <lb n="4"/><persName type="attested" ref="#person148"><name nymRef="Ἄνις"><supplied reason="lost" cert="low">Ἄν</supplied>ις</name>

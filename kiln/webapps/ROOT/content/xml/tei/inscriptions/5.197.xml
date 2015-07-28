@@ -1,6 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-   <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -12,7 +10,7 @@
              </editor>
          </titleStmt>
          <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">5.197</idno>
+            <idno type="filename">5.197</idno><idno type="PE">PE5019700</idno>
             <idno type="AYV2012-number">byz186</idno>
          </publicationStmt>
          <sourceDesc>
@@ -60,7 +58,7 @@
                         <seg xml:lang="ru">Мариамполь.</seg>
                         <seg xml:lang="en">Mariampol.</seg>
                      </origPlace>
-                     <origDate> notBefore="1301" notAfter="1333" precision="medium" evidence="тип_надгробия палеография">
+                     <origDate> notBefore="1301" notAfter="1333" precision="medium" evidence="тип_надгробия палеография"&gt;
                         <seg xml:lang="ru">кон. XIII – нач. XIV в.</seg>
                         <seg xml:lang="en">late XIII – early XIVth centuries C.E.</seg>
                      </origDate>
@@ -136,7 +134,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml" />
+      
       <revisionDesc>
          <change when="2015-05-22" who="CB">Corrections to msParts</change>
          <change when="2015-04-30" who="CB">Textparts</change>
@@ -160,11 +158,11 @@
         <surface>
             <graphic url="5.197-1" n="2">
                 <desc xml:lang="en">Photograph of face 1</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
             <graphic url="5.197-2" n="1">
                 <desc xml:lang="en">Photograph of face 2</desc>
-                <desc xml:lang="ru"></desc>
+                <desc xml:lang="ru"/>
             </graphic>
         </surface>
     </facsimile>
@@ -185,11 +183,9 @@
                   <w lemma="δοῦλος">δοῦλως</w> <w lemma="ὁ">τοῦ</w>
                   <lb n="2"/><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
                   <persName type="attested" ref="#person246"><name nymRef="Σοκαν">Σο<gap reason="illegible" quantity="1" unit="character"/>κ<gap reason="illegible" quantity="2" unit="character"/>αν</name></persName>
-                  <w lemma="διά">δηὰ</w> <w lemma="ὁ">τοὺς</w> <w lemma="θνήσκω">τε<lb
-                     n="3" break="no"/>θνικώτας</w> <w lemma="παρά">π<unclear>αρὰ</unclear></w> <w lemma="ὁ">τοῦ</w>
+                  <w lemma="διά">δηὰ</w> <w lemma="ὁ">τοὺς</w> <w lemma="θνήσκω">τε<lb n="3" break="no"/>θνικώτας</w> <w lemma="παρά">π<unclear>αρὰ</unclear></w> <w lemma="ὁ">τοῦ</w>
                   <w lemma="κύριος"><expan><abbr>κ</abbr><ex>υρίο</ex><abbr>υ</abbr></expan></w> <w lemma="ἐν">ἐν</w>
-                  <w lemma="αὐτός">αὐ<lb
-                     n="4" break="no"/>τῖ</w>, <w lemma="ἐν">ἐν</w> <date> <w lemma="μήν">μινὶ</w> <rs type="month" ref="iun"><w lemma="Ἰούνιος">Ἰουνίῳ</w></rs> <w lemma="εἰς">εἰς</w> <w lemma="ὁ">τὰ</w>
+                  <w lemma="αὐτός">αὐ<lb n="4" break="no"/>τῖ</w>, <w lemma="ἐν">ἐν</w> <date> <w lemma="μήν">μινὶ</w> <rs type="month" ref="iun"><w lemma="Ἰούνιος">Ἰουνίῳ</w></rs> <w lemma="εἰς">εἰς</w> <w lemma="ὁ">τὰ</w>
                   <lb n="5"/><num value="5">ε</num></date> <g ref="#dipunct"/> <gap reason="lost" quantity="3" unit="character"/>
                   <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr><supplied reason="lost">θ</supplied></abbr><supplied reason="lost"><ex>ε</ex></supplied><abbr>ῷ</abbr></expan></w></roleName></persName>
                   <w lemma="εὔχομαι"><expan><abbr>εὔχ</abbr><ex>εσ</ex><abbr>θε</abbr></expan></w>
@@ -201,9 +197,7 @@
             <div type="textpart" subtype="section" n="2">
                <ab>
                   <lb n="1"/><w lemma="εἰς">Εἰς</w>
-                  <persName type="attested" ref="#person247"><name nymRef="Μουρσά">Μουρ<lb
-                     n="2" break="no"/>σὰν</name> <persName type="attested" ref="#person443"><name nymRef="Ιρπάνας">Ιρπά<lb
-                        n="3" break="no"/>να</name></persName></persName> <w lemma="πρός">πρὸς</w> <w lemma="ὁ">τοῦ</w>
+                  <persName type="attested" ref="#person247"><name nymRef="Μουρσά">Μουρ<lb n="2" break="no"/>σὰν</name> <persName type="attested" ref="#person443"><name nymRef="Ιρπάνας">Ιρπά<lb n="3" break="no"/>να</name></persName></persName> <w lemma="πρός">πρὸς</w> <w lemma="ὁ">τοῦ</w>
                   <w lemma="πατήρ"><expan><abbr>π</abbr><ex>ατ</ex><abbr>ρός</abbr></expan></w>
                   <lb n="4"/><w lemma="ἐγώ">του</w>.
                 </ab>
