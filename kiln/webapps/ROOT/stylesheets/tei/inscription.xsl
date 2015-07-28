@@ -671,7 +671,9 @@
       <div class="large-2 columns">
         <xsl:choose>
           <xsl:when test="normalize-space($fragNum)">
-            <h2>
+            <!-- we need a different styling on the h2 when this particular condition applies,
+            eg. with inscription V.236, so against usual practice we specify the style here-->
+            <h2 style="color: #285072; font: 1.25em Arial,Helvetica,sans-serif;">
               <i18n:text>Epigraphic field</i18n:text>
               <xsl:if test="substring-after($fullN, '.')!='0'"><xsl:text>&#160;</xsl:text>
               <xsl:value-of select="substring-after($fullN, '.')"/></xsl:if>
@@ -858,12 +860,19 @@
                   <xsl:text>large-2 columns wrap</xsl:text>
                 </xsl:attribute>
                 <h2>
-                  <xsl:attribute name="class">
+                  <xsl:choose><!-- we need a different styling on the h2 for rare cases such as with inscription V.236, 
+                    so against usual practice we specify the style here-->
+                    <xsl:when test="normalize-space($fragNum)">
+                      <xsl:attribute name="style">
+                        <xsl:text>color: #285072; font: 1.25em Arial,Helvetica,sans-serif;</xsl:text>
+                      </xsl:attribute>
+                    </xsl:when>
+                  <xsl:otherwise><xsl:attribute name="class">
                     <xsl:text>part</xsl:text>
                     <xsl:if test="$nestedTitles">
                       <xsl:text> subpart</xsl:text>
                     </xsl:if>
-                  </xsl:attribute>
+                  </xsl:attribute></xsl:otherwise></xsl:choose>
                   <!-- DEBUG: check variable values -->
                   <!--f_n value: <xsl:value-of select="$f_n"/>; tx_n value: <xsl:value-of select="$tx_n"/>;-->
                   <!-- END DEBUG -->
