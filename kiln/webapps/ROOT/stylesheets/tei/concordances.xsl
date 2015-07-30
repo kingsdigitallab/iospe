@@ -31,6 +31,7 @@
     <xsl:variable name="distinct-bibls">
       <xsl:for-each-group select="//doc[str[@name='bibl-list'] = 'corpora']"
         group-by="str[@name='bibl-target']">
+        <xsl:sort select="str[@name=concat('bibl-abbrev-',$lang)]"/>
         <xsl:sort
           select="iospe:sort-bibliography(/aggregation/bib/tei:TEI//tei:listBibl/(tei:biblStruct | tei:bibl)[@xml:id=current()/str[@name='bibl-target']])"/>
         <xsl:sort
