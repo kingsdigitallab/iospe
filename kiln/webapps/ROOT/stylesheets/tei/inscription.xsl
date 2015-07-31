@@ -119,14 +119,14 @@
 
       <xsl:choose>
         <xsl:when
-          test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang = 'en'] = 'Unknown.'">
+          test="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = 'en'] = 'Unknown.'">
           <xsl:text>.</xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>, </xsl:text>
           <!-- origDate -->
           <xsl:value-of
-            select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate[1]/tei:seg[@xml:lang = $lang]"
+            select="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = $lang]"
           />
         </xsl:otherwise>
       </xsl:choose>
