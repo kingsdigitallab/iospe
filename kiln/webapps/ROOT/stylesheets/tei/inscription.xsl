@@ -365,7 +365,7 @@
             </div>
           </div>
 
-          <!-- Find Circumnstances -->
+          <!-- Find Circumstances -->
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -572,12 +572,13 @@
             </xsl:for-each>
           </xsl:when>
           <xsl:when
-            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n]">
+            test="//tei:msDesc/tei:msPart[@n][descendant::tei:layoutDesc]">
             <!-- multiple epigraphic fields, followed by a single textpart -->
             <xsl:for-each
-              select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n]">
+              select="//tei:msDesc/tei:msPart[@n][descendant::tei:layoutDesc]">
               <xsl:call-template name="do_epigraphic_field">
                 <xsl:with-param name="fullN" select="@n"/>
+                
               </xsl:call-template>
             </xsl:for-each>
             <xsl:call-template name="do_textpart"/>
@@ -585,6 +586,8 @@
           <xsl:otherwise>
             <!-- single epigraphic field, followed by a single textpart -->
             <xsl:call-template name="do_epigraphic_field"/>
+            
+            
             <xsl:call-template name="do_textpart"/>
           </xsl:otherwise>
 
@@ -679,7 +682,7 @@
               <xsl:value-of select="substring-after($fullN, '.')"/></xsl:if>
             </h2>
           </xsl:when>
-          <xsl:when test="$ms_context/@n">
+          <xsl:when test="$ms_context/node()/@n">
             <xsl:attribute name="class">
               <xsl:text>large-2 columns wrap</xsl:text>
             </xsl:attribute>
@@ -698,7 +701,7 @@
                   <xsl:value-of select="substring-after($fullN, '.')"/>
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:value-of select="@n"/>
+                  <xsl:value-of select="$fullN"/>
                 </xsl:otherwise>
               </xsl:choose>
             </h2>
