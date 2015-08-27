@@ -76,9 +76,9 @@
           <map:parameter name="max-year" value="{3}"/>
           <map:parameter name="query-string" value="{request:queryString}"/>
         </map:transform>
-        <!--<map:transform type="i18n">
+        <map:transform type="i18n">
           <map:parameter name="locale" value="{1}"/>
-        </map:transform>-->
+        </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
 
