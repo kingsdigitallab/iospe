@@ -24,6 +24,12 @@
     Text_2
     (etc.)
   (etc. with rest of fragments)  -->
+  <!-- PC AUGUST 2015: for 5.7, which has two fragments but only one inscription, display structure needs to be:
+  Monument
+  Fragment_1
+  Fragment_2
+  EpiField
+  Text -->
 
   <xsl:template match="/"/>
 
@@ -471,9 +477,9 @@
     <xsl:apply-templates mode="do_fragment_or_monument" select="//tei:msDesc"/>
 
     <xsl:choose>
-      <!-- PC JULY 2015: first test added to deal with complex cases like V.236 -->
-      <xsl:when test="//tei:msDesc/tei:msPart[@ana='fragment']">
-        <xsl:for-each select="//tei:msDesc/tei:msPart[@ana='fragment']">
+      <!-- PC JULY 2015: this first case is to deal with complex cases like V.236 (see comment at top) -->
+      <xsl:when test="//tei:msDesc/tei:msPart[(@ana='fragment') and (child::tei:msPart[@ana='text'])]">
+        <xsl:for-each select="//tei:msDesc/tei:msPart[(@ana='fragment') and (child::tei:msPart[@ana='text'])]">
           <xsl:variable name="fragNum" select="@n"/>
           <xsl:apply-templates select="." mode="do_fragment_or_monument">
             <xsl:with-param name="n" select="$fragNum"/>
