@@ -6,10 +6,88 @@
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
-  <xsl:param name="ancient-lang" select="'n/a'"/>
+  <xsl:param name="ancient-lang"/>
 
   <xsl:param name="lang"/>
+  <xsl:param name="current-date"/>
+  <xsl:param name="current-letter"/>
+  <!--<xsl:param name="kiln:url-lang-suffix" select="$kiln:url-lang-suffix"/>-->
+
+  <!-- ************************************* -->
+  <!-- ********** Global variables ********* -->
+  <!-- ************************************* -->
+  <xsl:variable name="lang-suffix">
+    <xsl:choose>
+      <xsl:when test="$lang != 'en'">
+        <xsl:value-of select="concat('-', $lang)"/>
+      </xsl:when>
+      <xsl:otherwise/>
+    </xsl:choose>
+  </xsl:variable>
+  <!-- For display "sort by date" the following variables help us
+    create the pagination list at top of table and to associate the
+    correct Attested Person names with each era+century value -->
+  <xsl:variable name="input">
+    <xsl:sequence select="distinct-values(//tei:person/tei:floruit/@notBefore)"/>
+  </xsl:variable>
+  
+  <xsl:variable name="sorted">
+    <xsl:perform-sort select="tokenize($input, '\s')">
+      <xsl:sort select="."/>
+    </xsl:perform-sort>
+  </xsl:variable>
+  
+  <xsl:variable name="earliest_date">
+    <xsl:sequence select="tokenize($sorted, '\s')[1]"/>
+  </xsl:variable>
+  
+  <xsl:variable name="e_century_string" as="node()*">
+    <xsl:choose>
+      <xsl:when test="starts-with($earliest_date, '-')">
+        <xsl:sequence
+          select="//list[@xml:lang = $lang]/century[substring(@max, 2, 2) = substring($earliest_date, 2, 2)]/@url"
+        />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:sequence
+          select="//list[@xml:lang = $lang]/century[substring(@min, 1, 2) = substring($earliest_date, 1, 2)]/@url"
+        />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  
+  <xsl:variable name="earliest_century" select="substring-before($e_century_string, '-')"/>
+  <xsl:variable name="earliest_era_prefix" select="substring-after($e_century_string, '-')"/>
+  
+  <xsl:variable name="latest_date">
+    <xsl:sequence select="tokenize($sorted, '\s')[last()]"/>
+  </xsl:variable>
+  
+  <xsl:variable name="l_century_string" as="node()*">
+    <xsl:sequence
+      select="//list[@xml:lang = $lang]/century[substring(@min, 1, 2) = substring($latest_date, 1, 2)]/@url"
+    />
+  </xsl:variable>
+  
+  <xsl:variable name="l_century_num" as="node()*">
+    <xsl:sequence
+      select="//list[@xml:lang = $lang]/century[substring(@min, 1, 2) = substring($latest_date, 1, 2)]/@num"
+    />
+  </xsl:variable>
+  
+  <xsl:variable name="latest_century" select="substring-before($l_century_string, '-')"/>
+
+  <!-- the two date_limit variables below help with grouping the Attested Persons by their @notBefore value -->
+  <xsl:variable name="lower_date_limit"
+    select="number(//list[@xml:lang = $lang]/century[@url = $current-date]/@min)"/>
+  <xsl:variable name="upper_date_limit" select="number($lower_date_limit + 99)"/>
+
+  <!-- ****************************************** -->
+  <!-- ********** End global variables ********** -->
+  <!-- ****************************************** -->
+
   <xsl:template match="/"/>
+
 
   <!-- set title -->
   <xsl:template name="indexTitlePerson">
@@ -33,83 +111,36 @@
       </xsl:for-each>
     </ul>
   </xsl:template>
+
   <!-- Generate Index -->
   <xsl:template name="generateIndexPerson">
 
     <xsl:call-template name="indices_bracket_info"/>
 
-
-
     <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
-      <section>
-        <xsl:attribute name="class">
-          <xsl:if test="$sort = 'date'">
-            <xsl:text>active</xsl:text>
-          </xsl:if>
-        </xsl:attribute>
-        <p class="title" data-section-title="true">
-          <a href="?sort=date">
-            <i18n:text>Sort by date</i18n:text>
-          </a>
-        </p>
-        <xsl:if test="$sort = 'date'">
-          <div class="content" data-section-content="true">
-            <div class="row">
-              <table class="indices indices-person">
-                <thead>
-                  <tr>
-                    <th>
-                      <xsl:text> </xsl:text>
-                    </th>
-                    <th>
-                      <i18n:text>Greek</i18n:text>
-                    </th>
-                    <th>
-                      <i18n:text>Date</i18n:text>
-                    </th>
-                    <th>
-                      <i18n:text>Relationships</i18n:text>
-                    </th>
 
-                    <th>
-                      <i18n:text>Occupation/Title</i18n:text>
-                    </th>
-                    <th>
-                      <i18n:text>Inscriptions</i18n:text>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <xsl:for-each select="//persons//tei:person">
-                    <xsl:sort
-                      select="concat(tei:floruit[tei:seg[@xml:lang = $lang]]/@notBefore, 'X')"/>
-                    <xsl:sort select="tei:floruit[tei:seg[@xml:lang = $lang]]/@notAfter"/>
-                    <xsl:call-template name="person"/>
-                  </xsl:for-each>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </xsl:if>
-      </section>
       <section>
         <xsl:attribute name="class">
-          <xsl:if test="
-              $sort = ('name',
-              '')">
+          <xsl:if test="$sort = 'letters'">
             <xsl:text>active</xsl:text>
           </xsl:if>
         </xsl:attribute>
         <p class="title" data-section-title="true">
-          <a href="?sort=name">
+          <a href="../letters/A{$lang-suffix}.html">
+
             <i18n:text>Sort by name</i18n:text>
           </a>
         </p>
-        <xsl:if test="
-            $sort = ('name',
-            '')">
+        <xsl:if test="$sort = 'letters'">
           <div class="content" data-section-content="true">
             <div class="row">
+
+              <xsl:if test="//letters[@type != 'date']">
+                <xsl:call-template name="letterList">
+                  <xsl:with-param name="lettertype">foo</xsl:with-param>
+                </xsl:call-template>
+              </xsl:if>
+
               <table class="indices indices-person">
                 <thead>
                   <tr>
@@ -135,7 +166,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <xsl:for-each select="//persons//tei:person">
+                  <xsl:for-each
+                    select="/aggregation/persons//tei:person[@xml:id = /aggregation/index//result/doc[str[@name = 'first-letter'] = $current-letter]/arr[@name = 'persName-ref']/str/substring-after(text(), '#')]">
                     <xsl:sort
                       select="
                         concat(
@@ -158,13 +190,121 @@
           </div>
         </xsl:if>
       </section>
+
+
+      <section>
+        <xsl:attribute name="class">
+          <xsl:if test="$sort = 'date'">
+            <xsl:text>active</xsl:text>
+          </xsl:if>
+        </xsl:attribute>
+        <p class="title" data-section-title="true">
+          <a href="../dates/{$earliest_century}_{$earliest_era_prefix}{$lang-suffix}.html">
+            <i18n:text>Sort by date</i18n:text>
+          </a>
+        </p>
+        <xsl:if test="$sort = 'date'">
+          <div class="content" data-section-content="true">
+            <div class="row">
+              <div class="pagination-centered">
+                <ul class="date pagination">
+                  <xsl:if test="$earliest_era_prefix = 'BCE'">
+                    <li class="unavailable">
+                        <i18n:text>BCE</i18n:text>
+                    </li>
+                    <xsl:for-each
+                      select="//letters[@type = 'date']/letter[not(text() = 'dated')][substring-after(., '-') = 'BCE']">
+                      <xsl:sort select="//list[@xml:lang = $lang]/century[@url = current()]/@num"
+                        data-type="number" order="descending"/>
+
+                      <li>
+                        <xsl:attribute name="class">
+                          <xsl:if test="current() = $current-date">
+                            <xsl:text>current</xsl:text>
+                          </xsl:if>
+                        </xsl:attribute>
+                        <a href="{translate(., '-', '_')}{$lang-suffix}.html">
+                          <xsl:value-of select="substring-before(., '-')"/>
+                        </a>
+                      </li>
+                    </xsl:for-each>
+                  </xsl:if>
+
+
+                  <li class="unavailable">
+                    <i18n:text>CE</i18n:text>
+                  </li>
+
+                  <xsl:for-each
+                    select="//letters[@type = 'date']/letter[not(text() = 'dated')][substring-after(., '-') = 'CE']">
+                    <xsl:sort
+                      select="//list[@xml:lang = $lang]/century[(@url = current()) and (@num &lt;= $l_century_num)]/@num"
+                      data-type="number" order="ascending"/>
+                    <li>
+                      <xsl:attribute name="class">
+                        <xsl:if test="current() = $current-date">
+                          <xsl:text>current</xsl:text>
+                        </xsl:if>
+                      </xsl:attribute>
+                      <a href="{translate(., '-', '_')}{$lang-suffix}.html">
+                        <xsl:value-of select="substring-before(., '-')"/>
+                      </a>
+                    </li>
+                  </xsl:for-each>
+
+
+                </ul>
+              </div>
+
+              <table class="indices indices-person">
+                <thead>
+                  <tr>
+                    <th>
+                      <xsl:text> </xsl:text>
+                    </th>
+                    <th>
+                      <i18n:text>Greek</i18n:text>
+                    </th>
+                    <th>
+                      <i18n:text>Date</i18n:text>
+                    </th>
+                    <th>
+                      <i18n:text>Relationships</i18n:text>
+                    </th>
+
+                    <th>
+                      <i18n:text>Occupation/Title</i18n:text>
+                    </th>
+                    <th>
+                      <i18n:text>Inscriptions</i18n:text>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                      <xsl:for-each
+                        select="//persons//tei:person[(number(tei:floruit/@notBefore) >= $lower_date_limit) and (number(tei:floruit/@notBefore) &lt;= $upper_date_limit)]">
+                        <xsl:sort
+                          select="concat(tei:floruit[tei:seg[@xml:lang = $lang]]/@notBefore, 'X')"/>
+                        <xsl:sort select="tei:floruit[tei:seg[@xml:lang = $lang]]/@notAfter"/>
+                        <xsl:call-template name="person"/>
+                      </xsl:for-each>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </xsl:if>
+      </section>
+
+
     </div>
   </xsl:template>
 
   <xsl:template name="person">
     <tr class="index_row">
       <th id="{@xml:id}">
-        <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+        <!--<a href="#">-->
+          <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+        <!--</a>-->
         <xsl:text> </xsl:text>
       </th>
 
@@ -186,81 +326,66 @@
         <xsl:for-each
           select="//persons/descendant::tei:relation[substring-after(@active, '#') = current()/@xml:id]">
           <xsl:choose>
-            <!-- the child tei:desc should only be in Russian, so if $lang is ru we'll 
-              use the value of tei:desc because it will have the correct genitive form -->
-            <xsl:when test="tei:desc[@xml:lang = $lang]">
-              <xsl:value-of select="substring-before(tei:desc[@xml:lang = $lang], ' ')"/>
-              <xsl:text> </xsl:text>
-              <a class="relation-link" href="{@passive}">
-              <xsl:value-of select="substring-after(tei:desc[@xml:lang = $lang], ' ')"/>
-              </a>
+            <xsl:when test="@name = 'father'">
+              <i18n:text>father of</i18n:text>
             </xsl:when>
-
-            <!-- otherwise we just concat an appropriate phrase with the name pointed to by @passive -->
-            <xsl:otherwise>
-              <xsl:choose>
-                <xsl:when test="@name = 'father'">
-                  <i18n:text>father of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'son'">
-                  <i18n:text>son of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'mother'">
-                  <i18n:text>mother of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'daughter'">
-                  <i18n:text>daughter of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'brother'">
-                  <i18n:text>brother of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'sister'">
-                  <i18n:text>sister of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'related'">
-                  <i18n:text>related of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'fiancé'">
-                  <i18n:text>fiancé of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'fiancée'">
-                  <i18n:text>fiancée of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'husband'">
-                  <i18n:text>husband of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'wife'">
-                  <i18n:text>wife of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'grandfather'">
-                  <i18n:text>grandfather of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'grandson'">
-                  <i18n:text>grandson of</i18n:text>
-                </xsl:when>
-                <xsl:when test="@name = 'granddaughter'">
-                  <i18n:text>granddaughter of</i18n:text>
-                </xsl:when>
-              </xsl:choose>
-              <!-- space after relationship -->
-              <xsl:text> </xsl:text>
-
-              <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
-                as="xs:sequence"/>
-
-              <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-                <a href="#{@xml:id}" class="relation_link">
-                  <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
-                </a>
-                <xsl:if test="following::tei:person[@xml:id = $passives]">
-                  <xsl:text>, </xsl:text>
-                </xsl:if>
-              </xsl:for-each>
-            </xsl:otherwise>
+            <xsl:when test="@name = 'son'">
+              <i18n:text>son of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'mother'">
+              <i18n:text>mother of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'daughter'">
+              <i18n:text>daughter of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'brother'">
+              <i18n:text>brother of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'sister'">
+              <i18n:text>sister of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'related'">
+              <i18n:text>related of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'fiancé'">
+              <i18n:text>fiancé of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'fiancée'">
+              <i18n:text>fiancée of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'husband'">
+              <i18n:text>husband of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'wife'">
+              <i18n:text>wife of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'grandfather'">
+              <i18n:text>grandfather of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'grandson'">
+              <i18n:text>grandson of</i18n:text>
+            </xsl:when>
+            <xsl:when test="@name = 'granddaughter'">
+              <i18n:text>granddaughter of</i18n:text>
+            </xsl:when>
           </xsl:choose>
-          
+          <!-- space after relationship -->
+          <xsl:text> </xsl:text>
+
+          <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
+            as="xs:sequence"/>
+
+          <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
+            <a href="#{@xml:id}" class="relation_link">
+              <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
+            </a>
+            <xsl:if test="following::tei:person[@xml:id = $passives]">
+              <xsl:text>, </xsl:text>
+            </xsl:if>
+          </xsl:for-each>
+
           <xsl:if test="following::tei:relation[@active = current()/@active]">
-            <br/>
+            <xsl:text>; </xsl:text>
           </xsl:if>
 
         </xsl:for-each>
@@ -276,7 +401,7 @@
 
         <ul class="inline-list">
           <xsl:for-each
-            select="//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
+            select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
             <xsl:sort select="str[@name = 'tei-id']"/>
             <li>
               <xsl:call-template name="link2inscription"/>
