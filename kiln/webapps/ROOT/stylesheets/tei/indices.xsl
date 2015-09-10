@@ -7,6 +7,8 @@
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
   <xsl:param name="current"/>
+  <xsl:param name="current-date"/>
+  <xsl:param name="current-letter"/>
   <xsl:param name="ancient-lang" select="'n/a'"/>
 
   <xsl:import href="../common/conversions.xsl"/>
@@ -123,9 +125,10 @@
   </xsl:template>
 
   <xsl:template name="letterList">
+    <xsl:param name="lettertype">foo</xsl:param>
     <div class="pagination-centered">
       <ul class="pagination">
-        <xsl:for-each select="//letters/letter">
+        <xsl:for-each select="//letters[@type=$lettertype]/letter">
           <xsl:variable name="location">
             <xsl:choose>
               <xsl:when test="

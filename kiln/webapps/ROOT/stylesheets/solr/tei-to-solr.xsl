@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  xmlns:local="http://www.cch.kcl.ac.uk/kiln/local/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+ xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:local="http://www.cch.kcl.ac.uk/kiln/local/1.0"
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- <xsl:import href="../../kiln/stylesheets/solr/tei-to-solr.xsl" /> -->
 
@@ -25,10 +25,10 @@
     <add>
       <!-- Doing all in different passes to make sure that all indexes are populated -->
       <!--<xsl:variable name="saved-common-data">
-        <xsl:call-template name="common-data" >
-          <xsl:with-param name="inscription" select="/aggregation/document/tei:TEI" />
-        </xsl:call-template>
-      </xsl:variable>-->
+       <xsl:call-template name="common-data" >
+         <xsl:with-param name="inscription" select="/aggregation/document/tei:TEI" />
+       </xsl:call-template>
+     </xsl:variable>-->
       <xsl:apply-templates mode="publication"/>
       <xsl:apply-templates mode="origin"/>
       <xsl:apply-templates mode="findspot"/>
@@ -54,17 +54,17 @@
   <xsl:template match="tei:bibl[tei:citedRange][descendant::tei:ptr]" mode="publication">
     <xsl:variable name="target" select="substring-after(descendant::tei:ptr[1]/@target, 'bib:')"/>
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'publication'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space($target),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space($target),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
         <xsl:comment>Publication</xsl:comment>
@@ -80,8 +80,8 @@
 
         <field name="bibl-list">
           <xsl:value-of
-            select="//tei:listBibl[(descendant::tei:biblStruct | descendant::tei:bibl)[@xml:id = $target]]/@type"
-          />
+           select="//tei:listBibl[(descendant::tei:biblStruct | descendant::tei:bibl)[@xml:id = $target]]/@type"
+         />
         </field>
         <!-- From AL bibliography.xml -->
         <xsl:for-each select="//(tei:biblStruct | tei:bibl)[@xml:id = $target]">
@@ -90,12 +90,12 @@
             <xsl:choose>
               <xsl:when test="descendant::tei:author">
                 <xsl:value-of
-                  select="descendant::tei:author[1]//tei:surname[@xml:lang = 'en' or not(@xml:lang)]"/>
+                 select="descendant::tei:author[1]//tei:surname[@xml:lang = 'en' or not(@xml:lang)]"/>
                 <xsl:if test="descendant::tei:author[2]">
                   <xsl:text>, </xsl:text>
                   <xsl:value-of
-                    select="descendant::tei:author[2]//tei:surname[@xml:lang = 'en' or not(@xml:lang)]"
-                  />
+                   select="descendant::tei:author[2]//tei:surname[@xml:lang = 'en' or not(@xml:lang)]"
+                 />
                 </xsl:if>
                 <xsl:if test="count(descendant::tei:author[1]) > 2">
                   <xsl:text>, et al.</xsl:text>
@@ -120,12 +120,12 @@
             <xsl:choose>
               <xsl:when test="descendant::tei:author">
                 <xsl:value-of
-                  select="descendant::tei:author[1]//tei:surname[@xml:lang = 'ru' or not(@xml:lang)]"/>
+                 select="descendant::tei:author[1]//tei:surname[@xml:lang = 'ru' or not(@xml:lang)]"/>
                 <xsl:if test="descendant::tei:author[2]">
                   <xsl:text>, </xsl:text>
                   <xsl:value-of
-                    select="descendant::tei:author[2]//tei:surname[@xml:lang = 'ru' or not(@xml:lang)]"
-                  />
+                   select="descendant::tei:author[2]//tei:surname[@xml:lang = 'ru' or not(@xml:lang)]"
+                 />
                 </xsl:if>
                 <xsl:if test="count(descendant::tei:author[1]) > 2">
                   <xsl:text>, и др.</xsl:text>
@@ -151,13 +151,13 @@
             <xsl:for-each select="descendant::tei:title">
               <xsl:value-of select="."/>
               <xsl:if
-                test="following::tei:title[(ancestor::tei:biblStruct | ancestor::tei:bibl)[@xml:id = $target]]">
+               test="following::tei:title[(ancestor::tei:biblStruct | ancestor::tei:bibl)[@xml:id = $target]]">
                 <xsl:text>, </xsl:text>
               </xsl:if>
             </xsl:for-each>
           </field>
         </xsl:for-each>
-        <!-- the two fields below are used to determine the ordering of items in the concordance display -->
+      <!-- the two fields below are used to determine the ordering of items in the concordance display -->
         <xsl:for-each select="//tei:listBibl[@type = 'corpora']/tei:bibl[@xml:id = $target]">
           <field name="bibl-abbrev-en">
             <xsl:value-of select="tei:title[@type = 'abbreviated' and not(@xml:lang = 'ru')]"/>
@@ -192,17 +192,17 @@
 
   <xsl:template match="tei:origin/tei:origPlace[@ref][1]" mode="origin">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'origin'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(@ref),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(@ref),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
         <xsl:comment>Origin</xsl:comment>
@@ -225,32 +225,32 @@
 
         <field name="inscription-has-date">
           <xsl:if
-            test="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
+           test="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
             <xsl:text>yes</xsl:text>
           </xsl:if>
         </field>
         <!--<field name="origin-en">
-        <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='en']"/>
-      </field>
-      <field name="origin-ru">
-        <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='ru']"/>
-      </field>
-      <field name="areas-en">
-        <xsl:for-each select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:place">
-          <xsl:value-of select="tei:placeName[@xml:lang='en']"/>
-        </xsl:for-each>
-      </field>
-      <field name="areas-ru">
-        <xsl:for-each select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:place">
-          <xsl:value-of select="tei:placeName[@xml:lang='ru']"/>
-        </xsl:for-each>
-      </field>
-      <field name="region-en">
-        <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:listPlace/head[@xml:lang='en']"/>
-      </field>
-      <field name="region-ru">
-        <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:listPlace/head[@xml:lang='ru']"/>
-      </field>-->
+       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='en']"/>
+     </field>
+     <field name="origin-ru">
+       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='ru']"/>
+     </field>
+     <field name="areas-en">
+       <xsl:for-each select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:place">
+         <xsl:value-of select="tei:placeName[@xml:lang='en']"/>
+       </xsl:for-each>
+     </field>
+     <field name="areas-ru">
+       <xsl:for-each select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:place">
+         <xsl:value-of select="tei:placeName[@xml:lang='ru']"/>
+       </xsl:for-each>
+     </field>
+     <field name="region-en">
+       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:listPlace/head[@xml:lang='en']"/>
+     </field>
+     <field name="region-ru">
+       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:listPlace/head[@xml:lang='ru']"/>
+     </field>-->
       </doc>
     </xsl:if>
   </xsl:template>
@@ -259,17 +259,17 @@
   <xsl:template match="tei:provenance[@type = 'found'][descendant::tei:placeName[@ref]]"
     mode="findspot">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'findspot'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(tei:seg[@xml:lang = 'en']/tei:placeName[1]),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(tei:seg[@xml:lang = 'en']/tei:placeName[1]),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
         <xsl:comment>Findspot</xsl:comment>
 
@@ -296,7 +296,7 @@
   <xsl:template match="tei:TEI[descendant::tei:div[@type = 'edition']]" mode="inscription">
 
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
@@ -332,17 +332,17 @@
       </xsl:choose>
     </xsl:variable>
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'date'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(tei:seg[@xml:lang = 'en']),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(tei:seg[@xml:lang = 'en']),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
         <xsl:comment>Date</xsl:comment>
@@ -363,22 +363,44 @@
             <field name="date-type-ru">RU: dated</field>
           </xsl:when>
           <xsl:otherwise>
+            <xsl:variable name="adjusted_notBefore">
+              <xsl:choose>
+                <xsl:when test="contains($notBefore, '-')"><!-- is a BCE value -->
+                  <xsl:value-of select="number(substring($notBefore, 1, 5))"/>
+                </xsl:when>
+                <xsl:otherwise><!-- is a CE value -->
+                  <xsl:value-of select="number(substring($notBefore, 1, 4))"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+            
+            <xsl:variable name="adjusted_notAfter">
+              <xsl:choose>
+                <xsl:when test="contains($notAfter, '-')"><!-- is a BCE value -->
+                  <xsl:value-of select="number(substring($notAfter, 1, 5))"/>
+                </xsl:when>
+                <xsl:otherwise><!-- is a CE value -->
+                  <xsl:value-of select="number(substring($notAfter, 1, 4))"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
 
-            <xsl:for-each
-              select="
-                //alist/list[@xml:lang = 'en']/century
-                [number(@max) >= number(substring($notBefore, 1, 4))]
-                [number(substring($notAfter, 1, 4)) >= number(@min)]">
+            
+                <xsl:for-each
+             select="
+               //alist/list[@xml:lang = 'en']/century
+               [number(@max) >= $adjusted_notBefore]
+                [number(substring($adjusted_notAfter, 1, 4)) >= number(@min)]">
               <field name="date-type">
                 <xsl:value-of select="@url"/>
               </field>
             </xsl:for-each>
 
             <xsl:for-each
-              select="
-                //alist/list[@xml:lang = 'ru']/century
-                [number(@max) >= number(substring($notBefore, 1, 4))]
-                [number(substring($notAfter, 1, 4)) >= number(@min)]">
+             select="
+               //alist/list[@xml:lang = 'ru']/century
+               [number(@max) >= $adjusted_notBefore]
+                [number(substring($adjusted_notAfter, 1, 4)) >= number(@min)]">
 
               <field name="date-type-ru">
                 <xsl:value-of select="@url"/>
@@ -406,7 +428,7 @@
     <xsl:variable name="lang" select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
     <xsl:variable name="document" select="ancestor::aggregation/document/tei:TEI"/>
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
 
     <xsl:variable name="common-data">
 
@@ -441,15 +463,15 @@
           <xsl:apply-templates mode="common-data" select="$document">
             <xsl:with-param name="dt" select="'words'"/>
             <xsl:with-param name="suffix"
-              select="
-                concat(normalize-space($line),
-                '_',
-                normalize-space($lang),
-                '_',
-                normalize-space(.),
-                '_',
-                position())"
-            />
+             select="
+               concat(normalize-space($line),
+               '_',
+               normalize-space($lang),
+               '_',
+               normalize-space(.),
+               '_',
+               position())"
+           />
           </xsl:apply-templates>
 
           <xsl:comment>Words</xsl:comment>
@@ -457,44 +479,44 @@
           <xsl:if test="$lang = 'grc'">
             <field name="first-letter-grc">
               <xsl:value-of
-                select="
-                  substring(
-                  translate(
-                  translate(
-                  translate(normalize-space(.), $lowercase, $uppercase),
-                  $grkb4, $grkafter),
-                  '?.-', '—'),
-                  1, 1)"
-              />
+               select="
+                 substring(
+                 translate(
+                 translate(
+                 translate(normalize-space(.), $lowercase, $uppercase),
+                 $grkb4, $grkafter),
+                 '?.-', '—'),
+                 1, 1)"
+             />
             </field>
           </xsl:if>
           <field name="first-letter">
             <xsl:choose>
               <xsl:when test="$lang = 'grc'">
                 <xsl:value-of
-                  select="
-                    substring(
-                    translate(
-                    translate(
-                    translate(
-                    translate(normalize-space(.), $lowercase, $uppercase),
-                    $grkb4, $grkafter),
-                    $unicode, $betacode),
-                    '?.-', '—'),
-                    1, 1)"
-                />
+                 select="
+                   substring(
+                   translate(
+                   translate(
+                   translate(
+                   translate(normalize-space(.), $lowercase, $uppercase),
+                   $grkb4, $grkafter),
+                   $unicode, $betacode),
+                   '?.-', '—'),
+                   1, 1)"
+               />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of
-                  select="
-                    substring(
-                    translate(
-                    translate(
-                    normalize-space(.),
-                    $lowercase, $uppercase),
-                    '?.-', '—'),
-                    1, 1)"
-                />
+                 select="
+                   substring(
+                   translate(
+                   translate(
+                   normalize-space(.),
+                   $lowercase, $uppercase),
+                   '?.-', '—'),
+                   1, 1)"
+               />
               </xsl:otherwise>
             </xsl:choose>
           </field>
@@ -505,21 +527,21 @@
             <xsl:choose>
               <xsl:when test="$lang = 'grc'">
                 <xsl:value-of
-                  select="
-                    translate(
-                    translate(
-                    translate(normalize-space(.), $uppercase, $lowercase),
-                    $grkb4, $grkafter),
-                    ' ', '')"
-                />
+                 select="
+                   translate(
+                   translate(
+                   translate(normalize-space(.), $uppercase, $lowercase),
+                   $grkb4, $grkafter),
+                   ' ', '')"
+               />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of
-                  select="
-                    translate(
-                    translate(normalize-space(.), $uppercase, $lowercase),
-                    ' ', '')"
-                />
+                 select="
+                   translate(
+                   translate(normalize-space(.), $uppercase, $lowercase),
+                   ' ', '')"
+               />
               </xsl:otherwise>
             </xsl:choose>
           </field>
@@ -532,21 +554,21 @@
 
   <xsl:template match="tei:div[@type = 'edition']//tei:date[@dur]" mode="death">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'death'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(@dur),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(@dur),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
         <xsl:comment>Death</xsl:comment>
 
@@ -577,21 +599,21 @@
 
   <xsl:template match="tei:div[@type = 'edition']//tei:expan/tei:abbr[1]" mode="abbr">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'abbr'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(ancestor::tei:expan),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(ancestor::tei:expan),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
         <xsl:comment>Abbr</xsl:comment>
@@ -613,7 +635,7 @@
         <field name="abbr">
           <xsl:variable name="aggr">
             <xsl:for-each
-              select="parent::tei:expan/descendant::tei:abbr/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:del[parent::tei:subst])]">
+             select="parent::tei:expan/descendant::tei:abbr/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:del[parent::tei:subst])]">
               <xsl:sequence select="normalize-space(.)"/>
             </xsl:for-each>
           </xsl:variable>
@@ -639,7 +661,7 @@
 
         <field name="expan">
           <xsl:for-each
-            select="parent::tei:expan/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:am or ancestor::tei:del[parent::tei:subst])]">
+           select="parent::tei:expan/descendant::node()[self::text() or self::tei:g][not(ancestor::tei:sic or ancestor::tei:orig or ancestor::tei:am or ancestor::tei:del[parent::tei:subst])]">
             <xsl:value-of select="normalize-space(.)"/>
           </xsl:for-each>
         </field>
@@ -650,31 +672,31 @@
   <!-- Unit: FRAGMENT -->
 
   <xsl:template
-    match="
-      tei:div[@type = 'edition']//tei:w[@part = ('I',
-      'M',
-      'F')][not(@lemma)][not(descendant::tei:expan)][.//text()[not(ancestor::tei:supplied)]]
-      | tei:div[@type = 'edition']//tei:name[not(@nymRef)][descendant::tei:seg[@part = ('I',
-      'M',
-      'F')]][not(descendant::tei:expan)][.//text()[not(ancestor::tei:supplied)]]
-      | tei:div[@type = 'edition']//tei:orig[not(ancestor::tei:choice)]
-      | tei:div[@type = 'edition']//tei:abbr[not(ancestor::tei:expan)]"
-    mode="fragment">
+   match="
+     tei:div[@type = 'edition']//tei:w[@part = ('I',
+     'M',
+     'F')][not(@lemma)][not(descendant::tei:expan)][.//text()[not(ancestor::tei:supplied)]]
+     | tei:div[@type = 'edition']//tei:name[not(@nymRef)][descendant::tei:seg[@part = ('I',
+     'M',
+     'F')]][not(descendant::tei:expan)][.//text()[not(ancestor::tei:supplied)]]
+     | tei:div[@type = 'edition']//tei:orig[not(ancestor::tei:choice)]
+     | tei:div[@type = 'edition']//tei:abbr[not(ancestor::tei:expan)]"
+   mode="fragment">
 
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'fragments'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
         <xsl:comment>Fragment</xsl:comment>
 
@@ -694,44 +716,44 @@
         <xsl:if test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
           <field name="first-letter-grc">
             <xsl:value-of
-              select="
-                substring(
-                translate(
-                translate(
-                translate(normalize-space(.), $lowercase, $uppercase),
-                $grkb4, $grkafter),
-                '?.-', '—'),
-                1, 1)"
-            />
+             select="
+               substring(
+               translate(
+               translate(
+               translate(normalize-space(.), $lowercase, $uppercase),
+               $grkb4, $grkafter),
+               '?.-', '—'),
+               1, 1)"
+           />
           </field>
         </xsl:if>
         <field name="first-letter">
           <xsl:choose>
             <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
               <xsl:value-of
-                select="
-                  substring(
-                  translate(
-                  translate(
-                  translate(
-                  translate(normalize-space(.), $lowercase, $uppercase),
-                  $grkb4, $grkafter),
-                  $unicode, $betacode),
-                  '?.-', '—'),
-                  1, 1)"
-              />
+               select="
+                 substring(
+                 translate(
+                 translate(
+                 translate(
+                 translate(normalize-space(.), $lowercase, $uppercase),
+                 $grkb4, $grkafter),
+                 $unicode, $betacode),
+                 '?.-', '—'),
+                 1, 1)"
+             />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="
-                  substring(
-                  translate(
-                  translate(
-                  normalize-space(.),
-                  $lowercase, $uppercase),
-                  '?.-', '—'),
-                  1, 1)"
-              />
+               select="
+                 substring(
+                 translate(
+                 translate(
+                 normalize-space(.),
+                 $lowercase, $uppercase),
+                 '?.-', '—'),
+                 1, 1)"
+             />
             </xsl:otherwise>
           </xsl:choose>
 
@@ -744,21 +766,21 @@
           <xsl:choose>
             <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
               <xsl:value-of
-                select="
-                  translate(
-                  translate(
-                  translate(normalize-space(.), $uppercase, $lowercase),
-                  $grkb4, $grkafter),
-                  ' ', '')"
-              />
+               select="
+                 translate(
+                 translate(
+                 translate(normalize-space(.), $uppercase, $lowercase),
+                 $grkb4, $grkafter),
+                 ' ', '')"
+             />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="
-                  translate(
-                  translate(normalize-space(.), $uppercase, $lowercase),
-                  ' ', '')"
-              />
+               select="
+                 translate(
+                 translate(normalize-space(.), $uppercase, $lowercase),
+                 ' ', '')"
+             />
             </xsl:otherwise>
           </xsl:choose>
         </field>
@@ -770,21 +792,21 @@
 
   <xsl:template match="tei:div[@type = 'edition']//tei:hi[@rend = 'ligature']" mode="ligature">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'ligature'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(@xml:id),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(@xml:id),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
         <xsl:comment>Ligature</xsl:comment>
 
@@ -821,21 +843,21 @@
 
   <xsl:template match="tei:div[@type = 'edition']//tei:rs[@type = 'month'][@ref]" mode="month">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'months'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(@ref),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(@ref),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
         <xsl:comment>Month</xsl:comment>
 
@@ -877,31 +899,31 @@
   <!-- Unit: NAME -->
 
   <xsl:template
-    match="
-      tei:div[@type = 'edition']//tei:name[not(preceding-sibling::tei:name = .)]
-      | tei:div[@type = 'edition']//tei:roleName"
-    mode="name">
+   match="
+     tei:div[@type = 'edition']//tei:name[not(preceding-sibling::tei:name = .)]
+     | tei:div[@type = 'edition']//tei:roleName"
+   mode="name">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
-          <xsl:with-param name="dt" select="'name'"/>
+          <xsl:with-param name="dt" select="'names'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              if (self::tei:name) then
-                (normalize-space(@nymRef))
-              else
-                (normalize-space(child::tei:w/@lemma)),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             if (self::tei:name) then
+               (normalize-space(@nymRef))
+             else
+               (normalize-space(child::tei:w/@lemma)),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
-
+        <xsl:variable name="lang" select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
         <xsl:comment>Name</xsl:comment>
 
         <!-- Indexed Item Location -->
@@ -924,50 +946,50 @@
         <xsl:if test="ancestor::tei:persName[1][descendant::tei:supplied or ancestor::tei:supplied]">
           <field name="sup">yes</field>
         </xsl:if>
-        <xsl:if test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
+
+        <xsl:if test="$lang = 'grc'">
           <field name="first-letter-grc">
             <xsl:value-of
-              select="
-                substring(
-                translate(
-                translate(
-                translate(normalize-space(.), $lowercase, $uppercase),
-                $grkb4, $grkafter),
-                '?.-', '—'),
-                1, 1)"
-            />
+             select="
+               substring(
+               translate(
+               translate(
+               translate(normalize-space(.), $lowercase, $uppercase),
+               $grkb4, $grkafter),
+               '-.?', '—'),
+               1, 1)"
+           />
           </field>
         </xsl:if>
         <field name="first-letter">
           <xsl:choose>
-            <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
+            <xsl:when test="$lang = 'grc'">
               <xsl:value-of
-                select="
-                  substring(
-                  translate(
-                  translate(
-                  translate(
-                  translate(normalize-space(.), $lowercase, $uppercase),
-                  $grkb4, $grkafter),
-                  $unicode, $betacode),
-                  '?.-', '—'),
-                  1, 1)"
-              />
+               select="
+                 substring(
+                 translate(
+                 translate(
+                 translate(
+                 translate(normalize-space(.), $lowercase, $uppercase),
+                 $grkb4, $grkafter),
+                 $unicode, $betacode),
+                 '-.?', '—'),
+                 1, 1)"
+             />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="
-                  substring(
-                  translate(
-                  translate(
-                  normalize-space(.),
-                  $lowercase, $uppercase),
-                  '?.-', '—'),
-                  1, 1)"
-              />
+               select="
+                 substring(
+                 translate(
+                 translate(
+                 normalize-space(.),
+                 $lowercase, $uppercase),
+                 '?.-', '—'),
+                 1, 1)"
+             />
             </xsl:otherwise>
           </xsl:choose>
-
         </field>
         <!-- Indexed Item Value(s) -->
         <field name="names">
@@ -976,7 +998,7 @@
         <field name="name-type">
           <xsl:value-of select="@type"/>
         </field>
-        <xsl:for-each select="ancestor::tei:persName">
+        <xsl:for-each select="ancestor::tei:persName[1]">
           <field name="persName-type">
             <xsl:value-of select="@type"/>
           </field>
@@ -992,7 +1014,7 @@
 
         <field name="persName-full">
           <xsl:for-each
-            select="ancestor::tei:persName[last()]//tei:name[@nymRef] | ancestor::tei:persName[last()]//tei:roleName/tei:w[@lemma]">
+           select="ancestor::tei:persName[last()]//tei:name[@nymRef] | ancestor::tei:persName[last()]//tei:roleName/tei:w[@lemma]">
             <xsl:if test="@nymRef">
               <xsl:value-of select="@nymRef"/>
             </xsl:if>
@@ -1007,38 +1029,38 @@
 
         <field name="name-nymRef">
           <xsl:value-of
-            select="
-              if (self::tei:name) then
-                (normalize-space(@nymRef))
-              else
-                (normalize-space(child::tei:w/@lemma))"
-          />
+           select="
+             if (self::tei:name) then
+               (normalize-space(@nymRef))
+             else
+               (normalize-space(child::tei:w/@lemma))"
+         />
         </field>
         <field name="names-sort">
           <xsl:choose>
             <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
               <xsl:value-of
-                select="
-                  translate(
-                  translate(
-                  translate(
-                  normalize-space(
-                  string-join(ancestor::tei:persName[1]//text(), '')),
-                  $uppercase, $lowercase),
-                  $grkb4, $grkafter),
-                  ' ', '')"
-              />
+               select="
+                 translate(
+                 translate(
+                 translate(
+                 normalize-space(
+                 string-join(ancestor::tei:persName[1]//text(), '')),
+                 $uppercase, $lowercase),
+                 $grkb4, $grkafter),
+                 ' ', '')"
+             />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="
-                  translate(
-                  translate(
-                  normalize-space(
-                  string-join(ancestor::tei:persName[1]//text(), '')),
-                  $uppercase, $lowercase),
-                  ' ', '')"
-              />
+               select="
+                 translate(
+                 translate(
+                 normalize-space(
+                 string-join(ancestor::tei:persName[1]//text(), '')),
+                 $uppercase, $lowercase),
+                 ' ', '')"
+             />
             </xsl:otherwise>
           </xsl:choose>
         </field>
@@ -1049,12 +1071,12 @@
   <!-- Unit: ATTESTED -->
 
   <xsl:template
-    match="
-      tei:div[@type = 'edition']//tei:name[@nymRef][ancestor::tei:persName[@type = ('attested',
-      'ruler')]][not(preceding-sibling::tei:name = .)]"
-    mode="attested">
+   match="
+     tei:div[@type = 'edition']//tei:name[@nymRef][ancestor::tei:persName[@type = ('attested',
+     'ruler')]][not(preceding-sibling::tei:name = .)]"
+   mode="attested">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <xsl:variable name="line" select="preceding::tei:lb[1]/@n"/>
       <xsl:variable name="lang" select="ancestor::tei:*[@xml:lang][1]/@xml:lang"/>
@@ -1085,7 +1107,7 @@
         <xsl:apply-templates/>
       </xsl:variable>
 
-      <xsl:variable name="is-surname" select="@type = 'surname'" as="xs:boolean"/>
+      <xsl:variable name="is-surname" select="@type = 'surname'" type="xs:boolean"/>
 
       <xsl:for-each select="tokenize(normalize-space(@nymRef), ' ')">
         <doc>
@@ -1093,15 +1115,15 @@
           <xsl:apply-templates mode="common-data" select="$doc">
             <xsl:with-param name="dt" select="'attested'"/>
             <xsl:with-param name="suffix"
-              select="
-                concat(normalize-space($line),
-                '_',
-                normalize-space($lang),
-                '_',
-                normalize-space(.),
-                '_',
-                position())"
-            />
+             select="
+               concat(normalize-space($line),
+               '_',
+               normalize-space($lang),
+               '_',
+               normalize-space(.),
+               '_',
+               position())"
+           />
           </xsl:apply-templates>
 
           <xsl:comment>Attested</xsl:comment>
@@ -1110,44 +1132,44 @@
           <xsl:if test="$lang = 'grc'">
             <field name="first-letter-grc">
               <xsl:value-of
-                select="
-                  substring(
-                  translate(
-                  translate(
-                  translate(normalize-space(.), $lowercase, $uppercase),
-                  $grkb4, $grkafter),
-                  '-.?', '—'),
-                  1, 1)"
-              />
+               select="
+                 substring(
+                 translate(
+                 translate(
+                 translate(normalize-space(.), $lowercase, $uppercase),
+                 $grkb4, $grkafter),
+                 '-.?', '—'),
+                 1, 1)"
+             />
             </field>
           </xsl:if>
           <field name="first-letter">
             <xsl:choose>
               <xsl:when test="$lang = 'grc'">
                 <xsl:value-of
-                  select="
-                    substring(
-                    translate(
-                    translate(
-                    translate(
-                    translate(normalize-space(.), $lowercase, $uppercase),
-                    $grkb4, $grkafter),
-                    $unicode, $betacode),
-                    '-.?', '—'),
-                    1, 1)"
-                />
+                 select="
+                   substring(
+                   translate(
+                   translate(
+                   translate(
+                   translate(normalize-space(.), $lowercase, $uppercase),
+                   $grkb4, $grkafter),
+                   $unicode, $betacode),
+                   '-.?', '—'),
+                   1, 1)"
+               />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of
-                  select="
-                    substring(
-                    translate(
-                    translate(
-                    normalize-space(.),
-                    $lowercase, $uppercase),
-                    '?.-', '—'),
-                    1, 1)"
-                />
+                 select="
+                   substring(
+                   translate(
+                   translate(
+                   normalize-space(.),
+                   $lowercase, $uppercase),
+                   '?.-', '—'),
+                   1, 1)"
+               />
               </xsl:otherwise>
             </xsl:choose>
           </field>
@@ -1171,21 +1193,21 @@
             <xsl:choose>
               <xsl:when test="$lang = 'grc'">
                 <xsl:value-of
-                  select="
-                    translate(
-                    translate(
-                    translate(normalize-space(.), $uppercase, $lowercase),
-                    $grkb4, $grkafter),
-                    ' ', '')"
-                />
+                 select="
+                   translate(
+                   translate(
+                   translate(normalize-space(.), $uppercase, $lowercase),
+                   $grkb4, $grkafter),
+                   ' ', '')"
+               />
               </xsl:when>
               <xsl:otherwise>
                 <xsl:value-of
-                  select="
-                    translate(
-                    translate(normalize-space(.), $uppercase, $lowercase),
-                    ' ', '')"
-                />
+                 select="
+                   translate(
+                   translate(normalize-space(.), $uppercase, $lowercase),
+                   ' ', '')"
+               />
               </xsl:otherwise>
             </xsl:choose>
           </field>
@@ -1198,21 +1220,21 @@
 
   <xsl:template match="tei:div[@type = 'edition']//tei:g" mode="symbol">
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'symbols'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(@type),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(@type),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
         <xsl:comment>Symbol</xsl:comment>
@@ -1245,28 +1267,28 @@
   <!-- Unit: NUMERAL -->
 
   <xsl:template
-    match="
-      tei:div[@type = 'edition']//tei:num
-      [translate(normalize-space(string-join(descendant::text(), '')), ' ', '') != '']
-      [@value or @atLeast or @atMost]"
-    mode="num">
+   match="
+     tei:div[@type = 'edition']//tei:num
+     [translate(normalize-space(string-join(descendant::text(), '')), ' ', '') != '']
+     [@value or @atLeast or @atMost]"
+   mode="num">
 
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="$idno != ''">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'numerals'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(@value),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(@value),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
 
@@ -1331,27 +1353,27 @@
   <!-- Unit: PLACE -->
 
   <xsl:template
-    match="
-      tei:div[@type = 'edition']//tei:placeName[@key]
-      | tei:div[@type = 'edition']//tei:geogName[@key]"
-    mode="place">
+   match="
+     tei:div[@type = 'edition']//tei:placeName[@key]
+     | tei:div[@type = 'edition']//tei:geogName[@key]"
+   mode="place">
 
     <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
+     select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
       <doc>
         <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
           <xsl:with-param name="dt" select="'places'"/>
           <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(preceding::tei:lb[1]/@n),
-              '_',
-              normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
-              '_',
-              normalize-space(@key),
-              '_',
-              position())"
-          />
+           select="
+             concat(normalize-space(preceding::tei:lb[1]/@n),
+             '_',
+             normalize-space(ancestor::tei:*[@xml:lang][1]/@xml:lang),
+             '_',
+             normalize-space(@key),
+             '_',
+             position())"
+         />
         </xsl:apply-templates>
 
         <xsl:comment>Place</xsl:comment>
@@ -1389,17 +1411,17 @@
           <xsl:choose>
             <xsl:when test="ancestor::tei:*[@xml:lang][1]/@xml:lang = 'grc'">
               <xsl:value-of
-                select="
-                  translate(
-                  translate(
-                  translate(
-                  normalize-space(.), $uppercase, $lowercase)
-                  , $grkb4, $grkafter), ' ', '')"
-              />
+               select="
+                 translate(
+                 translate(
+                 translate(
+                 normalize-space(.), $uppercase, $lowercase)
+                 , $grkb4, $grkafter), ' ', '')"
+             />
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of
-                select="translate(translate(normalize-space(.), $uppercase, $lowercase), ' ', '')"/>
+               select="translate(translate(normalize-space(.), $uppercase, $lowercase), ' ', '')"/>
             </xsl:otherwise>
           </xsl:choose>
         </field>
