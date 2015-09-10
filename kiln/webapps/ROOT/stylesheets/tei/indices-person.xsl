@@ -302,12 +302,12 @@
   <xsl:template name="person">
     <tr class="index_row">
       <th id="{@xml:id}">
-        <!--<a href="#">-->
+        <a href="../moda/{@xml:id}.html" data-reveal-id="{@xml:id}-modal" data-reveal-ajax="true" >
           <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
-        <!--</a>-->
-        <xsl:text> </xsl:text>
+        </a>
+        <div id="{@xml:id}-modal" class="reveal-modal">
+        </div>
       </th>
-
 
       <td class="persName">
         <xsl:for-each select="tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
