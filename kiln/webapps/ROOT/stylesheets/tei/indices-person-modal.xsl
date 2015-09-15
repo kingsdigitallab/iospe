@@ -107,9 +107,10 @@
         <xsl:text> </xsl:text> <xsl:variable name="passives"
           select="tokenize(substring-after(@passive, '#'), ' #')" as="xs:sequence"/>
         <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-          <a href="#{@xml:id}" class="relation_link">
+          <!-- PC, 15 Sep 2015: the <a> below doesn't work in a modal window so commenting it out until we know its fate -->
+          <!--<a href="#{@xml:id}" class="relation_link">-->
             <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
-          </a>
+          <!--</a>-->
           <xsl:if test="following::tei:person[@xml:id = $passives]">
             <xsl:text>, </xsl:text>
           </xsl:if>
