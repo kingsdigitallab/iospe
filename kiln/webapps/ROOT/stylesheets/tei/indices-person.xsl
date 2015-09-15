@@ -30,17 +30,17 @@
   <xsl:variable name="input">
     <xsl:sequence select="distinct-values(//tei:person/tei:floruit/@notBefore)"/>
   </xsl:variable>
-  
+
   <xsl:variable name="sorted">
     <xsl:perform-sort select="tokenize($input, '\s')">
       <xsl:sort select="."/>
     </xsl:perform-sort>
   </xsl:variable>
-  
+
   <xsl:variable name="earliest_date">
     <xsl:sequence select="tokenize($sorted, '\s')[1]"/>
   </xsl:variable>
-  
+
   <xsl:variable name="e_century_string" as="node()*">
     <xsl:choose>
       <xsl:when test="starts-with($earliest_date, '-')">
@@ -55,26 +55,26 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-  
+
   <xsl:variable name="earliest_century" select="substring-before($e_century_string, '-')"/>
   <xsl:variable name="earliest_era_prefix" select="substring-after($e_century_string, '-')"/>
-  
+
   <xsl:variable name="latest_date">
     <xsl:sequence select="tokenize($sorted, '\s')[last()]"/>
   </xsl:variable>
-  
+
   <xsl:variable name="l_century_string" as="node()*">
     <xsl:sequence
       select="//list[@xml:lang = $lang]/century[substring(@min, 1, 2) = substring($latest_date, 1, 2)]/@url"
     />
   </xsl:variable>
-  
+
   <xsl:variable name="l_century_num" as="node()*">
     <xsl:sequence
       select="//list[@xml:lang = $lang]/century[substring(@min, 1, 2) = substring($latest_date, 1, 2)]/@num"
     />
   </xsl:variable>
-  
+
   <xsl:variable name="latest_century" select="substring-before($l_century_string, '-')"/>
 
   <!-- the two date_limit variables below help with grouping the Attested Persons by their @notBefore value -->
@@ -210,7 +210,7 @@
                 <ul class="date pagination">
                   <xsl:if test="$earliest_era_prefix = 'BCE'">
                     <li class="unavailable">
-                        <i18n:text>BCE</i18n:text>
+                      <i18n:text>BCE</i18n:text>
                     </li>
                     <xsl:for-each
                       select="//letters[@type = 'date']/letter[not(text() = 'dated')][substring-after(., '-') = 'BCE']">
@@ -281,13 +281,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                      <xsl:for-each
-                        select="//persons//tei:person[(number(tei:floruit/@notBefore) >= $lower_date_limit) and (number(tei:floruit/@notBefore) &lt;= $upper_date_limit)]">
-                        <xsl:sort
-                          select="concat(tei:floruit[tei:seg[@xml:lang = $lang]]/@notBefore, 'X')"/>
-                        <xsl:sort select="tei:floruit[tei:seg[@xml:lang = $lang]]/@notAfter"/>
-                        <xsl:call-template name="person"/>
-                      </xsl:for-each>
+                  <xsl:for-each
+                    select="//persons//tei:person[(number(tei:floruit/@notBefore) >= $lower_date_limit) and (number(tei:floruit/@notBefore) &lt;= $upper_date_limit)]">
+                    <xsl:sort
+                      select="concat(tei:floruit[tei:seg[@xml:lang = $lang]]/@notBefore, 'X')"/>
+                    <xsl:sort select="tei:floruit[tei:seg[@xml:lang = $lang]]/@notAfter"/>
+                    <xsl:call-template name="person"/>
+                  </xsl:for-each>
                 </tbody>
               </table>
             </div>
@@ -302,11 +302,21 @@
   <xsl:template name="person">
     <tr class="index_row">
       <th id="{@xml:id}">
-        <a href="../modal/{@xml:id}.html" data-reveal-id="{@xml:id}-modal" data-reveal-ajax="true" >
-          <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
-        </a>
-        <div id="{@xml:id}-modal" class="reveal-modal">
-        </div>
+        <xsl:choose>
+          <xsl:when test="$lang != 'en'">
+            <a href="../record/{@xml:id}-{$lang}.html" data-reveal-id="{@xml:id}-modal"
+              data-reveal-ajax="true">
+              <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <a href="../record/{@xml:id}.html" data-reveal-id="{@xml:id}-modal"
+              data-reveal-ajax="true">
+              <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+            </a>
+          </xsl:otherwise>
+        </xsl:choose>
+        <div id="{@xml:id}-modal" class="reveal-modal"> </div>
       </th>
 
       <td class="persName">
