@@ -22,7 +22,8 @@
         </xsl:variable>
         <xsl:copy>
           <h4>we could not find inscription "<xsl:value-of select="$insc"/>" - please check the number.</h4>
-          <h4>The currently available inscriptions are <a href="/corpora/byzantine/locations.html" style="text-decoration: underline;">listed here</a></h4>
+          <h4>The currently available inscriptions are <a href="/corpora/byzantine/locations.html" style="text-decoration: underline;">listed here</a></h4>          
+          <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
         </xsl:copy>
       </xsl:when>
       <xsl:otherwise>

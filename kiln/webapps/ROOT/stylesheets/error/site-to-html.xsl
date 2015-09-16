@@ -13,6 +13,7 @@
        HTML.
   -->
 
+<!-- $debug is a global param declared in config.xmap; the value set there is what gets passed in here. -->
   <xsl:param name="debug" select="1" />
 
   <xsl:template match="ex:exception-report">
@@ -27,8 +28,6 @@
       <xsl:choose>
         <xsl:when test="*">
           <xsl:apply-templates />
-          
-          <p>[For convenience we'll show stacktrace info until live. Can hide it by commenting out lines 20-22 in site-to-html.xsl.]</p>
         </xsl:when>
         <xsl:otherwise>
           <p>
