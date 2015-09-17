@@ -304,13 +304,13 @@
       <th id="{@xml:id}">
         <xsl:choose>
           <xsl:when test="$lang != 'en'">
-            <a href="../record/{@xml:id}-{$lang}.html" data-reveal-id="{@xml:id}-modal"
+            <a href="../record/modal/{@xml:id}-{$lang}.html" data-reveal-id="{@xml:id}-modal"
               data-reveal-ajax="true">
               <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <a href="../record/{@xml:id}.html" data-reveal-id="{@xml:id}-modal"
+            <a href="../record/modal/{@xml:id}.html" data-reveal-id="{@xml:id}-modal"
               data-reveal-ajax="true">
               <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
             </a>

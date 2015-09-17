@@ -4,9 +4,21 @@
   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
-  <xsl:param name="url"/>
+<xsl:param name="context"/>  
   <xsl:param name="id"/>
   <xsl:param name="lang"/>
+  
+  <!--<xsl:variable name="record_url" select="concat('http://iospe.kcl.ac.uk/indices/person/record/', $id, '.html')"/>-->
+  <xsl:variable name="record_url">
+    <xsl:choose>
+      <xsl:when test="$lang != 'en'">
+        <xsl:value-of select="concat('/indices/person/record/', $id, '-', $lang, '.html')"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="concat('/indices/person/record/', $id, '.html')"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <xsl:template name="modal_window_body">
     <div class="row">
@@ -40,7 +52,8 @@
           </tr>
         </tbody>
       </table>
-        <p>To cite this person record use: <strong><xsl:value-of select="concat('http://iospe.kcl.ac.uk/',$url)"/></strong></p>
+        <p> Value of context param is <xsl:value-of select="$context"/></p>
+        <p>To cite this person record use: <a href="{$record_url}"><xsl:value-of select="concat($context, $record_url)"/></a></p>
       </div>
     </div>
   </xsl:template>
