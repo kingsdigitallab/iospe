@@ -8,7 +8,7 @@
   <xsl:param name="id"/>
   <xsl:param name="lang"/>
   
-  <!--<xsl:variable name="record_url" select="concat('http://iospe.kcl.ac.uk/indices/person/record/', $id, '.html')"/>-->
+  
   <xsl:variable name="record_url">
     <xsl:choose>
       <xsl:when test="$lang != 'en'">
@@ -52,7 +52,6 @@
           </tr>
         </tbody>
       </table>
-        <p> Value of context param is <xsl:value-of select="$context"/></p>
         <p>To cite this person record use: <a href="{$record_url}"><xsl:value-of select="concat($context, $record_url)"/></a></p>
       </div>
     </div>
@@ -119,11 +118,8 @@
         <!-- space after relationship -->
         <xsl:text> </xsl:text> <xsl:variable name="passives"
           select="tokenize(substring-after(@passive, '#'), ' #')" as="xs:sequence"/>
-        <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-          <!-- PC, 15 Sep 2015: the <a> below doesn't work in a modal window so commenting it out until we know its fate -->
-          <!--<a href="#{@xml:id}" class="relation_link">-->
+        <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">        
             <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
-          <!--</a>-->
           <xsl:if test="following::tei:person[@xml:id = $passives]">
             <xsl:text>, </xsl:text>
           </xsl:if>
