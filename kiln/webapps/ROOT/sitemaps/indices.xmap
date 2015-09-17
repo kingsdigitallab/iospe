@@ -364,20 +364,72 @@
         <map:serialize type="xhtml"/>
       </map:match>
       
-      <!-- Attested persons, modal window for single person data, Russian version -->
-      <map:match pattern="person/record/*-*.html">
+      <!-- Attested persons, modal window for single person record, Russian version -->
+      <map:match pattern="person/record/modal/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
           <map:part src="cocoon:/getLetters/date"/>
-          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/record/{1}-{2}.html"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
-          <!--<map:part src="cocoon:/getLetters-grc/names"/>-->
           <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
         <!-- END DEBUG -->
         <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
+          <map:parameter name="context" value="{request:serverName}"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="id" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- Attested persons, modal window for single person record, English version -->
+      <map:match pattern="person/record/modal/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
+          <map:parameter name="context" value="{request:serverName}"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="id" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- Attested persons, regular page for single person record, Russian version -->
+      <map:match pattern="person/record/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/record/{1}-{2}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person-record.xsl">
+          <map:parameter name="context" value="{request:serverName}"/>
           <map:parameter name="url" value="indices/person/record/{1}-{2}.html"/>
           <map:parameter name="index" value="persons"/>
           <map:parameter name="sort" value="letters"/>
@@ -392,20 +444,20 @@
         <map:serialize type="xhtml"/>
       </map:match>
       
-      <!-- Attested persons, modal window for single person data, English version -->
+      <!-- Attested persons, regular page for single person record, English version -->
       <map:match pattern="person/record/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
           <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/record/{1}.html"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
-          <!--<map:part src="cocoon:/getLetters-grc/names"/>-->
           <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
         <!-- END DEBUG -->
-        <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
+        <map:transform src="cocoon://_internal/template/indices-person-record.xsl">
+          <map:parameter name="context" value="{request:serverName}"/>
           <map:parameter name="url" value="indices/person/record/{1}.html"/>
           <map:parameter name="index" value="persons"/>
           <map:parameter name="sort" value="letters"/>
