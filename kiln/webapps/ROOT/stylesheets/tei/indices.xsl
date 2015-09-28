@@ -3,6 +3,10 @@
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:iospe="http://iospe.cch.kcl.ac.uk/ns/1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <xsl:import href="../common/conversions.xsl"/>
+  <xsl:import href="inscription.xsl"/>
+  
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
@@ -11,9 +15,7 @@
   <xsl:param name="current-letter"/>
   <xsl:param name="ancient-lang" select="'n/a'"/>
 
-  <xsl:import href="../common/conversions.xsl"/>
-  <xsl:import href="inscription.xsl"/>
-
+  
   <xsl:template match="/"/>
 
   <!-- Some indices require an upper-case grouping. Add the list here -->
@@ -126,6 +128,7 @@
 
   <xsl:template name="letterList">
     <xsl:param name="lettertype">foo</xsl:param>
+    <xsl:param name="myletter"/>
     <div class="pagination-centered">
       <ul class="pagination">
         <xsl:for-each select="//letters[@type=$lettertype]/letter">
@@ -144,10 +147,16 @@
           </xsl:variable>
           <li>
             <xsl:attribute name="class">
-              <xsl:if test="$current = $location">
+              <xsl:choose>
+                <xsl:when test="(normalize-space($myletter) and ($myletter = $location))">
+                  <xsl:text>current</xsl:text>
+                </xsl:when>
+                <xsl:when test="$current = $location">
                 <xsl:text>current</xsl:text>
-              </xsl:if>
+              </xsl:when>
+              </xsl:choose>
             </xsl:attribute>
+            
             <a>
               <xsl:attribute name="href">
                 <xsl:value-of select="$location"/>
@@ -177,10 +186,13 @@
   <!-- Generate Index -->
   <xsl:template name="generateIndex">
     <!-- list of available letters, if present -->
-    <xsl:if test="//letters">
-      <xsl:call-template name="letterList"/>
+    <xsl:if test="//letters[@type != 'date']">
+      <xsl:call-template name="letterList">
+        <xsl:with-param name="lettertype">
+          <xsl:value-of select="//letters[@type != 'date']/@type"/>
+        </xsl:with-param>
+      </xsl:call-template>
     </xsl:if>
-
     <xsl:call-template name="indices_bracket_info"/>
 
     <xsl:if test="$index = 'attested'">

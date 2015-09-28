@@ -5,6 +5,9 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 
+  <!--<xsl:variable name="attPersons">
+    <xsl:sequence select="/aggregation/attpersons/tei:TEI/tei:teiHeader/tei:profileDesc/tei:particDesc/tei:listPerson"/>
+  </xsl:variable>-->
   <xsl:variable name="criteria">
     <xsl:sequence select="/aggregation/criteria/tei:TEI/tei:text/tei:body/tei:list"/>
   </xsl:variable>

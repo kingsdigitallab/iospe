@@ -114,8 +114,8 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexPerson">
-
-    <xsl:call-template name="indices_bracket_info"/>
+    
+    
 
     <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
 
@@ -137,9 +137,14 @@
 
               <xsl:if test="//letters[@type != 'date']">
                 <xsl:call-template name="letterList">
-                  <xsl:with-param name="lettertype">foo</xsl:with-param>
+                  <xsl:with-param name="lettertype">
+                    <xsl:value-of select="//letters[@type != 'date']/@type"/>
+                  </xsl:with-param>
+                  <xsl:with-param name="myletter" select="$current-letter"/>
                 </xsl:call-template>
               </xsl:if>
+              <xsl:call-template name="indices_bracket_info"/>
+              <xsl:call-template name="indices_dashes_info"/>
 
               <table class="indices indices-person">
                 <thead>
@@ -167,7 +172,7 @@
                 </thead>
                 <tbody>
                   <xsl:for-each
-                    select="/aggregation/persons//tei:person[@xml:id = /aggregation/index//result/doc[str[@name = 'first-letter'] = $current-letter]/arr[@name = 'persName-ref']/str/substring-after(text(), '#')]">
+                    select="/aggregation/persons//tei:person[@xml:id = /aggregation/data//result/doc[str[@name = 'first-letter'] = $current-letter]/str[@name = 'id']]">
                     <xsl:sort
                       select="
                         concat(
@@ -408,8 +413,11 @@
       </td>
 
       <td class="inscriptions">
-
         <ul class="inline-list">
+          
+          <!--<xsl:value-of select="current()/@xml:id"/>
+          <xsl:value-of select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]/str[@name = 'tei-id']"/>
+          -->
           <xsl:for-each
             select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
             <xsl:sort select="str[@name = 'tei-id']"/>
