@@ -94,6 +94,7 @@
       <!-- Adding TEI only. The first parameter is the file type. -->
       <map:match id="local-solr-add" pattern="add/*/**.xml">
         <map:aggregate element="aggregation">
+          <map:part element="attpersons" src="../content/xml/tei/alists/attestedperson.xml"/>
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
           <map:part element="criteria" src="../content/xml/tei/alists/criteria.xml"/>
           <map:part element="execution" src="../content/xml/tei/alists/execution.xml"/>
@@ -106,6 +107,10 @@
           <map:part element="bibliography" src="../content/xml/tei/alists/bibliography.xml"/>
           <map:part element="document" src="cocoon:/preprocess/{1}/{2}.xml" />
         </map:aggregate>
+        
+        <!-- DEBUG ONLY -->
+        <!--<map:serialize type="xml" />-->
+        <!-- END DEBUG -->
         <map:transform src="../stylesheets/solr/{1}-to-solr.xsl">
           <map:parameter name="file-path" value="{2}" />
         </map:transform>
