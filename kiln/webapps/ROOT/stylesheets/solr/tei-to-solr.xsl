@@ -41,7 +41,7 @@
       <xsl:apply-templates mode="ligature"/>
       <xsl:apply-templates mode="month"/>
       <xsl:apply-templates mode="name"/>
-      <xsl:apply-templates mode="attested"/>
+      <xsl:apply-templates mode="anthroponymic"/>
       <xsl:apply-templates mode="symbol"/>
       <xsl:apply-templates mode="num"/>
       <xsl:apply-templates mode="place"/>
@@ -1074,17 +1074,21 @@
             </xsl:otherwise>
           </xsl:choose>
         </field>
+        
       </doc>
     </xsl:if>
   </xsl:template>
 
-  <!-- Unit: ATTESTED -->
+  <!-- Unit: ANTHROPONYMIC -->
+  <!-- creates fields used to build the index page 'Personal names'. For explanation of what
+       this index contains and how it differs from 'Attested Persons' see Confluence documentation-->
 
   <xsl:template
     match="
       tei:div[@type = 'edition']//tei:name[@nymRef][ancestor::tei:persName[@type = ('attested',
       'ruler')]][not(preceding-sibling::tei:name = .)]"
-    mode="attested">
+    mode="anthroponymic">
+    
     <xsl:variable name="idno"
       select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
@@ -1123,7 +1127,7 @@
         <doc>
 
           <xsl:apply-templates mode="common-data" select="$doc">
-            <xsl:with-param name="dt" select="'attested'"/>
+            <xsl:with-param name="dt" select="'anthroponymic'"/>
             <xsl:with-param name="suffix"
               select="
                 concat(normalize-space($line),
@@ -1136,7 +1140,7 @@
             />
           </xsl:apply-templates>
 
-          <xsl:comment>Attested</xsl:comment>
+          <xsl:comment>Anthroponymic</xsl:comment>
           <xsl:sequence select="$common-data"/>
 
           <xsl:if test="$lang = 'grc'">
@@ -1183,23 +1187,23 @@
               </xsl:otherwise>
             </xsl:choose>
           </field>
-          <field name="attested">
+          <field name="anthroponymic">
             <xsl:value-of select="."/>
           </field>
-          <field name="attested-en">
+          <field name="anthroponymic-en">
             <xsl:value-of select="."/>
             <xsl:if test="$is-surname">
               <xsl:text> (surname)</xsl:text>
             </xsl:if>
           </field>
-          <field name="attested-ru">
+          <field name="anthroponymic-ru">
             <xsl:value-of select="."/>
             <xsl:if test="$is-surname">
               <xsl:text> (родовое)</xsl:text>
             </xsl:if>
           </field>
 
-          <field name="attested-sort">
+          <field name="anthroponymic-sort">
             <xsl:choose>
               <xsl:when test="$lang = 'grc'">
                 <xsl:value-of

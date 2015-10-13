@@ -189,7 +189,7 @@
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <!-- Determine first available letters -->
 
-          <map:part element="attested" src="cocoon:/getFirstLetter/attested"/>
+          <map:part element="anthroponymic" src="cocoon:/getFirstLetter/anthroponymic"/>
           <map:part element="words-grc" src="cocoon:/getFirstLetter-grc/words"/>
           <map:part element="words-lat" src="cocoon:/getFirstLetter-grc/words"/>
           <map:part element="fragments-grc" src="cocoon:/getFirstLetter-grc/fragments"/>
@@ -223,7 +223,7 @@
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/index-{1}.html"/>
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <!-- Determine first available letters -->
-          <map:part element="attested" src="cocoon:/getFirstLetter/attested"/>
+          <map:part element="anthroponymic" src="cocoon:/getFirstLetter/anthroponymic"/>
           <map:part element="words-grc" src="cocoon:/getFirstLetter-grc/words"/>
           <map:part element="words-lat" src="cocoon:/getFirstLetter-grc/words"/>
           <map:part element="fragments-grc" src="cocoon:/getFirstLetter-grc/fragments"/>
@@ -252,7 +252,7 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <!-- Index names using AL -->
+      <!-- Index names using asset list -->
 
       <!-- Attested persons, sorted by name, Russian version -->
       <map:match pattern="person/letters/*-*.html">
@@ -541,8 +541,8 @@
       <map:match pattern="names/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/names/{1}.html"/>
-          <map:part src="cocoon:/getLetters/attested"/>
-          <map:part src="cocoon:/getIndex/attested/{1}"/>
+          <map:part src="cocoon:/getLetters/anthroponymic"/>
+          <map:part src="cocoon:/getIndex/anthroponymic/{1}"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -550,7 +550,7 @@
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/names/{1}.html"/>
           <map:parameter name="ancient-lang" value="all"/>
-          <map:parameter name="index" value="attested"/>
+          <map:parameter name="index" value="anthroponymic"/>
           <map:parameter name="lang" value="en"/>
           <map:parameter name="current" value="{1}"/>
         </map:transform>

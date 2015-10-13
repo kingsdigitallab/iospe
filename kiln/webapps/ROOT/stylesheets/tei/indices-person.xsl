@@ -414,10 +414,6 @@
 
       <td class="inscriptions">
         <ul class="inline-list">
-          
-          <!--<xsl:value-of select="current()/@xml:id"/>
-          <xsl:value-of select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]/str[@name = 'tei-id']"/>
-          -->
           <xsl:for-each
             select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = current()/@xml:id]]">
             <xsl:sort select="str[@name = 'tei-id']"/>

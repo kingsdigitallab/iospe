@@ -93,9 +93,6 @@
       <xsl:when test="$index = 'fragments' and //str[@name = 'lang'] = 'grc'">
         <i18n:text>Fragments of Text in Greek</i18n:text>
       </xsl:when>
-      <xsl:when test="$index = 'attested' and //str[@name = 'persName-type'] = 'attested'">
-        <i18n:text>Personal Names</i18n:text>
-      </xsl:when>
       <xsl:when test="$index = 'symbols'">
         <i18n:text>Symbols</i18n:text>
       </xsl:when>
@@ -111,7 +108,7 @@
       <xsl:when test="$index = 'findspot-ref'">
         <i18n:text>Find Places</i18n:text>
       </xsl:when>
-      <xsl:when test="$index = 'attested'">
+      <xsl:when test="$index = 'anthroponymic'">
         <i18n:text>Personal names</i18n:text>
       </xsl:when>
       <xsl:when test="$index = 'monument-type'">
@@ -195,7 +192,7 @@
     </xsl:if>
     <xsl:call-template name="indices_bracket_info"/>
 
-    <xsl:if test="$index = 'attested'">
+    <xsl:if test="$index = 'anthroponymic'">
       <xsl:call-template name="indices_dashes_info"/>
     </xsl:if>
 
@@ -212,9 +209,9 @@
                 -->
 
           <xsl:when test="//doc/str[@name = $index]">
-            <xsl:for-each-group select="//doc"
+            <xsl:for-each-group select="//doc[str[@name = $index]]"
               group-by="
-                translate(
+                translate(                                                                                                       
                 translate(
                 normalize-space(str[@name = $index]),
                 '[].',
@@ -341,8 +338,8 @@
       <tr class="index_row row">
         <th class="large-2">
           <xsl:choose>
-            <xsl:when test="$index = 'attested'">
-              <xsl:value-of select="str[@name = concat('attested-', $lang)]"/>
+            <xsl:when test="$index = 'anthroponymic'">
+              <xsl:value-of select="str[@name = concat('anthroponymic-', $lang)]"/>
             </xsl:when>
             <xsl:when test="str[@name = 'num-value']">
               <xsl:value-of select="$display_key"/>

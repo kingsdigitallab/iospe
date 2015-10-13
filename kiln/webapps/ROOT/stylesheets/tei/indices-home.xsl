@@ -36,8 +36,8 @@
       </li>
       <li>
         <xsl:choose>
-          <xsl:when test="//attested//result[@numFound &gt; 0]">
-            <a href="names/{//attested//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
+          <xsl:when test="//anthroponymic//result[@numFound &gt; 0]">
+            <a href="names/{//anthroponymic//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
               <i18n:text>Personal names</i18n:text>
             </a>
           </xsl:when>
