@@ -20,9 +20,11 @@
         </xsl:choose>
     </xsl:variable>
     
+    <xsl:variable name="name" select="string-join(//tei:person[@xml:id = $id]/tei:persName[@xml:lang = $lang], ', ')"/>
+    
     <!-- set title -->
     <xsl:template name="personRecordTitle">
-        <i18n:text>Attested person record</i18n:text>
+        <i18n:text>Person record</i18n:text>: <xsl:value-of select="$name"/>
     </xsl:template>
     
     <xsl:template name="modal_window_body">
@@ -65,7 +67,8 @@
     
     <xsl:template match="tei:person[@xml:id = $id]">
         <th id="{@xml:id}">
-            <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+            <!--<xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>-->
+            <xsl:value-of select="$name"/>
         </th>
         <td class="persName">
             <xsl:value-of select="tei:persName[@xml:lang = 'grc']"/>
