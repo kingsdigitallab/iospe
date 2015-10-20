@@ -368,17 +368,20 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
+      <!-- THE 2 COMMENTED OUT TEMPLATES BELOW BROUGHT UP A MODAL WINDOW
+           WITH THE ROW FOR THAT PERSON AND A LINK TO THE RECORD PAGE. IT WAS DECIDED
+           TO DROP THE MODAL PART, SO JUST LEAVING THEM HERE UNTIL NEW DESIGN (GO
+           STRAIGHT FROM THE TABLE TO THE RECORD PAGE) IS ACCEPTED FOR CERTAIN
+           THEN THEY CAN BE DELETED
+           PC, 20 OCT 2015-->
       <!-- Attested persons, modal window for single person record, Russian version -->
-      <map:match pattern="person/record/modal/*-*.html">
+      <!--<map:match pattern="person/record/modal/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
           <map:part src="cocoon:/getLetters/date"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
           <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
         </map:aggregate>
-        <!-- DEBUG -->
-        <!--<map:serialize type="xml"/>-->
-        <!-- END DEBUG -->
         <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
           <map:parameter name="context" value="{request:serverName}"/>
           <map:parameter name="index" value="persons"/>
@@ -392,19 +395,16 @@
           <map:parameter name="locale" value="{2}"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-      </map:match>
+      </map:match>-->
 
       <!-- Attested persons, modal window for single person record, English version -->
-      <map:match pattern="person/record/modal/*.html">
+      <!--<map:match pattern="person/record/modal/*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="../content/xml/tei/alists/centuries.xml"/>
           <map:part src="cocoon:/getLetters/date"/>
           <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
           <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
         </map:aggregate>
-        <!-- DEBUG -->
-        <!--<map:serialize type="xml"/>-->
-        <!-- END DEBUG -->
         <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
           <map:parameter name="context" value="{request:serverName}"/>
           <map:parameter name="index" value="persons"/>
@@ -418,7 +418,7 @@
           <map:parameter name="locale" value="en"/>
         </map:transform>
         <map:serialize type="xhtml"/>
-      </map:match>
+      </map:match>-->
 
       <!-- Attested persons, regular page for single person record, Russian version -->
       <map:match pattern="person/record/*-*.html">

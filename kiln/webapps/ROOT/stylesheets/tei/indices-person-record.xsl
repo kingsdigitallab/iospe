@@ -58,7 +58,7 @@
                 </tbody>
             </table>
                 
-                <p>To cite this person record use: <a href="{$record_url}"><xsl:value-of select="concat($context, $record_url)"/></a></p>
+                <p><i18n:text>Permalink</i18n:text>: <a href="{$record_url}"><xsl:value-of select="concat($context, $record_url)"/></a></p>
             </div>
         </div>
     </xsl:template>
