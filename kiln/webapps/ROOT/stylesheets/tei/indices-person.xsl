@@ -11,7 +11,6 @@
   <xsl:param name="lang"/>
   <xsl:param name="current-date"/>
   <xsl:param name="current-letter"/>
-  <!--<xsl:param name="kiln:url-lang-suffix" select="$kiln:url-lang-suffix"/>-->
 
   <!-- ************************************* -->
   <!-- ********** Global variables ********* -->
@@ -89,7 +88,7 @@
   <xsl:template match="/"/>
 
 
-  <!-- set title -->
+  
   <xsl:template name="indexTitlePerson">
     <i18n:text>Attested Persons</i18n:text>
   </xsl:template>
@@ -321,29 +320,6 @@
           </xsl:otherwise>
         </xsl:choose>
       </th>
-      
-      <!-- THE COMMENTED OUT VERSION BELOW IS THE ONE THAT BRINGS UP A MODAL WINDOW
-           WITH THE ROW FOR THAT PERSON AND A LINK TO THE RECORD PAGE. IT WAS DECIDED
-           TO DROP THE MODAL PART, SO JUST LEAVING THIS HERE UNTIL NEW DESIGN (GO
-           STRAIGHT FROM THE TABLE TO THE RECORD PAGE) IS ACCEPTED FOR CERTAIN
-           PC, 20 OCT 2015-->
-      <!--<th id="{@xml:id}">
-        <xsl:choose>
-          <xsl:when test="$lang != 'en'">
-            <a href="../record/modal/{@xml:id}-{$lang}.html" data-reveal-id="{@xml:id}-modal"
-              data-reveal-ajax="true">
-              <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
-            </a>
-          </xsl:when>
-          <xsl:otherwise>
-            <a href="../record/modal/{@xml:id}.html" data-reveal-id="{@xml:id}-modal"
-              data-reveal-ajax="true">
-              <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
-            </a>
-          </xsl:otherwise>
-        </xsl:choose>
-        <div id="{@xml:id}-modal" class="reveal-modal"> </div>
-      </th>-->
 
       <td class="persName">
         <xsl:for-each select="tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
@@ -412,7 +388,7 @@
             as="xs:sequence"/>
 
           <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-            <a href="#{@xml:id}" class="relation_link">
+            <a href="../record/{@xml:id}-{$lang}.html" i18n:attr="title" title="Permalink">
               <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
             </a>
             <xsl:if test="following::tei:person[@xml:id = $passives]">

@@ -8,7 +8,7 @@
     <xsl:param name="id"/>
     <xsl:param name="lang"/>
     
-    <!--<xsl:variable name="record_url" select="concat('http://iospe.kcl.ac.uk/indices/person/record/', $id, '.html')"/>-->
+    
     <xsl:variable name="record_url">
         <xsl:choose>
             <xsl:when test="$lang != 'en'">
@@ -22,7 +22,6 @@
     
     <xsl:variable name="name" select="string-join(//tei:person[@xml:id = $id]/tei:persName[@xml:lang = $lang], ', ')"/>
     
-    <!-- set title -->
     <xsl:template name="personRecordTitle">
         <i18n:text>Person record</i18n:text>: <xsl:value-of select="$name"/>
     </xsl:template>
@@ -67,7 +66,6 @@
     
     <xsl:template match="tei:person[@xml:id = $id]">
         <th id="{@xml:id}">
-            <!--<xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>-->
             <xsl:value-of select="$name"/>
         </th>
         <td class="persName">
@@ -128,10 +126,9 @@
                 <xsl:text> </xsl:text> <xsl:variable name="passives"
                     select="tokenize(substring-after(@passive, '#'), ' #')" as="xs:sequence"/>
                 <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-                    <!-- PC, 15 Sep 2015: the <a> below doesn't work in a modal window so commenting it out until we know its fate -->
-                    <!--<a href="#{@xml:id}" class="relation_link">-->
+                    <a href="../record/{@xml:id}-{$lang}.html" i18n:attr="title" title="Permalink">
                     <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
-                    <!--</a>-->
+                    </a>
                     <xsl:if test="following::tei:person[@xml:id = $passives]">
                         <xsl:text>, </xsl:text>
                     </xsl:if>
@@ -153,9 +150,6 @@
                 </xsl:for-each>
             </ul>
         </td>
-        
-        
-        
         
     </xsl:template>
     
