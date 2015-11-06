@@ -1518,6 +1518,45 @@
             </xsl:otherwise>
           </xsl:choose>
         </field>
+        <field name="date-era">
+          <xsl:variable name="era_string">
+            <xsl:choose>
+              <xsl:when test="starts-with(tei:floruit/@notBefore, '-')">BCE</xsl:when>
+              <xsl:otherwise>CE</xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:variable name="cent_string">
+            
+            <xsl:variable name="num_part">
+              <xsl:choose>
+                <xsl:when test="starts-with(tei:floruit/@notBefore, '-')">
+                  <xsl:value-of select="number(substring(tei:floruit/@notBefore, 2, 4))"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="number(substring(tei:floruit/@notBefore, 1, 4))"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:variable>
+            <xsl:if test="($num_part&gt;=0001) and ($num_part&lt;=0100)">I</xsl:if>
+            <xsl:if test="($num_part&gt;=0101) and ($num_part&lt;=0200)">II</xsl:if>
+            <xsl:if test="($num_part&gt;=0201) and ($num_part&lt;=0300)">III</xsl:if>
+            <xsl:if test="($num_part&gt;=0301) and ($num_part&lt;=0400)">IV</xsl:if>
+            <xsl:if test="($num_part&gt;=0401) and ($num_part&lt;=0500)">V</xsl:if>
+            <xsl:if test="($num_part&gt;=0501) and ($num_part&lt;=0600)">VI</xsl:if>
+            <xsl:if test="($num_part&gt;=0601) and ($num_part&lt;=0700)">VII</xsl:if>
+            <xsl:if test="($num_part&gt;=0701) and ($num_part&lt;=0800)">VIII</xsl:if>
+            <xsl:if test="($num_part&gt;=0801) and ($num_part&lt;=0900)">IX</xsl:if>
+            <xsl:if test="($num_part&gt;=0901) and ($num_part&lt;=1000)">X</xsl:if>
+            <xsl:if test="($num_part&gt;=1001) and ($num_part&lt;=1100)">XI</xsl:if>
+            <xsl:if test="($num_part&gt;=1101) and ($num_part&lt;=1200)">XII</xsl:if>
+            <xsl:if test="($num_part&gt;=1201) and ($num_part&lt;=1300)">XIII</xsl:if>
+            <xsl:if test="($num_part&gt;=1301) and ($num_part&lt;=1400)">XIV</xsl:if>
+            <xsl:if test="($num_part&gt;=1401) and ($num_part&lt;=1500)">XV</xsl:if>
+            <xsl:if test="($num_part&gt;=1501) and ($num_part&lt;=1600)">XVI</xsl:if>
+            <xsl:if test="($num_part&gt;=1601) and ($num_part&lt;=1700)">XVII</xsl:if>
+          </xsl:variable>
+          <xsl:value-of select="concat($cent_string, '_', $era_string)"/>
+        </field>
       </doc>
     </xsl:for-each>
 

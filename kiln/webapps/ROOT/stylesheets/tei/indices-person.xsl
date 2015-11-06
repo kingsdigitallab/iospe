@@ -7,6 +7,7 @@
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
   <xsl:param name="ancient-lang"/>
+  <xsl:param name="hl"/>
 
   <xsl:param name="lang"/>
   <xsl:param name="current-date"/>
@@ -305,16 +306,19 @@
 
   <xsl:template name="person">
     <tr class="index_row">
+      <xsl:if test="@xml:id = $hl">
+        <xsl:attribute name="style">background-color: yellow</xsl:attribute>
+      </xsl:if>
       <th id="{@xml:id}">
         <xsl:choose>
           <xsl:when test="$lang != 'en'">
-            <a href="../record/{@xml:id}-{$lang}.html" i18n:attr="title" title="Permalink">
+            <a href="../record/{@xml:id}-{$lang}.html" i18n:attr="title" title="Permalink" name="{@xml:id}">
               &#x00B6;
             </a> 
             <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
           </xsl:when>
           <xsl:otherwise>
-            <a href="../record/{@xml:id}.html" i18n:attr="title" title="Permalink">
+            <a href="../record/{@xml:id}.html" i18n:attr="title" title="Permalink" name="{@xml:id}">
               &#x00B6;
             </a> <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
           </xsl:otherwise>
@@ -388,7 +392,27 @@
             as="xs:sequence"/>
 
           <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-            <a href="../record/{@xml:id}-{$lang}.html" i18n:attr="title" title="Permalink">
+            <xsl:variable name="myXMLid" select="normalize-space(@xml:id)"/>
+            <xsl:variable name="grc_first_letter" select="substring(tei:persName[@xml:lang='grc'], 1, 1)"/>
+            <xsl:variable name="link_letter" select="//firstletters/alist/list[@type='grc']/item[letter = $grc_first_letter]/equiv-en"/>
+            <xsl:variable name="link_date" select="/aggregation/persdates//result/doc[str[@name='id'] = $myXMLid]/str[@name='date-era']"/>           
+            <xsl:variable name="link_string">
+              <xsl:choose>
+                <xsl:when test="$sort='letters' and $lang = 'en'">
+                  <xsl:value-of select="concat('letters/', $link_letter, '_', $myXMLid)"/>
+                </xsl:when>
+                <xsl:when test="$sort='letters' and $lang = 'ru'">
+                  <xsl:value-of select="concat('letters/', $link_letter, '_', $myXMLid, '-ru')"/>
+                </xsl:when>
+                <xsl:when test="$sort='date' and $lang = 'en'">
+                  <xsl:value-of select="concat('dates/', $link_date, '_', $myXMLid)"/>
+                </xsl:when>
+                <xsl:when test="$sort='date' and $lang = 'ru'">
+                  <xsl:value-of select="concat('dates/', $link_date, '_', $myXMLid, '-ru')"/>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:variable>
+            <a href="../{$link_string}.html#{$myXMLid}">
               <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
             </a>
             <xsl:if test="following::tei:person[@xml:id = $passives]">
