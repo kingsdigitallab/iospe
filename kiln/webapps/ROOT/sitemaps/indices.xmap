@@ -264,7 +264,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon:/getIndex/names/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -295,7 +295,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon:/getIndex/names/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -327,7 +327,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon:/getIndex/names/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -357,7 +357,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon:/getIndex/names/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -492,58 +492,6 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-
-      <!-- THE 2 COMMENTED OUT TEMPLATES BELOW BROUGHT UP A MODAL WINDOW
-           WITH THE ROW FOR THAT PERSON AND A LINK TO THE RECORD PAGE. IT WAS DECIDED
-           TO DROP THE MODAL PART, SO JUST LEAVING THEM HERE UNTIL NEW DESIGN (GO
-           STRAIGHT FROM THE TABLE TO THE RECORD PAGE) IS ACCEPTED FOR CERTAIN
-           THEN THEY CAN BE DELETED
-           PC, 20 OCT 2015-->
-      <!-- Attested persons, modal window for single person record, Russian version -->
-      <!--<map:match pattern="person/record/modal/*-*.html">
-        <map:aggregate element="aggregation" label="content">
-          <map:part src="../content/xml/tei/alists/centuries.xml"/>
-          <map:part src="cocoon:/getLetters/date"/>
-          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
-          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
-        </map:aggregate>
-        <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
-          <map:parameter name="context" value="{request:serverName}"/>
-          <map:parameter name="index" value="persons"/>
-          <map:parameter name="sort" value="letters"/>
-          <map:parameter name="lang" value="{2}"/>
-          <map:parameter name="id" value="{1}"/>
-          <map:parameter name="ancient-lang" value="all"/>
-          <map:parameter name="use-request-parameters" value="true"/>
-        </map:transform>
-        <map:transform type="i18n">
-          <map:parameter name="locale" value="{2}"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>-->
-
-      <!-- Attested persons, modal window for single person record, English version -->
-      <!--<map:match pattern="person/record/modal/*.html">
-        <map:aggregate element="aggregation" label="content">
-          <map:part src="../content/xml/tei/alists/centuries.xml"/>
-          <map:part src="cocoon:/getLetters/date"/>
-          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
-          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
-        </map:aggregate>
-        <map:transform src="cocoon://_internal/template/indices-person-modal.xsl">
-          <map:parameter name="context" value="{request:serverName}"/>
-          <map:parameter name="index" value="persons"/>
-          <map:parameter name="sort" value="letters"/>
-          <map:parameter name="lang" value="en"/>
-          <map:parameter name="id" value="{1}"/>
-          <map:parameter name="ancient-lang" value="all"/>
-          <map:parameter name="use-request-parameters" value="true"/>
-        </map:transform>
-        <map:transform type="i18n">
-          <map:parameter name="locale" value="en"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
-      </map:match>-->
 
       <!-- Attested persons, regular page for single person record, Russian version -->
       <map:match pattern="person/record/*-*.html">
@@ -1057,9 +1005,6 @@
           <map:parameter name="parameter-selector-test" value="{2}"/>
 
           <map:when test="—">
-            <!--<map:generate
-              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:%E2%80%94&amp;sort={1}-sort%20asc&amp;rows=999"
-            />-->
             <map:generate
               src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter-emdash:&quot;yes&quot;&amp;sort={1}-sort%20asc&amp;rows=999"
             />
@@ -1068,12 +1013,6 @@
           <map:when test="4dates">
             <map:generate
               src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"
-            />
-          </map:when>
-
-          <map:when test="4record">
-            <map:generate
-              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
             />
           </map:when>
 

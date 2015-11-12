@@ -35,7 +35,7 @@
                             <xsl:text> </xsl:text>
                         </th>
                         <th>
-                            <i18n:text>Greek</i18n:text>
+                            <i18n:text>English</i18n:text>
                         </th>
                         <th>
                             <i18n:text>Date</i18n:text>
@@ -59,17 +59,17 @@
                 </tbody>
             </table>
                 
-                <p><i18n:text>Permalink</i18n:text>: <a href="{$record_url}"><xsl:value-of select="concat($context, $record_url)"/></a></p>
+                <p><i18n:text>Permanent link for this person</i18n:text>: <a href="{$record_url}"><xsl:value-of select="concat($context, $record_url)"/></a></p>
             </div>
         </div>
     </xsl:template>
     
     <xsl:template match="tei:person[@xml:id = $id]">
         <th id="{@xml:id}">
-            <xsl:value-of select="$name"/>
+            <xsl:value-of select="tei:persName[@xml:lang = 'grc']"/>
         </th>
         <td class="persName">
-            <xsl:value-of select="tei:persName[@xml:lang = 'grc']"/>
+            <xsl:value-of select="$name"/> 
         </td>
         <td class="floruit">
             <xsl:value-of

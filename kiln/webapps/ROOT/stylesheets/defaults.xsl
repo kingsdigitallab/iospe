@@ -274,6 +274,51 @@
         name.</i18n:text>
     </div>
   </xsl:template>
+  
+  <xsl:template name="indices_apl_info">
+    <div data-alert="data-alert" class="alert-box secondary">
+      <p>
+        <xsl:choose>
+        <xsl:when test="$lang='en'">
+          <i class="fa fa-info-circle">
+            <xsl:text> </xsl:text>
+          </i>
+          <xsl:text> </xsl:text>Emdash (—) in a name indicates missing letters at the beginning (see "—" in alphabet bar), middle or end.<br/>
+          <i class="fa fa-info-circle">
+            <xsl:text> </xsl:text>
+          </i>
+          <xsl:text> </xsl:text>Hyphen ( - ) indicates a hyphenated name.<br/>
+          <i class="fa fa-info-circle">
+            <xsl:text> </xsl:text>
+          </i>
+          <xsl:text> </xsl:text>Square brackets [ ] indicate that the name is partially or completely restored in this inscription.<br/>
+          <i class="fa fa-info-circle">
+            <xsl:text> </xsl:text>
+          </i>
+          <xsl:text> </xsl:text>Pilcrow (¶) links to a permanent web address for each person, for referencing in external prosopographical databases.
+        </xsl:when>
+          <xsl:otherwise>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Длинное тире (—) в начале (см. алфавитную линейку), середине и конце имени обозначает потерянные буквы.<br/>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Дефис ( - ) означает, что имя состоит из двух частей.<br/>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Квадратные скобки [ ] обозначают, что имя частично или полностью восстановлено в тексте.<br/>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Знак абзаца (¶) отсылает к постоянному адресу в сети, созданного для каждого лица, для ссылок в электронных базах данных.
+          </xsl:otherwise>
+        </xsl:choose>
+      </p>
+    </div>
+  </xsl:template>
 
   <!-- GREEK -->
   <xsl:template match="tei:foreign[@xml:lang='grc']|tei:term[@xml:lang='grc']">
