@@ -151,8 +151,8 @@
                     <th>
                       <xsl:text> </xsl:text>
                     </th>
-                    <th>
-                      <i18n:text>English</i18n:text>
+                    <th><xsl:choose><xsl:when test="$lang='ru'">Русский</xsl:when>
+                    <xsl:otherwise>English</xsl:otherwise></xsl:choose>
                     </th>
                     <th>
                       <i18n:text>Date</i18n:text>
