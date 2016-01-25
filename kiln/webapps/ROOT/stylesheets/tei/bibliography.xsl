@@ -499,11 +499,10 @@ vo
       <xsl:value-of select="./tei:biblScope[@unit = 'issue'][@xml:lang = $lang or not(@xml:lang)]"/>
     </xsl:if>
     <xsl:if test="./tei:biblScope[@unit = 'part']">
-      <xsl:value-of select="./tei:biblScope[@unit = 'part'][@xml:lang = $lang or not(@xml:lang)]"/>
       <xsl:choose>
         <xsl:when
-          test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] or ./tei:biblScope[@unit = 'issue']">
-          <xsl:text>:</xsl:text>
+          test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] and (./tei:biblScope[@unit = 'issue'] or ./tei:biblScope[@unit = 'part'])">
+          <xsl:text> ,</xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>, </xsl:text>
