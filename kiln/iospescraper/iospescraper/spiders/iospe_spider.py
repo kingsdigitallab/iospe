@@ -117,7 +117,8 @@ class InscriptionSpider(CrawlSpider):
             return u'\n'.join(response.xpath(
                 (u'//main//div['
                     u'contains(@class, "monument-section") or '
-                    u'contains(@class, "epigraphic-field-section")'
+                    u'contains(@class, "epigraphic-field-section") or '
+                    u'contains(@class, "textpart-section")'
                     u']')
             ).extract())
 
