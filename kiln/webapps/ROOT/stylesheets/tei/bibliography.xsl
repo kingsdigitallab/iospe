@@ -460,7 +460,7 @@ vo
         <i18n:text key="__series_title_prefix">vol. </i18n:text>
       </xsl:if>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="normalize-space(./tei:biblScope[@unit = 'vol'])"/>
+      <xsl:value-of select="./tei:biblScope[@unit = 'vol']"/>
     </xsl:if>
   </xsl:template>
 
@@ -490,7 +490,7 @@ vo
         test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] and (./tei:biblScope[@unit = 'issue'] or ./tei:biblScope[@unit = 'part'])">
         <xsl:text>.</xsl:text>
       </xsl:when>
-      <xsl:when test="./tei:biblScope[@unit = 'issue']">
+      <xsl:when test="normalize-space(./tei:biblScope[@unit = 'issue'])">
         <xsl:text> </xsl:text>
       </xsl:when>
     </xsl:choose>
