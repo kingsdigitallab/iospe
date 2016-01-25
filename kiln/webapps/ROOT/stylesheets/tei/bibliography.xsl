@@ -460,7 +460,7 @@ vo
         <i18n:text key="__series_title_prefix">vol. </i18n:text>
       </xsl:if>
       <xsl:text> </xsl:text>
-      <xsl:value-of select="./tei:biblScope[@unit = 'vol']"/>
+      <xsl:value-of select="normalize-space(./tei:biblScope[@unit = 'vol'])"/>
     </xsl:if>
   </xsl:template>
 
@@ -499,15 +499,7 @@ vo
       <xsl:value-of select="./tei:biblScope[@unit = 'issue'][@xml:lang = $lang or not(@xml:lang)]"/>
     </xsl:if>
     <xsl:if test="./tei:biblScope[@unit = 'part']">
-      <xsl:choose>
-        <xsl:when
-          test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] and (./tei:biblScope[@unit = 'issue'] or ./tei:biblScope[@unit = 'part'])">
-          <xsl:text> ,</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>, </xsl:text>
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:value-of select="./tei:biblScope[@unit = 'part'][@xml:lang = $lang or not(@xml:lang)]"/>
     </xsl:if>
 
     <xsl:if test="./tei:biblScope[@unit = 'pp']">
