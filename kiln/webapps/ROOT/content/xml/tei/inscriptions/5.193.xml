@@ -86,7 +86,7 @@
                   <physDesc>
                      <objectDesc>
                         <layoutDesc>
-                           <layout ana="f5" n="1">
+                           <layout ana="f6" n="1">
                               <seg xml:lang="ru">Наверху слева.</seg>
                               <seg xml:lang="en">Top left.</seg>
                            </layout>
@@ -121,7 +121,7 @@
                   <physDesc>
                      <objectDesc>
                         <layoutDesc>
-                           <layout ana="f5" n="2">
+                           <layout ana="f6" n="2">
                               <seg xml:lang="ru">Справа от надписи 3.</seg>
                               <seg xml:lang="en">To the right of Text 3.</seg>
                            </layout>
@@ -157,7 +157,7 @@
                   <physDesc>
                      <objectDesc>
                         <layoutDesc>
-                           <layout ana="f5" n="3">
+                           <layout ana="f6" n="3">
                               <seg xml:lang="ru">Под надписью 2.</seg>
                               <seg xml:lang="en">Below Text 2. </seg>
                            </layout>
@@ -193,7 +193,7 @@
                   <physDesc>
                      <objectDesc>
                         <layoutDesc>
-                           <layout ana="f5" n="4">
+                           <layout ana="f6" n="4">
                               <seg xml:lang="ru">Под надписью 5.</seg>
                               <seg xml:lang="en">Below Text 5.</seg>
                            </layout>
@@ -228,7 +228,7 @@
                   <physDesc>
                      <objectDesc>
                         <layoutDesc>
-                           <layout ana="f5" n="5">
+                           <layout ana="f6" n="5">
                               <seg xml:lang="ru">Справа снизу.</seg>
                               <seg xml:lang="en">Bottom right.</seg>
                            </layout>
@@ -250,11 +250,46 @@
                      </origin>
                   </history>
                </msPart>
+               <msPart n="6">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3">
+                        <seg xml:lang="ru" n="6">Памятная <certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                        <seg xml:lang="en" n="6">Commemoration<certainty cert="low" locus="value" match=".."/>.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f6" n="6">
+                              <seg xml:lang="ru">По центру слева.</seg>
+                              <seg xml:lang="en">Center left.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="6">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>, минускул.</seg>
+                           <seg xml:lang="en">Graffito, minuscule.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="6" notBefore="0901" notAfter="1100" precision="medium" evidence="палеография">
+                           <seg xml:lang="ru">X–XI вв.</seg>
+                           <seg xml:lang="en">X–XIth cent. C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
 
 <revisionDesc>
+         <change when="2016-01-25" who="CB">Added new textpart</change>
          <change when="2015-04-30" who="CB">Textparts</change>
          <change when="2015-04-17" who="CB">Andrey's corrections</change>
          <change when="2015-04-08" who="CB">Andrey's corrections</change>
@@ -306,6 +341,9 @@
             <listBibl n="5">
                <bibl/>
             </listBibl>
+            <listBibl n="6">
+               <bibl/>
+            </listBibl>
          </div>
          
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -343,6 +381,18 @@
                   <lb n="1"/><persName type="attested" ref="#person245"><name nymRef="Θεοδώρις">Θεωδό<lb n="2" break="no"/>ρις</name></persName>.
                </ab>
             </div>
+            <div type="textpart" subtype="inscription" n="6">
+               <ab>
+                  <lb n="1"/><w lemma="ὁ">Τοῡ</w> <persName type="attested" ref="#person444"><name nymRef="Δανήλης">Δανή
+                  <lb n="2" break="no"/>λη</name></persName>, <w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person445"><name nymRef="Κεδo">Κεδo</name></persName>,
+                  <lb n="3"/><w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person446"><name nymRef="Ἐρδάστιος">Ἐρδαστήου</name></persName>,
+                  <lb n="4"/><w lemma="ὁ">το</w>,
+                  <lb n="5"/><w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person447"><name nymRef="Δαυίδ">Δαυί<supplied reason="lost">δ</supplied></name></persName>,
+                  <lb n="6"/><w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person448"><name nymRef="Πρόκλος"><supplied reason="lost">Πρ</supplied>όκλ<supplied reason="lost" cert="low">ου</supplied></name></persName>,
+                  <lb n="7"/><w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person449"><name nymRef="Ἰουστῖνος">Ἰουσ<supplied reason="lost">τίνου</supplied></name></persName>,
+                  <lb n="8"/><w lemma="ὁ">τοῦ</w> <persName type="attested"><name nymRef="Δαυίδ" ref="#person450">Δαυί<supplied reason="lost">δ</supplied></name></persName>
+               </ab>
+            </div>
          </div>         
          <div type="translation" xml:lang="ru">
             <div type="textpart" n="1">
@@ -360,6 +410,9 @@
             <div type="textpart" n="5">
                <p>Феодорис.</p>
             </div>
+            <div type="textpart" n="6">
+               <p>Данилы, Кедо, Эрдастия, Давида, Прокла, Иустина, Давида.</p>
+            </div>
          </div>
          <div type="translation" xml:lang="en">
             <div type="textpart" n="1">
@@ -376,6 +429,9 @@
             </div>
             <div type="textpart" n="5">
                <p>Theodoris.</p>
+            </div>
+            <div type="textpart" n="6">
+               <p>Of Daneles, of Kedo, of Erdastios, of David, of Proklos, of Justin, of David.</p>
             </div>
          </div>
          <div type="commentary" xml:lang="ru">
