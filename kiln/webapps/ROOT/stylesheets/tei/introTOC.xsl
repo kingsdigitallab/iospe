@@ -111,7 +111,7 @@
                                         <a href="introduction.html#IV-1-">Material</a>
                                     </li>
                                     <li>
-                                        <a href="introduction.html#IV-2-">Paleography</a>
+                                        <a href="introduction.html#IV-2-">Palaeography</a>
                                         <ul>
                                             <li>
                                                 <a href="introduction.html#IV-2-A-">Early Byzantine
