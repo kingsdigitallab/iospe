@@ -502,7 +502,12 @@ vo
       <xsl:value-of select="./tei:biblScope[@unit = 'issue'][@xml:lang = $lang or not(@xml:lang)]"/>
     </xsl:if>
     <xsl:if test="./tei:biblScope[@unit = 'part']">
-      <xsl:value-of select="./tei:biblScope[@unit = 'part'][@xml:lang = $lang or not(@xml:lang)]"/>
+      <xsl:for-each select="./tei:biblScope[@unit = 'part'][@xml:lang = $lang or not(@xml:lang)]">
+        <xsl:value-of select="."/>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
+      </xsl:for-each>
     </xsl:if>
 
     <xsl:if test="./tei:biblScope[@unit = 'pp']">
