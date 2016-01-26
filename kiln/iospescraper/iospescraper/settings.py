@@ -12,12 +12,12 @@ LOG_LEVEL = 'INFO'
 
 BOT_NAME = 'iospescraper'
 
-OUTFILE = 'inscriptions.html'
-# OUTFILE = 'inscriptions-ru.html'
+# OUTFILE = 'inscriptions.htm'
+OUTFILE = 'inscriptions-ru.htm'
 
 START_URLS = [
-    "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations.html",
-    # "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations-ru.html"
+    # "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations.html",
+    "https://iospe-dev.cch.kcl.ac.uk/corpora/byzantine/locations-ru.html"
 ]
 
 SPIDER_MODULES = ['iospescraper.spiders']
@@ -32,7 +32,7 @@ NEWSPIDER_MODULE = 'iospescraper.spiders'
 # }
 
 AUTH = {
-    'user': 'agiacometti',
+    'user': 'pcaton',
 }
 
 ITEM_PIPELINES = {
