@@ -8,7 +8,7 @@
        to-html.xsl (which should not be changed). -->
 
   <xsl:import href="../../kiln/stylesheets/tei/to-html.xsl"/>
-  <xsl:import href="../../kiln/stylesheets/tei/introTOC.xsl"/>
+  <xsl:import href="introTOC.xsl"/>
 
   <xsl:template match="tei:divGen[contains(@type, 'intro-toc')]">
     <xsl:sequence select="
