@@ -456,7 +456,9 @@ vo
 
     <xsl:if test="self::tei:monogr/tei:biblScope[@unit = 'vol']">
       <xsl:if test="tei:title[@level = 'm' or @level ='s']">
-        <xsl:text>, </xsl:text>
+        <xsl:if test="position() != last()">
+          <xsl:text>, </xsl:text>
+        </xsl:if>
         <i18n:text key="__series_title_prefix">vol. </i18n:text>
       </xsl:if>
       <xsl:text> </xsl:text>
