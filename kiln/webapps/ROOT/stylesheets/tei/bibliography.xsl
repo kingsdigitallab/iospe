@@ -488,7 +488,7 @@ vo
     <xsl:choose>
       <xsl:when
         test=".[not(self::tei:monogr)]/tei:biblScope[@unit = 'vol'] and (./tei:biblScope[@unit = 'issue'] or ./tei:biblScope[@unit = 'part'])">
-        <xsl:text>.</xsl:text>
+        <xsl:text> </xsl:text>
       </xsl:when>
       <xsl:when test="./tei:biblScope[@unit = 'issue']">
         <xsl:text> </xsl:text>
