@@ -180,14 +180,13 @@ vo
 
     <!-- scope (journal)-->
     <xsl:if test="$monogr/tei:title[@level = 'j']">
-      {<xsl:apply-templates select="$monogr" mode="scope"/>}
+      <xsl:apply-templates select="$monogr" mode="scope"/>
     </xsl:if>
     
     <xsl:if
       test="($analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series))
         and not($monogr/tei:biblScope[@unit='vol'])">
-      <!-- self::tei:monogr/tei:biblScope[@unit = 'vol'] -->
-      <xsl:text>###. </xsl:text>
+      <xsl:text>. </xsl:text>
     </xsl:if>
     
 
@@ -210,7 +209,7 @@ vo
     
     <!-- scope (not journals)-->
     <xsl:if test="not($monogr/tei:title[@level = 'j'])">
-      ((<xsl:apply-templates select="$monogr | $analytic" mode="scope"/>))
+      <xsl:apply-templates select="$monogr | $analytic" mode="scope"/>
     </xsl:if>
 
 
