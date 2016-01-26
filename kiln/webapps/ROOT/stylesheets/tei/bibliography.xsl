@@ -493,6 +493,9 @@ vo
       <xsl:when test="./tei:biblScope[@unit = 'issue']">
         <xsl:text> </xsl:text>
       </xsl:when>
+      <xsl:when test="./tei:biblScope[@unit='part']">
+        <xsl:text> </xsl:text>
+      </xsl:when>
     </xsl:choose>
 
     <xsl:if test="./tei:biblScope[@unit = 'issue']">
