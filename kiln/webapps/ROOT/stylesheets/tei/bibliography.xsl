@@ -184,7 +184,7 @@ vo
     </xsl:if>
     
     <xsl:if
-      test="$analytic and (($monogr and not($series)) or (not($monogr) and $series) or ($monogr and $series))">
+      test="$analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series)">
       <xsl:text>###. </xsl:text>
     </xsl:if>
     
