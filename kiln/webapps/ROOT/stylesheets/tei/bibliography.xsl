@@ -208,7 +208,7 @@ vo
     
     <!-- scope (not journals)-->
     <xsl:if test="not($monogr/tei:title[@level = 'j'])">
-      <xsl:apply-templates select="$monogr | $analytic" mode="scope"/>
+      ((<xsl:apply-templates select="$monogr | $analytic" mode="scope"/>))
     </xsl:if>
 
 
