@@ -185,7 +185,7 @@ vo
     
     <xsl:if
       test="($analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series))
-        and not($monogr/tei:biblScope[@unit='vol'])">
+        and not($monogr/tei:biblScope[@unit='vol'] and $monogr/tei:biblScope[@unit='pp'])">
       <xsl:text>. </xsl:text>
     </xsl:if>
     
