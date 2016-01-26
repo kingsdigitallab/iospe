@@ -180,7 +180,7 @@ vo
 
     <!-- scope (journal)-->
     <xsl:if test="$monogr/tei:title[@level = 'j']">
-      <xsl:apply-templates select="$monogr" mode="scope"/>
+      {<xsl:apply-templates select="$monogr" mode="scope"/>}
     </xsl:if>
     
     <xsl:if
