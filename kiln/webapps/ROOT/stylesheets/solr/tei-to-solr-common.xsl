@@ -73,7 +73,12 @@
         <xsl:sequence select="$memoized-indispensible-data"/>
       </xsl:otherwise>
     </xsl:choose>
-
+    <field name="inscription-has-date">
+      <xsl:if
+        test="./tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
+        <xsl:text>yes</xsl:text>
+      </xsl:if>
+    </field>
   </xsl:template>
 
   <xsl:template match="tei:publicationStmt/tei:idno[@type = 'filename']"
@@ -190,22 +195,23 @@
     </xsl:for-each>
   </xsl:template>
 
-  <!-- i believe this is copied into the field -->
-  <!--<xsl:template match="tei:fileDesc/tei:sourceDesc/tei:msDesc" mode="document-metadata">
-    <!-\- general text search of metadata -\->
-    <field name="text">
-      <xsl:text>hello</xsl:text>
-      <xsl:value-of select="text()"/>
-    </field>
-    <xsl:apply-templates mode="#current"></xsl:apply-templates>
-  </xsl:template>-->
-
   <!--  Per document part-->
 
   <xsl:template match="tei:origPlace" mode="document-metadata document-metadata-indispensible">
+    <xsl:if test="descendant::tei:*[@cert = 'low'] or ancestor-or-self::tei:*[@cert = 'low']">
+      <field name="cert-origin">low</field>
+    </xsl:if>
+    <field name="origin-en">
+      <xsl:apply-templates select="tei:seg[@xml:lang='en']" mode="origin"/>
+    </field>
+    <field name="origin-ru">
+      <xsl:apply-templates select="tei:seg[@xml:lang='ru']" mode="origin"/>
+    </field>
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
-
+      <field name="origin-ref">
+        <xsl:value-of select="$ref"/>
+      </field>
       <xsl:for-each
         select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
         <field name="location">

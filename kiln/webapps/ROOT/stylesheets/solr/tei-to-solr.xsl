@@ -4,8 +4,6 @@
   xmlns:local="http://www.cch.kcl.ac.uk/kiln/local/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <!-- <xsl:import href="../../kiln/stylesheets/solr/tei-to-solr.xsl" /> -->
-
   <xsl:import href="../common/conversions.xsl"/>
   <xsl:import href="tei-to-solr-functions.xsl"/>
   <xsl:import href="tei-to-solr-common.xsl"/>
@@ -30,7 +28,6 @@
        </xsl:call-template>
      </xsl:variable>-->
       <xsl:apply-templates mode="publication"/>
-      <xsl:apply-templates mode="origin"/>
       <xsl:apply-templates mode="findspot"/>
       <xsl:apply-templates mode="inscription"/>
       <xsl:apply-templates mode="date"/>
@@ -181,79 +178,15 @@
   </xsl:template>
 
   <!-- Unit: ORIGIN (Tables of Content) -->
-
+  <!-- PC, 29 Jan 2016: there used to be template that created a separate <doc> with dt:origin, which fed
+       the "locations.html" and "locations-ru.html" pages, but that origin data is now added to the main
+       dt:inscription <doc> by tei-to-solr-common.xsl. However, the 2 templates below are still used. -->
   <xsl:template match="tei:origin/tei:origPlace//tei:certainty[@cert = 'low']" mode="origin">
     <xsl:text>(?)</xsl:text>
   </xsl:template>
 
-
   <xsl:template match="tei:origin/tei:origPlace//tei:seg/text()" mode="origin">
     <xsl:value-of select="."/>
-  </xsl:template>
-
-  <xsl:template match="tei:origin/tei:origPlace[@ref][1]" mode="origin">
-    <xsl:variable name="idno"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
-    <xsl:if test="not($idno = '')">
-      <doc>
-        <xsl:apply-templates mode="common-data" select="ancestor::aggregation/document/tei:TEI">
-          <xsl:with-param name="dt" select="'origin'"/>
-          <xsl:with-param name="suffix"
-            select="
-              concat(normalize-space(@ref),
-              '_',
-              position())"
-          />
-        </xsl:apply-templates>
-
-        <xsl:comment>Origin</xsl:comment>
-        <xsl:if test="descendant::tei:*[@cert = 'low'] or ancestor-or-self::tei:*[@cert = 'low']">
-          <field name="cert">low</field>
-        </xsl:if>
-
-        <!-- Indexed Item Value(s) -->
-        <xsl:for-each select="tokenize(@ref, ' ')">
-          <field name="origin-ref">
-            <xsl:value-of select="substring-after(., '#')"/>
-          </field>
-        </xsl:for-each>
-        <field name="origin-en">
-          <xsl:apply-templates select="tei:seg[@xml:lang = 'en']" mode="origin"/>
-        </field>
-        <field name="origin-ru">
-          <xsl:apply-templates select="tei:seg[@xml:lang = 'ru']" mode="origin"/>
-        </field>
-
-        <field name="inscription-has-date">
-          <xsl:if
-            test="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
-            <xsl:text>yes</xsl:text>
-          </xsl:if>
-        </field>
-        <!--<field name="origin-en">
-       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='en']"/>
-     </field>
-     <field name="origin-ru">
-       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/tei:placeName[xml:lang='ru']"/>
-     </field>
-     <field name="areas-en">
-       <xsl:for-each select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:place">
-         <xsl:value-of select="tei:placeName[@xml:lang='en']"/>
-       </xsl:for-each>
-     </field>
-     <field name="areas-ru">
-       <xsl:for-each select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:place">
-         <xsl:value-of select="tei:placeName[@xml:lang='ru']"/>
-       </xsl:for-each>
-     </field>
-     <field name="region-en">
-       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:listPlace/head[@xml:lang='en']"/>
-     </field>
-     <field name="region-ru">
-       <xsl:value-of select="//origplace//tei:place[@xml:id=current()/@ref]/ancestor::tei:listPlace/head[@xml:lang='ru']"/>
-     </field>-->
-      </doc>
-    </xsl:if>
   </xsl:template>
 
   <!-- Unit: FINDSPOT (index) -->

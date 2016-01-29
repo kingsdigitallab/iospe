@@ -230,9 +230,11 @@
           </xsl:otherwise>
         </xsl:choose>
         <xsl:text> </xsl:text>
+        <xsl:value-of select="str[@name=concat('origin-', $lang)]"/>
+        <xsl:text> </xsl:text>
         <xsl:value-of select="arr[@name=concat('document-title-', $lang)]/str[1]"/>
-
-
+        <xsl:text>, </xsl:text>
+        <xsl:value-of select="arr[@name=concat('origDate-', $lang)]/str[1]"/>
       </a>
     </li>
   </xsl:template>
