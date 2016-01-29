@@ -316,7 +316,7 @@
 
         <xsl:if
           test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/(tei:objectType | tei:material | tei:dimensions | tei:p)[@xml:lang = $lang]">
-          <br/>
+          <!-- DEBUG <br/> -->
         </xsl:if>
 
         <!-- Origin -->
@@ -394,7 +394,7 @@
           test="
             tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $lang]
             | tei:history/tei:provenance[@type = 'found']">
-          <br/>
+          <!-- DEBUG <br/> -->
         </xsl:if>
 
         <!-- Modern Location (if exists) -->
@@ -813,7 +813,9 @@
             </div>
           </div>
         </xsl:if>
-        <br/>
+        <!-- PC: 22 JAN 2016 DEBUGGING TEST -->
+        <!-- <br/> -->
+        <!-- END DEBUGGING TEST -->
 
       </div>
     </div>

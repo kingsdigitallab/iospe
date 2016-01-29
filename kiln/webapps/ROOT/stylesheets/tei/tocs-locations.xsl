@@ -3,9 +3,10 @@
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
-  <xsl:param name="toc"/>
+
 
   <xsl:import href="inscription.xsl"/>
+  <xsl:param name="toc"/>
 
   <xsl:template match="/"/>
 
@@ -34,6 +35,7 @@
 
               <!-- origin -->
               <xsl:text> </xsl:text>
+              <xsl:if test="ancestor::doc/str[@name='cert-origin'] = 'low'"><xsl:text>(?)</xsl:text></xsl:if>
               <xsl:value-of select="ancestor::doc/str[@name=concat('origin-', $lang)]"/>
               <xsl:text> </xsl:text>
 
