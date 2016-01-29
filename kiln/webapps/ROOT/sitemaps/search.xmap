@@ -69,6 +69,9 @@
             </map:aggregate>
           </map:otherwise>
         </map:select>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
         <map:transform src="cocoon://_internal/template/search.xsl">
           <map:parameter name="lang" value="{1}"/>
           <map:parameter name="url" value="search/{1}/{2}/{3}/"/>
