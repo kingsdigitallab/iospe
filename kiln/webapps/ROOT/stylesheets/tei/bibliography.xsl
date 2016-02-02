@@ -99,10 +99,20 @@ vo
     <xsl:variable name="main-title">
       <xsl:choose>
         <xsl:when test="$analytic/tei:title">
-          <xsl:text>"</xsl:text>
+          <xsl:analyze-string select="." regex="[!',.;:?]">
+            <xsl:matching-substring>
+              <xsl:text>"</xsl:text>
           <xsl:apply-templates select="$analytic" mode="title"/>
-          <xsl:text>."</xsl:text>
+          <xsl:text>"</xsl:text>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+              <xsl:text>"</xsl:text>
+              <xsl:apply-templates select="$analytic" mode="title"/>
+              <xsl:text>."</xsl:text>
+            </xsl:non-matching-substring>
+          </xsl:analyze-string>
         </xsl:when>
+        
         <xsl:when test="$analytic">
           <xsl:apply-templates select="$analytic" mode="title"/>
           <xsl:text>.</xsl:text>
