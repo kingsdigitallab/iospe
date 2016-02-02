@@ -4,13 +4,17 @@
 
   <!-- Add specific error messages for known problems related to not
        found resources. -->
-
+  <xsl:param name="URIstring"/>
   <xsl:param name="base-uri"/>
   <xsl:param name="repository"/>
   <xsl:param name="server"/>
 
   <xsl:template match="ex:exception-report/ex:message">
-    <xsl:choose>
+    
+    <!-- PC, 2 Feb 2016: COMMENTED THIS OUT BECAUSE NEED TO CONSULT WITH PPS ABOUT THE 
+         INSCRIPTION 404, BECAUSE THE MESSAGE WILL BECOME INADEQUATE SOON; MEANWHILE WE 
+         WILL MAKE ONLY THE GENERAL 404 MESSAGE LIVE -->
+    <!--<xsl:choose>
       <xsl:when test="contains(//ex:stacktrace, '/content/xml/tei/inscriptions/')">
         <xsl:variable name="insc">
           <xsl:analyze-string select="//ex:stacktrace"
@@ -28,9 +32,24 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:copy>
-          <h4>we could not find the page you requested.</h4>
+          <h4><i18n>we could not find the page you requested</i18n>.</h4>
           <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
         </xsl:copy>
+      </xsl:otherwise>
+    </xsl:choose>-->
+    
+    <xsl:choose>
+      <xsl:when test="contains($URIstring, '-ru.')">
+        <xsl:copy>
+          <h4>мы не можем найти страницу, которую Вы запросили.</h4>
+          <h4>Вернуться на <a href="/index-ru.html" style="text-decoration: underline;">Главную страницу</a>.</h4>
+        </xsl:copy>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:copy>
+      <h4>we could not find the page you requested.</h4>
+      <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
+    </xsl:copy>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>

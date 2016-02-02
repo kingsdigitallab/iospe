@@ -317,20 +317,12 @@
       <xsl:if test="$myXMLid = $hl">
         <xsl:attribute name="style">background-color: yellow</xsl:attribute>
       </xsl:if>
-      <th id="{$myXMLid}"><!-- FIRST CHOOSE COMMENTED OUT UNTIL WE HAVE A TRANSLATION FOR THE @TITLE TEXT; 
-        WHEN THAT IS AVAILABLE, DELETE CURRENT CHOOSE AND REPLACE WITH COMMENTED OUT VERSION. PC, 12 NOV 2015-->
-            <!--<xsl:choose>
+      <th id="{$myXMLid}">
+            <xsl:choose>
               <xsl:when test="$lang='ru'"><a href="../record/{$myXMLid}-{$lang}.html" i18n:attr="title" title="Permanent link for this person" name="{$myXMLid}">
               <span style="font-size: smaller;"><sup>&#x00B6;</sup></span><xsl:text> </xsl:text>
             </a></xsl:when>
               <xsl:otherwise><a href="../record/{$myXMLid}.html" i18n:attr="title" title="Permanent link for this person" name="{$myXMLid}">
-                <span style="font-size: smaller;"><sup>&#x00B6;</sup></span><xsl:text> </xsl:text>
-              </a></xsl:otherwise>
-            </xsl:choose>--><xsl:choose>
-              <xsl:when test="$lang='ru'"><a href="../record/{$myXMLid}-{$lang}.html" name="{$myXMLid}">
-              <span style="font-size: smaller;"><sup>&#x00B6;</sup></span><xsl:text> </xsl:text>
-            </a></xsl:when>
-              <xsl:otherwise><a href="../record/{$myXMLid}.html" name="{$myXMLid}">
                 <span style="font-size: smaller;"><sup>&#x00B6;</sup></span><xsl:text> </xsl:text>
               </a></xsl:otherwise>
             </xsl:choose> <xsl:for-each select="tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">

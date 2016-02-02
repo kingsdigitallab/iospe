@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="2.0"
-                xmlns:ex="http://apache.org/cocoon/exception/1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0" xmlns:ex="http://apache.org/cocoon/exception/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <!-- Transform a Cocoon exception into HTML within a site
        template. The display is intended for end users, so make it
@@ -15,6 +15,17 @@
 
 <!-- $debug is a global param declared in config.xmap; the value set there is what gets passed in here. -->
   <xsl:param name="debug" select="1" />
+  <xsl:param name="URIstring"/>
+  
+  <xsl:template name="apology">
+    <xsl:choose>
+      <xsl:when test="contains($URIstring, '-ru.')">
+        Извините, но ...
+      </xsl:when>
+      <xsl:otherwise>Sorry, but ...</xsl:otherwise>
+    </xsl:choose>
+    
+  </xsl:template>
 
   <xsl:template match="ex:exception-report">
     <xsl:apply-templates select="ex:message" />
@@ -144,5 +155,6 @@
       <xsl:apply-templates select="@*|node()" />
     </xsl:copy>
   </xsl:template>
+
 
 </xsl:stylesheet>
