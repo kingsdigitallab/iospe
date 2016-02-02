@@ -190,13 +190,6 @@ vo
       <xsl:text>. </xsl:text>
     </xsl:if>
     
-    <xsl:if
-      test="($analytic and ($monogr and not($series) or not($monogr) and $series) or ($monogr and $series))
-      and ($monogr/tei:biblScope[@unit='vol'] and $monogr/tei:biblScope[@unit='part']
-      and not($monogr/tei:imprint/tei:pubPlace))">
-      <xsl:text>###. </xsl:text>
-    </xsl:if>
-    
 
     <!-- Location & Publisher-->
     <xsl:if test=".//tei:imprint/tei:pubPlace">
