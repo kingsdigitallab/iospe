@@ -309,7 +309,7 @@
             <i class="fa fa-info-circle">
               <xsl:text> </xsl:text>
             </i>
-            <xsl:text> </xsl:text>Квадратные скобки [ ] обозначают, что имя частично или полностью восстановлено в тексте.<br/>
+            <xsl:text> </xsl:text>Квадратные скобки [ ] означают, что имя частично или полностью восстановлено в тексте.<br/>
             <i class="fa fa-info-circle">
               <xsl:text> </xsl:text>
             </i>
