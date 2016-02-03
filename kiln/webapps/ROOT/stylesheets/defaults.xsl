@@ -256,8 +256,7 @@
         <xsl:text> </xsl:text>
       </i>
       <xsl:text> </xsl:text>
-      <i18n:text key="__indices_bracket_info">Inscription numbers in square brackets '[', ']'
-        indicate that the term is partially or completely restored in the text.</i18n:text>
+      <i18n:text key="__indices_bracket_info">Square brackets [ ] indicate that the name/word is partially or completely restored in this inscription.</i18n:text>
     </div>
   </xsl:template>
 
