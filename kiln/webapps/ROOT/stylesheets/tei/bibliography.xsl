@@ -575,7 +575,7 @@ vo
 
   </xsl:template>
   
-  <xsl:template match="tei:hi[@rend='sup']">
+  <xsl:template match="tei:title[@type='abbreviated']/tei:hi[@rend='sup']">
     <sup>
       <xsl:apply-templates/>
       <xsl:text> </xsl:text>
