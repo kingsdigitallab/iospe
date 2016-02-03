@@ -10,11 +10,7 @@
   <xsl:param name="server"/>
 
   <xsl:template match="ex:exception-report/ex:message">
-    
-    <!-- PC, 2 Feb 2016: COMMENTED THIS OUT BECAUSE NEED TO CONSULT WITH PPS ABOUT THE 
-         INSCRIPTION 404, BECAUSE THE MESSAGE WILL BECOME INADEQUATE SOON; MEANWHILE WE 
-         WILL MAKE ONLY THE GENERAL 404 MESSAGE LIVE -->
-    <!--<xsl:choose>
+    <xsl:choose>
       <xsl:when test="contains(//ex:stacktrace, '/content/xml/tei/inscriptions/')">
         <xsl:variable name="insc">
           <xsl:analyze-string select="//ex:stacktrace"
@@ -24,32 +20,44 @@
             </xsl:matching-substring>
           </xsl:analyze-string>
         </xsl:variable>
-        <xsl:copy>
-          <h4>we could not find inscription "<xsl:value-of select="$insc"/>" - please check the number.</h4>
-          <h4>The currently available inscriptions are <a href="/corpora/byzantine/locations.html" style="text-decoration: underline;">listed here</a></h4>          
-          <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
-        </xsl:copy>
+        <xsl:choose>
+          <xsl:when test="contains($URIstring, '-ru.')">
+            <xsl:copy><h4>мы не смогли найти надпись "<xsl:value-of select="$insc"/>" - пожалуйста,
+              проверьте, правильно ли Вы ввели номер.</h4><h4>Введите номер тома и надписи арабскими
+                цифрами, разделив их точкой, например для Византийских Надписей (<a
+                  href="/corpora/byzantine/locations.html" style="text-decoration: underline;"
+                  >том 5</a>), лемма 9,
+                введите "5.9".</h4><h4>Вернуться на <a href="/index-ru.html"
+                  style="text-decoration: underline;">Главную страницу</a>.</h4></xsl:copy>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:copy>
+              <h4>we could not find inscription "<xsl:value-of select="$insc"/>" - please check if you entered the
+                number correctly.</h4>
+              <h4>Enter the volume and inscription numbers in arabic numerals, separated by a dot, e.g. for Byzantine inscriptions (<a
+                  href="/corpora/byzantine/locations.html" style="text-decoration: underline;"
+                  >volume 5</a>), lemma 9, enter "5.9".</h4>
+              <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home
+                page</a></h4>
+            </xsl:copy>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
-        <xsl:copy>
-          <h4><i18n>we could not find the page you requested</i18n>.</h4>
-          <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
-        </xsl:copy>
-      </xsl:otherwise>
-    </xsl:choose>-->
-    
-    <xsl:choose>
-      <xsl:when test="contains($URIstring, '-ru.')">
-        <xsl:copy>
-          <h4>мы не можем найти страницу, которую Вы запросили.</h4>
-          <h4>Вернуться на <a href="/index-ru.html" style="text-decoration: underline;">Главную страницу</a>.</h4>
-        </xsl:copy>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:copy>
-      <h4>we could not find the page you requested.</h4>
-      <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
-    </xsl:copy>
+        <xsl:choose>
+          <xsl:when test="contains($URIstring, '-ru.')">
+            <xsl:copy>
+              <h4>мы не можем найти страницу, которую Вы запросили.</h4>
+              <h4>Вернуться на <a href="/index-ru.html" style="text-decoration: underline;">Главную страницу</a>.</h4>
+            </xsl:copy>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:copy>
+              <h4>we could not find the page you requested.</h4>
+              <h4>Go to the <a href="/index.html" style="text-decoration: underline;">home page</a></h4>
+            </xsl:copy>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
