@@ -2413,5 +2413,12 @@
   <xsl:template match="tei:certainty[@cert = 'low']">
     <xsl:text> (?)</xsl:text>
   </xsl:template>
+  
+  <xsl:template match="tei:hi[@rend='sup']">
+    <sup>
+      <xsl:apply-templates/>
+      <xsl:text> </xsl:text>
+    </sup>
+  </xsl:template>
 
 </xsl:stylesheet>
