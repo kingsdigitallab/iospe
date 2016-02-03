@@ -25,7 +25,7 @@
             <xsl:copy><h4>мы не смогли найти надпись "<xsl:value-of select="$insc"/>" - пожалуйста,
               проверьте, правильно ли Вы ввели номер.</h4><h4>Введите номер тома и надписи арабскими
                 цифрами, разделив их точкой, например для Византийских Надписей (<a
-                  href="/corpora/byzantine/locations.html" style="text-decoration: underline;"
+                  href="/corpora/byzantine/locations-ru.html" style="text-decoration: underline;"
                   >том 5</a>), лемма 9,
                 введите "5.9".</h4><h4>Вернуться на <a href="/index-ru.html"
                   style="text-decoration: underline;">Главную страницу</a>.</h4></xsl:copy>
