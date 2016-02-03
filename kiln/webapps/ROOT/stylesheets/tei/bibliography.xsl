@@ -567,10 +567,19 @@ vo
     <xsl:if test="./tei:title">
       <xsl:apply-templates select="." mode="title"/>
     </xsl:if>
+    
 
     <!-- Scope -->
     <xsl:apply-templates select="." mode="scope"/>
     <xsl:text>)</xsl:text>
 
   </xsl:template>
+  
+  <xsl:template match="tei:hi[@rend='sup']">
+    <sup>
+      <xsl:apply-templates/>
+      <xsl:text> </xsl:text>
+    </sup>
+  </xsl:template>
+  
 </xsl:stylesheet>
