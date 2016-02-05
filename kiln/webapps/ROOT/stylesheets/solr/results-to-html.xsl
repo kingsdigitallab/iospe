@@ -495,7 +495,7 @@
         <xsl:text>&amp;</xsl:text>
         <xsl:value-of select="parent::node()/@name"/>
         <xsl:text>=</xsl:text>
-        <xsl:value-of select="text()"/>
+        <xsl:value-of select="encode-for-uri(text())"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
