@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Стела Ксенокла, сына Феохара.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.65</idno>
+            <idno type="filename">PE3000065</idno>
+            <idno type="PE">PE3000065</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>27/36504.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом с антефиксами. На лицевой грани изображены рельефные розетки и портупея. 
+                              Между карнизом и розетками по предварительной разметке тонко вырезана двухстрочная надпись. 
+                              Тыльная сторона тщательно обработана, на ней также имеются рельефные розетки.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">41</height>
+                              <width unit="cm">30</width>
+                              <depth unit="cm">12</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">поперечная линия Α слегка выгнута, Θ и Ο немного меньше остальных букв, вертикальные гасты Ν одинаковой длины,
+                           Ξ имеет вертикальную черту, верхние и нижние линии Σ расходятся, линии некоторых букв изогнуты, утолщения и штрихи на концах линий букв.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">1,7</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">III в. до н.э.</seg>
+                        <seg xml:lang="en">III century B.C.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Случайная находка 1964 г. в юго-восточном районе Херсонеса (на участке гончарных мастерских на месте древнего некрополя у 
+                           Карантинной бухты) юго-западнее башни XVII (башня Зенона).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-15" who="CB">Bibliography</change>
+         <change when="2015-09-01" who="CB">Metadata and app crit</change>
+         <change when="2015-07-10" who="KK">Add photo file name</change>
+         <change when="2015-05-15" who="CB">metadata tagging</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-03-13" who="AV">tagging Greek names XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.65">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>178</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--АСХ--> <ptr target="bib:b0523"/>71, № 176</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0437"/> , 88, № C7+7a.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Ξενοκλῆς </name></persName>
+               		<lb n="2"/><persName type="attested"><name>Θεοχά<supplied reason="lost">ρ</supplied>
+               		   <unclear>ειος</unclear></name></persName>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note/></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Ксенокл, (сын) Феохара.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>	Оба личных имени известны в Херсонесе (LGPN IV).  Относительно характерного для херсонесских надписей эллинистического времени написания ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с примерами); ср. Thumb-Kieckers 137, § 132.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

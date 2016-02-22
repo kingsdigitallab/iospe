@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Стела Аполлония, сына Агафона.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.117</idno>
+            <idno type="filename">PE3000113</idno>
+            <idno type="PE">PE3000113</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>3653.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Верхняя часть стелы. Украшена фронтоном с акротериями (средний сбит). На лицевой стороне сохранились рельефные розетки. 
+                              Выше розеток тонкими линиями вырезана трехстрочная надпись.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">44</height>
+                              <width unit="cm">33</width>
+                              <depth unit="cm">15</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Α с ломаной поперечной линией, широкая Γ, Θ с чертой, Ν с вертикальными гастами одинаковой длины, 
+                           Ο равен по величине остальным буквам, Π с вертикалями одинаковой длины и не выходящей за их пределы перекладиной, 
+                           Σ с параллельными верхней и нижней линиями, овальная Ω с чуть удлиненными горизонталями на уровне нижней линии строки, слабое апицирование.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="-0100" notAfter="-0001" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">I в. до н.э.</seg>
+                        <seg xml:lang="en">I century B.C.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1907 г. в южной части Херсонеса, в насыпи могилы, «открытой при рытье рва впереди ближайшей к монастырю батареи».     Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 36, л. 8, № 337).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-03" who="CB">Adding origDate tag</change>
+         <change when="2015-10-27" who="CB">correcting biblio</change>
+         <change when="2015-09-24" who="CB">Tagging biblio</change>
+         <change when="2015-07-14" who="KK">Add photo file name</change>
+         <change when="2015-06-25" who="CB">Tagging metadata</change>
+         <change when="2015-03-13" who="VP">Tagging Greek name</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.117">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/>, № <citedRange>217</citedRange></bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 127, № <citedRange>C55</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 217</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 127, № C55.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Ἀπολλώνιος</name> 
+               		<lb n="2"/><persName type="attested"><name>Ἀγάθωνος</name></persName></persName>, 
+               		<lb n="3"/><w>χαῖρε</w>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note/></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Аполлоний, (сын) Агафона, приветствую.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

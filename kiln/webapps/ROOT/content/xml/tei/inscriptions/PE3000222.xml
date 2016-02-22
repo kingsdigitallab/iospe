@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Фрагмент декрета с упоминанием «приложивших печати».</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.286</idno>
+            <idno type="filename">PE3000222</idno>
+            <idno type="PE">PE3000222</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>24/36358.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc15">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Три соединяющихся фрагмента плиты, оббитой со всех сторон. Лицевая сторона тщательно обработана.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">26</height>
+                              <width unit="cm">21</width>
+                              <depth unit="cm">8,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Α и Δ имеют слегка изогнутые линии, курсивные Ε и Σ, Ι adscriptum, Κ с удлиненными наклонными, 
+                           сходящимися под максимально острым углом, Μ с параллельными боковыми линиями и внутренними гастами, 
+                           пересекающимися выше середины строки, маленький «декоративный» Ο, Υ с короткой не доходящей до середины строки вертикалью, 
+                           курсивное Χ с изогнутыми линиями, полукруглая Ω с удлиненными горизонталями на уровне нижней линии строки, апексы на концах линий букв.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">1 – 1,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0101" notAfter="0125" evidence="Палеография внутренняя_датировка просопография" cert="low">
+                        <seg xml:lang="ru">II в. н.э., скорее всего не позднее первой четверти.</seg>
+                        <seg xml:lang="en">II century C.E., probably within the 1st quarter.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдены в 2001 г. в северном районе Херсонеса (квадрат 9, помещение 5). Раскопки С.Г. Рыжова.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added miossing biblio tags</change>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-14" who="CB">Bibliography</change>
+         <change when="2015-08-26" who="CB">App crit checking</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-29" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.286">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--Макаров 2006--><ptr target="bib:b0758"/>, 92, № <citedRange>4</citedRange></bibl> <bibl>(<!--SEG--><ptr target="SEG"/> <citedRange>56, 873</citedRange></bibl>
+               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:Bull.ép."/>, <citedRange>2007, 410</citedRange> (Avram)).</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl>.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="1"/><gap reason="lost" quantity="1" unit="line"/><supplied reason="lost"><w>τὸ</w> <w>δὲ</w> <w>ψάφισμα</w> <w>τοῦτο</w> <w>ἀναγρα</w></supplied>
+               		<lb n="2" break="no"/><supplied reason="lost"><w>φᾶμεν</w> <w>λευκο</w></supplied><w>λίθου</w> 
+                         <w>στ<supplied reason="lost">άλαι</supplied></w> <supplied reason="lost"><w>καὶ</w> <w>θέμεν</w> <w>ἐν</w> <w>τῶι</w> 
+                            <w>τᾶς</w></supplied> <persName type="divine"><name><supplied reason="lost" cert="low">Παρ</supplied>
+                               <lb n="3" break="no"/><supplied reason="lost" cert="low">θένου</supplied></name></persName> <w><supplied reason="lost">προ</supplied>νάωι</w>· 
+               <w>ταῦτ᾿</w> <supplied reason="lost"><w>ἔδοξε</w> <w>βουλᾶι</w> <w>δάμωι</w></supplied> <w><supplied reason="lost">βασιλευ</supplied>
+               		<lb n="4" break="no"/><supplied reason="lost">ούσας</supplied></w> 
+               <persName type="divine"><name><supplied reason="lost">Παρθέ</supplied><unclear>ν</unclear><supplied reason="lost">ου</supplied></name></persName>, 
+               <w><supplied reason="lost">ἔ</supplied>τεος</w> <orig>ρ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="1" unit="character"/>, <supplied reason="lost"><w>ἱερέως</w> <w>δὲ</w></supplied> <supplied reason="lost" quantity="1" unit="line"/>
+               		<lb n="5"/><gap reason="lost" quantity="1" unit="line"/> <w><seg part="F">μανὸς</seg></w> <gap reason="illegible" quantity="4" unit="character"/><gap reason="lost" quantity="1" unit="line"/><supplied reason="lost"><w>γραμματεύοντος</w></supplied> <gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="6"/><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">ἐσ</supplied>φραγίσα<supplied reason="lost">ντο</supplied></w> <num value="1"><supplied reason="lost">α</supplied></num> 
+               <w><supplied reason="lost">στίχῳ</supplied></w>· <w><supplied reason="lost">θεὰ</supplied></w> <w><supplied reason="lost">βασίλισσα</supplied></w>
+               		<lb n="7"/><persName type="divine"><name><supplied reason="lost">Παρθένος</supplied></name></persName>, 
+               <gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name><seg part="F">δας</seg></name> <name>Δαμοκλ<supplied reason="lost">έους</supplied></name></persName> <supplied reason="lost"><w>πρῶτος</w> <w>ἄρχων</w></supplied> <gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="8"/><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">ἄρ</supplied>χων</w>, <persName type="attested"><name>Διοσκουρί<supplied reason="lost">δας</supplied></name></persName> <gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="9"/><gap reason="lost" quantity="1" unit="line"/> <persName type="attested"><name><supplied reason="lost">Ἡρο</supplied>γείτου</name></persName> <w>ἄρχω<supplied reason="lost">ν</supplied></w> <gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="10"/><gap reason="lost" quantity="1" unit="line"/><orig>ς</orig> <persName type="attested"><name>Ἀπολλ</name></persName><gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="11"/><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">νομ</supplied>οφύλα<supplied reason="lost">ξ</supplied></w> <gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="4"><note>В конце строки над Ρ горизонтальная черта, после Ρ виден верх вертикали.</note></app>
+               <app loc="5"><note>Следы четырех букв в начале строки не поддаются надежному определению; возможно, <unclear>ΑΝ</unclear>, 
+                  затем следы курсивного Ε или Θ; в конце стк. нижняя часть вертикальной гасты.</note></app>
+               <app loc="6"><rdg><note>vel </note>[--- ἐσ]φραγίσα[ντο· θεὰ βασίλισσα Παρθένος]</rdg></app>
+               <app loc="7"><rdg><note> вероятно,</note> [῾Ηροΐ]δας.</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>[--- записать постановление] на белокаменной стеле [и выставить в пронаосе храма богини Девы ?]. 
+               Это решено Советом и народом в царствование Девы, в 1.. году, при жреце [---], месяца [---, при секретаре ---]. Приложили печати [в первомм ряду: 
+               богиня царица Дева, ---], (сын) Дамокла, [первый архонт ---], архонт, Диоскурид [сын) ---, --- (сын) Герогейта, архонт [---] номофилак [---].</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Сохранилось заключение постановляющей части декрета с клаузулой публикации, формулой санкции, датировкой и списком членов Совета, присутствовавших во время принятия постановления.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

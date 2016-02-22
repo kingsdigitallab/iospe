@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Декрет в честь Менофила, сына Менофила из Синопы.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.267</idno>
+            <idno type="filename">PE3000210</idno>
+            <idno type="PE">PE3000210</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>3596.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc15">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Украшена карнизом с акротериями (частично сбиты). Не сохранилась нижняя часть и часть левого края. Тыльная сторона обработана суммарно, боковые торцы сглажены. Эпиграфическое поле занимает всю плиту, конечные строки надписи уходят в обрез.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">31,7</height>
+                              <width unit="cm">26</width>
+                              <depth unit="cm">8</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Α с выгнутой, иногда ломаной перекладиной, крупная Θ с не доходящей до краев окружности чертой, 
+                           вертикали Ν одинаковой длины, Μ с параллельными боковыми линиями, Ο почти того же размера, что и остальные буквы, 
+                           Π с короткой правой вертикалью и выступающей за края горизонталью, верхние и нижние линии Σ параллельны, 
+                           полукруглая Ω с горизонтальными линиями, примыкающими к тулову на уровне нижней линии строки, заметные апексы на концах линий букв.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">0,8</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="-0175" notAfter="-0150" evidence="Палеография просопография" cert="low">
+                        <seg xml:lang="ru">Около второй четверти II в. до н.э.</seg>
+                        <seg xml:lang="en">Approximately 2nd quarter of II century B.C.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1908 г. в северо-восточном районе вблизи Восточной базилики (№ 36), в помещении № 9. 
+                           Раскопки Р. Х. Лепера (НА НЗХТ, д. 101, л. 51, № 4861; д. 67, л. 27).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-27" who="CB">corrections to app crit</change>
+         <change when="2015-10-13" who="CB">Bibliography</change>
+         <change when="2015-08-24" who="CB">App crit checking</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-29" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.267">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--Лепер 1912--><ptr target="bib:b0480"/>, 40, № <citedRange>2</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/> <citedRange>351</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--Тюменев 1950--><ptr target="bib:b0752"/>, 16</bibl>
+               <bibl><!--McGing 1986--><ptr target="bib:b0753"/>, 32</bibl>
+               <bibl><!--Saprykin 1997--><ptr target="bib:b0754"/>, 253.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+         	<lb n="1"/><w>νομοφύλακες</w> <persName type="attested"><name>Εὐκράτης</name> <name>Πρυτάνιος</name></persName>,
+         	<lb n="2"/><persName type="attested"><name>Πλειστῶναξ</name> <name>Διονυσίου</name></persName>, <persName type="attested"><name>Ἀπολλώνιος</name>
+               		<lb n="3"/><name>Παρθενοκλεῖος</name></persName> <w>καὶ </w><w>ὁ</w> <w>ἐπὶ </w><w>τᾶς</w> <w>διοικήσεος</w> 
+               		<lb n="4"/><persName type="attested"><name>Ἀπολλόδωρος</name> <name>Ἡρογείτου</name></persName> <w>εἲπαν</w>· 
+               		<lb n="5"/><w>ἐπειδὴ </w><persName type="attested"><name>Μηνόφιλος</name> <name>Μηνοφίλου</name> <name>Σινωπεὺς</name></persName> <w>ἀνὴρ</w>
+               		<lb n="6"/><w>ἀγαθὸς</w> <w>καὶ </w><w>φιλότιμός</w> <w>ἐστι</w> <w>ποτὶ </w><w>τὸν</w> <w>δᾶ
+               		<lb n="7" break="no"/>μον</w> <w>τὸν</w> <persName type="attested"><name>Χερσονασιτᾶν</name></persName>, <w>διὰ </w><w>παντὸς</w> <w>γν<unclear>η</unclear>
+               		<lb n="8" break="no"/>σίως</w> <w>ἑατὸν</w> <w>ἐπιδιδοὺς</w>, <w>καὶ </w><w>κοινῇ</w> <w>καὶ</w> <w>κατ’</w> <w>ἰδίαν</w>
+               		<lb n="9"/><w>τοῖς</w> <w>ἐντυγχάνουσι</w> <w>τῶν</w> <w>πολιτῶν</w> <w>εὔνουν</w> 
+               		<lb n="10"/><w>ἑαυτὸν</w> <w>καὶ</w> <w>ἐκτενῆ</w> <w>παρέχεται</w>, <w>πειρώμενος</w>
+               		<lb n="11"/><w>διὰ</w> <w>παντὸς</w> <w>ἀγαθοῦ</w> <w>τινος</w> <w>παραίτιος</w> <w>γίνεσ
+               		<lb n="12" break="no"/>θαι</w>, <w>τάν</w> <w>τε</w> <w>παρεπιδαμίαν</w> <w>εὐσχάμονα</w> <w>καὶ </w><w>συμ 
+               		<lb n="13" break="no"/><supplied reason="lost">φ</supplied>έρουσαν</w> <w>τῶι</w> <w>δάμωι</w> <w>πεποίηται</w>, <w>σπου 
+               		<lb n="14" break="no"/><supplied reason="lost">δᾶς</supplied></w> <w>καὶ</w> <w>φιλοτιμίας</w> <w>οὐδὲν</w> <w>ἐνλείπων</w>, <w>ἐπαγ
+               		<lb n="15" break="no"/><supplied reason="lost">γέλλεται</supplied></w> <w>δὲ</w> <w>καὶ</w> <w>εἰς</w> <w>τὸ </w><w>λοιπὸν</w> <w>ἀγαθοῦ</w> <w>τινο<supplied reason="lost">ς</supplied></w>
+               		<lb n="16"/><w><supplied reason="lost">εἶναι</supplied></w> <w><supplied reason="lost">παραί</supplied>τιος</w>· <w>ὅπως</w> <w>οὖν</w> <w>καὶ</w> <w>ὁ</w> <w>δᾶμος</w> 
+               		<lb n="17"/><w><supplied reason="lost">φαίνηται</supplied></w> <w><supplied reason="lost">ἄξιο</supplied>ς</w> <w>τῶν</w> <w>ἀνδρῶν</w> <w>εἰς</w> <w>τὸ </w><w>βέλτιον</w> 
+               		<lb n="18"/><w><supplied reason="lost">σπουδαζόντων</supplied></w> <w><supplied reason="lost">δ</supplied>εδόχθαι</w> <w>τᾶι</w> <w>βουλᾷ</w> <w>καὶ</w> <w>τῷ</w>
+               		<lb n="19"/><w><supplied reason="lost">δάμωι</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="8"><rdg>ἑατόν = ἑυατόν.</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Номофилаки Эвкрат, (сын) Притана, Плейстонакт, (сын) Дионисия, Аполлоний, (сын) Парфенокла, и стоящий во главе управления Аполлодор, (сын) Герогейта, внесли предложение: поскольку синопеец Менофил, (сын) Менофила, </p>
+            <p>	проявляет доброту и щедрость по отношению к народу херсонеситов, всегда благородно предоставляя себя в распоряжение,</p>
+            <p>	стараясь всегда способствовать благу, являет себя и в государственных и в частных делах доброжелательным и усердным по отношению к тем из граждан, которые к нему обращаются, </p>
+            <p>	завершил свое пребывание достойным и полезным для народа образом, не обнаружив никакого недостатка в усердии и щедрости, причем обещает и в будущем  способствовать благу,</p>
+            <p>	с тем чтобы было видно, что и наш народ достоин тех, кто [стремится] к лучшему, пусть Совет и народ постановит ---</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

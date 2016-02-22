@@ -11,32 +11,44 @@
     <xsl:param name="tei_id"/>
 
     <xsl:variable name="sort-num">
-      <xsl:analyze-string select="normalize-space($tei_id)"
-        regex="([0-9]{{1,2}})\.([0-9]{{1,4}})([a-z]?)">
-        <xsl:matching-substring>
-          <!-- corpus number -->
-          <xsl:variable name="b_sort" as="xs:integer">
-            <xsl:value-of select="regex-group(1)"/>
-          </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="contains($tei_id, '.')">
+          <xsl:analyze-string select="normalize-space($tei_id)"
+            regex="([0-9]{{1,2}})\.([0-9]{{1,4}})([a-z]?)">
+            <xsl:matching-substring>
+              <!-- corpus number -->
+              <xsl:variable name="b_sort" as="xs:integer">
+                <xsl:value-of select="regex-group(1)"/>
+              </xsl:variable>
 
-          <!-- inscription number -->
-          <xsl:variable name="i_sort" as="xs:integer">
-            <xsl:value-of select="regex-group(2)"/>
-          </xsl:variable>
+              <!-- inscription number -->
+              <xsl:variable name="i_sort" as="xs:integer">
+                <xsl:value-of select="regex-group(2)"/>
+              </xsl:variable>
 
-          <!-- inscription letter index 0 if nothing, 1-26 if a-z-->
-          <xsl:variable name="s_sort" as="xs:integer">
-            <xsl:value-of
-              select="if (regex-group(3))
-                      then string-length(substring-before($lowercase, regex-group(3))) + 1
-                      else 0"/>
-          </xsl:variable>
-          <xsl:value-of select="((($b_sort * 10000) + $i_sort) * 100) + $s_sort"/>
-        </xsl:matching-substring>
-        <xsl:non-matching-substring>
-          <xsl:value-of select="0"/>
-        </xsl:non-matching-substring>
-      </xsl:analyze-string>
+              <!-- inscription letter index 0 if nothing, 1-26 if a-z-->
+              <xsl:variable name="s_sort" as="xs:integer">
+                <xsl:value-of
+                  select="
+                    if (regex-group(3))
+                    then
+                      string-length(substring-before($lowercase, regex-group(3))) + 1
+                    else
+                      0"
+                />
+              </xsl:variable>
+              <xsl:value-of select="((($b_sort * 10000) + $i_sort) * 100) + $s_sort"/>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+              <xsl:value-of select="0"/>
+            </xsl:non-matching-substring>
+          </xsl:analyze-string>
+        </xsl:when>
+        <xsl:when test="starts-with($tei_id, 'PE')">
+          <xsl:value-of select="substring-after($tei_id, 'PE')"/>
+        </xsl:when>
+        <xsl:otherwise>foo</xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
 
     <xsl:value-of select="$sort-num"/>

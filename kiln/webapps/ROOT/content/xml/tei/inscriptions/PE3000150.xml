@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Стела Сириона, сына Сириона, и Сополиса, сына Сириона.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.165</idno>
+            <idno type="filename">PE3000150</idno>
+            <idno type="PE">PE3000150</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>3656.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele</objectType>
+                           <material xml:lang="ru" ref="#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone</material>
+                           <p xml:lang="ru">Стела «боспорского типа». Частично обломана снизу. На рельефе в прямоугольном углублении изображены фигуры мужчины и ребенка. 
+                              Над рельефом по предварительной разметке вырезаны две двухстрочные надписи.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">65</height>
+                              <width unit="cm">44</width>
+                              <depth unit="cm">18</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Α с ломаной поперечной линией, курсивные Ε, Σ, Ω, Υ в форме V, слабое апицирование.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1892 г. на участке некрополя у южной оборонительной стены Херсонеса. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 3, № 79; д. 21, л. 4, № 79).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-26" who="CB">Bibliography and app crit</change>
+         <change when="2015-10-22" who="CB">Tokenised and metadata tags</change>
+          <change when="2015-09-30" who="AS">Leidenised Greek text</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 14, № <citedRange>11</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, IV <citedRange>115</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>456</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--KW--><ptr target="bib:b0519"/> № 532</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 381.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" n="1">
+               <ab>
+                  		<lb n="1"/><persName type="attested"><name>Συρίων</name> <persName type="attested"><name>Συρ<unclear>ί</unclear>
+                  		<lb n="2" break="no"/>ωνος</name></persName></persName>, <w>χαῖρε</w>.
+               </ab>
+            </div>
+            <div type="textpart" n="2">
+               <ab>
+                  		<lb n="1"/><persName type="attested"><name>Σώπολις</name> <space extent="unknown" unit="character"/>
+                  		<lb n="2"/><persName type="attested"><name>Συρίωνος</name></persName></persName>, <w>χαῖρε</w>.
+               </ab>
+            </div>
+         </div>
+         <div type="apparatus">
+            <div type="textpart" n="1">
+               <listApp>
+                  <app><note>Надписи расположены таким образом, что стк. 1 и 2 надписи b продолжает соответственно стк. 1 и 2 надписи a.</note></app>
+                  <app loc="1"><note>между именем и патронимиком точка-разделитель.</note></app>
+                  <app loc="2"><note>словораздел обозначен точкой-разделителем.</note></app>
+               </listApp>
+            </div>
+            <div type="textpart" n="2">
+               <listApp>
+                  <app loc="2"><note>словораздел обозначен точкой-разделителем.</note></app>
+               </listApp>
+            </div>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p/>
+            </div>
+            <div type="textpart" n="2">
+               <p>a. </p>
+               <p>Сирион, (сын) Сириона, приветствую.</p>
+               <p>b.</p>
+               <p>Сополис, (сын) Сириона, приветствую.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p/>
+            </div>
+            <div type="textpart" n="2">
+               <p/>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

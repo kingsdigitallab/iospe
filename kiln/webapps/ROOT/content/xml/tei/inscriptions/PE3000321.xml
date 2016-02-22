@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Incertum.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.605</idno>
+            <idno type="filename">PE3000321</idno>
+            <idno type="PE">PE3000321</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Ранее Херсонесский музей.</repository>
+                     <idno>35006.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Incertum.</seg>
+                     <seg xml:lang="en"></seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Плита.</objectType>
+                           <objectType xml:lang="en"></objectType>
+                           <material xml:lang="ru">Мрамор.</material>
+                           <material xml:lang="en"></material>
+                           <p xml:lang="ru">Обломана со всех сторон.Сохранились остатки трех строк надписи. Лицевая и оборотная сторона отшлифована.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">7,3</height>
+                              <width unit="cm">5</width>
+                              <depth unit="cm">3,9</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Слегка удлиненные буквы, Ω в виде перевернутого Μ (?), заметное апицирование.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">II – начало III в. н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1894 г. на участке некрополя у южной оборонительной стены. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 23, л.2).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Ранее Севастополь.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi. Местонахождение камня неизвестно.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>IOSPE I2 732 (без чтения).</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="3"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"></gap><orig>ΤΙ<unclear>Τ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="3"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="line"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>1: слева направо низ наклонной гасты, вертикальная линия, наклонная гаста.</note></app>
+               <app><note>2: в начале стк. вертикальная линия; не исключаю [- - -]+ Τίτ̣[ος Φλάουιος - - -].</note></app>
+               <app><note>3: : слева направо часть верхней горизонтали, вершина треугольной букву, верхняя часть вертикальной гасты.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

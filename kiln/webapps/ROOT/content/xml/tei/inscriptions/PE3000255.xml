@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Пожертвование на изготовление колонны.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.456</idno>
+            <idno type="filename">PE3000255</idno>
+            <idno type="PE">PE3000255</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>ГИМ.</repository>
+                     <idno>50984.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en"></seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Колонна.</objectType>
+                           <objectType xml:lang="en"></objectType>
+                           <material xml:lang="ru">Мрамор.</material>
+                           <material xml:lang="en"></material>
+                           <p xml:lang="ru">Обломана со всех сторон. Вторично использована при строительстве христианской базилики. Сохранились остатки пяти строк надписи.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">37</height>
+                              <width unit="cm">25</width>
+                              <depth unit="cm">4</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Слегка изогнутые линии букв, овальное Ο в высоту строки, курсивные Ε, Ξ, Σ, узкое Π с равными вертикалями и выходящей за их пределы горизонталью, Φ с туловом в виде листа плюща и вертикалью, выходящей за линии строки, апексы.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">4,5</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">Вторая половина II - первая половина III в. н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Точных данных нет. Вероятно, обнаружена в 1853 г. в северо-восточном районе городища, в ходе раскопок Уваровской базилики (№ 23). Раскопки А.С. Уварова.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>Латышев 1895a, 86, № 2061</bibl>
+               <bibl>IOSPE IV 90 (IOSPE I2 448).</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl>[Уваров А.С.] 1855, 159 сл.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		Αὐ[ρ. - - -]
+               		Ξαν[θ - - -]
+               		φιλοτε[ιμησάμενος]
+               		εἰς τὸν [κείονα  &#x10196; - - -]                		<!-- hex html entoty of denarius symbol -->
+               		ἐπεὶ Α[- - -]
+               		- - -
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>IOSPE I2 448.</note></app>
+               <app><note>1: Αὐ[ρήλιος - - -] - IOSPE.</note></app>
+               <app><note>2: Ξάν[θου - - -] - IOSPE.</note></app>
+               <app><note>4: εἰς τὸν [κείονα δην - - -] - IOSPE.</note></app>
+               <app><note>5: ἐπειδ - IOSPE.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Аврелий [- - -], (сын) Ксан[- - -], (посвятил), пожертвовав на колонну [- - - денариев], когда/поскольку - - -</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

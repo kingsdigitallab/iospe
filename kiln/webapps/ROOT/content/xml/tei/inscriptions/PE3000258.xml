@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надпись агоранома о строительстве.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.459</idno>
+            <idno type="filename">PE3000258</idno>
+            <idno type="PE">PE3000258</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>21/35933.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en"></seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Плита</objectType>
+                           <objectType xml:lang="en"></objectType>
+                           <material xml:lang="ru">Мрамор.</material>
+                           <material xml:lang="en"></material>
+                           <p xml:lang="ru">Оббита со всех сторон кроме левой, расколота пополам. Лицевая сторона тщательно обработана. Сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">14</height>
+                              <width unit="cm">23</width>
+                              <depth unit="cm">6</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Слегка удлиненная форма букв, овальное Ο в высоту строки, Σ с параллельными верхней и нижней линиями, знаки-разделители, сильное апицирование.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">3,5</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Указание_надписи">
+                        <seg xml:lang="ru">205 г. х.э. (180 г. н.э.).</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1949 г. в северном районе городища, недалеко от Базилики 1935 г., в помещении № 4. Раскопки Г.Д. Белова (НА НЗХТ, д. 622, л. 15; ср. Белов 1955, 272).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2015-11-20" who="KK">Leidenised</change>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>НЭПХ I 26.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl>Nadel 1976, 199 (SEG 26, 797)</bibl>
+               <bibl>Соломоник 1990, 68, № 62</bibl>
+               <bibl>Ivantchik 2012, 127.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="2"/>ἀγορα<unclear>ν</unclear><supplied reason="lost">όμος</supplied> <supplied reason="lost">ὢν</supplied><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἐν</supplied> <supplied reason="lost">τῷ</supplied>
+               		<lb n="3"/>σε’ ἔτει ἀ<supplied reason="lost" cert="low">γορανόμιον</supplied> <supplied reason="lost">ἐκ</supplied> <supplied reason="lost">τῶν</supplied> <supplied reason="lost">ἰδίων</supplied> <supplied reason="lost">κατεσκεύασε</supplied><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="4"/><gap reason="lost" quantity="3" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><orig><unclear>υ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="line"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>НЭПХ I 26.</note></app>
+               <app><note>0: [ὁ δεῖνα τοῦ δεῖνος] - НЭПХ.</note></app>
+               <app><note>0-1: [τὸν] | ἀγοραν̣[ομήσαντα ?] vel [τὸν] | ἀγοραν̣[όμιον ? οἰκοδομήσαντα] - Nadel.</note></app>
+               <app><note>1-2: ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ? κατεσκεύασε] - НЭПХ; не исключаю [ἐπεσκεύασε] vel sim. </note></app>
+               <app><note>2: по обеим сторонам слова ἔτει точки-разделители.</note></app>
+               <app><note>3: в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ; [- - -]ι̣ο̣υ̣[- - -] - НЭПХ.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>- - - в 205 году, будучи агораномом, построил (восстановил) на собственные средства [агораномий ?] - - -</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

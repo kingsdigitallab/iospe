@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Надгробие Гермеса, сына Аристона.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.151</idno>
+            <idno type="filename">PE3000143</idno>
+            <idno type="PE">PE3000143</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>34864.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel</objectType>
+                           <material xml:lang="ru" ref="#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble</material>
+                           <p xml:lang="ru">Нижний левый угол плиты, состоящий из двух найденных по отдельности и впоследствии объединенных фрагментов. 
+                              Лицевая сторона отшлифована. Вверху следы прямоугольного углубления для скульптурного изображения. Под углублением трехстрочная надпись.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">16</height>
+                              <width unit="cm">23</width>
+                              <depth unit="cm">4</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Курсивные Ε, Μ, Σ, слабое апицирование, знаки-разделители.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">2,5</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Фрагмент 1 (левый) найден в 1900 г. в юго-восточном районе 
+                           Херсонеса при раскопках на участке с внешней стороны куртин 17 и 19 оборонительных стен. Раскопки К.К. Косцюшко-Валюжинича 
+                           (НА НЗХТ, д. 9, л. 17, № 177; д. 29, л. 3, № 177). Фрагмент 2 (правый) случайно найден в 1900 г.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-26" who="CB">Biblio and app crit</change>
+         <change when="2015-10-22" who="CB">Metadata tags</change>
+          <change when="2015-09-30" who="AS">Leidenised Greek text</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> IV,<citedRange>171</citedRange></bibl> <bibl><!--(IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>622</citedRange>) – фрагмент 1</bibl>
+               <bibl><!--Латышев 1902a--><ptr target="bib:b0143"/>, 25, № <citedRange>6</citedRange></bibl>
+               <bibl><!-->IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>497 – фрагмент 2</citedRange></bibl>
+               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 77, № <citedRange>6 (объединение фрагментов 1 и 2)</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Ἑρμῆς</name> <persName type="attested"><name>ʼΑρίσ<supplied reason="lost">ω</supplied> 
+               		<lb n="2" break="no"/>νος</name></persName></persName> <w>ζήσας</w>
+               		<lb n="3"/><w>ἔτη</w> <num value="35">μεʹ</num>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><rdg source="bib:b0239"/></app>
+               <app loc="1"><rdg source="bib:b0143"><note>suppl.</note></rdg></app>
+               <app loc="2"><note> между Σ и Ζ знак-разделитель в виде листа плюща, om. edd.</note></app>
+               <app loc="3"><rdg source="bib:b0143">[ἔτ]η <note>по обеим сторонам числового обозначения ΜΕ знаки-разделители в виде листьев плюща, om. edd.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Гермес, (сын) Аристона, проживший 35 лет.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

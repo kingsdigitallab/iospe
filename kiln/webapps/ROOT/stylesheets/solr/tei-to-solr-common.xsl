@@ -83,14 +83,21 @@
 
   <xsl:template match="tei:publicationStmt/tei:idno[@type = 'filename']"
     mode="document-metadata document-metadata-indispensible">
+    <xsl:variable name="file-path-end" select="substring-after($file-path, 'inscriptions/')"/>
     <field name="file">
-      <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
+      <xsl:value-of select="$file-path-end"/>
+    </field>
+    <field name="volume">
+      <xsl:choose>
+        <xsl:when test="starts-with($file-path-end, 'PE3')">3</xsl:when>
+        <xsl:when test="starts-with($file-path-end, '5.')">5</xsl:when>
+      </xsl:choose>
     </field>
     <field name="tei-id">
       <xsl:value-of select="text()"/>
     </field>
     <field name="inscription">
-      <xsl:value-of select="substring-after($file-path, 'inscriptions/')"/>
+      <xsl:value-of select="$file-path-end"/>
     </field>
 
     <field name="sortable-id">

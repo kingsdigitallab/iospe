@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Incertum.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.603</idno>
+            <idno type="filename">PE3000319</idno>
+            <idno type="PE">PE3000319</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Ранее Херсонесский музей.</repository>
+                     <idno>Нет данных.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Incertum.</seg>
+                     <seg xml:lang="en"></seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Плита.</objectType>
+                           <objectType xml:lang="en"></objectType>
+                           <material xml:lang="ru">Мрамор.</material>
+                           <material xml:lang="en"></material>
+                           <p xml:lang="ru">Обломана со всех сторон, сохранились остатки трех строк надписи.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">22</height>
+                              <width unit="cm">12,5</width>
+                              <depth unit="cm">8</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Ω в виде перевернутого Μ, знаки-разделители.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">4,5</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический (?).</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">II-III в. н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес) (?).</placeName>
+                        <rs type="circumstances">Нет данных. Находилась в Херсонесском музее около 1916 г.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Ранее Севастополь.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi. Местонахождение камня неизвестно.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>IOSPE I2 730 (без чтения).</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" quantity="1" unit="line"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="Y"><unclear>Ω</unclear></w><g type="cross"/>
+                <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><w part="Y"><unclear>Ω</unclear></w><gap reason="illegible" quantity="1" unit="character"/>
+                <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w part="Y">Φ</w><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="5"/><gap reason="lost" quantity="1" unit="line"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>1: в конце стк. вертикальная гаста и нижняя горизонталь. </note></app>
+               <app><note>2: по обеим сторонам Ω вертикальные линии с  верхними горизонталями.</note></app>
+               <app><note>3: после Φ знак-разделитель в виде листа плюща.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

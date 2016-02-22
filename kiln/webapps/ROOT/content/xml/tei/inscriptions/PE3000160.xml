@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Фрагмент надгробия.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.175</idno>
+            <idno type="filename">PE3000160</idno>
+            <idno type="PE">PE3000160</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>34927.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel</objectType>
+                           <material xml:lang="ru" ref="#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble</material>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки рельефа с изображением задрапированной женской фигуры. 
+                              Под рельефом трехстрочная надпись, вырезанная достаточно небрежно по предварительной разметке. Некоторые буквы стерты.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">21</height>
+                              <width unit="cm">26</width>
+                              <depth unit="cm">8</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Α с прямой поперечной линией из двух пересекающихся наклонных, Θ с замкнутой перекладиной, курсивное Μ, 
+                           Ω в виде большого полукружия и двух горизонталей внизу, отсутствие апицирования.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1900 г. в юго-восточном районе херсонесского городища с внешней стороны куртин 17 и 19 оборонительной стены. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 9, л. 17, № 181; д. 29, л. 4, № 181).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-19" who="CB">Tokenised</change>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-11-06" who="KK">Leidenised</change>
+         <change when="2015-10-26" who="CB">Bibliography and app crit</change>
+         <change when="2015-10-22" who="CB">Metadata tags</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, I, <citedRange>141</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>458</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--KW --><ptr target="bib:b0519"/>135, № 11</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w> <persName type="attested"><persName type="attested"><name>Ἡροΐδο<unclear>υ</unclear></name></persName>,
+               <name>Κούλιο<supplied reason="lost">ς</supplied></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w>θυγάτηρ</w> 
+               <persName type="attested"><name>Μητροδ<supplied reason="lost"><app type="alternative"><rdg>ώρου</rdg><rdg>ότου</rdg></app></supplied></name></persName> 
+               <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ίου</w>, <space quantity="1" unit="character"/> <w>ἐτῶν</w> 
+               <space quantity="1" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="4"/><space extent="unknown" unit="character"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <!--<app><note>IOSPE I2 458.</note></app>-->
+               <app loc="1"><rdg source="bib:IOSPE">[. . . . .ω]ν Ἡροδώ[ρ]ο[υ ? ....]</rdg>
+                 <rdg source="bib:IOSPE">Κούλιο[ς] <note>– om.</note></rdg> 
+                 <note> не исключаю gen. Κουλίο[υ] или Κούλιος (от Κούλις).</note></app>
+               <app loc="2"><rdg source="bib:IOSPE">[ἡ δεῖνα] θυγάτηρ Μητροδ[ώρου, γυνὴ δὲ]</rdg></app>
+               <app loc="3"><note>в конце стк. след неопределенной буквы</note> 
+                  <rdg source="bib:IOSPE">[. . , χαίρετε]</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Личное имя Κούλιος (ср. Κούλις) засвидетельствовано в Северном Причерноморье в римское время, в том числе и в Херсонесе 
+               (граффито на погребальной урне, см. Косцюшко-Валюжинич 1906, 68; ср. LGPN IV, s.v.).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Метрическая эпитафия Басса, сына Патериона.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.214</idno>
+            <idno type="filename">PE3000184</idno>
+            <idno type="PE">PE3000184</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>35264.</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="#doc18">Метрическая эпитафия.</seg>
+                     <seg xml:lang="en">Metrical epitaph</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel</objectType>
+                           <material xml:lang="ru" ref="#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble</material>
+                           <p xml:lang="ru">Нижняя часть надгробия с фрагментом рельефа в прямоугольном углублении и пятистрочной надписью, 
+                              вырезанной по предварительной разметке. Лицевая и боковые стороны плиты тщательно обработаны. 
+                              На рельефе была изображена стоящая мужская фигура в длинной одежде. 
+                              Слева от нее – свернутые и перевязанные свитки, справа – фигурка слуги (сохранилась нижняя часть).</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">38</height>
+                              <width unit="cm">37</width>
+                              <depth unit="cm">7</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">удлиненные прпорции букв, слегка изогнутые линни отдельных букв, курсивные Ε, Σ, Ω; 
+                           ромбообразные Ο и Θ, слабое апицирование.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0168" notAfter="0300" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">конец II – III в. н.э.</seg>
+                        <seg xml:lang="en">late II - III centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1932 г. в северном районе Херсонеса, на  участке базилики «1932 г.» Раскопки Г.Д. Белова.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+          <change when="2015-11-13" who="KK">Tokenised</change>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-30" who="CB">biblio and app crit</change>
+         <change when="2015-10-22" who="CB">Metadata</change>
+          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">                         
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 77, № <citedRange>8</citedRange></bibl>
+               <bibl><!--Peek, GVI--><ptr target="bib:b0521"/>, <citedRange>1672</citedRange>.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl><!--BullEp--><ptr target="bib:Bull.ép."/> 1936, 244</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 312 (датировка: конец III в. н.э., следуя ed. pr.)</bibl>
+               <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 105, № 105.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><w>οἴμμοι</w> <w>ἐγὼ</w> <w>βιότοιο</w> <w>λαχὼν</w> <w>πικρὰ</w> <w>νήματα</w> <persName type="divine"><w>Μοιρῶν</w></persName>, 
+               		<lb n="2"/><w>ὅν</w> <w>με</w> <w>καὶ</w> <w>οὐκ</w> <w>ἐθέλοντα</w> <w>μολεῖν</w> <w>ἠνάνκασεν</w> <w>ἄτη</w> 
+               		<lb n="3"/><w>λίμνης</w> <w>ἀμῆσαι</w> <w>μαρμαρέων</w> <w>ὑδάτων</w>·
+               		<lb n="4"/><w>αὐτὸς</w> <w><supplied reason="omitted">δ</supplied>ὲ</w> <w>ἠμήθην</w> <w>ψυχῆς</w> <w>ὑπὸ</w> <w>κύματι</w> <persName type="attested"><name>Βάσσος</name>
+               		<lb n="5"/><persName type="attested"><name>Πατερίωνος</name></persName></persName> <w>ἐτῶν</w> <w>ἐν</w> <w>τρισὶν</w> <w>ἑνδεκάσιν</w>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><!--<note>Peek, GVI 1672.</note>--></app>
+               <app loc="1"><rdg>οἴμμοι ἐγὼ [κ]ότοιο λαχὼν πικρὰ<supplied reason="omitted">ν</supplied> ἤματα μοιρῶ[ν] <note>- ed. pr. corr. Robert in BullEp (Peek).</note></rdg></app>
+               <app loc="4"><note>in.: <supplied reason="omitted">δὲ</supplied> scripsi</note> 
+                 <rdg> ΑΥΤΟΣΕΗΜΗΘΗΝ <note>- lap.</note></rdg>
+                  <rdg>αὐτόσε ... ἠμήθην <note>- ed. pr. (перевод: «там под волной скошена моя жизнь»)</note></rdg>
+                  <rdg source="bib:b0521">αὐτὸς δ’ ἠμήθην.</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Горе мне, получившему в удел от Мойр горькую пряжу жизни. Меня, хотя я и не желал отправляться в путь, 
+               Пагуба заставила собирать плоды светлых вод моря. Но у меня самого, Басса, (сына) Патериона, волна забрала жизнь в возрасте трех одиннадцатилетий.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

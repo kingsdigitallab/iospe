@@ -70,7 +70,7 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-
+      
       <map:match pattern="*/index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=corpora/{1}/index.html"/>

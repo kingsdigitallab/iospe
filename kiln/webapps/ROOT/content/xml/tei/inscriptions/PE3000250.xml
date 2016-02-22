@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Пожертвование на изготовление колонны.</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.451</idno>
+            <idno type="filename">PE3000250</idno>
+            <idno type="PE">PE3000250</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Ukraine</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>НЗХТ.</repository>
+                     <idno>без № (фонд 10).</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en"></seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Колонна.</objectType>
+                           <objectType xml:lang="en"></objectType>
+                           <material xml:lang="ru">Мрамор.</material>
+                           <material xml:lang="en"></material>
+                           <p xml:lang="ru">Оббита сверху и снизу. Вторично использована при строительстве христианской базилики. Сохранилась пятистрочная надпись.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                           <dim type="diameter">42</dim>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Слегка удлиненные формы некоторых букв, Σ с параллельными верхней и нижней гастами, Ο немного меньше остальных букв, вертикаль Φ выходит за линии строки, крупные апексы.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">3,5</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">Вторая половина II - первая половина III в. н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Обнаружена в 1853 г. в северо-восточном районе городища, в ходе раскопок Уваровской базилики (№ 23). Раскопки А.С. Уварова.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en"></seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>Stephani 1866, 234, № 4</bibl>
+               <bibl>IOSPE I 206</bibl>
+               <bibl>IOSPE I2 443.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl>[Уваров А.С.] 1855, 159 сл.</bibl>
+               <bibl>Мансветов 1872, 78 слл., Пичикян 1976a, 91, 103</bibl>
+               <bibl>Пичикян 1984, 249.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		Αὐρ. Διονύσιος 
+               		Πρείσκου ἐφιλο- 
+               		τειμήσατο εἰς
+               		τὸν κείονα
+               		&#x10196; τ’.
+               		<!-- hex html entoty of denarius symbol -->
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>IOSPE I2 443.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Аврелий Дионисий, (сын) Приска, пожертвовал на колонну 300 денариев.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>
