@@ -9,7 +9,7 @@
     
     <!-- set title -->
     <xsl:template name="tocVolumeTitle">
-        <i18n:text>NEED TO HAVE PE NUMS SORTED IN ASCENDING ORDER</i18n:text>
+        <i18n:text>III. Inscriptions of Chersonesos and vicinity</i18n:text>
     </xsl:template>
     
     <xsl:template name="generateVolumeToc">
