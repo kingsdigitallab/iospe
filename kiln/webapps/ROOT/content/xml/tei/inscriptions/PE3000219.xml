@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Декрет в честь Гая, сына Антиоха, гражданина Стектория и Амастрии.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000219</idno>
             <idno type="PE">PE3000219</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc15">Декрет.</seg>
-                     <seg xml:lang="en">Decree</seg>
+                     <seg xml:lang="ru" corresp="#doc15" part="N">Декрет.</seg>
+                     <seg xml:lang="en" part="N">Decree</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,11 +44,11 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble</material>
-                           <p xml:lang="ru">Плита с фронтоном и акротериями (центральный акротерий сбит). Обломана снизу и справа. Лицевая поверхность обработана тщательно, 
+                           <p xml:lang="ru" part="N">Плита с фронтоном и акротериями (центральный акротерий сбит). Обломана снизу и справа. Лицевая поверхность обработана тщательно, 
                               тыльная сторона – суммарно. Частично сохранились 15 строк надписи, вырезанной по предварительной разметке. 
                               Первая строка-заголовок помещена в тимпане фронтона и выровнена по центру. 
                               Остальные строки расположены ниже фронтона с небольшим отступом (0,8 см) от левого края плиты.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">19</height>
                               <width unit="cm">22,8</width>
@@ -56,150 +58,150 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Α с прямой поперечной линией, Θ с точкой, 
+                        <seg xml:lang="ru" part="N">Α с прямой поперечной линией, Θ с точкой, 
                            Μ с немного расходящимися внешними гастами и пересечением внутренних линий иногда на уровне середины строки, иногда чуть выше; 
                            круглые буквы меньше остальных букв; Π имеет двоякое начертание: то с равными вертикалями и слегка выходящей за их пределы горизонталью, 
                            то с немного укороченной правой вертикалью и не выходящей за пределы боковых верхней поперечной гастой; слабое апицирование.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">0,8 (в стк. 1 – 1,2 см).</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="-0033" notAfter="0067" evidence="Палеография тип_прескрипта" precision="low">
-                        <seg xml:lang="ru">Последняя треть I в. до н.э. – серединa I в. н.э.</seg>
-                        <seg xml:lang="en">Last third of I century B.C. - mid I century C.E.</seg>
+                     <origDate notBefore="-0033" notAfter="0067" evidence="Палеография тип_прескрипта" precision="low" instant="false">
+                        <seg xml:lang="ru" part="N">Последняя треть I в. до н.э. – серединa I в. н.э.</seg>
+                        <seg xml:lang="en" part="N">Last third of I century B.C. - mid I century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 2013 г. в северном районе городища, в квартале IX «A» в засыпи подвала № 2. Раскопки С.Г. Рыжова.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-23" who="CB">Tokenised, metadata, origDate and app crit</change>
-          <change when="2015-11-20" who="KK">Leidenised</change>
-         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-23" who="CB" status="draft">Tokenised, metadata, origDate and app crit</change>
+          <change when="2015-11-20" who="KK" status="draft">Leidenised</change>
+         <change when="2015-11-13" who="AGi" status="draft">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl>Макаров 2015, 208.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft">Макаров 2015, 208.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl/>
+            <listBibl default="false">
+               <bibl default="false" status="draft"/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n="1"/><w>ἀγαθᾶι</w> <w>τύχαι</w> 
-               		<lb n="2"/><w>πρόεδ<unclear>ρ</unclear><supplied reason="lost">oι</supplied></w> <w><supplied reason="lost">βο</supplied><unclear>υλᾶ</unclear>ς</w> 
-               <w>εἶπαν</w> <w>ἐπειδὴ</w> <persName type="attested"><name>Γάιος</name> <persName type="attested"><name>Ἀντιόχου</name></persName></persName>
-               		<lb n="3"/><persName type="attested"><name>Στεκ<unclear>τ</unclear><supplied reason="lost">ορηνὸς</supplied></name></persName> <w><unclear>ὁ</unclear></w>
-              <w> <unclear>κ</unclear>αὶ</w> <persName type="attested"><name>Ἀμαστριανὸς</name></persName> <w>κοσμίαν</w> <w>κα<unclear>ὶ</unclear></w>
-               		<lb n="4"/><w>πρέπο<unclear>υ</unclear><supplied reason="lost">σα</supplied><unclear>ν</unclear></w> <w><unclear>τὰν</unclear></w> <w>ἐπιδαμίαν</w> <w>τᾶς</w> 
-               <w>πόλειος</w> <w>ἁμῶ<supplied reason="lost">ν</supplied></w>
-               		<lb n="5"/><w>πεποί<unclear>η</unclear><supplied reason="lost">ται</supplied></w> <w><supplied reason="lost">ἀξ</supplied><unclear>ίως</unclear></w> 
-               <w><unclear>ἅ</unclear><supplied reason="lost">πα</supplied><unclear>σ</unclear>ι</w> <w>τοῖς</w> <w>πολείταις</w> <w>καὶ</w> <w>κ<unclear>ο</unclear><supplied reason="lost">ινᾷ</supplied></w>
-               		<lb n="6"/><w>καὶ</w> <w>κατ᾽</w> <w><supplied reason="lost">ἰδίαν</supplied></w> <w><supplied reason="lost">ἑκάστ</supplied>ῳ</w> <w>προσφερόμενος</w> 
-               <orig>Α</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="3" unit="character" precision="low"/>
-               		<lb n="7"/><w part="I">μενο</w><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="3" unit="character" precision="low"/>
-               <orig><unclear>ο</unclear>I</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="3" unit="character" precision="low"/>
-               <w><supplied reason="lost">τᾶ</supplied><unclear>ς</unclear></w> <w><unclear>ἰ</unclear>δ<unclear>ί</unclear>ας</w> <w>ἀ<unclear>γ</unclear>ωγᾶς</w> <w>τᾷ</w> 
-               <w>πόλ<unclear>ε</unclear><supplied reason="lost">ι</supplied></w> <w><supplied reason="lost">ἁ</supplied>
-               		<lb n="8" break="no"/>μ<unclear>ων</unclear></w> <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="3" unit="character" precision="low"/>
-               <gap reason="illegible" quantity="1" unit="character"/><orig>ιν</orig><gap reason="lost" quantity="5" unit="character" precision="low"/> 
-               <w>εὐσχήμονας</w> <w>ἐν</w> <w>κιν<unclear>δ</unclear><supplied reason="lost">ύνῳ</supplied></w>
-               		<lb n="9"/><orig>ο<unclear>ν</unclear></orig><gap reason="lost" quantity="8" unit="character" precision="low"/><orig>σα</orig>
-               <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="4" unit="character" precision="low"/><orig><unclear>σ</unclear></orig> 
-               <w>τινας</w> <w>ἀποκατέστα<unclear>σ</unclear><supplied reason="lost">ε</supplied></w><gap reason="lost" quantity="3" unit="character" precision="low"/>
-               		<lb n="10"/><orig>θ</orig><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" quantity="7" unit="character" precision="low"/><orig>ε</orig>
-               <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="4" unit="character" precision="low"/><gap reason="illegible" quantity="1" unit="character"/><w part="F">ς</w> 
-               <w>σπουδαῖον</w> <w>καὶ</w> <w>εὔ<unclear>ν</unclear><supplied reason="lost">ουν</supplied></w> <w><supplied reason="lost">πε</supplied>
-               		<lb n="11" break="no"/>ρὶ</w> <w>τὰ<supplied reason="lost">ν</supplied></w> <w><supplied reason="lost">π</supplied>όλ<supplied reason="lost">ιν</supplied></w> 
-               <w><supplied reason="lost">ἁ</supplied><unclear>μ</unclear>ων</w> <w><supplied reason="lost">τ</supplied>ειμῶν</w> <w>καὶ</w> <w>στεφάνων</w> <gap reason="lost" quantity="5" unit="character" precision="low"/>
-               		<lb n="12"/><orig>τα</orig><gap reason="illegible" quantity="2" unit="character"/><orig><unclear>σε</unclear></orig><gap reason="lost" quantity="6" unit="character" precision="low"/> 
-               <w>πιστωθεὶς</w> <w>δύνασθ<unclear>α</unclear><supplied reason="lost">ι</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">χρείας</supplied></w>
-               		<lb n="13"/><w><unclear>π</unclear>αρασχ<unclear>έ</unclear>σ<supplied reason="lost">θ</supplied>αι</w> <w>παρα<supplied reason="lost">κ</supplied>λαθεὶς</w>
-              <w>ὑπ<unclear>ὸ</unclear></w> <w><unclear>τ</unclear><supplied reason="lost">οῦ</supplied></w> <w><supplied reason="lost">δᾶμου</supplied></w> <note>vel sim.</note>
-               		<lb n="14"/><gap reason="lost" extent="unknown" unit="character"/><orig>εσ</orig><gap reason="lost" extent="unknown" unit="character"/> 
-              <w> <unclear>ἀ</unclear>ναδέξασθαι</w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="15"/><gap reason="lost" quantity="1" unit="line"/><orig>υ<unclear>π</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="16"/><gap reason="lost" extent="unknown" unit="line"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n="1"/><w part="N">ἀγαθᾶι</w> <w part="N">τύχαι</w> 
+               		<lb n="2"/><w part="N">πρόεδ<unclear instant="false">ρ</unclear><supplied reason="lost" instant="false">oι</supplied></w> <w part="N"><supplied reason="lost" instant="false">βο</supplied><unclear instant="false">υλᾶ</unclear>ς</w> 
+               <w part="N">εἶπαν</w> <w part="N">ἐπειδὴ</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Γάιος</name> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀντιόχου</name></persName></persName>
+               		<lb n="3"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Στεκ<unclear instant="false">τ</unclear><supplied reason="lost" instant="false">ορηνὸς</supplied></name></persName> <w part="N"><unclear instant="false">ὁ</unclear></w>
+              <w part="N"> <unclear instant="false">κ</unclear>αὶ</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀμαστριανὸς</name></persName> <w part="N">κοσμίαν</w> <w part="N">κα<unclear instant="false">ὶ</unclear></w>
+               		<lb n="4"/><w part="N">πρέπο<unclear instant="false">υ</unclear><supplied reason="lost" instant="false">σα</supplied><unclear instant="false">ν</unclear></w> <w part="N"><unclear instant="false">τὰν</unclear></w> <w part="N">ἐπιδαμίαν</w> <w part="N">τᾶς</w> 
+               <w part="N">πόλειος</w> <w part="N">ἁμῶ<supplied reason="lost" instant="false">ν</supplied></w>
+               		<lb n="5"/><w part="N">πεποί<unclear instant="false">η</unclear><supplied reason="lost" instant="false">ται</supplied></w> <w part="N"><supplied reason="lost" instant="false">ἀξ</supplied><unclear instant="false">ίως</unclear></w> 
+               <w part="N"><unclear instant="false">ἅ</unclear><supplied reason="lost" instant="false">πα</supplied><unclear instant="false">σ</unclear>ι</w> <w part="N">τοῖς</w> <w part="N">πολείταις</w> <w part="N">καὶ</w> <w part="N">κ<unclear instant="false">ο</unclear><supplied reason="lost" instant="false">ινᾷ</supplied></w>
+               		<lb n="6"/><w part="N">καὶ</w> <w part="N">κατ᾽</w> <w part="N"><supplied reason="lost" instant="false">ἰδίαν</supplied></w> <w part="N"><supplied reason="lost" instant="false">ἑκάστ</supplied>ῳ</w> <w part="N">προσφερόμενος</w> 
+               <orig>Α</orig><gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="3" unit="character" precision="low" instant="false"/>
+               		<lb n="7"/><w part="I">μενο</w><gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="3" unit="character" precision="low" instant="false"/>
+               <orig><unclear instant="false">ο</unclear>I</orig><gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="3" unit="character" precision="low" instant="false"/>
+               <w part="N"><supplied reason="lost" instant="false">τᾶ</supplied><unclear instant="false">ς</unclear></w> <w part="N"><unclear instant="false">ἰ</unclear>δ<unclear instant="false">ί</unclear>ας</w> <w part="N">ἀ<unclear instant="false">γ</unclear>ωγᾶς</w> <w part="N">τᾷ</w> 
+               <w part="N">πόλ<unclear instant="false">ε</unclear><supplied reason="lost" instant="false">ι</supplied></w> <w part="N"><supplied reason="lost" instant="false">ἁ</supplied>
+               		<lb n="8" break="no"/>μ<unclear instant="false">ων</unclear></w> <gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="3" unit="character" precision="low" instant="false"/>
+               <gap reason="illegible" quantity="1" unit="character" instant="false"/><orig>ιν</orig><gap reason="lost" quantity="5" unit="character" precision="low" instant="false"/> 
+               <w part="N">εὐσχήμονας</w> <w part="N">ἐν</w> <w part="N">κιν<unclear instant="false">δ</unclear><supplied reason="lost" instant="false">ύνῳ</supplied></w>
+               		<lb n="9"/><orig>ο<unclear instant="false">ν</unclear></orig><gap reason="lost" quantity="8" unit="character" precision="low" instant="false"/><orig>σα</orig>
+               <gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="4" unit="character" precision="low" instant="false"/><orig><unclear instant="false">σ</unclear></orig> 
+               <w part="N">τινας</w> <w part="N">ἀποκατέστα<unclear instant="false">σ</unclear><supplied reason="lost" instant="false">ε</supplied></w><gap reason="lost" quantity="3" unit="character" precision="low" instant="false"/>
+               		<lb n="10"/><orig>θ</orig><gap reason="illegible" quantity="2" unit="character" instant="false"/><gap reason="lost" quantity="7" unit="character" precision="low" instant="false"/><orig>ε</orig>
+               <gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="4" unit="character" precision="low" instant="false"/><gap reason="illegible" quantity="1" unit="character" instant="false"/><w part="F">ς</w> 
+               <w part="N">σπουδαῖον</w> <w part="N">καὶ</w> <w part="N">εὔ<unclear instant="false">ν</unclear><supplied reason="lost" instant="false">ουν</supplied></w> <w part="N"><supplied reason="lost" instant="false">πε</supplied>
+               		<lb n="11" break="no"/>ρὶ</w> <w part="N">τὰ<supplied reason="lost" instant="false">ν</supplied></w> <w part="N"><supplied reason="lost" instant="false">π</supplied>όλ<supplied reason="lost" instant="false">ιν</supplied></w> 
+               <w part="N"><supplied reason="lost" instant="false">ἁ</supplied><unclear instant="false">μ</unclear>ων</w> <w part="N"><supplied reason="lost" instant="false">τ</supplied>ειμῶν</w> <w part="N">καὶ</w> <w part="N">στεφάνων</w> <gap reason="lost" quantity="5" unit="character" precision="low" instant="false"/>
+               		<lb n="12"/><orig>τα</orig><gap reason="illegible" quantity="2" unit="character" instant="false"/><orig><unclear instant="false">σε</unclear></orig><gap reason="lost" quantity="6" unit="character" precision="low" instant="false"/> 
+               <w part="N">πιστωθεὶς</w> <w part="N">δύνασθ<unclear instant="false">α</unclear><supplied reason="lost" instant="false">ι</supplied></w><gap reason="lost" extent="unknown" unit="character" instant="false"/><w part="N"><supplied reason="lost" instant="false">χρείας</supplied></w>
+               		<lb n="13"/><w part="N"><unclear instant="false">π</unclear>αρασχ<unclear instant="false">έ</unclear>σ<supplied reason="lost" instant="false">θ</supplied>αι</w> <w part="N">παρα<supplied reason="lost" instant="false">κ</supplied>λαθεὶς</w>
+              <w part="N">ὑπ<unclear instant="false">ὸ</unclear></w> <w part="N"><unclear instant="false">τ</unclear><supplied reason="lost" instant="false">οῦ</supplied></w> <w part="N"><supplied reason="lost" instant="false">δᾶμου</supplied></w> <note anchored="true">vel sim.</note>
+               		<lb n="14"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><orig>εσ</orig><gap reason="lost" extent="unknown" unit="character" instant="false"/> 
+              <w part="N"> <unclear instant="false">ἀ</unclear>ναδέξασθαι</w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n="15"/><gap reason="lost" quantity="1" unit="line" instant="false"/><orig>υ<unclear instant="false">π</unclear></orig><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n="16"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app loc="6"><note>fin.: после Α ясно видна вертикальная гаста (и, возможно, петля от Ρ или Β).</note></app>
-               <app loc="6/7"><rdg><note>не исключаю</note> <unclear>αἱ</unclear>[ρού]/μενο[ς δὲ - - -] 
-                  <note>vel</note> ἀ<unclear>ρ</unclear>[ξά]/μενο[ς δὲ - - -] <note>vel</note> ἀ<unclear>ρ</unclear>[ξα]/μένο[υ δὲ - - -].</rdg></app>
-               <app loc="7"><note>в начале стк. после Ο следы буквы не поддаются идентификации; в середине стк. после Ι скорее всего следы треугольной буквы (Α, Δ, Λ). </note></app>
-               <app loc="8"><note>in.: после μ<unclear>ων</unclear> следы вертикальной гасты</note> 
-                  <note>перед Ι часть верхней горизонтальной линии (<unclear>Σ</unclear> ?)</note>
-                  <rdg><note>возможно,</note> μ<unclear>ων ἐ</unclear>[ν ἅπα]<unclear>σ</unclear>ιν [καιροῖς] εὐσχήμονας κτλ.</rdg></app>
-               <app loc="8"><rdg><note>fin.: форма мн. ч.</note> κιν<unclear>δ</unclear>[ύνοις] <note>превышает размер лакуны.</note></rdg></app>
-               <app loc="9"><rdg><note>in.:</note> ὄ<unclear>ν</unclear>[των <note>vel</note> τας ?]</rdg>
-                  <note>после Α нижняя часть наклонной гасты (Δ, Λ, Μ, Σ ?).</note></app>
-               <app loc="10"><note>перед Σ, возможно, следы Υ</note>
-                 <rdg><note>не исключаю</note> [- - - ἑαυτὸν] ἐ<unclear>π</unclear>[ιδιδο]<unclear>ὺ</unclear>ς σπουδαῖον κτλ.</rdg></app>
-               <app loc="12"><note>перед Σ, возможно, следы Ο или Ω</note> 
-                <rdg><note>не исключаю</note> ΤΑ++<unclear>Σ</unclear> <unclear>ἔ</unclear>[πηξιώθη <note>vel sim.</note>] πιστωθεὶς κτλ. 
-                   <note>(ср. в херсонесском декрете римского времени № seg45, 985, l. 9: πάσᾳ τᾷ παρ’ ἁμεῖν τει[μᾷ ἐ]<unclear>π</unclear>αξιωθῆμεν).</note></rdg></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app loc="6"><note anchored="true">fin.: после Α ясно видна вертикальная гаста (и, возможно, петля от Ρ или Β).</note></app>
+               <app loc="6/7"><rdg><note anchored="true">не исключаю</note> <unclear instant="false">αἱ</unclear>[ρού]/μενο[ς δὲ - - -] 
+                  <note anchored="true">vel</note> ἀ<unclear instant="false">ρ</unclear>[ξά]/μενο[ς δὲ - - -] <note anchored="true">vel</note> ἀ<unclear instant="false">ρ</unclear>[ξα]/μένο[υ δὲ - - -].</rdg></app>
+               <app loc="7"><note anchored="true">в начале стк. после Ο следы буквы не поддаются идентификации; в середине стк. после Ι скорее всего следы треугольной буквы (Α, Δ, Λ). </note></app>
+               <app loc="8"><note anchored="true">in.: после μ<unclear instant="false">ων</unclear> следы вертикальной гасты</note> 
+                  <note anchored="true">перед Ι часть верхней горизонтальной линии (<unclear instant="false">Σ</unclear> ?)</note>
+                  <rdg><note anchored="true">возможно,</note> μ<unclear instant="false">ων ἐ</unclear>[ν ἅπα]<unclear instant="false">σ</unclear>ιν [καιροῖς] εὐσχήμονας κτλ.</rdg></app>
+               <app loc="8"><rdg><note anchored="true">fin.: форма мн. ч.</note> κιν<unclear instant="false">δ</unclear>[ύνοις] <note anchored="true">превышает размер лакуны.</note></rdg></app>
+               <app loc="9"><rdg><note anchored="true">in.:</note> ὄ<unclear instant="false">ν</unclear>[των <note anchored="true">vel</note> τας ?]</rdg>
+                  <note anchored="true">после Α нижняя часть наклонной гасты (Δ, Λ, Μ, Σ ?).</note></app>
+               <app loc="10"><note anchored="true">перед Σ, возможно, следы Υ</note>
+                 <rdg><note anchored="true">не исключаю</note> [- - - ἑαυτὸν] ἐ<unclear instant="false">π</unclear>[ιδιδο]<unclear instant="false">ὺ</unclear>ς σπουδαῖον κτλ.</rdg></app>
+               <app loc="12"><note anchored="true">перед Σ, возможно, следы Ο или Ω</note> 
+                <rdg><note anchored="true">не исключаю</note> ΤΑ++<unclear instant="false">Σ</unclear> <unclear instant="false">ἔ</unclear>[πηξιώθη <note anchored="true">vel sim.</note>] πιστωθεὶς κτλ. 
+                   <note anchored="true">(ср. в херсонесском декрете римского времени № seg45, 985, l. 9: πάσᾳ τᾷ παρ’ ἁμεῖν τει[μᾷ ἐ]<unclear instant="false">π</unclear>αξιωθῆμεν).</note></rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>В добрый час. Проедры Совета внесли предложение: поскольку Гай, сын Антиоха, стект[ориец], а также амастриец, посетив наш город, провел время должным и подобающим образом, показывая достойное отношение ко всем гражданам, как в целом, так и к [каждому в отдельности, - - - (и являя1 ?)] нашему городу безупречные [во всех обстоятельствах ? - - -] своего образа действий, во время опасности [- - -] восстановил некоторые2 [- - - будучи ?] усердным и преданным нашему городу, [- - - он был удостоен] почестей и венков [- - -]; когда народ обратился к нему с призывом дать согласие [- - -], не сомневаясь, что он (scil. Гай, сын Антиоха) может оказать [помощь - - -].</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">В добрый час. Проедры Совета внесли предложение: поскольку Гай, сын Антиоха, стект[ориец], а также амастриец, посетив наш город, провел время должным и подобающим образом, показывая достойное отношение ко всем гражданам, как в целом, так и к [каждому в отдельности, - - - (и являя1 ?)] нашему городу безупречные [во всех обстоятельствах ? - - -] своего образа действий, во время опасности [- - -] восстановил некоторые2 [- - - будучи ?] усердным и преданным нашему городу, [- - - он был удостоен] почестей и венков [- - -]; когда народ обратился к нему с призывом дать согласие [- - -], не сомневаясь, что он (scil. Гай, сын Антиоха) может оказать [помощь - - -].</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p/>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

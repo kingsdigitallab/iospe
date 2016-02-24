@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Фрагмент декрета с упоминанием святилища Асклепия.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000218</idno>
             <idno type="PE">PE3000218</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc15">Декрет.</seg>
-                     <seg xml:lang="en">Decree.</seg>
+                     <seg xml:lang="ru" corresp="#doc15" part="N">Декрет.</seg>
+                     <seg xml:lang="en" part="N">Decree.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,8 +44,8 @@
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Лицевая сторона тщательно обработана.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="ru" part="N">Оббита со всех сторон. Лицевая сторона тщательно обработана.</p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">10,5</height>
                               <width unit="cm">8,5</width>
@@ -53,126 +55,126 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Узкие, неглубоко вырезанные буквы, Α с прямой поперечной линией, наклонные линии Κ касаются линий строки, 
-                           Π с вертикалями одинаковой длины и выходящей за их пределы горизонталью, крестообразное Ψ, отсутствие украшений на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="ru" part="N">Узкие, неглубоко вырезанные буквы, Α с прямой поперечной линией, наклонные линии Κ касаются линий строки, 
+                           Π с вертикалями одинаковой длины и выходящей за их пределы горизонталью, крестообразное Ψ, отсутствие украшений на концах линий букв.</seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">0,7</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="-0050" notAfter="-0001" evidence="Палеография формуляр_постановляющей_части_декретов">
-                        <seg xml:lang="ru">Вторая половина I в. до н.э.</seg>
-                        <seg xml:lang="en">2nd half of I century B.C.</seg>
+                     <origDate notBefore="-0050" notAfter="-0001" evidence="Палеография формуляр_постановляющей_части_декретов" instant="false">
+                        <seg xml:lang="ru" part="N">Вторая половина I в. до н.э.</seg>
+                        <seg xml:lang="en" part="N">2nd half of I century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена случайно С.Г. Рыжовым в 2001 г. в северном районе Херсонеса 
                            (квадрат 10-Б, около стены бывшего монастыря cв. Владимира). Сохранилось пять строк надписи.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
-         <change when="2015-11-05" who="CB">Added origDate</change>
-         <change when="2015-10-14" who="CB">Bibliography</change>
-         <change when="2015-08-26" who="CB">App crit</change>
-         <change when="2015-07-15" who="KK">Add photo file name</change>
-         <change when="2015-06-29" who="CB">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
+         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-14" who="CB" status="draft">Bibliography</change>
+         <change when="2015-08-26" who="CB" status="draft">App crit</change>
+         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
+         <change when="2015-06-29" who="CB" status="draft">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
+         <change when="2015-05-15" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="30.278">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Макаров 2006,--> <ptr target="bib:b0758"/> 83, № <citedRange>1</citedRange></bibl> <bibl>(<!--SEG--><ptr target="SEG"/> <citedRange>56, 871</citedRange></bibl>
-               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:Bull.ép."/> <citedRange>2007, 410</citedRange> (Avram)).</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Макаров 2006,--> <ptr target="bib:b0758"/> 83, № <citedRange>1</citedRange></bibl> <bibl default="false" status="draft">(<!--SEG--><ptr target="SEG"/> <citedRange>56, 871</citedRange></bibl>
+               <bibl default="false" status="draft"><!--cf. Bull. ép. 2007--><ptr target="bib:Bull.ép."/> <citedRange>2007, 410</citedRange> (Avram)).</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl/>
+            <listBibl default="false">
+               <bibl default="false" status="draft"/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/> 
-               		<lb n="1"/><gap reason="lost" quantity="1" unit="line"/> <w><unclear>ἔσ</unclear><supplied reason="lost">πλουν</supplied></w> <w><supplied reason="lost">τε</supplied></w> 
-               <w><supplied reason="lost">καὶ</supplied></w> <w><supplied reason="lost">ἔκπλουν</supplied></w> <w><supplied reason="lost">αὐτῷ</supplied></w> <w><supplied reason="lost">τε</supplied></w> 
-               <w><supplied reason="lost">καὶ</supplied></w> <w><supplied reason="lost">χράμασι</supplied></w> <w><supplied reason="lost">τοῖς</supplied></w>
-               <w><supplied reason="lost">αὐ</supplied>
-               		<lb n="2"/><supplied reason="lost">τοῦ</supplied></w> <w><supplied reason="lost">ἀ</supplied>συλεὶ</w> <w><unclear>κ</unclear><supplied reason="lost">αὶ</supplied></w> 
-               <w><supplied reason="lost">ἀσπονδεὶ</supplied></w> <w><supplied reason="lost">πολέμου</supplied></w> <w><supplied reason="lost">καὶ</supplied></w> <w><supplied reason="lost">εἰράνας</supplied></w>· 
-               <w><supplied reason="lost">τὸ</supplied></w> <w><supplied reason="lost">δὲ</supplied></w> <w><supplied reason="lost">ψάφισμα</supplied></w>
-               		<lb n="3"/><w><supplied reason="lost">ἀν</supplied>αγράψαι</w> <w>εἰς</w> <w><unclear>στ</unclear><supplied reason="lost">άλαν</supplied></w>
-               <w><supplied reason="lost">λευκοῦ</supplied></w> <w><supplied reason="lost">λίθου</supplied></w> <w><supplied reason="lost">καὶ</supplied></w>
-               <w><supplied reason="lost">θέμεν</supplied></w> <w><supplied reason="lost">ἐν</supplied></w> <w><supplied reason="lost">τῶι</supplied></w>
-               <w><supplied reason="lost">ἱερῶι</supplied></w>
-               		<lb n="4"/><w><supplied reason="lost">το</supplied><unclear>ῦ</unclear></w> 
-               <persName type="attested"><name>Ἀσκληπ<supplied reason="lost">ιοῦ</supplied></name></persName>· <gap reason="lost" quantity="1" unit="line"/>
-               		<lb n="5"/><gap reason="lost" quantity="1" unit="line"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ΥΤ</unclear></orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="1" unit="line"/>
-               		<lb n="0"/><gap reason="lost" extent="unknown" unit="character"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line" instant="false"/> 
+               		<lb n="1"/><gap reason="lost" quantity="1" unit="line" instant="false"/> <w part="N"><unclear instant="false">ἔσ</unclear><supplied reason="lost" instant="false">πλουν</supplied></w> <w part="N"><supplied reason="lost" instant="false">τε</supplied></w> 
+               <w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">ἔκπλουν</supplied></w> <w part="N"><supplied reason="lost" instant="false">αὐτῷ</supplied></w> <w part="N"><supplied reason="lost" instant="false">τε</supplied></w> 
+               <w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">χράμασι</supplied></w> <w part="N"><supplied reason="lost" instant="false">τοῖς</supplied></w>
+               <w part="N"><supplied reason="lost" instant="false">αὐ</supplied>
+               		<lb n="2"/><supplied reason="lost" instant="false">τοῦ</supplied></w> <w part="N"><supplied reason="lost" instant="false">ἀ</supplied>συλεὶ</w> <w part="N"><unclear instant="false">κ</unclear><supplied reason="lost" instant="false">αὶ</supplied></w> 
+               <w part="N"><supplied reason="lost" instant="false">ἀσπονδεὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">πολέμου</supplied></w> <w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">εἰράνας</supplied></w>· 
+               <w part="N"><supplied reason="lost" instant="false">τὸ</supplied></w> <w part="N"><supplied reason="lost" instant="false">δὲ</supplied></w> <w part="N"><supplied reason="lost" instant="false">ψάφισμα</supplied></w>
+               		<lb n="3"/><w part="N"><supplied reason="lost" instant="false">ἀν</supplied>αγράψαι</w> <w part="N">εἰς</w> <w part="N"><unclear instant="false">στ</unclear><supplied reason="lost" instant="false">άλαν</supplied></w>
+               <w part="N"><supplied reason="lost" instant="false">λευκοῦ</supplied></w> <w part="N"><supplied reason="lost" instant="false">λίθου</supplied></w> <w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w>
+               <w part="N"><supplied reason="lost" instant="false">θέμεν</supplied></w> <w part="N"><supplied reason="lost" instant="false">ἐν</supplied></w> <w part="N"><supplied reason="lost" instant="false">τῶι</supplied></w>
+               <w part="N"><supplied reason="lost" instant="false">ἱερῶι</supplied></w>
+               		<lb n="4"/><w part="N"><supplied reason="lost" instant="false">το</supplied><unclear instant="false">ῦ</unclear></w> 
+               <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀσκληπ<supplied reason="lost" instant="false">ιοῦ</supplied></name></persName>· <gap reason="lost" quantity="1" unit="line" instant="false"/>
+               		<lb n="5"/><gap reason="lost" quantity="1" unit="line" instant="false"/><gap reason="illegible" quantity="1" unit="character" instant="false"/><orig><unclear instant="false">ΥΤ</unclear></orig><gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" quantity="1" unit="line" instant="false"/>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="character" instant="false"/>
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app loc="2-3"><note>cf. № ipe340, стк. 5–6).</note></app>
-               <app loc="5"><note>в конце строки видна верхняя часть вертикальной гасты.</note></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app loc="2-3"><note anchored="true">cf. № ipe340, стк. 5–6).</note></app>
+               <app loc="5"><note anchored="true">в конце строки видна верхняя часть вертикальной гасты.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>[– – –] даровать право входа в гавань и выхода из гавани ему самому и его имуществу], без риска конфискации и необходимости заключения договора, 
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">[– – –] даровать право входа в гавань и выхода из гавани ему самому и его имуществу], без риска конфискации и необходимости заключения договора, 
                в мирное и военное время. Это постановление записать на белокаменной стеле и поместить [в святилище] Асклепия [– – –].</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>Надпись представляет собой концовку постановляющей части проксенического декрета c перечислением традиционных привилегий, 
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Надпись представляет собой концовку постановляющей части проксенического декрета c перечислением традиционных привилегий, 
                за которым следует клаузула публикации. Упоминание святилища Асклепия в лапидарной эпиграфике 
                Херсонеса встречается также во фрагменте декрета № ipe376.</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Mетрическая эпитафия римского времени.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000190</idno>
             <idno type="PE">PE3000190</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
+                     <seg xml:lang="en" part="N">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,9 +44,9 @@
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Обломана сверху и снизу. Лицевой и боковые фасы плиты тщательно обработаны, тыльная часть обработана грубо. 
+                           <p xml:lang="ru" part="N">Обломана сверху и снизу. Лицевой и боковые фасы плиты тщательно обработаны, тыльная часть обработана грубо. 
                               На лицевой стороне сохранилось одиннадцать строк надписи, вырезанной по предварительной разметке. Буквы сохранили незначительные следы красной краски. Слева строки отступают от края плиты на 3–5 см, а справа они уходят в обрез плиты, что, вероятно, объясняется тем, что камень был подтесан при вторичном использовании.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">55</height>
                               <width unit="cm">40</width>
@@ -54,125 +56,125 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы слегка вытянуты; Ε, Σ, Ω имеют курсивную форму; овальная Θ с замкнутой перекладиной; 
+                        <seg xml:lang="ru" part="N">Буквы слегка вытянуты; Ε, Σ, Ω имеют курсивную форму; овальная Θ с замкнутой перекладиной; 
                            в стк. 1, 8, 10 примечательна конечная декоративная Σ: она уменьшена и приподнята над строкой; вертикаль Φ сверху и снизу выходит за линию строки; 
                            небольшие апексы на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">3,5–4.</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
-                        <seg xml:lang="ru">II в. н.э. (вероятно, не ранее середины века).</seg>
-                        <seg xml:lang="en">II century C.E. (probably not earlier than mid century).</seg>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" instant="false">
+                        <seg xml:lang="ru" part="N">II в. н.э. (вероятно, не ранее середины века).</seg>
+                        <seg xml:lang="en" part="N">II century C.E. (probably not earlier than mid century).</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 2007 г. в ходе охранных раскопок на Девичьей горе за территорией херсонесского городища. Раскопки Т.Ю. Яшаевой.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-05" who="CB">Added origDate</change>
-         <change when="2015-10-13" who="CB">biblio</change>
-         <change when="2015-08-26" who="CB">app crit</change>
-         <change when="2015-08-24" who="CB">Bibl and app crit</change>
-         <change when="2015-07-15" who="KK">Add photo file name</change>
-         <change when="2015-06-26" who="CB">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-13" who="AV">programatically tagging Greek words from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-13" who="CB" status="draft">biblio</change>
+         <change when="2015-08-26" who="CB" status="draft">app crit</change>
+         <change when="2015-08-24" who="CB" status="draft">Bibl and app crit</change>
+         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
+         <change when="2015-06-26" who="CB" status="draft">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
+         <change when="2015-05-13" who="AV" status="draft">programatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="30.220">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl n="-Макаров И.А. 2009">
-               <bibl>Две метрические эпитафии римского времени из Херсонеса Таврического // <!--ВДИ--><ptr target="ВДИ"/>. <citedRange>3, 113-122.</citedRange></bibl>
+            <listBibl n="-Макаров И.А. 2009" default="false">
+               <bibl default="false" status="draft">Две метрические эпитафии римского времени из Херсонеса Таврического // <!--ВДИ--><ptr target="ВДИ"/>. <citedRange>3, 113-122.</citedRange></bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft">.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" quantity="1" unit="line"/> <w><supplied reason="lost">τανη</supplied>λεγέως</w>
-               		<lb n="2"/><gap reason="lost" quantity="1" unit="line"/>.<orig>Ι</orig><gap reason="lost" quantity="3" unit="character"/> <space quantity="1" unit="character"/>.
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>.<orig>ΟΝ</orig> <w>νέον</w> <w>κτεῖνασα</w>
-               		<lb n="4"/><w>χερσὶν</w> <w>ἀγριοθύμων</w>
-               		<lb n="5"/><w>δῶκας</w> <w>ἄχος</w> <w><supplied reason="lost">β</supplied>αρυπενθῆ</w>
-               		<lb n="6"/><w>τοκεῦσιν</w> <w>ἠδὲ</w> <w>φίλοισιν</w>.
-               		<lb n="7"/><w>ὃν</w> <w>κόλποισιν</w> <w>θρέψασα</w>
-               		<lb n="8"/><w>καὶ</w> <w>τιθνήσασα</w> <persName type="attested"><name>Σουσις</name></persName>
-               		<lb n="9"/><w>δύσμορον</w> <w>ἐνθάδε</w> <w>θῆκε</w>
-               		<lb n="10"/><w>παρὰ</w> <w>πλευρ<choice><corr>ῆ</corr><sic>Ε</sic></choice>σι</w> <w>πατρώαις</w>
-               		<lb n="11"/><w><supplied reason="lost">δά</supplied>κρυα</w> <w>πολλὰ</w> <w>χ<choice><corr>έο</corr><sic>Θ</sic></choice>υσα</w>
-               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+               		<lb n="1"/><gap reason="lost" quantity="1" unit="line" instant="false"/> <w part="N"><supplied reason="lost" instant="false">τανη</supplied>λεγέως</w>
+               		<lb n="2"/><gap reason="lost" quantity="1" unit="line" instant="false"/>.<orig>Ι</orig><gap reason="lost" quantity="3" unit="character" instant="false"/> <space quantity="1" unit="character"/>.
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character" instant="false"/>.<orig>ΟΝ</orig> <w part="N">νέον</w> <w part="N">κτεῖνασα</w>
+               		<lb n="4"/><w part="N">χερσὶν</w> <w part="N">ἀγριοθύμων</w>
+               		<lb n="5"/><w part="N">δῶκας</w> <w part="N">ἄχος</w> <w part="N"><supplied reason="lost" instant="false">β</supplied>αρυπενθῆ</w>
+               		<lb n="6"/><w part="N">τοκεῦσιν</w> <w part="N">ἠδὲ</w> <w part="N">φίλοισιν</w>.
+               		<lb n="7"/><w part="N">ὃν</w> <w part="N">κόλποισιν</w> <w part="N">θρέψασα</w>
+               		<lb n="8"/><w part="N">καὶ</w> <w part="N">τιθνήσασα</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Σουσις</name></persName>
+               		<lb n="9"/><w part="N">δύσμορον</w> <w part="N">ἐνθάδε</w> <w part="N">θῆκε</w>
+               		<lb n="10"/><w part="N">παρὰ</w> <w part="N">πλευρ<choice><corr instant="false">ῆ</corr><sic>Ε</sic></choice>σι</w> <w part="N">πατρώαις</w>
+               		<lb n="11"/><w part="N"><supplied reason="lost" instant="false">δά</supplied>κρυα</w> <w part="N">πολλὰ</w> <w part="N">χ<choice><corr instant="false">έο</corr><sic>Θ</sic></choice>υσα</w>
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
             </ab>
             <!--10 ΠΛΕΥΡΕΣΙ – lapis. -->
             <!--11 ΧΘΥΣΑ – lapis-->
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app loc="2"><note>в конце строки либо Ο, либо с большей вероятностью знак-разделитель в виде листа плюща</note>
-                  <rdg source="bib:SEG"><note>fortasse</note> <unclear>ΟΙΤΑΟ</unclear></rdg> <note>(Kantor, на основании фото).</note></app>
-               <app loc="3"><note>в начале строки видна нижняя часть вертикали; e. g. [αὐ]τόν или окончание личного имени. </note></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app loc="2"><note anchored="true">в конце строки либо Ο, либо с большей вероятностью знак-разделитель в виде листа плюща</note>
+                  <rdg source="bib:SEG"><note anchored="true">fortasse</note> <unclear instant="false">ΟΙΤΑΟ</unclear></rdg> <note anchored="true">(Kantor, на основании фото).</note></app>
+               <app loc="3"><note anchored="true">в начале строки видна нижняя часть вертикали; e. g. [αὐ]τόν или окончание личного имени. </note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>[---] с большой скорбью [---] убившая [его ?] молодого руками свирепых (людей), ты причинила тяжелое горе родителям и друзьям. 
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">[---] с большой скорбью [---] убившая [его ?] молодого руками свирепых (людей), ты причинила тяжелое горе родителям и друзьям. 
                Вскормившая на своих коленях</p>
-            <p>и взрастившая его Сусида похоронила несчастного здесь рядом с отцом, </p>
-            <p>проливая много слез [---]</p>
+            <p part="N">и взрастившая его Сусида похоронила несчастного здесь рядом с отцом, </p>
+            <p part="N">проливая много слез [---]</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>Надпись представляет собой стихотворную эпитафию, написанную дактилическим гекзаметром, содержащим, однако, ряд метрических погрешностей.</p>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Надпись представляет собой стихотворную эпитафию, написанную дактилическим гекзаметром, содержащим, однако, ряд метрических погрешностей.</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

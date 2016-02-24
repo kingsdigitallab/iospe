@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Надгробие Акис, дочери Геронта, жены Онасиклея.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000015</idno>
             <idno type="PE">PE3000015</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
+                     <seg xml:lang="en" part="N">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,8 +44,8 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble</material>
-                           <p xml:lang="ru">Сохранилась полностью. По заранее нанесенной разметке вырезана трехстрочная надпись.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="ru" part="N">Сохранилась полностью. По заранее нанесенной разметке вырезана трехстрочная надпись.</p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">7</height>
                               <width unit="cm">16,5</width>
@@ -53,112 +55,112 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ε с короткой средней горизонталью, Ν с немного приподнятой правой гастой, Ο меньше остальных букв, 
+                        <seg xml:lang="ru" part="N">Ε с короткой средней горизонталью, Ν с немного приподнятой правой гастой, Ο меньше остальных букв, 
                            Σ с расходящимися верхней и нижней линиями, слегка изогнутые линии отдельных букв, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">1</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N">Tauric Chersonesos</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография" precision="low">
-                        <seg xml:lang="ru">III в. до н.э.</seg>
-                        <seg xml:lang="en">III century B.C.</seg>
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография" precision="low" instant="false">
+                        <seg xml:lang="ru" part="N">III в. до н.э.</seg>
+                        <seg xml:lang="en" part="N">III century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1896 г. в юго-восточном районе Херсонеса на участке некрополя, 
                            расположенного «между Карантинной бухтой и военной дорогой в Севастополь». 
                            Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5, л. 16, № 504; д. 25, л. 4, № 131).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-05" who="CB">Added origDate</change>
-         <change when="2015-10-13" who="CB">Biblio</change>
-         <change when="2015-09-28" who="CB">Biblio and app crit</change>
-         <change when="2015-07-10" who="KK">Add photo file name</change>
-         <change when="2015-06-02" who="CB">Metadata tagging</change>
-         <change when="2015-03-12" who="VP">Tagging the Greek names</change>
-         <change when="2015-03-12" who="CB">normalising and checking</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-13" who="CB" status="draft">Biblio</change>
+         <change when="2015-09-28" who="CB" status="draft">Biblio and app crit</change>
+         <change when="2015-07-10" who="KK" status="draft">Add photo file name</change>
+         <change when="2015-06-02" who="CB" status="draft">Metadata tagging</change>
+         <change when="2015-03-12" who="VP" status="draft">Tagging the Greek names</change>
+         <change when="2015-03-12" who="CB" status="draft">normalising and checking</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="30.15">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Латышев 1899--><ptr target="bib:0136"/>, 16, № <citedRange>16</citedRange>.</bibl>
-               <bibl><!--IOSPE--> <ptr target="bib:IOSPE"/> <citedRange>IV, 130</citedRange></bibl>
-               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>504</citedRange>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Латышев 1899--><ptr target="bib:0136"/>, 16, № <citedRange>16</citedRange>.</bibl>
+               <bibl default="false" status="draft"><!--IOSPE--> <ptr target="bib:IOSPE"/> <citedRange>IV, 130</citedRange></bibl>
+               <bibl default="false" status="draft"><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>504</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl><!--KW--><ptr target="bib:0519"/> № 15d.</bibl> <!--abbreviated title in Makarov notes: KW-->
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--KW--><ptr target="bib:0519"/> № 15d.</bibl> <!--abbreviated title in Makarov notes: KW-->
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
 
-               		<lb n="1"/><persName type="attested"><name>᾽Ακὶς</name><persName type="attested"><name>Γέροντος</name></persName>,
-               		<lb n="2"/><persName type="attested"><name>᾽Ονασικλέος</name></persName><w>γυνά</w></persName>. 
+               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">᾽Ακὶς</name><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Γέροντος</name></persName>,
+               		<lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">᾽Ονασικλέος</name></persName><w part="N">γυνά</w></persName>. 
 
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app><note/></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app><note anchored="true"/></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>Акис, дочь Геронта, жена Онасиклея.</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Акис, дочь Геронта, жена Онасиклея.</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>	Личные имена Ἀκίς (засвидетельствовано также на Боспоре,  LGPN IV) и Ὀνασικλῆς встречаются в Херсoнесе только в этой надписи. 
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">	Личные имена Ἀκίς (засвидетельствовано также на Боспоре,  LGPN IV) и Ὀνασικλῆς встречаются в Херсoнесе только в этой надписи. 
                ЛИ Γέρων известно в других херсонесских надписях эллинистического времени.</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

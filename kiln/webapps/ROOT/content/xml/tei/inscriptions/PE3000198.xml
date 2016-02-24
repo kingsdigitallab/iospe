@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Надгробие Аристоника, поставленное женой Хресимой, амастриянкой.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000198</idno>
             <idno type="PE">PE3000198</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
+                     <seg xml:lang="en" part="N">Epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,10 +44,10 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone</material>
-                           <p xml:lang="ru">Обломана сверху, отколот нижний левый угол (после издания надписи была потеряна еще часть угла). 
+                           <p xml:lang="ru" part="N">Обломана сверху, отколот нижний левый угол (после издания надписи была потеряна еще часть угла). 
                               Лицевая сторона тщательно обработана. Эпиграфическое поле окаймлено широкой рельефной рамкой. 
                               Сохранилась шестистрочная надпись. Некоторые буквы сильно стерты.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">67</height>
                               <width unit="cm">65</width>
@@ -55,116 +57,116 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Курсивные Ε, Σ, Μ с наклонными внутренними гастами чередуется с Μ курсивным, широкая Ω, уменьшенные декоративные буквы, 
+                        <seg xml:lang="ru" part="N">Курсивные Ε, Σ, Μ с наклонными внутренними гастами чередуется с Μ курсивным, широкая Ω, уменьшенные декоративные буквы, 
                            лигатуры.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">5–6.</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="0108" notAfter="0109" evidence="Указание_надписи">
-                        <seg xml:lang="ru">108/9 г. н.э.</seg>
-                        <seg xml:lang="en">108/9 C.E.</seg>
+                     <origDate notBefore="0108" notAfter="0109" evidence="Указание_надписи" instant="false">
+                        <seg xml:lang="ru" part="N">108/9 г. н.э.</seg>
+                        <seg xml:lang="en" part="N">108/9 C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном районе херсонесского городища, в римской «цитадели» (служила перекрытием водостока). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 36, л. 8а, № 336).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-09" who="CB">Added origDate</change>
-         <change when="2015-10-30" who="CB">biblio and app crit</change>
-         <change when="2015-10-22" who="CB">Metadata</change>
-          <change when="2015-10-21" who="KK">Leidenised</change>
-         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-30" who="CB" status="draft">biblio and app crit</change>
+         <change when="2015-10-22" who="CB" status="draft">Metadata</change>
+          <change when="2015-10-21" who="KK" status="draft">Leidenised</change>
+         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Латышев 1909--><ptr target="bib:b0150"/>, 44, № <citedRange>6</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE"/>, <citedRange>543</citedRange>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Латышев 1909--><ptr target="bib:b0150"/>, 44, № <citedRange>6</citedRange></bibl>
+               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE"/>, <citedRange>543</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl><!--Avram PPPE--><ptr target="bib:b0709"/>, № 175.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Avram PPPE--><ptr target="bib:b0709"/>, № 175.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n="1"/><persName type="attested"><name>Χρησ<supplied reason="lost">ίμ</supplied>η</name>
-               		<lb n="2"/><name>Ἀμασ<supplied reason="lost">τρι</supplied>ανὴ</name> 
-               		<lb n="3"/><w>συμβίῳ</w> <persName type="attested"><name>Ἀριστονίκ<unclear>ῳ</unclear></name></persName></persName>
-               		<lb n="4"/><w>μνη<unclear> ́μη</unclear><supplied reason="omitted">ς</supplied></w> <w>χάριν</w> <w>ἀνέστη
-               		<lb n="5" break="no"/>σεν</w> <w>βιοὺς</w> <w>ἐτ<supplied reason="lost">ῶ</supplied>ν</w> <num value="30">λʹ</num> <w>ἔτους</w>
-               		<lb n="6"/><w>ροθ’</w>, <w>μην<expan><ex>ὸς</ex></expan></w> <w>Λῴου</w> <num value="3">γ</num>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Χρησ<supplied reason="lost" instant="false">ίμ</supplied>η</name>
+               		<lb n="2"/><name full="yes" instant="false">Ἀμασ<supplied reason="lost" instant="false">τρι</supplied>ανὴ</name> 
+               		<lb n="3"/><w part="N">συμβίῳ</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀριστονίκ<unclear instant="false">ῳ</unclear></name></persName></persName>
+               		<lb n="4"/><w part="N">μνη<unclear instant="false"> ́μη</unclear><supplied reason="omitted" instant="false">ς</supplied></w> <w part="N">χάριν</w> <w part="N">ἀνέστη
+               		<lb n="5" break="no"/>σεν</w> <w part="N">βιοὺς</w> <w part="N">ἐτ<supplied reason="lost" instant="false">ῶ</supplied>ν</w> <num value="30">λʹ</num> <w part="N">ἔτους</w>
+               		<lb n="6"/><w part="N">ροθ’</w>, <w part="N">μην<expan instant="false"><ex instant="false">ὸς</ex></expan></w> <w part="N">Λῴου</w> <num value="3">γ</num>
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app loc="4"><rdg>ΜΝΗ<unclear>ΜΗ</unclear> <note>- lap., ΤΗ в лигатуре.</note></rdg></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app loc="4"><rdg>ΜΝΗ<unclear instant="false">ΜΗ</unclear> <note anchored="true">- lap., ΤΗ в лигатуре.</note></rdg></app>
                <app loc="5">
-                  <note>ΝΒ в лигатуре</note>
-                  <note>в слове βιοὺς ΟΥ в лигатуре</note> 
-                  <note>над цифрой Λ горизонтальная черта.</note>
+                  <note anchored="true">ΝΒ в лигатуре</note>
+                  <note anchored="true">в слове βιοὺς ΟΥ в лигатуре</note> 
+                  <note anchored="true">над цифрой Λ горизонтальная черта.</note>
                </app>
-               <app loc="6"><note>ΜΗΝ в лигатуре</note>
-                  <note>над цифрами ΡΟΘ и Γ горизонтальная черта.</note></app>
+               <app loc="6"><note anchored="true">ΜΗΝ в лигатуре</note>
+                  <note anchored="true">над цифрами ΡΟΘ и Γ горизонтальная черта.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>Амастриянка Хресима поставила (это надгробие) супругу Аристонику ради памяти. Живший в течение 30 лет. В 178 году, месяца Лоя, 3 (дня).</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Амастриянка Хресима поставила (это надгробие) супругу Аристонику ради памяти. Живший в течение 30 лет. В 178 году, месяца Лоя, 3 (дня).</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>Этниконом «амастриянка» сопровождается только имя Хресимы, поэтому ее супруг Аристоник, вероятно, был херсонеситом (ср. Avram 2013, nº 175). О необходимости исправления датировки 115 г. н.э., предложенной в IOSPE (сохранена в Avram 2013, nº 175), на 108/9 г. н.э. см. Макаров 2006, 91, прим. 25.</p>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Этниконом «амастриянка» сопровождается только имя Хресимы, поэтому ее супруг Аристоник, вероятно, был херсонеситом (ср. Avram 2013, nº 175). О необходимости исправления датировки 115 г. н.э., предложенной в IOSPE (сохранена в Avram 2013, nº 175), на 108/9 г. н.э. см. Макаров 2006, 91, прим. 25.</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

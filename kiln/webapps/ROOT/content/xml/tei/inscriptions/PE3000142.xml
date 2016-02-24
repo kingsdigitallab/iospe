@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Саркофаг Дельфа, сына Стратоника.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000142</idno>
             <idno type="PE">PE3000142</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
+                     <seg xml:lang="en" part="N">Epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,10 +44,10 @@
                            <objectType xml:lang="en">Wall of a sarcophagus</objectType>
                            <material xml:lang="ru" ref="'m1">Мрамор.</material>
                            <material xml:lang="en">Marble</material>
-                           <p xml:lang="ru">Состоит из пяти соединяющихся фрагментов. Края плиты обломаны, за исключением верхнего. 
+                           <p xml:lang="ru" part="N">Состоит из пяти соединяющихся фрагментов. Края плиты обломаны, за исключением верхнего. 
                               По верхнему краю проходит профилированный карниз. Лицевая грань обтесана мелкой зубаткой, но не отшлифована, 
                               оборотная сторона обработана грубо. В центре плиты в раме в виде tabula ansata  вырезана семистрочная надпись</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">80</height>
                               <width unit="cm">155</width>
@@ -55,126 +57,126 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Θ с замкнутой поперечной линией, курсивное Μ, Π с равными вертикалями и выходящей за их пределы горизонталью, 
+                        <seg xml:lang="ru" part="N">Θ с замкнутой поперечной линией, курсивное Μ, Π с равными вертикалями и выходящей за их пределы горизонталью, 
                            прямоугольная Σ, Ω в виде перевернутого Μ, лигатуры ΗΣ, ΤΕ, ΩΣ умеренное апицирование.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">3 – 3,5.</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0233" evidence="Палеография">
-                        <seg xml:lang="ru">Вторая половина II в. – начало III в. н.э.</seg>
-                        <seg xml:lang="en">2nd half of II - early III centuries C.E.</seg>
+                     <origDate notBefore="0151" notAfter="0233" evidence="Палеография" instant="false">
+                        <seg xml:lang="ru" part="N">Вторая половина II в. – начало III в. н.э.</seg>
+                        <seg xml:lang="en" part="N">2nd half of II - early III centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1935 г. в северном районе городища при раскопках базилики VI в.; использована в качестве вымостки пола. 
                            Раскопки Г.Д. Белова.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
-         <change when="2015-11-09" who="CB">Added origDate</change>
-         <change when="2015-10-22" who="CB">Metadata tags</change>
-          <change when="2015-09-30" who="AS">Leidenised Greek text</change>
-         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
+         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-22" who="CB" status="draft">Metadata tags</change>
+          <change when="2015-09-30" who="AS" status="draft">Leidenised Greek text</change>
+         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 80, № <citedRange>10, II</citedRange></bibl>
-               <bibl><!--Белов 1940--><ptr target="bib:b0783"/>, 268, № <citedRange>1</citedRange>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Шангин 1938--><ptr target="bib:b0239"/>, 80, № <citedRange>10, II</citedRange></bibl>
+               <bibl default="false" status="draft"><!--Белов 1940--><ptr target="bib:b0783"/>, 268, № <citedRange>1</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl><!--Белов 1938--><ptr target="bib:b0782"/>, 41</bibl>
-               <bibl><!--BullEp 1939--><ptr target="bib:Bull.ép."/>1939, 244</bibl>
-               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 475</bibl>
-               <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 105, № 104.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Белов 1938--><ptr target="bib:b0782"/>, 41</bibl>
+               <bibl default="false" status="draft"><!--BullEp 1939--><ptr target="bib:Bull.ép."/>1939, 244</bibl>
+               <bibl default="false" status="draft"><!--АСХ--><ptr target="bib:b0523"/> № 475</bibl>
+               <bibl default="false" status="draft"><!--Соломоник 1990--><ptr target="bib:b0506"/>, 105, № 104.</bibl>
             </listBibl>
          </div>
           
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n="1"/><persName type="attested"><name>Δε<supplied reason="lost">λ</supplied>φὸς</name> <persName type="attested"><name>Στρατονείκου</name></persName></persName>
-               		<lb n="2"/><w>ἀγορανομήσας</w> <w>καὶ</w> <w>ἄρξας</w> <w>τὴ 
-               		<lb n="3" break="no"/>ν</w> <w>πρώτη<unclear>ν</unclear></w> <w>ἀρχὴν</w>, <w>ζήσας</w> <w>κο               		<!--tag archon as a role?-->
-                        <lb n="4" break="no"/>σμίως</w>  <w>ἔτη</w> <space extent="1" unit="character"/> <w>κεῖμαι</w> <w>ἐν               		
-                        <lb n="5" break="no"/>θάδε</w>, <w>σεμνὸς</w> <w>ἀνὴρ</w>, <w>πάσης</w> <w>ἀρετ               		
-                        <lb n="6" break="no"/>ῆς</w> <w>κὲ</w> <w>δόξης</w> <w>ἐπεν<supplied reason="lost">ούμενος</supplied></w>. 
-               		<lb n="7"/><w>χαῖρετε</w>, <w>παροδεῖτ<unclear>α</unclear><supplied reason="lost">ι</supplied></w>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Δε<supplied reason="lost" instant="false">λ</supplied>φὸς</name> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Στρατονείκου</name></persName></persName>
+               		<lb n="2"/><w part="N">ἀγορανομήσας</w> <w part="N">καὶ</w> <w part="N">ἄρξας</w> <w part="N">τὴ 
+               		<lb n="3" break="no"/>ν</w> <w part="N">πρώτη<unclear instant="false">ν</unclear></w> <w part="N">ἀρχὴν</w>, <w part="N">ζήσας</w> <w part="N">κο               		<!--tag archon as a role?-->
+                        <lb n="4" break="no"/>σμίως</w>  <w part="N">ἔτη</w> <space extent="1" unit="character"/> <w part="N">κεῖμαι</w> <w part="N">ἐν               		
+                        <lb n="5" break="no"/>θάδε</w>, <w part="N">σεμνὸς</w> <w part="N">ἀνὴρ</w>, <w part="N">πάσης</w> <w part="N">ἀρετ               		
+                        <lb n="6" break="no"/>ῆς</w> <w part="N">κὲ</w> <w part="N">δόξης</w> <w part="N">ἐπεν<supplied reason="lost" instant="false">ούμενος</supplied></w>. 
+               		<lb n="7"/><w part="N">χαῖρετε</w>, <w part="N">παροδεῖτ<unclear instant="false">α</unclear><supplied reason="lost" instant="false">ι</supplied></w>
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
                <app><rdg source="bib:b0239"/></app>
-               <app loc="3"><rdg source="bib:b0239">πρώτη[ν]</rdg> 
-                  <note>ΗΣ в лигатуре.</note></app>
-               <app loc="4"><note>ΩΣ в лигатуре</note></app>
-               <app loc="5"><rdg source="bib:b0239">ἀρ(ε)τ</rdg></app>
-               <app loc="6"><rdg>κὲ = καὶ</rdg>
-                <rdg>ἐπεν[ούμενος]<note> scripsi secundum lap. (= ἐπαιν[ούμενος])</note></rdg> 
-                <rdg source="bib:b0239">ἐπ(αι)ν[ούμενος]</rdg> 
-                <rdg source="bib:b0782">ἐπέν[δυμα <note>vel</note> -δυσις <note>vel</note> -δύτης]</rdg>
-                  <note>ΗΣ в лигатуре.</note></app>
-               <app loc="7"><rdg>παροδεῖτ[αι] <note>- edd.,  ΤΕ в лигатуре.</note></rdg></app>
+               <app loc="3"><rdg source="bib:b0239">πρώτη[ν]</rdg> 
+                  <note anchored="true">ΗΣ в лигатуре.</note></app>
+               <app loc="4"><note anchored="true">ΩΣ в лигатуре</note></app>
+               <app loc="5"><rdg source="bib:b0239">ἀρ(ε)τ</rdg></app>
+               <app loc="6"><rdg>κὲ = καὶ</rdg>
+                <rdg>ἐπεν[ούμενος]<note anchored="true"> scripsi secundum lap. (= ἐπαιν[ούμενος])</note></rdg> 
+                <rdg source="bib:b0239">ἐπ(αι)ν[ούμενος]</rdg> 
+                <rdg source="bib:b0782">ἐπέν[δυμα <note anchored="true">vel</note> -δυσις <note anchored="true">vel</note> -δύτης]</rdg>
+                  <note anchored="true">ΗΣ в лигатуре.</note></app>
+               <app loc="7"><rdg>παροδεῖτ[αι] <note anchored="true">- edd.,  ΤΕ в лигатуре.</note></rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>Дельф, (сын) Стратоника, бывший агораномом и первым архонтом, проживший подобающим образом vac. лет. 
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Дельф, (сын) Стратоника, бывший агораномом и первым архонтом, проживший подобающим образом vac. лет. 
                Я лежу здесь, почтенный муж, [хвалимый] за все добродетели и славу. Здравствуйте, путники.</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>Г. Д. Белов (1940, 269) указал на то, что в надписи пропущен возраст умершего и сделал из этого вывод, что плита была изготовлена еще при жизни Дельфа. 
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Г. Д. Белов (1940, 269) указал на то, что в надписи пропущен возраст умершего и сделал из этого вывод, что плита была изготовлена еще при жизни Дельфа. 
                Это обстоятельство хорошо согласуется «с теми примерами незаконченности обработки, которые мы неоднократно наблюдали на рельефах» (АСХ, с. 152).</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

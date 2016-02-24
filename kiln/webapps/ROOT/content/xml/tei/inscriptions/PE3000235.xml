@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Посвящение Пасиада, сына Артемидора.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000235</idno>
             <idno type="PE">PE3000235</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc5">Посвятительная надпись.</seg>
-                     <seg xml:lang="en">Dedicatory.</seg>
+                     <seg xml:lang="ru" corresp="#doc5" part="N">Посвятительная надпись.</seg>
+                     <seg xml:lang="en" part="N">Dedicatory.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,13 +44,13 @@
                            <objectType xml:lang="en">Altar.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранились почти целиком два блока, не соединяющихся в контакте. 
+                           <p xml:lang="ru" part="N">Сохранились почти целиком два блока, не соединяющихся в контакте. 
                               Один блок (а) с фасада украшен тремя рельефными изображениями букраниев, соединенными двумя свисающими гирляндами. 
                               Между букраниями две розетки. Тыльная сторона обработана грубо. Карниз с овами сбит, частично сохранился жемчужник. 
                               Под правой гирляндой сохранилась часть тщательно вырезанной двухстрочной надписи. 
                               Другой (анэпиграфный) блок (b) слева немного сколот, справа гладко подтесан. Eго лицевая поверхность украшена букранием и гирляндами. 
                               Над правой гирляндой круглая розетка. Сохранился карниз, украшенный овами и жемчужником.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">61</height>
                               <width unit="cm">79</width>
@@ -58,128 +60,128 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Μ с наклонными боковыми линиями и короткими внутренними гастами, вертикали Ν имеют почти одинаковую длину, 
+                        <seg xml:lang="ru" part="N">Μ с наклонными боковыми линиями и короткими внутренними гастами, вертикали Ν имеют почти одинаковую длину, 
                            верхняя поперечная линия Π чуть выступает за короткую правую вертикаль, Σ с немного расходящимися верхней и нижней гастами, 
                            маленькая полукруглая Ω с короткими боковыми горизонталями, слегка изогнутые линии отдельных букв (Α, Δ, Λ, Σ), 
                            небольшие апексы на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">2,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0251" evidence="Палеография" precision="low">
-                        <seg xml:lang="ru">Первая половина III в. до н.э.</seg>
-                        <seg xml:lang="en">1st half of III century B.C.</seg>
+                     <origDate notBefore="-0300" notAfter="-0251" evidence="Палеография" precision="low" instant="false">
+                        <seg xml:lang="ru" part="N">Первая половина III в. до н.э.</seg>
+                        <seg xml:lang="en" part="N">1st half of III century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найден в 1851 г. при раскопках Уваровской базилики (№ 23), проводившихся лейтенантом Шемякиным 
                            (Бертье-Делагард 1893, 19; Латышев 1895, 77, прим. 2; IOSPE I2 414, p. 377).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Одесса, Украина.</seg>
-                     <seg xml:lang="en">Odessa, Ukraine.</seg>
+                     <seg xml:lang="ru" part="N">Одесса, Украина.</seg>
+                     <seg xml:lang="en" part="N">Odessa, Ukraine.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-06" who="CB">Added origDate</change>
-         <change when="2015-10-14" who="CB">Bibliography</change>
-         <change when="2015-08-26" who="CB">App crit</change>
-         <change when="2015-07-15" who="KK">Add photo file name</change>
-         <change when="2015-06-26" who="CB">Tagging metadata.</change>
-         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-14" who="CB" status="draft">Bibliography</change>
+         <change when="2015-08-26" who="CB" status="draft">App crit</change>
+         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
+         <change when="2015-06-26" who="CB" status="draft">Tagging metadata.</change>
+         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
+         <change when="2015-05-15" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="30.420A">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="30.420A.a">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="30.420B">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Латышев 1892--><ptr target="bib:b0125"/>, 25, № <citedRange>7</citedRange></bibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV, 87</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>414</citedRange>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Латышев 1892--><ptr target="bib:b0125"/>, 25, № <citedRange>7</citedRange></bibl>
+               <bibl default="false" status="draft"><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV, 87</citedRange></bibl>
+               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>414</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl><!--Бертье-Делагард 1893--><ptr target="bib:b0026"/>, 19, табл. IV 2</bibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 11 и 77, № 7</bibl>
-               <bibl><!--Пичикян 1976--><ptr target="bib:b0483"/>, 248 сл. (Пичикян 1984, 198 сл.)</bibl>
-               <bibl><!--АСХ 167--><ptr target="bib:b0523"/>, № 533, 534.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Бертье-Делагард 1893--><ptr target="bib:b0026"/>, 19, табл. IV 2</bibl>
+               <bibl default="false" status="draft"><!--Латышев 1895--><ptr target="bib:b0130"/>, 11 и 77, № 7</bibl>
+               <bibl default="false" status="draft"><!--Пичикян 1976--><ptr target="bib:b0483"/>, 248 сл. (Пичикян 1984, 198 сл.)</bibl>
+               <bibl default="false" status="draft"><!--АСХ 167--><ptr target="bib:b0523"/>, № 533, 534.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               	<lb n="1"/><persName type="attested"><name>Πασιάδας</name> <name>Ἀρτεμι<unclear>δ</unclear><supplied reason="lost">ώρου</supplied></name></persName> 
-               <gap reason="lost" extent="unknown" unit="character"/> 
-               	<lb n="2"/><w>βασιλεύων</w> <w>ἰερεὺς</w> <w>ἐ<supplied reason="lost">ών</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               	<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Πασιάδας</name> <name full="yes" instant="false">Ἀρτεμι<unclear instant="false">δ</unclear><supplied reason="lost" instant="false">ώρου</supplied></name></persName> 
+               <gap reason="lost" extent="unknown" unit="character" instant="false"/> 
+               	<lb n="2"/><w part="N">βασιλεύων</w> <w part="N">ἰερεὺς</w> <w part="N">ἐ<supplied reason="lost" instant="false">ών</supplied></w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
                <app>
-                  <rdg source="bib:b0483">Πασιάδας Ἀρτεμιδ[ώρου Παρθένωι (?)] | βασιλεύων ἱερεὺς ἐ[ών ἀνέθηκεν (?)] <note>Виноградов apud Пичикян 1976, 255</note></rdg>
+                  <rdg source="bib:b0483">Πασιάδας Ἀρτεμιδ[ώρου Παρθένωι (?)] | βασιλεύων ἱερεὺς ἐ[ών ἀνέθηκεν (?)] <note anchored="true">Виноградов apud Пичикян 1976, 255</note></rdg>
                </app>
                <app loc="2">
-                  <rdg source="bib:IOSPE bib:IOSPE2">ἐ[ών ---]</rdg> <rdg source="bib:b0125">ἐ[πεσκεύαξεν (?)] <corr source="bib:b0130"/></rdg>
+                  <rdg source="bib:IOSPE bib:IOSPE2">ἐ[ών ---]</rdg> <rdg source="bib:b0125">ἐ[πεσκεύαξεν (?)] <corr source="bib:b0130" instant="false"/></rdg>
                </app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>Пасиад, (сын) Артемидора, будучи царем и жрецом [---].</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Пасиад, (сын) Артемидора, будучи царем и жрецом [---].</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>Латышев (IOSPE I2) вслед за Бертье-Делагардом (1893, 19) интерпретировал фрагмент а как плиту фриза, относящегося к ионическому храму Диониса («tabula.., quae olim videtur angulum effecisse zoophori templi...; tabulae ornamenta (hedera scilicet et hirci caput) probare nobis videntur templum illud Baccho esse dicatum»). Как показал Пичикян (1976 и 1984), блоки a и b в действительности представляют собой фасадную и торцовую части прямоугольного монументального алтаря (реконструируемые размеры в плане: 132 х 264 см), сверху, вероятно, увенчанного гладкой плитой с лунками и угловыми акротериями. Кроме того, Пичикян  упоминает фрагмент плинтуса и некоторые другие архитектурные детали из НЗХТ, атрибуируемые тому же сооружению (Пичикян 1976, 249; Пичикян 1984, 200 и 206 сл.).</p>
-            <p>	Как показывают эта и другие надписи (№ ipe410, 415, ined), в эллинистическое время функции царя (в качестве эпонимной эта магистратура засвидетельствована впервые в первой половине II в. до н.э., ср. № ipe402) и жреца Девы исполнялись в Херсонесе одновременно одним и тем же лицом. Связь царя-эпонима с культом Девы указывает на то, что адресатом этого посвящения являлась богиня-покровительница Херсонеса (ср. упоминание τὸν τᾶς Παρθένου βωμόν ἑν τᾶι ἀκροπόλει в № ipe352, стк. 51).</p>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Латышев (IOSPE I2) вслед за Бертье-Делагардом (1893, 19) интерпретировал фрагмент а как плиту фриза, относящегося к ионическому храму Диониса («tabula.., quae olim videtur angulum effecisse zoophori templi...; tabulae ornamenta (hedera scilicet et hirci caput) probare nobis videntur templum illud Baccho esse dicatum»). Как показал Пичикян (1976 и 1984), блоки a и b в действительности представляют собой фасадную и торцовую части прямоугольного монументального алтаря (реконструируемые размеры в плане: 132 х 264 см), сверху, вероятно, увенчанного гладкой плитой с лунками и угловыми акротериями. Кроме того, Пичикян  упоминает фрагмент плинтуса и некоторые другие архитектурные детали из НЗХТ, атрибуируемые тому же сооружению (Пичикян 1976, 249; Пичикян 1984, 200 и 206 сл.).</p>
+            <p part="N">	Как показывают эта и другие надписи (№ ipe410, 415, ined), в эллинистическое время функции царя (в качестве эпонимной эта магистратура засвидетельствована впервые в первой половине II в. до н.э., ср. № ipe402) и жреца Девы исполнялись в Херсонесе одновременно одним и тем же лицом. Связь царя-эпонима с культом Девы указывает на то, что адресатом этого посвящения являлась богиня-покровительница Херсонеса (ср. упоминание τὸν τᾶς Παρθένου βωμόν ἑν τᾶι ἀκροπόλει в № ipe352, стк. 51).</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

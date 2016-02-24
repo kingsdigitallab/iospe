@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Посвящение Посидея Афине Линдии.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000384</idno>
             <idno type="PE">PE3000384</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc5">Посвятительная надпись.</seg>
-                     <seg xml:lang="en">Dedicatory inscription.</seg>
+                     <seg xml:lang="ru" corresp="#doc5" part="N">Посвятительная надпись.</seg>
+                     <seg xml:lang="en" part="N">Dedicatory inscription.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,10 +43,10 @@
                            <objectType xml:lang="ru" ref="#mon12">Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru"/>
-                           <material xml:lang="en"></material>
-                           <p xml:lang="ru">Оббит с лицевой и тыльной стороны. Поверхность тщательно обработана, три боковые фаса отшлифованы. 
+                           <material xml:lang="en"/>
+                           <p xml:lang="ru" part="N">Оббит с лицевой и тыльной стороны. Поверхность тщательно обработана, три боковые фаса отшлифованы. 
                               На верхней плоскости два округлых углубления для крепления статуи. На лицевой грани двухстрочная надпись.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">27</height>
                               <width unit="cm">47,5</width>
@@ -54,121 +56,121 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Α с ломаной перекладиной, горизонталь Π выступает за укороченную правую боковую гасту, гасты Σ параллельны, 
+                        <seg xml:lang="ru" part="N">Α с ломаной перекладиной, горизонталь Π выступает за укороченную правую боковую гасту, гасты Σ параллельны, 
                            апексы и утолщения на концах букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">2 - 2,5.</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">«Неаполь Скифский».</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">«Неаполь Скифский».</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография">
-                        <seg xml:lang="ru">Середина - вторая половина II в. до н.э.</seg>
-                        <seg xml:lang="en">Mid - 2nd half of II century B.C.</seg>
+                     <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография" instant="false">
+                        <seg xml:lang="ru" part="N">Середина - вторая половина II в. до н.э.</seg>
+                        <seg xml:lang="en" part="N">Mid - 2nd half of II century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot"><!--Керменчик (совр. Симферополь).--></placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes"><!--Керменчик (совр. Симферополь).--></placeName>
                         <rs type="circumstances">Обнаружена случайно в 1827 г. в южной части городища при добыче строительного камня в Керменчике (в вырубленном в скале котловане, служившем подземной частью монументальной гробницы Аргота; ср. № VinZajc2003). Куплена А.И. Султан-Крым-Гиреем и передана им И.П. Бларамбергу.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes"/>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Одесса, Украина.</seg>
-                     <seg xml:lang="en">Odessa, Ukraine</seg>
+                     <seg xml:lang="ru" part="N">Одесса, Украина.</seg>
+                     <seg xml:lang="en" part="N">Odessa, Ukraine</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
-         <change when="2015-11-06" who="CB">Added origDate</change>
-         <change when="2015-10-19" who="CB">Bibliography</change>
-         <change when="2015-09-02" who="CB">Metadata and app crit</change>
-         <change when="2015-07-15" who="KK">Add photo file name</change>
-         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-03-16" who="AV">tagging Greek names XML from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
+         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-19" who="CB" status="draft">Bibliography</change>
+         <change when="2015-09-02" who="CB" status="draft">Metadata and app crit</change>
+         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
+         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
+         <change when="2015-03-16" who="AV" status="draft">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="30.703">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Blaramberg 1827--> <ptr target="bib:b0763"/></bibl>  <bibl>(= <!--Blaramberg 1831--><ptr target="bib:b0765"/></bibl>
-               <bibl><!--Бларамберг 1889--><ptr target="bib:b0765"/>, <citedRange>60</citedRange>)</bibl>
-               <bibl><!--CIG II--><ptr target="bib:CIG"/> <citedRange>2, 2103c </citedRange>(А. Бек по копиям Келера и Бларамберга)</bibl>
-               <bibl><!--IOSPE (1885)--><ptr target="bib:IOSPE"/>, <citedRange>I 243</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>671</citedRange></bibl>
-               <bibl><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>37</citedRange></bibl>
-               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/>,50 , №<citedRange>4</citedRange>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Blaramberg 1827--> <ptr target="bib:b0763"/></bibl>  <bibl default="false" status="draft">(= <!--Blaramberg 1831--><ptr target="bib:b0765"/></bibl>
+               <bibl default="false" status="draft"><!--Бларамберг 1889--><ptr target="bib:b0765"/>, <citedRange>60</citedRange>)</bibl>
+               <bibl default="false" status="draft"><!--CIG II--><ptr target="bib:CIG"/> <citedRange>2, 2103c </citedRange>(А. Бек по копиям Келера и Бларамберга)</bibl>
+               <bibl default="false" status="draft"><!--IOSPE (1885)--><ptr target="bib:IOSPE"/>, <citedRange>I 243</citedRange></bibl>
+               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>671</citedRange></bibl>
+               <bibl default="false" status="draft"><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>37</citedRange></bibl>
+               <bibl default="false" status="draft"><!--Зайцев 2003--><ptr target="bib:b0464"/>,50 , №<citedRange>4</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl><!--Minns 1913--><ptr target="bib:b0336"/> , 463</bibl>
-               <bibl><!--Bull. ép. 1965--><ptr target="bib:Bull. ép."/>, 1964, 272</bibl>
-               <bibl><!--Κοντορίνη 1981--><ptr target="bib:b0476"/>, 226 слл.</bibl>
-               <bibl><!--Vinogradov 1997--><ptr target="bib:b0453"/>, 68</bibl>
-               <bibl><!--Трейстер 1999--><ptr target="bib:b0509"/>, 36, № 3(19)</bibl>
-               <bibl><!--Hupe 2003--><ptr target="bib:b0433"/>, 293.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Minns 1913--><ptr target="bib:b0336"/> , 463</bibl>
+               <bibl default="false" status="draft"><!--Bull. ép. 1965--><ptr target="bib:Bull. ép."/>, 1964, 272</bibl>
+               <bibl default="false" status="draft"><!--Κοντορίνη 1981--><ptr target="bib:b0476"/>, 226 слл.</bibl>
+               <bibl default="false" status="draft"><!--Vinogradov 1997--><ptr target="bib:b0453"/>, 68</bibl>
+               <bibl default="false" status="draft"><!--Трейстер 1999--><ptr target="bib:b0509"/>, 36, № 3(19)</bibl>
+               <bibl default="false" status="draft"><!--Hupe 2003--><ptr target="bib:b0433"/>, 293.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               	<lb n="1"/><persName type="divine"><name><supplied reason="lost">Ἀθ</supplied><unclear>η</unclear>νᾶι</name></persName> 
-                    <placeName type="ethnic"><name>Λινδίαι</name></placeName>
-               	<lb n="2"/><persName type="attested"><name><supplied reason="lost">Ποσίδ</supplied>εος</name> 
-               	<persName type="attested"><name>Ποσιδέο<unclear>υ</unclear></name></persName></persName>
-               	<lb n="3"/><w><supplied reason="lost">χα</supplied>ριστήριον</w>.
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               	<lb n="1"/><persName type="divine" instant="false" full="yes"><name full="yes" instant="false"><supplied reason="lost" instant="false">Ἀθ</supplied><unclear instant="false">η</unclear>νᾶι</name></persName> 
+                    <placeName type="ethnic" instant="false" full="yes"><name full="yes" instant="false">Λινδίαι</name></placeName>
+               	<lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><supplied reason="lost" instant="false">Ποσίδ</supplied>εος</name> 
+               	<persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ποσιδέο<unclear instant="false">υ</unclear></name></persName></persName>
+               	<lb n="3"/><w part="N"><supplied reason="lost" instant="false">χα</supplied>ριστήριον</w>.
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app><note>Legit Boeck (CIG)</note></app>
-                 <app><rdg source="bib:b0763">Ἀθηνᾶι Λινδίαι</rdg></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app><note anchored="true">Legit Boeck (CIG)</note></app>
+                 <app><rdg source="bib:b0763">Ἀθηνᾶι Λινδίαι</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>Посидей, (сын) Посидея, (посвятил) Афине Линдии благодарственный дар.</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">Посидей, (сын) Посидея, (посвятил) Афине Линдии благодарственный дар.</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p>	В предварительном сообщении об эпиграфических находках из Керменчика (Одесский вестник от 3.09.1827 г.) Бларамберг предположительно интерпретировал надпись как посвящение «нимфе Напее Акмине» (ср. упоминание Напеи Акмины в анонимной статье 1827 г. «Открытие признаков древней крепости близ Симферополя» // Сын Отечества. Ч. 115. 360, 363), однако уже в его следующей публикации (Blaramberg 1831, 16; ср. Латышев в IOSPE I 243, p. 217: “apparet Blarambergium primo titulum non recte intellexisse: narratur enim de Napaea quadam nympha”. Подробнее см. Соломоник 1962, 32 сл.) ошибочное чтение больше не упоминалось, а имя божества было верно понято как Афина Линдия.</p>
-            <p>	Культ Афины Линдии, покровительницы Линдоса, являлся одним из наиболее популярных на территории Родоса. Одной из функций этого божества было покровительство мореплаванию. За пределами Родоса этот культ встречается редко (см. Hupe 2003, 293). О Посидее, сыне Посидея, см. комментарий к № ipe670.</p>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">	В предварительном сообщении об эпиграфических находках из Керменчика (Одесский вестник от 3.09.1827 г.) Бларамберг предположительно интерпретировал надпись как посвящение «нимфе Напее Акмине» (ср. упоминание Напеи Акмины в анонимной статье 1827 г. «Открытие признаков древней крепости близ Симферополя» // Сын Отечества. Ч. 115. 360, 363), однако уже в его следующей публикации (Blaramberg 1831, 16; ср. Латышев в IOSPE I 243, p. 217: “apparet Blarambergium primo titulum non recte intellexisse: narratur enim de Napaea quadam nympha”. Подробнее см. Соломоник 1962, 32 сл.) ошибочное чтение больше не упоминалось, а имя божества было верно понято как Афина Линдия.</p>
+            <p part="N">	Культ Афины Линдии, покровительницы Линдоса, являлся одним из наиболее популярных на территории Родоса. Одной из функций этого божества было покровительство мореплаванию. За пределами Родоса этот культ встречается редко (см. Hupe 2003, 293). О Посидее, сыне Посидея, см. комментарий к № ipe670.</p>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

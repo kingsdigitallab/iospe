@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Фрагмент женского надгробия.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000174</idno>
             <idno type="PE">PE3000174</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
+                     <seg xml:lang="en" part="N">Epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,9 +44,9 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Тыльная сторона обтесана. На камне многочисленные следы известкового раствора. 
+                           <p xml:lang="ru" part="N">Оббита со всех сторон. Тыльная сторона обтесана. На камне многочисленные следы известкового раствора. 
                               Сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">11</height>
                               <width unit="cm">10,5</width>
@@ -54,106 +56,106 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Крупные, глубоко вырезанные буквы, Θ с незамкнутой поперечной линией, Ο немного меньше остальных букв, Υ с перекрестием, апексы.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="ru" part="N">Крупные, глубоко вырезанные буквы, Θ с незамкнутой поперечной линией, Ο немного меньше остальных букв, Υ с перекрестием, апексы.</seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">2</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
-                        <seg xml:lang="ru">II в. н.э. (скорее вторая половина).</seg>
-                        <seg xml:lang="en">II century C.E. (probably 2nd half).</seg>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low" instant="false">
+                        <seg xml:lang="ru" part="N">II в. н.э. (скорее вторая половина).</seg>
+                        <seg xml:lang="en" part="N">II century C.E. (probably 2nd half).</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1990 г. в северном районе городища (квадрат 10A, 9-я поперечная улица). Раскопки С.Г. Рыжова.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-09" who="CB">Added origDate</change>
-         <change when="2015-10-30" who="CB">biblio and app crit</change>
-         <change when="2015-10-22" who="CB">Metadata</change>
-         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
+         <change when="2015-10-30" who="CB" status="draft">biblio and app crit</change>
+         <change when="2015-10-22" who="CB" status="draft">Metadata</change>
+         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl>Ineditum.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft">Ineditum.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl/>
+            <listBibl default="false">
+               <bibl default="false" status="draft"/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/> 
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w>θυγάτ<supplied reason="lost">ηρ</supplied></w>
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">θου</w>, <w>γυ<supplied reason="lost">νὰ</supplied></w><w> <supplied reason="lost">δὲ</supplied></w>
-               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w part="M"><orig><unclear>τ</unclear>ρ</orig></w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="5"/><gap reason="lost" extent="unknwon" unit="line"/> 
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line" instant="false"/> 
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character" instant="false"/> <w part="N">θυγάτ<supplied reason="lost" instant="false">ηρ</supplied></w>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><w part="F">θου</w>, <w part="N">γυ<supplied reason="lost" instant="false">νὰ</supplied></w><w part="N"> <supplied reason="lost" instant="false">δὲ</supplied></w>
+               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><w part="M"><orig><unclear instant="false">τ</unclear>ρ</orig></w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n="5"/><gap reason="lost" extent="unknwon" unit="line" instant="false"/> 
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app loc="2"><rdg><note>e.g.:</note> [Ξάν]θου vel [Ζήθ]ου <note>(среди личных имен, засвидетельствованных в Херсонесе).</note></rdg></app>
-               <app loc="3"><rdg><note>e.g.:</note> [Δαμα]<unclear>τ</unclear>ρ[ίου] <note>vel</note> [Μη]<unclear>τ</unclear>ρ[οδώρου] <note>vel sim.</note></rdg></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app loc="2"><rdg><note anchored="true">e.g.:</note> [Ξάν]θου vel [Ζήθ]ου <note anchored="true">(среди личных имен, засвидетельствованных в Херсонесе).</note></rdg></app>
+               <app loc="3"><rdg><note anchored="true">e.g.:</note> [Δαμα]<unclear instant="false">τ</unclear>ρ[ίου] <note anchored="true">vel</note> [Μη]<unclear instant="false">τ</unclear>ρ[οδώρου] <note anchored="true">vel sim.</note></rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>[Такая-то], дочь [---], жена [---].</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">[Такая-то], дочь [---], жена [---].</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p/>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>

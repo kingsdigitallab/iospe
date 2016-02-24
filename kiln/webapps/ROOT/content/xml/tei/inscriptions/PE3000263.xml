@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
+   <teiHeader type="text">
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Список победителей на спортивных состязаниях, сопровождающийся метрической надписью.</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -15,7 +17,7 @@
             <idno type="filename">PE3000263</idno>
             <idno type="PE">PE3000263</idno>
          </publicationStmt>
-         <sourceDesc>
+         <sourceDesc default="false">
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -28,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents>
+               <msContents defective="false">
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc17">Список победителей на состязаниях.</seg>
-                     <seg xml:lang="en">List of winners in competitions</seg>
+                     <seg xml:lang="ru" corresp="#doc17" part="N">Список победителей на состязаниях.</seg>
+                     <seg xml:lang="en" part="N">List of winners in competitions</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -42,9 +44,9 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble</material>
-                           <p xml:lang="ru">Частично сохранился левый край с остатками надписи, выполненной по разметке. Эпиграфическое поле ограничено рельефной рамкой. 
+                           <p xml:lang="ru" part="N">Частично сохранился левый край с остатками надписи, выполненной по разметке. Эпиграфическое поле ограничено рельефной рамкой. 
                               Лицевая поверхность отшлифована, тыльная сторона обработана суммарно.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en" part="N"/>
                            <dimensions>
                               <height unit="cm">26</height>
                               <width unit="cm">14</width>
@@ -54,127 +56,127 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru" part="N"/>
+                           <seg xml:lang="en" part="N"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Α с прямой поперечной линией, правая наклонная гаста Δ продлена за пересечение с левой гастой, овальная Θ замкнутой перекладиной, 
+                        <seg xml:lang="ru" part="N">Α с прямой поперечной линией, правая наклонная гаста Δ продлена за пересечение с левой гастой, овальная Θ замкнутой перекладиной, 
                            Μ с немного расходящимися внешними гастами, Π с вертикалями одинаковой длины и выходящей за их пределы горизонталью, 
                            Σ с параллельными верхней и нижней линиями, Ω в форме подковы, незначительное апицирование.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en" part="N"/>
                         <height unit="cm">1</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin>
-                     <origPlace>
-                        <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"></seg>
+                  <origin instant="false">
+                     <origPlace instant="false">
+                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
+                        <seg xml:lang="en" part="N"/>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0100" evidence="Палеография" precision="low">
-                        <seg xml:lang="ru">I в. н.э.</seg>
-                        <seg xml:lang="en">I century C.E.</seg>
+                     <origDate notBefore="0001" notAfter="0100" evidence="Палеография" precision="low" instant="false">
+                        <seg xml:lang="ru" part="N">I в. н.э.</seg>
+                        <seg xml:lang="en" part="N">I century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru" part="N">
+                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1903 г. в южном районе («на акрополе») Херсонеса, на участке  античного театра III в. до н.э. (северо-западнее позднейшего «крестообразного храма с ковчегом», возможно, на месте современного античного отдела музея). Раскопки К.К. Косцюшко-Валюжинича  НА НЗХТ, д. 12, л. 21, № 229; д. 32, л. 3, № 229).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en" part="N">
+                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <seg xml:lang="ru" part="N">Севастополь.</seg>
+                     <seg xml:lang="en" part="N">Sevastopol.</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
-         <change when="2015-11-23" who="CB">Leidenised, tokenised, metadata, origDate, biblio and app crit</change>
-         <change when="2015-11-13" who="PC">programmatically created XML from Word docs</change>
+      <revisionDesc status="draft">
+         <change when="2015-11-23" who="CB" status="draft">Leidenised, tokenised, metadata, origDate, biblio and app crit</change>
+         <change when="2015-11-13" who="PC" status="draft">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
    <text>
       <body>
-         <div type="bibliography">
+         <div type="bibliography" part="N" org="uniform" sample="complete">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Латышев 1904--><ptr target="bib:b0144"/>, 20, № <citedRange>24</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>434</citedRange>.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft"><!--Латышев 1904--><ptr target="bib:b0144"/>, 20, № <citedRange>24</citedRange></bibl>
+               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>434</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries">
+         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
             <!-- Комментарии -->
-            <listBibl>
-               <bibl>Соломоник 1967a<ptr target="bib:b0502"/>, 70</bibl>
-               <bibl>Соломоник 1990<ptr target="bib:b0506"/>, 63, № 53.</bibl>
+            <listBibl default="false">
+               <bibl default="false" status="draft">Соломоник 1967a<ptr target="bib:b0502"/>, 70</bibl>
+               <bibl default="false" status="draft">Соломоник 1990<ptr target="bib:b0506"/>, 63, № 53.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-               		<lb n=""/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <gap reason="illegible" extent="3" unit="character"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" extent="4" unit="character"/>
-               		<lb n=""/><w>στάδιον</w>· <persName type="attested"><name>Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>δίαυλον</w>· <persName type="attested"><name>Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>δόλιχον</w>· <persName type="attested"><name>ʼΑντίλοχο<supplied reason="lost">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>πάλην</w>· <persName type="attested"><name>Κριτόβουλο<supplied reason="lost">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w>καὶ</w> <persName type="attested"><name>Θεοδόσις</name></persName>
-               <persName type="attested"><name><seg part="I">Η</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>πυγμήν</w>· <persName type="attested"><name>Κριτόβου<supplied reason="lost">λος</supplied></name></persName> 
-               <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w>καὶ</w> <persName type="attested"><name>ʼΑντίλοχος</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+            <ab part="N">
+               		<lb n=""/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <gap reason="illegible" extent="3" unit="character" instant="false"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><gap reason="illegible" extent="4" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">στάδιον</w>· <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">δίαυλον</w>· <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">δόλιχον</w>· <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">ʼΑντίλοχο<supplied reason="lost" instant="false">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">πάλην</w>· <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Κριτόβουλο<supplied reason="lost" instant="false">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="N">καὶ</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Θεοδόσις</name></persName>
+               <persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><seg part="I">Η</seg></name></persName><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">πυγμήν</w>· <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Κριτόβου<supplied reason="lost" instant="false">λος</supplied></name></persName> 
+               <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="N">καὶ</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">ʼΑντίλοχος</name></persName> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
                		<lb n=""/><space quantity="1" unit="line"/>
-               		<lb n=""/><w>μηκύνου</w> <w part="I">ταρσ</w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w>πάντοθε<supplied reason="lost">ν</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>σωτὴρ</w> <w>γὰρ</w> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w>εὔλογος</w> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>εὐκόσμου</w><w part="I"> δ</w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w>ἔπλεο</w> <w part="I">γυμ<supplied reason="lost">ν</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w>ἄθλοισιν</w> <w part="I">τ</w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w>ὧν</w> <w>σέθ<supplied reason="lost">εν</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><space extent="unknown" unit="character"/> <w part="I">στέμμα</w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n=""/><w part="I">γυμν</w><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n=""/><w part="N">μηκύνου</w> <w part="I">ταρσ</w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="N">πάντοθε<supplied reason="lost" instant="false">ν</supplied></w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">σωτὴρ</w> <w part="N">γὰρ</w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="N">εὔλογος</w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">εὐκόσμου</w><w part="I"> δ</w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="N">ἔπλεο</w> <w part="I">γυμ<supplied reason="lost" instant="false">ν</supplied></w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="N">ἄθλοισιν</w> <w part="I">τ</w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="N">ὧν</w> <w part="N">σέθ<supplied reason="lost" instant="false">εν</supplied></w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><space extent="unknown" unit="character"/> <w part="I">στέμμα</w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+               		<lb n=""/><w part="I">γυμν</w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
                		<lb n=""/><space quantity="1" unit="line"/>
             </ab>
          </div>
-         <div type="apparatus">
-            <listApp>
-               <app loc="1"><note>vestigia, om. edd.</note></app>
-               <app loc="5"><rdg>Θεοδόσις = Θεοδόσιος.</rdg></app>
+         <div type="apparatus" part="N" org="uniform" sample="complete">
+            <listApp default="false">
+               <app loc="1"><note anchored="true">vestigia, om. edd.</note></app>
+               <app loc="5"><rdg>Θεοδόσις = Θεοδόσιος.</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru">
-            <p>- - - бег на один стадий: Диокл - - - двойной бег: Диокл - - - бег на длинную дистанцию: Антилох - - - борьба: Критобул - - - и Феодосий - - - кулачный бой: Критобул - - - и Антилох - - -</p>
-            <p>	Tы тянулся (?) - - - отовсюду - - - спаситель - - - разумный - - - хорошо устроенного - - - ты был - - - состязаниям - - - венок - - -</p>
+         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N">- - - бег на один стадий: Диокл - - - двойной бег: Диокл - - - бег на длинную дистанцию: Антилох - - - борьба: Критобул - - - и Феодосий - - - кулачный бой: Критобул - - - и Антилох - - -</p>
+            <p part="N">	Tы тянулся (?) - - - отовсюду - - - спаситель - - - разумный - - - хорошо устроенного - - - ты был - - - состязаниям - - - венок - - -</p>
          </div>
-         <div type="translation" xml:lang="en">
-            <p/>
+         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="ru">
-            <p/>
+         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
-         <div type="commentary" xml:lang="en">
-            <p/>
+         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
+            <p part="N"/>
          </div>
       </body>
    </text>
