@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Абы, дочери Неомения, жены Гипия.</title>
+             <title xml:lang="ru">Стела Абы</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>104/37545.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>104/37545</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>104/37545</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,9 +39,9 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом без антефиксов. 
                               Правый боковой фас и правая часть лицевого фаса стелы повреждены сколами. 
                               На лицевой и боковых сторонах расположены рельефные розетки. 
@@ -51,9 +49,9 @@
                               Между карнизом и розетками неглубоко вырезана четырехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">75</height>
-                              <width unit="cm">29</width>
-                              <depth unit="cm">16</depth>
+                              <height unit="cm">75,0</height>
+                              <width unit="cm">29,0</width>
+                              <depth unit="cm">16,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -69,18 +67,18 @@
                         <seg xml:lang="ru">Ν с немного укороченной правой вертикалью, Ο чуть меньше остальных букв, широко расходящиеся наклонные линии Υ, 
                            отсутствие украшений на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">1,5-2.</height>
+                        <height unit="cm">1,5-2,0</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0350" notAfter="-0268" evidence="Палеография">
-                        <seg xml:lang="ru">2-я пол. IV - начало III в. до н.э.</seg>
+                        <seg xml:lang="ru">2-я пол. IV - нач. III в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IV - early III century B.C.</seg>
                      </origDate>
                   </origin>
@@ -106,6 +104,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-05" who="CB">Adding origDate</change>
          <change when="2015-09-28" who="CB">Bibliography</change>
          <change when="2015-08-21" who="CB">App crit</change>
@@ -128,7 +127,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Макаров, Самойленко 2013--><ptr target="bib:b0487"/>, 65, № <citedRange>1</citedRange>.</bibl>
+               <bibl><!--Макаров, Самойленко 2013--><ptr target="bib:b0487"/>, 65, № <citedRange>1</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -155,16 +154,16 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Женское личное имя Αβα встречается в Северном Причерноморье только в этой надписи. 
+            <p>Женское личное имя Αβα встречается в Северном Причерноморье только в этой надписи. 
                В Западном Понте имя засвидетельствовано дважды, в эпитафии III в. до н.э. из Каллатиса (ISM III 153) и в истрийском почетном декрете II в. н.э. (ISM I 57). 
                Его происхождение остается не вполне ясным. Некоторые исследователи усматривали в нем фракийский корень (Detschew 1957, 1, s.v. Ἄβα). 
                В то же время это ЛИ неоднократно встречалось в Малой Азии (Robert 1958, 581, n. 22; Zgusta 1964, 43, § 1–1). 
                Судя по всему оно должно быть отнесено к категории  «лепетных» («Lallnamen»; ср. Zgusta 1955, 293; ср. Robert 1963, 504 сл.). 
                Возможной параллелью для этого ЛИ в Северном Причерноморье является мужской антропоним Αβαβος, встречающийся в Ольвии I в. н.э. (IOSPE I2 79; 181; 182).</p>
-            <p>	Имя отца Абы Νεομήνιος известно в Херсонесе. В тaком же написании оно встречается в надгробной надписи III в. до н.э. (№ ipe470).
+            <p>Имя отца Абы Νεομήνιος известно в Херсонесе. В тaком же написании оно встречается в надгробной надписи III в. до н.э. (№ ipe470).
                В форме Νευμήνιος имя фиксируется в херсонесской эпиграфике IV–III вв. до н.э. (ср. Bechtel GD II, 170; Buck GD, 40, 165 o дифтонгизации ευ в мегарском диалекте);
                утвердившийся в эпоху койнэ вариант Νουμήνιος засвидетельствован в Херсонесе в одном из декретов римского времени (LGPN IV).</p>
-            <p>	ЛИ Ὕπιος не засвидетельствовано среди греческих антропонимов 
+            <p>ЛИ Ὕπιος не засвидетельствовано среди греческих антропонимов 
                (в Pape–Benseler ошибочно фигурирует как антропоним со ссылкой на CIG III 5894, где в действительности речь идет о гидрониме). 
                Весьма вероятно, что по происхождению оно связано с одноименной рекой Гипий (ср. также название горного хребта, где находились ее истоки) в Вифинии, 
                вблизи которой располагалась метрополия Херсонеса Гераклея Понтийская ([Scylax] 91; Steph. Byz. s.v.). ЛИ, 

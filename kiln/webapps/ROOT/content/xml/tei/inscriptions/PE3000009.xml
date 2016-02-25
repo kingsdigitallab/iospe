@@ -41,13 +41,13 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела с карнизом (на лицевой стороне сбит). Нижняя часть не сохранилась. 
                               Состоит из двух крупных фрагментов. Тыльная сторона обработана суммарно. 
                               В верхней части плиты симметрично по отношению к вертикальной оси вырезана и обведена красной краской двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">127</height>
+                              <height unit="cm">127,0</height>
                               <width unit="cm">42,5</width>
                               <depth unit="cm">19,5</depth>
                            </dimensions>
@@ -71,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0350" notAfter="-0301" evidence="Палеография">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
@@ -102,6 +102,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-03" who="CB">Metadata and app crit</change>
@@ -125,15 +126,15 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 72, № <citedRange>35</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>  <citedRange>169</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 445, № <citedRange>57</citedRange>.</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> <citedRange>169</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 445, № <citedRange>57</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--Виноградов 1975--><ptr target="bib:b0450"/>, 175</bibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 65, № 57.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 65, № 57</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -155,7 +156,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Оба личных имени засвидетельствованы в Херсонесе другими надписями (LGPN IV). 
+            <p>Оба личных имени засвидетельствованы в Херсонесе другими надписями (LGPN IV). 
                Имя Ηρόφιλος фигурирует на близкой по времени стеле № neph154, найденной также в кладке ядра башни Зенона, 
                однако нет достаточных оснований для отождествления упомянутого там лица с отцом Зопира этой надписи.</p>
          </div>

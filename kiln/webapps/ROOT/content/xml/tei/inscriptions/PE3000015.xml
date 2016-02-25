@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Акис, дочери Геронта, жены Онасиклея.</title>
+             <title xml:lang="ru">Надгробие Акис</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,17 +20,17 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>3685.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>3685</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3685</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -43,11 +41,11 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
-                           <material xml:lang="en">Marble</material>
+                           <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Сохранилась полностью. По заранее нанесенной разметке вырезана трехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">7</height>
+                              <height unit="cm">7,0</height>
                               <width unit="cm">16,5</width>
                               <depth unit="cm">3,5</depth>
                            </dimensions>
@@ -65,15 +63,15 @@
                         <seg xml:lang="ru">Ε с короткой средней горизонталью, Ν с немного приподнятой правой гастой, Ο меньше остальных букв, 
                            Σ с расходящимися верхней и нижней линиями, слегка изогнутые линии отдельных букв, утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">1</height>
+                        <height unit="cm">1,0</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
@@ -103,6 +101,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Biblio</change>
          <change when="2015-09-28" who="CB">Biblio and app crit</change>
@@ -125,22 +124,22 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1899--><ptr target="bib:0136"/>, 16, № <citedRange>16</citedRange>.</bibl>
-               <bibl><!--IOSPE--> <ptr target="bib:IOSPE"/> <citedRange>IV, 130</citedRange></bibl>
-               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>504</citedRange>.</bibl>
+               <bibl><!--Латышев 1899--><ptr target="bib:b0136"/>, 16, № <citedRange>16</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV, 130</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>504</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--KW--><ptr target="bib:0519"/> № 15d.</bibl> <!--abbreviated title in Makarov notes: KW-->
+               <bibl><!--KW--><ptr target="bib:b0519"/> № 15d</bibl> <!--abbreviated title in Makarov notes: KW-->
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
 
-               		<lb n="1"/><persName type="attested"><name>Ἀκὶς</name><persName type="attested"><name>Γέροντος</name></persName>,
-               		<lb n="2"/><persName type="attested"><name>Ὀνασικλέος</name></persName><w>γυνά</w></persName>. 
+               		<lb n="1"/><persName type="attested"><name>Ἀκὶς</name> <persName type="attested"><name>Γέροντος</name></persName>,
+               		<lb n="2"/><persName type="attested"><name>Ὀνασικλέος</name></persName> <w>γυνά</w></persName>. 
 
             </ab>
          </div>
@@ -156,7 +155,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Личные имена Ἀκίς (засвидетельствовано также на Боспоре,  LGPN IV) и Ὀνασικλῆς встречаются в Херсoнесе только в этой надписи. 
+            <p>Личные имена Ἀκίς (засвидетельствовано также на Боспоре,  LGPN IV) и Ὀνασικλῆς встречаются в Херсoнесе только в этой надписи. 
                ЛИ Γέρων известно в других херсонесских надписях эллинистического времени.</p>
          </div>
          <div type="commentary" xml:lang="en">

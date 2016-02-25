@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Эсхина, сына Геронта.</title>
+             <title xml:lang="ru">Стела Эсхина</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>ГЭ.</repository>
-                     <idno>Х.1974.1.</idno>
+                     <repository>ГЭ</repository>
+                     <idno>Х.1974.1</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>State Hermitage</repository>
+                     <idno>Х.1974.1</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,17 +39,17 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Верхняя часть стелы с карнизом с антефиксами. Лицевая грань украшена рельефными розетками. 
                               Между карнизом и розетками без предварительной разметки вырезана двухстрочная надпись. 
                               Под розетками коричневой краской нанесено изображение суковатого посоха.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">108</height>
+                              <height unit="cm">108,0</height>
                               <width unit="cm">31,5</width>
-                              <depth unit="cm">15</depth>
+                              <depth unit="cm">15,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -74,12 +72,12 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0250" evidence="Палеография">
-                        <seg xml:lang="ru">Конец IV - первая половина III в. до н.э.</seg>
+                        <seg xml:lang="ru">Кон. IV - 1-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - first half of III century B.C.</seg>
                      </origDate>
                   </origin>
@@ -105,6 +103,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-27" who="CB">corrections to Biblio and app crit</change>
          <change when="2015-09-28" who="CB">Biblio and app crit</change>
@@ -128,14 +127,14 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 68, № <citedRange>27</citedRange></bibl>
-               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/>  <citedRange>161</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 434, № <citedRange>27</citedRange>.</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>  <citedRange>161</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 434, № <citedRange>27</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 38, № 27.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 38, № 27</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -156,7 +155,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Согласно атрибуции Posamentir 2011, 38 стела относится к «кругу мастерской Санниона». 
+            <p>Согласно атрибуции Posamentir 2011, 38 стела относится к «кругу мастерской Санниона». 
                Другие примеры использования этих личных имен в Херсонесе см. LGPN IV.</p>
          </div>
          <div type="commentary" xml:lang="en">

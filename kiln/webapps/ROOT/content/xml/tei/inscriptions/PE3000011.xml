@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Кинолиса, сына Пасиха.</title>
+             <title xml:lang="ru">Стела Кинолиса</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>4/36847.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>4/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,18 +39,18 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела, украшенная карнизом. Расколота на две части. 
                               Сохранилась практически полностью (немного поврежден правый нижний угол). 
                               Двухстрочная надпись вырезана достаточно глубоко и обведена синей краской. 
                               Под надписью рельефное изображение ножа со следами краски.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">185</height>
+                              <height unit="cm">185,0</height>
                               <width unit="cm">37,5</width>
-                              <depth unit="cm">22</depth>
+                              <depth unit="cm">22,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -65,7 +63,7 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">правая вертикаль Ν чуть приподнята, Ο немного меньше остальных букв, укороченная правая вертикаль Π, 
+                        <seg xml:lang="ru">Правая вертикаль Ν чуть приподнята, Ο немного меньше остальных букв, укороченная правая вертикаль Π, 
                            Σ с расходящимися верхней и нижней гастами, узкая Ω, концы дуги которой не сближаются, слабые утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,2</height>
@@ -74,9 +72,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0350" notAfter="-0301" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н. э.</seg>
@@ -105,6 +103,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2015-07-10" who="KK">Add photo file name</change>
          <change when="2015-05-29" who="CB">Metadata tagging</change>
@@ -126,9 +125,9 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 62, № <citedRange>9</citedRange></bibl>
-               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/>, <citedRange>143</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>143</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
                <bibl><!--SEG 53--><ptr target="bib:SEG"/> <citedRange>53, 767, № 7</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 440, № <citedRange>45</citedRange>.</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 440, № <citedRange>45</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -136,7 +135,7 @@
             <listBibl>
                <bibl><!--Даниленко 1969--><ptr target="bib:b0462"/>, 37слл.</bibl>
                <bibl><!--Posamentir 2006--><ptr target="bib:b0438"/>, 54</bibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 54, № 45.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 54, № 45</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -157,16 +156,16 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Личное имя Πάσιχος засвидетельствовано также в раннеэллинистической надгробной надписи № ipe505  (ср. Πασιχάρης в № ipe403)
-               и в керамической эпиграфике Херсонеса (LGPN IV), однако наличие родственных связej между его носителями не может быть доказано. </p>
-            <p>	Личное имя (скорее всего пафлагонское) Κίνωλις (вариант -μωλις) относится к большой группе антропонимов, 
+            <p>Личное имя Πάσιχος засвидетельствовано также в раннеэллинистической надгробной надписи № ipe505  (ср. Πασιχάρης в № ipe403)
+               и в керамической эпиграфике Херсонеса (LGPN IV), однако наличие родственных связej между его носителями не может быть доказано.</p>
+            <p>Личное имя (скорее всего пафлагонское) Κίνωλις (вариант -μωλις) относится к большой группе антропонимов, 
                связанных с  географическими названиями и именами божественных покровителей стран, городов, гор, рек и т.д. (Bechtel, HPN, 550–556).
                Подобные имена хорошо засвидетельствованы для понтийского региона, в частности для территории Вифинии и Пафлагонии 
                (Βιλλαῖος, Λάδων, Σάγαρις, Ὕπιος, Ἴστρων, Ὕπανις). В данном случае речь идет о ЛИ, связанном с названием реки и маленького эмпория, 
                расположенного в Пафлагонии на побережье между Абонутейхом и Синопой (Ruge W., RE XI 435, s.v. Kimolis). 
                Имя засвидетельствовано также в Синопе III в. до н.э. (LGPN V.A) и в Пантикапее в I в. до н.э. – I в. н.э. (LGPN IV). 
-               Относительно имени см. Masson 1986, 42 (= OGS II 540); Zgusta 1955, § 778; Stolba 1996, 450. </p>
-            <p>	Назначение изображенного на памятнике ножа с очень широким лезвием и небольшим режущим краем не удается определить надежно. 
+               Относительно имени см. Masson 1986, 42 (= OGS II 540); Zgusta 1955, § 778; Stolba 1996, 450.</p>
+            <p>Назначение изображенного на памятнике ножа с очень широким лезвием и небольшим режущим краем не удается определить надежно. 
                Неоднократно обращали внимание на похожее изображение на стеле Дулиона, сына Дельфа (№ neph046). 
                Предлагалось интерпретировать изображенный предмет либо как нож виноградаря, либо как нож культового назначения, 
                указывающий, возможно, на жреческий статус умершего (Даниленко 1969, 38; НЭПХ II, с. 140; Perlman 2011, 405 ff; Posamentir 2006, 54; Posamentir 2011, 151ff.).</p>

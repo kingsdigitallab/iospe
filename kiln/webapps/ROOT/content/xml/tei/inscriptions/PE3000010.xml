@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Гиеро, жены Афинея.</title>
-             <title xml:lang="en">Epitaph of Hiero, wife of Athanaios.</title>
+             <title xml:lang="ru">Надгробие Гиеро</title>
+             <title xml:lang="en">Epitaph of Hiero</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>141/36847.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>141/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>141/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,17 +39,17 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела, украшенная фронтоном с тремя акротериями (сбиты). 
                               Сохранилась верхняя часть. Под карнизом вырезана и обведена красной краской двухстрочная надпись. 
                               Под надписью видны следы краски (вероятно, изображение тэний).</p>
-                           <p xml:lang="en">Stele</p>
+                           <p xml:lang="en">Stele...</p>
                            <dimensions>
-                              <height unit="cm">40</height>
-                              <width unit="cm">41</width>
-                              <depth unit="cm">18</depth>
+                              <height unit="cm">40,0</height>
+                              <width unit="cm">41,0</width>
+                              <depth unit="cm">18,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -74,9 +72,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0351" notAfter="-0301" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
@@ -105,6 +103,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-18" who="CB">Adding biblio and app crit tags</change>
          <change when="2015-11-03" who="CB">Adding origDate</change>
          <change when="2015-09-24" who="CB">Tagging bibliography</change>
@@ -127,9 +126,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--> <ptr target="bib:b0504"/>, 61, № <citedRange>6</citedRange></bibl>
-               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/>, <citedRange>140</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:Bull.ép."/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--> <ptr target="bib:b0437"/>, 438, № <citedRange>40</citedRange>.</bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 61, № <citedRange>6</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>140</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, № <citedRange>40</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -137,7 +136,7 @@
             <listBibl>
                <bibl><!--Виноградов 1975--><ptr target="bib:b0450"/>, 174</bibl>
                <bibl><!--Тохтасьев 1997--><ptr target="bib:b0774"/>, 394</bibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 49, № 40.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 49, № 40</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -165,10 +164,10 @@
             <p>Hiero, wife of Athanaios.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	В этой надписи (а также в нескольких других надписях, см. № neph 142; 156; 158; ipe520; ср. № neph162) не указан патронимик замужней женщины. 
+            <p>В этой надписи (а также в нескольких других надписях, см. № neph 142; 156; 158; ipe520; ср. № neph162) не указан патронимик замужней женщины. 
                Высказывалось вероятное предположение (Perlman 2011, 386), что объяснение этому факту следует искать скорее в эпиграфической практике («epigraphic habits»),
-               принятой в Херсонеса в IV в. до н.э., нежели в стремлении скрыть происхождение умершей.  </p>
-            <p>	Женское ЛИ Ἱερώ засвидетельствовано также в надгробной надписи эллинистического времени № neph174. 
+               принятой в Херсонеса в IV в. до н.э., нежели в стремлении скрыть происхождение умершей.</p>
+            <p>Женское ЛИ Ἱερώ засвидетельствовано также в надгробной надписи эллинистического времени № neph174. 
                Теофорное ЛИ в дорийской огласовке Ἀθάναιος многократно встречается в надписях Херсонеса эллинистического времени 
                (ср. написание Ἀθήναιος, преобладающее в римское время; LGPN IV s.vv.).</p>
          </div>

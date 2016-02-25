@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Миттины, жены Дионисия.</title>
+             <title xml:lang="ru">Стела Миттины</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>47/36847.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>47/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>47/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,17 +39,17 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела, украшенная фронтоном с тремя акротериями (стесаны при вторичном использовании). 
                               Сохранилась верхняя часть, расколотая на два фрагмента. Под карнизом вырезана и обведена красной краской трехстрочная надпись. 
                               Под надписью видны следы краски (вероятно, изображение тэний).</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">84</height>
+                              <height unit="cm">84,0</height>
                               <width unit="cm">43,5</width>
-                              <depth unit="cm">19</depth>
+                              <depth unit="cm">19,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0400" notAfter="-0351" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
@@ -104,6 +102,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2014-09-24" who="CB">Tagging biblio</change>
          <change when="2014-08-21" who="CB">Biblio and app crit</change>
@@ -126,15 +125,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 62, №<citedRange>8</citedRange> </bibl>
-               <bibl><!--НЭПХ II--> <ptr target="НЭПХ2"/>, <citedRange>142</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, № <citedRange>41</citedRange>.</bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 62, №<citedRange>8</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="НЭПХ2"/>, <citedRange>142</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, № <citedRange>41</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 50, № 41.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 50, № 41</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -156,9 +155,9 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	В этой надписи (а также в нескольких других надписях, см. № neph 140; 156; 158; ipe520; ср. № neph162) 
-               не указан патронимик замужней женщины (см. комментарий к № neph140). </p>
-            <p>	Женское ЛИ Μυττίνα, вероятно, представляет собой гипокористик группы μυττός («немой»; Hsch. s.v.). 
+            <p>В этой надписи (а также в нескольких других надписях, см. № neph 140; 156; 158; ipe520; ср. № neph162) 
+               не указан патронимик замужней женщины (см. комментарий к № neph140).</p>
+            <p>Женское ЛИ Μυττίνα, вероятно, представляет собой гипокористик группы μυττός («немой»; Hsch. s.v.). 
                Ср. Μυτίνα на херсонесском граффити IV-III в. до н.э. (SEG 44, 657). Ср. также засвидетельствованнoe в Херсонесе мужское имя Κλεμυτάδας (LGPN IV). 
                Подробнее см. Robert 1963, 192 сл.; Masson 1982, 23 (= OGS II 405); Masson 1994, 142 (= OGS III 211).</p>
          </div>
