@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Метрическая эпитафия Лесханорида, сына Эвклеса из Тенедоса.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000183</idno>
             <idno type="PE">PE3000183</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,11 +44,11 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru" part="N">Стела, украшенная профилированным карнизом без антефиксов. Собрана из шести фрагментов, низ отбит. 
+                           <p xml:lang="ru">Стела, украшенная профилированным карнизом без антефиксов. Собрана из шести фрагментов, низ отбит. 
                               На верхней плоскости отверстие диаметром 7,2 см для приставного венчающего элемента. Розетки отсутствуют. 
                               В верхней части изображены хирургические инструменты (пинцет, щипцы, кровососная банка), ниже – две обнаженные фигуры. 
                               Под изображением вырезана по предварительной разметке и обведена красной краской двухстрочная надпись.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">115</height>
                               <width unit="cm">38</width>
@@ -58,60 +58,60 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Ν с укороченной правой вертикалью, Ο и Ω меньше остальных букв, Σ с расходящимися верхними и нижними линиями, 
+                        <seg xml:lang="ru">Ν с укороченной правой вертикалью, Ο и Ω меньше остальных букв, Σ с расходящимися верхними и нижними линиями, 
                            линии некоторых букв слегка выгнуты, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография" instant="false">
-                        <seg xml:lang="ru" part="N">конец IV - начало III в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">Late IV - early III centuries B.C.</seg>
+                     <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
+                        <seg xml:lang="ru">конец IV - начало III в. до н.э.</seg>
+                        <seg xml:lang="en">Late IV - early III centuries B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1969 г. в юго-восточном районе Херсонеса в кладке куртины 20 оборонительных стен Херсонеса. Раскопки И.А. Антоновой.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol.</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tag</change>
-         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-13" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-01" who="CB" status="draft">App Crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-26" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-03-17" who="VP" status="draft">Tagging Greek names</change>
-         <change when="2015-03-16" who="AV" status="draft">tagging Greek names XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added missing biblio tag</change>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-13" who="CB">Bibliography</change>
+         <change when="2015-09-01" who="CB">App Crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-26" who="CB">Tagging metadata</change>
+         <change when="2015-03-17" who="VP">Tagging Greek names</change>
+         <change when="2015-03-16" who="AV">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -128,56 +128,56 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Соломоник, Антонова1974--><ptr target="bib:b0507"/>, <citedRange>94</citedRange></bibl> <bibl default="false" status="draft">( слл. ср. <!--SEG--> <ptr target="bib:SEG"/> <citedRange>53, 768</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--Hillert 1985--><ptr target="bib:b0759"/>,<citedRange>418</citedRange></bibl> <bibl default="false" status="draft">(<!--SEG--> <ptr target="bib:SEG"/> <citedRange>36, 697</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--Samama 2003--><ptr target="bib:b0442"/>, 199, No <citedRange>101</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Perlman 2011--><ptr target="bib:b0437"/>, 443, No <citedRange>53</citedRange></bibl>
+            <listBibl>
+               <bibl><!--Соломоник, Антонова1974--><ptr target="bib:b0507"/>, <citedRange>94</citedRange></bibl> <bibl>( слл. ср. <!--SEG--> <ptr target="bib:SEG"/> <citedRange>53, 768</citedRange>)</bibl>
+               <bibl><!--Hillert 1985--><ptr target="bib:b0759"/>,<citedRange>418</citedRange></bibl> <bibl>(<!--SEG--> <ptr target="bib:SEG"/> <citedRange>36, 697</citedRange>)</bibl>
+               <bibl><!--Samama 2003--><ptr target="bib:b0442"/>, 199, No <citedRange>101</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 443, No <citedRange>53</citedRange></bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Соломоник 1990--><ptr target="bib:b0506"/>, 80, № 84</bibl>
-               <bibl default="false" status="draft"><!--Hillert 1990--><ptr target="bib:0432"/> , 85 слл.</bibl>
-               <bibl default="false" status="draft"><!--Vinogradov 1997--><ptr target="bib:b0453"/>, 47</bibl>
-               <bibl default="false" status="draft"><!--Зубарь 2005--><ptr target="bib:b0469"/>, 397 сл.</bibl>
-               <bibl default="false" status="draft"><!--Posamentir 2006--><ptr target="bib:b038"/>, 57 слл.</bibl>
-               <bibl default="false" status="draft"><!--Dana 2011--><ptr target="bib:b0431"/>, 192</bibl>
-               <bibl default="false" status="draft"><!--Posamentir 2011--><ptr target="bib:b0439"/>, 61, № 53</bibl>
-               <bibl default="false" status="draft">141.</bibl>
+            <listBibl>
+               <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 80, № 84</bibl>
+               <bibl><!--Hillert 1990--><ptr target="bib:0432"/> , 85 слл.</bibl>
+               <bibl><!--Vinogradov 1997--><ptr target="bib:b0453"/>, 47</bibl>
+               <bibl><!--Зубарь 2005--><ptr target="bib:b0469"/>, 397 сл.</bibl>
+               <bibl><!--Posamentir 2006--><ptr target="bib:b038"/>, 57 слл.</bibl>
+               <bibl><!--Dana 2011--><ptr target="bib:b0431"/>, 192</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 61, № 53</bibl>
+               <bibl>141.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               <lb n="1"/><w part="N"><supplied reason="lost" instant="false">Τ</supplied>ῶιδε</w> <w part="N">τάφωι</w> <w part="N">κοσμεῖ</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Λεσχανορίδαν</name></persName> 
-               <w part="N">ὁ</w> <w part="N">τεκνώσα<unclear instant="false">ς</unclear></w>      
-               <lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Εὔκλης</name></persName> <w part="N">ἰατ<unclear instant="false">ρ</unclear>ὸς</w> 
-               <w part="N">πατρίδ<supplied reason="lost" instant="false">ο</supplied><unclear instant="false">ς</unclear></w> <w part="N">ἐκ</w> <placeName instant="false" full="yes">Τενέδου</placeName>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w><supplied reason="lost">Τ</supplied>ῶιδε</w> <w>τάφωι</w> <w>κοσμεῖ</w> <persName type="attested"><name>Λεσχανορίδαν</name></persName> 
+               <w>ὁ</w> <w>τεκνώσα<unclear>ς</unclear></w>      
+               <lb n="2"/><persName type="attested"><name>Εὔκλης</name></persName> <w>ἰατ<unclear>ρ</unclear>ὸς</w> 
+               <w>πατρίδ<supplied reason="lost">ο</supplied><unclear>ς</unclear></w> <w>ἐκ</w> <placeName>Τενέδου</placeName>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true"/></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note/></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Этой гробницей украшает Лесханорида (его) родитель Эвклес, врач, с Тенедоса, (его) родины.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Этой гробницей украшает Лесханорида (его) родитель Эвклес, врач, с Тенедоса, (его) родины.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Стела Лесханорида содержит самую раннюю метрическую эпитафию (элегический дистих), обнаруженную в Херсонесе. ЛИ Λεσχανορίδας, является вероятно, местным тенедосским антропонимом, связанным с эпитетом Аполлона Λεσχηνόριος (Соломоник, Антонова 1974, 98; Perlman 2011, 443). </p>
-            <p part="N">Рядом с этой стелой было обнаружено еще одно надгробие, датирующееся тем же временем, в котором также упомянут врач, херсонесит Дионисий, сын Пантагнота (№ Solant74/02; пo поводу возможной связи между ним и Эвклесом из Тенедоса ср. Perlman 2011, 408). О врачах в понтийском регионе см. Dana 2011, 184 слл.</p>
-            <p part="N">Издатели надписи интерпретировали изображение на памятнике как сцену прощания отца с сыном (Соломоник, Антонова 1974, 99). Однако, поскольку фигуры представлены обнаженными, кажется более вероятным, что перед нами сцена в палестре (ср. Samama 2003, 200, n. 107; Dana 2011, 192). Судя по трактовке и характеру фигур, на стеле изображены подростки или дети, один из которых скорее всего умерший Лесханорид. В пользу предположения о юном возрасте умершего косвенно свидетельствует и то обстоятельство, что стела была увенчана приставным анфемием (см. описание памятника), – такое украшение, как показывает типология херсонесских стел, характерно для детских и юношеских надгробий (Posamentir 2011, 141). Сказанное не подтверждает гипотезу издателей надписи, согласно которой не только Эвклес, но и Лесханорид имел медицинскую практику в Херсонесе.</p>
-            <p part="N">Эта эпитафия - единственное указание на контакты Херсонеса с Тенедосом. В то же время о торговых связях Тенедоса (важный порт у входа в Геллеспонт) с Северным Причерноморьем в эллинистическое время свидетельствует найденная в Ольвии проксения IOSPE I2 78. </p>
-            <p part="N">Известно о двух других врачах, выходцах из Тенедоса, один из которых, Φαίδας Δαμασσαγόρα, назван по имени в надписи III в. до н.э., найденной в кипрском Палеопафосе (Peek, GVI 902 = Samama 2003, 371; Dana 2011, 192).</p>
+         <div type="commentary" xml:lang="ru">
+            <p>Стела Лесханорида содержит самую раннюю метрическую эпитафию (элегический дистих), обнаруженную в Херсонесе. ЛИ Λεσχανορίδας, является вероятно, местным тенедосским антропонимом, связанным с эпитетом Аполлона Λεσχηνόριος (Соломоник, Антонова 1974, 98; Perlman 2011, 443). </p>
+            <p>Рядом с этой стелой было обнаружено еще одно надгробие, датирующееся тем же временем, в котором также упомянут врач, херсонесит Дионисий, сын Пантагнота (№ Solant74/02; пo поводу возможной связи между ним и Эвклесом из Тенедоса ср. Perlman 2011, 408). О врачах в понтийском регионе см. Dana 2011, 184 слл.</p>
+            <p>Издатели надписи интерпретировали изображение на памятнике как сцену прощания отца с сыном (Соломоник, Антонова 1974, 99). Однако, поскольку фигуры представлены обнаженными, кажется более вероятным, что перед нами сцена в палестре (ср. Samama 2003, 200, n. 107; Dana 2011, 192). Судя по трактовке и характеру фигур, на стеле изображены подростки или дети, один из которых скорее всего умерший Лесханорид. В пользу предположения о юном возрасте умершего косвенно свидетельствует и то обстоятельство, что стела была увенчана приставным анфемием (см. описание памятника), – такое украшение, как показывает типология херсонесских стел, характерно для детских и юношеских надгробий (Posamentir 2011, 141). Сказанное не подтверждает гипотезу издателей надписи, согласно которой не только Эвклес, но и Лесханорид имел медицинскую практику в Херсонесе.</p>
+            <p>Эта эпитафия - единственное указание на контакты Херсонеса с Тенедосом. В то же время о торговых связях Тенедоса (важный порт у входа в Геллеспонт) с Северным Причерноморьем в эллинистическое время свидетельствует найденная в Ольвии проксения IOSPE I2 78. </p>
+            <p>Известно о двух других врачах, выходцах из Тенедоса, один из которых, Φαίδας Δαμασσαγόρα, назван по имени в надписи III в. до н.э., найденной в кипрском Палеопафосе (Peek, GVI 902 = Samama 2003, 371; Dana 2011, 192).</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Посвящение алтаря.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000245</idno>
             <idno type="PE">PE3000245</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc5" part="N">Посвятительная надпись.</seg>
-                     <seg xml:lang="en" part="N">Dedicatory.</seg>
+                     <seg xml:lang="ru" corresp="#doc5">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedicatory.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,10 +44,10 @@
                            <objectType xml:lang="en">Altar.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru" part="N">Сохранилась верхняя часть прямоугольного алтаря с профилированным карнизом. Камень пострадал от огня. 
+                           <p xml:lang="ru">Сохранилась верхняя часть прямоугольного алтаря с профилированным карнизом. Камень пострадал от огня. 
                               На верхней плоскости три углубления. Ниже карниза рельефное изображение орла с полураскрытыми крыльями и повернутой вправо головой; 
                               в клюве изображен венок. На карнизе остатки трех строк сильно поврежденной надписи (верхняя строка практически не сохранилась).</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">30</height>
                               <width unit="cm">30</width>
@@ -57,58 +57,58 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Лунарные Ε и Σ, курсивная Ω, апексы на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Лунарные Ε и Σ, курсивная Ω, апексы на концах линий букв.</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,4</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0233" evidence="Палеография общий_вид_памятника" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">Вторая половина II – начало III в. н.э.</seg>
-                        <seg xml:lang="en" part="N">2nd half of II - early III centuries C.E.</seg>
+                     <origDate notBefore="0151" notAfter="0233" evidence="Палеография общий_вид_памятника" precision="low">
+                        <seg xml:lang="ru">Вторая половина II – начало III в. н.э.</seg>
+                        <seg xml:lang="en">2nd half of II - early III centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес) (?).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес) (?).</placeName>
                         <rs type="circumstances">Данных о происхождении нет. До 1888 г. находился в музее монастыря св. Владимира (г. Севастополь).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol.</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-14" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-01" who="CB" status="draft">Tagging app crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-26" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-14" who="CB">Bibliography</change>
+         <change when="2015-09-01" who="CB">Tagging app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-26" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -121,48 +121,48 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--НЭПХ--> <ptr target="bib:НЭПХ"/>, <citedRange>I 18</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--НЭПХ--> <ptr target="bib:НЭПХ"/>, <citedRange>I 18</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Граков, Виноградов 1970--><ptr target="bib:b0458"/>, 132, прим. 13</bibl>
-               <bibl default="false" status="draft"><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, с. 94, прим. 148</bibl>
-               <bibl default="false" status="draft"><!--АСХ--><ptr target="bib:b0523"/> 169, № 542</bibl>
-               <bibl default="false" status="draft"><!--Соломоник 1990--><ptr target="bib:b0506"/>, 60, № 51.</bibl>
+            <listBibl>
+               <bibl><!--Граков, Виноградов 1970--><ptr target="bib:b0458"/>, 132, прим. 13</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, с. 94, прим. 148</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> 169, № 542</bibl>
+               <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 60, № 51.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><w part="N"><supplied reason="lost" instant="false">ε</supplied><unclear instant="false">ὐ</unclear>χαριστ<supplied reason="lost" instant="false">ήριον</supplied></w>
-               		<lb n="2"/><w part="N"><supplied reason="lost" instant="false">ὑπὲ</supplied><unclear instant="false">ρ</unclear></w> <w part="N">τέκνω<supplied reason="lost" instant="false">ν</supplied></w>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><w><supplied reason="lost">ε</supplied><unclear>ὐ</unclear>χαριστ<supplied reason="lost">ήριον</supplied></w>
+               		<lb n="2"/><w><supplied reason="lost">ὑπὲ</supplied><unclear>ρ</unclear></w> <w>τέκνω<supplied reason="lost">ν</supplied></w>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app loc="1">
-                  <rdg>[ε]<unclear instant="false">ὐ</unclear>χ̣αριστ[ήριον] <note anchored="true">scripsi;</note></rdg> 
-                  <rdg source="bib:НЭПХ">[Ἀρ]χ̣ίστρ[ατος ?] <note anchored="true">falso;</note></rdg> 
-                  <rdg source="bib:b0458">[εὐχ]αριστ<unclear instant="false">ή</unclear>[ριον] <note anchored="true">correxerunt Граков, Виноградов.</note></rdg>
+                  <rdg>[ε]<unclear>ὐ</unclear>χ̣αριστ[ήριον] <note>scripsi;</note></rdg> 
+                  <rdg source="bib:НЭПХ">[Ἀρ]χ̣ίστρ[ατος ?] <note>falso;</note></rdg> 
+                  <rdg source="bib:b0458">[εὐχ]αριστ<unclear>ή</unclear>[ριον] <note>correxerunt Граков, Виноградов.</note></rdg>
                </app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Благодарственное приношение за детей.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Благодарственное приношение за детей.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Изображение орла делает вероятным предположение о том, что алтарь был посвящен Зевсу-Юпитеру. 
+         <div type="commentary" xml:lang="ru">
+            <p>Изображение орла делает вероятным предположение о том, что алтарь был посвящен Зевсу-Юпитеру. 
                Ср. посвящение алтаря Зевсу Диберанскому (№ GrVin1970/02).</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

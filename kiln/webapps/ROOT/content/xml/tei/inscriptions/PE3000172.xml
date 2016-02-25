@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Фрагмент надгробной надписи.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000172</idno>
             <idno type="PE">PE3000172</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone</material>
-                           <p xml:lang="ru" part="N">Сохранился нижний край с остатками двух строк сильно поврежденной надписи.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Сохранился нижний край с остатками двух строк сильно поврежденной надписи.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">27</height>
                               <width unit="cm">40</width>
@@ -55,60 +55,60 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Данных нет.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Данных нет.</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">Данных нет.</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="Характер_формуляра" instant="false">
-                        <seg xml:lang="ru" part="N">Римское время</seg>
-                        <seg xml:lang="en" part="N">Roman period.</seg>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Характер_формуляра">
+                        <seg xml:lang="ru">Римское время</seg>
+                        <seg xml:lang="en">Roman period.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1894 г. «in coemeterio antiquo» (IOSPE), вероятно, при раскопках К.К. Косцюшко-Валюжиничем некрополя у южного 
                            и юго-западного участков оборонительной стены.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Неизвестно.</seg>
-                     <seg xml:lang="en" part="N">Unknown.</seg>
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru" part="N">Non vidi. В фондах НЗХТ камень обнаружить не удалось.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Non vidi. В фондах НЗХТ камень обнаружить не удалось.</seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-30" who="CB" status="draft">Biblio and app crit</change>
-         <change when="2015-10-22" who="CB" status="draft">Metadata tagging</change>
-         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-30" who="CB">Biblio and app crit</change>
+         <change when="2015-10-22" who="CB">Metadata tagging</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -121,41 +121,41 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>537</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>537</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"/>
+            <listBibl>
+               <bibl/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
-               		<lb n="2"/><w part="N"><supplied reason="lost" instant="false">ἐτῶν</supplied></w> <gap reason="lost" extent="1" unit="character" instant="false"/> <num value="7">ζʹ</num>, 
-               		<lb n="3"/><w part="N">χαῖρε</w>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="2"/><w><supplied reason="lost">ἐτῶν</supplied></w> <gap reason="lost" extent="1" unit="character"/> <num value="7">ζʹ</num>, 
+               		<lb n="3"/><w>χαῖρε</w>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
               <app><!--<note>IOSPE I2 537.</note>--></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="ru">
+            <p/>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Указание возраста умершего дает основание датировать надпись римским временем.</p>
+         <div type="commentary" xml:lang="ru">
+            <p>Указание возраста умершего дает основание датировать надпись римским временем.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

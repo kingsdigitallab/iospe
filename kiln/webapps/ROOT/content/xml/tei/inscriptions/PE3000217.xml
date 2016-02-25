@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Декрет в честь Ксенона, сына Тимофея.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000217</idno>
             <idno type="PE">PE3000217</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc15" part="N">Декрет.</seg>
-                     <seg xml:lang="en" part="N">Decree.</seg>
+                     <seg xml:lang="ru" corresp="#doc15">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,57 +44,57 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru" part="N">Два фрагмента небольшой стелы из мелкозернистого мрамора, украшенной фронтоном с акротериями. 
+                           <p xml:lang="ru">Два фрагмента небольшой стелы из мелкозернистого мрамора, украшенной фронтоном с акротериями. 
                               Тыльная сторона обработана грубо. На мраморе видны следы горения. 
                               Фрагмент 1 с шестью строками надписи представляет собой верхнюю правую часть стелы. 
                               Фрагмент 2, обломанный со всех сторон за исключением частично сохранившегося правого края, примыкает к фрагменту 1 снизу. 
                               На его лицевой стороне сохранилось 11 строк надписи. Из-за сильных повреждений фрагменты не могут быть объединены в контакте, но судя по характеру сколов плиты и содержанию надписи текст фрагмента 2 должен примыкать к тексту фрагмента 1 с минимальной лакуной.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с ломаной поперечной линией, Θ с чертой, Μ с немного расходящимися внешними гастами и пересечением внутренних 
+                        <seg xml:lang="ru">Α с ломаной поперечной линией, Θ с чертой, Μ с немного расходящимися внешними гастами и пересечением внутренних 
                            гаст посередине или чуть выше, Ο немного меньше остальных букв, Π с вертикалями одинаковой длины и не выходящей за их пределы перекладиной, 
                            Σ с параллельными верхней и нижней линиями, слегка наклоненная вправо, Φ с вертикалью выходящей за линии строки, 
                            овальная Ω с удлиненными горизонталями на уровне нижней линии строки, отсутствие украшений на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">0,8</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0046" notAfter="-0046" evidence="Упоминание_третьего_консулата_и_третьей_диктатуры_Цезаря" precision="medium" instant="false">
-                        <seg xml:lang="ru" part="N">Около 46 г. до н.э.</seg>
-                        <seg xml:lang="en" part="N">Circa 46 B.C.</seg>
+                     <origDate notBefore="-0046" notAfter="-0046" evidence="Упоминание_третьего_консулата_и_третьей_диктатуры_Цезаря" precision="medium">
+                        <seg xml:lang="ru">Около 46 г. до н.э.</seg>
+                        <seg xml:lang="en">Circa 46 B.C.</seg>
                      </origDate>
                   </origin> 
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
-         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-14" who="CB" status="draft">Bibliography</change>
-         <change when="2015-08-26" who="CB" status="draft">App crit checking</change>
-         <change when="2015-08-24" who="CB" status="draft">App crit checking</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-29" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-05-13" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-14" who="CB">Bibliography</change>
+         <change when="2015-08-26" who="CB">App crit checking</change>
+         <change when="2015-08-24" who="CB">App crit checking</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-29" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -107,124 +107,124 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" n="1" part="N" org="uniform" sample="complete">
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1905--><ptr target="bib:b1045"/>, 101, № <citedRange>9</citedRange>.</bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--> <ptr target="IOSPE2"/> <citedRange>347</citedRange>.</bibl>
+         <div type="bibliography" n="1">
+            <listBibl>
+               <bibl><!--Латышев 1905--><ptr target="bib:b1045"/>, 101, № <citedRange>9</citedRange>.</bibl>
+               <bibl><!--IOSPE I2--> <ptr target="IOSPE2"/> <citedRange>347</citedRange>.</bibl>
             </listBibl>
          </div>
-            <div type="bibliography" n="2" part="N" org="uniform" sample="complete">
-               <listBibl default="false">
-                  <bibl default="false" status="draft"> <!--Макаров 2014, 292.--><ptr target="bib:b0781"/> <citedRange>292</citedRange>.</bibl>
+            <div type="bibliography" n="2">
+               <listBibl>
+                  <bibl> <!--Макаров 2014, 292.--><ptr target="bib:b0781"/> <citedRange>292</citedRange>.</bibl>
                </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" n="1" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries" n="1">
             <!-- Комментарии -->
-           <listBibl default="false"> 
-              <bibl default="false" status="draft"><!--Лепер 1912--><ptr target="bib:b0480"/>, 42</bibl>
-            <bibl default="false" status="draft"><!--Виноградов 1988--><ptr target="bib:b0756"/>, 19</bibl>
-              <bibl default="false" status="draft"><!--Виноградов 1989--><ptr target="bib:b0451"/>, 225</bibl>
+           <listBibl> 
+              <bibl><!--Лепер 1912--><ptr target="bib:b0480"/>, 42</bibl>
+            <bibl><!--Виноградов 1988--><ptr target="bib:b0756"/>, 19</bibl>
+              <bibl><!--Виноградов 1989--><ptr target="bib:b0451"/>, 225</bibl>
            </listBibl>
          </div>
-            <div type="bibliography" subtype="commentaries" n="2" part="N" org="uniform" sample="complete">
+            <div type="bibliography" subtype="commentaries" n="2">
                <!-- Комментарии -->
-               <listBibl default="false"> 
-                  <bibl default="false" status="draft"><!--Виноградов 1988--><ptr target="bib:b0756"/>, 19</bibl>
-                  <bibl default="false" status="draft"><!--Виноградов 1989--><ptr target="bib:b0451"/>, 225</bibl>
+               <listBibl> 
+                  <bibl><!--Виноградов 1988--><ptr target="bib:b0756"/>, 19</bibl>
+                  <bibl><!--Виноградов 1989--><ptr target="bib:b0451"/>, 225</bibl>
                </listBibl>
             </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
+         <div type="edition" xml:lang="grc" xml:space="preserve">
             
-            <div type="textpart" subtype="fragment" n="1" part="N" org="uniform" sample="complete">
-               <ab part="N">
-                  <lb n="1"/><w part="N"><supplied reason="lost" instant="false">ἀγαθᾶι</supplied></w> <w part="N"><supplied reason="lost" instant="false">τύχ</supplied>αι</w>· <w part="N">νομοφύλακες</w>
-                  <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Λάμαχ<supplied reason="lost" instant="false">ος</supplied></name>
-               		<lb n="2"/><name full="yes" instant="false"><supplied reason="lost" instant="false">Δαματρίου</supplied></name></persName>,
-                  <persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><supplied reason="lost" instant="false">Ἀ</supplied><unclear instant="false">π</unclear>ολλώνιος</name> <name full="yes" instant="false">Ζήθου</name></persName>
-                  <w part="N">καὶ</w> <w part="N">ὁ</w> <w part="N">ἐ<supplied reason="lost" instant="false">πὶ</supplied></w>
-               		<lb n="3"/><w part="N"><supplied reason="lost" instant="false">τᾶς</supplied></w> <w part="N"><supplied reason="lost" instant="false">διοικήσιος</supplied></w>
-                  <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀθάναιος</name> <name full="yes" instant="false">Στρατ<unclear instant="false">ο</unclear><supplied reason="lost" instant="false">νίκου</supplied></name></persName>
-               		<lb n="4"/><w part="N"><supplied reason="lost" instant="false">εἶπαν</supplied></w>· <w part="N"><supplied reason="lost" instant="false">ἐπειδὴ </supplied></w>
-                  <persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><supplied reason="lost" instant="false">Ξέ</supplied>νων</name> <name full="yes" instant="false">Τιμοθέο<supplied reason="lost" instant="false">υ</supplied></name></persName>
-                  <gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="5"/><w part="N"><supplied reason="lost" instant="false">ανὸς</supplied></w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
-                  <w part="N"><supplied reason="lost" instant="false">π</supplied><unclear instant="false">ᾶ</unclear>σιν</w> <w part="N">εὐσ<supplied reason="lost" instant="false">χήμονα</supplied></w> <w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w>
-               		<lb n="6"/><supplied reason="lost" instant="false"><note anchored="true">e.g.</note> <w part="N">εὔτακτον</w></supplied> <w part="N"><supplied reason="lost" instant="false">τὰν</supplied></w>
-                  <w part="N"><supplied reason="lost" instant="false">ἀναστρ</supplied><unclear instant="false">ο</unclear>φ<unclear instant="false">ὰ</unclear><supplied reason="lost" instant="false">ν</supplied></w>
-                  <w part="N"><supplied reason="lost" instant="false">πεποίηται</supplied></w>
+            <div type="textpart" subtype="fragment" n="1">
+               <ab>
+                  <lb n="1"/><w><supplied reason="lost">ἀγαθᾶι</supplied></w> <w><supplied reason="lost">τύχ</supplied>αι</w>· <w>νομοφύλακες</w>
+                  <persName type="attested"><name>Λάμαχ<supplied reason="lost">ος</supplied></name>
+               		<lb n="2"/><name><supplied reason="lost">Δαματρίου</supplied></name></persName>,
+                  <persName type="attested"><name><supplied reason="lost">Ἀ</supplied><unclear>π</unclear>ολλώνιος</name> <name>Ζήθου</name></persName>
+                  <w>καὶ</w> <w>ὁ</w> <w>ἐ<supplied reason="lost">πὶ</supplied></w>
+               		<lb n="3"/><w><supplied reason="lost">τᾶς</supplied></w> <w><supplied reason="lost">διοικήσιος</supplied></w>
+                  <persName type="attested"><name>Ἀθάναιος</name> <name>Στρατ<unclear>ο</unclear><supplied reason="lost">νίκου</supplied></name></persName>
+               		<lb n="4"/><w><supplied reason="lost">εἶπαν</supplied></w>· <w><supplied reason="lost">ἐπειδὴ </supplied></w>
+                  <persName type="attested"><name><supplied reason="lost">Ξέ</supplied>νων</name> <name>Τιμοθέο<supplied reason="lost">υ</supplied></name></persName>
+                  <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="5"/><w><supplied reason="lost">ανὸς</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+                  <w><supplied reason="lost">π</supplied><unclear>ᾶ</unclear>σιν</w> <w>εὐσ<supplied reason="lost">χήμονα</supplied></w> <w><supplied reason="lost">καὶ</supplied></w>
+               		<lb n="6"/><supplied reason="lost"><note>e.g.</note> <w>εὔτακτον</w></supplied> <w><supplied reason="lost">τὰν</supplied></w>
+                  <w><supplied reason="lost">ἀναστρ</supplied><unclear>ο</unclear>φ<unclear>ὰ</unclear><supplied reason="lost">ν</supplied></w>
+                  <w><supplied reason="lost">πεποίηται</supplied></w>
                </ab>
             </div>
             
-            <div type="textpart" subtype="fragment" n="2" part="N" org="uniform" sample="complete">
-               <ab part="N">
-                  <lb n="7"/><gap reason="lost" quantity="1" unit="line" instant="false"/> 
-               		<lb n="8"/><w part="N"><supplied reason="lost" instant="false">λέγων</supplied></w> <w part="N"><supplied reason="lost" instant="false">καὶ </supplied></w><w part="N">πράσσων</w>
-                  <w part="N"><supplied reason="lost" instant="false">διατ</supplied><unclear instant="false">ε</unclear>λεῖ</w> <w part="N">τὰ</w> <w part="N">σ<unclear instant="false">υ</unclear><supplied reason="lost" instant="false">μφέροντα</supplied></w>
-               		<lb n="9"/><w part="N"><supplied reason="lost" instant="false">τῶι</supplied></w> <w part="N"><supplied reason="lost" instant="false">δάμωι</supplied></w>,
-                  <w part="N"><supplied reason="lost" instant="false">ἐπαγγ</supplied>έλλεται</w> <w part="N"><expan instant="false"><ex instant="false">δ</ex></expan>ὲ</w> <w part="N">καὶ</w> <w part="N">εἰς</w>
-                  <w part="N"><supplied reason="lost" instant="false">τὸ</supplied></w> <w part="N"><supplied reason="lost" instant="false">λοιπὸν</supplied></w>
-               		<lb n="10"/><w part="N"><supplied reason="lost" cert="low" instant="false">ἀπροφάσιστον</supplied></w> <w part="N"><unclear instant="false">ἑ</unclear>αυτὸν</w>
-                  <w part="N">παρέξειν</w> <w part="N">π<unclear instant="false">ο</unclear><supplied reason="lost" instant="false">τί</supplied></w> <w part="N">τὰ </w><w part="N"><supplied reason="lost" instant="false">βέλ</supplied>
-               		<lb n="11" break="no"/><supplied reason="lost" instant="false">τιστα</supplied></w> <w part="N">τᾶς</w> <w part="N">πόλεος</w>
-                  <w part="N"><supplied reason="lost" instant="false">πρά</supplied>γματα</w>· <w part="N">ὅπως</w> <w part="N"><supplied reason="lost" instant="false">οὖ</supplied>ν</w>
-                  <w part="N">ὁ</w> <w part="N"><supplied reason="lost" instant="false">δᾶμος</supplied></w>
-               		<lb n="12"/><w part="N"><supplied reason="lost" instant="false">ὁ</supplied></w> <w part="N"><supplied reason="lost" instant="false">Χερσονασιτᾶν</supplied></w>
-                  <w part="N"><supplied reason="lost" instant="false">φαίν</supplied><unclear instant="false">η</unclear>ται</w> <w part="N">τοῖς</w> <w part="N">εἰς</w> <w part="N">αὑτὸν</w> <w part="N">ἀ<supplied reason="lost" instant="false">γα</supplied> 
-               		<lb n="13" break="no"/><supplied reason="lost" instant="false">θοῖς</supplied></w> <w part="N">τε</w> <w part="N">καὶ </w><w part="N"><supplied reason="lost" instant="false">φιλοτιμου</supplied>μένοις</w>
-                  <w part="N">μερίζων</w> <w part="N">τὰ<supplied reason="lost" instant="false">ν</supplied></w>
-               		<lb n="14"/><w part="N"><supplied reason="lost" instant="false">ἀξίαν</supplied></w> <w part="N">αὐτῶν</w> <w part="N">χάριν</w>, <w part="N"><supplied reason="lost" instant="false">δε</supplied>δόχθαι</w>
-                  <w part="N">τᾶι</w> <w part="N">β<supplied reason="lost" instant="false">oυ</supplied><unclear instant="false">λ</unclear>αῖ</w>
-               		<lb n="15"/><w part="N">καὶ</w> <w part="N"><supplied reason="lost" instant="false">τῶι</supplied></w> <w part="N"><supplied reason="lost" instant="false">δάμωι</supplied></w>
-                  <w part="N"><supplied reason="lost" instant="false">ἐπαινέσαι</supplied></w> <w part="N">μὲν</w> <w part="N">ἐπὶ </w><w part="N">τούτο<supplied reason="lost" instant="false">ις</supplied></w>
-                  <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ξένω
-               		<lb n="16" break="no"/><supplied reason="lost" instant="false">να</supplied></name> <supplied reason="lost" instant="false"><name full="yes" instant="false">Τιμοθέου</name></supplied></persName> <w part="N"><gap reason="lost" extent="unknown" unit="character" instant="false"/><seg part="F">ανόν</seg></w>, <w part="N">δεδόσθαι</w> <w part="N">δὲ </w> <w part="N">αὐ
-               		<lb n="17" break="no"/><supplied reason="lost" instant="false">τῶι</supplied></w> <w part="N"><supplied reason="lost" instant="false">προξενίαν</supplied></w>, <w part="N"><supplied reason="lost" instant="false">πολι</supplied>τείαν</w>, <w part="N">εἴσπλουν</w>, <w part="N">ἔ<supplied reason="lost" instant="false">κπλουν</supplied></w> 
-               		<lb n="18"/><w part="N"><supplied reason="lost" instant="false">αὐτῶι</supplied></w> <w part="N"><supplied reason="lost" instant="false">καὶ </supplied></w><w part="N">ἐκγόνοις</w> <w part="N"><supplied reason="lost" instant="false">κ</supplied><unclear instant="false">α</unclear>ὶ</w> <w part="N">πο<supplied reason="lost" instant="false">λέμου</supplied></w> <w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">εἰράνας</supplied></w> 
-               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+            <div type="textpart" subtype="fragment" n="2">
+               <ab>
+                  <lb n="7"/><gap reason="lost" quantity="1" unit="line"/> 
+               		<lb n="8"/><w><supplied reason="lost">λέγων</supplied></w> <w><supplied reason="lost">καὶ </supplied></w><w>πράσσων</w>
+                  <w><supplied reason="lost">διατ</supplied><unclear>ε</unclear>λεῖ</w> <w>τὰ</w> <w>σ<unclear>υ</unclear><supplied reason="lost">μφέροντα</supplied></w>
+               		<lb n="9"/><w><supplied reason="lost">τῶι</supplied></w> <w><supplied reason="lost">δάμωι</supplied></w>,
+                  <w><supplied reason="lost">ἐπαγγ</supplied>έλλεται</w> <w><expan><ex>δ</ex></expan>ὲ</w> <w>καὶ</w> <w>εἰς</w>
+                  <w><supplied reason="lost">τὸ</supplied></w> <w><supplied reason="lost">λοιπὸν</supplied></w>
+               		<lb n="10"/><w><supplied reason="lost" cert="low">ἀπροφάσιστον</supplied></w> <w><unclear>ἑ</unclear>αυτὸν</w>
+                  <w>παρέξειν</w> <w>π<unclear>ο</unclear><supplied reason="lost">τί</supplied></w> <w>τὰ </w><w><supplied reason="lost">βέλ</supplied>
+               		<lb n="11" break="no"/><supplied reason="lost">τιστα</supplied></w> <w>τᾶς</w> <w>πόλεος</w>
+                  <w><supplied reason="lost">πρά</supplied>γματα</w>· <w>ὅπως</w> <w><supplied reason="lost">οὖ</supplied>ν</w>
+                  <w>ὁ</w> <w><supplied reason="lost">δᾶμος</supplied></w>
+               		<lb n="12"/><w><supplied reason="lost">ὁ</supplied></w> <w><supplied reason="lost">Χερσονασιτᾶν</supplied></w>
+                  <w><supplied reason="lost">φαίν</supplied><unclear>η</unclear>ται</w> <w>τοῖς</w> <w>εἰς</w> <w>αὑτὸν</w> <w>ἀ<supplied reason="lost">γα</supplied> 
+               		<lb n="13" break="no"/><supplied reason="lost">θοῖς</supplied></w> <w>τε</w> <w>καὶ </w><w><supplied reason="lost">φιλοτιμου</supplied>μένοις</w>
+                  <w>μερίζων</w> <w>τὰ<supplied reason="lost">ν</supplied></w>
+               		<lb n="14"/><w><supplied reason="lost">ἀξίαν</supplied></w> <w>αὐτῶν</w> <w>χάριν</w>, <w><supplied reason="lost">δε</supplied>δόχθαι</w>
+                  <w>τᾶι</w> <w>β<supplied reason="lost">oυ</supplied><unclear>λ</unclear>αῖ</w>
+               		<lb n="15"/><w>καὶ</w> <w><supplied reason="lost">τῶι</supplied></w> <w><supplied reason="lost">δάμωι</supplied></w>
+                  <w><supplied reason="lost">ἐπαινέσαι</supplied></w> <w>μὲν</w> <w>ἐπὶ </w><w>τούτο<supplied reason="lost">ις</supplied></w>
+                  <persName type="attested"><name>Ξένω
+               		<lb n="16" break="no"/><supplied reason="lost">να</supplied></name> <supplied reason="lost"><name>Τιμοθέου</name></supplied></persName> <w><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ανόν</seg></w>, <w>δεδόσθαι</w> <w>δὲ </w> <w>αὐ
+               		<lb n="17" break="no"/><supplied reason="lost">τῶι</supplied></w> <w><supplied reason="lost">προξενίαν</supplied></w>, <w><supplied reason="lost">πολι</supplied>τείαν</w>, <w>εἴσπλουν</w>, <w>ἔ<supplied reason="lost">κπλουν</supplied></w> 
+               		<lb n="18"/><w><supplied reason="lost">αὐτῶι</supplied></w> <w><supplied reason="lost">καὶ </supplied></w><w>ἐκγόνοις</w> <w><supplied reason="lost">κ</supplied><unclear>α</unclear>ὶ</w> <w>πο<supplied reason="lost">λέμου</supplied></w> <w><supplied reason="lost">καὶ</supplied></w> <w><supplied reason="lost">εἰράνας</supplied></w> 
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                </ab>
             </div>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true">Fr. 1 et 2 composuit Виноградов (apud Макаров 2014).</note></app>
-               <app loc="1-3"><rdg source="bib:IOSPE2"><note anchored="true">p. 519 (cf. ibid., no 347)</note></rdg></app> 
+         <div type="apparatus">
+            <listApp>
+               <app><note>Fr. 1 et 2 composuit Виноградов (apud Макаров 2014).</note></app>
+               <app loc="1-3"><rdg source="bib:IOSPE2"><note>p. 519 (cf. ibid., no 347)</note></rdg></app> 
                <app loc="2-3"><rdg source="bib:b0480 IOSPE2">καὶ ὁ ἐ[πὶ | τᾶς διοικήσεος]</rdg>
-                  <rdg>[διοικέσιος] <note anchored="true">scripsi (cf. IOSPE I2 6913)</note></rdg></app>
-                 <app loc="4-5"><rdg>[Ξέ]νων Τιμοθέο[υ ---α|νός] <note anchored="true">Виноградов на основании стк. 15</note></rdg> 
-                    <rdg source="bib:b0480">[Παρμέ?]νων Τιμοθέο[υ ---] <note anchored="true">(IOSPE I2 347)</note>.</rdg></app>
-                 <app loc="5-6"><note anchored="true">rest. Виноградов</note></app>
-               <app loc="5"><rdg source="bib:b0480"><note anchored="true">init.:</note> [π]<unclear instant="false">α</unclear>͂σιν <note anchored="true">scripsi; [e.g. --- λόγοις τε καὶ πραγμ]ασιν εὐσ[εβής]</note></rdg> 
-                  <rdg source="bib:b0756 bib:b0451">[(?) ἐν καιροῖς ἅπ]<unclear instant="false">α</unclear>σιν</rdg></app>
-               <app loc="7"> <rdg source="bib:b0756 bib:b0451"><note anchored="true">med.:</note> [---]<unclear instant="false">Δ</unclear>[---]</rdg></app>
-                 <app loc="8-18"><note anchored="true">rest. Виноградов</note></app>
-               <app loc="8"> <rdg source="bib:b0756 bib:b0451">[δι]α<unclear instant="false">τε</unclear>λεῖ τὰ <unclear instant="false">συμ</unclear>[φέροντα]</rdg></app>
-                 <app loc="9"><rdg>ΛΕ <note anchored="true">lapis</note></rdg></app>
-               <app loc="11"> <rdg source="bib:b0756 bib:b0451">[π]<unclear instant="false">ρα</unclear>́γματα</rdg></app>
+                  <rdg>[διοικέσιος] <note>scripsi (cf. IOSPE I2 6913)</note></rdg></app>
+                 <app loc="4-5"><rdg>[Ξέ]νων Τιμοθέο[υ ---α|νός] <note>Виноградов на основании стк. 15</note></rdg> 
+                    <rdg source="bib:b0480">[Παρμέ?]νων Τιμοθέο[υ ---] <note>(IOSPE I2 347)</note>.</rdg></app>
+                 <app loc="5-6"><note>rest. Виноградов</note></app>
+               <app loc="5"><rdg source="bib:b0480"><note>init.:</note> [π]<unclear>α</unclear>͂σιν <note>scripsi; [e.g. --- λόγοις τε καὶ πραγμ]ασιν εὐσ[εβής]</note></rdg> 
+                  <rdg source="bib:b0756 bib:b0451">[(?) ἐν καιροῖς ἅπ]<unclear>α</unclear>σιν</rdg></app>
+               <app loc="7"> <rdg source="bib:b0756 bib:b0451"><note>med.:</note> [---]<unclear>Δ</unclear>[---]</rdg></app>
+                 <app loc="8-18"><note>rest. Виноградов</note></app>
+               <app loc="8"> <rdg source="bib:b0756 bib:b0451">[δι]α<unclear>τε</unclear>λεῖ τὰ <unclear>συμ</unclear>[φέροντα]</rdg></app>
+                 <app loc="9"><rdg>ΛΕ <note>lapis</note></rdg></app>
+               <app loc="11"> <rdg source="bib:b0756 bib:b0451">[π]<unclear>ρα</unclear>́γματα</rdg></app>
                <app loc="15"> <rdg source="bib:b0756 bib:b0451">τούτοις</rdg></app>
                <app loc="16"> <rdg source="bib:b0756 bib:b0451">[Βοσπορ]ανόν (?)</rdg>
-                   <rdg> [Ἀμαστρι]ανόν <note anchored="true">malim (см. комментарий)</note></rdg></app>
-               <app loc="17"> <rdg source="bib:b0756 bib:b0451">ἐ<unclear instant="false">́κπλ</unclear>[ουν]</rdg></app>
-               <app loc="18"> <rdg source="bib:b0756 bib:b0451"><note anchored="true">init.:</note> [αὐτῶι καὶ ἐκγόνοις] <note anchored="true">scripsi</note></rdg> 
+                   <rdg> [Ἀμαστρι]ανόν <note>malim (см. комментарий)</note></rdg></app>
+               <app loc="17"> <rdg source="bib:b0756 bib:b0451">ἐ<unclear>́κπλ</unclear>[ουν]</rdg></app>
+               <app loc="18"> <rdg source="bib:b0756 bib:b0451"><note>init.:</note> [αὐτῶι καὶ ἐκγόνοις] <note>scripsi</note></rdg> 
                   <rdg source="bib:b0756 bib:b0451">&gt;[αὐτῶι καὶ χράμασι]</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">В добрый час. Номофилаки Ламах, (сын) Даматрия, Аполлоний, (сын) Зета, и стоящий во главе управления Атаней, (сын) Стратоника, внесли предложение: 	
+         <div type="translation" xml:lang="ru">
+            <p>В добрый час. Номофилаки Ламах, (сын) Даматрия, Аполлоний, (сын) Зета, и стоящий во главе управления Атаней, (сын) Стратоника, внесли предложение: 	
                поскольку Ксенон, (сын) Тимофея, [этникон], сделал свое пребывание подобающим и [скромным] --- постоянно [говорит и делает] полезное [для народа], 
                а также обещает и [в будущем] быть [безотказным] в том, что касается [наибольшего блага полиса], </p>
-            <p part="N">с тем чтобы было очевидно, что народ херсонеситов воздает достойную благодарность имеющим перед ним заслуги и стремящимся к почестям, 
+            <p>с тем чтобы было очевидно, что народ херсонеситов воздает достойную благодарность имеющим перед ним заслуги и стремящимся к почестям, 
                пусть Совет и Народное собрание постановят: </p>
-            <p part="N">похвалить за это Ксенона, (сына) Тимофея [этникон] и даровать ему [проксению], гражданство, право входа в гавань и выхода из гавани,
+            <p>похвалить за это Ксенона, (сына) Тимофея [этникон] и даровать ему [проксению], гражданство, право входа в гавань и выхода из гавани,
                [ему самому и его потомкам] и в военное [и в мирное время ] ---</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

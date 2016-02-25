@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Проксения Тимагора, сына Никагора, из Родоса.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000207</idno>
             <idno type="PE">PE3000207</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc15" part="N">Декрет.</seg>
-                     <seg xml:lang="en" part="N">Decree.</seg>
+                     <seg xml:lang="ru" corresp="#doc15">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru" part="N">Стела с треугольным фронтоном, оббита справа, левый край поврежден. Нижняя часть обрезана при вторичном использовании.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Стела с треугольным фронтоном, оббита справа, левый край поврежден. Нижняя часть обрезана при вторичном использовании.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">12</height>
                               <width unit="cm">23</width>
@@ -55,59 +55,59 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Линии Α, Δ, Λ, Μ, Σ немного изогнуты; Α с изогнутой поперечной линией, средняя горизонталь Ε короче остальных, Θ меньше размера строки,
+                        <seg xml:lang="ru">Линии Α, Δ, Λ, Μ, Σ немного изогнуты; Α с изогнутой поперечной линией, средняя горизонталь Ε короче остальных, Θ меньше размера строки,
                            с поперечиной, касающейся окружности, наклонные Κ не укорочены, наклонные Μ немного расходятся, правая вертикаль Ν чуть укорочена, Ξ из трех горизонталей, Ο меньше размера строки, Π с укороченной правой вертикалью и поперечиной, не выходящей за боковые линии, верхняя и нижняя гасты Σ слегка расходятся, Ω в виде маленького полукруга с примыкающими короткими горизонталями.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">0,7</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0250" notAfter="-0201" evidence="Палеография" instant="false">
-                        <seg xml:lang="ru" part="N">Вторая половина III в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">2nd half of III century B.C.</seg>
+                     <origDate notBefore="-0250" notAfter="-0201" evidence="Палеография">
+                        <seg xml:lang="ru">Вторая половина III в. до н.э.</seg>
+                        <seg xml:lang="en">2nd half of III century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Случайно найдена вблизи Херсонеса в кладке каменного забора в 1897 г. (НА НЗХТ, д. 26, л. 4).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Санкт-Петербург, Россия.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-13" who="CB" status="draft">Bibliography</change>
-         <change when="2015-08-24" who="CB" status="draft">App crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-26" who="CB" status="draft">Tagging metadata</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-03-16" who="AV" status="draft">tagging Greek names XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-13" who="CB">Bibliography</change>
+         <change when="2015-08-24" who="CB">App crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-26" who="CB">Tagging metadata</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-03-16" who="AV">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,62 +120,62 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1899--> <ptr target="bib:b0136"/>, 2, № <citedRange>1</citedRange></bibl> <bibl default="false" status="draft">(<!--IOSPE --> <ptr target="bib:IOSPE"/><citedRange>IV 64</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>340</citedRange></bibl>
+            <listBibl>
+               <bibl><!--Латышев 1899--> <ptr target="bib:b0136"/>, 2, № <citedRange>1</citedRange></bibl> <bibl>(<!--IOSPE --> <ptr target="bib:IOSPE"/><citedRange>IV 64</citedRange>)</bibl>
+               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>340</citedRange></bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               <lb n="1"/><w part="N">προξενία</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Τιμαγόρα</name> 
-               				   <placeName type="ethnic" instant="false" full="yes">Ῥο<unclear instant="false">δ</unclear><supplied reason="lost" instant="false">ίου</supplied></placeName></persName>
-               <lb n="2"/><w part="N"><supplied reason="lost" instant="false">βου</supplied><unclear instant="false">λ</unclear>ὰ</w> <w part="N">καὶ</w> <w part="N">δᾶμος</w> <w part="N">ἔδωκε</w>· 
-                          <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Θεότιμο<supplied reason="lost" instant="false">ς</supplied></name> <gap reason="lost" extent="unknown" unit="character" instant="false"/></persName>
-               <lb n="3"/><gap reason="lost" quantity="2" unit="character" instant="false"/><w part="N">γονος</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Πρόνου</name></persName> 
-                      <w part="N">τοῦ</w><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Αὐτέα</name></persName> <w part="N">εἶπαν</w>· <w part="N"><supplied reason="lost" instant="false">δόμεν</supplied></w> 
-               		   <persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><supplied reason="lost" instant="false">Τιμαγό</supplied>
-              	<lb n="4" break="no"/><supplied reason="lost" instant="false">ραι</supplied></name></persName> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><unclear instant="false">Ν</unclear>ικαγόρα</name> 
-               	   <placeName type="ethnic" instant="false" full="yes"><name full="yes" instant="false">Ῥοδίωι</name></placeName></persName> <w part="N">προξενίαν</w> <w part="N">καὶ</w> <w part="N">πο<supplied reason="lost" instant="false">λιτείαν</supplied></w> 
-                        <w part="N"><supplied reason="lost" instant="false">αὐ</supplied>
-          		<lb n="5" break="no"/><supplied reason="lost" instant="false">τῶι</supplied></w> <w part="N"><supplied reason="lost" instant="false">κ</supplied>αὶ</w> <w part="N">γένει</w> <w part="N">καὶ</w> <w part="N">εἴσπλουν</w> 
-                    <w part="N">καὶ</w> <w part="N">ἔκπλ<unclear instant="false">ο</unclear><supplied reason="lost" instant="false">υν</supplied></w> <w part="N"><supplied reason="lost" instant="false">αὐτοῖς</supplied></w>
-            	<lb n="6"/><w part="N"><supplied reason="lost" instant="false">καὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">χράμ</supplied><unclear instant="false">α</unclear>σι</w> <w part="N">τοῖς</w> 
-                      <w part="N"><unclear instant="false">α</unclear>ὐτ<supplied reason="lost" instant="false">ῶ</supplied><unclear instant="false">ν</unclear></w> <w part="N">καὶ</w> <w part="N">πο<supplied reason="lost" instant="false">λ</supplied>έμου</w> 
-                           <w part="N"><unclear instant="false">κα</unclear><supplied reason="lost" instant="false">ὶ</supplied></w> <w part="N"><supplied reason="lost" instant="false">εἰράνας</supplied></w>
-               <lb n="7"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w>προξενία</w> <persName type="attested"><name>Τιμαγόρα</name> 
+               				   <placeName type="ethnic">Ῥο<unclear>δ</unclear><supplied reason="lost">ίου</supplied></placeName></persName>
+               <lb n="2"/><w><supplied reason="lost">βου</supplied><unclear>λ</unclear>ὰ</w> <w>καὶ</w> <w>δᾶμος</w> <w>ἔδωκε</w>· 
+                          <persName type="attested"><name>Θεότιμο<supplied reason="lost">ς</supplied></name> <gap reason="lost" extent="unknown" unit="character"/></persName>
+               <lb n="3"/><gap reason="lost" quantity="2" unit="character"/><w>γονος</w> <persName type="attested"><name>Πρόνου</name></persName> 
+                      <w>τοῦ</w><persName type="attested"><name>Αὐτέα</name></persName> <w>εἶπαν</w>· <w><supplied reason="lost">δόμεν</supplied></w> 
+               		   <persName type="attested"><name><supplied reason="lost">Τιμαγό</supplied>
+              	<lb n="4" break="no"/><supplied reason="lost">ραι</supplied></name></persName> <persName type="attested"><name><unclear>Ν</unclear>ικαγόρα</name> 
+               	   <placeName type="ethnic"><name>Ῥοδίωι</name></placeName></persName> <w>προξενίαν</w> <w>καὶ</w> <w>πο<supplied reason="lost">λιτείαν</supplied></w> 
+                        <w><supplied reason="lost">αὐ</supplied>
+          		<lb n="5" break="no"/><supplied reason="lost">τῶι</supplied></w> <w><supplied reason="lost">κ</supplied>αὶ</w> <w>γένει</w> <w>καὶ</w> <w>εἴσπλουν</w> 
+                    <w>καὶ</w> <w>ἔκπλ<unclear>ο</unclear><supplied reason="lost">υν</supplied></w> <w><supplied reason="lost">αὐτοῖς</supplied></w>
+            	<lb n="6"/><w><supplied reason="lost">καὶ</supplied></w> <w><supplied reason="lost">χράμ</supplied><unclear>α</unclear>σι</w> <w>τοῖς</w> 
+                      <w><unclear>α</unclear>ὐτ<supplied reason="lost">ῶ</supplied><unclear>ν</unclear></w> <w>καὶ</w> <w>πο<supplied reason="lost">λ</supplied>έμου</w> 
+                           <w><unclear>κα</unclear><supplied reason="lost">ὶ</supplied></w> <w><supplied reason="lost">εἰράνας</supplied></w>
+               <lb n="7"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app loc="2-3"><rdg source="bib:b0136">[Ἀν|τί]γονος</rdg></app> 
-               <app loc="2-3"><note anchored="true">но возможны и другие ЛИ на -γονος.</note></app>
-               <app loc="7"><rdg source="bib:b0136"><note anchored="true">вероятно</note> [ἀσυλεὶ καὶ ἀσπονδεί ---]</rdg>
-           <note anchored="true">Не исключено, что далее следовала формула санкции и формула датировки:
+               <app loc="2-3"><note>но возможны и другие ЛИ на -γονος.</note></app>
+               <app loc="7"><rdg source="bib:b0136"><note>вероятно</note> [ἀσυλεὶ καὶ ἀσπονδεί ---]</rdg>
+           <note>Не исключено, что далее следовала формула санкции и формула датировки:
               ταῦτ' ἔδοξε βουλᾷ καὶ δάμῳ μηνὸς τοῦ δ., βασιλεύοντος τοῦ δ., προαισυμνῶντος τοῦ δ., γραμματεύοντος τοῦ δ.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Проксения Тимагора, родосца.</p>
-            <p part="N">Совет и народ даровал.</p>
-            <p part="N">Теотим, (сын) - - -, [- - -]гон, (сын) Прона, (сына) Автея, внесли предложение: даровать Тимагору, (сыну) Никагора, родосцу проксению и гражданство, ему самому и потомкам, а также право входа в гавань и выхода из гавани, [им самим] и их имуществу во время войны и во время мира [---].</p>
+         <div type="translation" xml:lang="ru">
+            <p>Проксения Тимагора, родосца.</p>
+            <p>Совет и народ даровал.</p>
+            <p>Теотим, (сын) - - -, [- - -]гон, (сын) Прона, (сына) Автея, внесли предложение: даровать Тимагору, (сыну) Никагора, родосцу проксению и гражданство, ему самому и потомкам, а также право входа в гавань и выхода из гавани, [им самим] и их имуществу во время войны и во время мира [---].</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">	Одна из немногих сохранившихся проксений раннеэллинистического Херсонеса. Следует отметить единственный раз встречающуюся в херсонесских декретах формулу βουλὰ καὶ δᾶμος ἔδωκε,  а также краткость редакции: отсутствие мотивировочной части и отсутствие обозначения должностей эйсегетов (большинство документов эллинистического времени приняты по предложению коллегии магистратов).</p>
-            <p part="N">	На интенсивность экономических связей между эллинистическим Родосом и Северным Причерноморьем  указывает большой объем керамического материала - около 15 тысяч родосских керамических клейм (Бадальянц 2000, 198; ср. Badal'janc 1999, 247 слл.). Начало поступления родосского импорта вина в этот регион относится к середине III в. до н.э., при этом значительным он становится около 215 г. до н.э., достигает максимума около 195 г. до н.э., остается на высоком уровне до 145 г. до н.э., после чего постепенно снижается в течение второй половины II в. до н.э. (Горлов 1996, 217; Finkielsztejen 2001, 188 сл.; Lund 2011, 288). </p>
-            <p part="N">	По количеству найденных в в Северном Причерноморье родосских керамических клейм Херсонес существенно уступал Ольвии и Боспору (2,5 % против 44,7% в Ольвии и 44,3% в Боспорском царстве по подсчетам Бадальянц 2000, 198). Родосский импорт в общем балансе херсонесской торговли занимал незначительное  место (Крушкол 1957, 114; Бадальянц 1986, 94 сл.), главный импорт Херсонеса составляли синопские, фасосские и гераклейские амфоры (Стржелецкий 1961, 100, прим.1; 101; 107). Среди центров Северного Причерноморья наибольшее число эпиграфических свидетельств о связях с Родосом касается Ольвии. Из Ольвии происходят два эллинистических декрета в честь граждан Родоса (IOSPE I2 30 и НО 24); ольвиополиту Посидею принадлежат три посвящения родосским божествам из «Неаполя Скифского» (см.  № ipe670 с комментарием, 671, Dash60), датирующиеся II в. до н.э. В Пантикапее найдено посвящение родосцев за царя Перисада II, сына Спартока (КБН 20, 284/3-245 г. до н.э.; ср. упоминание некоего  боспорца в родосской надписи IG XII 1, 11).  </p>
-            <p part="N">	ЛИ Τιμαγόρας и Νικαγόρας хорошо известны на Родосе (LGPN I, s.v.). ЛИ Θεότιμος, Πρόνους, Αὐτέας засвидетельствованы в Херсонесе только данной надписью.</p>
+         <div type="commentary" xml:lang="ru">
+            <p>	Одна из немногих сохранившихся проксений раннеэллинистического Херсонеса. Следует отметить единственный раз встречающуюся в херсонесских декретах формулу βουλὰ καὶ δᾶμος ἔδωκε,  а также краткость редакции: отсутствие мотивировочной части и отсутствие обозначения должностей эйсегетов (большинство документов эллинистического времени приняты по предложению коллегии магистратов).</p>
+            <p>	На интенсивность экономических связей между эллинистическим Родосом и Северным Причерноморьем  указывает большой объем керамического материала - около 15 тысяч родосских керамических клейм (Бадальянц 2000, 198; ср. Badal'janc 1999, 247 слл.). Начало поступления родосского импорта вина в этот регион относится к середине III в. до н.э., при этом значительным он становится около 215 г. до н.э., достигает максимума около 195 г. до н.э., остается на высоком уровне до 145 г. до н.э., после чего постепенно снижается в течение второй половины II в. до н.э. (Горлов 1996, 217; Finkielsztejen 2001, 188 сл.; Lund 2011, 288). </p>
+            <p>	По количеству найденных в в Северном Причерноморье родосских керамических клейм Херсонес существенно уступал Ольвии и Боспору (2,5 % против 44,7% в Ольвии и 44,3% в Боспорском царстве по подсчетам Бадальянц 2000, 198). Родосский импорт в общем балансе херсонесской торговли занимал незначительное  место (Крушкол 1957, 114; Бадальянц 1986, 94 сл.), главный импорт Херсонеса составляли синопские, фасосские и гераклейские амфоры (Стржелецкий 1961, 100, прим.1; 101; 107). Среди центров Северного Причерноморья наибольшее число эпиграфических свидетельств о связях с Родосом касается Ольвии. Из Ольвии происходят два эллинистических декрета в честь граждан Родоса (IOSPE I2 30 и НО 24); ольвиополиту Посидею принадлежат три посвящения родосским божествам из «Неаполя Скифского» (см.  № ipe670 с комментарием, 671, Dash60), датирующиеся II в. до н.э. В Пантикапее найдено посвящение родосцев за царя Перисада II, сына Спартока (КБН 20, 284/3-245 г. до н.э.; ср. упоминание некоего  боспорца в родосской надписи IG XII 1, 11).  </p>
+            <p>	ЛИ Τιμαγόρας и Νικαγόρας хорошо известны на Родосе (LGPN I, s.v.). ЛИ Θεότιμος, Πρόνους, Αὐτέας засвидетельствованы в Херсонесе только данной надписью.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

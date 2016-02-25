@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Надгробие Папия, сына Гераклида.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000130</idno>
             <idno type="PE">PE3000130</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,9 +44,9 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone</material>
-                           <p xml:lang="ru" part="N">Верхняя часть стелы, украшенной фронтоном с акротериями. В тимпанe изображение круглой розетки. 
+                           <p xml:lang="ru">Верхняя часть стелы, украшенной фронтоном с акротериями. В тимпанe изображение круглой розетки. 
                               Под фронтоном сохранилась двухстрочная надпись.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">62</height>
                               <width unit="cm">42</width>
@@ -56,58 +56,58 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с прямой поперечной линией, курсивные Ε и Σ, правая гаста Δ выступает за пересечение с левой гастой, 
+                        <seg xml:lang="ru">Α с прямой поперечной линией, курсивные Ε и Σ, правая гаста Δ выступает за пересечение с левой гастой, 
                            Ο почти того же размера, что и остальные буквы, Π с вертикалями одинаковой длины и выходящей за их пределы горизонталью, 
                            небольшие апексы на концах линий букв</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2,2</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0068" notAfter="0133" evidence="Палеография" instant="false">
-                        <seg xml:lang="ru" part="N">Конец I – начало II в. н.э.</seg>
-                        <seg xml:lang="en" part="N">Late I - early II centuries C.E.</seg>
+                     <origDate notBefore="0068" notAfter="0133" evidence="Палеография">
+                        <seg xml:lang="ru">Конец I – начало II в. н.э.</seg>
+                        <seg xml:lang="en">Late I - early II centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена случайно Р.П. Смирновым в 2004 г. в юго-восточной части Херсонеса, в портовом районе.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol.</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-23" who="CB" status="draft">Added origDate</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-25" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-05-13" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-23" who="CB">Added origDate</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-25" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,38 +120,38 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft">ineditum.</bibl>
+            <listBibl>
+               <bibl>ineditum.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Παπίας</name> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἡρακλεί
-               		    <lb n="2" break="no"/>δου</name></persName>, <w part="N">χαῖρε</w></persName>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Παπίας</name> <persName type="attested"><name>Ἡρακλεί
+               		    <lb n="2" break="no"/>δου</name></persName>, <w>χαῖρε</w></persName>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true">Строки надписи выровнены по центру.</note></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note>Строки надписи выровнены по центру.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Папий, (сын) Гераклида, приветствую.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Папий, (сын) Гераклида, приветствую.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

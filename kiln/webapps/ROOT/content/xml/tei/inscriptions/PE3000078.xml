@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Стела Тимоксены, дочери Аполлофана, жены Аполлония.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000078</idno>
             <idno type="PE">PE3000078</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,10 +44,10 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone</material>
-                           <p xml:lang="ru" part="N">Сохранилась бóльшая часть стелы за исключением верхнего и нижнего профиля. На лицевой и боковых сторонах следы рельефных 
+                           <p xml:lang="ru">Сохранилась бóльшая часть стелы за исключением верхнего и нижнего профиля. На лицевой и боковых сторонах следы рельефных 
                               розеток. Под ними остатки рельефного изображение перевязанных узлом и свисающих тэний и висящего на шнуре алабастра. 
                               Выше розеток вырезана четырехстрочная надпись.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">69</height>
                               <width unit="cm">29</width>
@@ -57,61 +57,61 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Надпись вырезана небрежно, мелкими буквами. Μ с наклонными боковыми линиями, вертикальные гасты 
+                        <seg xml:lang="ru">Надпись вырезана небрежно, мелкими буквами. Μ с наклонными боковыми линиями, вертикальные гасты 
                            Ν имеют почти одинаковую длину, Ο немного меньше остальных букв, верхняя поперечная линия Π выступает за короткую правую вертикаль, 
                            небольшие утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,3</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0250" notAfter="-0201" evidence="Палеография" instant="false">
-                        <seg xml:lang="ru" part="N">Вторая половина III в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">2nd half of III century B.C.</seg>
+                     <origDate notBefore="-0250" notAfter="-0201" evidence="Палеография">
+                        <seg xml:lang="ru">Вторая половина III в. до н.э.</seg>
+                        <seg xml:lang="en">2nd half of III century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1894 г. при раскопках некрополя у южного и юго-западного участков оборонительной стены. 
                            Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 4, № 102; д. 23, л. 2, № 102).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol.</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-19" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-02" who="CB" status="draft">Metadata and app crit</change>
-         <change when="2015-07-14" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-05" who="CB" status="draft">metadata tagging</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-03-13" who="AV" status="draft">tagging Greek names XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-19" who="CB">Bibliography</change>
+         <change when="2015-09-02" who="CB">Metadata and app crit</change>
+         <change when="2015-07-14" who="KK">Add photo file name</change>
+         <change when="2015-06-05" who="CB">metadata tagging</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-03-13" who="AV">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -128,46 +128,46 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 138</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>521</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 138</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>521</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--KW--><ptr target="bib:b0519"/> № 69</bibl>
-               <bibl default="false" status="draft"><!--АСХ--><ptr target="bib:b0523"/> № 192</bibl>
-               <bibl default="false" status="draft"><!--Posamentir 2011--><ptr target="bib:b0439"/>, 123, № C51.</bibl>
+            <listBibl>
+               <bibl><!--KW--><ptr target="bib:b0519"/> № 69</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 192</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 123, № C51.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Τιμ<supplied reason="lost" instant="false">ο</supplied>ξένα</name></persName>
-               		<lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀπολλοφάνειος</name></persName>, 
-               		<lb n="3"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀπολλ<unclear instant="false">ω</unclear>νίου</name>
-               	<num>4</num>	<lb n="4"/><w part="N">γυνά</w></persName>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Τιμ<supplied reason="lost">ο</supplied>ξένα</name></persName>
+               		<lb n="2"/><persName type="attested"><name>Ἀπολλοφάνειος</name></persName>, 
+               		<lb n="3"/><persName type="attested"><name>Ἀπολλ<unclear>ω</unclear>νίου</name>
+               	<num>4</num>	<lb n="4"/><w>γυνά</w></persName>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true"/></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note/></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Тимоксена, (дочь) Аполлофана, жена Аполлония.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Тимоксена, (дочь) Аполлофана, жена Аполлония.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">	ЛИ Τιμοξένα засвидетельствовано в Северном Причерноморье только в этой надписи. Однокоренные имена отца и мужа умершей, Ἀπολλοφάνης и Ἀπολλωνιος, неоднократно встречаются в Херсонесе (LGPN IV). </p>
-            <p part="N">	По поводу характерного для херсонесских надписей эллинистического времени написания ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с примерами); ср. Thumb-Kieckers 137, § 132.</p>
+         <div type="commentary" xml:lang="ru">
+            <p>	ЛИ Τιμοξένα засвидетельствовано в Северном Причерноморье только в этой надписи. Однокоренные имена отца и мужа умершей, Ἀπολλοφάνης и Ἀπολλωνιος, неоднократно встречаются в Херсонесе (LGPN IV). </p>
+            <p>	По поводу характерного для херсонесских надписей эллинистического времени написания ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с примерами); ср. Thumb-Kieckers 137, § 132.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Стела Горгиппы и Амфия, детей Матрия.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000006</idno>
             <idno type="PE">PE3000006</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,10 +44,10 @@
                            <objectType xml:lang="en">Stele</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone</material>
-                           <p xml:lang="ru" part="N">Верхняя часть стелы с высоким монолитным анфемием.
+                           <p xml:lang="ru">Верхняя часть стелы с высоким монолитным анфемием.
                               Состоит из пяти фрагментов.
                               Под карнизом симметрично по отношению к вертикальной оси вырезана и обведена красной краской трехстрочная надпись.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">83</height>
                               <width unit="cm">38,5</width>
@@ -57,58 +57,58 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Μ с наклонными боковыми, крупное Ο, Σ с расходящимися верхней и нижней гастами, отсутствие утолщений на концах букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Μ с наклонными боковыми, крупное Ο, Σ с расходящимися верхней и нижней гастами, отсутствие утолщений на концах букв.</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">4,1 (стк. 1-2); 3,2 (стк. 3).</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N">Tauric Chersonesos</seg>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en">Tauric Chersonesos</seg>
                      </origPlace>
-                     <origDate notBefore="-0367" notAfter="-0334" evidence="Палеография" cert="low" instant="false">
-                        <seg xml:lang="ru" part="N">Около середины IV в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">Around the mid IV century B.C.</seg>
+                     <origDate notBefore="-0367" notAfter="-0334" evidence="Палеография" cert="low">
+                        <seg xml:lang="ru">Около середины IV в. до н.э.</seg>
+                        <seg xml:lang="en">Around the mid IV century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
                            Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-10-15" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-01" who="CB" status="draft">Metadata and app crit</change>
-         <change when="2015-07-10" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-05-29" who="CB" status="draft">Metadata tagging</change>
-         <change when="2015-03-12" who="VP" status="draft">Tagging the names</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-10-15" who="CB">Bibliography</change>
+         <change when="2015-09-01" who="CB">Metadata and app crit</change>
+         <change when="2015-07-10" who="KK">Add photo file name</change>
+         <change when="2015-05-29" who="CB">Metadata tagging</change>
+         <change when="2015-03-12" who="VP">Tagging the names</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -121,46 +121,46 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Соломоник 1969--><ptr target="bib:b0504"/>, 70, № <citedRange>32</citedRange></bibl>
-               <bibl default="false" status="draft"><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>166</citedRange></bibl> <bibl default="false" status="draft">(<!--Bull. ép. 1974--><ptr target="bib:Bull. ép"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--Perlman 2011--><ptr target="bib:0437"/>, 446, № <citedRange>60</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 70, № <citedRange>32</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>166</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:Bull. ép"/>, <citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:0437"/>, 446, № <citedRange>60</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Posamentir 2011--><ptr target="bib:b0439"/>, 68, № 60.</bibl>
+            <listBibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 68, № 60.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Γοργίππα</name></persName>, 
-               		<lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀμφίας</name> 
-               		<lb n="3"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Μάτριος</name></persName></persName>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Γοργίππα</name></persName>, 
+               		<lb n="2"/><persName type="attested"><name>Ἀμφίας</name> 
+               		<lb n="3"/><persName type="attested"><name>Μάτριος</name></persName></persName>.
             </ab>         </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true"/></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note/></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Горгиппа, Амфий, (дети) Матрия.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Горгиппа, Амфий, (дети) Матрия.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">	По архитектурному оформлению близкой аналогией к данному памятнику является надгробие из Керкинитиды, датирующееся тем же временем (№ ipe399).</p>
-            <p part="N">Γοργίππα - женское личное имя группы двухосновных имен с элементом γοργός (Bechtel HPN, 111) в дорийской огласовке. 
+         <div type="commentary" xml:lang="ru">
+            <p>	По архитектурному оформлению близкой аналогией к данному памятнику является надгробие из Керкинитиды, датирующееся тем же временем (№ ipe399).</p>
+            <p>Γοργίππα - женское личное имя группы двухосновных имен с элементом γοργός (Bechtel HPN, 111) в дорийской огласовке. 
                В Северном Причерноморье более не встречается (ср., однако, параллельное мужское имя Γόργιππος, LGPN IV). 
                Теофорное имя Μᾶτρις - деминутив группы двухосновных имен с первым элементом Μητρο-, хорошо засвидетельствованный в Херсонесе 
                (эллинистическое время, LGPN IV) и других мегарских колониях. См. Robert 1959, 231; Masson 1994, 141.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Стела Прима, сына Диофанта (?).</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000131</idno>
             <idno type="PE">PE3000131</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,12 +44,12 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru" part="N">Узкая высокая стела «боспорского типа» с шипом для крепления на постаменте. 
+                           <p xml:lang="ru">Узкая высокая стела «боспорского типа» с шипом для крепления на постаменте. 
                               Сохранилась полностью. Вверху изображен рельефный фронтон с акротериями с розеткой в тимпане. Слева и справа от фронтона помещены две розетки. 
                               В центре плиты на рельефе в прямоугольном углублении изображение сцены загробной трапезы: на высоком ложе мужчина, облокотившийся на подушку. 
                               Перед ним пиршественный стол. У изголовья ложа в правом углу фигурка слуги. 
                               Под рельефом небрежно неглубокими буквами вырезана двухстрочная надпись. Поверхность рельефа очень сильно стерта, буквы надписи едва различимы.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">86</height>
                               <width unit="cm">37</width>
@@ -59,60 +59,60 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с ломаной поперечной линией, Μ с расходящимися внешними гастами, 
+                        <seg xml:lang="ru">Α с ломаной поперечной линией, Μ с расходящимися внешними гастами, 
                            Π с вертикалями одинаковой длины и не выходящей за их пределы перекладиной, слабое апицирование.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2,3</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0051" notAfter="0100" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">Вторая половина I в. н.э.</seg>
-                        <seg xml:lang="en" part="N">2nd half of I century C.E.</seg>
+                     <origDate notBefore="0051" notAfter="0100" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">Вторая половина I в. н.э.</seg>
+                        <seg xml:lang="en">2nd half of I century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес); по другим данным Керчь.</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес); по другим данным Керчь.</placeName>
                         <rs type="circumstances">Найдена до 1888 г.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Одесса.</seg>
-                     <seg xml:lang="en" part="N">Odessa.</seg>
+                     <seg xml:lang="ru">Одесса.</seg>
+                     <seg xml:lang="en">Odessa.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
-         <change when="2015-09-28" who="CB" status="draft">Bibliography</change>
-         <change when="2015-08-27" who="CB" status="draft">app crit</change>
-         <change when="2015-08-21" who="CB" status="draft">Biblio and app crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-25" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-09-28" who="CB">Bibliography</change>
+         <change when="2015-08-27" who="CB">app crit</change>
+         <change when="2015-08-21" who="CB">Biblio and app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-25" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -125,48 +125,48 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--IOSPE--><ptr target="IOSPE"/> <citedRange>II, 194</citedRange> (издана как найденная в Керчи; cf. ibidem. p. 305)</bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="IOSPE2"/> <citedRange>489</citedRange> (издана как найденная в Херсонесе)</bibl>
-               <bibl default="false" status="draft"><!--КБН--><ptr target="КБН"/> <citedRange>498</citedRange> (издана как найденная в Керчи; ср. КБН-Альбом № 498).</bibl>
+            <listBibl>
+               <bibl><!--IOSPE--><ptr target="IOSPE"/> <citedRange>II, 194</citedRange> (издана как найденная в Керчи; cf. ibidem. p. 305)</bibl>
+               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/> <citedRange>489</citedRange> (издана как найденная в Херсонесе)</bibl>
+               <bibl><!--КБН--><ptr target="КБН"/> <citedRange>498</citedRange> (издана как найденная в Керчи; ср. КБН-Альбом № 498).</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Юргевич 1887--><ptr target="bib:b0514"/>, 76</bibl>
-               <bibl default="false" status="draft"><!--Юргевич 1890--><ptr target="bib:b051"/>, 79, № 6</bibl>
-               <bibl default="false" status="draft"><!--KW--><ptr target="bib:b0519"/> № 729</bibl>
-               <bibl default="false" status="draft"><!--АСХ--><ptr target="bib:b0523"/> № 375.</bibl>
+            <listBibl>
+               <bibl><!--Юргевич 1887--><ptr target="bib:b0514"/>, 76</bibl>
+               <bibl><!--Юргевич 1890--><ptr target="bib:b051"/>, 79, № 6</bibl>
+               <bibl><!--KW--><ptr target="bib:b0519"/> № 729</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 375.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Πρῖμε</name> <name full="yes" instant="false"><unclear cert="low" instant="false">Διοφάν</unclear> <!--(?) needed-->
-               		<lb n="2" break="no"/><supplied reason="lost" instant="false">τ</supplied><unclear instant="false">ου</unclear></name></persName>, <w part="N">χαῖρε</w>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Πρῖμε</name> <name><unclear cert="low">Διοφάν</unclear> <!--(?) needed-->
+               		<lb n="2" break="no"/><supplied reason="lost">τ</supplied><unclear>ου</unclear></name></persName>, <w>χαῖρε</w>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app loc="1/2"><rdg source="bib:IOSPE"><note anchored="true">scripsi</note></rdg></app>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1/2"><rdg source="bib:IOSPE"><note>scripsi</note></rdg></app>
               <app><rdg source="bib:IOSPE2">[Δ]ιο[κ]λ[εί]|δ]ου (?)</rdg></app>
                <app><rdg source="bib:IOSPE2">Διοφ(ά)ντου</rdg></app>
-               <app><rdg source="bib:КБН">Διο[κ]λεί|[δ]ου</rdg><note anchored="true">(«после сверки с камнем»)</note></app>
+               <app><rdg source="bib:КБН">Διο[κ]λεί|[δ]ου</rdg><note>(«после сверки с камнем»)</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Прим, (сын) Диофанта (?), приветствую.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Прим, (сын) Диофанта (?), приветствую.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Согласно каталогу Юргевич 1890,79 стела была найдена в Херсонесе. Согласно КБН 498 в ОАМ была доставлена из Керчи. Достоверно место находки установить не удалось.</p>
+         <div type="commentary" xml:lang="ru">
+            <p>Согласно каталогу Юргевич 1890,79 стела была найдена в Херсонесе. Согласно КБН 498 в ОАМ была доставлена из Керчи. Достоверно место находки установить не удалось.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Incertum.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000270</idno>
             <idno type="PE">PE3000270</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" part="N">Неизвестный.</seg>
-                     <seg xml:lang="en" part="N">Unknown.</seg>
+                     <seg xml:lang="ru">Неизвестный.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble</material>
-                           <p xml:lang="ru" part="N">Левый нижний угол плиты с рельефной рамкой. В поле надписи сохранились начальные буквы двух строк.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Левый нижний угол плиты с рельефной рамкой. В поле надписи сохранились начальные буквы двух строк.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20</height>
                               <width unit="cm">17</width>
@@ -55,60 +55,60 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Буквы ровные, довольно широкие, Α с прямой поперечной линией, Π с равными вертикалями и выходящей за их пределы горизонталью, 
+                        <seg xml:lang="ru">Буквы ровные, довольно широкие, Α с прямой поперечной линией, Π с равными вертикалями и выходящей за их пределы горизонталью, 
                            курсивная Σ, умеренное апицирование.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">0,8</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">II в. н.э. (скорее первая половина)</seg>
-                        <seg xml:lang="en" part="N">II century C.E.</seg>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">II в. н.э. (скорее первая половина)</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1891 г. в центральной части городища, на площади около собора св. Владимира (раскоп I). 
                            Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 2, № 49; д. 20, № 49).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-          <change when="2015-11-13" who="KK" status="draft">Tokenised</change>
-         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-23" who="CB" status="draft">biblio and app crit</change>
-         <change when="2015-10-23" who="CB" status="draft">Metadata</change>
-          <change when="2015-10-21" who="KK" status="draft">Leidenised</change>
-         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+          <change when="2015-11-13" who="KK">Tokenised</change>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-23" who="CB">biblio and app crit</change>
+         <change when="2015-10-23" who="CB">Metadata</change>
+          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -121,46 +121,46 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1892--><ptr target="bib:b0125"/>, 34, № <citedRange>20</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 162</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>592</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--Латышев 1892--><ptr target="bib:b0125"/>, 34, № <citedRange>20</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 162</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>592</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"/>
+            <listBibl>
+               <bibl/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
-               		<lb n="2"/><w part="F">ται</w>  <space extent="unknown" unit="character"/>  <w part="I"><orig>ε<unclear instant="false">δ</unclear></orig></w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="3"/><w part="N">στήλης</w><w part="I"> πασ</w><gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="2"/><w part="F">ται</w>  <space extent="unknown" unit="character"/>  <w part="I"><orig>ε<unclear>δ</unclear></orig></w><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><w>στήλης</w><w part="I"> πασ</w><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><space extent="unknown" unit="character"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app><!--<note>IOSPE I2 592. </note>--></app>
-               <app loc="1"><note anchored="true">в конце стк. на копии IOSPE показана нижняя часть круглой буквы (Ο ?); я не могу подтвердить это чтение.</note></app>
-               <app loc="2"><note anchored="true">в конце стк. виден верх вертикальной линии.</note></app>
+               <app loc="1"><note>в конце стк. на копии IOSPE показана нижняя часть круглой буквы (Ο ?); я не могу подтвердить это чтение.</note></app>
+               <app loc="2"><note>в конце стк. виден верх вертикальной линии.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="ru">
+            <p/>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

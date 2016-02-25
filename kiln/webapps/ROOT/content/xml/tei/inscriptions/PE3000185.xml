@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Метрическая эпитафия М. Аврелия Иасона, сына М. Архия.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000185</idno>
             <idno type="PE">PE3000185</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc18" part="N">Метрическая эпитафия.</seg>
-                     <seg xml:lang="en" part="N">Metrical epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc18">Метрическая эпитафия.</seg>
+                     <seg xml:lang="en">Metrical epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,9 +44,9 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Material</material>
-                           <p xml:lang="ru" part="N">Сохранилась полностью, имеются небольшие сколы и выбоины. Лицевая сторона отшлифована. 
+                           <p xml:lang="ru">Сохранилась полностью, имеются небольшие сколы и выбоины. Лицевая сторона отшлифована. 
                               В середине плиты расположены шесть строк надписи.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">53</height>
                               <width unit="cm">43</width>
@@ -56,59 +56,59 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Удлиненные пропорции букв, Α с ломаной поперечной линией, ромбообразная Θ с замкнутой перекладиной, ромбообразное Ο, 
+                        <seg xml:lang="ru">Удлиненные пропорции букв, Α с ломаной поперечной линией, ромбообразная Θ с замкнутой перекладиной, ромбообразное Ο, 
                            Π с вертикалями одинаковой длины и выходящей за их пределы горизонталью, прямоугольная Σ, слабое апицирование.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0201" notAfter="0300" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">III в. н.э.</seg>
-                        <seg xml:lang="en" part="N">III century C.E.</seg>
+                     <origDate notBefore="0201" notAfter="0300" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">III в. н.э.</seg>
+                        <seg xml:lang="en">III century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1893 г. в северном районе городища при раскопках Северной базилики рядом с монастырским кладбищем, внутри базилики. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 3, л. 34, № 92; д. 22, л. 3, № 92).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-19" who="CB" status="draft">tokenised</change>
-         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-30" who="CB" status="draft">Biblio and app crit</change>
-         <change when="2015-10-22" who="CB" status="draft">Metadata</change>
-          <change when="2015-10-21" who="KK" status="draft">Leidenised</change>
-         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-19" who="CB">tokenised</change>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-30" who="CB">Biblio and app crit</change>
+         <change when="2015-10-22" who="CB">Metadata</change>
+          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -121,57 +121,57 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1895--><ptr target="bib:b0130"/>, 15, № <citedRange>12</citedRange> (<!--Latyschew 1895-->, 519, № <citedRange>9</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 108</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>479</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 15, № <citedRange>12</citedRange> (<!--Latyschew 1895-->, 519, № <citedRange>9</citedRange>)</bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 108</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>479</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Соломоник 1990--><ptr target="bib:b0506"/>, 100, № 101.</bibl>
+            <listBibl>
+               <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 100, № 101.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><w part="N">καὶ</w> <w part="N">τίς</w> <w part="N">οὐκ</w> <w part="N">ἂν</w> <w part="N">ἐνέσιεν</w> <w part="N">τὸν</w> <w part="N">ἐν</w> <w part="I">βρο</w>
-               		<lb n="2" break="no"/><space extent="unknown" unit="character"/> <w part="N">τοῖσιν</w> <w part="N">ποθητὸν</w> <space extent="unknown" unit="character"/>
-               		<lb n="3"/><w part="N">στεφέεσίν</w> <w part="N">τε</w> <w part="N">ἔξοχον</w> <w part="N">καὶ</w> <w part="N">ἐν</w> <w part="N">καμά</w>
-               		<lb n="4" break="no"/><space extent="unknown" unit="character"/> <w part="N">τοισιν</w> <w part="N">μέγιστον</w> <space extent="unknown" unit="character"/>
-               		<lb n="5"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Μ.</name> <name full="yes" instant="false">Αὐρ.</name> <name full="yes" instant="false">Ἰάσονα</name> 
-               		   <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Μ.</name> <name full="yes" instant="false">Ἀρχία</name></persName></persName>, <w part="N"><supplied reason="lost" instant="false">κ</supplied><unclear instant="false">λ</unclear>υτὸν</w> 
-               		<lb n="6"/><space extent="unknown" unit="character"/> <w part="N">σέβας</w>·<space extent="unknown" unit="character"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><w>καὶ</w> <w>τίς</w> <w>οὐκ</w> <w>ἂν</w> <w>ἐνέσιεν</w> <w>τὸν</w> <w>ἐν</w> <w part="I">βρο</w>
+               		<lb n="2" break="no"/><space extent="unknown" unit="character"/> <w>τοῖσιν</w> <w>ποθητὸν</w> <space extent="unknown" unit="character"/>
+               		<lb n="3"/><w>στεφέεσίν</w> <w>τε</w> <w>ἔξοχον</w> <w>καὶ</w> <w>ἐν</w> <w>καμά</w>
+               		<lb n="4" break="no"/><space extent="unknown" unit="character"/> <w>τοισιν</w> <w>μέγιστον</w> <space extent="unknown" unit="character"/>
+               		<lb n="5"/><persName type="attested"><name>Μ.</name> <name>Αὐρ.</name> <name>Ἰάσονα</name> 
+               		   <persName type="attested"><name>Μ.</name> <name>Ἀρχία</name></persName></persName>, <w><supplied reason="lost">κ</supplied><unclear>λ</unclear>υτὸν</w> 
+               		<lb n="6"/><space extent="unknown" unit="character"/> <w>σέβας</w>·<space extent="unknown" unit="character"/>
                		<lb n="7"/><space extent="unknown" unit="character"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app><!--<note>IOSPE I2 479.</note>--></app>
                <app loc="1"><rdg>ἐνέσιεν = αἰνέσειεν</rdg></app>
-               <app loc="3"><rdg>στεφέεσιν <note anchored="true">scripsi secundum lap.</note></rdg> 
-                <rdg>στέφε<supplied reason="omitted" instant="false">σ</supplied>σιν <note anchored="true">- edd.</note></rdg></app>
-               <app loc="5"><rdg>[κ]<unclear instant="false">λ</unclear>υτὸν <note anchored="true">scripsi,</note></rdg> 
+               <app loc="3"><rdg>στεφέεσιν <note>scripsi secundum lap.</note></rdg> 
+                <rdg>στέφε<supplied reason="omitted">σ</supplied>σιν <note>- edd.</note></rdg></app>
+               <app loc="5"><rdg>[κ]<unclear>λ</unclear>υτὸν <note>scripsi,</note></rdg> 
                   <rdg source="bib:IOSPE">[κλ]υτὸν</rdg></app>
-               <app><note anchored="true">В нижней части плиты следы букв: слева наклонная линия и Γ (?), справа Ν («ad titulim non pertinent» - IOSPE).</note></app>
+               <app><note>В нижней части плиты следы букв: слева наклонная линия и Γ (?), справа Ν («ad titulim non pertinent» - IOSPE).</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Кто же не похвалит желанного среди смертных, выдающегося наградами и величайшего в трудах М. Аврелия Иасона, (сына) М. Архия, славного и почитаемого?</p>
+         <div type="translation" xml:lang="ru">
+            <p>Кто же не похвалит желанного среди смертных, выдающегося наградами и величайшего в трудах М. Аврелия Иасона, (сына) М. Архия, славного и почитаемого?</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Эпитафия содержит элементы дактилического гекзаметра:</p>
-            <p part="N">καὶ τίς οὐκ ἂν ἐνέσιεν τὸν ἐν βροτοῖσιν ποθητὸν</p>
-            <p part="N">στεφέεσίν τε ἔξοχον καὶ ἐν καμάτοισιν μέγιστον</p>
-            <p part="N">Μ. Αὐρ. Ἰάσονα Μ. Ἀρχία [κλ]υτὸν σέβας·</p>
+         <div type="commentary" xml:lang="ru">
+            <p>Эпитафия содержит элементы дактилического гекзаметра:</p>
+            <p>καὶ τίς οὐκ ἂν ἐνέσιεν τὸν ἐν βροτοῖσιν ποθητὸν</p>
+            <p>στεφέεσίν τε ἔξοχον καὶ ἐν καμάτοισιν μέγιστον</p>
+            <p>Μ. Αὐρ. Ἰάσονα Μ. Ἀρχία [κλ]υτὸν σέβας·</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

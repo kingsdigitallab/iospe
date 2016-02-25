@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Incertum.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000343</idno>
             <idno type="PE">PE3000343</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country>Ukraine</country>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" part="N">Incertum.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Incertum.</seg>
+                     <seg xml:lang="en"/>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en"/>
                            <material xml:lang="ru">Мрамор.</material>
                            <material xml:lang="en"/>
-                           <p xml:lang="ru" part="N">Оббита со всех сторон разбита на две части. Сохранились остатки двух строк надписи. Лицевая сторона отполирована.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Оббита со всех сторон разбита на две части. Сохранились остатки двух строк надписи. Лицевая сторона отполирована.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">9</height>
                               <width unit="cm">8,5</width>
@@ -55,56 +55,56 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Крупные, глубоко вырезанные буквы, отдельные линии букв слегка изогнуты, апексы.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Крупные, глубоко вырезанные буквы, отдельные линии букв слегка изогнуты, апексы.</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография" instant="false">
-                        <seg xml:lang="ru" part="N">II в. н.э.</seg>
-                        <seg xml:lang="en" part="N"/>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена случайно В.А. Анохиным в 1957 г. в центральной части городища, около собора св. Владимира (примерно 100 м к юго-западу от собора).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"/>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь, Украина.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru" part="N">В фондах НЗХТ удалось обнаружить только верхнюю часть фрагмента.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">В фондах НЗХТ удалось обнаружить только верхнюю часть фрагмента.</seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-13" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -117,42 +117,42 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft">НЭПХ I 85.</bibl>
+            <listBibl>
+               <bibl>НЭПХ I 85.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"/>
+            <listBibl>
+               <bibl/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><orig><unclear instant="false">Ο</unclear>ΝΙ</orig><space extent="unknown" unit="character"/><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><orig><unclear instant="false">Ψ</unclear>Ι<unclear instant="false">Σ</unclear></orig><gap reason="illegible" quantity="1" unit="character" instant="false"/><gap reason="lost" extent="unknown" unit="character" instant="false"/> 
-               		<lb n="4"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ο</unclear>ΝΙ</orig><space extent="unknown" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ψ</unclear>Ι<unclear>Σ</unclear></orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/> 
+               		<lb n="4"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true">2: в конце стк. небольшая горизонтальная черта - ed. pr.,  [Θεῷ Ὑ]ψίσ[τῳ] ? - ed. pr.</note></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note>2: в конце стк. небольшая горизонтальная черта - ed. pr.,  [Θεῷ Ὑ]ψίσ[τῳ] ? - ed. pr.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="ru">
+            <p/>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

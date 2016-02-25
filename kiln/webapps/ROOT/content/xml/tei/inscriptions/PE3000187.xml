@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Метрическая эпитафия Ойнанфы, дочери Главкия.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000187</idno>
             <idno type="PE">PE3000187</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc18" part="N">Метрическая эпитафия.</seg>
-                     <seg xml:lang="en" part="N">Metrical epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc18">Метрическая эпитафия.</seg>
+                     <seg xml:lang="en">Metrical epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,11 +44,11 @@
                            <objectType xml:lang="en">Stele</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Material</material>
-                           <p xml:lang="ru" part="N">Стела «боспорского типа» с широким основанием и зауженной верхней частью, украшенной карнизом; 
+                           <p xml:lang="ru">Стела «боспорского типа» с широким основанием и зауженной верхней частью, украшенной карнизом; 
                               внизу шип для крепления на постаменте. Сохранилась полностью. В прямоугольной углублении изображена стоящая женщина, 
                               рядом с ней высокая корзина; в правом углу — маленькая фигура служанки. Под рельефом расположены 18 строк достаточно хорошо сохранившейся 
                               надписи.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">88</height>
                               <width unit="cm">48</width>
@@ -58,56 +58,56 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Курсивные Ε, Σ, Ω, Α с ломаной поперечной линией, изогнутые линии отдельных букв, слабое апицирование.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Курсивные Ε, Σ, Ω, Α с ломаной поперечной линией, изогнутые линии отдельных букв, слабое апицирование.</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2,2 (стк. 1-2); 1 (остальные сткк.).</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">II в. н.э.</seg>
-                        <seg xml:lang="en" part="N">II century C.E.</seg>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1890 г. на островке в устье Казачей бухты, в кладке средневекового храма. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, л. 23, № 68; д. 19, л. 70, № 68).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-19" who="CB" status="draft">Leidenised, tokenised, app crit</change>
-         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-22" who="CB" status="draft">Metadata</change>
-         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-19" who="CB">Leidenised, tokenised, app crit</change>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-22" who="CB">Metadata</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,123 +120,123 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1892--><ptr target="bib:b0125"/>, 27, № <citedRange>10</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 136</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>519</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Peek, GVI--><ptr target="bib:b0521"/> <citedRange>1684</citedRange></bibl>
+            <listBibl>
+               <bibl><!--Латышев 1892--><ptr target="bib:b0125"/>, 27, № <citedRange>10</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 136</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>519</citedRange></bibl>
+               <bibl><!--Peek, GVI--><ptr target="bib:b0521"/> <citedRange>1684</citedRange></bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--KW--><ptr target="bib:b0519"/> № 319</bibl>
-               <bibl default="false" status="draft"><!--Wilamowitz 1928--><ptr target="bib:b0788"/>, 384</bibl>
-               <bibl default="false" status="draft"><!--АСХ--><ptr target="bib:b0523"/> № 376</bibl>
-               <bibl default="false" status="draft"><!--Соломоник 1990--><ptr target="bib:b0506"/>, 91, № 91</bibl>
+            <listBibl>
+               <bibl><!--KW--><ptr target="bib:b0519"/> № 319</bibl>
+               <bibl><!--Wilamowitz 1928--><ptr target="bib:b0788"/>, 384</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 376</bibl>
+               <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 91, № 91</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               <lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Οἰνάνθη</name> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Γλαυκίου</name></persName></persName>
-               <lb n="2"/><w part="N">ἆ</w> <w part="N">βάλε</w> <w part="N">τοι</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Μοῦ<supplied reason="omitted" instant="false">σαι</supplied></name></persName> <w part="N">σὰ</w> <w part="N">χαρείσια</w>, 
-                     <w part="N">κάμμορε</w> <w part="N">νύμφη</w> 
-               <lb n="3"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Οἰνάνθη</name></persName>, <w part="N">πα<supplied reason="omitted" instant="false">ί</supplied><choice><corr instant="false">δ</corr></choice>ων</w> 
-                     <w part="N">ἐπὶ</w> <w part="N">γούνασι</w> <w part="N">σεῖο</w> <w part="N">τεθέντων</w>,
-               <lb n="4"/><w part="N">φώνησα<choice><corr instant="false">ν</corr></choice></w> <w part="N">λοχίης</w> <w part="N">τε</w> <w part="N">καλὸν</w> <w part="N">νόμον</w> <persName type="divine" instant="false" full="yes"><w part="N">Εἰλειθύης</w></persName>,
-               <lb n="5"/><w part="N">μητρὶ</w> <w part="N">τε<unclear instant="false">ῆ</unclear></w> <w part="N">καὶ</w> <w part="N">πατρὶ</w> <w part="N">κε<choice><corr instant="false">χ</corr></choice>αρμένα</w> <w part="N">δῶρα</w> 
-                     <w part="N">πό<choice><corr instant="false">σ</corr></choice>ε<corr instant="false"><corr instant="false">ι</corr></corr></w> <w part="N"><choice><corr instant="false">τε</corr></choice></w>
-               <lb n="6"/><w part="N">νῦν</w> <w part="N"><choice><corr instant="false">δ</corr></choice>ὲ</w> <w part="N">σὺ</w> <w part="N">μὲν</w> <w part="N">κρυεραῖ<supplied reason="omitted" instant="false">σ</supplied>ιν</w> <w part="N">ἐπὶ</w> 
-                     <w part="N">ψαμάθοισιν</w> <w part="N"><supplied reason="omitted" instant="false">ἀλ</supplied>ύεις</w> 
-               <lb n="7"/><w part="N">Κωκυτοῦ</w> <w part="N">κελάδοντο<supplied reason="omitted" instant="false">ς</supplied></w> <w part="N">ἀνὰ</w> <w part="N">δρόσον</w>, <w part="N">οὐδέ</w> <w part="N">σ’</w> <w part="N">ἐγείρει</w>
-               <lb n="8"/><w part="N">ἀεναὲς</w> <w part="N">κελάδημα</w> <w part="N"><supplied reason="omitted" instant="false">φ</supplied>ίλης</w> <w part="N">ὀ<supplied reason="omitted" instant="false">π</supplied>ός</w>, <w part="N">ὧτέ</w> <w part="N">σε</w> <w part="N">μήτηρ</w>
-               <lb n="9"/><w part="N">ὄρνις</w> <w part="N">ὅκως</w> <w part="N">γεγό<supplied reason="omitted" instant="false">η</supplied>κε</w>, <w part="N"><supplied reason="omitted" instant="false">σ</supplied>ὺ</w> <w part="N">δὲ</w> <w part="N">λίθος</w>
-                  <w part="N">οὐδὲν</w> <w part="N">ἀκούεις</w>, 
-               <lb n="10"/><w part="N">ἀλ<supplied reason="omitted" instant="false">λ</supplied>ὰ</w> <w part="N">μελανδεῖν<supplied reason="omitted" instant="false">αί</supplied></w> <w part="N">σε</w> <w part="N">περὶ</w> 
-                     <w part="N">ῤό<supplied reason="omitted" instant="false">ε</supplied>ς</w> <w part="N">ὠκεανοῖο</w> 
-               <lb n="11"/><w part="N">εἰλεῦνται</w>, <w part="N">ψυχαὶ</w> <w part="N">δὲ</w> <w part="N">κατα<supplied reason="omitted" instant="false">χ</supplied>θονίων</w> <w part="N">ἀ<supplied reason="omitted" instant="false">λι</supplied>βάντων</w>
-               <lb n="12"/><w part="N">ζμερδαλέον</w> <w part="N">βρομέουσι</w>, <w part="N">σὺ</w> <w part="N">δὲ</w> <w part="N">θρ<supplied reason="omitted" instant="false">ό</supplied>ο<supplied reason="omitted" instant="false">ν</supplied></w> <w part="N">οὐχὶ</w> <w part="N">τοκήων</w>, 
-               <lb n="13"/><w part="N">οὐ</w> <w part="N">πόσιος</w> <w part="N">νενόηκας</w>, <w part="N">ἐπεὶ</w> <w part="N">πίες</w> <w part="N">ἆ</w> <w part="N">στύγα</w> <w part="N">Λήθης</w>
-               <lb n="14"/><w part="N">τίς</w> <w part="N">μακάρων</w> <w part="N">νόμος</w> <w part="N">οὗτος</w> <w part="N">ἵ<supplied reason="omitted" instant="false">ν’</supplied></w>  <w part="N">ἀν<supplied reason="omitted" instant="false">έ</supplied>ρες</w> 
-                     <w part="N">ἠέ</w> <w part="N">νυ</w> <w part="N">κῶρ<supplied reason="omitted" instant="false">αι</supplied></w>
-               <lb n="15"/><w part="N">οὐχὶ</w> <w part="N">κακαὶ</w> <w part="N">θνήσκουσι</w> <w part="N">προμοιρίες</w>, <w part="N">οὐχὶ</w> <w part="N">τοκήων</w>
-               <lb n="16"/><w part="N">οὐτιδανῶν</w>, <w part="N"><unclear instant="false">ἀ</unclear>λλ’</w> <w part="N">εἴ</w> <w part="N">τι<supplied reason="lost" instant="false">ς</supplied></w> <w part="N">ἀριπρεπὲς</w> <w part="N">εἶδο<unclear instant="false">ς</unclear></w> <w part="N">ἔχουσα</w>
-               <lb n="17"/><w part="N">ἢ</w> <w part="N">γένος</w>; <w part="N">ἦ</w> <w part="N">ῥα</w> <w part="N">τόδ’</w> <w part="N">ἐσθλὸν</w> <w part="N">ἐτήτυμον</w> <w part="N">ἀνδράσι</w> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Πυθώ</name></persName>, 
-               <lb n="18"/><w part="N">χρύσεον</w> <w part="N">ὅττι</w> <w part="N">γένεθλον</w> <w part="N">ἐς</w> <persName type="divine" instant="false" full="yes"><name full="yes" instant="false">Ἄιδα</name></persName> <w part="N">πρῶτον</w> <w part="N">ὁδεύειν</w>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested"><name>Οἰνάνθη</name> <persName type="attested"><name>Γλαυκίου</name></persName></persName>
+               <lb n="2"/><w>ἆ</w> <w>βάλε</w> <w>τοι</w> <persName type="attested"><name>Μοῦ<supplied reason="omitted">σαι</supplied></name></persName> <w>σὰ</w> <w>χαρείσια</w>, 
+                     <w>κάμμορε</w> <w>νύμφη</w> 
+               <lb n="3"/><persName type="attested"><name>Οἰνάνθη</name></persName>, <w>πα<supplied reason="omitted">ί</supplied><choice><corr>δ</corr></choice>ων</w> 
+                     <w>ἐπὶ</w> <w>γούνασι</w> <w>σεῖο</w> <w>τεθέντων</w>,
+               <lb n="4"/><w>φώνησα<choice><corr>ν</corr></choice></w> <w>λοχίης</w> <w>τε</w> <w>καλὸν</w> <w>νόμον</w> <persName type="divine"><w>Εἰλειθύης</w></persName>,
+               <lb n="5"/><w>μητρὶ</w> <w>τε<unclear>ῆ</unclear></w> <w>καὶ</w> <w>πατρὶ</w> <w>κε<choice><corr>χ</corr></choice>αρμένα</w> <w>δῶρα</w> 
+                     <w>πό<choice><corr>σ</corr></choice>ε<corr><corr>ι</corr></corr></w> <w><choice><corr>τε</corr></choice></w>
+               <lb n="6"/><w>νῦν</w> <w><choice><corr>δ</corr></choice>ὲ</w> <w>σὺ</w> <w>μὲν</w> <w>κρυεραῖ<supplied reason="omitted">σ</supplied>ιν</w> <w>ἐπὶ</w> 
+                     <w>ψαμάθοισιν</w> <w><supplied reason="omitted">ἀλ</supplied>ύεις</w> 
+               <lb n="7"/><w>Κωκυτοῦ</w> <w>κελάδοντο<supplied reason="omitted">ς</supplied></w> <w>ἀνὰ</w> <w>δρόσον</w>, <w>οὐδέ</w> <w>σ’</w> <w>ἐγείρει</w>
+               <lb n="8"/><w>ἀεναὲς</w> <w>κελάδημα</w> <w><supplied reason="omitted">φ</supplied>ίλης</w> <w>ὀ<supplied reason="omitted">π</supplied>ός</w>, <w>ὧτέ</w> <w>σε</w> <w>μήτηρ</w>
+               <lb n="9"/><w>ὄρνις</w> <w>ὅκως</w> <w>γεγό<supplied reason="omitted">η</supplied>κε</w>, <w><supplied reason="omitted">σ</supplied>ὺ</w> <w>δὲ</w> <w>λίθος</w>
+                  <w>οὐδὲν</w> <w>ἀκούεις</w>, 
+               <lb n="10"/><w>ἀλ<supplied reason="omitted">λ</supplied>ὰ</w> <w>μελανδεῖν<supplied reason="omitted">αί</supplied></w> <w>σε</w> <w>περὶ</w> 
+                     <w>ῤό<supplied reason="omitted">ε</supplied>ς</w> <w>ὠκεανοῖο</w> 
+               <lb n="11"/><w>εἰλεῦνται</w>, <w>ψυχαὶ</w> <w>δὲ</w> <w>κατα<supplied reason="omitted">χ</supplied>θονίων</w> <w>ἀ<supplied reason="omitted">λι</supplied>βάντων</w>
+               <lb n="12"/><w>ζμερδαλέον</w> <w>βρομέουσι</w>, <w>σὺ</w> <w>δὲ</w> <w>θρ<supplied reason="omitted">ό</supplied>ο<supplied reason="omitted">ν</supplied></w> <w>οὐχὶ</w> <w>τοκήων</w>, 
+               <lb n="13"/><w>οὐ</w> <w>πόσιος</w> <w>νενόηκας</w>, <w>ἐπεὶ</w> <w>πίες</w> <w>ἆ</w> <w>στύγα</w> <w>Λήθης</w>
+               <lb n="14"/><w>τίς</w> <w>μακάρων</w> <w>νόμος</w> <w>οὗτος</w> <w>ἵ<supplied reason="omitted">ν’</supplied></w>  <w>ἀν<supplied reason="omitted">έ</supplied>ρες</w> 
+                     <w>ἠέ</w> <w>νυ</w> <w>κῶρ<supplied reason="omitted">αι</supplied></w>
+               <lb n="15"/><w>οὐχὶ</w> <w>κακαὶ</w> <w>θνήσκουσι</w> <w>προμοιρίες</w>, <w>οὐχὶ</w> <w>τοκήων</w>
+               <lb n="16"/><w>οὐτιδανῶν</w>, <w><unclear>ἀ</unclear>λλ’</w> <w>εἴ</w> <w>τι<supplied reason="lost">ς</supplied></w> <w>ἀριπρεπὲς</w> <w>εἶδο<unclear>ς</unclear></w> <w>ἔχουσα</w>
+               <lb n="17"/><w>ἢ</w> <w>γένος</w>; <w>ἦ</w> <w>ῥα</w> <w>τόδ’</w> <w>ἐσθλὸν</w> <w>ἐτήτυμον</w> <w>ἀνδράσι</w> <persName type="attested"><name>Πυθώ</name></persName>, 
+               <lb n="18"/><w>χρύσεον</w> <w>ὅττι</w> <w>γένεθλον</w> <w>ἐς</w> <persName type="divine"><name>Ἄιδα</name></persName> <w>πρῶτον</w> <w>ὁδεύειν</w>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app loc="2">
-                  <rdg source="bib:b0125">Μοῦ<supplied reason="omitted" instant="false">σαι</supplied> σά <note anchored="true">- Корш ap.</note></rdg>                     
-                    <rdg> ΜΟΥΣΑ <note anchored="true">- lap.</note></rdg> 
+                  <rdg source="bib:b0125">Μοῦ<supplied reason="omitted">σαι</supplied> σά <note>- Корш ap.</note></rdg>                     
+                    <rdg> ΜΟΥΣΑ <note>- lap.</note></rdg> 
                      <rdg>χαρείσια = χαρίσια.</rdg>
                </app>
                <app loc="3">
-                  <rdg source="bib:b0125">ΠΑΛΩΝ <note anchored="true">- lap., emend. Корш ap.</note></rdg>
+                  <rdg source="bib:b0125">ΠΑΛΩΝ <note>- lap., emend. Корш ap.</note></rdg>
                </app>
                <app loc="4">
-                  <rdg>φώνησα<choice><corr instant="false">ν</corr></choice> <!--- Wilamowitz (Peek); --></rdg>
-                     <rdg>φωνῆσαι <note anchored="true">- alii sec. lap.</note></rdg>
+                  <rdg>φώνησα<choice><corr>ν</corr></choice> <!--- Wilamowitz (Peek); --></rdg>
+                     <rdg>φωνῆσαι <note>- alii sec. lap.</note></rdg>
                </app>
                <app loc="5">
-                  <rdg source="bib:IOSPE">κε<choice><corr instant="false">χ</corr></choice>αρμένα</rdg> 
+                  <rdg source="bib:IOSPE">κε<choice><corr>χ</corr></choice>αρμένα</rdg> 
                   <rdg source="bib:b0521">κεκαρμένα</rdg>
                </app>
                <app loc="5">
-                     <rdg source="bib:b0125">ΠΟΛΕΠΗ <note anchored="true">- lap., emend.</note></rdg></app>
+                     <rdg source="bib:b0125">ΠΟΛΕΠΗ <note>- lap., emend.</note></rdg></app>
                <app loc="6">
-                  <rdg><note anchored="true">in.:</note> ΝE -<note anchored="true"> lap.</note></rdg>
-                  <rdg><note anchored="true">fin.:</note> ΜΥΕΙΣ <note anchored="true">- lap.</note></rdg>
+                  <rdg><note>in.:</note> ΝE -<note> lap.</note></rdg>
+                  <rdg><note>fin.:</note> ΜΥΕΙΣ <note>- lap.</note></rdg>
                </app>
                <app loc="6">
-                  <rdg source="bib:b0521"><choice><corr instant="false">ἀλ</corr></choice>ύεις <!--- Wilamowitz--></rdg> 
-                  <rdg source="bib:IOSPE"><choice><corr instant="false">ἰα</corr></choice>ύεις</rdg>
+                  <rdg source="bib:b0521"><choice><corr>ἀλ</corr></choice>ύεις <!--- Wilamowitz--></rdg> 
+                  <rdg source="bib:IOSPE"><choice><corr>ἰα</corr></choice>ύεις</rdg>
                </app>
                <app loc="7">
-                  <rdg>ΚΕΛΑΔΟΝΤΟΠΑΝΑΝΔΡΟΣΟΝ <note anchored="true">- lap.</note></rdg></app>
+                  <rdg>ΚΕΛΑΔΟΝΤΟΠΑΝΑΝΔΡΟΣΟΝ <note>- lap.</note></rdg></app>
                <app loc="8">
                   <rdg>ΥΙΛΗΣΟΚΙΟΣ<!--<note> - lap., emend. Латышев 1892 (IOSPE)</note>--></rdg></app>
                <app loc="9">
-                  <note anchored="true">ΓΕΓΟΜΚΕΙΥ- lap., <!--emend. Латышев 1892 (IOSPE).--></note></app>
+                  <note>ΓΕΓΟΜΚΕΙΥ- lap., <!--emend. Латышев 1892 (IOSPE).--></note></app>
                <app loc="10">
                   <rdg>ΑΛΑΜΜΕΛΑΝΔΕΙΝΗ - lap., emend. Латышев 1892 (IOSPE)</rdg> 
                   <rdg>ΡΟΣΣ- lap., emend. Латышев 1892 (IOSPE).</rdg>
                </app>
                <app loc="11">
-                  <note anchored="true">ΑΜΒΑΝΤΩΝ - lap., emend. Латышев 1892 (IOSPE).</note></app>
+                  <note>ΑΜΒΑΝΤΩΝ - lap., emend. Латышев 1892 (IOSPE).</note></app>
                <app loc="12">
-                  <note anchored="true">ΘΡΣΟΣ - lap., emend. Латышев 1892 (IOSPE).</note></app>
+                  <note>ΘΡΣΟΣ - lap., emend. Латышев 1892 (IOSPE).</note></app>
                <app loc="14">
-                  <rdg>ΜΑΝΣΡΕΣΗΕΝΥΚΩΡΧΗ - lap., emend. Wilamowitz (Peek) <choice><corr instant="false">ἀν</corr></choice>ά<choice><corr instant="false">μ</corr></choice>ερ<choice><corr instant="false">ο</corr></choice>ς</rdg> 
-                  <rdg source="bib:b0125">ἠέ νυ κῶρ<choice><corr instant="false">αι</corr></choice></rdg></app>
+                  <rdg>ΜΑΝΣΡΕΣΗΕΝΥΚΩΡΧΗ - lap., emend. Wilamowitz (Peek) <choice><corr>ἀν</corr></choice>ά<choice><corr>μ</corr></choice>ερ<choice><corr>ο</corr></choice>ς</rdg> 
+                  <rdg source="bib:b0125">ἠέ νυ κῶρ<choice><corr>αι</corr></choice></rdg></app>
                <app loc="15">
-                  <rdg source="bib:b0125">προμοίρ<choice><corr instant="false">ω</corr></choice>ς</rdg> 
+                  <rdg source="bib:b0125">προμοίρ<choice><corr>ω</corr></choice>ς</rdg> 
                   <!--<rdg>προμοιρίες - Wilamowitz secundum lap. (Peek).</rdg>--></app>
                <app loc="16">
                   <!--<rdg>ἀ̣λλ’ - scripsi sec. lap., [ἀ]λλ’ - Латышев 1892 (IOSPE)</rdg>-->
-                    <rdg source="bib:b0521"> ἀλ<supplied reason="omitted" instant="false">λ’</supplied></rdg>
+                    <rdg source="bib:b0521"> ἀλ<supplied reason="omitted">λ’</supplied></rdg>
                   <rdg source="bib:b0125">εἶδο[ς]</rdg></app>
                <app loc="18">
                   <!--<rdg>ὁδεύειν. - Wilamowitz</rdg>-->
-                 <rdg source="bib:b0521">ὁδεύ<supplied reason="omitted" instant="false">ε</supplied>&gt;ιν</rdg> 
+                 <rdg source="bib:b0521">ὁδεύ<supplied reason="omitted">ε</supplied>&gt;ιν</rdg> 
                  <rdg source="bib:b0125"> ὁδεύ[ε]ιν</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Ойнанфа, (дочь) Главкия.</p>
-            <p part="N">Несчастная новобрачная Ойнанфа, лучше бы Музы, после того как детей положили на твои колени, воспели твои радости и прекрасный образ действий Илифии, помощницы в родах, – желанные дары для твоей матери, отца и супруга. Но оказалось, что теперь  ты бредешь по страшным пескам вдоль влаги шумящего Кокита, и не будит тебя непрестанное звучание любимого голоса, которым мать словно птица оплакивает тебя. Но ты, словно камень, ничего не слышишь, и вокруг тебя бурлят темные потоки Океана и страшно гудят души подземных мертвецов. Ты не узнала зова ни родителей, ни мужа, потому что ты, увы, выпила проклятой воды Леты. Что за жестокий закон блаженных (богов), когда умирают до срока мужи или девы, которые не безобразны и не от ничтожных родителей, но отличаются прекрасным обликом и происхождением? Ведь Пито сказала людям истинную правду: «золотое потомство должно первым отправиться в Аид».</p>
+         <div type="translation" xml:lang="ru">
+            <p>Ойнанфа, (дочь) Главкия.</p>
+            <p>Несчастная новобрачная Ойнанфа, лучше бы Музы, после того как детей положили на твои колени, воспели твои радости и прекрасный образ действий Илифии, помощницы в родах, – желанные дары для твоей матери, отца и супруга. Но оказалось, что теперь  ты бредешь по страшным пескам вдоль влаги шумящего Кокита, и не будит тебя непрестанное звучание любимого голоса, которым мать словно птица оплакивает тебя. Но ты, словно камень, ничего не слышишь, и вокруг тебя бурлят темные потоки Океана и страшно гудят души подземных мертвецов. Ты не узнала зова ни родителей, ни мужа, потому что ты, увы, выпила проклятой воды Леты. Что за жестокий закон блаженных (богов), когда умирают до срока мужи или девы, которые не безобразны и не от ничтожных родителей, но отличаются прекрасным обликом и происхождением? Ведь Пито сказала людям истинную правду: «золотое потомство должно первым отправиться в Аид».</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

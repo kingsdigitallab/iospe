@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Посвящение Посидея Зевсу Атабирию.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000383</idno>
             <idno type="PE">PE3000383</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc5" part="N">Посвятительная надпись.</seg>
-                     <seg xml:lang="en" part="N">Dedicatory inscription.</seg>
+                     <seg xml:lang="ru" corresp="#doc5">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedicatory inscription.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,10 +44,10 @@
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru"/>
                            <material xml:lang="en"/>
-                           <p xml:lang="ru" part="N">Поверхность постамента со всех сторон тщательно обработана. Левый нижний угол сбит. 
+                           <p xml:lang="ru">Поверхность постамента со всех сторон тщательно обработана. Левый нижний угол сбит. 
                               На верхней плоскости впереди углубление в виде стопы длиной 16 см; сзади него два небольших округлых гнезда, 
                               предназначенные для крепления статуи. На лицевой грани двухстрочная надпись.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">40</height>
                               <width unit="cm">60</width>
@@ -57,62 +57,62 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с прямой перекладиной, правая вертикаль Π укорочена, гасты Σ параллельны, Ω слегка вытянутая, концы ее окружности почти 
+                        <seg xml:lang="ru">Α с прямой перекладиной, правая вертикаль Π укорочена, гасты Σ параллельны, Ω слегка вытянутая, концы ее окружности почти 
                            смыкаются, апексы на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,5-1,8.</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Неаполь Скифский.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Неаполь Скифский.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография археологический_контекст" instant="false">
-                        <seg xml:lang="ru" part="N">Середина - вторая половина II в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">Mid - 2nd half of II century B.C.</seg>
+                     <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография археологический_контекст">
+                        <seg xml:lang="ru">Середина - вторая половина II в. до н.э.</seg>
+                        <seg xml:lang="en">Mid - 2nd half of II century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"><!--Керменчик (совр. Симферополь).--></placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot"><!--Керменчик (совр. Симферополь).--></placeName>
                         <rs type="circumstances">Обнаружена случайно в 1827 г. в южной части городища при добыче строительного камня в 
                            Керменчике (в вырубленном в скале котловане, служившем подземной частью монументальной гробницы Аргота; ср. № VinZajc2003). 
                            Куплена А.И. Султан-Крым-Гиреем и передана им И.П. Бларамбергу.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"/>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Одесса, Украина.</seg>
-                     <seg xml:lang="en" part="N">Odessa, Ukraine.</seg>
+                     <seg xml:lang="ru">Одесса, Украина.</seg>
+                     <seg xml:lang="en">Odessa, Ukraine.</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
-         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-19" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-02" who="CB" status="draft">Metadata and app crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-03-16" who="AV" status="draft">tagging Greek names XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-19" who="CB">Bibliography</change>
+         <change when="2015-09-02" who="CB">Metadata and app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-03-16" who="AV">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -125,55 +125,55 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Blaramberg 1827 --><ptr target="bib:b0763"/></bibl> <bibl default="false" status="draft">(= <!--Бларамберг 1889--><ptr target="bib:b0765"/>, <citedRange>60</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--CIG II--><ptr target="bib:CIG"/>, <citedRange>2, 2103b</citedRange> (А. Бек по копиям Келера и Бларамберга)</bibl>
-               <bibl default="false" status="draft"><!--IOSPE (1885)-->, <ptr target="bib:IOSPE"/>, <citedRange>I 242</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--> <ptr target="bib:IOSPE2"/>, <citedRange>I2 670</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>36</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Зайцев 2003--><ptr target="bib:b0509"/>, 50, №  <citedRange>4</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--Blaramberg 1827 --><ptr target="bib:b0763"/></bibl> <bibl>(= <!--Бларамберг 1889--><ptr target="bib:b0765"/>, <citedRange>60</citedRange>)</bibl>
+               <bibl><!--CIG II--><ptr target="bib:CIG"/>, <citedRange>2, 2103b</citedRange> (А. Бек по копиям Келера и Бларамберга)</bibl>
+               <bibl><!--IOSPE (1885)-->, <ptr target="bib:IOSPE"/>, <citedRange>I 242</citedRange></bibl>
+               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/>, <citedRange>I2 670</citedRange></bibl>
+               <bibl><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>36</citedRange></bibl>
+               <bibl><!--Зайцев 2003--><ptr target="bib:b0509"/>, 50, №  <citedRange>4</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Minns 1913--><ptr target="bib:b0336"/>, 463 </bibl>
-               <bibl default="false" status="draft"><!--Bull. ép. 1965--><ptr target="bib:Bull. ép."/>, 1965, 272</bibl>
-               <bibl default="false" status="draft"><!--Κοντορίνη 1981--><ptr target="bib:b0476"/></bibl>
-               <bibl default="false" status="draft"><!--Vinogradov 1997--><ptr target="bib:0453"/>, 68 </bibl>
-               <bibl default="false" status="draft"><!--Трейстер 1999--><ptr target="bib:b0509"/>, 136, № 2(18)</bibl>
-               <bibl default="false" status="draft"><!--Hupe 2003--><ptr target="bib:b0433"/>, 293.</bibl>
+            <listBibl>
+               <bibl><!--Minns 1913--><ptr target="bib:b0336"/>, 463 </bibl>
+               <bibl><!--Bull. ép. 1965--><ptr target="bib:Bull. ép."/>, 1965, 272</bibl>
+               <bibl><!--Κοντορίνη 1981--><ptr target="bib:b0476"/></bibl>
+               <bibl><!--Vinogradov 1997--><ptr target="bib:0453"/>, 68 </bibl>
+               <bibl><!--Трейстер 1999--><ptr target="bib:b0509"/>, 136, № 2(18)</bibl>
+               <bibl><!--Hupe 2003--><ptr target="bib:b0433"/>, 293.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="divine" instant="false" full="yes"><name full="yes" instant="false">Διὶ</name> <placeName type="ethnic" instant="false" full="yes">Ἀταβυρίωι</placeName></persName> 
-               <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ποσίδεος</name> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ποσιδέου</name></persName></persName>
-               	<lb n="2"/><space quantity="5" unit="character"/> <w part="N">χαριστήριον</w>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="divine"><name>Διὶ</name> <placeName type="ethnic">Ἀταβυρίωι</placeName></persName> 
+               <persName type="attested"><name>Ποσίδεος</name> <persName type="attested"><name>Ποσιδέου</name></persName></persName>
+               	<lb n="2"/><space quantity="5" unit="character"/> <w>χαριστήριον</w>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true">Legit Blaramberg 1831.</note></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note>Legit Blaramberg 1831.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Посидей, (сын) Посидея, (посвятил) Зевсу Атабирию благодарственный дар.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Посидей, (сын) Посидея, (посвятил) Зевсу Атабирию благодарственный дар.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">	Засвидетельствованный этой надписью культ Зевса Атабирия относится к числу родосских культов. Его название происходит от расположенной на территории Камироса самой высокой горы Родоса Ἀτάβυρις (Ἀταβύριον), где находилось его главное святилище. За пределами Родоса и родосской Переи культ практически не получил распространения. Подробнее см. Hupe 2003, 293 (автор характеризует этот культ как «eine rein ortsgebundene Erscheinung». </p>
-            <p part="N">	По поводу Посидея, сына Посидея, см. также ниже №№ ipe671, ipe672, Dashev1960. Поскольку ни в одной из дошедших надписей не указывается этникон Посидея, вопрос о его происхождении стал предметом продолжительной дискуссии. И.П. Бларамберг (1831 = 1889, 61, 65) на том основании, что божества, упомянутые в опубликованных им двух надписях Посидея, Зевс Атабирий и Афина Линдия, связаны преимущественно с Родосом, счел Посидея родосцем. Позднее это мнение было повторено А. Бëком (CIG II 2103b) и принято Латышевым (1887, 132). Эту точку зрения приняли без существенно новой аргументации ряд исследователей: Соломоник 1962, 43; недавно И. Хупе (Hupe 2003, 296), с которым солидаризировалась К. Мюллер (Müller 2010, 263). Эпиграфические данные несомненно свидетельствуют о близком знакомстве Посидея с родосскими культами, но вряд ли могут служить доказательством его происхождения с Родоса или родосской Переи. </p>
-            <p part="N">	Однако посвящение Посидея почитаемому ольвиополитами Ахиллу (№ ipe672), равно как и обнаруженные в Ольвии его посвящение Афродите Эвплии, а также фрагментарные декреты II в. до н.э. из Коса и Тенедоса (IOSPE I2 77 = IG XII 4,1, 89; IOSPE I2 78; ср. Avram PPE 2582 ter; 2585), где сохранилось в первом случае имя чествуемого ольвиополита Ποσίδε[ος – – – ]ου, а во втором – патронимик [Ποσι]δ̣έου, дают основания видеть в нем гражданина Ольвии. На такую возможность указал уже Миннз, отметив, что наличие посвящений Посидея родосским божестам не является достаточным основанием для того, чтобы считать его родосцем. По его мнению, Посидей поддерживал торговые связи с островами у побережья Малой Азии, прежде всего с Родосом, который вел оживленную торговлю вином с Ольвией, о чем свидетельствуют многочисленные находки там родосских амфорных клейм (Minns 1913, 463. Впоследствии Латышев выражал неуверенность в родосском происхождении Посидея (IOSPE I2 168, comm.) и, судя по всему, не исключал того, что он мог быть ольвиополитом (ср. IOSPE I2 pp. 106 et 504). </p>
-            <p part="N">	В пользу ольвийского происхождения Посидея в дальнейшем приводились весомые аргументы. Ж. и Л. Роберы (Bull.ép. 1965, 272, p. 136) отметили, что личное имя Ποσίδεος не засвидетельствовано на Родосе, но представлено в ономастиконе Ольвии эллинистической эпохи (ср. LGPN IV, s.vv. Ποσίδεος, Ποσίδηος. Hupe 2003, 295 отмечает, что это имя недавно удалось обнаружить и в родосской антропонимии (со ссылкой на LGPN I, s.v. Ποσείδεος = Agora Inventory, R 433;  c. 310-240). Почитание Посидеем божеств родосского пантеона объясняется, по их мнению, его торговыми контактами. Указав на ольвийское посвящение Афродите Эвплии (IOSPE I2 168), почитаемой в Эгеиде богине мореплавания, они видели в Посидее крупного торговца, который мог быть членом одной из торговых ассоциаций, поддерживавших оживленные отношения с Родосом (в том же духе Κοντορίνη 1981). В дополнение к сказанному Ю.Г. Виноградов обратил внимание на то, что в случае родосского происхождения Посидея в почетных декретах Коса и Тенедоса (IOSPE I2 77 и 78) следовало бы ожидать обозначение его демотикона как ‘Ρόδιος ὁ καὶ Ὀλβιοπολίτας с указанием на первом месте полиса, из которого он происходил (Виноградов 1989, 243; ср. Bull. ép. 1990, 578). </p>
-            <p part="N">	Приведенные доводы подкрепляются историческим контекстом. О тесных связях между царем Скилуром и ольвиополитами говорят монеты скифского правителя, чеканенные в Ольвии (Зограф 1951, 137; Фролова 1964, 44; Виноградов 1989, 231) и найденные в том числе и в «Неаполе» (Зайцев 2003, 14). В пользу того, что Ольвия находилась в политической зависимости от Скилура, могут косвенно свидетельствовать и данные эпиграфики: не так давно опубликованные ольвийская проксения II в. до н.э. гражданину Смирны Стефану, в которой, возможно, упоминаются "царские дела" (SEG 57, 72318: τὰ βασιλικά; Ivantchik 2007, 105 слл. = Иванчик 2011, 23 слл.), а также найденная в «Неаполе» стихотворная эпитафия скифского военачальника Аргота ((№ VinZajc2003)), где говорилось о его военных действиях скифов против фракийцев, племена которых угрожали, как известно, именно Ольвии (Ivantchik 2004, 70).  Наконец, археологические данные показывают, что среди центров античного Северного Причерноморья наиболее интенсивные торговые связи с Родосом засвидетельствованы для Ольвии и Боспорского царства (ср. комментарий к № ipe340). Подавляющее большинство найденных в Северном Причерноморье родосских амфорных клейм приходится (примерно в одинаковом соотношении) на Ольвию и Боспор (Бадальянц 2000, 198; ср. Соломоник 1962, 43; Виноградов 1989, 245, прим. 72). Из Ольвии происходят также два эллинистических декрета в честь граждан Родоса (IOSPE I2 30 и НО 24). В самом «Неаполе» несомненно преобладает родосский импорт (Зайцев 2003, 13), попадавший туда, очевидно, при ольвийском и боспорском посредничестве. Таким образом, гипотеза о том, что Посидей, сын Посидея, был гражданином ольвийского полиса, в настоящее время представляется наиболее вероятной.</p>
+         <div type="commentary" xml:lang="ru">
+            <p>	Засвидетельствованный этой надписью культ Зевса Атабирия относится к числу родосских культов. Его название происходит от расположенной на территории Камироса самой высокой горы Родоса Ἀτάβυρις (Ἀταβύριον), где находилось его главное святилище. За пределами Родоса и родосской Переи культ практически не получил распространения. Подробнее см. Hupe 2003, 293 (автор характеризует этот культ как «eine rein ortsgebundene Erscheinung». </p>
+            <p>	По поводу Посидея, сына Посидея, см. также ниже №№ ipe671, ipe672, Dashev1960. Поскольку ни в одной из дошедших надписей не указывается этникон Посидея, вопрос о его происхождении стал предметом продолжительной дискуссии. И.П. Бларамберг (1831 = 1889, 61, 65) на том основании, что божества, упомянутые в опубликованных им двух надписях Посидея, Зевс Атабирий и Афина Линдия, связаны преимущественно с Родосом, счел Посидея родосцем. Позднее это мнение было повторено А. Бëком (CIG II 2103b) и принято Латышевым (1887, 132). Эту точку зрения приняли без существенно новой аргументации ряд исследователей: Соломоник 1962, 43; недавно И. Хупе (Hupe 2003, 296), с которым солидаризировалась К. Мюллер (Müller 2010, 263). Эпиграфические данные несомненно свидетельствуют о близком знакомстве Посидея с родосскими культами, но вряд ли могут служить доказательством его происхождения с Родоса или родосской Переи. </p>
+            <p>	Однако посвящение Посидея почитаемому ольвиополитами Ахиллу (№ ipe672), равно как и обнаруженные в Ольвии его посвящение Афродите Эвплии, а также фрагментарные декреты II в. до н.э. из Коса и Тенедоса (IOSPE I2 77 = IG XII 4,1, 89; IOSPE I2 78; ср. Avram PPE 2582 ter; 2585), где сохранилось в первом случае имя чествуемого ольвиополита Ποσίδε[ος – – – ]ου, а во втором – патронимик [Ποσι]δ̣έου, дают основания видеть в нем гражданина Ольвии. На такую возможность указал уже Миннз, отметив, что наличие посвящений Посидея родосским божестам не является достаточным основанием для того, чтобы считать его родосцем. По его мнению, Посидей поддерживал торговые связи с островами у побережья Малой Азии, прежде всего с Родосом, который вел оживленную торговлю вином с Ольвией, о чем свидетельствуют многочисленные находки там родосских амфорных клейм (Minns 1913, 463. Впоследствии Латышев выражал неуверенность в родосском происхождении Посидея (IOSPE I2 168, comm.) и, судя по всему, не исключал того, что он мог быть ольвиополитом (ср. IOSPE I2 pp. 106 et 504). </p>
+            <p>	В пользу ольвийского происхождения Посидея в дальнейшем приводились весомые аргументы. Ж. и Л. Роберы (Bull.ép. 1965, 272, p. 136) отметили, что личное имя Ποσίδεος не засвидетельствовано на Родосе, но представлено в ономастиконе Ольвии эллинистической эпохи (ср. LGPN IV, s.vv. Ποσίδεος, Ποσίδηος. Hupe 2003, 295 отмечает, что это имя недавно удалось обнаружить и в родосской антропонимии (со ссылкой на LGPN I, s.v. Ποσείδεος = Agora Inventory, R 433;  c. 310-240). Почитание Посидеем божеств родосского пантеона объясняется, по их мнению, его торговыми контактами. Указав на ольвийское посвящение Афродите Эвплии (IOSPE I2 168), почитаемой в Эгеиде богине мореплавания, они видели в Посидее крупного торговца, который мог быть членом одной из торговых ассоциаций, поддерживавших оживленные отношения с Родосом (в том же духе Κοντορίνη 1981). В дополнение к сказанному Ю.Г. Виноградов обратил внимание на то, что в случае родосского происхождения Посидея в почетных декретах Коса и Тенедоса (IOSPE I2 77 и 78) следовало бы ожидать обозначение его демотикона как ‘Ρόδιος ὁ καὶ Ὀλβιοπολίτας с указанием на первом месте полиса, из которого он происходил (Виноградов 1989, 243; ср. Bull. ép. 1990, 578). </p>
+            <p>	Приведенные доводы подкрепляются историческим контекстом. О тесных связях между царем Скилуром и ольвиополитами говорят монеты скифского правителя, чеканенные в Ольвии (Зограф 1951, 137; Фролова 1964, 44; Виноградов 1989, 231) и найденные в том числе и в «Неаполе» (Зайцев 2003, 14). В пользу того, что Ольвия находилась в политической зависимости от Скилура, могут косвенно свидетельствовать и данные эпиграфики: не так давно опубликованные ольвийская проксения II в. до н.э. гражданину Смирны Стефану, в которой, возможно, упоминаются "царские дела" (SEG 57, 72318: τὰ βασιλικά; Ivantchik 2007, 105 слл. = Иванчик 2011, 23 слл.), а также найденная в «Неаполе» стихотворная эпитафия скифского военачальника Аргота ((№ VinZajc2003)), где говорилось о его военных действиях скифов против фракийцев, племена которых угрожали, как известно, именно Ольвии (Ivantchik 2004, 70).  Наконец, археологические данные показывают, что среди центров античного Северного Причерноморья наиболее интенсивные торговые связи с Родосом засвидетельствованы для Ольвии и Боспорского царства (ср. комментарий к № ipe340). Подавляющее большинство найденных в Северном Причерноморье родосских амфорных клейм приходится (примерно в одинаковом соотношении) на Ольвию и Боспор (Бадальянц 2000, 198; ср. Соломоник 1962, 43; Виноградов 1989, 245, прим. 72). Из Ольвии происходят также два эллинистических декрета в честь граждан Родоса (IOSPE I2 30 и НО 24). В самом «Неаполе» несомненно преобладает родосский импорт (Зайцев 2003, 13), попадавший туда, очевидно, при ольвийском и боспорском посредничестве. Таким образом, гипотеза о том, что Посидей, сын Посидея, был гражданином ольвийского полиса, в настоящее время представляется наиболее вероятной.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

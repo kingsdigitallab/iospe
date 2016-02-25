@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Фрагмент надписи.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000389</idno>
             <idno type="PE">PE3000389</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" part="N">Неопределен.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Неопределен.</seg>
+                     <seg xml:lang="en"/>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en"/>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru" part="N">Оббит со всех сторон, кроме верхней. На тщательно обработанной лицевой плоскости сохранились остатки двухстрочной надписи.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Оббит со всех сторон, кроме верхней. На тщательно обработанной лицевой плоскости сохранились остатки двухстрочной надписи.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">11</height>
                               <width unit="cm">17</width>
@@ -55,58 +55,58 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с ломаной перекрещивающейся поперечной гастой, перекрещивающиеся наклонные Α, Λ, Σ; подковообразная Ω, 
+                        <seg xml:lang="ru">Α с ломаной перекрещивающейся поперечной гастой, перекрещивающиеся наклонные Α, Λ, Σ; подковообразная Ω, 
                            небольшие утолщения и апексы на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,7</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Неаполь Скифский.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Неаполь Скифский.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0100" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">I в. н.э. (скорее всего первая половина века).</seg>
-                        <seg xml:lang="en" part="N">I century C.E. (most likely the first half of the century).</seg>
+                     <origDate notBefore="0001" notAfter="0100" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">I в. н.э. (скорее всего первая половина века).</seg>
+                        <seg xml:lang="en">I century C.E. (most likely the first half of the century).</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"><!--Керменчик (совр. Симферополь).--></placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot"><!--Керменчик (совр. Симферополь).--></placeName>
                         <rs type="circumstances">Обнаружена в 1853 г. в ходе раскопок А.С. Уварова (в южной части городища, в районе южной оборонительной стены).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"/>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Москва, Россия.</seg>
-                     <seg xml:lang="en" part="N">Moscow, Russia.</seg>
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en">Moscow, Russia.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
-         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-19" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-02" who="CB" status="draft">Metadata and app crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-03-16" who="VP" status="draft">Tagging Greek names</change>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-19" who="CB">Bibliography</change>
+         <change when="2015-09-02" who="CB">Metadata and app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-03-16" who="VP">Tagging Greek names</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -119,55 +119,55 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1895--><ptr target="bib:b0130"/>, 86, № <citedRange>2411</citedRange>. (издано по рисунку Я.И. Смирнова)</bibl>
-               <bibl default="false" status="draft"><!--IOSPE--><ptr target="bib:IOSPE"/><citedRange>IV 191</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>669</citedRange></bibl>
-               <bibl default="false" status="draft">(<!--Латышев 1921--><ptr target="bib:b0479"/>, <citedRange>18</citedRange> по эстампажу)</bibl> <bibl default="false" status="draft">(<!--SEG 3--> ,<ptr target="SEG"/> <citedRange>3, 605</citedRange>)</bibl>
-               <bibl default="false" status="draft"><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>35</citedRange>.</bibl>
-               <bibl default="false" status="draft"><!--Зайцев 2003--><ptr target="bib:b0464"/>, 51, № <citedRange>10</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 86, № <citedRange>2411</citedRange>. (издано по рисунку Я.И. Смирнова)</bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/><citedRange>IV 191</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>669</citedRange></bibl>
+               <bibl>(<!--Латышев 1921--><ptr target="bib:b0479"/>, <citedRange>18</citedRange> по эстампажу)</bibl> <bibl>(<!--SEG 3--> ,<ptr target="SEG"/> <citedRange>3, 605</citedRange>)</bibl>
+               <bibl><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>35</citedRange>.</bibl>
+               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/>, 51, № <citedRange>10</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Раевскийb1973--><ptr target="bib:b0490"/>,118</bibl>
-               <bibl default="false" status="draft"><!--Виноградов 1994--><ptr target="bib:b0452"/>, 155</bibl> <bibl default="false" status="draft">(<!--SEG 44--><ptr target="SEG"/>44, 62)</bibl>
-               <bibl default="false" status="draft"><!--Гущина, Журавлев, Фирсов  2001--><ptr target="bib:b0460"/>, 230, №1.</bibl>
+            <listBibl>
+               <bibl><!--Раевскийb1973--><ptr target="bib:b0490"/>,118</bibl>
+               <bibl><!--Виноградов 1994--><ptr target="bib:b0452"/>, 155</bibl> <bibl>(<!--SEG 44--><ptr target="SEG"/>44, 62)</bibl>
+               <bibl><!--Гущина, Журавлев, Фирсов  2001--><ptr target="bib:b0460"/>, 230, №1.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		 <lb n="1"/><w part="F"><gap reason="lost" extent="unknown" unit="character" instant="false"/><gap reason="illegible" quantity="1" unit="character" instant="false"/>λευς</w> <gap reason="lost" extent="unknown" unit="character" instant="false"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><seg part="I">Χωδ</seg></name>
-               		 <lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><supplied reason="lost" instant="false">Ὀμ</supplied><unclear instant="false">ψ</unclear>αλάκου</name></persName></persName> <gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character" instant="false"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		 <lb n="1"/><w part="F"><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>λευς</w> <gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><seg part="I">Χωδ</seg></name>
+               		 <lb n="2"/><persName type="attested"><name><supplied reason="lost">Ὀμ</supplied><unclear>ψ</unclear>αλάκου</name></persName></persName> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app loc="1"><note anchored="true">В начале стк. перед Λ скорее нижняя часть уходящей в обрез наклонной линии с утолщением на конце (автопсия Соломоник), 
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"><note>В начале стк. перед Λ скорее нижняя часть уходящей в обрез наклонной линии с утолщением на конце (автопсия Соломоник), 
                   чем «остаток раздвоения нижней части» Ι (автопсия Раевского). 
-                  Таким образом, вероятное чтение - <unclear instant="false">Λ</unclear> или <unclear instant="false">Α</unclear>, 
-                  вероятное восстановление - мужское личное имя [Ἀχι]<unclear instant="false">λ</unclear>λεύς, впервые предложенное Латышевым (см. ниже).</note></app>
+                  Таким образом, вероятное чтение - <unclear>Λ</unclear> или <unclear>Α</unclear>, 
+                  вероятное восстановление - мужское личное имя [Ἀχι]<unclear>λ</unclear>λεύς, впервые предложенное Латышевым (см. ниже).</note></app>
                <app loc="1-2"><rdg source="bib:b0130 bib:IOSPE bib:b0490">[βασ]ιλεὺς Χώδ[αρζος (?) ---] | [Ὀμψ]αλάκου [---]</rdg>
                   <rdg source="bib:b0130 bib:b0500 bib:SEG">[Ἀχιλ]λεὺς Χωδ[άρζου - - -] | [---  Ὀμ]ψαλάκου[---]</rdg>
-                  <rdg source="bib:b0452">[βασ]ιλεὺς Χωδ[αρζος υἱὸς (<note anchored="true">vel</note> ὁ ἐκ) βασιλέως | Ομ]ψαλακου</rdg></app>
+                  <rdg source="bib:b0452">[βασ]ιλεὺς Χωδ[αρζος υἱὸς (<note>vel</note> ὁ ἐκ) βασιλέως | Ομ]ψαλακου</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="ru">
+            <p/>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">	Надпись по палеографическим признакам относится к I в. н.э., т.е. в отличие от большинства эпиграфических находок в «Неаполе» не принадлежит эпохе позднескифского царства. Сарматские личные имена Χωδαρζος и Ὀμψαλακος засвидетельствованы в Северном Причерноморье в римское время, первое - в Ольвии, второе - многократно и на Боспоре и в Ольвии (LGPN, s.vv.). Об их происхождении см. Zgusta 1955, 171 sq., § 261; 198 sq., § 315; ср. Тохтасьев 2005, 67, прим. 47. Антропоним Ἀχιλλεύς, восстановление которого весьма вероятно в начале надписи, также хорошо известен на Боспоре и в Ольвии начиная с римского времени (LGPN, s.v.).</p>
-            <p part="N">	Опираясь на первоначальное восстановление Латышева [βασ]ιλεὺς Χώδ[αρζος], Д.С. Раевский(1973, 118; Раевский 1971, 150 сл.) предполагал, что в тексте был упомянут представитель сарматской правящей династии, которая, вероятно, утвердилась в позднескифском царстве в период правления Аспурга на Боспоре (ср. титулатуру Аспурга в КБН 39 и 40, где он назван ὑποτάξας Σκύθας καὶ Ταύρους). Позднее с этой точкой зрения солидаризировался Ю.Г. Виноградов (1994, 155), который был склонен видеть в Ходардзе или Омпсалаке родоначальника упомянутой новой династии. Однако восстановление царского титула в стк. 1 надписи представляется маловероятным (см. критический аппарат).</p>
+         <div type="commentary" xml:lang="ru">
+            <p>	Надпись по палеографическим признакам относится к I в. н.э., т.е. в отличие от большинства эпиграфических находок в «Неаполе» не принадлежит эпохе позднескифского царства. Сарматские личные имена Χωδαρζος и Ὀμψαλακος засвидетельствованы в Северном Причерноморье в римское время, первое - в Ольвии, второе - многократно и на Боспоре и в Ольвии (LGPN, s.vv.). Об их происхождении см. Zgusta 1955, 171 sq., § 261; 198 sq., § 315; ср. Тохтасьев 2005, 67, прим. 47. Антропоним Ἀχιλλεύς, восстановление которого весьма вероятно в начале надписи, также хорошо известен на Боспоре и в Ольвии начиная с римского времени (LGPN, s.v.).</p>
+            <p>	Опираясь на первоначальное восстановление Латышева [βασ]ιλεὺς Χώδ[αρζος], Д.С. Раевский(1973, 118; Раевский 1971, 150 сл.) предполагал, что в тексте был упомянут представитель сарматской правящей династии, которая, вероятно, утвердилась в позднескифском царстве в период правления Аспурга на Боспоре (ср. титулатуру Аспурга в КБН 39 и 40, где он назван ὑποτάξας Σκύθας καὶ Ταύρους). Позднее с этой точкой зрения солидаризировался Ю.Г. Виноградов (1994, 155), который был склонен видеть в Ходардзе или Омпсалаке родоначальника упомянутой новой династии. Однако восстановление царского титула в стк. 1 надписи представляется маловероятным (см. критический аппарат).</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru"> Надгробие Бассиана, сына Афинея.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000141</idno>
             <idno type="PE">PE3000141</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph.</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,10 +44,10 @@
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru" part="N">Сохранилась нижняя часть надгробия, выполненного при вторичном использовании крупной архитектурной детали. 
+                           <p xml:lang="ru">Сохранилась нижняя часть надгробия, выполненного при вторичном использовании крупной архитектурной детали. 
                               Тыльная сторона обработана грубо. В верхней части фрагмента имеются остатки рельефа — ноги стоящей в фас мужской фигуры в длинной одежде. 
                               Слева от него ступни ног маленькой фигуры, очевидно, слуги. Под рельефом расположена трехстрочная надпись.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20</height>
                               <width unit="cm">25</width>
@@ -57,63 +57,63 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с прямой поперечной линией, курсивные Ε, Σ; Π с вертикалями одинаковой длины и не выходящей за их пределы горизонталью;
+                        <seg xml:lang="ru">Α с прямой поперечной линией, курсивные Ε, Σ; Π с вертикалями одинаковой длины и не выходящей за их пределы горизонталью;
                            Υ с короткой не доходящей до середины строки вертикалью; чуть изогнутые линии Χ; апексы на концах линий букв; точки-разделители; лигатуры.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">II в. н.э.</seg>
-                        <seg xml:lang="en" part="N">II century C.E.</seg>
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Случайная находка 1961 г. на участке херсонесского некрополя, расположенного к югу от башни XVII (Зенона) 
                            на западном склоне Девичьей горы.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol.</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-18" who="CB" status="draft">Adding biblio and app crit tags</change>
-         <change when="2015-11-05" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-27" who="CB" status="draft">correcting bibliography</change>
-         <change when="2015-10-13" who="CB" status="draft">Tagging bibliography</change>
-         <change when="2015-09-28" who="CB" status="draft">Tagging bibliography</change>
-         <change when="2015-09-01" who="CB" status="draft">Tagging app crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-25" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-05-08" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV" status="draft">programmatically tagging Greek words from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Adding biblio and app crit tags</change>
+         <change when="2015-11-05" who="CB">Added origDate</change>
+         <change when="2015-10-27" who="CB">correcting bibliography</change>
+         <change when="2015-10-13" who="CB">Tagging bibliography</change>
+         <change when="2015-09-28" who="CB">Tagging bibliography</change>
+         <change when="2015-09-01" who="CB">Tagging app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2015-06-25" who="CB">Tagging metadata</change>
+         <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -126,50 +126,50 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Соломоник 1965--><ptr target="bib:b0503"/>, <citedRange>97</citedRange></bibl>
-               <bibl default="false" status="draft"><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/> <citedRange>183</citedRange></bibl> <bibl default="false" status="draft">(<!--cf. Bull. ép.1968--><ptr target="bib:Bull.ép."/>, <citedRange>1968, 376</citedRange>).</bibl>
+            <listBibl>
+               <bibl><!--Соломоник 1965--><ptr target="bib:b0503"/>, <citedRange>97</citedRange></bibl>
+               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/> <citedRange>183</citedRange></bibl> <bibl>(<!--cf. Bull. ép.1968--><ptr target="bib:Bull.ép."/>, <citedRange>1968, 376</citedRange>).</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--АСХ--><ptr target="bib:b0523"/> № 318.</bibl>
+            <listBibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 318.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               <lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Βασσιανὸς</name> <name full="yes" instant="false">Ἀθ
-               <lb n="2" break="no"/>ηναίου</name></persName> <w part="N">ζήσας</w> 
-               <lb n="3"/><w part="N">ἔτη</w> <num value="10">Ι</num>, <w part="N">χἓρε</w>, <w part="N"><expan instant="false"><ex cert="low" instant="false">παῖ</ex></expan></w>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested"><name>Βασσιανὸς</name> <name>Ἀθ
+               <lb n="2" break="no"/>ηναίου</name></persName> <w>ζήσας</w> 
+               <lb n="3"/><w>ἔτη</w> <num value="10">Ι</num>, <w>χἓρε</w>, <w><expan><ex cert="low">παῖ</ex></expan></w>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app loc="3">
-              <note anchored="true">in.: ΤΗ в лигатуре</note> 
-              <note anchored="true">med.: с обеих сторон Ι точки-разделители</note>
+              <note>in.: ΤΗ в лигатуре</note> 
+              <note>med.: с обеих сторон Ι точки-разделители</note>
                <rdg>χε͂ρε = χαῖρε</rdg>
-              <note anchored="true">f in.: монограмма, в которой читаются, вероятно, буквы Π и Α. Возможно, 
+              <note>f in.: монограмма, в которой читаются, вероятно, буквы Π и Α. Возможно, 
                   сокращения звательного падежа παῖ (обращение к умершему) или παροδεῖτα (обращение к путнику).</note>
                </app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Бассиан, (сын) Афинея, проживший 16 лет, приветствую тебя, [сын ?].</p>
-            <p part="N">Комментарий.</p>
-            <p part="N">Личное имя Βασσιανός латинского происхождения, но засвидетельствовано в грекоязычных областях в римскую эпоху.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Бассиан, (сын) Афинея, проживший 16 лет, приветствую тебя, [сын ?].</p>
+            <p>Комментарий.</p>
+            <p>Личное имя Βασσιανός латинского происхождения, но засвидетельствовано в грекоязычных областях в римскую эпоху.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

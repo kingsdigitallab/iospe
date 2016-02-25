@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Посвящение Посидея Ахиллу.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000385</idno>
             <idno type="PE">PE3000385</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc5" part="N">Посвятительная надпись.</seg>
-                     <seg xml:lang="en" part="N">Dedicatory inscription</seg>
+                     <seg xml:lang="ru" corresp="#doc5">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedicatory inscription</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,9 +44,9 @@
                            <objectType xml:lang="en">Base</objectType>
                            <material xml:lang="ru" ref="#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru" part="N">Оббит со всех сторон кроме верхней. На верхней плоскости сохранился след от ступни статуи длиной 15 см. 
+                           <p xml:lang="ru">Оббит со всех сторон кроме верхней. На верхней плоскости сохранился след от ступни статуи длиной 15 см. 
                               Лицевой фас тщательно обработан. Сохранились остатки четырехстрочной надписи.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">24</height>
                               <width unit="cm">40</width>
@@ -56,59 +56,59 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Α с ломаной перекладиной, Π имеет укороченную правую вертикаль, верхняя поперечная линия выступает в стороны от вертикальных; 
+                        <seg xml:lang="ru">Α с ломаной перекладиной, Π имеет укороченную правую вертикаль, верхняя поперечная линия выступает в стороны от вертикальных; 
                            гасты Σ параллельны, линии букв на концах украшены апексами.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Неаполь Скифский.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Неаполь Скифский.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография" instant="false">
-                        <seg xml:lang="ru" part="N">Середина - вторая половина II в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">Mid - 2nd half of II century B.C.</seg>
+                     <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография">
+                        <seg xml:lang="ru">Середина - вторая половина II в. до н.э.</seg>
+                        <seg xml:lang="en">Mid - 2nd half of II century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"><!--Керменчик (совр. Симферополь).--></placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot"><!--Керменчик (совр. Симферополь).--></placeName>
                         <rs type="circumstances">Обнаружена в 1853 г. в ходе раскопок А.С. Уварова в южной части городища.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"/>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Москва, Россия.</seg>
-                     <seg xml:lang="en" part="N">Moscow, Russia.</seg>
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en">Moscow, Russia.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-18" who="CB" status="draft">Added missing biblio tags</change>
-         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-19" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-02" who="CB" status="draft">Metadata and app crit</change>
-         <change when="2015-07-15" who="KK" status="draft">Add photo file name</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-03-16" who="AV" status="draft">tagging Greek names XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-18" who="CB">Added missing biblio tags</change>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-19" who="CB">Bibliography</change>
+         <change when="2015-09-02" who="CB">Metadata and app crit</change>
+         <change when="2015-07-15" who="KK">Add photo file name</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-03-16" who="AV">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -125,67 +125,67 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--[Уваров] 1855-->,<ptr target="bib:b0229"/> 134, № <citedRange>50</citedRange> (рисунок надписи)</bibl>
-               <bibl default="false" status="draft"><!--IOSPE (1885)--><ptr target="bib:IOSPE"/>, <citedRange>I 244</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>672</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>39</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Зайцев 2003--><ptr target="bib:b0464"/>, 50, №<citedRange>4</citedRange></bibl>
-               <bibl default="false" status="draft"><!--Hupe 2003--><ptr target="bib:b0433"/></bibl> <bibl default="false" status="draft">(<!--SEG 55--> <ptr target="bib:SEG"/> <citedRange>55, 849</citedRange>bis).</bibl>
+            <listBibl>
+               <bibl><!--[Уваров] 1855-->,<ptr target="bib:b0229"/> 134, № <citedRange>50</citedRange> (рисунок надписи)</bibl>
+               <bibl><!--IOSPE (1885)--><ptr target="bib:IOSPE"/>, <citedRange>I 244</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>672</citedRange></bibl>
+               <bibl><!--Соломоник 1962--><ptr target="bib:b0500"/>, <citedRange>39</citedRange></bibl>
+               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/>, 50, №<citedRange>4</citedRange></bibl>
+               <bibl><!--Hupe 2003--><ptr target="bib:b0433"/></bibl> <bibl>(<!--SEG 55--> <ptr target="bib:SEG"/> <citedRange>55, 849</citedRange>bis).</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Becker 1856--><ptr target="bib:b0428"/>, 44</bibl>
-               <bibl default="false" status="draft"><!--Minns 1913--><ptr target="bib:b0336"/>, 463</bibl>
-               <bibl default="false" status="draft"><!--Латышев 1921--><ptr target="bib:b0479"/>, 21</bibl>
-               <bibl default="false" status="draft"><!--Толстой 1918--><ptr target="bib:b0508"/>, 41 </bibl>
-               <bibl default="false" status="draft"><!--Ростовцев 1918--><ptr target="bib:b0493"/>, 190</bibl>
-               <bibl default="false" status="draft"><!--SEG (1927)--><ptr target="bib:SEG"/> 3 , 606 (Wilhelm)</bibl>
-               <bibl default="false" status="draft"><!--Bull. ép. 1965--> <ptr target="bib:Bull. ép."/>, 1965, 272</bibl>
-               <bibl default="false" status="draft"><!--Брашинский 1973--><ptr target="bib:b0770"/> , 129</bibl>
-               <bibl default="false" status="draft"><!--Κοντορίνη 1981--><ptr target="bib:b0476"/>, 226 слл.</bibl>
-               <bibl default="false" status="draft"><!--Виноградов 1989--><ptr target="bib:b0451"/>, 244, прим. 63</bibl>
-               <bibl default="false" status="draft"><!--Vinogradov 1997--><ptr target="bib:b0453"/>, 68</bibl>
-               <bibl default="false" status="draft"><!--Трейстер 1999--><ptr target="bib:b0509"/>, 138, № 4 (20).</bibl>
+            <listBibl>
+               <bibl><!--Becker 1856--><ptr target="bib:b0428"/>, 44</bibl>
+               <bibl><!--Minns 1913--><ptr target="bib:b0336"/>, 463</bibl>
+               <bibl><!--Латышев 1921--><ptr target="bib:b0479"/>, 21</bibl>
+               <bibl><!--Толстой 1918--><ptr target="bib:b0508"/>, 41 </bibl>
+               <bibl><!--Ростовцев 1918--><ptr target="bib:b0493"/>, 190</bibl>
+               <bibl><!--SEG (1927)--><ptr target="bib:SEG"/> 3 , 606 (Wilhelm)</bibl>
+               <bibl><!--Bull. ép. 1965--> <ptr target="bib:Bull. ép."/>, 1965, 272</bibl>
+               <bibl><!--Брашинский 1973--><ptr target="bib:b0770"/> , 129</bibl>
+               <bibl><!--Κοντορίνη 1981--><ptr target="bib:b0476"/>, 226 слл.</bibl>
+               <bibl><!--Виноградов 1989--><ptr target="bib:b0451"/>, 244, прим. 63</bibl>
+               <bibl><!--Vinogradov 1997--><ptr target="bib:b0453"/>, 68</bibl>
+               <bibl><!--Трейстер 1999--><ptr target="bib:b0509"/>, 138, № 4 (20).</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ἀχιλλεῖ</name></persName> <w part="N">νήσου</w> <w part="N"><supplied reason="lost" instant="false">μεδέοντι</supplied></w>
-               		<lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ποσίδεος</name> <persName type="attested" instant="false" full="yes"><name full="yes" instant="false">Ποσι<supplied reason="lost" instant="false">δέου</supplied></name></persName></persName> <w part="N"><supplied reason="lost" instant="false">τοὺς</supplied></w> 
-                               <lb n="3"/><placeName type="ethnic" instant="false" full="yes"><name full="yes" instant="false">Σαταρχαίους</name></placeName> <w part="N"><supplied reason="lost" instant="false">νικήσας</supplied></w>
-               		<lb n="4"/><w part="N">πειρατεύσαντ<supplied reason="lost" instant="false">ας</supplied></w> <gap reason="lost" extent="unknown" unit="character" instant="false"/>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name>Ἀχιλλεῖ</name></persName> <w>νήσου</w> <w><supplied reason="lost">μεδέοντι</supplied></w>
+               		<lb n="2"/><persName type="attested"><name>Ποσίδεος</name> <persName type="attested"><name>Ποσι<supplied reason="lost">δέου</supplied></name></persName></persName> <w><supplied reason="lost">τοὺς</supplied></w> 
+                               <lb n="3"/><placeName type="ethnic"><name>Σαταρχαίους</name></placeName> <w><supplied reason="lost">νικήσας</supplied></w>
+               		<lb n="4"/><w>πειρατεύσαντ<supplied reason="lost">ας</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
+         <div type="apparatus">
+            <listApp>
                <app loc="1-3"><rdg source="bib:IOSPE"/></app>
-               <app loc="1"><rdg>[Λεύκης μεδέοντι] <note anchored="true">Wilhelm</note></rdg></app>
-               <app loc="2"><rdg source="bib:SEG">Ποσι[δέου Ὀλβιοπολίτας] <note anchored="true">Wilhelm</note></rdg></app>
+               <app loc="1"><rdg>[Λεύκης μεδέοντι] <note>Wilhelm</note></rdg></app>
+               <app loc="2"><rdg source="bib:SEG">Ποσι[δέου Ὀλβιοπολίτας] <note>Wilhelm</note></rdg></app>
                <app loc="3-4"><rdg source="bib:IOSPE">Σαταρχαίους [νικήσας] | πειρατεύσαντ[ας ἀνέθηκεν (?)]</rdg>  
                   <rdg source="bib:b0508">Σαταρχαίους [νικήσας τοὺς] | πειρατεύσαντ[ας τὴν νῆσον]</rdg>
-                  <rdg source="bib:SEG">Σαταρχαίους [τοὺς τὴν νῆσον Λεύκην <note anchored="true">vel</note> τοὺς τὴν Λεύκην] | πειρατεύσαντ[ας νικήσας ἀνέθηκεν]</rdg> <note anchored="true">Wilhelm</note> 
+                  <rdg source="bib:SEG">Σαταρχαίους [τοὺς τὴν νῆσον Λεύκην <note>vel</note> τοὺς τὴν Λεύκην] | πειρατεύσαντ[ας νικήσας ἀνέθηκεν]</rdg> <note>Wilhelm</note> 
                   <rdg source="bib:b0500">Σαταρχαίους [νικήσας] | πειρατεύσαντ[ας τὴν ἀκτήν (?)]</rdg> 
-                  <rdg source="bib:b0756">Σαταρχαίους <unclear instant="false">τ</unclear>[οὺς τὴν νῆσον] | πειρατεύσαντ[ας νικήσας]</rdg></app>
+                  <rdg source="bib:b0756">Σαταρχαίους <unclear>τ</unclear>[οὺς τὴν νῆσον] | πειρατεύσαντ[ας νικήσας]</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">Посидей, (сын) Посидея, (посвятил) Ахиллу, [владыке] острова, [победив] пиратствовавших сатархеев.</p>
+         <div type="translation" xml:lang="ru">
+            <p>Посидей, (сын) Посидея, (посвятил) Ахиллу, [владыке] острова, [победив] пиратствовавших сатархеев.</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">В этом посвящении упомянут северопонтийский культ Ахилла, центром которого был тесно связанный с ольвийским полисом остров Левка (ср. Виноградов 1989, 164 слл.; последнюю сводку данных о культе Ахилла в Северном Причерноморье см. в работе Hupe 2006).</p>
-            <p part="N">Место военной операции, проведенной Посидеем, не поддается надежному определению. Это связано с проблемой локализации сатархеев (сатархов), которых исследователи помещают либо в Юго-Восточном, либо в Западном Крыму. В литературной традиции сатархи впервые упомянуты Помпонием Мелой ок. середины I в. н.э. (II 3). Он локализует их в обращенной к Сивашу ("Болоту") части  Крымского полуострова (in Paludem vergentia Satarchae tenent), а чуть ниже (II 4) отмечает, что они вместе с таврийцами (Satarchae et Taurici) занимают область Перекопского перешейка (ср. сообщение Стефана Византийского (s.v. Τάφραι) со ссылкой на Домития Каллистрата о том, что сатархи населяли Тафры, т.е. Перекопский перешеек). Согласно Плинию Старшему (посл. четв. I в. н.э.) скифы-сатавки (= сатархи?) локализуются на восточном побережье Таврики (NH. IV 85: cluduntur (scil. Scythotauri) ab occidente Cherroneso Nea, ab ortu Scythis Satarcis (sataucis – codd.)). Тот же автор (VI 22) упоминает сатархеев среди сарматских племен перешедших Танаис и вторгнувшихся в Скифию. Эти данные позволяют считать Северный Крым между Каркинитским заливом и Сивашем, Северо-Восточный и Восточный Крым наиболее вероятной областью проживания сатархеев-сатархов, которые могли иметь выход как в Азовское, так и в Черное море (ср. Брашинский 1973, 129, прим. 34; Щеглов 1966, 147 локализует сатархов на западном побережье Крыма, однако без достаточной аргументации). О сатархах см. также:  Десятчиков 1973, 131-144; Ольховский 1981, 56-57.</p>
-            <p part="N">На основании этой надписи было сделано предположение, что функции Посидея, сына Посидея, при дворе скифского правителя были близки к функциям наварха. См. Виноградов 1989, 244 (там же обсуждение вопроса о наличие военного флота в распоряжении позднескифского царства); Vinogradov 1997, 68; Hupe 2003, 297.</p>
+         <div type="commentary" xml:lang="ru">
+            <p>В этом посвящении упомянут северопонтийский культ Ахилла, центром которого был тесно связанный с ольвийским полисом остров Левка (ср. Виноградов 1989, 164 слл.; последнюю сводку данных о культе Ахилла в Северном Причерноморье см. в работе Hupe 2006).</p>
+            <p>Место военной операции, проведенной Посидеем, не поддается надежному определению. Это связано с проблемой локализации сатархеев (сатархов), которых исследователи помещают либо в Юго-Восточном, либо в Западном Крыму. В литературной традиции сатархи впервые упомянуты Помпонием Мелой ок. середины I в. н.э. (II 3). Он локализует их в обращенной к Сивашу ("Болоту") части  Крымского полуострова (in Paludem vergentia Satarchae tenent), а чуть ниже (II 4) отмечает, что они вместе с таврийцами (Satarchae et Taurici) занимают область Перекопского перешейка (ср. сообщение Стефана Византийского (s.v. Τάφραι) со ссылкой на Домития Каллистрата о том, что сатархи населяли Тафры, т.е. Перекопский перешеек). Согласно Плинию Старшему (посл. четв. I в. н.э.) скифы-сатавки (= сатархи?) локализуются на восточном побережье Таврики (NH. IV 85: cluduntur (scil. Scythotauri) ab occidente Cherroneso Nea, ab ortu Scythis Satarcis (sataucis – codd.)). Тот же автор (VI 22) упоминает сатархеев среди сарматских племен перешедших Танаис и вторгнувшихся в Скифию. Эти данные позволяют считать Северный Крым между Каркинитским заливом и Сивашем, Северо-Восточный и Восточный Крым наиболее вероятной областью проживания сатархеев-сатархов, которые могли иметь выход как в Азовское, так и в Черное море (ср. Брашинский 1973, 129, прим. 34; Щеглов 1966, 147 локализует сатархов на западном побережье Крыма, однако без достаточной аргументации). О сатархах см. также:  Десятчиков 1973, 131-144; Ольховский 1981, 56-57.</p>
+            <p>На основании этой надписи было сделано предположение, что функции Посидея, сына Посидея, при дворе скифского правителя были близки к функциям наварха. См. Виноградов 1989, 244 (там же обсуждение вопроса о наличие военного флота в распоряжении позднескифского царства); Vinogradov 1997, 68; Hupe 2003, 297.</p>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

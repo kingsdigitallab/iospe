@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Надгробие Герo[---].</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000053</idno>
             <idno type="PE">PE3000053</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" part="N">Надгробная надпись.</seg>
-                     <seg xml:lang="en" part="N">Epitaph</seg>
+                     <seg xml:lang="ru" corresp="#doc2">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru" part="N">Обломана справа. Эпиграфическое поле ограничено рельефной рамкой.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Обломана справа. Эпиграфическое поле ограничено рельефной рамкой.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">6,5</height>
                               <width unit="cm">7</width>
@@ -55,59 +55,59 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Буквы ровные с заметными утолщениями на концах линий;</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Буквы ровные с заметными утолщениями на концах линий;</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0250" notAfter="-0168" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">Вторая половина III в. – начало II в. до н.э.</seg>
-                        <seg xml:lang="en" part="N">2nd half of III - early II centuries B.C.</seg>
+                     <origDate notBefore="-0250" notAfter="-0168" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">Вторая половина III в. – начало II в. до н.э.</seg>
+                        <seg xml:lang="en">2nd half of III - early II centuries B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1900 г. в юго-восточном районе херсонесского городища с внешней стороны куртин 17 и 19 оборонительной стены. 
                            Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 9, л. 18, № 195; д. 29, л. 6, № 195).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos).</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol.</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-06" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-15" who="CB" status="draft">Bibliography</change>
-         <change when="2015-09-01" who="CB" status="draft">Metadata and app crit</change>
-         <change when="2015-07-10" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-06-02" who="CB" status="draft">Metadata tagging.</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change>
-         <change when="2015-03-12" who="AV" status="draft">tagging Greek names XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-06" who="CB">Added origDate</change>
+         <change when="2015-10-15" who="CB">Bibliography</change>
+         <change when="2015-09-01" who="CB">Metadata and app crit</change>
+         <change when="2015-07-10" who="KK">Add photo file name</change>
+         <change when="2015-06-02" who="CB">Metadata tagging.</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2015-03-12" who="AV">tagging Greek names XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,39 +120,39 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"><!--Латышев 1902--><ptr target="bib:0142"/>, 64, № <citedRange>3</citedRange></bibl>
-               <bibl default="false" status="draft"><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>477</citedRange>.</bibl>
+            <listBibl>
+               <bibl><!--Латышев 1902--><ptr target="bib:0142"/>, 64, № <citedRange>3</citedRange></bibl>
+               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>477</citedRange>.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><seg part="I">Ἡρο</seg></name><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="2"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><seg part="I">Ἡρω</seg></name><gap reason="lost" extent="unknown" unit="character" instant="false"/></persName></persName>.
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name><seg part="I">Ἡρο</seg></name><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="2"/><persName type="attested"><name><seg part="I">Ἡρω</seg></name><gap reason="lost" extent="unknown" unit="character"/></persName></persName>.
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true"/></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note/></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="ru">
+            <p/>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

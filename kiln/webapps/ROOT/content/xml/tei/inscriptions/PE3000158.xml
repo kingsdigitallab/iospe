@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Фрагмент надгробия супругов (?).</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000158</idno>
             <idno type="PE">PE3000158</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" corresp="#doc2" cert="low" part="N">Надгробная надпись (?)</seg>
-                     <seg xml:lang="en" part="N">Epitaph (?)</seg>
+                     <seg xml:lang="ru" corresp="#doc2" cert="low">Надгробная надпись (?)</seg>
+                     <seg xml:lang="en">Epitaph (?)</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en">Panel</objectType>
                            <material xml:lang="ru" ref="#m1">Мрамор.</material>
                            <material xml:lang="en">Marble</material>
-                           <p xml:lang="ru" part="N">Сохранился правый край с остатками трех строк надписи, выполненной по предварительной разметке.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Сохранился правый край с остатками трех строк надписи, выполненной по предварительной разметке.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">10,5</height>
                               <width unit="cm">11,5</width>
@@ -55,59 +55,59 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Буквы вырезаны достаточно глубоко, но не очень ровно; отдельные линии слегка наклонены (перекладина Α, средняя гаста Ε), 
+                        <seg xml:lang="ru">Буквы вырезаны достаточно глубоко, но не очень ровно; отдельные линии слегка наклонены (перекладина Α, средняя гаста Ε), 
                            утолщения и апексы на концах линий букв.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0201" notAfter="0300" evidence="Палеография" precision="low" instant="false">
-                        <seg xml:lang="ru" part="N">III в. н.э.</seg>
-                        <seg xml:lang="en" part="N">III century C.E.</seg>
+                     <origDate notBefore="0201" notAfter="0300" evidence="Палеография" precision="low">
+                        <seg xml:lang="ru">III в. н.э.</seg>
+                        <seg xml:lang="en">III century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" ref="#sevastopol" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Неизвестны.</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Sevastopol (Chersonesos)</placeName>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
                         <rs type="circumstances">Unknown</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь.</seg>
-                     <seg xml:lang="en" part="N">Sevastopol</seg>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol</seg>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-         <change when="2015-11-09" who="CB" status="draft">tokenised</change>
-         <change when="2015-11-09" who="CB" status="draft">Added origDate</change>
-         <change when="2015-10-30" who="KK" status="draft">Leidenised</change>
-         <change when="2015-10-26" who="CB" status="draft">Bibliography and app crit</change>
-         <change when="2015-10-22" who="CB" status="draft">metadata</change>
-         <change when="2015-09-25" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+         <change when="2015-11-09" who="CB">tokenised</change>
+         <change when="2015-11-09" who="CB">Added origDate</change>
+         <change when="2015-10-30" who="KK">Leidenised</change>
+         <change when="2015-10-26" who="CB">Bibliography and app crit</change>
+         <change when="2015-10-22" who="CB">metadata</change>
+         <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,48 +120,48 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft">НЭПХ I 91.</bibl>
+            <listBibl>
+               <bibl>НЭПХ I 91.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft"/>
+            <listBibl>
+               <bibl/>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               <lb n="1"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
-               <lb n="2"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><w part="F"><unclear instant="false">κεῖ</unclear></w>
-               <lb n="3"/><w part="N"><supplied reason="lost" cert="low" instant="false">ται</supplied></w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               <gap reason="illegible" quantity="1" unit="character" instant="false"/><persName type="attested" instant="false" full="yes"><name full="yes" instant="false"><seg part="F">ιλία</seg></name> <name full="yes" instant="false"><seg part="I">Εὐ</seg></name></persName>
-               <lb n="4"/><gap reason="lost" extent="unknown" unit="character" instant="false"/><w part="N"><supplied reason="lost" instant="false">με</supplied>τ’</w> <w part="N">αὐτοῦ</w>
-               <lb n="5"/><w part="N"><supplied reason="lost" cert="low" instant="false">ζήσασα</supplied></w><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               <lb n="6"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>κεῖ</unclear></w>
+               <lb n="3"/><w><supplied reason="lost" cert="low">ται</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
+               <gap reason="illegible" quantity="1" unit="character"/><persName type="attested"><name><seg part="F">ιλία</seg></name> <name><seg part="I">Εὐ</seg></name></persName>
+               <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">με</supplied>τ’</w> <w>αὐτοῦ</w>
+               <lb n="5"/><w><supplied reason="lost" cert="low">ζήσασα</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="6"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true">Supplevi e.g.</note></app>
-               <app loc="2"><note anchored="true">в начале стк. нижняя часть наклонной гасты, e.g.: <unclear instant="false">Κ</unclear>ιλία (cf. № ipe455), <unclear instant="false">Α</unclear>ἰλία и т.п., далее патронимик или cognomen на Εὐ-. </note></app>
-               <app loc="3-4"><note anchored="true">cf. Studia Pontica III 81: τεκνώσασα μετ’ αὐτοῦ͂</note> 
+         <div type="apparatus">
+            <listApp>
+               <app><note>Supplevi e.g.</note></app>
+               <app loc="2"><note>в начале стк. нижняя часть наклонной гасты, e.g.: <unclear>Κ</unclear>ιλία (cf. № ipe455), <unclear>Α</unclear>ἰλία и т.п., далее патронимик или cognomen на Εὐ-. </note></app>
+               <app loc="3-4"><note>cf. Studia Pontica III 81: τεκνώσασα μετ’ αὐτοῦ͂</note> 
                   <rdg source="bib:НЭПХ">ταὐτοῦ</rdg></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">[---] ле[жит, ---]лия Ев[---, прожившая с] ним [---].</p>
+         <div type="translation" xml:lang="ru">
+            <p>[---] ле[жит, ---]лия Ев[---, прожившая с] ним [---].</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

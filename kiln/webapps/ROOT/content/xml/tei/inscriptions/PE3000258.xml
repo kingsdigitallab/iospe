@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Надпись агоранома о строительстве.</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000258</idno>
             <idno type="PE">PE3000258</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country>Ukraine</country>
@@ -30,10 +30,10 @@
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary>
-                     <seg xml:lang="ru" part="N">Строительная надпись.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en"/>
                   </summary>
                </msContents>
                <physDesc>
@@ -44,8 +44,8 @@
                            <objectType xml:lang="en"/>
                            <material xml:lang="ru">Мрамор.</material>
                            <material xml:lang="en"/>
-                           <p xml:lang="ru" part="N">Оббита со всех сторон кроме левой, расколота пополам. Лицевая сторона тщательно обработана. Сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
-                           <p xml:lang="en" part="N"/>
+                           <p xml:lang="ru">Оббита со всех сторон кроме левой, расколота пополам. Лицевая сторона тщательно обработана. Сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">14</height>
                               <width unit="cm">23</width>
@@ -55,54 +55,54 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru" part="N"/>
-                           <seg xml:lang="en" part="N"/>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru" part="N">Слегка удлиненная форма букв, овальное Ο в высоту строки, Σ с параллельными верхней и нижней линиями, знаки-разделители, сильное апицирование.</seg>
-                        <seg xml:lang="en" part="N"/>
+                        <seg xml:lang="ru">Слегка удлиненная форма букв, овальное Ο в высоту строки, Σ с параллельными верхней и нижней линиями, знаки-разделители, сильное апицирование.</seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">3,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
-                  <origin instant="false">
-                     <origPlace instant="false">
-                        <seg xml:lang="ru" part="N">Херсонес Таврический.</seg>
-                        <seg xml:lang="en" part="N"/>
+                  <origin>
+                     <origPlace>
+                        <seg xml:lang="ru">Херсонес Таврический.</seg>
+                        <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="Указание_надписи" instant="false">
-                        <seg xml:lang="ru" part="N">205 г. х.э. (180 г. н.э.).</seg>
-                        <seg xml:lang="en" part="N"/>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Указание_надписи">
+                        <seg xml:lang="ru">205 г. х.э. (180 г. н.э.).</seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
-                     <seg xml:lang="ru" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes">Севастополь (Херсонес).</placeName>
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1949 г. в северном районе городища, недалеко от Базилики 1935 г., в помещении № 4. Раскопки Г.Д. Белова (НА НЗХТ, д. 622, л. 15; ср. Белов 1955, 272).</rs>
                         <rs type="context"/>
                      </seg>
-                     <seg xml:lang="en" part="N">
-                        <placeName type="ancientFindspot" instant="false" full="yes"/>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"/>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru" part="N">Севастополь, Украина.</seg>
-                     <seg xml:lang="en" part="N"/>
+                     <seg xml:lang="ru">Севастополь, Украина.</seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                   
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
-          <change when="2015-11-20" who="KK" status="draft">Leidenised</change>
-         <change when="2015-11-13" who="AGi" status="draft">programmatically created XML from Word docs</change>
+      <revisionDesc>
+          <change when="2015-11-20" who="KK">Leidenised</change>
+         <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -115,50 +115,50 @@
    </facsimile>
    <text>
       <body>
-         <div type="bibliography" part="N" org="uniform" sample="complete">
+         <div type="bibliography">
             <!-- Издания -->
-            <listBibl default="false">
-               <bibl default="false" status="draft">НЭПХ I 26.</bibl>
+            <listBibl>
+               <bibl>НЭПХ I 26.</bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="commentaries" part="N" org="uniform" sample="complete">
+         <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            <listBibl default="false">
-               <bibl default="false" status="draft">Nadel 1976, 199 (SEG 26, 797)</bibl>
-               <bibl default="false" status="draft">Соломоник 1990, 68, № 62</bibl>
-               <bibl default="false" status="draft">Ivantchik 2012, 127.</bibl>
+            <listBibl>
+               <bibl>Nadel 1976, 199 (SEG 26, 797)</bibl>
+               <bibl>Соломоник 1990, 68, № 62</bibl>
+               <bibl>Ivantchik 2012, 127.</bibl>
             </listBibl>
          </div>
-         <div type="edition" xml:lang="grc" xml:space="preserve" part="N" org="uniform" sample="complete">
-            <ab part="N">
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
-               		<lb n="2"/>ἀγορα<unclear instant="false">ν</unclear><supplied reason="lost" instant="false">όμος</supplied> <supplied reason="lost" instant="false">ὢν</supplied><gap reason="lost" extent="unknown" unit="character" instant="false"/><supplied reason="lost" instant="false">ἐν</supplied> <supplied reason="lost" instant="false">τῷ</supplied>
-               		<lb n="3"/>σε’ ἔτει ἀ<supplied reason="lost" cert="low" instant="false">γορανόμιον</supplied> <supplied reason="lost" instant="false">ἐκ</supplied> <supplied reason="lost" instant="false">τῶν</supplied> <supplied reason="lost" instant="false">ἰδίων</supplied> <supplied reason="lost" instant="false">κατεσκεύασε</supplied><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="4"/><gap reason="lost" quantity="3" unit="character" instant="false"/><gap reason="illegible" quantity="2" unit="character" instant="false"/><orig><unclear instant="false">υ</unclear></orig><gap reason="lost" extent="unknown" unit="character" instant="false"/>
-               		<lb n="5"/><gap reason="lost" extent="unknown" unit="line" instant="false"/>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="2"/>ἀγορα<unclear>ν</unclear><supplied reason="lost">όμος</supplied> <supplied reason="lost">ὢν</supplied><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἐν</supplied> <supplied reason="lost">τῷ</supplied>
+               		<lb n="3"/>σε’ ἔτει ἀ<supplied reason="lost" cert="low">γορανόμιον</supplied> <supplied reason="lost">ἐκ</supplied> <supplied reason="lost">τῶν</supplied> <supplied reason="lost">ἰδίων</supplied> <supplied reason="lost">κατεσκεύασε</supplied><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="4"/><gap reason="lost" quantity="3" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><orig><unclear>υ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
-         <div type="apparatus" part="N" org="uniform" sample="complete">
-            <listApp default="false">
-               <app><note anchored="true">НЭПХ I 26.</note></app>
-               <app><note anchored="true">0: [ὁ δεῖνα τοῦ δεῖνος] - НЭПХ.</note></app>
-               <app><note anchored="true">0-1: [τὸν] | ἀγοραν̣[ομήσαντα ?] vel [τὸν] | ἀγοραν̣[όμιον ? οἰκοδομήσαντα] - Nadel.</note></app>
-               <app><note anchored="true">1-2: ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ? κατεσκεύασε] - НЭПХ; не исключаю [ἐπεσκεύασε] vel sim. </note></app>
-               <app><note anchored="true">2: по обеим сторонам слова ἔτει точки-разделители.</note></app>
-               <app><note anchored="true">3: в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ; [- - -]ι̣ο̣υ̣[- - -] - НЭПХ.</note></app>
+         <div type="apparatus">
+            <listApp>
+               <app><note>НЭПХ I 26.</note></app>
+               <app><note>0: [ὁ δεῖνα τοῦ δεῖνος] - НЭПХ.</note></app>
+               <app><note>0-1: [τὸν] | ἀγοραν̣[ομήσαντα ?] vel [τὸν] | ἀγοραν̣[όμιον ? οἰκοδομήσαντα] - Nadel.</note></app>
+               <app><note>1-2: ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ? κατεσκεύασε] - НЭПХ; не исключаю [ἐπεσκεύασε] vel sim. </note></app>
+               <app><note>2: по обеим сторонам слова ἔτει точки-разделители.</note></app>
+               <app><note>3: в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ; [- - -]ι̣ο̣υ̣[- - -] - НЭПХ.</note></app>
             </listApp>
          </div>
-         <div type="translation" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N">- - - в 205 году, будучи агораномом, построил (восстановил) на собственные средства [агораномий ?] - - -</p>
+         <div type="translation" xml:lang="ru">
+            <p>- - - в 205 году, будучи агораномом, построил (восстановил) на собственные средства [агораномий ?] - - -</p>
          </div>
-         <div type="translation" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="translation" xml:lang="en">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="ru" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="ru">
+            <p/>
          </div>
-         <div type="commentary" xml:lang="en" part="N" org="uniform" sample="complete">
-            <p part="N"/>
+         <div type="commentary" xml:lang="en">
+            <p/>
          </div>
       </body>
    </text>

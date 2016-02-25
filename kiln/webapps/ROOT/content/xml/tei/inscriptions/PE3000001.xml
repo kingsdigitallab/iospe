@@ -5,7 +5,7 @@
 
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader type="text">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Стела Аполлония</title>
@@ -17,7 +17,7 @@
             <idno type="filename">PE3000001</idno>
             <idno type="PE">PE3000001</idno>
          </publicationStmt>
-         <sourceDesc default="false">
+         <sourceDesc>
             <msDesc>
                <msIdentifier>
                   <country/>
@@ -30,7 +30,7 @@
                      <idno>48/36847</idno>
                   </altIdentifier>
                </msIdentifier>
-               <msContents defective="false">
+               <msContents>
                   <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
@@ -106,15 +106,15 @@ wide.</seg>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc status="draft">
+      <revisionDesc>
          <change when="2016-02-25" who="SS">Added English to header; tidied up XML</change>
-         <change when="2015-11-03" who="CB" status="draft">Adding origDate</change>
-         <change when="2015-10-27" who="CB" status="draft">correction to bibliography</change>
-         <change when="2015-09-24" who="CB" status="draft">Tagging bibliography</change>
-         <change when="2015-07-08" who="KK" status="draft">Add photo file name</change>
-         <change when="2015-05-29" who="CB" status="draft">Tagging metadata</change>
-         <change when="2015-03-12" who="VP" status="draft">Tagging the names</change>
-         <change when="2014-01-31" who="AGi" status="draft">programmatically created XML from Word docs</change></revisionDesc>
+         <change when="2015-11-03" who="CB">Adding origDate</change>
+         <change when="2015-10-27" who="CB">correction to bibliography</change>
+         <change when="2015-09-24" who="CB">Tagging bibliography</change>
+         <change when="2015-07-08" who="KK">Add photo file name</change>
+         <change when="2015-05-29" who="CB">Tagging metadata</change>
+         <change when="2015-03-12" who="VP">Tagging the names</change>
+         <change when="2014-01-31" who="AGi">programmatically created XML from Word docs</change></revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
@@ -145,7 +145,7 @@ wide.</seg>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab part="N">
+            <ab>
                <lb n="1"/><persName type="attested"><name>Ἀπολλώνιος</name> 
                <lb n="2"/><persName type="attested"><name>Πυρρίνου</name></persName></persName>
            </ab>
