@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Бакоса, сына Зевксидама.</title>
+             <title xml:lang="ru">Стела Бакоса</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
+                     <repository>НЗХТ</repository>
                      <idno>3/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>
                      <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,9 +39,9 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Steleю</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Дшьуыещтую</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела, украшенная профилированным карнизом (карниз частично сбит). 
                               Разбита на пять фрагментов. На верхней грани прямоугольное отверстие для крепления анфемия. 
                               Надпись тонко вырезана по линейкам и обведена черной краской.
@@ -51,9 +49,9 @@
                               Остатки полихромии. Тыльная сторона заглажена.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">205</height>
-                              <width unit="cm">37</width>
-                              <depth unit="cm">19</depth>
+                              <height unit="cm">205,0</height>
+                              <width unit="cm">37,0</width>
+                              <depth unit="cm">19,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -74,7 +72,7 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
                         <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
@@ -128,20 +126,20 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 60, № <citedRange>4</citedRange></bibl>
-               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/><citedRange>138</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="Bull. ép."/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 441, № <citedRange>46</citedRange>.</bibl>
+               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/><citedRange>138</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 441, № <citedRange>46</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>,70, № 62+62a.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>,70, № 62+62a</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><persName type="attested"><name>Βάκος</name> .
-               		<lb n="2"/><persName type="attested"><name>Ζευξιδάμου</name></persName></persName>.
+               		<lb n="1"/><persName type="attested"><name>Βάκος</name>
+               		<lb n="2"/><persName type="attested"><name>Ζευξιδάμου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -158,11 +156,11 @@
          <div type="commentary" xml:lang="ru">
             <p>Изображение воинских атрибутов и атрибутов гимнасия делают вероятным предположение о принадлежности умершего к категории νέοι, 
                молодых людей, достигших совершеннолетия и уже обладавших гражданскими правами, но обязанными посещать гимнасий 
-               (ср. также надгробие Дионисия № neph150 и замечания в работе Макаров 2013, 320 сл.). </p>
+               (ср. также надгробие Дионисия № neph150 и замечания в работе Макаров 2013, 320 сл.).</p>
             <p>Имя Βάκος, как и другие имена этой основы – Βάκις (засвидетельствовано в Херсонесе в № ipe403A16; известно также как имя беотийского божества, см. 
                Pape-Benseler, s.v.), Βακίων (засвидетельствовано в Византии, а также в одном заклятии из Пантикапея, см. LGPN IV s.v.) – судя по всему, 
                имеет мегарское или беотийское происхождение. См. Masson 1994, 138 (= OGS III, 207), где это ЛИ сопоставляется с глаголом βάζω 
-               (предложенное Perlman 2011, 441 толкование Βάκος как Βάκχος «with the loss of the epenthetic consonant» не выдерживает критики). </p>
+               (предложенное Perlman 2011, 441 толкование Βάκος как Βάκχος «with the loss of the epenthetic consonant» не выдерживает критики).</p>
             <p>По наблюдению Posamеntir 2011, 55 анфемий, атрибуированный этой стеле в предыдущих изданиях, 
                скорее всего ей не принадлежит из-за значительных различий в материале и размерах.</p>
          </div>
