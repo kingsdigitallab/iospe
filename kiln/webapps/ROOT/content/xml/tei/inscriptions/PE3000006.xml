@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Горгиппы и Амфия, детей Матрия.</title>
+             <title xml:lang="ru">Стела Горгиппы и Амфия</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>39/36847.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>39/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>39/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,17 +39,17 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Верхняя часть стелы с высоким монолитным анфемием.
                               Состоит из пяти фрагментов.
                               Под карнизом симметрично по отношению к вертикальной оси вырезана и обведена красной краской трехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">83</height>
+                              <height unit="cm">83,0</height>
                               <width unit="cm">38,5</width>
-                              <depth unit="cm">17</depth>
+                              <depth unit="cm">17,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0367" notAfter="-0334" evidence="Палеография" cert="low">
                         <seg xml:lang="ru">Около середины IV в. до н.э.</seg>
@@ -96,13 +94,14 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-10-15" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Metadata and app crit</change>
          <change when="2015-07-10" who="KK">Add photo file name</change>
@@ -125,21 +124,21 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 70, № <citedRange>32</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>166</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:Bull. ép"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:0437"/>, 446, № <citedRange>60</citedRange>.</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>166</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:0437"/>, 446, № <citedRange>60</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 68, № 60.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 68, № 60</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>Γοργίππα</name></persName>, 
                		<lb n="2"/><persName type="attested"><name>Ἀμφίας</name> 
-               		<lb n="3"/><persName type="attested"><name>Μάτριος</name></persName></persName>.
+               		<lb n="3"/><persName type="attested"><name>Μάτριος</name></persName></persName>
             </ab>         </div>
          <div type="apparatus">
             <listApp>
@@ -153,7 +152,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	По архитектурному оформлению близкой аналогией к данному памятнику является надгробие из Керкинитиды, датирующееся тем же временем (№ ipe399).</p>
+            <p>По архитектурному оформлению близкой аналогией к данному памятнику является надгробие из Керкинитиды, датирующееся тем же временем (№ ipe399).</p>
             <p>Γοργίππα - женское личное имя группы двухосновных имен с элементом γοργός (Bechtel HPN, 111) в дорийской огласовке. 
                В Северном Причерноморье более не встречается (ср., однако, параллельное мужское имя Γόργιππος, LGPN IV). 
                Теофорное имя Μᾶτρις - деминутив группы двухосновных имен с первым элементом Μητρο-, хорошо засвидетельствованный в Херсонесе 

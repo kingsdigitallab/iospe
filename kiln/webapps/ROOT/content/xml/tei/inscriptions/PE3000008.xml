@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Эвбула, сына Ксенона.</title>
+             <title xml:lang="ru">Стела Эвбула</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>78/36847 + 162/36847.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>78/36847 + 162/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>78/36847 + 162/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,17 +39,17 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела, украшенная анфемием. Расколота на пять частей. 
                               Немного повреждена справа. Шип для вставки в постамент отбит. 
                               Надпись сохранила следы красной краски.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">176</height>
-                              <width unit="cm">39</width>
-                              <depth unit="cm">16</depth>
+                              <height unit="cm">176,0</height>
+                              <width unit="cm">39,0</width>
+                              <depth unit="cm">16,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -74,12 +72,12 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0367" notAfter="-0334" evidence="Палеография" cert="low">
-                        <seg xml:lang="ru">Около середины IV в. до н.э.</seg>
+                        <seg xml:lang="ru">Около сер. IV в. до н.э.</seg>
                         <seg xml:lang="en">Circa mid IV century B.C.</seg>
                      </origDate>
                   </origin>
@@ -98,13 +96,14 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol..</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-03" who="CB">Metadata and app crit</change>
@@ -128,8 +127,8 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 59, № <citedRange>3</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>137</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:Bull. ép."/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 446, № <citedRange>62</citedRange>.</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>137</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 446, № <citedRange>62</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -138,7 +137,7 @@
                <bibl><!--Виноградов 1975--><ptr target="bib:b0450"/>, 174</bibl>
                <bibl><!--Зубарь 2005--><ptr target="bib:b0469"/>, 459 сл.</bibl>
                <bibl><!-->Буйских 2008,--><ptr target="bib:b0449"/> 386 сл., рис. 101.3</bibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 70, № 62+62a.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 70, № 62+62a</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -159,12 +158,12 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	На принадлежность нижнего анэпиграфного фрагмента данной стеле (инв. №: 162/36847) впервые указано в работе Posamentir 2011, 70, No. 62+62a. 
+            <p>На принадлежность нижнего анэпиграфного фрагмента данной стеле (инв. №: 162/36847) впервые указано в работе Posamentir 2011, 70, No. 62+62a. 
                В стк. 1 с большей вероятностью следует видеть хорошо известное личное имя Εὔβουλος с все еще характерной для IV в до н.э. 
                передачей о долгого закрытого через Ο (ср. Виноградов 1975, 174), нежели крайне редкое ЛИ Εὔβολος 
                (засвидетельствовано в конце II в. до н.э. на Делосе для выходца с Боспора, LGPN IV). 
-               Примечательна также первоначальная передача дифтонга ευ через εο (ср. Bull. ép. 1974, 380: «on avait ... pris d’abord une graphie ionienne ancienne»). </p>
-            <p>	Имена Εὔβουλος и Ξένων засвидетельствованы в Херсонесе неоднократно (см. LGPN).</p>
+               Примечательна также первоначальная передача дифтонга ευ через εο (ср. Bull. ép. 1974, 380: «on avait ... pris d’abord une graphie ionienne ancienne»).</p>
+            <p>Имена Εὔβουλος и Ξένων засвидетельствованы в Херсонесе неоднократно (см. LGPN).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

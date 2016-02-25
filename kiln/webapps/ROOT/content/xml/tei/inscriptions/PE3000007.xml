@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Госона, сына Папия.</title>
+             <title xml:lang="ru">Стела Госона</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
-                     <idno>8194.</idno>
+                     <repository>НЗХТ</repository>
+                     <idno>8194</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>8194</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,15 +39,15 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела с карнизом (сильно поврежден). Обломана справа. В нижней части вырезана двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">65</height>
-                              <width unit="cm">22</width>
-                              <depth unit="cm">16</depth>
+                              <height unit="cm">65,0</height>
+                              <width unit="cm">22,0</width>
+                              <depth unit="cm">16,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -64,15 +62,15 @@
                      <handNote>
                         <seg xml:lang="ru">Κрупные Ο и Ω, верхние и нижние линии Σ расходятся, отсутствуют утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">2</height>
+                        <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0400" notAfter="-0301" evidence="Палеография">
                         <seg xml:lang="ru">IV в. до н.э.</seg>
@@ -101,6 +99,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-02" who="CB">Metadata and app crit</change>
@@ -123,13 +122,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/>, <citedRange>28</citedRange>.</bibl>
+               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/>, <citedRange>28</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--АСХ--><ptr target="bib:b0523"/> 69, № 165.</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> 69, № 165</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
