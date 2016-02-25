@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Бистaя, сына Филона.</title>
+             <title xml:lang="ru">Стела Бистaя</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -22,18 +20,18 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ.</repository>
+                     <repository>НЗХТ</repository>
                      <idno>45/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>45/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
                   <summary>
                      <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,18 +39,18 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела с горизонтальным завершением. 
                               Состоит из шести фрагментов.
                               Следы архитектурных украшений и росписи отсутствуют. 
                               В верхней части плиты симметрично по отношению к вертикальной оси вырезана двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">92</height>
-                              <width unit="cm">40</width>
-                              <depth unit="cm">10</depth>
+                              <height unit="cm">92,0</height>
+                              <width unit="cm">40,0</width>
+                              <depth unit="cm">10,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -67,18 +65,18 @@
                      <handNote>
                         <seg xml:lang="ru">крупные Θ, Ο Ω, правая вертикаль Ν слегка приподнята, отсутствие украшений на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">3</height>
+                        <height unit="cm">3,0</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0367" notAfter="-0334" evidence="Палеография">
-                        <seg xml:lang="ru">Середина - вторая половина IV в. до н.э.</seg>
+                        <seg xml:lang="ru">Сер. - 2-я пол. IV в. до н.э.</seg>
                         <seg xml:lang="en">mid-2nd half of IV century B.C.</seg>
                      </origDate>
                   </origin>
@@ -105,6 +103,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2016-02-15" who="SS">corrected references to alists</change>
          <change when="2015-10-28" who="CB">Correcting app crit</change>
          <change when="2015-10-15" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Metadata and app crit</change>
@@ -128,20 +127,20 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 70, № <citedRange>31</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>165</citedRange></bibl> <bibl>(<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 445, № <citedRange>59</citedRange>.</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>165</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 445, № <citedRange>59</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 67, № 59.</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 67, № 59</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>Βισθᾶς</name>
-               		<lb n="2"/><persName type="attested"><name>Φίλωνος</name></persName></persName> .
+               		<lb n="2"/><persName type="attested"><name>Φίλωνος</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -156,7 +155,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Личное имя Βισθᾶς засвидетельствовано для Херсонеса еще дважды:
+            <p>Личное имя Βισθᾶς засвидетельствовано для Херсонеса еще дважды:
                в надгробной надписи эллинистического времени Sol1983/07 упомянут Βισθᾶς Διονυσίου; 
                то же самое имя упоминается как патронимик херсонесита Гераклида (‘Ηρακλείδας Βισθᾶ), 
                удостоившегося звания проксена в Дельфах в 192 г. до н.э. (Syll.3 58557; ср. Syll.3 604; Avram PPE 3193). 
