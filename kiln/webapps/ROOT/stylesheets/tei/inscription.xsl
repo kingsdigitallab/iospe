@@ -98,11 +98,13 @@
 
   <xsl:template name="inscription-title">
     <!-- inscription number -->
-    <xsl:call-template name="formatInscrNum">
+    <xsl:choose><xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], 'PE')">
+      <xsl:value-of select="//tei:publicationStmt/tei:idno[@type = 'filename']"/>
+    </xsl:when><xsl:otherwise><xsl:call-template name="formatInscrNum">
       <xsl:with-param name="num" select="//tei:publicationStmt/tei:idno[@type = 'filename']"/>
       <xsl:with-param name="printCorpus" select="true()"/>
       <xsl:with-param name="txt" select="true()"/>
-    </xsl:call-template>
+    </xsl:call-template></xsl:otherwise></xsl:choose>
     <xsl:text>. </xsl:text>
 
     <!-- origin -->
