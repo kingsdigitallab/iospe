@@ -810,7 +810,14 @@
                     <i18n:text>Unknown_lh</i18n:text>
                   </xsl:otherwise>
                 </xsl:choose>
-                <xsl:text>&#160;</xsl:text>
+                <xsl:choose>
+                  <xsl:when test="tei:height[not(substring-before(., ','))]">
+                    <xsl:text>,0</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:text>&#160;</xsl:text>
+                  </xsl:otherwise>
+                </xsl:choose>
               </p>
             </div>
           </div>
