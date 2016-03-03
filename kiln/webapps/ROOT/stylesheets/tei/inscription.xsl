@@ -1211,7 +1211,7 @@
 
             <!-- Commentaries -->
             <xsl:if
-              test="//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]">
+              test="normalize-space($fullN) = '' and (//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)])">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
