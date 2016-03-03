@@ -810,7 +810,9 @@
                     <i18n:text>Unknown_lh</i18n:text>
                   </xsl:otherwise>
                 </xsl:choose>
-                <xsl:text>&#160;</xsl:text>
+                <xsl:if test="tei:height[not(substring-before(., ','))]">
+                  <xsl:text>,0</xsl:text>
+                </xsl:if>
               </p>
             </div>
           </div>
@@ -2207,9 +2209,6 @@
     </xsl:if>
     <xsl:if test="@precision = 'circa'">
       <xsl:text>c. </xsl:text>
-    </xsl:if>
-    <xsl:if test="tei:height[not(substring-before(., ','))]">
-      <xsl:text>,0</xsl:text>
     </xsl:if>
     <xsl:apply-templates/>
   </xsl:template>
