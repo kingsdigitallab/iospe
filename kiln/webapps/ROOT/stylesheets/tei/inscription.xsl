@@ -1222,7 +1222,7 @@
                   <p>
                     <xsl:apply-templates
                       select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]"/>
-                    <xsl:text>&#160;</xsl:text>
+                    <xsl:text>.&#160;</xsl:text>
                   </p>
                 </div>
               </div>
