@@ -795,15 +795,7 @@
             <div class="large-9 columns">
               <p>
                <xsl:choose>
-                 <xsl:when test="tei:height[not(substring-before(., ','))]">
-                   <xsl:text>,0</xsl:text>
-                 </xsl:when>
-                 <xsl:otherwise>
-                   <xsl:text>&#160;</xsl:text>
-                 </xsl:otherwise>
-               </xsl:choose>
-                <xsl:choose>
-                  <xsl:when
+                <xsl:when
                     test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
                     <xsl:value-of
                       select="
@@ -816,6 +808,14 @@
                   </xsl:when>
                   <xsl:otherwise>
                     <i18n:text>Unknown_lh</i18n:text>
+                  </xsl:otherwise>
+               </xsl:choose>
+                <xsl:choose>
+                  <xsl:when test="tei:height[not(substring-before(., ','))]">
+                    <xsl:text>,0</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:text>&#160;</xsl:text>
                   </xsl:otherwise>
                 </xsl:choose>
               </p>
