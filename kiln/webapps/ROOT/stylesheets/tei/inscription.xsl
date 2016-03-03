@@ -813,7 +813,6 @@
                 <xsl:if test="tei:height[not(substring-before(., ','))]">
                   <xsl:text>,0</xsl:text>
                 </xsl:if>
-                <xsl:apply-templates/>
               </p>
             </div>
           </div>
