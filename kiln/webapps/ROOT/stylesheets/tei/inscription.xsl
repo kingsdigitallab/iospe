@@ -795,6 +795,33 @@
             <div class="large-9 columns">
               <p>
                 <xsl:choose>
+                <xsl:when test="not(tei:height)">
+                  <i18n:text>Unknown</i18n:text>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:if test="tei:height">
+                    <xsl:text> </xsl:text>
+                    <xsl:choose>
+                      <xsl:when test="tei:height[. = '?']">
+                        <i18n:text>unknown</i18n:text>
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of
+                          select="
+                          if ($lang = 'ru') then
+                          tei:height
+                          else
+                          translate(tei:height, ',', '.')"
+                        />
+                      </xsl:otherwise>
+                    </xsl:choose>
+                  </xsl:if>
+                  <xsl:if test="tei:height[not(substring-before(., ','))]">
+                    <xsl:text>,0</xsl:text>
+                  </xsl:if>
+                </xsl:otherwise>
+                </xsl:choose>
+                <!--  <xsl:choose>
                   <xsl:when
                     test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
                     <xsl:value-of
@@ -805,14 +832,12 @@
                         else
                           translate($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height, ',', '.')"
                     />
-                    <xsl:if test="tei:height[not(substring-before(., ','))]">
-                      <xsl:text>,0</xsl:text>
-                    </xsl:if>
                   </xsl:when>
                   <xsl:otherwise>
                     <i18n:text>Unknown_lh</i18n:text>
                   </xsl:otherwise>
                 </xsl:choose>
+                <xsl:text>&#160;</xsl:text>-->
               </p>
             </div>
           </div>
