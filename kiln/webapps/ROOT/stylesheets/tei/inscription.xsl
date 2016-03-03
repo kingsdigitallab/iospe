@@ -1472,6 +1472,9 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
+        <xsl:if test="tei:height[not(substring-before(., ','))]">
+          <xsl:text>,0</xsl:text>
+        </xsl:if>
         <xsl:if test="tei:width">
           <xsl:choose>
             <xsl:when test="tei:height">
