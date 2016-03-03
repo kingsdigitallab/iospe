@@ -794,9 +794,6 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:if test="$ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height[not(contains(., ','))]">
-                    <xsl:text>,0</xsl:text>
-                  </xsl:if>
                 <xsl:choose>
                 <xsl:when
                     test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
@@ -1474,9 +1471,6 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
-        <xsl:if test="tei:height[not(substring-before(., ','))]">
-          <xsl:text>,0</xsl:text>
-        </xsl:if>
         <xsl:if test="tei:width">
           <xsl:choose>
             <xsl:when test="tei:height">
@@ -1502,9 +1496,6 @@
               />
             </xsl:otherwise>
           </xsl:choose>
-        </xsl:if>
-        <xsl:if test="tei:width[not(substring-before(., ','))]">
-          <xsl:text>,0</xsl:text>
         </xsl:if>
         <xsl:if test="tei:depth">
           <xsl:choose>
@@ -1532,9 +1523,6 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
-        <xsl:if test="tei:depth[not(substring-before(., ','))]">
-          <xsl:text>,0</xsl:text>
-        </xsl:if>
         <xsl:if test="tei:dim[@type = 'diameter']">
           <xsl:choose>
             <xsl:when test="tei:height or tei:width or tei:depth">
@@ -1560,9 +1548,6 @@
               />
             </xsl:otherwise>
           </xsl:choose>
-        </xsl:if>
-        <xsl:if test="tei:dim[not(substring-before(., ','))]">
-          <xsl:text>,0</xsl:text>
         </xsl:if>
       </xsl:otherwise>
     </xsl:choose>
