@@ -793,36 +793,7 @@
               </h6>
             </div>
             <div class="large-9 columns">
-              <p>
-                <xsl:if test="tei:height">
-                  <xsl:choose>
-                    <xsl:when
-                      test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
-                      <xsl:value-of
-                        select="
-                        if ($lang = 'ru')
-                        then
-                        $ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height
-                        else
-                        translate($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height, ',', '.')"
-                      />
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:value-of
-                        select="
-                        if ($lang = 'ru') then
-                        tei:height
-                        else
-                        translate(tei:height, ',', '.')"
-                      />
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:if>
-                <xsl:if test="tei:height[not(substring-before(., ','))]">
-                  <xsl:text>,0</xsl:text>
-                </xsl:if>
-                
-              <!-- <xsl:choose>
+              <p><xsl:choose>
                 <xsl:when
                     test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
                     <xsl:value-of
@@ -837,7 +808,7 @@
                   <xsl:otherwise>
                     <i18n:text>Unknown_lh</i18n:text>
                   </xsl:otherwise>
-               </xsl:choose> --> 
+               </xsl:choose>
               </p>
             </div>
           </div>
