@@ -1035,7 +1035,7 @@
                         normalize-space($fullN) = '' and
                         (//tei:div[@type = 'bibliography'][not(@subtype='commentaries')][tei:listBibl//text()[not(normalize-space(.) = '')]]
                         or //tei:div[@type = 'bibliography'][not(@subtype='commentaries')][tei:listBibl//tei:ptr])">
-                      <xsl:for-each select="//tei:div[@type = 'bibliography']/tei:listBibl">
+                      <xsl:for-each select="//tei:div[@type = 'bibliography'][not(@subtype='commentaries')]/tei:listBibl">
                         <xsl:if test="@n">
                           <em>
                             <i18n:text>Fr.</i18n:text>
@@ -1059,7 +1059,7 @@
                       //tei:div[@type = 'bibliography'][not(@subtype='commentaries')][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
                       or //tei:div[@type = 'bibliography'][not(@subtype='commentaries')][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
                       <xsl:apply-templates
-                        select="//tei:div[@type = 'bibliography']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
+                        select="//tei:div[@type = 'bibliography'][not(@subtype='commentaries')]/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
                       />
                     </xsl:when>
                     <xsl:otherwise>
