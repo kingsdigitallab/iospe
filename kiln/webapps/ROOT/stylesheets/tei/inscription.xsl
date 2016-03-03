@@ -794,7 +794,7 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:if test=".[not(contains(., ','))]">
+                <xsl:if test="$ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height[not(contains(., ','))]">
                     <xsl:text>,0</xsl:text>
                   </xsl:if>
                 <xsl:choose>
