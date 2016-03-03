@@ -794,7 +794,7 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:if test="tei:height[not(substring-before(., ','))]">
+                <xsl:if test="tei:height[not(contains(., ','))]">
                     <xsl:text>,0</xsl:text>
                   </xsl:if>
                 <xsl:choose>
