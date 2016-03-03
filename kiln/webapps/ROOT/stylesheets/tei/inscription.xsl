@@ -1211,7 +1211,7 @@
 
             <!-- Commentaries -->
             <xsl:if
-              test="normalize-space($fullN) = '' and (//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)])">
+              test="//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
@@ -1222,7 +1222,7 @@
                   <p>
                     <xsl:apply-templates
                       select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]"/>
-                    <xsl:text>.&#160;</xsl:text>
+                    <xsl:text>.</xsl:text>
                   </p>
                 </div>
               </div>
