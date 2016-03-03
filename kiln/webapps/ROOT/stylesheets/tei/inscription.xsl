@@ -1221,7 +1221,7 @@
                 <div class="large-9 columns">
                   <p>
                     <xsl:apply-templates
-                      select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]//(text()[(normalize-space(.) = '')])"/>
+                      select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]"/>
                     <xsl:text>.&#160;</xsl:text>
                   </p>
                 </div>
