@@ -1220,43 +1220,46 @@
                 </div>
                 <div class="large-9 columns">
                   <p>
-                    <xsl:chose>
-                    <xsl:when
-                      test="
-                      normalize-space($fullN) = '' and
-                      (//tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl//text()[not(normalize-space(.) = '')]]
-                      or //tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl//tei:ptr])">
-                      <xsl:for-each select="//tei:div[@type = 'bibliography'][@subtype='commentaries']/tei:listBibl">
-                        <xsl:if test="@n">
-                          <em>
-                            <i18n:text>Fr.</i18n:text>
-                            <xsl:text> </xsl:text>
-                            <xsl:value-of select="@n"/>
+                    <xsl:variable name="surnames">
+                      <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
+                    </xsl:variable>
+                    <xsl:choose>
+                      <xsl:when
+                        test="
+                        normalize-space($fullN) = '' and
+                        (//tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl//text()[not(normalize-space(.) = '')]]
+                        or //tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl//tei:ptr])">
+                        <xsl:for-each select="//tei:div[@type = 'bibliography'][@subtype='commentaries']/tei:listBibl">
+                          <xsl:if test="@n">
+                            <em>
+                              <i18n:text>Fr.</i18n:text>
+                              <xsl:text> </xsl:text>
+                              <xsl:value-of select="@n"/>
+                              <xsl:text>.&#160;</xsl:text>
+                            </em>
+                          </xsl:if>
+                          <xsl:apply-templates select="tei:bibl"/>
+                          <xsl:if
+                            test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
+                            <i18n:text>Unpublished</i18n:text>
+                          </xsl:if>
+                          <xsl:if test="position() != last()">
                             <xsl:text>.&#160;</xsl:text>
-                          </em>
-                        </xsl:if>
-                        <xsl:apply-templates select="tei:bibl"/>
-                        <xsl:if
-                          test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
-                          <i18n:text>Unpublished</i18n:text>
-                        </xsl:if>
-                        <xsl:if test="position() != last()">
-                          <xsl:text>.&#160;</xsl:text>
-                        </xsl:if>
-                      </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when
-                      test="
-                      //tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
-                      or //tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
-                      <xsl:apply-templates
-                        select="//tei:div[@type = 'bibliography'][@subtype='commentaries']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
-                      />
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <i18n:text>Unpublished</i18n:text>
-                    </xsl:otherwise>
-                    </xsl:chose>
+                          </xsl:if>
+                        </xsl:for-each>
+                      </xsl:when>
+                      <xsl:when
+                        test="
+                        //tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
+                        or //tei:div[@type = 'bibliography'][@subtype='commentaries'][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
+                        <xsl:apply-templates
+                          select="//tei:div[@type = 'bibliography'][@subtype='commentaries']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
+                        />
+                      </xsl:when>
+                      <xsl:otherwise>
+                        <i18n:text>Unpublished</i18n:text>
+                      </xsl:otherwise>
+                    </xsl:choose>
                     <xsl:text>.&#160;</xsl:text>
                   </p>
                 </div>
