@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Аполлонии, дочери [---]сиха, жены Неополиса.</title>
+             <title xml:lang="ru">Стела Аполлонии, дочери [---]сиха, жены Неополиса</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,14 +24,14 @@
                      <idno>3641</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                      <idno>3641</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                   <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,16 +39,16 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en">Stele</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m24">Песчаник.</material>
-                           <material xml:lang="en">Sandstone</material>
+                           <material xml:lang="en">Sandstone.</material>
                            <p xml:lang="ru">Верхняя часть стелы. Украшена фронтоном и акротериями (верхний левый угол обломан). 
                               На лицевой стороне рельефные розетки, над которыми вырезана двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">45</height>
-                              <width unit="cm">33</width>
-                              <depth unit="cm">14</depth>
+                              <height unit="cm">45,0</height>
+                              <width unit="cm">33,0</width>
+                              <depth unit="cm">14,0</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                      <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en">Tauric Chersonesos</seg>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="0201" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
