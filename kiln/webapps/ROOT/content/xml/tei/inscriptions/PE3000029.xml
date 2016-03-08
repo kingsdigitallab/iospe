@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Малаки, жены Артемидора</title>
+             <title xml:lang="ru">Стела Малаки</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>46/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>46/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -73,12 +71,12 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
-                        <seg xml:lang="ru">Кон. IV – начало III в. до н.э.</seg>
+                        <seg xml:lang="ru">Кон. IV – нач. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - early III centuries B.C.</seg>
                      </origDate>
                   </origin>
@@ -156,9 +154,9 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	В этой и в нескольких других надписях (см. № neph 140; 142; 156; ipe520; ср. № neph162) не указан патронимик замужней женщины. См. комментарий к № neph140.</p>
-            <p>	По поводу происхождения и ударения женского ЛИ Μαλάκα ср. Bechtel, HPN 489 (Μαλθάκα - «mit zarter Haut») и LGPN IV. Происходящие от того же корня мужские антропонимы Μάλακος (LGPN IV) и Μαλάκων (LGPN V.A; Ameling 1994, s.v.) известны в Херсонесе и его метрополии Гераклее Понтийской.  </p>
-            <p>	Вполне вероятно, что супруг Малаки Артемидор идентичен Артемидору, сыну Дaмaтрия (№ neph157), на что указывает сходство обеих стел и палеографии надписей (ср. НЭПХ II, с. 161; Perlman 2011, 390). Об атрибуируемых «мастерской Даматрия» стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл.</p>
+            <p>В этой и в нескольких других надписях (см. № neph 140; 142; 156; ipe520; ср. № neph162) не указан патронимик замужней женщины. См. комментарий к № neph140.</p>
+            <p>По поводу происхождения и ударения женского ЛИ Μαλάκα ср. Bechtel, HPN 489 (Μαλθάκα - «mit zarter Haut») и LGPN IV. Происходящие от того же корня мужские антропонимы Μάλακος (LGPN IV) и Μαλάκων (LGPN V.A; Ameling 1994, s.v.) известны в Херсонесе и его метрополии Гераклее Понтийской.</p>
+            <p>Вполне вероятно, что супруг Малаки Артемидор идентичен Артемидору, сыну Дaмaтрия (№ neph157), на что указывает сходство обеих стел и палеографии надписей (ср. НЭПХ II, с. 161; Perlman 2011, 390). Об атрибуируемых «мастерской Даматрия» стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

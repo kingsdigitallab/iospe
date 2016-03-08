@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Гaдеи, дочери Даматрия, жены Атота</title>
+             <title xml:lang="ru">Стела Гaдеи</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>34/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34/36504</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -43,7 +41,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом с шестью антефиксами. 
                               На лицевой и на левой боковой гранях сохранились рельефные розетки. 
                               Над лицевыми розетками тонкими буквами вырезана двухстрочная надпись.</p>
@@ -73,12 +71,12 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
-                        <seg xml:lang="ru">Кон. IV – начало III в. до н.э.</seg>
+                        <seg xml:lang="ru">Кон. IV – нач. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - early III centuries B.C.</seg>
                      </origDate>
                   </origin>
@@ -140,7 +138,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>Ἁδεῖα </name><persName type="attested"><name>Δαματρίου,</name></persName> 
-               		<lb n="2"/><persName type="attested"><name>Ἀτώτα</name></persName> <w>γυνά</w></persName>.
+               		<lb n="2"/><persName type="attested"><name>Ἀτώτα</name></persName> <w>γυνά</w></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -155,8 +153,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Единственный пример данного женского ЛИ в Херсонесе. В форме Ἡδεῖα известно в Ольвии и на Боспоре (LGPN IV). Об антропониме Ἀτώτας (Ἀτώτης), вероятно, пафлагонского происхождения, засвидетельствованом, в частности, на Боспоре (LGPN IV), см. Robert 1963, 528 слл; ср. Zgusta 1955, 596; Stolba 1996, 442.   </p>
-            <p>	Высказывалось предположение (НЭПХ II, с. 158, прим. 72), что отец умершей и Даматрий, сын Эванфа в надписи № neph155 (также обнаруженной в башне XVII) одно и то же лицо. Датировка надписей не исключает такой возможности, однако дополнительные аргументы в пользу предложенного отождествления отсутствуют.</p>
+            <p>Единственный пример данного женского ЛИ в Херсонесе. В форме Ἡδεῖα известно в Ольвии и на Боспоре (LGPN IV). Об антропониме Ἀτώτας (Ἀτώτης), вероятно, пафлагонского происхождения, засвидетельствованом, в частности, на Боспоре (LGPN IV), см. Robert 1963, 528 слл; ср. Zgusta 1955, 596; Stolba 1996, 442.</p>
+            <p>Высказывалось предположение (НЭПХ II, с. 158, прим. 72), что отец умершей и Даматрий, сын Эванфа в надписи № neph155 (также обнаруженной в башне XVII) одно и то же лицо. Датировка надписей не исключает такой возможности, однако дополнительные аргументы в пользу предложенного отождествления отсутствуют.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Даматрия, сына Эванфа</title>
+             <title xml:lang="ru">Стела Даматрия</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>42/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>42/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -41,7 +39,7 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en"/>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела, украшенная карнизом (сбит при вторичном использовании). Сохранилась верхняя часть. 
@@ -72,12 +70,12 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
-                        <seg xml:lang="ru">Кон. IV – начало III в. до н.э.</seg>
+                        <seg xml:lang="ru">Кон. IV – нач. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - early III centuries B.C.</seg>
                      </origDate>
                   </origin>
@@ -139,7 +137,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>Δαμάτριος </name>
-               		<lb n="2"/><persName type="attested"><name>Εὐάνθεος</name></persName></persName>.
+               		<lb n="2"/><persName type="attested"><name>Εὐάνθεος</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -154,8 +152,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Весьма вероятно, что изготовленные в той же мастерской надгробия Коттихи (№ neph156) и Артемидора (neph157) принадлежат жене и сыну упомянутого в этой надписи Даматрия (подробнее см. Perlman 2011, 390). Об атрибуируемых этой мастерской («the Damatrios workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл. </p>
-            <p>	Теофорное личное имя Δημήτριος в дорийской огласовке многократно встречается в Херсонесе (форма койне Δημήτριος засвидетельствована дважды на памятниках, херсонесское происхождение которых вызывает сомнения; ср. LGPN IV). ЛИ имя Εὐάνθης в Херсонесе больше не встречается.</p>
+            <p>Весьма вероятно, что изготовленные в той же мастерской надгробия Коттихи (№ neph156) и Артемидора (neph157) принадлежат жене и сыну упомянутого в этой надписи Даматрия (подробнее см. Perlman 2011, 390). Об атрибуируемых этой мастерской («the Damatrios workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл.</p>
+            <p>Теофорное личное имя Δημήτριος в дорийской огласовке многократно встречается в Херсонесе (форма койне Δημήτριος засвидетельствована дважды на памятниках, херсонесское происхождение которых вызывает сомнения; ср. LGPN IV). ЛИ имя Εὐάνθης в Херсонесе больше не встречается.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

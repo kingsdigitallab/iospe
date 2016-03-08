@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -21,26 +19,26 @@
             <msDesc>
                <msIdentifier>
                   <country/>
-                  <altIdentifier xml:lang="ru" n="2">
-                     <repository>НЗХТ</repository>
-                     <idno>131/36847</idno>
-                  </altIdentifier>
-                  <altIdentifier xml:lang="en" n="2">
-                     <repository/>
-                     <idno/>
-                  </altIdentifier>
                   <altIdentifier xml:lang="ru" n="1">
                      <repository>НЗХТ</repository>
                      <idno>127/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en" n="1">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>127/36847</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="ru" n="2">
+                     <repository>НЗХТ</repository>
+                     <idno>131/36847</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="2">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>131/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -49,22 +47,22 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon36" cert="low">Архитрав (?)</objectType>
-                           <objectType xml:lang="en">Architrave.</objectType>
+                           <objectType xml:lang="en">Architrave (?)</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Два фрагмента архитрава (?), один из которых расколот на две части. 
                               На обоих фрагментах сохранился верхний край с карнизом, окрашенным в красный цвет. Под карнизом частично сохранились две надписи. 
                               Буквы обведены красной краской.</p>
                            <p xml:lang="en"/>
-                           <dimensions n="2">
-                              <height unit="cm">24,0</height>
-                              <width unit="cm">34,0</width>
-                              <depth unit="cm">9,5</depth>
-                           </dimensions>
                            <dimensions n="1">
                               <height unit="cm">20,5</height>
                               <width unit="cm">37,0</width>
                               <depth unit="cm">21,0</depth>
+                           </dimensions>
+                           <dimensions n="2">
+                              <height unit="cm">24,0</height>
+                              <width unit="cm">34,0</width>
+                              <depth unit="cm">9,5</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -86,28 +84,15 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
-                        <seg xml:lang="ru">Кон. IV – начало III в. до н.э.</seg>
+                        <seg xml:lang="ru">Кон. IV – нач. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - early III centuries B.C.</seg>
                      </origDate>
                   </origin>
-                  <provenance type="found" n="2">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найден в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII оборонительных стен (башня Зенона). 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
-                        <rs type="context"/>
-                     </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevstopol (Chersonesos).</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
-                     </seg>
-                  </provenance>
                   <provenance type="found" n="1">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
@@ -121,11 +106,24 @@
                         <rs type="context"/>
                      </seg>
                   </provenance>
-                  <provenance type="observed" n="2">
+                  <provenance type="found" n="2">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найден в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII оборонительных стен (башня Зенона). 
+                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevstopol (Chersonesos).</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed" n="1">
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  <provenance type="observed" n="1">
+                  <provenance type="observed" n="2">
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
@@ -169,7 +167,7 @@
             <div type="textpart" n="a">
                <ab>	
                   <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><seg part="I"><unclear>Δ</unclear>αμ</seg></name>
-                  <lb n="2"/><persName type="attested"><name><supplied reason="lost">Ἡ</supplied>ρογ<unclear>ε</unclear><supplied reason="lost">ίτου</supplied></name></persName></persName>.
+                  <lb n="2"/><persName type="attested"><name><supplied reason="lost">Ἡ</supplied>ρογ<unclear>ε</unclear><supplied reason="lost">ίτου</supplied></name></persName></persName>
                </ab>
             </div>
             <div type="textpart" n="b">
@@ -177,7 +175,7 @@
                   <lb n="1"/><persName type="attested"><name>Ματρώ</name>
                   <lb n="2"/><persName type="attested"><name>Μένω<supplied reason="lost">νος</supplied></name></persName>, 
                   <gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><seg part="I"><supplied reason="lost">Δαμ</supplied></seg></name></persName>
-                  <lb n="3"/><w><supplied reason="lost">γ</supplied>υν<supplied reason="lost">ά</supplied></w></persName>.
+                  <lb n="3"/><w><supplied reason="lost">γ</supplied>υν<supplied reason="lost">ά</supplied></w></persName>
                </ab>
             </div>
          </div>
@@ -218,9 +216,9 @@
                <p/>
             </div>
             <div type="textpart" n="2">
-               <p>	По предположению Соломоник, в эпитафии упоминалась супружеская пара (ср. № neph174, neph175, ipe708).</p>
-               <p>	Восстанавливаемое в a, стк. 2 ЛИ Ἡρόγειτος известно в Херсонесе (LGPN IV) и является характерным для ономастики Мегар и мегарских колоний (Robert 1959, 232). </p>
-               <p>	В надписи b, стк. 1 с наибольшей вероятностью восстанавливается женское ЛИ Ματρώ (или Ματρώι). Оно больше не встречается в Херсонесе, однако другие теофорные имена группы Μητρο- здесь неоднократно засвидетельствованы (LGPN IV). В начале стк. 2 следует принять предложенное Соломоник восстановление патронимика Μένω[νος] (антропоним в Херсонесе больше не известен). Perlman 2011, 454 восстанавливает [Παρ]μένων[ος], однако эта редкая форма gen. sg. не встречается в Херсонесе в отличие от регулярного Παρμένοντος (ср. № ipe344; ipe481; ipe711). Кроме того, как показывает расположение букв в обеих надписях, все строки скорее всего были выравнены по левому краю.</p>
+               <p>По предположению Соломоник, в эпитафии упоминалась супружеская пара (ср. № neph174, neph175, ipe708).</p>
+               <p>Восстанавливаемое в a, стк. 2 ЛИ Ἡρόγειτος известно в Херсонесе (LGPN IV) и является характерным для ономастики Мегар и мегарских колоний (Robert 1959, 232).</p>
+               <p>В надписи b, стк. 1 с наибольшей вероятностью восстанавливается женское ЛИ Ματρώ (или Ματρώι). Оно больше не встречается в Херсонесе, однако другие теофорные имена группы Μητρο- здесь неоднократно засвидетельствованы (LGPN IV). В начале стк. 2 следует принять предложенное Соломоник восстановление патронимика Μένω[νος] (антропоним в Херсонесе больше не известен). Perlman 2011, 454 восстанавливает [Παρ]μένων[ος], однако эта редкая форма gen. sg. не встречается в Херсонесе в отличие от регулярного Παρμένοντος (ср. № ipe344; ipe481; ipe711). Кроме того, как показывает расположение букв в обеих надписях, все строки скорее всего были выравнены по левому краю.</p>
             </div>
          </div>
          <div type="commentary" xml:lang="en">

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Артемидора, сына Даматрия</title>
+             <title xml:lang="ru">Стела Артемидора</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>80/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>80/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -72,12 +70,12 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
-                        <seg xml:lang="ru">Кон. IV – начало III в. до н.э.</seg>
+                        <seg xml:lang="ru">Кон. IV – нач. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - early III centuries B.C.</seg>
                      </origDate>
                   </origin>
@@ -140,7 +138,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="1"/><persName type="attested"><name><supplied reason="lost">Ἀρτε</supplied>μίδωρος</name>
-               	<lb n="2"/><persName type="attested"><name><supplied reason="lost">Δα</supplied>ματρίου</name></persName></persName>.
+               	<lb n="2"/><persName type="attested"><name><supplied reason="lost">Δα</supplied>ματρίου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -158,7 +156,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>По наблюдению Posamentir 2011, 46, в средней части стелы имелось рельефное изображение меча. </p>
+            <p>По наблюдению Posamentir 2011, 46, в средней части стелы имелось рельефное изображение меча.</p>
             <p>Весьма вероятно, что изготовленные в той же мастерской надгробия Даматрия (№ neph155) и Коттихи (№ neph156, найдено в том же самом ряду кладки башни XVII, 
                через один блок от стелы Артемидора) принадлежат родителям упомянутого в этой надписи Артемидора (НЭПХ II, с. 160; Perlman 2011, 390). 
                Об атрибуируемых этой мастерской («the Damatrios workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл. 

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>4494</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4494</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -40,8 +38,8 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                        <objectType xml:lang="ru" ref="monument-search.xml#mon36" cert="low">Архитрав (?).</objectType>   
-                           <objectType xml:lang="en"/>
+                        <objectType xml:lang="ru" ref="monument-search.xml#mon36" cert="low">Архитрав (?)</objectType>   
+                           <objectType xml:lang="en">Architrave (?)</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Незначительно поврежден левый край плиты. На тыльной стороне следы вторичного использования. 
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
@@ -137,19 +135,19 @@
             <div type="textpart" n="a">
                <ab>
                   <lb n="1"/><persName type="attested"><name><supplied reason="lost">Δ</supplied><unclear>α</unclear>μάτρι<supplied reason="lost">ο</supplied>ς</name>
-                  <lb n="2"/><persName type="attested"><name><supplied reason="lost">Στ</supplied><unclear>ε</unclear>φάνου</name></persName></persName>.
+                  <lb n="2"/><persName type="attested"><name><supplied reason="lost">Στ</supplied><unclear>ε</unclear>φάνου</name></persName></persName>
                </ab>
             </div>
             <div type="textpart" n="b">
                <ab>
                   <lb n="1"/><persName type="attested"><name>Θεαγενὶς</name><persName type="attested"><name>Διονυσίου</name></persName> ,
-                  <lb n="2"/><persName type="attested"><name>Δαματρίου</name></persName><w>γυνά</w></persName>.
+                  <lb n="2"/><persName type="attested"><name>Δαματρίου</name></persName><w>γυνά</w></persName>
                </ab>
             </div>
             <div type="textpart" n="c">
                <ab>
                   <lb n="1"/><persName type="attested"><name>Στέφανος</name> 
-                  <lb n="2"/><persName type="attested"><name>Δαματρίου</name></persName></persName>.
+                  <lb n="2"/><persName type="attested"><name>Δαματρίου</name></persName></persName>
                </ab>
             </div>
          </div>
@@ -194,7 +192,7 @@
                <p/>
             </div>
             <div type="textpart" n="3">
-               <p>	Все имена, фигурирующие в этой семейной эпитафии, носят общегреческий характер. 
+               <p>Все имена, фигурирующие в этой семейной эпитафии, носят общегреческий характер. 
                   Среди них лишь женское ЛИ Θεαγενίς засвидетельствовано в Херсонесе только в этой надписи.</p>
             </div>
          </div>
