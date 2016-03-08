@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Далиса, сына Клита</title>
+             <title xml:lang="ru">Стела Далиса</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,12 +24,12 @@
                      <idno>44/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>44/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -48,8 +46,8 @@
                               Под карнизом вырезана и обведена красной краской двухстрочная надпись. Под надписью и на боковых сторонах рельефные розетки.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <height unit="cm">135</height>
-                              <width unit="cm">34</width>
+                              <height unit="cm">135,0</height>
+                              <width unit="cm">34,0</width>
                               <depth unit="cm">17,5</depth>
                            </dimensions>
                         </support>
@@ -65,15 +63,15 @@
                      <handNote>
                         <seg xml:lang="ru">Ε с короткой средней горизонталью, немного изогнутые линии букв, утолщения и черточки на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">2</height>
+                        <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0251" evidence="Палеография">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
@@ -139,7 +137,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>Δᾶλις </name>
-               		<lb n="2"/><persName type="attested"><name>Κλείτου</name></persName></persName>.
+               		<lb n="2"/><persName type="attested"><name>Κλείτου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -157,7 +155,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Δᾶλις - редкое греческое теофорное имя, связанное с эпиклезой Аполлона Δήλιος (морфологическая модификация по типу Πῦθις; 
+            <p>Δᾶλις - редкое греческое теофорное имя, связанное с эпиклезой Аполлона Δήλιος (морфологическая модификация по типу Πῦθις; 
                см. Bechtel, HPN 122 и Masson 1988, 174, с примерами; ср. Stolba 1996, 448). Следует обратить внимание на дорийский вокализм (ср. также Δαλι[---] в № neph173). 
                Имя того же корня засвидетельствовано в эллинистическом Херсонесе также в ионийской форме Δήλιος (LGPN IV). 
                Ранее предлагалась интерпретация этого ЛИ как фракийского (НЭПХ II). Личное имя Κλεῖτος, деминутив группы двухосновных имен на Κλειτο- (Bechtel, HPN 251), 
