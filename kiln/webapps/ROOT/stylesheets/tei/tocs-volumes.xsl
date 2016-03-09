@@ -17,7 +17,7 @@
             <xsl:for-each select="//doc">
                 <xsl:sort select="int[@name='sortable-id']" order="ascending"/>
                 <dt>
-                    <a href="/{str[@name='file']}.html"><xsl:value-of select="str[@name='tei-id']"/></a> <xsl:choose>
+                    <a href="/{str[@name='inscription']}.html"><xsl:value-of select="str[@name='tei-id']"/></a> <xsl:choose>
                         <xsl:when
                             test="translate(normalize-space(str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
                             <xsl:text>[</xsl:text>
