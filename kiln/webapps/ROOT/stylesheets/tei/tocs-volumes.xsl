@@ -26,7 +26,6 @@
                         </xsl:when>
                         <xsl:otherwise>
                             <xsl:value-of select="str[@name=concat('inscription-title-', $lang)]"/>
-                            <xsl:text></xsl:text>
                         </xsl:otherwise>
                     </xsl:choose>
                 </dt>
