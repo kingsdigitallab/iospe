@@ -121,9 +121,6 @@
     <tei:name>IOSPE I<kiln:sup>2</kiln:sup></tei:name>
   </xsl:template>
   
-  <xsl:template match="tei:bibl[@xml:id='LGPN']" mode="parse-name-year">
-    <tei:name>LGPN</tei:name>
-  </xsl:template>
 
   <xsl:template match="kiln:*">
     <xsl:element name="{local-name()}">
