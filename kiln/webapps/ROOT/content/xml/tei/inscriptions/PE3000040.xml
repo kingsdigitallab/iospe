@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Эвтина, сына [---]</title>
+             <title xml:lang="ru">Стела Эвтина</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>19/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>19/36504</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -43,7 +41,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Верхняя часть стелы с карнизом (стесан) без антефиксов. Tыльная сторона заглажена. 
                               Лицевая и боковые стороны украшены рельефными розетками (частично повреждены). 
                               На лицевой стороне следы краски, возможно, изображения посоха. 
@@ -74,9 +72,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография">
                         <seg xml:lang="ru">III в. до н.э.</seg>
@@ -147,7 +145,7 @@
          <div type="apparatus">
             <listApp>
                <app loc="1"><rdg source="bib:НЭПХ"/></app>
-               <app loc="2"><rdg source="bib:НЭПХ">[Ἑσ]τιαίο[υ] <note>не исключено восстановление [Ἱσ]τιαί[ου].</note></rdg></app>
+               <app loc="2"><rdg source="bib:НЭПХ">[Ἑσ]τιαίο[υ]</rdg></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -163,6 +161,7 @@
                Датировка обеих надписей и их вероятное происхождение с одного участка некрополя не противоречат этому предположению. 
                Восстанавливаемое в НЭПХ в качестве патронимика ЛИ Ἑστιαῖος, равно как и Ἱστιαῖος, в Херсонесе не встречаются, но известны в Гераклее Понтийской (LGPN VA). 
                Среди херсонесских ЛИ фигурируют Ἑστιεῖος и Ἱστιεῖος (LGPN IV).</p>
+            <p>2. Не исключено восстановление [Ἱσ]τιαί[ου].</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела врача Дионисия, сына Пантагнота</title>
+             <title xml:lang="ru">Стела врача Дионисия</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>24/36764</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>24/36764</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -73,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0251" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">Кон. IV - 1-я пол. III в. до н.э.</seg>
@@ -125,7 +123,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl> <!--Соломоник, Антонова 1974--><ptr target="bib:b0507"/>, <citedRange>100</citedRange></bibl>
-               <bibl><!--Hiller 1985--> , <citedRange>417 </citedRange>(<!--SEG--><ptr target="SEG"/> <citedRange>36, 696</citedRange>)</bibl>
+               <bibl><!--Hiller 1985--> <ptr target="bib:b0759"/>, <citedRange>417</citedRange></bibl> <bibl> (<!--SEG--><ptr target="SEG"/> <citedRange>36, 696</citedRange>)</bibl>
                <bibl><!--Samama 2003--><ptr target="bib:b0442"/>, 200, № <citedRange>102</citedRange></bibl>
                <bibl><!--Perlman 2011--> <ptr target="bib:b0437"/>, 442, № <citedRange>52</citedRange></bibl>
             </listBibl>
@@ -133,13 +131,13 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/> , 60, № 52+52a</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 60, № 52+52a</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>Διονύσιος</name>
-               		<lb n="2"/><persName type="attested"><name>Πανταγνώτου</name></persName></persName>.
+               		<lb n="2"/><persName type="attested"><name>Πανταγνώτου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -154,7 +152,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Изображение набора медицинских инструментов означает, что надгробие принадлежало врачу. 
+            <p>Изображение набора медицинских инструментов означает, что надгробие принадлежало врачу. 
                Фрагмент из НЗХТ (инв. №: 24/36764) согласно предположению Posamentir 2011, 60, № 52а может являться нижней частью этой стелы. 
                На нем сохранились следы изображения посоха. В куртине 20 было обнаружено еще одно надгробие с упоминанием врача, 
                датирующееся приблизительно тем же временем (№ solant74/01; oтносительно возможных связей с этой надписью ср. Perlman 2011, 408). 

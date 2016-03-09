@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Эвтены, дочери Феотела, жены Госона</title>
+             <title xml:lang="ru">Стела Эвтены</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>3645 (в настоящее время камень считается утерянным)</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3645</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -70,9 +68,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0251" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">Кон. IV – 1-я пол. III в. до н.э.</seg>
@@ -135,8 +133,8 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><persName type="attested"><name><unclear>Εὐ</unclear>θήνα</name><persName type="attested"><name>Θεοτέλειος</name></persName>, 
-               		<lb n="2"/><persName type="attested"><name>Γόσωνος</name></persName><w>γυνά</w></persName>.
+               		<lb n="1"/><persName type="attested"><name><unclear>Εὐ</unclear>θήνα</name> <persName type="attested"><name>Θεοτέλειος</name></persName>, 
+               		<lb n="2"/><persName type="attested"><name>Γόσωνος</name></persName> <w>γυνά</w></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -151,9 +149,9 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	ЛИ [Εὐ]θήνα и Θεοτέλης встречаются в Херсoнесе только в этой надписи. Относительно характерного для херсонесских надписей эллинистического 
+            <p>ЛИ [Εὐ]θήνα и Θεοτέλης встречаются в Херсoнесе только в этой надписи. Относительно характерного для херсонесских надписей эллинистического 
                времени написания ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с примерами); ср. Thumb-Kieckers 137, § 132. </p>
-            <p>	Мужское имя Γόσων встречается еще раз в надписи эллинистического времени № neph028 (за пределами Херсонеса не засвидетельствовано; 
+            <p>Мужское имя Γόσων встречается еще раз в надписи эллинистического времени № neph028 (за пределами Херсонеса не засвидетельствовано; 
                ср. также женское имя Γόσα в № Lat/iak65). Не исключено, что речь идет об одном и том же лице. 
                Высказывались предположения об иранском (Zgusta 1955, § 96) и, что более вероятно, греческом происхождении имени (вариант ЛИ Κόσων с озвончением, 
                Stolba 1996, 446 сл.; ср. Zgusta 1955, § 131).</p>

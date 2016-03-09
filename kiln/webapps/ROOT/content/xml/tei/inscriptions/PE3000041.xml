@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Эвия, сына Феофана</title>
+             <title xml:lang="ru">Стела Эвия</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>40/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>40/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -43,7 +41,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limstone</material>
+                           <material xml:lang="en">Limstone.</material>
                            <p xml:lang="ru">Верхняя часть стелы с карнизом (спереди поврежден). Тыльная сторона заглажена. 
                               Под карнизом вырезана по предварительной разметке и обведена красной и синей краской двухстрочная надпись.</p>
                            <p xml:lang="en"/>
@@ -63,7 +61,7 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">поперечная линия Α чуть изогнута, Ν с немного укороченной правой вертикалью, широко расходящиеся наклонные линии Υ, 
+                        <seg xml:lang="ru">Поперечная линия Α чуть изогнута, Ν с немного укороченной правой вертикалью, широко расходящиеся наклонные линии Υ, 
                            слабые утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,2</height>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0251" evidence="Палеография">
                         <seg xml:lang="ru">Кон. IV – 1-я пол. III в. до н.э.</seg>
@@ -153,7 +151,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Согласно Posamentir 2011, 53 к этой стеле относится фрагмент инв. № 53/36847, представляющий ее нижнюю часть. 
+            <p>Согласно Posamentir 2011, 53 к этой стеле относится фрагмент инв. № 53/36847, представляющий ее нижнюю часть. 
                Теофорное личное имя Εὔιος, возникшее из эпиклезы Диониса (ср. Bechtel, HPN, 531), в Херсонесе упомянуто только в этой надписи. 
                Оно хорошо засвидетельствовано на Боспоре в римское время (LGPN IV).
                Теофорное имя Θεοφάνης неоднократно встречается в эпиграфике Херсонеса (LGPN IV). В надписях эллинистического времени 

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Гермодора, сына Алкима</title>
+             <title xml:lang="ru">Стела Гермодора</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>7/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>7/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -74,9 +72,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0251" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">Кон. IV - 1-я пол. III в. до н.э.</seg>
@@ -148,7 +146,7 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <rdg source="bib:НЭПХ">‘Ηρμόδωρος <note>(очевидно, вследствие опечатки; ср. Виноградов 1975, 175).</note></rdg></app>
+                  <rdg source="bib:НЭПХ">‘Ηρμόδωρος</rdg></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -164,6 +162,7 @@
                Обращалось внимание на вероятность изготовления одним и тем же мастером данной стелы и стелы № neph160 (НЭПХ II, с.164). 
                Это обстоятельство, а также факт расположения этих двух стел в соседних рядах кладки башни XVII делает вероятной гипотезу, 
                что памятники происходили с одного и того же участка некрополя и могли принадлежать родственникам (ср. НЭПХ II, с.164; Perlman 2011, 391сл.).</p>
+            <p>1. Очевидно, вследствие опечатки; ср. Виноградов 1975, 175.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
