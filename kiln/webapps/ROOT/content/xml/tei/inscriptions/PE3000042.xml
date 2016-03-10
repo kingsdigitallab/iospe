@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>124/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>124/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -71,9 +69,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0268" evidence="Палеография">
                         <seg xml:lang="ru">Кон. IV – нач. III в. до н.э.</seg>
@@ -139,23 +137,21 @@
             <div type="textpart" n="a">
                <ab>
                   <lb n="1"/><persName type="attested"><name>Εὔκριτος</name>
-                  <lb n="2"/><persName type="attested"><name>Μενοίτα</name></persName></persName>.
+                  <lb n="2"/><persName type="attested"><name>Μενοίτα</name></persName></persName>
                </ab>
             </div>
             <div type="textpart" n="b">
                <ab>
                   <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><seg part="I">Να</seg></name>
-                  <lb n="2"/><w>γυνά</w></persName>.
+                  <lb n="2"/><w>γυνά</w></persName>
                </ab>
             </div>
          </div>
          <div type="apparatus">
             <div type="textpart" n="b">
                <listApp>
-                  <app><note>Надпись b нанесена правее надписи a на значительном расстоянии. </note></app>
                   <app loc="1-2">
-                     <rdg source="bib:b0504 bib:НЭПХ2">Νά[να (?) Εὐκρίτου] | γυνά
-                     <note>однако кроме имени мужа умершей женщины в стк. 1 мог быть указан ее патронимик.</note></rdg>
+                     <rdg source="bib:b0504 bib:НЭПХ2">Νά[να (?) Εὐκρίτου] | γυνά</rdg>
                   </app>
                </listApp>
             </div>
@@ -177,8 +173,10 @@
                <p/>
             </div>
             <div type="textpart" n="2">
-               <p>	По мнению Буйских 2008, 192, надпись была вырезана на венчающей части погребального перибола. Учитывая аналогию с № neph174 весьма вероятно предположение Соломоник, что упомянутые здесь Эвкрит и На[---] являлись супругами.  </p>
-               <p>	ЛИ Εὔκριτος засвидетельствовано в боспорской эпитафии херсонесита IV в. до н.э. (КБН 194). ЛИ Μενοίτας (ср. Bechtel HPN 308 и 346; Robert 1963, 226) в Херсонесе больше не встречается (следует отметить дорийскую форму gen. sg. патронимика). Вариант Μενοίτιος известен в Гераклее Понтийской (LGPN VA). О женском имени Νάνα, которое, возможно, следует восстанавливать в этой надписи, см. № neph041.</p>
+               <p>По мнению Буйских 2008, 192, надпись была вырезана на венчающей части погребального перибола. Учитывая аналогию с № neph174 весьма вероятно предположение Соломоник, что упомянутые здесь Эвкрит и На[---] являлись супругами. </p>
+               <p>ЛИ Εὔκριτος засвидетельствовано в боспорской эпитафии херсонесита IV в. до н.э. (КБН 194). ЛИ Μενοίτας (ср. Bechtel HPN 308 и 346; Robert 1963, 226) в Херсонесе больше не встречается (следует отметить дорийскую форму gen. sg. патронимика). Вариант Μενοίτιος известен в Гераклее Понтийской (LGPN VA). О женском имени Νάνα, которое, возможно, следует восстанавливать в этой надписи, см. № neph041.</p>
+               <p>Надпись b нанесена правее надписи a на значительном расстоянии. </p>
+               <p>1-2. Однако кроме имени мужа умершей женщины в стк. 1 мог быть указан ее патронимик.</p>
             </div>
          </div>
          <div type="commentary" xml:lang="en">
