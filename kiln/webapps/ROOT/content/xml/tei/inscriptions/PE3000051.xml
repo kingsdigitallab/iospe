@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Геротимы, дочери Героника</title>
+             <title xml:lang="ru">Стела Геротимы</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>26/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>26/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -41,7 +39,7 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
-                           <objectType xml:lang="en"/>
+                           <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Стела с карнизом. В верхней части по предварительной разметке тонкими линиями вырезана двухстрочная надпись.  
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0333" notAfter="-0251" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">Кон. IV в. – 1-я пол. III в. до н.э.</seg>
@@ -140,7 +138,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><persName type="attested"><name>῾Ηροτίμα</name>
-               		<lb n="2"/><persName type="attested"><name>῾Ηρονίκου</name></persName></persName>.
+               		<lb n="2"/><persName type="attested"><name>῾Ηρονίκου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -157,7 +155,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Оба личных имени относятся к группе теофорных имен с элементом Ἥρα. Имя Ἡροτίμα в Херсонесе более не встречается (ср., однако, параллельное мужское имя ῾Ηρότιμος (LGPN IV). Имя Ἡρόνικος неоднократно засвидетельствовано в Херсонесе эллинистического времени.    </p>
+            <p>Оба личных имени относятся к группе теофорных имен с элементом Ἥρα. Имя Ἡροτίμα в Херсонесе более не встречается (ср., однако, параллельное мужское имя ῾Ηρότιμος (LGPN IV). Имя Ἡρόνικος неоднократно засвидетельствовано в Херсонесе эллинистического времени.</p>
             <p>Высказывалось предположение (Perlman 2011, 391) о родственных связях Геротимы, дочери Героника данной надписи и Сотима, сына Герокая, надписи № neph164. Этого нельзя исключать, но одно лишь наличие однокоренных имен в обеих надписях не может считаться достаточным доказательством.</p>
          </div>
          <div type="commentary" xml:lang="en">
