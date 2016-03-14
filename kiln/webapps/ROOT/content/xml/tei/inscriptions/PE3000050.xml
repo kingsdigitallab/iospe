@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Герофила, сына Аполлая</title>
+             <title xml:lang="ru">Стела Герофила</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -26,13 +24,13 @@
                      <idno>64/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>64/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -73,13 +71,13 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0201" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
-                        <seg xml:lang="en">III century B.C&gt;</seg>
+                        <seg xml:lang="en">III century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -157,8 +155,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	На основании тождественности патронимика, общего элемента Ἡρο- в именах погребенных и схожести шрифта данной надписи и надписи № neph153 было высказано предположение (Соломоник 1969, 66), что упомянутый здесь Герофил, сын Аполлая, и Геродот, сын Аполлая, надписи № neph153 являются братьями. В пользу этого может свидетельствовать и вероятная принадлежность стел одной мастерской («круг мастерской Санниона» согласно Posamentir 2011, № 21 и 22; ср. Perlman 2011, 389). </p>
-            <p>	ЛИ Ἡρόδοτος встречается также как патронимик в надписи № neph169, также найденной в башне № XVII. Нельзя исключать, что речь идет об одном и том же лице (предложено Даниленко 1966, 172).</p>
+            <p>На основании тождественности патронимика, общего элемента Ἡρο- в именах погребенных и схожести шрифта данной надписи и надписи № neph153 было высказано предположение (Соломоник 1969, 66), что упомянутый здесь Герофил, сын Аполлая, и Геродот, сын Аполлая, надписи № neph153 являются братьями. В пользу этого может свидетельствовать и вероятная принадлежность стел одной мастерской («круг мастерской Санниона» согласно Posamentir 2011, № 21 и 22; ср. Perlman 2011, 389).</p>
+            <p>ЛИ Ἡρόδοτος встречается также как патронимик в надписи № neph169, также найденной в башне № XVII. Нельзя исключать, что речь идет об одном и том же лице (предложено Даниленко 1966, 172).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

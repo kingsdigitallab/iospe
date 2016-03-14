@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>119/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>119/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Tauric Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0251" evidence="Палеография">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
@@ -127,7 +125,7 @@
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 73, № <citedRange>39</citedRange></bibl>
                <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/><citedRange>173</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 452, <!--Arch-->. № <citedRange>1</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 452, <!--Arch-->№ <citedRange>1</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -144,10 +142,8 @@
          <div type="apparatus">
             <listApp>
                <app>
-                  <note>Соломоник 1969 (= НЭПХ II) рассматривает два варианта восстановления надписи:</note>
-                  <rdg>Εὐφρό<unclear>ν</unclear>[ιον] | Αὐτοφ[ῶντος e.g.] | Δάλι[ος <note>(vel</note> Δαλί[ωνος) γυνά]</rdg>
-                  <rdg>Εὐφρο<unclear>ν</unclear>[ης] <note>(vel</note> Εὐφρό<unclear>ν</unclear>[ιος] <note>vel</note> Εὐφρό<unclear>ν</unclear>[ιον]) | Αὐτοφ[ῶν e.g.] | Δάλι[ος] <note>(vel</note> Δαλί[ωνος])</rdg>
-                  <rdg><note>LGPN IV указывает на вариант восстановления Εὐφρоν[ίς]? в стк. 1, ошибочно приписывая его НЭПХ II (повторено Perlman со ссылкой на Соломоник 1969 и НЭПХ II)</note></rdg>
+                  <rdg source="bib:НЭПХ2" n="1">Εὐφρό<unclear>ν</unclear>[ιον] | Αὐτοφ[ῶντος e.g.] | Δάλι[ος <note>(vel</note> Δαλί[ωνος) γυνά]</rdg>
+                  <rdg source="bib:НЭПХ2" n="2">Εὐφρο<unclear>ν</unclear>[ης] <note>(vel</note> Εὐφρό<unclear>ν</unclear>[ιος] <note>vel</note> Εὐφρό<unclear>ν</unclear>[ιον]) | Αὐτοφ[ῶν e.g.] | Δάλι[ος] <note>(vel</note> Δαλί[ωνος])</rdg>
                </app>
             </listApp>
          </div>
@@ -158,6 +154,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
+            <p>Соломоник 1969 (= НЭПХ II) рассматривает два варианта восстановления надписи.</p>
+            <p>LGPN IV указывает на вариант восстановления Εὐφρоν[ίς]? в стк. 1, ошибочно приписывая его НЭПХ II (повторено Perlman со ссылкой на Соломоник 1969 и НЭПХ II)</p>
             <p>Согпасно предположению ed. pr. (см. критический аппарат) речь может идти о женском надгробии или детском надгробии (двух братьев или сестры и брата). 
                Имена  Εὐφρόνης и Εὐφρόνιος известны в Херсонесе (LGPN IV). ЛИ Αὐτοφῶν в Северном Причерноморье не засвидетельствовано. 
                Имя Δᾶλις фигурирует в надписи № neph167, также найденной при исследовании башни Зенона и датирующейся по палеографии тем же временем 
