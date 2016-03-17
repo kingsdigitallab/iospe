@@ -664,6 +664,9 @@
             src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/{1}/{2}/{3}.html"/>
           <map:parameter name="index" value="{1}"/>
@@ -781,6 +784,9 @@
             src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999"
           />
         </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
         <map:transform src="cocoon://_internal/template/indices.xsl">
           <map:parameter name="url" value="indices/findspot.html"/>
           <map:parameter name="index" value="findspot-ref"/>

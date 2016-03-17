@@ -136,7 +136,7 @@
 
 
               <dd>
-                <a href="/{str[@name='file']}.html">
+                <a href="/{str[@name='tei-id']}.html">
                   <xsl:value-of select="$formatted-tei-id"/>
 
                   <xsl:text> </xsl:text>

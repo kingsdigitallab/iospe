@@ -67,9 +67,8 @@
       <map:match pattern="5/**">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=5/{1}/locations.html"/>
-          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
-          <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=origin-ref:*&amp;fl=tei-id,sortable-id,file,origin-ref,origin-en,origDate-en,inscription-title-en,inscription-has-date&amp;rows=999"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/><map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:5&amp;fl=tei-id,sortable-id,file,origin-ref,origin-en,origDate-en,inscription-title-en,inscription-has-date&amp;rows=999"/>
         </map:aggregate>
         <!-- TESTING -->
         <!--<map:serialize type="xml"/>-->

@@ -255,17 +255,24 @@
 
 
   <xsl:template name="link2inscription">
-    <a class="link2inscription" href="/{str[@name='file']}{$kiln:url-lang-suffix}.html">
+    <a class="link2inscription" href="/{str[@name='tei-id']}{$kiln:url-lang-suffix}.html">
       <xsl:if test="str[@name = 'sup']">
         <xsl:text>[</xsl:text>
       </xsl:if>
       <xsl:if test="str[@name = 'cert']">
         <xsl:text>?</xsl:text>
       </xsl:if>
-      <xsl:call-template name="formatInscrNum">
+      <!-- PC 10 Mar 2016: currently only need to call formatInscrNum for the vol 5 files;
+           for all others we just show the PE num-->
+      <xsl:choose>
+        <xsl:when test="contains(str[@name = 'tei-id'], '.')">
+        <xsl:call-template name="formatInscrNum">
         <xsl:with-param name="num" select="str[@name = 'tei-id']"/>
         <xsl:with-param name="printCorpus" select="true()"/>
       </xsl:call-template>
+      </xsl:when>
+        <xsl:otherwise><xsl:value-of select="str[@name = 'tei-id']"/></xsl:otherwise>
+      </xsl:choose>
       <xsl:if test="arr[@name = 'divloc']">
         <xsl:for-each select="arr[@name = 'divloc']/str">
           <xsl:if test="not(preceding-sibling::str)">
@@ -334,7 +341,7 @@
 
     </xsl:variable>
 
-    <xsl:if test="str[@name = 'file'] != ''">
+    <xsl:if test="(str[@name = 'tei-id'] != '')">
       <tr class="index_row row">
         <th class="large-2">
           <xsl:choose>
@@ -414,7 +421,6 @@
         <td class="large-10">
           <ul class="inline-list">
             <xsl:for-each select="current-group()">
-              <xsl:sort select="number(substring-before(str[@name = 'tei-id'], '.'))"/>
               <xsl:sort select="number(int[@name = 'sortable-id'])"/>
               <li>
                 <xsl:call-template name="link2inscription"/>
