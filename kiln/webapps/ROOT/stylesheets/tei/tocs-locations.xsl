@@ -6,7 +6,6 @@
 
 
   <xsl:import href="inscription.xsl"/>
-  <xsl:param name="toc"/>
 
   <xsl:template match="/"/>
 
