@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,14 +24,14 @@
                      <idno>35264</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35264</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc18">Метрическая эпитафия.</seg>
-                     <seg xml:lang="en">Metrical epitaph</seg>
+                  <summary corresp="document-search.xml#doc18">
+                     <seg xml:lang="ru">Метрическая эпитафия.</seg>
+                     <seg xml:lang="en">Metrical Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,9 +39,9 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
-                           <objectType xml:lang="en">Panel</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
-                           <material xml:lang="en">Marble</material>
+                           <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Нижняя часть надгробия с фрагментом рельефа в прямоугольном углублении и пятистрочной надписью, 
                               вырезанной по предварительной разметке. Лицевая и боковые стороны плиты тщательно обработаны. 
                               На рельефе была изображена стоящая мужская фигура в длинной одежде. 
@@ -65,7 +63,7 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">удлиненные прпорции букв, слегка изогнутые линни отдельных букв, курсивные эпсилон, сигма, омега; 
+                        <seg xml:lang="ru">Удлиненные прпорции букв, слегка изогнутые линни отдельных букв, курсивные эпсилон, сигма, омега; 
                            ромбообразные омикрон и тета, слабое апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,0</height>
@@ -74,13 +72,13 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0168" notAfter="0300" evidence="Палеография" precision="low">
-                        <seg xml:lang="ru">конец II – III в. н.э.</seg>
-                        <seg xml:lang="en">late II - IIIrd centuries C.E.</seg>
+                        <seg xml:lang="ru">Кон. II – III в. н.э.</seg>
+                        <seg xml:lang="en">Late II - IIIrd centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -97,7 +95,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   
                </history>

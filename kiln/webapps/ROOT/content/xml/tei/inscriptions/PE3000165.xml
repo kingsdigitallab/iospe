@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -23,17 +21,17 @@
                   <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Неизвестен</repository>
-                     <idno>Неизвестен</idno>
+                     <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
+                     <repository>Unknown</repository>
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,9 +39,9 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
-                           <objectType xml:lang="en">Panel</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Прямоугольная плита с погрудным мужским изображением в рельефе. Сохранились остатки двух строк надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
@@ -64,15 +62,15 @@
                      <handNote>
                         <seg xml:lang="ru">Альфа с прямой перекладиной, сигма с горизонтальными верхней и нижней гастами.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">Неизвестна.</height>
+                        <height unit="cm"/>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес (?).</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="Характер_памятника палеография">
                         <seg xml:lang="ru">Римское время.</seg>
@@ -93,7 +91,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Неизвестно.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi. Камень считается утерянным после отправки в Москву в 1872 г.</seg>

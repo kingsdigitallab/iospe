@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -23,7 +21,7 @@
                   <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>До 1872 г. хранился в Херсонесе</repository>
-                     <idno>Неизвестен</idno>
+                     <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
@@ -31,9 +29,9 @@
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,14 +39,12 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon39">Нет данных.</objectType>
-                           <objectType xml:lang="en">Unknown</objectType>
+                           <objectType xml:lang="en">Unknown.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m14">Нет данных.</material>
-                           <material xml:lang="en">Unknown</material>
-                           <p xml:lang="ru">Нет данных.</p>
+                           <material xml:lang="en">Unknown.</material>
+                           <p xml:lang="ru"/>
                            <p xml:lang="en"/>
-                           <dimensions>
-                           <!--Нет данных.-->
-                           </dimensions>
+                           <dimensions/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
@@ -68,9 +64,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес (?).</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0151" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">Не ранее второй половины II в. н.э.</seg>
@@ -90,8 +86,8 @@
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Нет данных.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi. Камень считается утерянным после отправки в Москву в 1872 г.</seg>

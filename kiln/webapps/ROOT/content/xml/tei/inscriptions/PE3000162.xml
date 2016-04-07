@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,14 +24,14 @@
                      <idno>34996</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34996</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
-                     <seg xml:lang="en">Epitaph</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -41,9 +39,9 @@
                      <supportDesc>
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
-                           <objectType xml:lang="en">Panel</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
-                           <material xml:lang="en">Limestone</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Обломан со всех сторон. Лицевая сторона обработана грубо, повреждена сколами. 
                               На ней сохранились остатки двух строк надписи, вырезанной крупными буквами. Между строками проведена глубокая горизонтальная линия.</p>
                            <p xml:lang="en"/>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0200" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">I-II вв. н.э.</seg>
@@ -96,7 +94,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                </history>
             </msDesc>
