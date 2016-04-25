@@ -290,10 +290,25 @@
     <field name="lemma">
       <xsl:apply-templates mode="lemma"/>
     </field>
-    <!-- PC 17 Mar 2016: NB THE APPLY-TEMPLATES BELOW NEEDS LOOKING AT BECAUSE ORIGINALLY THE #current MODE WAS DOCUMENT BODY
-    WHICH WE NO LONGER HAVE APPLYING TO OTHER TEMPLATES, SO WE PROBABLY NEED TO BRING THINGS IN 'BY HAND'
-    HERE-->
-    <!--<xsl:apply-templates mode="#current"/>-->
+    <!-- PC 17 Mar 2016: NB IN THIS TEMPLATE IN PREVIOUS TEI-TO-SOLR-COMMON.XSL NEXT LINE WAS THIS:
+            <xsl:apply-templates mode="#current"/>
+    THE #current MODE WAS DOCUMENT BODY WHICH WE NO LONGER HAVE APPLYING TO OTHER TEMPLATES
+    HOWEVER THERE WERE ONLY A FEW OTHER TEMPLATES WHICH BOTH (1) MATCH CHILDREN OF tei:div[@type = 'edition']
+    AND (2) ARE mode="document-body" AND THESE WERE:
+      
+    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']"
+    mode="document-body"
+    
+    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']"
+    mode="document-body"
+    
+    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']"
+    mode="document-body"
+    
+    SO IN OTHER WORDS WE WOULD ACHIEVE THE SAME THING BY ADDING HERE:
+         <xsl:apply-templates mode="persnames_fields"/>
+    BUT I'M NOT GOING TO ADD THIS IN UNTIL I SEE A REASON FOR IT
+    -->
   </xsl:template>
   
   <xsl:template
