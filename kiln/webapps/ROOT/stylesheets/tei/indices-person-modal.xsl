@@ -134,7 +134,7 @@
       <ul class="inline-list">
         <xsl:for-each
           select="/aggregation/index//result/doc[arr[@name = 'persName-ref']/str[substring-after(text(), '#') = $id]]">
-          <xsl:sort select="str[@name = 'tei-id']"/>
+          <xsl:sort select="number(int[@name = 'sortable-id'])"/>
           <li>
             <xsl:call-template name="link2inscription"/>
           </li>

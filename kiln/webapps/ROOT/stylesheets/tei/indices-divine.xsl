@@ -126,7 +126,7 @@
                     '.',
                     str[@name = 'line'])">
 
-                  <xsl:sort select="str[@name = 'tei-id']"/>
+                  <xsl:sort select="number(int[@name = 'sortable-id'])"/>
                   <li>
                     <xsl:call-template name="link2inscription"/>
                   </li>
