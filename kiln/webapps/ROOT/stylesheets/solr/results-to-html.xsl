@@ -21,7 +21,12 @@
   <xsl:param name="query-string"/>
   <xsl:variable name="escaped-query-string">
     <xsl:value-of
-      select="replace(if($query-string = '') then 'start=0' else $query-string , ',', '%2C')"/>
+      select="
+        replace(if ($query-string = '') then
+          'start=0'
+        else
+          $query-string, ',', '%2C')"
+    />
   </xsl:variable>
   <xsl:variable name="default_search_query" select="'dt:inscription'"/>
 
@@ -85,7 +90,7 @@
 
   </xsl:template>
 
-  <xsl:template match="lst[@name='facet_fields']/lst[@name='not-after']"
+  <xsl:template match="lst[@name = 'facet_fields']/lst[@name = 'not-after']"
     mode="outside-search-results">
     <section>
       <h4>
@@ -113,7 +118,7 @@
     </section>
   </xsl:template>
 
-  <xsl:template match="lst[@name='facet_fields']" mode="search-results">
+  <xsl:template match="lst[@name = 'facet_fields']" mode="search-results">
     <xsl:if test="lst/int">
       <h3>Facets</h3>
 
@@ -151,16 +156,16 @@
     </section>
   </xsl:template>
 
-  <xsl:template match="lst[@name='facet_fields']/lst" mode="search-results">
+  <xsl:template match="lst[@name = 'facet_fields']/lst" mode="search-results">
     <xsl:choose>
-      <xsl:when test="./@name='not-after' or @name='not-before'"/>
+      <xsl:when test="./@name = 'not-after' or @name = 'not-before'"/>
       <xsl:otherwise>
         <xsl:call-template name="defaultFacet"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="lst[@name='facet_fields']/lst/@name" mode="search-results">
+  <xsl:template match="lst[@name = 'facet_fields']/lst/@name" mode="search-results">
     <xsl:choose>
       <xsl:when test="starts-with(., 'institution')">
         <i18n:text>repository</i18n:text>
@@ -203,16 +208,22 @@
   <xsl:template match="result/doc" mode="search-results">
 
     <xsl:variable name="id">
-      <xsl:number value="substring-before(str[@name = 'tei-id'],'.')" format="I"/>
-      <xsl:text>&#xa0;</xsl:text>
-      <xsl:value-of select="substring-after(str[@name = 'tei-id'],'.')" />
+      <xsl:choose>
+        <xsl:when test="starts-with(str[@name = 'tei-id'], '5.')">
+          <xsl:text>V&#xa0;</xsl:text>
+          <xsl:value-of select="substring-after(str[@name = 'tei-id'], '.')"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="str[@name = 'tei-id']"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
     <li>
       <a>
         <xsl:attribute name="href">
           <xsl:value-of select="$kiln:context-path"/>
           <xsl:text>/</xsl:text>
-          <xsl:value-of select="str[@name='tei-id']"/>
+          <xsl:value-of select="str[@name = 'tei-id']"/>
           <xsl:value-of select="$kiln:url-lang-suffix"/>
           <xsl:text>.html</xsl:text>
         </xsl:attribute>
@@ -230,11 +241,11 @@
           </xsl:otherwise>
         </xsl:choose>
         <xsl:text> </xsl:text>
-        <xsl:value-of select="str[@name=concat('origin-', $lang)]"/>
+        <xsl:value-of select="str[@name = concat('origin-', $lang)]"/>
         <xsl:text> </xsl:text>
-        <xsl:value-of select="arr[@name=concat('document-title-', $lang)]/str[1]"/>
+        <xsl:value-of select="arr[@name = concat('document-title-', $lang)]/str[1]"/>
         <xsl:text>, </xsl:text>
-        <xsl:value-of select="arr[@name=concat('origDate-', $lang)]/str[1]"/>
+        <xsl:value-of select="arr[@name = concat('origDate-', $lang)]/str[1]"/>
       </a>
     </li>
   </xsl:template>
@@ -365,7 +376,7 @@
     </div>
   </xsl:template>
 
-  <xsl:template match="*[@name='fq']" mode="search-results">
+  <xsl:template match="*[@name = 'fq']" mode="search-results">
     <xsl:choose>
       <xsl:when test="local-name(.) = 'str'">
         <xsl:call-template name="display-applied-facet"/>
@@ -427,7 +438,9 @@
                   </xsl:call-template>
                 </xsl:attribute>
                 <!-- Create a link to unapply the facet. -->
-                <i class="fa fa-times" ><xsl:text> </xsl:text></i>
+                <i class="fa fa-times">
+                  <xsl:text> </xsl:text>
+                </i>
               </a>
             </li>
           </ul>
@@ -448,13 +461,13 @@
 
     <xsl:text>start=</xsl:text>
     <xsl:choose>
-      <xsl:when test="not($start='none')">
+      <xsl:when test="not($start = 'none')">
         <xsl:value-of select="$start"/>
       </xsl:when>
       <xsl:when
-        test="count($context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']) = 1">
+        test="count($context/aggregation/response/lst[@name = 'responseHeader']/lst[@name = 'params']/str[@name = 'start']) = 1">
         <xsl:value-of
-          select="$context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/str[@name='start']"
+          select="$context/aggregation/response/lst[@name = 'responseHeader']/lst[@name = 'params']/str[@name = 'start']"
         />
       </xsl:when>
       <xsl:otherwise>
@@ -463,16 +476,16 @@
     </xsl:choose>
 
     <xsl:for-each
-      select="$context/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']">
+      select="$context/aggregation/response/lst[@name = 'responseHeader']/lst[@name = 'params']/*[@name = 'fq']">
       <xsl:choose>
         <xsl:when test="local-name(.) = 'str'">
-          <xsl:if test="not(@name=$r_q_name and text() = $r_q_value)">
+          <xsl:if test="not(@name = $r_q_name and text() = $r_q_value)">
             <xsl:call-template name="build_url_param_pair"/>
           </xsl:if>
         </xsl:when>
         <xsl:when test="local-name(.) = 'arr'">
           <xsl:for-each select="str">
-            <xsl:if test="not(parent::node()[@name=$r_q_name] and text() = $r_q_value)">
+            <xsl:if test="not(parent::node()[@name = $r_q_name] and text() = $r_q_value)">
               <xsl:call-template name="build_url_param_pair"/>
             </xsl:if>
           </xsl:for-each>
