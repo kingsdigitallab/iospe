@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -23,17 +21,17 @@
                   <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Национальный заповедник "Херсонес Таврический"</repository>
-                     <idno>неизвестен</idno>
+                     <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc5">Посвятительная надпись (?).</seg>
-                     <seg xml:lang="en">Dedicatory.</seg>
+                  <summary corresp="document-search.xml#doc5" cert="low">
+                     <seg xml:lang="ru">Посвятительная надпись (?).</seg>
+                     <seg xml:lang="en">Dedicatory ?.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -70,9 +68,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0151" notAfter="0233" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. II – нач. III в. н.э.</seg>
@@ -97,7 +95,7 @@
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">non vidi. В фондах НЗХТ камень обнаружить не удалось.</seg>
+                     <seg xml:lang="ru">Non vidi. В фондах НЗХТ камень обнаружить не удалось.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>

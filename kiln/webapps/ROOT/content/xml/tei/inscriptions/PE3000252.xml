@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,24 +24,24 @@
                      <idno>122/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>122/36504</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc1">
                      <seg xml:lang="ru">Строительная надпись.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Building inscription.</seg>
                   </summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Колонна.</objectType>
-                           <objectType xml:lang="en"/>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon22">Колонна.</objectType>
+                           <objectType xml:lang="en">Column.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
-                           <material xml:lang="en"/>
+                           <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Два соединяющихся фрагмента колонны, оббитой сверху и снизу. Вторично использована при строительстве христианской базилики. Сохранились остатки пяти строк надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions n="1">
@@ -73,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
                         <seg xml:lang="ru">2-я пол. II - 1-я пол. III в. н.э.</seg>
@@ -95,8 +93,8 @@
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   
                </history>
@@ -140,11 +138,11 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/>ἀγαθῇ τύχη· 
-               		<lb n="2"/>Μαρκιανὸς Γα
-               		<lb n="3" break="no"/>ί<supplied reason="lost">ο</supplied>υ Ἡρακλεώτης
-               		<lb n="4"/>φιλοτ<supplied reason="lost">τειμησάμενος</supplied> 
-               		<lb n="5"/>εἰς το <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="1"/><w>ἀγαθῇ</w> <w>τύχη</w> 
+               		<lb n="2"/><persName type="attested"><name>Μαρκιανὸς</name> <persName type="attested"><name>Γα
+               		<lb n="3" break="no"/>ί<supplied reason="lost">ο</supplied>υ</name></persName> <name>Ἡρακλεώτης</name></persName>
+               		<lb n="4"/><w>φιλοτ<supplied reason="lost">τειμησάμενος</supplied></w> 
+               		<lb n="5"/><w>εἰς</w> <w>το</w> <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="6"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
