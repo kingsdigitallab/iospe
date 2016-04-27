@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Фрагмент декрета римского времени</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.305</idno>
+            <idno type="filename">PE3000406</idno>
+            <idno type="PE">PE3000406</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>ОАМ</repository>
+                     <idno>50483</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Odessa Archaeological Museum</repository>
+                     <idno>50483</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc15">
+                     <seg xml:lang="ru">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки восьми строк надписи, вырезанной по предварительной разметке. 
+                              Лицевая поверхность обработана тщательно, тыльная сторона – суммарно.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">18,0</height>
+                              <width unit="cm">12,0</width>
+                              <depth unit="cm">6,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Верхняя и нижняя гасты эпсилон значительно выступают влево за вертикаль, слегка изогнутые наклонные гасты каппа и мю; 
+                           внутренние гасты мю касаются вертикалей почти посередине; широкая низкая омега с удлиненными горизонталями и с загнутыми внутрь 
+                           концами полукружия; знаки-разделители, апексы.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">1,5</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсонес.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена до 1884 г., возможно, в ходе археологических исследований ООИД.</rs>
+                        <rs type="context"></rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"></placeName>
+                        <rs type="circumstances"></rs>
+                        <rs type="context"></rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Одесса.</seg>
+                     <seg xml:lang="en">Odessa.</seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2016-04-14" who="Chris de Lisle">Encoded text</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.305">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>Латышев 1884, 26 (Latychew 1885, 285)</bibl>
+               <bibl>IOSPE I 190</bibl>
+               <bibl>Латышев 1907, 50</bibl>
+               <bibl>IOSPE I2 360</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                           <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w>μετ<supplied reason="lost">οχάν</supplied></w> 
+               <w><supplied reason="lost">τε</supplied></w> <w><supplied reason="explanation">πάντων</supplied></w> <w><supplied reason="explanation">ὧν</supplied></w> 
+               <w><supplied reason="explanation">καὶ</supplied></w> <w><supplied reason="explanation">τοῖς</supplied></w>
+               		<lb n="2"/><placeName type="ethnic"><name><supplied reason="lost">Χερσονα</supplied><unclear>σ</unclear>είτα<supplied reason="lost">ις</supplied></name></placeName> 
+               <w><supplied reason="lost">μίτεστι</supplied></w> <w><supplied reason="lost">τὸ</supplied></w> <w><supplied reason="lost">δὲ</supplied></w> 
+               <w><supplied reason="lost">ψάφισμα</supplied></w> <w><supplied reason="lost">τοῦτο</supplied></w>
+               		<lb n="3"/><w><supplied reason="lost">ἀναγραφ</supplied><unclear>ᾶ</unclear>μεν</w> 
+               <w><supplied reason="lost">λευκολίθου</supplied></w> <w><supplied reason="lost">στάλαι</supplied></w> <w><supplied reason="lost">καὶ</supplied></w> 
+               <w><supplied reason="lost">θέμεν</supplied></w> <w><supplied reason="lost">ἐν</supplied></w>
+               		<lb n="4"/><w><supplied reason="lost">τῶι</supplied></w> <w><supplied reason="lost">ἐπισ</supplied>αμοτά<supplied reason="lost">τωι</supplied></w> 
+               <w><supplied reason="lost">τᾶς</supplied></w> <w><supplied reason="lost">ἀκροπόλιος</supplied></w> <w><supplied reason="lost">τόπωι</supplied></w> 
+               <w><supplied reason="lost">ταῦτ’</supplied></w>
+               		<lb n="5"/><w><supplied reason="lost">ἔδοξε</supplied></w> <w><supplied reason="lost">βο</supplied><unclear>υ</unclear>λᾶι</w> 
+               <w>δά<supplied reason="lost">μωι</supplied></w> 
+               <w><supplied reason="lost">βασιλευούσας</supplied></w> <persName type="ruler"><name><supplied reason="lost">Παρθένου</supplied></name></persName>
+               		<lb n="6"/><w><supplied reason="lost">ἔτεος</supplied></w> <gap reason="lost" quantity="2" unit="character"/> <num value="4">δʹ</num> 
+               <w>ἱερέως</w> <w><supplied reason="lost">δὲ</supplied></w> <persName type="consul"><w><supplied reason="lost">δεῖνα</supplied></w></persName> 
+               <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">μηνὸς</supplied></w>
+               		<lb n="7"/><gap reason="lost" unit="character" quantity="5"/><w part="F">ου</w> <num value="24">κδʹ</num> 
+               <w>γρ<supplied reason="lost">αμματεύοντος</supplied></w> <persName type="attested"><name><supplied reason="lost">Τίτου</supplied></name> 
+                  <name><supplied reason="lost">Φλαου
+               		<lb n="8" break="no"/>ίου</supplied></name> <name><supplied reason="lost">Ἀγεπ</supplied>όλιος</name></persName> 
+               <w>υ<unclear>ἱ</unclear><supplied reason="lost">οῦ</supplied></w> <persName type="attested"><name><supplied reason="lost" cert="low">Φλαουίου</supplied></name> 
+                  <name><supplied reason="lost">Ἀρίστωνος</supplied></name></persName>  <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="9"/><gap reason="lost" extent="unknown" unit="line"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>IOSPE I2 360.</note></app>
+               <app><note>1, fin.: [καὶ τοῖς ἄλλοις] - Латышев 1907.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>[- - -] обладание [всеми (правами), которыми обладают] херсонеситы; записать [это постановление на белокаменной стеле и поставить на самом] видном [месте акрополя. Это решено] Советом и народом, [когда обязанности царя исполняла Дева, в году . . ]4, при жреце [- - - месяца [- - -] 24 (дня), при секретаре [Тите Флавии Агеполисе, сыне Флавия Аристона (?) - - -].</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p></p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p></p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p></p>
+         </div>
+      </body>
+   </text>
+</TEI>
