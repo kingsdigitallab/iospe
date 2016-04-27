@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,14 +24,14 @@
                      <idno>51/37005</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>51/37005</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc15">Декрет.</seg>
-                     <seg xml:lang="en">Decree</seg>
+                  <summary corresp="document-search.xml#doc15">
+                     <seg xml:lang="ru">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -64,7 +62,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с чертой, круглые буквы в высоту строки, пи с равными вертикалями и слегка выходящей за их пределы горизонталью, горизонатальные гасты сигма выступают за пересечение с наклонными, сильное апицирование.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с чертой, круглые буквы в высоту строки, пи с равными вертикалями и 
+                           слегка выходящей за их пределы горизонталью, горизонатальные гасты сигма выступают за пересечение с наклонными, сильное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1 (стк. 1 – 1,5 см).</height>
                      </handNote>
@@ -72,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0033" notAfter="0067" evidence="Палеография тип_прескрипта" precision="low">
                         <seg xml:lang="ru">Посл. треть I в. до н.э. – сер. I в. н.э.</seg>

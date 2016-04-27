@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -20,31 +18,32 @@
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-                  <country>Ukraine</country>
+                  <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Национальный заповедник "Херсонес Таврический"</repository>
                      <idno>35126</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35126</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc15">
                      <seg xml:lang="ru">Декрет.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор.</material>
-                           <material xml:lang="en"/>
-                           <p xml:lang="ru">Частично сохранился верхний край плиты, украшенной фронтоном (в тимпане – рельефный диск), с остатками одной строки надписи.</p>
+                           <objectType xml:lang="ru"  ref="monument-search.xml#mon1">Плита</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Частично сохранился верхний край плиты, украшенной фронтоном (в тимпане – рельефный диск), 
+                              с остатками одной строки надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">30,0</height>
@@ -62,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, Ню с вертикальными гастами одинаковой длины, небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, ню с вертикальными гастами одинаковой длины, 
+                           небольшие утолщения на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">1,7</height>
                      </handNote>
@@ -70,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="Палеография тип_прескрипта">
                         <seg xml:lang="ru">I – II в. н.э.</seg>
@@ -92,8 +92,8 @@
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Севастополь, Украина.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   
                </history>
@@ -119,7 +119,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl>IOSPE IV 183 (IOSPE I2 642)</bibl>
-               <bibl>– НЭПХ I 4</bibl>
+               <bibl>НЭПХ I 4</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>23619</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>23619</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc15">Декрет.</seg>
+                  <summary corresp="document-search.xml#doc15">
+                     <seg xml:lang="ru">Декрет.</seg>
                      <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
@@ -62,7 +60,7 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой перекладиной, иногда не замкнута вверху, дельта и лямбда иногда не замкнуты вверху, йота subscriptum, вертикали Ню одинаковой длины, 
+                        <seg xml:lang="ru">Альфа с прямой перекладиной, иногда не замкнута вверху, дельта и лямбда иногда не замкнуты вверху, йота subscriptum, вертикали ню одинаковой длины, 
                            мю с параллельными боковыми линиями, омикрон и тета меньше остальных букв, пи с короткой правой вертикалью и выступающей за края горизонталью, 
                            верхние и нижние линии сигма иногда чуть наклонены, иногда параллельны, овальная омега с сильно утолщенными боковыми горизонталями, 
                            крупные апексы на концах линий букв.</seg>
@@ -73,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0125" notAfter="-0101" evidence="Палеография_схожесть_шрифта_данной_надписи_с_№_ipe352 ipe353">
                         <seg xml:lang="ru">Последняя четверть II в. до н.э.</seg>

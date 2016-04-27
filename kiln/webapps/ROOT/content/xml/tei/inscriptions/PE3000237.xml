@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>3620</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3620</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc5">Посвятительная надпись.</seg>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
                      <seg xml:lang="en">Dedicatory.</seg>
                   </summary>
                </msContents>
@@ -63,8 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с точкой, вертикальные гасты Ню иногда имеют почти одинаковую длину, иногда правая вертикаль 
-                           Ню чуть укорочена, сигма с горизонтальными верхней и нижней гастами, омега почти того же размера, что и остальные буквы,
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с точкой, вертикальные гасты ню иногда имеют почти одинаковую длину, иногда правая вертикаль 
+                           ню чуть укорочена, сигма с горизонтальными верхней и нижней гастами, омега почти того же размера, что и остальные буквы,
                            I adscriptum, слегка изогнутые линии отдельных букв, небольшие утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,0</height>
@@ -73,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0233" notAfter="-0268" evidence="Палеография">
                         <seg xml:lang="ru">Кон. III – нач. II в. до н.э.</seg>
@@ -140,7 +138,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="1"/><placeName><name>Δήλιος</name> <name>Ἀπολλᾶ</name></placeName> 
-               		      <lb n="2"/><persName type="divine"><name>Παρθένωι</name></persName> 
+               		<lb n="2"/><persName type="divine"><name>Παρθένωι</name></persName> 
                		 <lb n="3"/><w>καθ’</w> <w>ἐνύπνιον</w>.
             </ab>
          </div>

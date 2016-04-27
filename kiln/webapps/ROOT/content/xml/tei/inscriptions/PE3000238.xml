@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>35039</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35039</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc5">Посвятительная надпись.</seg>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
                      <seg xml:lang="en">Dedicatory.</seg>
                   </summary>
                </msContents>
@@ -64,7 +62,7 @@
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Альфа с ломаной поперечной линией, правая наклонная гаста дельта продлена за пересечение с левой гастой, тета с точкой, вертикальные гасты 
-                           Ню имеют одинаковую длину, крупное омикрон, крупная овальная омега, I adscriptum, отдельные небольшие утолщения на концах линий букв,</seg>
+                           ню имеют одинаковую длину, крупное омикрон, крупная овальная омега, I adscriptum, отдельные небольшие утолщения на концах линий букв,</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,0</height>
                      </handNote>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0100" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">I в. н.э.</seg>

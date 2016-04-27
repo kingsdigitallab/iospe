@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>X.1897.83</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>State Hermitage</repository>
+                     <idno>X.1897.83</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc15">Декрет.</seg>
+                  <summary corresp="document-search.xml#doc15">
+                     <seg xml:lang="ru">Декрет.</seg>
                      <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
@@ -63,7 +61,7 @@
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Линии альфа, дельта, лямбда, мю, сигма немного изогнуты; альфа с изогнутой поперечной линией, средняя горизонталь эпсилон короче остальных, тета меньше размера строки,
-                           с поперечиной, касающейся окружности, наклонные каппа не укорочены, наклонные мю немного расходятся, правая вертикаль Ню чуть укорочена, кси из трех горизонталей, омикрон меньше размера строки, пи с укороченной правой вертикалью и поперечиной, не выходящей за боковые линии, верхняя и нижняя гасты сигма слегка расходятся, омега в виде маленького полукруга с примыкающими короткими горизонталями.</seg>
+                           с поперечиной, касающейся окружности, наклонные каппа не укорочены, наклонные мю немного расходятся, правая вертикаль ню чуть укорочена, кси из трех горизонталей, омикрон меньше размера строки, пи с укороченной правой вертикалью и поперечиной, не выходящей за боковые линии, верхняя и нижняя гасты сигма слегка расходятся, омега в виде маленького полукруга с примыкающими короткими горизонталями.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">0,7</height>
                      </handNote>
@@ -71,9 +69,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0250" notAfter="-0201" evidence="Палеография">
                         <seg xml:lang="ru">2-я пол. III в. до н.э.</seg>
@@ -94,7 +92,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Saint Petersburg, Russia.</seg>
                   </provenance>
                </history>
             </msDesc>

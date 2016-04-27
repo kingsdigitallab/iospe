@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>34880</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34880</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc15">Декрет.</seg>
+                  <summary corresp="document-search.xml#doc15">
+                     <seg xml:lang="ru">Декрет.</seg>
                      <seg xml:lang="en">Decree.</seg>
                   </summary>
                </msContents>
@@ -63,7 +61,7 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой перекладиной, вертикали Ню одинаковой длины, мю с вертикальными боковыми линиями, 
+                        <seg xml:lang="ru">Альфа с прямой перекладиной, вертикали ню одинаковой длины, мю с вертикальными боковыми линиями, 
                            пи с вертикалями одинаковой длины, горизонтали сигма параллельны, отсутствие украшений на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">1,5 (стк. 1), 0,6.</height>
@@ -72,9 +70,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0100" notAfter="-0001" evidence="Палеография">
                         <seg xml:lang="ru">I в. до н.э.</seg>
