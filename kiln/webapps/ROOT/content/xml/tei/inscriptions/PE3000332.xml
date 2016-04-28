@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Incertum</title>
-             <title xml:lang="en"/>
+            <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -23,7 +21,7 @@
                   <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Ранее Херсонесский музей</repository>
-                     <idno>Нет данных</idno>
+                     <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
@@ -31,19 +29,19 @@
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc22">
                      <seg xml:lang="ru">Incertum.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Unknown.</seg>
                   </summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru"  ref="monument-search.xml#mon1">Плита</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Известняк.</material>
-                           <material xml:lang="en"/>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки одной строки надписи. Буквы очень стерты.</p>
                            <p xml:lang="en"/>
                            <dimensions>
@@ -70,9 +68,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
                         <seg xml:lang="ru">Римское время.</seg>
@@ -82,7 +80,7 @@
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Нет данных.</rs>
+                        <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -93,7 +91,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Ранее Севастополь.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Previously Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi. В настоящее время камень считается утерянным.</seg>
@@ -133,6 +131,7 @@
             <ab>
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>Ω</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+                           <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>Ν</orig><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΥΟΣ</orig><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="5"/><gap reason="lost" extent="unkown" unit="line"/>
             </ab>
