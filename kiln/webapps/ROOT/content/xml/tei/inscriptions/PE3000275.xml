@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Incertum</title>
-             <title xml:lang="en"/>
+            <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -23,7 +21,7 @@
                   <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>После обнаружения хранилась в Херсонесе</repository>
-                     <idno>Нет данных</idno>
+                     <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
@@ -31,9 +29,9 @@
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru">Неизвестный.</seg>
-                     <seg xml:lang="en">Unknown.</seg>
+                  <summary corresp="document-search.xml#doc22">
+                     <seg xml:lang="ru">Incertum.</seg>
+                     <seg xml:lang="en">Incertum.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -68,9 +66,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0151" notAfter="0300" evidence="Палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. II – III в. н.э.</seg>
@@ -90,8 +88,8 @@
                      </seg>
                   </provenance>
                   <provenance type="observed">
-                     <seg xml:lang="ru">Нет данных.</seg>
-                     <seg xml:lang="en">Unknown</seg>
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi. Камень считается утерянным начиная с 1880-х гг.</seg>
