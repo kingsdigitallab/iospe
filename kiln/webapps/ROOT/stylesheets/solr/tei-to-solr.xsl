@@ -55,7 +55,7 @@
     </add>
   </xsl:template>
 
-  <!--<xsl:template match="text()" mode="#all" priority="-1"/>-->
+  <xsl:template match="text()" mode="#all" priority="-1"/>
 
   
   
@@ -273,10 +273,22 @@
         </xsl:apply-templates>
         <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="title_fields"/>
         <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="document-type_fields"/>
+        <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="institution_fields"/>
         <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="monument-type_fields"/>
+        <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="material_fields"/>
+        <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="execution_fields"/>
         <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="orig_place_fields"/>
         <xsl:apply-templates select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="orig_date_fields"/>
         <!-- end of the metadata templates -->
+        
+        <!-- get the text content and critical apparatus of the inscription -->
+        <xsl:apply-templates select="descendant::tei:div[@type = 'edition']" mode="edition_fields"/>
+        <xsl:apply-templates select="descendant::tei:div[@type = 'apparatus']" mode="apparatus_fields"/>
+        
+        <!-- get persNames from the inscription -->
+        <xsl:apply-templates select="descendant::tei:div[@type = 'edition']" mode="persnames_fields"/>
+        
+        
       </doc>
     </xsl:if>
   </xsl:template>
