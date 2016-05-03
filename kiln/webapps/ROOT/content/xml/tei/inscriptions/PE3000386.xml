@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,14 +24,14 @@
                      <idno>96854</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>State Historical Museum</repository>
+                     <idno>96854</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc5">Посвятительная надпись.</seg>
-                     <seg xml:lang="en">Dedicatory inscription</seg>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedicatory inscription.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -73,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p058">
                         <seg xml:lang="ru">Неаполь Скифский.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Scythian Neapolis.</seg>
                      </origPlace>
                      <origDate notBefore="-0151" notAfter="-0101" evidence="Палеография">
                         <seg xml:lang="ru">Сер. - 2-я пол. II в. до н.э.</seg>

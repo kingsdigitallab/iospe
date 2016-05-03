@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -26,13 +24,13 @@
                      <idno>НС, А № 1</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>Historical and Archaeological Reserve Neapolis Scyhtian</repository>
+                     <idno>НС, А № 1</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
-                     <seg xml:lang="ru" corresp="document-search.xml#doc2">Надгробная надпись.</seg>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
@@ -42,8 +40,8 @@
                         <support>
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru"/>
-                           <material xml:lang="en"/>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Сохранилась главным образом верхняя левая часть плиты, расколотой на более чем двести фрагментов. 
                               Лицевая и боковые стороны тщательно обработаны, эпиграфическое поле отшлифовано. 
                               Вверху украшена профилированным карнизом, на котором сохранились остатки росписи. 
@@ -54,14 +52,20 @@
                               Расположение небольшого обломка размером 3,5/5/3 см с одной сохранившейся буквой (см. фото) не поддается надежному определению.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                           <dim>78/64/12 (эпиграфическое поле - 20/55)</dim>
+                              <width>78</width>
+                              <height>64</height>
+                              <depth>12</depth>
                            </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">эпиграфическое поле</seg>
                            <seg xml:lang="en"/>
+                           <dimensions>
+                              <width>20</width>
+                              <height>55</height>
+                           </dimensions>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -78,9 +82,9 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>
+                     <origPlace ref="origPlace.xml#p058">
                         <seg xml:lang="ru">Неаполь Скифский.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Scythian Neapolis.</seg>
                      </origPlace>
                      <origDate notBefore="-0200" notAfter="-0101" evidence="Палеография археологический_и_исторический_контекст" precision="low">
                         <seg xml:lang="ru">II в. до н.э.</seg>
@@ -101,7 +105,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Симферополь.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Simferopol.</seg>
                   </provenance>
                </history>
             </msDesc>
