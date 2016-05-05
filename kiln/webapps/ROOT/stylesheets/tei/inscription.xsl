@@ -2121,12 +2121,11 @@
   </xsl:template>
 
   <xsl:template match="tei:g">
-    <xsl:choose>
-      <xsl:when test="@type='denarius'">
+      <xsl:if test="@type='denarius'">
         <xsl:text>&#x10196;</xsl:text>
         <xsl:apply-templates/>
-      </xsl:when>
-    </xsl:choose>
+      </xsl:if>
+    
     <!-- <xsl:apply-templates/>
     <xsl:if test="ancestor::tei:w">
       <xsl:text> </xsl:text>
