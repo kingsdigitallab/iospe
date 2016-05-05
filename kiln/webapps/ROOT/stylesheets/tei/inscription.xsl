@@ -2121,22 +2121,28 @@
   </xsl:template>
 
   <xsl:template match="tei:g">
-   <xsl:choose>
-     <xsl:when test="@type='denarius'">
-      <xsl:text>&#x10196;</xsl:text>
-    </xsl:when>
-     <xsl:when test="ancestor::tei:w">
+    <xsl:choose>
+      <xsl:when test="@type='denarius'">
+        <xsl:text>&#x10196;</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+        <span class="smaller">
+          <xsl:value-of select="@type"/>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
+    <!-- <xsl:apply-templates/>
+    <xsl:if test="ancestor::tei:w">
       <xsl:text> </xsl:text>
-    </xsl:when>
-    <xsl:otherwise>
+    </xsl:if>
     <em xsl:exclude-result-prefixes="tei">
       <span class="smaller">
         <xsl:value-of select="@type"/>
       </span>
     </em>
-    </xsl:otherwise>
-   </xsl:choose>
-    <xsl:apply-templates/>
+    <xsl:if test="ancestor::tei:w">
+      <xsl:text> </xsl:text>
+    </xsl:if> -->
   </xsl:template>
 
   <xsl:template match="tei:add">
