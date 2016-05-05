@@ -89,7 +89,7 @@
   <xsl:template match="/"/>
 
 
-  
+
   <xsl:template name="indexTitlePerson">
     <i18n:text>Attested Persons</i18n:text>
   </xsl:template>
@@ -114,8 +114,8 @@
 
   <!-- Generate Index -->
   <xsl:template name="generateIndexPerson">
-    
-    
+
+
 
     <div class="section-container tabs" data-section="tabs" data-options="deep_linking: false;">
 
@@ -151,8 +151,11 @@
                     <th>
                       <xsl:text> </xsl:text>
                     </th>
-                    <th><xsl:choose><xsl:when test="$lang='ru'">Русский</xsl:when>
-                    <xsl:otherwise>English</xsl:otherwise></xsl:choose>
+                    <th>
+                      <xsl:choose>
+                        <xsl:when test="$lang = 'ru'">Русский</xsl:when>
+                        <xsl:otherwise>English</xsl:otherwise>
+                      </xsl:choose>
                     </th>
                     <th>
                       <i18n:text>Date</i18n:text>
@@ -318,27 +321,41 @@
         <xsl:attribute name="style">background-color: yellow</xsl:attribute>
       </xsl:if>
       <th id="{$myXMLid}">
-            <xsl:choose>
-              <xsl:when test="$lang='ru'"><a href="../record/{$myXMLid}-{$lang}.html" i18n:attr="title" title="Permanent link for this person" name="{$myXMLid}">
-              <span style="font-size: smaller;"><sup>&#x00B6;</sup></span><xsl:text> </xsl:text>
-            </a></xsl:when>
-              <xsl:otherwise><a href="../record/{$myXMLid}.html" i18n:attr="title" title="Permanent link for this person" name="{$myXMLid}">
-                <span style="font-size: smaller;"><sup>&#x00B6;</sup></span><xsl:text> </xsl:text>
-              </a></xsl:otherwise>
-            </xsl:choose> <xsl:for-each select="tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
+        <xsl:choose>
+          <xsl:when test="$lang = 'ru'">
+            <a href="../record/{$myXMLid}-{$lang}.html" i18n:attr="title"
+              title="Permanent link for this person" name="{$myXMLid}">
+              <span style="font-size: smaller;">
+                <sup>&#x00B6;</sup>
+              </span>
+              <xsl:text> </xsl:text>
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <a href="../record/{$myXMLid}.html" i18n:attr="title"
+              title="Permanent link for this person" name="{$myXMLid}">
+              <span style="font-size: smaller;">
+                <sup>&#x00B6;</sup>
+              </span>
+              <xsl:text> </xsl:text>
+            </a>
+          </xsl:otherwise>
+        </xsl:choose>
+        <xsl:for-each select="tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
           <xsl:value-of select="."/>
         </xsl:for-each>
         <xsl:text> </xsl:text>
       </th>
 
-      <td class="persName"><xsl:choose>
-        <xsl:when test="$lang != 'en'">
-          <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
-        </xsl:otherwise>
-      </xsl:choose>
+      <td class="persName">
+        <xsl:choose>
+          <xsl:when test="$lang != 'en'">
+            <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </td>
 
       <td class="flourit">
@@ -350,83 +367,102 @@
         <xsl:for-each
           select="//persons/descendant::tei:relation[substring-after(@active, '#') = $myXMLid]">
           <xsl:choose>
-            <xsl:when test="@name = 'father'">
-              <i18n:text>father of</i18n:text>
+            <!-- the child tei:desc should only be in Russian, so if $lang is ru we'll
+             use the value of tei:desc because it will have the correct genitive form -->
+            <xsl:when test="tei:desc[@xml:lang = $lang]">
+              <xsl:value-of select="substring-before(tei:desc[@xml:lang = $lang], ' ')"/>
+              <xsl:text> </xsl:text>
+              <a class="relation-link" href="{@passive}">
+                <xsl:value-of select="substring-after(tei:desc[@xml:lang = $lang], ' ')"/>
+              </a>
             </xsl:when>
-            <xsl:when test="@name = 'son'">
-              <i18n:text>son of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'mother'">
-              <i18n:text>mother of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'daughter'">
-              <i18n:text>daughter of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'brother'">
-              <i18n:text>brother of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'sister'">
-              <i18n:text>sister of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'related'">
-              <i18n:text>related of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'fiancé'">
-              <i18n:text>fiancé of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'fiancée'">
-              <i18n:text>fiancée of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'husband'">
-              <i18n:text>husband of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'wife'">
-              <i18n:text>wife of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'grandfather'">
-              <i18n:text>grandfather of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'grandson'">
-              <i18n:text>grandson of</i18n:text>
-            </xsl:when>
-            <xsl:when test="@name = 'granddaughter'">
-              <i18n:text>granddaughter of</i18n:text>
-            </xsl:when>
-          </xsl:choose>
-          <!-- space after relationship -->
-          <xsl:text> </xsl:text>
 
-          <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
-            as="xs:sequence"/>
-
-          <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-            <xsl:variable name="theirXMLid" select="normalize-space(@xml:id)"/>
-            <xsl:variable name="grc_first_letter" select="substring(tei:persName[@xml:lang='grc'], 1, 1)"/>
-            <xsl:variable name="link_letter" select="//firstletters/alist/list[@type='grc']/item[letter = $grc_first_letter]/equiv-en"/>
-            <xsl:variable name="link_date" select="/aggregation/persdates//result/doc[str[@name='id'] = $theirXMLid]/str[@name='date-era']"/>           
-            <xsl:variable name="link_string">
+            <!-- otherwise we just concat an appropriate phrase with the name pointed to by @passive -->
+            <xsl:otherwise>
               <xsl:choose>
-                <xsl:when test="$sort='letters' and $lang = 'en'">
-                  <xsl:value-of select="concat('letters/', $link_letter, '_', $theirXMLid)"/>
+                <xsl:when test="@name = 'father'">
+                  <i18n:text>father of</i18n:text>
                 </xsl:when>
-                <xsl:when test="$sort='letters' and $lang = 'ru'">
-                  <xsl:value-of select="concat('letters/', $link_letter, '_', $theirXMLid, '-ru')"/>
+                <xsl:when test="@name = 'son'">
+                  <i18n:text>son of</i18n:text>
                 </xsl:when>
-                <xsl:when test="$sort='date' and $lang = 'en'">
-                  <xsl:value-of select="concat('dates/', $link_date, '_', $theirXMLid)"/>
+                <xsl:when test="@name = 'mother'">
+                  <i18n:text>mother of</i18n:text>
                 </xsl:when>
-                <xsl:when test="$sort='date' and $lang = 'ru'">
-                  <xsl:value-of select="concat('dates/', $link_date, '_', $theirXMLid, '-ru')"/>
+                <xsl:when test="@name = 'daughter'">
+                  <i18n:text>daughter of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'brother'">
+                  <i18n:text>brother of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'sister'">
+                  <i18n:text>sister of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'related'">
+                  <i18n:text>related of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'fiancé'">
+                  <i18n:text>fiancé of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'fiancée'">
+                  <i18n:text>fiancée of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'husband'">
+                  <i18n:text>husband of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'wife'">
+                  <i18n:text>wife of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'grandfather'">
+                  <i18n:text>grandfather of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'grandson'">
+                  <i18n:text>grandson of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'granddaughter'">
+                  <i18n:text>granddaughter of</i18n:text>
                 </xsl:when>
               </xsl:choose>
-            </xsl:variable>
-            <a href="../{$link_string}.html#{$theirXMLid}">
-              <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
-            </a>
-            <xsl:if test="following::tei:person[@xml:id = $passives]">
-              <xsl:text>, </xsl:text>
-            </xsl:if>
-          </xsl:for-each>
+              <!-- space after relationship -->
+              <xsl:text> </xsl:text>
+
+              <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
+                as="xs:sequence"/>
+
+              <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
+                <xsl:variable name="theirXMLid" select="normalize-space(@xml:id)"/>
+                <xsl:variable name="grc_first_letter"
+                  select="substring(tei:persName[@xml:lang = 'grc'], 1, 1)"/>
+                <xsl:variable name="link_letter"
+                  select="//firstletters/alist/list[@type = 'grc']/item[letter = $grc_first_letter]/equiv-en"/>
+                <xsl:variable name="link_date"
+                  select="/aggregation/persdates//result/doc[str[@name = 'id'] = $theirXMLid]/str[@name = 'date-era']"/>
+                <xsl:variable name="link_string">
+                  <xsl:choose>
+                    <xsl:when test="$sort = 'letters' and $lang = 'en'">
+                      <xsl:value-of select="concat('letters/', $link_letter, '_', $theirXMLid)"/>
+                    </xsl:when>
+                    <xsl:when test="$sort = 'letters' and $lang = 'ru'">
+                      <xsl:value-of
+                        select="concat('letters/', $link_letter, '_', $theirXMLid, '-ru')"/>
+                    </xsl:when>
+                    <xsl:when test="$sort = 'date' and $lang = 'en'">
+                      <xsl:value-of select="concat('dates/', $link_date, '_', $theirXMLid)"/>
+                    </xsl:when>
+                    <xsl:when test="$sort = 'date' and $lang = 'ru'">
+                      <xsl:value-of select="concat('dates/', $link_date, '_', $theirXMLid, '-ru')"/>
+                    </xsl:when>
+                  </xsl:choose>
+                </xsl:variable>
+                <a href="../{$link_string}.html#{$theirXMLid}">
+                  <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
+                </a>
+                <xsl:if test="following::tei:person[@xml:id = $passives]">
+                  <xsl:text>, </xsl:text>
+                </xsl:if>
+              </xsl:for-each>
+            </xsl:otherwise>
+          </xsl:choose>
 
           <xsl:if test="following::tei:relation[@active = current()/@active]">
             <xsl:text>; </xsl:text>
