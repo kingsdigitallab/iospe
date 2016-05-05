@@ -2127,7 +2127,7 @@
     </xsl:if>
     <em xsl:exclude-result-prefixes="tei">
       <span class="smaller">
-        <xsl:value-of select="@type"/>
+        <xsl:value-of select="."/>
       </span>
     </em>
     <xsl:if test="ancestor::tei:w">
