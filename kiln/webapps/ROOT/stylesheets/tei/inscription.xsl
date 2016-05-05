@@ -2126,11 +2126,6 @@
         <xsl:text>&#x10196;</xsl:text>
         <xsl:apply-templates/>
       </xsl:when>
-      <xsl:otherwise>
-        <span class="smaller">
-          <xsl:value-of select="@type"/>
-        </span>
-      </xsl:otherwise>
     </xsl:choose>
     <!-- <xsl:apply-templates/>
     <xsl:if test="ancestor::tei:w">
