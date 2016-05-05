@@ -370,9 +370,25 @@
             <!-- the child tei:desc should only be in Russian, so if $lang is ru we'll
              use the value of tei:desc because it will have the correct genitive form -->
             <xsl:when test="tei:desc[@xml:lang = $lang]">
+              <xsl:variable name="passiveXMLid" select="normalize-space(substring-after(@passive, '#'))"/>
+              <!--<xsl:variable name="grc_first_letter" select="substring(substring-after(tei:desc[@xml:lang = $lang], ' '), 1, 1)"/>-->
+              <xsl:variable name="grc_first_letter"
+                select="substring(//persons/descendant::tei:person[@xml:id = $passiveXMLid]/tei:persName[@xml:lang = 'grc'], 1, 1)"/>
+              <xsl:variable name="link_letter" select="//firstletters/alist/list[@type='grc']/item[letter = $grc_first_letter]/equiv-en"/>
+              <xsl:variable name="link_date" select="/aggregation/persdates//result/doc[str[@name='id'] = $passiveXMLid]/str[@name='date-era']"/>          
+              <xsl:variable name="link_string">
+                <xsl:choose>
+                  <xsl:when test="$sort='letters'">
+                    <xsl:value-of select="concat('letters/', $link_letter, '_', $passiveXMLid, '-ru')"/>
+                  </xsl:when>
+                  <xsl:when test="$sort='date'">
+                    <xsl:value-of select="concat('dates/', $link_date, '_', $passiveXMLid, '-ru')"/>
+                  </xsl:when>
+                </xsl:choose>
+              </xsl:variable>
               <xsl:value-of select="substring-before(tei:desc[@xml:lang = $lang], ' ')"/>
               <xsl:text> </xsl:text>
-              <a class="relation-link" href="{@passive}">
+              <a class="relation-link" href="../{$link_string}.html#{$passiveXMLid}">
                 <xsl:value-of select="substring-after(tei:desc[@xml:lang = $lang], ' ')"/>
               </a>
             </xsl:when>
@@ -465,7 +481,7 @@
           </xsl:choose>
 
           <xsl:if test="following::tei:relation[@active = current()/@active]">
-            <xsl:text>; </xsl:text>
+            <br/>
           </xsl:if>
 
         </xsl:for-each>
