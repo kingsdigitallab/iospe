@@ -2133,6 +2133,9 @@
     <xsl:if test="ancestor::tei:w">
       <xsl:text> </xsl:text>
     </xsl:if>
+    <xsl:if test="@type='denarius'">
+      <xsl:text>&#x10196;</xsl:text>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="tei:add">
