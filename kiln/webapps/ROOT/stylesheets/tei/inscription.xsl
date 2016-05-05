@@ -2122,6 +2122,13 @@
 
   <xsl:template match="tei:g">
     <xsl:apply-templates/>
+    <xsl:if test="@type='denarius'">
+      <xsl:text>&#x10196;</xsl:text>
+    </xsl:if>
+    <xsl:if test="ancestor::tei:w">
+      <xsl:text> </xsl:text>
+    </xsl:if>
+    <!-- <xsl:apply-templates/>
     <xsl:if test="ancestor::tei:w">
       <xsl:text> </xsl:text>
     </xsl:if>
@@ -2132,7 +2139,7 @@
     </em>
     <xsl:if test="ancestor::tei:w">
       <xsl:text> </xsl:text>
-    </xsl:if>
+    </xsl:if> -->
   </xsl:template>
 
   <xsl:template match="tei:add">
