@@ -2125,21 +2125,18 @@
      <xsl:when test="@type='denarius'">
       <xsl:text>&#x10196;</xsl:text>
     </xsl:when>
-    <xsl:otherwise>
-      <xsl:apply-templates/>
-    <xsl:if test="ancestor::tei:w">
+     <xsl:when test="ancestor::tei:w">
       <xsl:text> </xsl:text>
-    </xsl:if>
+    </xsl:when>
+    <xsl:otherwise>
     <em xsl:exclude-result-prefixes="tei">
       <span class="smaller">
         <xsl:value-of select="@type"/>
       </span>
     </em>
-    <xsl:if test="ancestor::tei:w">
-      <xsl:text> </xsl:text>
-    </xsl:if>
     </xsl:otherwise>
    </xsl:choose>
+    <xsl:apply-templates/>
   </xsl:template>
 
   <xsl:template match="tei:add">
