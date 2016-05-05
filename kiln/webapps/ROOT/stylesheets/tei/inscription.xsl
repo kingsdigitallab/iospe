@@ -2124,6 +2124,7 @@
     <xsl:choose>
       <xsl:when test="@type='denarius'">
         <xsl:text>&#x10196;</xsl:text>
+        <xsl:apply-templates/>
       </xsl:when>
       <xsl:otherwise>
         <span class="smaller">
