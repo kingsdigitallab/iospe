@@ -174,24 +174,10 @@
                 </thead>
                 <tbody>
                   <xsl:for-each
-                    select="/aggregation/persons//tei:person[@xml:id = /aggregation/data//result/doc[str[@name = 'first-letter'] = $current-letter]/str[@name = 'id']]">
-                    <xsl:sort
-                      select="
-                        concat(
-                        upper-case(
-                        replace(
-                        replace(
-                        normalize-unicode(
-                        normalize-space(tei:persName[@xml:lang = $lang]),
-                        'NFKD'),
-                        '[?\-\.]', '–'),
-                        '[^A-Za-z0-9А-Яа-я –]', '')
-                        ),
-                        'ЯЯЯ')"/>
-
+                      select="/aggregation/data//result/doc">
                     <xsl:call-template name="person">
                       <xsl:with-param name="myXMLid">
-                        <xsl:value-of select="current()/@xml:id"/>
+                        <xsl:value-of select="current()/str[@name = 'id']"/>
                       </xsl:with-param>
                     </xsl:call-template>
                   </xsl:for-each>
@@ -316,6 +302,9 @@
 
   <xsl:template name="person">
     <xsl:param name="myXMLid">foo</xsl:param>
+    <xsl:variable name="attPersonEntry">
+      <xsl:sequence select="/aggregation/persons//tei:person[@xml:id = $myXMLid]"/>
+    </xsl:variable>
     <tr class="index_row">
       <xsl:if test="$myXMLid = $hl">
         <xsl:attribute name="style">background-color: yellow</xsl:attribute>
@@ -341,7 +330,7 @@
             </a>
           </xsl:otherwise>
         </xsl:choose>
-        <xsl:for-each select="tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
+        <xsl:for-each select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
           <xsl:value-of select="."/>
         </xsl:for-each>
         <xsl:text> </xsl:text>
@@ -350,22 +339,22 @@
       <td class="persName">
         <xsl:choose>
           <xsl:when test="$lang != 'en'">
-            <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+            <xsl:value-of select="string-join(/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:persName[@xml:lang = $lang], ', ')"/>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:value-of select="string-join(tei:persName[@xml:lang = $lang], ', ')"/>
+            <xsl:value-of select="string-join(/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:persName[@xml:lang = $lang], ', ')"/>
           </xsl:otherwise>
         </xsl:choose>
       </td>
 
       <td class="flourit">
-        <xsl:value-of select="tei:floruit/tei:seg[@xml:lang = $lang]"/>
+        <xsl:value-of select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:floruit/tei:seg[@xml:lang = $lang]"/>
         <xsl:text> </xsl:text>
       </td>
 
       <td class="relations">
         <xsl:for-each
-          select="//persons/descendant::tei:relation[substring-after(@active, '#') = $myXMLid]">
+          select="/aggregation/persons/descendant::tei:relation[substring-after(@active, '#') = $myXMLid]">
           <xsl:choose>
             <!-- the child tei:desc should only be in Russian, so if $lang is ru we'll
              use the value of tei:desc because it will have the correct genitive form -->
@@ -373,7 +362,7 @@
               <xsl:variable name="passiveXMLid" select="normalize-space(substring-after(@passive, '#'))"/>
               <!--<xsl:variable name="grc_first_letter" select="substring(substring-after(tei:desc[@xml:lang = $lang], ' '), 1, 1)"/>-->
               <xsl:variable name="grc_first_letter"
-                select="substring(//persons/descendant::tei:person[@xml:id = $passiveXMLid]/tei:persName[@xml:lang = 'grc'], 1, 1)"/>
+                select="substring(/aggregation/persons/descendant::tei:person[@xml:id = $passiveXMLid]/tei:persName[@xml:lang = 'grc'], 1, 1)"/>
               <xsl:variable name="link_letter" select="//firstletters/alist/list[@type='grc']/item[letter = $grc_first_letter]/equiv-en"/>
               <xsl:variable name="link_date" select="/aggregation/persdates//result/doc[str[@name='id'] = $passiveXMLid]/str[@name='date-era']"/>          
               <xsl:variable name="link_string">
@@ -445,7 +434,7 @@
               <xsl:variable name="passives" select="tokenize(substring-after(@passive, '#'), ' #')"
                 as="xs:sequence"/>
 
-              <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
+              <xsl:for-each select="/aggregation/persons/descendant::tei:person[@xml:id = $passives]">
                 <xsl:variable name="theirXMLid" select="normalize-space(@xml:id)"/>
                 <xsl:variable name="grc_first_letter"
                   select="substring(tei:persName[@xml:lang = 'grc'], 1, 1)"/>
@@ -489,7 +478,7 @@
       </td>
 
       <td class="occupation">
-        <xsl:value-of select="tei:occupation"/>
+        <xsl:value-of select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:occupation"/>
         <xsl:text> </xsl:text>
       </td>
 

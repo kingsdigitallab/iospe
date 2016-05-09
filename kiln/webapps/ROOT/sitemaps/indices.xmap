@@ -264,7 +264,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -295,7 +295,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -327,7 +327,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -357,7 +357,7 @@
           <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
           <map:part src="cocoon:/getLetters-grc/attPerson"/>
           <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
-          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
         </map:aggregate>
         <!-- DEBUG -->
         <!--<map:serialize type="xml"/>-->
@@ -946,7 +946,7 @@
 
           <map:otherwise>
             <map:generate
-              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter:&quot;{2}&quot;&amp;rows=9999"
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter:&quot;{2}&quot;&amp;sort=names-sort%20asc&amp;rows=9999"
             />
           </map:otherwise>
         </map:select>
@@ -1018,7 +1018,7 @@
 
           <map:when test="4dates">
             <map:generate
-              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"
             />
           </map:when>
 

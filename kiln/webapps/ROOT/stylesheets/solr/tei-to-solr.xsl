@@ -1511,6 +1511,20 @@
           <xsl:value-of select="@xml:id"/>
         </field>
         
+        <field name="names-sort">
+              <xsl:value-of
+                select="
+                translate(
+                translate(
+                translate(
+                normalize-space(
+                string-join(tei:persName[@xml:lang = 'grc']//text(), '')),
+                $uppercase, $lowercase),
+                $grkb4, $grkafter),
+                ' ', '')"
+              />
+        </field>
+        
         <field name="first-letter-grc">
           <xsl:choose>
             <!-- each 'when' handles a special case -->
