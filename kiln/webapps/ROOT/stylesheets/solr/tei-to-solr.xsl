@@ -1512,6 +1512,21 @@
         </field>
         
         <field name="names-sort">
+          <xsl:value-of
+            select="
+            translate(
+            translate(
+            translate(
+            translate(
+            normalize-space(
+            string-join(tei:persName[@xml:lang = 'grc']//text(), '')),
+            $uppercase, $lowercase),
+            $grkb4, $grkafter),
+            ' ', ''), ']-.?—[', '')"
+          />
+          
+          <!-- THE PREVIOUS CODE -->
+          <!--
               <xsl:value-of
                 select="
                 translate(
@@ -1522,7 +1537,9 @@
                 $uppercase, $lowercase),
                 $grkb4, $grkafter),
                 ' ', '')"
-              />
+              />-->
+          
+          
         </field>
         
         <field name="first-letter-grc">
