@@ -1,13 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Декрет в честь граждан Гераклеи Понтийской</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -45,13 +41,13 @@
                               Фрагмент 1 представляет собой хорошо сохранившуюся верхнюю часть плиты с завершением в форме фронтона, 
                               фрагмент 2 – правый нижний угол, расколотый на две части (a, b). Лицевая сторона  обоих фрагментов обработана тщательно, 
                               тыльная поверхность фрагментa 1 обработана суммарно, фрагмента 2 заглажена в результате вторичного использования.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -61,7 +57,7 @@
                            маленький декоративный омикрон, пи с равными вертикалями и выходящей за их пределы горизонталью, 
                            вертикали фи и пси выходят за линии строки, омега, состоящая из окружности и удлиненной горизонтали на уровне нижней линии строки, 
                            лигатуры, точки-разделители, апексы и утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,4-1,7</height>
                      </handNote>
                   </handDesc>
@@ -74,7 +70,7 @@
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="исторический_контекст просопография">
                         <seg xml:lang="ru">Вероятно, вскоре после 10 июля 138 г. н.э. (dies imperii Антонина Пия); см. комментарий</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                </history>
@@ -98,12 +94,12 @@
                         <seg xml:lang="ru">
                            <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                            <rs type="circumstances">Найдена в 1893 г. на границе северного и северо-восточного района городища, недалеко от Уваровской базилики, при раскопках Северной базилики рядом с монастырским кладбищем, внутри базилики. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 3, л. 34, № 90; д. 22, л. 2, № 90).</rs>
-                           <rs type="context"></rs>
+                           <rs type="context"/>
                         </seg>
                         <seg xml:lang="en">
-                           <placeName type="ancientFindspot"></placeName>
-                           <rs type="circumstances"></rs>
-                           <rs type="context"></rs>
+                           <placeName type="ancientFindspot"/>
+                           <rs type="circumstances"/>
+                           <rs type="context"/>
                         </seg>
                      </provenance>
                      <provenance type="observed">
@@ -132,12 +128,12 @@
                         <seg xml:lang="ru">
                            <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
                            <rs type="circumstances">Верхняя часть фрагмента (2a) найдена в 1890 г. в центральной части городища, между собором св. Владимира и монастырским садом, вдоль аллеи, ведущей к собору (т.е. между собором и основным зданием современного музея), раскоп 1. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, л. 16). Нижняя часть фрагмента (2b) найдена случайно в 1906 г. в юго-западной части городища (НА НЗХТ, д. 35, л. 5, № 302).</rs>
-                           <rs type="context"></rs>
+                           <rs type="context"/>
                         </seg>
                         <seg xml:lang="en">
-                           <placeName type="ancientFindspot"></placeName>
-                           <rs type="circumstances"></rs>
-                           <rs type="context"></rs>
+                           <placeName type="ancientFindspot"/>
+                           <rs type="circumstances"/>
+                           <rs type="context"/>
                         </seg>
                      </provenance>
                      <provenance type="observed">
@@ -149,7 +145,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
          <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
          <change when="2016-04-14" who="Chris de Lisle">Encoded text</change>
       </revisionDesc>
@@ -157,7 +153,7 @@
    <facsimile>
       <surface>
          <graphic url="30.295">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -248,7 +244,7 @@
                   		<lb n="7" break="no"/><supplied reason="lost">σα</supplied></w> <supplied reason="lost"><name>Παρθένος</name></supplied></persName> <supplied reason="lost"><persName type="attested"><name><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name> <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name> <name>Ἀρίστων</name></persName> <w>υἱὸς</w></supplied> <persName type="attested"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name> <name><supplied reason="lost">Ἀ</supplied><unclear>ρ</unclear>ίστωνος</name></persName> <w>υἱ
                   	 	<lb n="8" break="no"/><supplied reason="lost">οῦ</supplied></w> <supplied reason="lost"><persName type="attested"><name>Ἁγεπόλεως</name></persName></supplied> <supplied reason="lost"><w>πρωτάρχων</w></supplied> <persName type="attested"><supplied reason="lost"><name>Ζῆθος</name></supplied> <persName type="attested"><name><supplied reason="lost">Ἀρίστω</supplied>νος</name></persName></persName> <persName type="attested"><name><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name> <name>Φλάουιος</name> 
                   		<lb n="9"/><supplied reason="lost"><name>Πυθόδοτος</name></supplied></persName> <supplied reason="lost"><w>υἱὸς</w> <persName type="attested"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name> <name>Ἁγεπόλεως</name></persName></supplied> <persName type="attested"><name><supplied reason="lost">Ἀθήναι</supplied>ος</name> <persName type="attested"><name>Διο<choice><corr>γ</corr><orig>ι</orig></choice>ένους</name></persName></persName>
-                  		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"></gap><persName type="attested"><name><unclear>Θ</unclear>ε<choice><corr>α</corr><orig>λ</orig></choice>γένης</name> <name>Δ<unclear>ι</unclear>
+                  		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><unclear>Θ</unclear>ε<choice><corr>α</corr><orig>λ</orig></choice>γένης</name> <name>Δ<unclear>ι</unclear>
                   		<lb n="11" break="no"/><supplied reason="lost">ογένους</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><persName type="attested"><w>δεῖνα</w></persName></supplied><supplied reason="lost"><w>υἱὸς</w></supplied> <persName type="attested"><name><unclear>Φλ</unclear>αουίου</name> <name>Εὐρυδά
                   	 	<lb n="12" break="no"/><supplied reason="lost">μου</supplied></name></persName>  <gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name><supplied reason="lost">Ἀ</supplied><unclear>π</unclear>ολλώνιος</name> <persName type="attested"><name>Ζήθου</name></persName></persName>
                   		<lb n="13"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><supplied reason="lost"><w>δεῖνα</w></supplied><persName type="attested"><name><unclear>Χ</unclear>ρηστίωνος</name></persName></persName> <persName type="attested"><name><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name> <name>Φλά
@@ -301,7 +297,7 @@
                   Руф (сын Руфа?), - - -, (сын) Аппы, Юлиан, (сын) Аквилы архонт, Фил [- - -], и секретарь Совета Тит Флавий Агеполис.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
                <p>Предыстория упомянутого в этом тексте гераклейского посольства, вероятно, нашла отражение в другом херсонесском эпиграфическом 
@@ -312,7 +308,7 @@
                   принятом лишь в гераклейских документах и имевшем чисто пропагандистский характер (Robert 1937, 245 слл.; ср. Heller 2006, 298 сл.).</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

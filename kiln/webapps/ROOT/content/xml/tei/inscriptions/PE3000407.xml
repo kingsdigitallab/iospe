@@ -1,13 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
              <title xml:lang="ru">Фрагмент декрета римского времени</title>
-             <title xml:lang="en"></title>
+             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -42,14 +38,14 @@
                            <material xml:lang="ru" ref="material-search.xml#m14">Неизвестен.</material>
                            <material xml:lang="en">Unknown.</material>
                            <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки десяти строк надписи.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -57,7 +53,7 @@
                      <handNote>
                         <seg xml:lang="ru">Тета с чертой, пи с равными вертикалями и выходящей за их пределы горизонталью, 
                            сигма с параллельными верхней и нижней линиями.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,5</height>
                      </handNote>
                   </handDesc>
@@ -70,19 +66,19 @@
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="палеография">
                         <seg xml:lang="ru">Римское время</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Севастополь (Херсонес) (?).</placeName>
                         <rs type="circumstances">До 1872 г. хранилась в Хероснесе, oткуда была отправлена на Московскую политехническую выставку. В 1885 г. камень считался утерянным.</rs>
-                        <rs type="context"></rs>
+                        <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"></placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -91,13 +87,13 @@
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi. В настоящее время местонахождение камня неизвестно.</seg>
-                     <seg xml:lang="en"></seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
          <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
          <change when="2016-04-14" who="Chris de Lisle">Encoded text</change>
       </revisionDesc>
@@ -105,7 +101,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -122,7 +118,7 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl></bibl>
+               <bibl/>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -154,16 +150,16 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>
