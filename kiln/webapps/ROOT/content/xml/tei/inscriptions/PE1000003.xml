@@ -1,24 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент декрета (?).</title>
+             <title xml:lang="ru">Фрагмент декрета (?)</title>
              <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
-            <idno type="filename">10.3</idno>
-         <idno type="PE">PE1000003</idno></publicationStmt>
+            <idno type="AI2015">10.3</idno>
+            <idno type="filename">PE1000003</idno>
+            <idno type="PE">PE1000003</idno>
+         </publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier><country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Одесский археологический музей, 90497.</repository>
-                     <idno/>
+                     <repository>Одесский археологический музей</repository>
+                     <idno>90497</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
-                     <idno/>
+                     <repository>Odessa Archaeological Museum</repository>
+                     <idno>90497</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
@@ -31,46 +35,58 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru">Мрамор белый.</material>
-                           <material xml:lang="en"/>
-                           <p xml:lang="ru">Лицевой фас отшлифован, оборотный обработан грубыми сколами, остальные оббиты. Оббит со всех сторон. Автопсия: А.И. Иванчик, август 2007.</p>
+                           <material xml:lang="en">White marble.</material>
+                           <p xml:lang="ru">Лицевой фас отшлифован, оборотный обработан грубыми сколами, остальные оббиты. Оббит со всех сторон. </p>
                            <p xml:lang="en"/>
-                           
+                           <dimensions>
+                              <height unit="cm">11,7</height>
+                              <width unit="cm">14,1</width>
+                              <depth unit="cm">8,0</depth>
+                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон, повреждения в центре сохранившегося фрагмента.</seg>
+                           <dimensions>
+                              <height unit="cm">10,5</height>
+                              <width unit="cm">10,7</width>
+                           </dimensions>
                            <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, видимо, по линиям предварительной разметки, которые, однако на камне не сохранились. Небольшие апексы только у некоторых букв. Омикрон и тета слегка уменьшены.</seg>
+                        <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, видимо, по линиям предварительной разметки, которые, однако на камне не сохранились. 
+                           Небольшие апексы только у некоторых букв. Омикрон и тета слегка уменьшены.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm"/>
+                        <height unit="cm">1,0-1,2</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     
-                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="палеография">
                         <seg xml:lang="ru">I-II вв.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot">Белгород Днестровский, Украина, Одесская обл.</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород Днестровский, Украина, Одесская обл.</placeName>
                         <rs type="circumstances">Обнаружена случайно у стен крепости и передана в 1988 г. жителем города В.М. Крамчаниновым. Полевой номер БД-88/24.</rs>
                         <rs type="context">Вторичный.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -104,7 +120,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Неиздана</bibl>
+               <bibl>Ineditum</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -113,14 +129,21 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		[- - -]
-               		[- - -ἐκτε]λ̣εσας . [- - -]
-               		[- - - τὰ τῆς π]ό̣λ̣εως συ[μφέροντα - - -]
-               		[- - -π]ε̣ποίηκ̣ε̣ν Μ[- - -]
-               		[- - -ὑ]πο τοῦ κ̣ρατ[ίστουvel sim. - - -]
-               	5	[- - -]ΘΟΡΘΩ̣[- - -]
-               		[- - -]Ο̣ΝΟ̣[- - -]
-               		[- - -]
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐκτε</supplied><unclear>λ</unclear>εσας</w>
+               <gap reason="lost" quantity="1" unit="character"/> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">τὰ</supplied></w> 
+               <w><supplied reason="lost">τῆς</supplied></w> <w><supplied reason="lost">π</supplied><unclear>όλ</unclear>εως</w> 
+               <w>συ<supplied reason="lost">μφέροντα</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> 
+               <w><supplied reason="lost">π</supplied><unclear>ε</unclear>ποίη<unclear>κε</unclear>ν</w> 
+               <orig>Μ</orig> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ὑ</supplied>πο</w> <w>τοῦ</w> 
+               <w><unclear>κ</unclear>ρατ<supplied reason="lost">ίστου</supplied></w> <note>vel sim.</note> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΘΟΡΘΩ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><w part="Y"><unclear>Ο</unclear></w><orig>Ν</orig><w part="Y"><unclear>Ο</unclear></w> 
+               <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/>
             </ab>
          </div>
          <div type="apparatus">
@@ -135,8 +158,10 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Надпись по-видимому представляет собой фрагмент почетного декрета, на что укзазывает стандартная формулировка τὰ τῆς π]ό̣λ̣εως συ[μφέροντα в третьей строке.</p>
-            <p>4. Вероятно, упоминаетя один из римских чиновников или военных начальников. Слово κράτιστος является эквивалентом латинского vir egregius, однако в греческих надписях это соответствие совсем не является регулярным и эпитет может прилагаться и к персонам более высокого ранга (см. например. ISM I 378; III 65; IGBulg II 659 Кроме того, он может быть также орнаментальным титулом при слове δῆμος; в таком качестве он постоянно используется, например, в Никополе на Истре (например IGBulg II 616- 619, и др.), однако в Причерноморье редко за его пределами.</p>
+            <p>Надпись по-видимому представляет собой фрагмент почетного декрета, на что укзазывает стандартная формулировка τὰ τῆς π]ό̣λ̣εως συ[μφέροντα 
+               в третьей строке.</p>
+            <p>4. Вероятно, упоминаетя один из римских чиновников или военных начальников. Слово κράτιστος является эквивалентом латинского vir egregius, 
+               однако в греческих надписях это соответствие совсем не является регулярным и эпитет может прилагаться и к персонам более высокого ранга (см. например. ISM I 378; III 65; IGBulg II 659 Кроме того, он может быть также орнаментальным титулом при слове δῆμος; в таком качестве он постоянно используется, например, в Никополе на Истре (например IGBulg II 616- 619, и др.), однако в Причерноморье редко за его пределами.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
