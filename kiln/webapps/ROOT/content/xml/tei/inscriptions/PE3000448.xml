@@ -19,21 +19,21 @@
             <msDesc>
                <msIdentifier>
                   <country/>
-                  <altIdentifier xml:lang="ru" n="2 3">
-                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
-                     <idno>34855 (фрг. 1), 34932 (фрг. 2) и 35086 (фрг. 3)</idno>
-                  </altIdentifier>
-                  <altIdentifier xml:lang="en" n="2 3">
-                     <repository/>
-                     <idno/>
-                  </altIdentifier>
                   <altIdentifier xml:lang="ru" n="1">
-                     <repository>National Preserve of Tauric Chersonesos</repository>
-                     <idno>34855 (fr. 1), 34932 (fr. 2) и 35086 (fr. 3)</idno>
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34855</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en" n="1">
-                     <repository/>
-                     <idno/>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34855</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="ru" n="2 3">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34932 и 35086</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="2 3">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34932 and 35086</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
@@ -53,16 +53,6 @@
                            <p xml:lang="ru">Три фрагмента плиты с текстом декрета. Верхний фрагмент оббит со всех сторон. Два нижних фрагмента (фрг. 2 и 3) 
                               соединяются в контакте и относятся к левой части плиты. Надпись вырезана довольно небрежно, без предварительной разметки.</p>
                            <p xml:lang="en"/>
-                           <dimensions n="2 3">
-                              <height unit="cm">21,0</height>
-                              <width unit="cm">30,0</width>
-                              <depth unit="cm">7,0</depth>
-                           </dimensions>
-                           <dimensions n="1">
-                              <height unit="cm">16,5</height>
-                              <width unit="cm">13,5</width>
-                              <depth unit="cm">7,0</depth>
-                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
@@ -93,43 +83,78 @@
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
-                  <provenance type="found" n="2 3">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Фрагмент 2 (левый) найден в 1909 г., в северо-восточном районе Херсонеса, (помещение XIV, пол). 
-                           Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, л. 27, № 1679). Фрагмент 3 (правый) найден в 1904 г. в южном районе Херсонеса, южнее «монетного двора» 
-                           («в южной части монастырской усадьбы»). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 33, л. 4, № 258).</rs>
-                        <rs type="context"/>
-                     </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
-                     </seg>
-                  </provenance>
-                  <provenance type="found" n="1">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найден в 1888 г. в юго-восточном районе на берегу Карантинной бухты, справа от Главной улицы. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 17, л. 2, № 4; д. 1, № 4).</rs>
-                        <rs type="context"/>
-                     </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
-                     </seg>
-                  </provenance>
-                  <provenance type="observed" n="2 3">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
-                  </provenance>
-                  <provenance type="observed" n="1">
-                     <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
-                  </provenance>
-                  
                </history>
+               <msPart n="1">
+                  <msIdentifier/>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions n="1">
+                                 <height unit="cm">16,5</height>
+                                 <width unit="cm">13,5</width>
+                                 <depth unit="cm">7,0</depth>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                     </objectDesc>
+                  </physDesc>
+                  <history>
+                     <provenance type="found">
+                        <seg xml:lang="ru">
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                           <rs type="circumstances">Найден в 1888 г. в юго-восточном районе на берегу Карантинной бухты, справа от Главной улицы. 
+                              Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 17, л. 2, № 4; д. 1, № 4).</rs>
+                           <rs type="context"/>
+                        </seg>
+                        <seg xml:lang="en">
+                           <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                           <rs type="circumstances"/>
+                           <rs type="context"/>
+                        </seg>
+                     </provenance>
+                     <provenance type="observed" n="1">
+                        <seg xml:lang="ru">Севастополь.</seg>
+                        <seg xml:lang="en">Sevastopol.</seg>
+                     </provenance>
+                  </history>
+               </msPart>
+               <msPart n="2-3">
+                  <msIdentifier/>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions n="2 3">
+                                 <height unit="cm">21,0</height>
+                                 <width unit="cm">30,0</width>
+                                 <depth unit="cm">7,0</depth>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                     </objectDesc>
+                  </physDesc>
+                  <history>
+                     <provenance type="found" n="2 3">
+                        <seg xml:lang="ru">
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                           <rs type="circumstances">Фрагмент 2 (левый) найден в 1909 г., в северо-восточном районе Херсонеса, (помещение XIV, пол). 
+                              Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, л. 27, № 1679). Фрагмент 3 (правый) найден в 1904 г. в южном районе Херсонеса, южнее «монетного двора» 
+                              («в южной части монастырской усадьбы»). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 33, л. 4, № 258).</rs>
+                           <rs type="context"/>
+                        </seg>
+                        <seg xml:lang="en">
+                           <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                           <rs type="circumstances"/>
+                           <rs type="context"/>
+                        </seg>
+                     </provenance>
+                     <provenance type="observed" n="2 3">
+                        <seg xml:lang="ru">Севастополь.</seg>
+                        <seg xml:lang="en">Sevastopol.</seg>
+                     </provenance>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
