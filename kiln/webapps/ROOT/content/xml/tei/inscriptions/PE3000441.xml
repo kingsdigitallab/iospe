@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Декрет в честь гражданина Гераклеи Папия</title>
+             <title xml:lang="en"/>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.294</idno>
+            <idno type="filename">PE3000441</idno>
+            <idno type="PE">PE3000441</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>1/36474</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>1/36474</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc15">
+                     <seg xml:lang="ru">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Сохранилась полностью.  за исключением венчающего фронтона (?) с рельефным изображением (видны незначительные следы). 
+                              Эпиграфическое поле ограничено широкой профилированной рамкой. В основании плиты имеются два углубления для крепления к постаменту. 
+                              Лицевая поверхность отшлифована.</p>
+                           <p xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">91,0</height>
+                              <width unit="cm">81,0</width>
+                              <depth unit="cm">13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Эпсилон с незамкнутой средней горизонталью, овальная тета с замкнутой поперечной гастой, кси с изогнутой наклонной линией, 
+                           крупный овальный омикрон, пи с равными вертикалями и немного выходящей за их пределы горизонталью, ипсилон с перекрестием, 
+                           полукружие омега с загнутыми внутрь концами приподнято над строкой, под ним две горизонтальные черты на уровне нижней линии строки, 
+                           заметные апексы и утолщения на концах линий букв, лигатуры, знаки-разделители.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">1,7 – 2,6</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсонес.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="указание_надписи">
+                        <seg xml:lang="ru">130/131 г. н.э.</seg>
+                        <seg xml:lang="en"/>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1959 г. в западном районе городища. Была вторично использована для закрытия входа в склеп. 
+                           Раскопки Е.Г. Сурова.</rs>
+                        <rs type="context"/>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+                  
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><!-- volNum = ﻿30-->
+      <revisionDesc>
+         <change when="2016-05-25" who="AGi">programmatically created XML from Word docs</change>
+         <change when="2016-05-31" who="SS">added links to alists in metadata</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.294">
+            <desc xml:lang="en"/>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>Суров 1960, 154 (многочисленные опечатки)</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl>BullEp 1964, 312</bibl>
+               <bibl>Соломоник 1990, 36 № 26</bibl>
+               <bibl>Avram, PPEE, 150, № 1879</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		πρόεδροι Χερσονασειτᾶν τᾶ(omitted)ν(omitted) ποτὶ Ταυρικᾶι
+               		 εἶπαν·
+               		ἐπειδὴ Παπίας ῾Ηρακλέωνος Ἁρακλεώτας ἀνὴρ χρασίμωι
+               	4	ἄθει κεχραμένος σεμνότατον τᾶς ἐπιδαμίας παρ’ ἁμὲς 
+               		πεπόαται χρόνον πάντας τ⸢ῶ⸣ν ἁμῶ⸢ν⸣ εὐυπαντήτως
+               		στέρξας και τειμῶν καθάπερ ἀγαθὸς καὶ ἐκ φύσιος 
+               		πολείτας ἀνθ’ ὧν τὸν ἄνδρ(omitted)α(omitted) ἀμοιβαίως ἀντιτειμα-
+               	8	θῆνα(omitted)ι(omitted) καθᾶκον εἶμεν· ⸰ δεδόχθαι τᾷ βουλᾷ καὶ
+               		τῷ δάμῳ ἐπαινέσαι μὲν ἐπὶ τούτοις Παπίαν
+               		῾Ηρακλέωνος Ἁρακλεώταν, δόμεν δὲ αὐτῷ προξενίαν, πο-
+               		λειτίαν, ἔσπλουν τε καὶ ἔκπλουν ἐν εἰράνᾳ καὶ πολέμωι ἀσυ(omitted)λ(omitted)ε⸢ί, ἀσ-
+               	12	{σ}πονδεὶ αὐτῷ τε καὶ ἐκγόνοις καὶ χράμασιν αὐτοῦ, μετοχάν 
+               		τε πάντων τῶν ἐν τᾷ πόλει, ὧν καὶ Χερσονασείταις μέτεστι·
+               		τὸ δὲ ψάφισμα τοῦτο ἀναγραφᾶμεν λευκολίθου στάλᾳ καὶ θέ-
+               		μεν ἐν τῷ ἐπισαμοτάτῳ τᾶς ἀκροπόλιος τόπῳ· ταῦτ’ ἔδοξε βου-
+               	16	λᾷ δάμωι ⸰ βασιλευούσας Παρθένου, ἔτεος ⸰ ρνε, ⸰ ἱερέως
+               		δὲ Τίτου Φλαουίου Ξάνθου υἱοῦ Φλαουίου Νάσωνος μηνὸς
+               		Λατοίου ⸰ ιʹ, ⸰ γραμματεύοντος Ἡροΐδου Ζήθου· ⸰ ἐσφρα-
+               		γίσαντο ⸰ αʹ ⸰ στίχωι· θεὰ βασίλισσα Παρθένος, Τίτος
+               	20	Φλάουιος Ἁγέπολις υἱὸς Φλαουίου Ἀρίστωνος πρωτάρχων,
+               		Ζῆθος Ἀρίστωνος, Τίτος Φλάουιος Ἀρίστων υἱὸς Φλαΐου Ἀριστω-
+               		νος τοῦ Ἁγεπόλεως, Ἀθήναιος Διογένους, ῾Ερμοκλῆς Ἀπολλω-
+               		νίου, Νε(omitted)ι(omitted)καγόρας Δημοκράτους· ⸰ βʹ ⸰ στίχῳ· Φιλόμουσος Ἀπολλωνί-
+               	24	δου, Λούκιος Ἀντώνιος ῾Ροῦφος, Δημοκράτης Βοΐσκου ἄρχων, Ἀρίσ-
+               		των Ἀπολλωνί(omitted)δ(omitted)ου ἄρχων, Λούκιος ῾Ιλάρου, Ἀντίλοχος Ἀντιλόχου 
+               		Ζῆθος Πυθοδότου, Ἀσκληπιάδης Ἀσκληπιάδου ἄρχων· ⸰ γʹ ⸰ στίχωι· 
+               		Πετρώνιος Μαρεῖνος ἄρχων, Μητρόδωρος Διοσκουρίδου, Ἀρίστων Ἀντι-
+               	28	λόχου, Καλλικλῆς Ἠδύλου ἄρχων, ῾Ηροΐδας Ἡροΐδου νομοφύλαξ,
+               		῾Ικέσιος ῾Ικεσίου ν(omitted)ο(omitted)μοφύλαξ, Ποντικὸς ῾Ιλάρου νομοφύλαξ, Βοΐσκος Διοσκου-
+               		ρίδου πρόδικος καὶ ὁ γραμματεὺς τῆς βουλῆς ῾Ηροΐδας Ζῆθου.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>1: ΤΑΠΟΤΙ - lap.</note></app>
+               <app><note>5: ΤΟΝΑΜΩΛ - lap.; εὐ ὑπαντήτως - ed. pr., corr. Robert (BullEp).</note></app>
+               <app><note>7: ΑΝΔΡΑΜΟΙΒΑΙΩΣ - lap.; μοιραιῶς - ed. pr., corr. Robert (BullEp).</note></app>
+               <app><note>8: ΘΕΝΑΚΑΘΑΚΟΝ - lap.</note></app>
+               <app><note>11/12: ΑΣΥΔΕΤΑΣ/ΣΠΟΝΔΕΙ - lap.; ἀσυ(λ)ε(ί) τ(ε) ἀσ(omitted)σ(omitted)πονδεί - ed. pr., corr. Robert (BullEp); см. комментарий.</note></app>
+               <app><note>14: λευκολίθο(ι) - ed. pr.</note></app>
+               <app><note>16: βασιλεύσας - ed. pr.</note></app>
+               <app><note>17: Φλαουίος (sic) Ξάνθου υἱὸς - ed. pr.</note></app>
+               <app><note>21: Φλαΐου = Φλαουίου); Φλα(ου)ίου - ed. pr.</note></app>
+               <app><note>23: ΝΕΚΑΓΟΡΑΣ - lap.; Νεκαγόρας - ed. pr.</note></app>
+               <app><note>25: ΑΠΟΛΛΩΝΙΟΥ - lap. (см. комментарий).</note></app>
+               <app><note>29: ΝΜΟΦΥΛΑΞ - lap.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Проедры херсонеситов, что близ Таврики, внесли предложение:</p>
+            <p>поскольку Папий, (сын) Гераклеона, гераклеот, постоянно оказывающий (нам) услуги, сделал свое пребывание у нас досточтимым, относясь к каждому из нас с благосклонной любовью и уважением, словно хороший гражданин (нашего полиса) по рождению, за что подобает удостоить сего мужа  ответных почестей,</p>
+            <p>пусть будет решено Советом и народом восхвалить за это</p>
+            <p>Папия, (сына) Гераклеона, гераклеота, даровать ему проксению, гражданство, право входа в гавань и выхода из гавани в мирное и военное время, без риска конфискации и необходимости заключения договора, ему самому, его потомкам и имуществу, а также обладание всеми (правами), которыми обладают херсонеситы; записать это постановление на белокаменной стеле и поставить на самом видном месте акрополя.</p>
+            <p>Это решено Советом и народом, когда обязанности царя исполняла Дева, в 155 году, при жреце Тите Флавии Ксанфе, сыне Флавия Насона, десятого дня месяца летоя, при секретаре Героде, (сыне) Зета.</p>
+            <p>Приложили печати в 1 ряду: богиня царица Дева, Тит Флавий Агеполис, сын Флавия Аристона, первый архонт, Зет, (сын) Аристона, Тит Флавий Аристон, сын Флавия Аристона, (сына) Агеполиса, Афиней, (сын) Диогена, Гермокл, (сын) Аполлония, Никагор, (сын) Демократа; во 2 ряду:  Филомус, (сын) Аполлонида, Луций Антоний Руф, Демократ, (сын) Боиска, архонт; в 3 ряду: Петроний Марин, архонт, Метродор, (сын) Диоскурида, Аристон, (сын) Антилоха, Калликл, (сын) Эдила, архонт, Герод, (сын) Герода, номофилак, Гикесий, (сын) Гикесия, номофилак, Понтик, (сын) Гилара, номофилак, Боиск, (сын) Диоскурида, продик, а также секретарь Совета Герод, (сын) Зета.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p/>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>
