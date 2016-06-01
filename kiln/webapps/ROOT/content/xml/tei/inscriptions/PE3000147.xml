@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Ксанфа</title>
-             <title xml:lang="en">Epitaph of Xanthos</title>
+            <title xml:lang="ru">Надгробие Ксанфа</title>
+            <title xml:lang="en">Epitaph of Xanthos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Сохранилась нижняя часть стелы с шипом для крепления на постаменте. 
-                              В прямоугольном углублении на рельефе фронтально изображена мужская фигура в хитоне, плаще и, возможно, штанах; голова и левое плечо утрачены. 
-                              Под рельефом по нижнему краю углубления небрежно вырезана однострочная надпись.</p>
+                           <p xml:lang="ru">Сохранилась нижняя часть стелы с шипом для крепления на
+                              постаменте. В прямоугольном углублении на рельефе фронтально
+                              изображена мужская фигура в хитоне, плаще и, возможно, штанах; голова
+                              и левое плечо утрачены. Под рельефом по нижнему краю углубления
+                              небрежно вырезана однострочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">21,5</height>
@@ -58,7 +63,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Вертикали ню одинаковой длины, О равен по величине другим буквам, курсивная сигма, отсутствует апицирование.</seg>
+                        <seg xml:lang="ru">Вертикали ню одинаковой длины, О равен по величине другим
+                           буквам, курсивная сигма, отсутствует апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,0</height>
                      </handNote>
@@ -70,16 +76,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0068" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0068" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">Кон. I – II в. н.э.</seg>
                         <seg xml:lang="en">Late I-II centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Время и место находки  достоверно установить не удалось. Возможно, происходит из раскопок К.К. 
-                           Косцюшко-Валюжинича (НА НЗХТ, д. 58, л. 4,  № 2; л. 11, № 12).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Время и место находки достоверно установить не
+                           удалось. Возможно, происходит из раскопок К.К. Косцюшко-Валюжинича (НА
+                           НЗХТ, д. 58, л. 4, № 2; л. 11, № 12).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,14 +105,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Biblio</change>
          <change when="2015-08-21" who="CB">App Crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-25" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -136,7 +149,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -146,7 +161,8 @@
             <p>Xanthos.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Миниатюрная форма стелы, а также отсутствие патронимика делают возможным предположение, что надгробие принадлежало ребенку.</p>
+            <p>Миниатюрная форма стелы, а также отсутствие патронимика делают возможным
+               предположение, что надгробие принадлежало ребенку.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

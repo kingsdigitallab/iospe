@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8"
+                              >Квадр.</objectType>
                            <objectType xml:lang="en">Wall block.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Подтесан со всех сторон. На нижней грани круглое углубление. Сохранились остатки трех строк надписи. Буквы стерты. Использован вторично в качестве строительного материала (вероятно, под пяту двери).</p>
+                           <p xml:lang="ru">Подтесан со всех сторон. На нижней грани круглое
+                              углубление. Сохранились остатки трех строк надписи. Буквы стерты.
+                              Использован вторично в качестве строительного материала (вероятно, под
+                              пяту двери).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">9,5</height>
@@ -56,7 +62,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Надпись выполнена непрофессиональным резчиком. Буквы неровные, ромбовидное омикрон, прямоугольная сигма, отсутствие апексов.</seg>
+                        <seg xml:lang="ru">Надпись выполнена непрофессиональным резчиком. Буквы
+                           неровные, ромбовидное омикрон, прямоугольная сигма, отсутствие
+                           апексов.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2-3</height>
                      </handNote>
@@ -75,13 +83,17 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1890 г. в центральной части городища, на площади около собора св. Владимира. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 19, л. 2, № 23).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1890 г. в центральной части городища, на
+                           площади около собора св. Владимира. Раскопки К.К. Косцюшко-Валюжинича (НА
+                           НЗХТ, д. 19, л. 2, № 23).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot"/>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -89,12 +101,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -131,8 +146,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>1: vestigia.</note></app>
-               <app><note>3: после Κ вертикальная черта; κ[εῖμαι] ? - ed. pr.</note></app>
+               <app>
+                  <note>1: vestigia.</note>
+               </app>
+               <app>
+                  <note>3: после Κ вертикальная черта; κ[εῖμαι] ? - ed. pr.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

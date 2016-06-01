@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент надгробия</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент надгробия</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Лицевая стороны обтесана, оборотная сторона обработана грубо. В небольшом углублении сохранились 
+                           <p xml:lang="ru">Оббита со всех сторон. Лицевая стороны обтесана,
+                              оборотная сторона обработана грубо. В небольшом углублении сохранились
                               остатки двух строк надписи, вырезанной крупными буквами.</p>
                            <p xml:lang="en"/>
                            <dimensions>
@@ -57,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы имеют несколько вытянутые пропорции, умеренное апицирование.</seg>
+                        <seg xml:lang="ru">Буквы имеют несколько вытянутые пропорции, умеренное
+                           апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">4,7</height>
                      </handNote>
@@ -69,14 +74,16 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
                         <rs type="circumstances">Нет данных.</rs>
                         <rs type="context"/>
                      </seg>
@@ -90,12 +97,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="KK">Leidenised</change>
@@ -136,7 +146,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>В конце стк. следы треугольной буквы.</note></app>
+               <app loc="1">
+                  <note>В конце стк. следы треугольной буквы.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -146,7 +158,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Ed. pr. предполагает, что на плите имеются следы tabula ansata и, следовательно, она могла служить стенкой саркофага.</p>
+            <p>Ed. pr. предполагает, что на плите имеются следы tabula ansata и, следовательно, она
+               могла служить стенкой саркофага.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

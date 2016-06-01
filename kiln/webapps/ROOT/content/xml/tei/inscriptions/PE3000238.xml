@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Посвящение Деве</title>
-             <title xml:lang="en">Dedication to Parthenos</title>
+            <title xml:lang="ru">Посвящение Деве</title>
+            <title xml:lang="en">Dedication to Parthenos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана сверху и справа. Лицевая грань заглажена, тыльная сторона обработана суммарно. 
-                              Частично сохранились четыре строки надписи.</p>
+                           <p xml:lang="ru">Обломана сверху и справа. Лицевая грань заглажена,
+                              тыльная сторона обработана суммарно. Частично сохранились четыре
+                              строки надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20,0</height>
@@ -57,8 +60,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, правая наклонная гаста дельта продлена за пересечение с левой гастой, тета с точкой, вертикальные гасты 
-                           ню имеют одинаковую длину, крупное омикрон, крупная овальная омега, I adscriptum, отдельные небольшие утолщения на концах линий букв,</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, правая наклонная гаста
+                           дельта продлена за пересечение с левой гастой, тета с точкой,
+                           вертикальные гасты ню имеют одинаковую длину, крупное омикрон, крупная
+                           овальная омега, I adscriptum, отдельные небольшие утолщения на концах
+                           линий букв,</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,0</height>
                      </handNote>
@@ -70,21 +76,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0100" evidence="палеография" precision="low">
+                     <origDate notBefore="0001" notAfter="0100" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">I в. н.э.</seg>
                         <seg xml:lang="en">Ist century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1890 г. в центральной части городища, на площади около собора св. Владимира. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 19, л. 5, № 35).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1890 г. в центральной части городища, на
+                           площади около собора св. Владимира. Раскопки К.К. Косцюшко-Валюжинича (НА
+                           НЗХТ, д. 19, л. 5, № 35).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -96,14 +106,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-26" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -119,9 +133,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, <citedRange>10</citedRange>, № 5 (<!--Latyschew 1895-->, <citedRange>516</citedRange>, № 6)</bibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 86</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>412</citedRange></bibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, <citedRange>10</citedRange>, № 5
+                  (<!--Latyschew 1895-->, <citedRange>516</citedRange>, № 6)</bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV 86</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>412</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -142,23 +159,32 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>в конце предыдущей стк. личное имя дедиканта в им. п.</note></app>
-               <app loc="3"><rdg source="bib:IOSPE">ἱε[ρατεύσαντος ?] <note>ed. pr.</note> 
-                  <note>я не исключаю также ἱε[ρεὺς ἐὼν ---], относящееся к дедиканту (cf. № ipe 414 и 415).</note></rdg> </app>
-               <app loc="4"><rdg source="bib:IOSPE"> Παρθένῳ <note>ed. pr.</note>
-                  <note>но следы Ι видны на камне.</note></rdg></app>
+               <app loc="1">
+                  <note>в конце предыдущей стк. личное имя дедиканта в им. п.</note>
+               </app>
+               <app loc="3">
+                  <rdg source="bib:IOSPE">ἱε[ρατεύσαντος ?] <note>ed. pr.</note>
+                     <note>я не исключаю также ἱε[ρεὺς ἐὼν ---], относящееся к дедиканту (cf. № ipe
+                        414 и 415).</note></rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:IOSPE"> Παρθένῳ <note>ed. pr.</note>
+                     <note>но следы Ι видны на камне.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
             <p>--- (сын) Зета, (посвятил) Деве за Газурия, (сына) [Метро]дора.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p>--- (son of) Zethos, (dedicated) to Parthenos on behalf of Gazourios, (son of) [Metro]doros.</p>
+            <p>--- (son of) Zethos, (dedicated) to Parthenos on behalf of Gazourios, (son of)
+               [Metro]doros.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В херсонесских надгробных надписях I в. н.э. засвидетельствованы два омонимичных персонажа по имени Газурий, 
-               сын Метродора (первый архонт в надписи № ipe471 и молодой человек в надписи № kadeev), возможно, дед и внук. 
-               Скорее всего, в этом посвящении упомянут кто-то из них.</p>
+            <p>В херсонесских надгробных надписях I в. н.э. засвидетельствованы два омонимичных
+               персонажа по имени Газурий, сын Метродора (первый архонт в надписи № ipe471 и молодой
+               человек в надписи № kadeev), возможно, дед и внук. Скорее всего, в этом посвящении
+               упомянут кто-то из них.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

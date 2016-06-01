@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Каммиса</title>
-             <title xml:lang="en">Epitaph of </title>
+            <title xml:lang="en">Epitaph of </title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>25/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>25/36504</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы с карнизом. Отбит левый верхний угол. Тыльная сторона обработана суммарно. 
-                              Под карнизом вырезана тонкими линиями и обведена черной краской двухстрочная надпись.</p>
+                           <p xml:lang="ru">Верхняя часть стелы с карнизом. Отбит левый верхний
+                              угол. Тыльная сторона обработана суммарно. Под карнизом вырезана
+                              тонкими линиями и обведена черной краской двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">38,0</height>
@@ -57,29 +61,34 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, мю с наклонными боковыми омикрон чуть меньше остальных букв, 
-                           верхние и нижние линии сигма почти горизонтальны, отсутствуют украшения на концах линий букв.</seg>
-                        <seg xml:lang="en">Nu with short right vertical, mu with slanting outer hastae</seg>
+                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, мю с наклонными
+                           боковыми омикрон чуть меньше остальных букв, верхние и нижние линии сигма
+                           почти горизонтальны, отсутствуют украшения на концах линий букв.</seg>
+                        <seg xml:lang="en">Nu with short right vertical, mu with slanting outer
+                           hastae</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1960 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1960 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII (башня Зенона) оборонительных стен. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-15" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Metadata and app crit</change>
@@ -119,8 +131,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>177</citedRange></bibl> <bibl> (<!--Bull. ép., 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman  2011--><ptr target="bib:b0437"/>, 444, № <citedRange>55</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>177</citedRange></bibl>
+               <bibl> (<!--Bull. ép., 1974--><ptr target="bib:BE"/>, <citedRange>1974,
+                     380</citedRange>)</bibl>
+               <bibl><!--Perlman  2011--><ptr target="bib:b0437"/>, 444, №
+                     <citedRange>55</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -137,7 +152,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -147,12 +164,14 @@
             <p>Kammis, (son of) Antiphilos.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Личное имя Κάμμις больше не засвидетельствовано. Предлагалась видеть в нем одноосновное имя группы καμεῖν (Bechtel, HPN 234) 
-               с экспрессивной геминацией (Robert 1966, 117). Ср. также ЛИ Καμις (Беотия, SEG 19, 352; LGPN III.B).</p>
+            <p>Личное имя Κάμμις больше не засвидетельствовано. Предлагалась видеть в нем
+               одноосновное имя группы καμεῖν (Bechtel, HPN 234) с экспрессивной геминацией (Robert
+               1966, 117). Ср. также ЛИ Καμις (Беотия, SEG 19, 352; LGPN III.B).</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p>Personal name Κάμμις is not otherwise attested. Предлагалась видеть в нем одноосновное имя группы καμεῖν (Bechtel, HPN 234) 
-               с экспрессивной геминацией (Robert 1966, 117). Cf. the name Καμις (Беотия, SEG 19, 352; LGPN III.B).</p>
+            <p>Personal name Κάμμις is not otherwise attested. Предлагалась видеть в нем
+               одноосновное имя группы καμεῖν (Bechtel, HPN 234) с экспрессивной геминацией (Robert
+               1966, 117). Cf. the name Καμις (Беотия, SEG 19, 352; LGPN III.B).</p>
          </div>
       </body>
    </text>

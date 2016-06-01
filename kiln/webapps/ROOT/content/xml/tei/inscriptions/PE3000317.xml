@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Частично сохранился правый карай плиты с остатками трех строк надписи, вырезанной по предварительной разметке. 
-                              Лицевая и оборотная сторона отшлифованы.</p>
+                           <p xml:lang="ru">Частично сохранился правый карай плиты с остатками трех
+                              строк надписи, вырезанной по предварительной разметке. Лицевая и
+                              оборотная сторона отшлифованы.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">8,5</height>
@@ -57,8 +60,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы глубокие, четкие; правая гаста дельта выходит за пересечение с левой гастой, эпсилон с горизонталями одинаковой длины, 
-                           омега в виде незамкнутого круга с примыкающими короткими горизонталями, апексы отсутствуют.</seg>
+                        <seg xml:lang="ru">Буквы глубокие, четкие; правая гаста дельта выходит за
+                           пересечение с левой гастой, эпсилон с горизонталями одинаковой длины,
+                           омега в виде незамкнутого круга с примыкающими короткими горизонталями,
+                           апексы отсутствуют.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,6</height>
                      </handNote>
@@ -77,9 +82,12 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1909 г. в северо-восточном районе Херсонеса, близ батареи Канэ (помещение XIV, цистерна). 
-                           Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, л. 28, № 1770; д. 70, л. 5, 13/04/09, № 1770; ср. д. 112).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1909 г. в северо-восточном районе
+                           Херсонеса, близ батареи Канэ (помещение XIV, цистерна). Раскопки Р.Х.
+                           Лепера (НА НЗХТ, д. 102, л. 28, № 1770; д. 70, л. 5, 13/04/09, № 1770;
+                           ср. д. 112).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,12 +100,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="CB">Added origDate</change>
          <change when="2015-11-06" who="KK">Leidenised</change>
          <change when="2015-11-02" who="CB">biblio and app crit</change>
@@ -118,7 +129,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>727</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>727</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -138,8 +150,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg>Ο <note>- ed. pr.</note></rdg></app>
-               <app loc="3"><note>верхняя часть треугольной буквы (Α ?).</note></app>
+               <app loc="1">
+                  <rdg>Ο <note>- ed. pr.</note></rdg>
+               </app>
+               <app loc="3">
+                  <note>верхняя часть треугольной буквы (Α ?).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

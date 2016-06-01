@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Боиска</title>
-             <title xml:lang="en">Epitaph of Boiskos</title>
+            <title xml:lang="ru">Надгробие Боиска</title>
+            <title xml:lang="en">Epitaph of Boiskos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранилась полностью. На плитке вырезана трехстрочная надпись. Верхняя часть лицевой стороны повреждена сколом.</p>
+                           <p xml:lang="ru">Сохранилась полностью. На плитке вырезана трехстрочная
+                              надпись. Верхняя часть лицевой стороны повреждена сколом.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,5</height>
@@ -56,7 +59,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Мю с почти параллельными боковыми линиями, ню с укороченной правой вертикалью, омикрон меньше остальных букв, сигма с наклонными верхней и нижней линиями, небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Мю с почти параллельными боковыми линиями, ню с
+                           укороченной правой вертикалью, омикрон меньше остальных букв, сигма с
+                           наклонными верхней и нижней линиями, небольшие утолщения на концах линий
+                           букв.</seg>
                         <seg xml:lang="en">Nu with short right vertical</seg>
                         <height unit="cm">1,3</height>
                      </handNote>
@@ -68,21 +74,26 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en"/>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1891 г. в южном районе Херсонеса на участке некрополя, расположенного «за южной городской стеной» (в насыпи). 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 2, л. 15 и д. 2, № 64; д. 3, л. 12; д. 20, л. 6, № 64).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1891 г. в южном районе Херсонеса на
+                           участке некрополя, расположенного «за южной городской стеной» (в насыпи).
+                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 2, л. 15 и д. 2, № 64; д.
+                           3, л. 12; д. 20, л. 6, № 64).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in 1891... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in 1891... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -94,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-08-24" who="CB">Biblio and app crit</change>
          <change when="2015-07-10" who="KK">Add photo file name</change>
@@ -115,15 +129,21 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1892--> <ptr target="bib:b0125"/>, 26, № <citedRange>9</citedRange></bibl>
-               <bibl><!--IOSPE--> <ptr target="bib:IOSPE"/> <citedRange>IV 103</citedRange></bibl>
-               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>470</citedRange></bibl>
+               <bibl><!--Латышев 1892-->
+                  <ptr target="bib:b0125"/>, 26, № <citedRange>9</citedRange></bibl>
+               <bibl><!--IOSPE-->
+                  <ptr target="bib:IOSPE"/>
+                  <citedRange>IV 103</citedRange></bibl>
+               <bibl><!--IOSPE I2-->
+                  <ptr target="bib:IOSPE2"/>
+                  <citedRange>470</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Буйских 2008--><ptr target="bib:b0449"/>, 61 (в качестве место находки ошибочно указан северный район Херсонеса)</bibl>
+               <bibl><!--Буйских 2008--><ptr target="bib:b0449"/>, 61 (в качестве место находки
+                  ошибочно указан северный район Херсонеса)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -135,7 +155,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -145,9 +167,11 @@
             <p>Boiskos, (son of) Neomenios.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В херсонесской эпиграфике эллинистического времени мужское имя Βοίσκος (ср. Bechtel, HPN 581, «Personennamen aus Tiernamen») 
-               встречается только в этой надписи (многочисленные примеры римского времени см. в LGPN IV; засвидетельствовано также в Гераклее 
-               Понтийской ок. 300 г. до н.э., Ameling 1994, 130). Относительно ЛИ Νεομήνιος см. № MakSam01.</p>
+            <p>В херсонесской эпиграфике эллинистического времени мужское имя Βοίσκος (ср. Bechtel,
+               HPN 581, «Personennamen aus Tiernamen») встречается только в этой надписи
+               (многочисленные примеры римского времени см. в LGPN IV; засвидетельствовано также в
+               Гераклее Понтийской ок. 300 г. до н.э., Ameling 1994, 130). Относительно ЛИ Νεομήνιος
+               см. № MakSam01.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

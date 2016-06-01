@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надпись агоранома о строительстве</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Надпись агоранома о строительстве</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон кроме левой, расколота пополам. Лицевая сторона тщательно обработана. 
-                              Сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="ru">Оббита со всех сторон кроме левой, расколота пополам.
+                              Лицевая сторона тщательно обработана. Сохранились остатки трех строк
+                              надписи, вырезанной по предварительной разметке.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">14,0</height>
@@ -57,7 +60,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Слегка удлиненная форма букв, овальное омикрон в высоту строки, сигма с параллельными верхней и нижней линиями, 
+                        <seg xml:lang="ru">Слегка удлиненная форма букв, овальное омикрон в высоту
+                           строки, сигма с параллельными верхней и нижней линиями,
                            знаки-разделители, сильное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,5</height>
@@ -77,8 +81,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1949 г. в северном районе городища, недалеко от Базилики 1935 г., в помещении № 4. Раскопки Г.Д. Белова (НА НЗХТ, д. 622, л. 15; ср. Белов 1955, 272).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1949 г. в северном районе городища,
+                           недалеко от Базилики 1935 г., в помещении № 4. Раскопки Г.Д. Белова (НА
+                           НЗХТ, д. 622, л. 15; ср. Белов 1955, 272).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -91,13 +98,16 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-20" who="KK">Leidenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-20" who="KK">Leidenised</change>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -140,16 +150,32 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>НЭПХ I 26.</note></app>
-               <app><note>0: [ὁ δεῖνα τοῦ δεῖνος] - НЭПХ.</note></app>
-               <app><note>0-1: [τὸν] | ἀγοραν̣[ομήσαντα ?] vel [τὸν] | ἀγοραν̣[όμιον ? οἰκοδομήσαντα] - Nadel.</note></app>
-               <app><note>1-2: ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ? κατεσκεύασε] - НЭПХ; не исключаю [ἐπεσκεύασε] vel sim. </note></app>
-               <app><note>2: по обеим сторонам слова ἔτει точки-разделители.</note></app>
-               <app><note>3: в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ; [- - -]ι̣ο̣υ̣[- - -] - НЭПХ.</note></app>
+               <app>
+                  <note>НЭПХ I 26.</note>
+               </app>
+               <app>
+                  <note>0: [ὁ δεῖνα τοῦ δεῖνος] - НЭПХ.</note>
+               </app>
+               <app>
+                  <note>0-1: [τὸν] | ἀγοραν̣[ομήσαντα ?] vel [τὸν] | ἀγοραν̣[όμιον ? οἰκοδομήσαντα]
+                     - Nadel.</note>
+               </app>
+               <app>
+                  <note>1-2: ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ?
+                     κατεσκεύασε] - НЭПХ; не исключаю [ἐπεσκεύασε] vel sim. </note>
+               </app>
+               <app>
+                  <note>2: по обеим сторонам слова ἔτει точки-разделители.</note>
+               </app>
+               <app>
+                  <note>3: в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ;
+                     [- - -]ι̣ο̣υ̣[- - -] - НЭПХ.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>- - - в 205 году, будучи агораномом, построил (восстановил) на собственные средства [агораномий ?] - - -</p>
+            <p>- - - в 205 году, будучи агораномом, построил (восстановил) на собственные средства
+               [агораномий ?] - - -</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

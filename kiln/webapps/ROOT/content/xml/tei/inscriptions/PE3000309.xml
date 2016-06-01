@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки одной строки надписи, вырезанной крупными буквами. 
-                              Лицевая и оборотная сторона сглажены.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки одной
+                              строки надписи, вырезанной крупными буквами. Лицевая и оборотная
+                              сторона сглажены.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">12,0</height>
@@ -57,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Крупные буквы, слегка изогнутые верхние и нижние линии сигма немного расходятся, утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Крупные буквы, слегка изогнутые верхние и нижние линии
+                           сигма немного расходятся, утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">7,5</height>
                      </handNote>
@@ -76,9 +81,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1908 г. в северо-восточном районе городища «в колодце с предметами позднеримского времени». 
-                           Раскопки Р.Х. Лепера.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1908 г. в северо-восточном районе
+                           городища «в колодце с предметами позднеримского времени». Раскопки Р.Х.
+                           Лепера.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -99,10 +106,13 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
 
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+
+         <change when="2015-11-13" who="KK">Tokenised</change>
 
          <change when="2015-11-13" who="CB">added origDate</change>
 
@@ -125,8 +135,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Лепер 1912--><ptr target="bib:b0480"/>, 66, № <citedRange>14</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>649</citedRange> (без чтения)</bibl>
+               <bibl><!--Лепер 1912--><ptr target="bib:b0480"/>, 66, №
+                  <citedRange>14</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>649</citedRange> (без чтения)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -144,8 +156,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><rdg source="bib:b0480">[- - -]ΣΙΣ[- - -]<note>, не исключая Ζ в конце стк.</note></rdg>
-                 <note> на фото издателей видно соединение наклонной и горизонтальной гасты (Σ, Ζ, Δ ?).</note></app>
+               <app>
+                  <rdg source="bib:b0480">[- - -]ΣΙΣ[- - -]<note>, не исключая Ζ в конце
+                     стк.</note></rdg>
+                  <note> на фото издателей видно соединение наклонной и горизонтальной гасты (Σ, Ζ,
+                     Δ ?).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -155,7 +171,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Издатели оставляют надпись без датировки. Лепер отмечает, что «судя по величине букв, надпись была посвятительная».</p>
+            <p>Издатели оставляют надпись без датировки. Лепер отмечает, что «судя по величине букв,
+               надпись была посвятительная».</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

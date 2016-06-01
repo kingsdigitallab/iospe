@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Мендико</title>
-             <title xml:lang="en">Epitaph of Mendiko</title>
+            <title xml:lang="ru">Надгробие Мендико</title>
+            <title xml:lang="en">Epitaph of Mendiko</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>65/36847 + 59/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>65/36847 + 59/36847</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>65/36847 + 59/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,14 +35,19 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела с карнизом (и, возможно, приставным фронтоном). Расколота на три части. Сохранилась практически полностью 
-                              (частично отбит шип для крепления к постаменту). Лицевая и боковые грани украшены рельефными розетками. 
-                              Между карнизом и розетками по предварительной разметке черной краской нанесена двухстрочная надпись. 
-                              Под розетками выполненое кистью изображение тэний, а также висящего на шнурке алабастра.</p>
+                           <p xml:lang="ru">Стела с карнизом (и, возможно, приставным фронтоном).
+                              Расколота на три части. Сохранилась практически полностью (частично
+                              отбит шип для крепления к постаменту). Лицевая и боковые грани
+                              украшены рельефными розетками. Между карнизом и розетками по
+                              предварительной разметке черной краской нанесена двухстрочная надпись.
+                              Под розетками выполненое кистью изображение тэний, а также висящего на
+                              шнурке алабастра.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">160,0</height>
@@ -59,18 +65,21 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, наклонные гасты каппа укорочены, правая вертикаль ню слегка приподнята, крупная, немного вытянутая омега,
-                           слегка изогнутые линии букв, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Epsilon with a short middle bar, nu with short right vertical</seg>
+                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, наклонные гасты
+                           каппа укорочены, правая вертикаль ню слегка приподнята, крупная, немного
+                           вытянутая омега, слегка изогнутые линии букв, утолщения на концах линий
+                           букв.</seg>
+                        <seg xml:lang="en">Epsilon with a short middle bar, nu with short right
+                           vertical</seg>
                         <height unit="cm">2,4</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0251" evidence="палеография">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
@@ -79,9 +88,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 гг. в юго-восточном районе Херсонеса в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 гг. в юго-восточном районе Херсонеса
+                           в кладке ядра башни XVII (башня Зенона) оборонительных стен. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +109,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-28" who="CB">Correcting app crit</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
@@ -122,9 +136,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 63, № <citedRange>13</citedRange></bibl>
-               <bibl><!--НЭПХ  II--><ptr target="bib:НЭПХ2"/> <citedRange>147</citedRange></bibl> <bibl> (<!--Bull.ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/> , 429, № <citedRange>2</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 63, №
+                     <citedRange>13</citedRange></bibl>
+               <bibl><!--НЭПХ  II--><ptr target="bib:НЭПХ2"/>
+                  <citedRange>147</citedRange></bibl>
+               <bibl> (<!--Bull.ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974,
+                     380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/> , 429, №
+                     <citedRange>2</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -148,10 +167,11 @@
             <listApp>
                <app loc="1">
                   <rdg source="bib:b0504 bib:НЭПХ2"> [Ἡρ]αίου</rdg>
-                  <rdg source="bib:LGPN"><unclear>Ν</unclear><supplied reason="lost">ι</supplied><unclear>κ</unclear>αίου</rdg> 
+                  <rdg source="bib:LGPN"><unclear>Ν</unclear><supplied reason="lost"
+                        >ι</supplied><unclear>κ</unclear>αίου</rdg>
                   <rdg source="bib:b0437">Ν[ι]καίου</rdg>
-               <note>На камне виден низ вертикали, за которым следует небольшая лакуна (не ясно, была ли буква на ее месте), 
-                  затем нижнее утолщение вертикальной гасты.</note>
+                  <note>На камне виден низ вертикали, за которым следует небольшая лакуна (не ясно,
+                     была ли буква на ее месте), затем нижнее утолщение вертикальной гасты.</note>
                </app>
             </listApp>
          </div>
@@ -162,12 +182,15 @@
             <p>Mendiko, (daughter of) [---], wife of Sannion.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Относительно предполагаемого фронтона, венчавшего стелу, см. Posamentir 2011, 142.</p>
-            <p>Теофорное личное имя фракийского происхождения Μενδικώ связано с культом богини Βενδῖς, имевшим распространение в Греции, 
-               в частности в Аттике и на Евбее, в течение классического и раннеэллинистического времени. 
-               По поводу антропонимов, происходящих от этого имени божества см. Bechtel, HPN, 93; Masson 1988, 6 слл. = OGS II 605 слл. 
-               (там же примеры колебания начального согласного между β и μ); Stolba 1996, 453. ЛИ Νίκαιος в Херсонесе не засвидетельствовано, 
-               ЛИ     Ἡραῖος встречается однократно в надписи римского времени (№ ipe359).</p>
+            <p>Относительно предполагаемого фронтона, венчавшего стелу, см. Posamentir 2011,
+               142.</p>
+            <p>Теофорное личное имя фракийского происхождения Μενδικώ связано с культом богини
+               Βενδῖς, имевшим распространение в Греции, в частности в Аттике и на Евбее, в течение
+               классического и раннеэллинистического времени. По поводу антропонимов, происходящих
+               от этого имени божества см. Bechtel, HPN, 93; Masson 1988, 6 слл. = OGS II 605 слл.
+               (там же примеры колебания начального согласного между β и μ); Stolba 1996, 453. ЛИ
+               Νίκαιος в Херсонесе не засвидетельствовано, ЛИ Ἡραῖος встречается однократно в
+               надписи римского времени (№ ipe359).</p>
             <p>O Саннионe и его семье см. комментарий к № neph146.</p>
          </div>
          <div type="commentary" xml:lang="en">

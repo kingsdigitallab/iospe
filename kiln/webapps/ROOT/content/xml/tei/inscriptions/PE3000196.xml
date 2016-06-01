@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент метрической эпитафии римского времени</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент метрической эпитафии римского времени</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Лицевой фас плиты тщательно обработан, тыльная сторона плиты обработана суммарно. 
-                              На лицевой стороне сохранилось двенадцать строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Лицевой фас плиты тщательно
+                              обработан, тыльная сторона плиты обработана суммарно. На лицевой
+                              стороне сохранилось двенадцать строк надписи, вырезанной по
+                              предварительной разметке.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">26,0</height>
@@ -57,8 +61,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы вырезаны глубоко, некоторые из них слегка наклонены вправо, правая гаста дельта и лямбда выступает за пересечение с левой гастой, 
-                           тета с не доходящей до краев окружности перекладиной, линии некоторых букв слегка изогнутыг, крупные апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Буквы вырезаны глубоко, некоторые из них слегка наклонены
+                           вправо, правая гаста дельта и лямбда выступает за пересечение с левой
+                           гастой, тета с не доходящей до краев окружности перекладиной, линии
+                           некоторых букв слегка изогнутыг, крупные апексы на концах линий
+                           букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,0</height>
                      </handNote>
@@ -77,9 +84,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1987 г. в юго-восточном районе херсонесского городища на участке «цитадели» в засыпи куртины 19 оборонительной 
-                           стены. Раскопки И.А. Антоновой.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1987 г. в юго-восточном районе
+                           херсонесского городища на участке «цитадели» в засыпи куртины 19
+                           оборонительной стены. Раскопки И.А. Антоновой.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-27" who="CB">correcting app crit</change>
          <change when="2015-09-01" who="CB">app crit</change>
@@ -104,7 +116,8 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-26" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,7 +133,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl n="Макаров И.А. 2009">
-               <bibl>Две метрические эпитафии римского времени из Херсонеса Таврического //<!-- ВДИ--><ptr target="ВДИ"/>, <citedRange>3, 113-122.</citedRange></bibl>
+               <bibl>Две метрические эпитафии римского времени из Херсонеса Таврического
+                     //<!-- ВДИ--><ptr target="ВДИ"/>, <citedRange>3, 113-122.</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -162,30 +176,55 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>В конце стк. 4 и 8 vacat обозначает, очевидно, окончание пентаметра.</note></app>
-               <app loc="1"><note>в конце строки видна нижняя часть вертикали и следы косой гасты (возможно, Ν, Κ, Μ, Λ).</note></app>
-               <app loc="3"><note>в конце строки след от косой черты, вероятно, M.</note></app>
-               <app loc="3/4"><rdg><note>e.g.</note> [ἀθάνατος δ’ αἰεὶ ψυχὰ] πταμένα ποτ’ Ὄλυ<unclear>μ</unclear>[πον | ναιετάει χώρου δῶμα μ]ε[λ]ισταγέος.</rdg></app>
-               <app loc="4"><rdg>ΕΔΙΣΤΑΓΕΟΣ <note>lapis.</note></rdg></app>
+               <app>
+                  <note>В конце стк. 4 и 8 vacat обозначает, очевидно, окончание пентаметра.</note>
+               </app>
+               <app loc="1">
+                  <note>в конце строки видна нижняя часть вертикали и следы косой гасты (возможно,
+                     Ν, Κ, Μ, Λ).</note>
+               </app>
+               <app loc="3">
+                  <note>в конце строки след от косой черты, вероятно, M.</note>
+               </app>
+               <app loc="3/4">
+                  <rdg><note>e.g.</note> [ἀθάνατος δ’ αἰεὶ ψυχὰ] πταμένα ποτ’
+                        Ὄλυ<unclear>μ</unclear>[πον | ναιετάει χώρου δῶμα μ]ε[λ]ισταγέος.</rdg>
+               </app>
+               <app loc="4">
+                  <rdg>ΕΔΙΣΤΑΓΕΟΣ <note>lapis.</note></rdg>
+               </app>
                <app loc="7">
                   <note>в начале строки след неопределенной буквы (T ?);</note>
-                  <rdg><note>fin.:</note>ἁρ<unclear>π</unclear>[ασθέντι] <note>vel</note> ἁρ<unclear>π</unclear>[ασθεῖσα]</rdg>
+                  <rdg><note>fin.:</note>ἁρ<unclear>π</unclear>[ασθέντι] <note>vel</note>
+                        ἁρ<unclear>π</unclear>[ασθεῖσα]</rdg>
                </app>
-               <app loc="9"><note>в конце строки вероятна S.</note></app>
-               <app loc="10"><rdg><note>e.g.</note> φωτὸς ἴδ<unclear>μ</unclear>[ονος εὐσεβίας]</rdg></app> 
-               <app loc="10"><note>в конце строки, вероятно, M или A.</note></app>
-               <app loc="11"><rdg><note>cf. GV 15124: </note>ἀστημφὴς Ἀίδης.</rdg></app>
-               <app loc="12"><note>от последней буквы сохранилась вертикальная гаста (H ?).</note></app>
+               <app loc="9">
+                  <note>в конце строки вероятна S.</note>
+               </app>
+               <app loc="10">
+                  <rdg><note>e.g.</note> φωτὸς ἴδ<unclear>μ</unclear>[ονος εὐσεβίας]</rdg>
+               </app>
+               <app loc="10">
+                  <note>в конце строки, вероятно, M или A.</note>
+               </app>
+               <app loc="11">
+                  <rdg><note>cf. GV 15124: </note>ἀστημφὴς Ἀίδης.</rdg>
+               </app>
+               <app loc="12">
+                  <note>от последней буквы сохранилась вертикальная гаста (H ?).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[--- Аид] широко расстелил (свое) ложе, ---  дороги бессмертных, --- похищенному роком, --- повиновался подземной [богине ---].</p>
+            <p>[--- Аид] широко расстелил (свое) ложе, --- дороги бессмертных, --- похищенному
+               роком, --- повиновался подземной [богине ---].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Метрически завершение укороченных строк 4 и 8 соответствует одной и той же схеме: –∪∪–, что указывает на окончание пентаметра.</p>
+            <p> Метрически завершение укороченных строк 4 и 8 соответствует одной и той же схеме:
+               –∪∪–, что указывает на окончание пентаметра.</p>
             <p>II в. н.э. (вероятно, вторая треть II в. н.э.).</p>
          </div>
          <div type="commentary" xml:lang="en">

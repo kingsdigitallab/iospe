@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Датирующая формула декрета эллинистического времени</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Датирующая формула декрета эллинистического времени</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился левый нижний угол плиты с остаткам трех строк надписи. Вторично использована для изготовления вставки к 
-                              надгробию (№ ipe713).</p>
+                           <p xml:lang="ru">Сохранился левый нижний угол плиты с остаткам трех строк
+                              надписи. Вторично использована для изготовления вставки к надгробию (№
+                              ipe713).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,0</height>
@@ -57,9 +60,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, широкая гамма, эпсилон короткой средней горизонталью, 
-                           мю с немного расходящимися внешними гастами, верхняя и нижняя гасты сигма параллельны, овальная омега с горизонтальными линиями, 
-                           примыкающими к тулову выше нижней линии строки утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, широкая гамма, эпсилон
+                           короткой средней горизонталью, мю с немного расходящимися внешними
+                           гастами, верхняя и нижняя гасты сигма параллельны, овальная омега с
+                           горизонтальными линиями, примыкающими к тулову выше нижней линии строки
+                           утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">0,7</height>
                      </handNote>
@@ -78,8 +83,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1914 г. в западном районе Херсонеса, в оборонительной стене, между оборонительными стенами a и b. (НА НЗХТ, д. 110, л. 18, № 1015).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1914 г. в западном районе Херсонеса, в
+                           оборонительной стене, между оборонительными стенами a и b. (НА НЗХТ, д.
+                           110, л. 18, № 1015).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,13 +100,16 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-20" who="KK">Leidenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-20" who="KK">Leidenised</change>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -136,12 +147,17 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>1, in.: [π]ροαισιμνῶντος - IOSPE.</note></app>
-               <app><note>2/3: [Ματρο?]|δώ[ρ]ου - IOSPE.</note></app>
+               <app>
+                  <note>1, in.: [π]ροαισιμνῶντος - IOSPE.</note>
+               </app>
+               <app>
+                  <note>2/3: [Ματρο?]|δώ[ρ]ου - IOSPE.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[- - -] при председателе эсимнетов - - - (сыне) Гераклия, при секретаре [- - -]доре (сыне) С[- - -].</p>
+            <p>[- - -] при председателе эсимнетов - - - (сыне) Гераклия, при секретаре [- - -]доре
+               (сыне) С[- - -].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

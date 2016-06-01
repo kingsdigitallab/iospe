@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Гиеро</title>
-             <title xml:lang="en">Epitaph of Hiero</title>
+            <title xml:lang="ru">Надгробие Гиеро</title>
+            <title xml:lang="en">Epitaph of Hiero</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела, украшенная фронтоном с тремя акротериями (сбиты). 
-                              Сохранилась верхняя часть. Под карнизом вырезана и обведена красной краской двухстрочная надпись. 
-                              Под надписью видны следы краски (вероятно, изображение тэний).</p>
+                           <p xml:lang="ru">Стела, украшенная фронтоном с тремя акротериями (сбиты).
+                              Сохранилась верхняя часть. Под карнизом вырезана и обведена красной
+                              краской двухстрочная надпись. Под надписью видны следы краски
+                              (вероятно, изображение тэний).</p>
                            <p xml:lang="en">Stele...</p>
                            <dimensions>
                               <height unit="cm">40,0</height>
@@ -58,9 +62,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с немного укороченной правой вертикалью, 
-                           омикрон чуть меньше остальных букв, широко расходящиеся наклонные линии ипсилон, 
-                           омега широкая, без сближения нижних концов дуги, отсутствие украшений на концах букв.</seg>
+                        <seg xml:lang="ru">Ню с немного укороченной правой вертикалью, омикрон чуть
+                           меньше остальных букв, широко расходящиеся наклонные линии ипсилон, омега
+                           широкая, без сближения нижних концов дуги, отсутствие украшений на концах
+                           букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,5</height>
                      </handNote>
@@ -72,16 +77,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0351" notAfter="-0301" evidence="палеография" precision="low">
+                     <origDate notBefore="-0351" notAfter="-0301" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IVth century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII (башня Зенона) оборонительных стен. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-18" who="CB">Adding biblio and app crit tags</change>
          <change when="2015-11-03" who="CB">Adding origDate</change>
@@ -122,9 +133,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 61, № <citedRange>6</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>140</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, № <citedRange>40</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 61, №
+                     <citedRange>6</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>140</citedRange></bibl>
+               <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974,
+                  380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, №
+                     <citedRange>40</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -143,12 +158,15 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg source="bib:LGPN">[Ἱ]<unclear>ε</unclear>ρώ</rdg> 
-                  <rdg source="bib:b0437"><unclear>Ἱε</unclear>ρώ</rdg> 
-                  <rdg source="bib:b0504 bib:НЭПХ2"><unclear>Ἐρώ</unclear></rdg></app>
-               <app loc="2"><rdg source="bib:b0450">[Δι]αθαναίου</rdg> 
-                  <rdg source="bib:b0774">[Φιλ]αθαναίου <note>(ср. Кац 1994, № 46),</note></rdg> 
-                 </app>
+               <app loc="1">
+                  <rdg source="bib:LGPN">[Ἱ]<unclear>ε</unclear>ρώ</rdg>
+                  <rdg source="bib:b0437"><unclear>Ἱε</unclear>ρώ</rdg>
+                  <rdg source="bib:b0504 bib:НЭПХ2"><unclear>Ἐρώ</unclear></rdg>
+               </app>
+               <app loc="2">
+                  <rdg source="bib:b0450">[Δι]αθαναίου</rdg>
+                  <rdg source="bib:b0774">[Φιλ]αθαναίου <note>(ср. Кац 1994, № 46),</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -158,15 +176,20 @@
             <p>Hiero, wife of Athanaios.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В этой надписи (а также в нескольких других надписях, см. № neph 142; 156; 158; ipe520; ср. № neph162) не указан патронимик замужней женщины. 
-               Высказывалось вероятное предположение (Perlman 2011, 386), что объяснение этому факту следует искать скорее в эпиграфической практике («epigraphic habits»),
-               принятой в Херсонеса в IV в. до н.э., нежели в стремлении скрыть происхождение умершей.</p>
-            <p>Женское ЛИ Ἱερώ засвидетельствовано также в надгробной надписи эллинистического времени № neph174. 
-               Теофорное ЛИ в дорийской огласовке Ἀθάναιος многократно встречается в надписях Херсонеса эллинистического времени 
-               (ср. написание Ἀθήναιος, преобладающее в римское время; LGPN IV s.vv.).</p>
-            <p>2. [Δι]αθαναίου e.g. (имя не засвидетельствовано); [Φιλ]αθαναίου однако слева от начала стк. недостаточно места для дополнения 3 букв 
-               (ср. Perlman: «the stone is damaged, perhaps intentionally, to the left of the initial letter in line 2 and so it is not possible to determine if the mason offset the letters 
-               to accommodate a sculpted or painted design element»).</p>
+            <p>В этой надписи (а также в нескольких других надписях, см. № neph 142; 156; 158;
+               ipe520; ср. № neph162) не указан патронимик замужней женщины. Высказывалось вероятное
+               предположение (Perlman 2011, 386), что объяснение этому факту следует искать скорее в
+               эпиграфической практике («epigraphic habits»), принятой в Херсонеса в IV в. до н.э.,
+               нежели в стремлении скрыть происхождение умершей.</p>
+            <p>Женское ЛИ Ἱερώ засвидетельствовано также в надгробной надписи эллинистического
+               времени № neph174. Теофорное ЛИ в дорийской огласовке Ἀθάναιος многократно
+               встречается в надписях Херсонеса эллинистического времени (ср. написание Ἀθήναιος,
+               преобладающее в римское время; LGPN IV s.vv.).</p>
+            <p>2. [Δι]αθαναίου e.g. (имя не засвидетельствовано); [Φιλ]αθαναίου однако слева от
+               начала стк. недостаточно места для дополнения 3 букв (ср. Perlman: «the stone is
+               damaged, perhaps intentionally, to the left of the initial letter in line 2 and so it
+               is not possible to determine if the mason offset the letters to accommodate a
+               sculpted or painted design element»).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

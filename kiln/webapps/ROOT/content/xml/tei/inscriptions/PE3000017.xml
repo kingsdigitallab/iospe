@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Антипатра</title>
-             <title xml:lang="en">Epitaph of Antipatros</title>
+            <title xml:lang="en">Epitaph of Antipatros</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,15 +35,19 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы, украшенная карнизом без антефиксов.  
-                              На лицевой стороне рельефные розетки (правая сбита), под которыми сохранились следы изображения посоха 
-                              (прочерчены контуры, слабые следы красной краски). Tыльная сторона заглажена. 
-                              Между карнизом и розетками в неглубоком прямоугольном углублении вырезана двухстрочная надпись. 
-                              Верхний левый угол стелы и поле надписи повреждены глубокой трещиной.</p>
+                           <p xml:lang="ru">Верхняя часть стелы, украшенная карнизом без антефиксов.
+                              На лицевой стороне рельефные розетки (правая сбита), под которыми
+                              сохранились следы изображения посоха (прочерчены контуры, слабые следы
+                              красной краски). Tыльная сторона заглажена. Между карнизом и розетками
+                              в неглубоком прямоугольном углублении вырезана двухстрочная надпись.
+                              Верхний левый угол стелы и поле надписи повреждены глубокой
+                              трещиной.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">42,5</height>
@@ -60,9 +65,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Мю с наклонными боковыми, правая вертикаль ню слегка приподнята, 
-                           сигма с расходящимися верхними и нижними линиями, слегка изогнутые линии отдельных букв, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Mu with slanting outer hastae, nu with short right vertical, four-bar sigma with splayed bars</seg>
+                        <seg xml:lang="ru">Мю с наклонными боковыми, правая вертикаль ню слегка
+                           приподнята, сигма с расходящимися верхними и нижними линиями, слегка
+                           изогнутые линии отдельных букв, утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Mu with slanting outer hastae, nu with short right
+                           vertical, four-bar sigma with splayed bars</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
@@ -73,15 +80,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Случаная находка 1989 г. в районе Загородного храма.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Случаная находка 1989 г. в районе Загородного
+                           храма.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +108,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-09-28" who="CB">Tagging bibliography</change>
          <change when="2015-07-10" who="KK">Add photo file name</change>
@@ -126,8 +139,10 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Posamentir 2006--><ptr target="bib:b0438"/>, 42 сл. (фото, без издания греческого текста)</bibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 85, № C3 (фото, без издания греческого текста)</bibl>
+               <bibl><!--Posamentir 2006--><ptr target="bib:b0438"/>, 42 сл. (фото, без издания
+                  греческого текста)</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 85, № C3 (фото, без издания
+                  греческого текста)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -138,7 +153,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -148,10 +165,11 @@
             <p>Antipatros, (son of) Timion.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Имя Ἀντίπατρος фигурирует в херсонесских надписях эллинистического и римского времени (LGPN IV). 
-               Имя Τιμίων в Херсонесе больше не встречается. Не исключено, что упомянутый в надписи № ipe511 Тимон, 
-               сын Антипатра, происходил из той же семьи (являлся сыном Антипатра, упомянутого в этой надписи ?). 
-               Стела, вероятно, выполнена в той же мастерской, что и № neph180.</p>
+            <p>Имя Ἀντίπατρος фигурирует в херсонесских надписях эллинистического и римского времени
+               (LGPN IV). Имя Τιμίων в Херсонесе больше не встречается. Не исключено, что упомянутый
+               в надписи № ipe511 Тимон, сын Антипатра, происходил из той же семьи (являлся сыном
+               Антипатра, упомянутого в этой надписи ?). Стела, вероятно, выполнена в той же
+               мастерской, что и № neph180.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

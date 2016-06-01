@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Стела Пасиона</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Стела Пасиона</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы, расколотая на две части. На тыльной стороне заметны следы вторичного использования. 
-                              На лицевой стороне над сбитыми рельефными розетками хорошо сохранившаяся надпись, выполненная красной краской.</p>
+                           <p xml:lang="ru">Верхняя часть стелы, расколотая на две части. На тыльной
+                              стороне заметны следы вторичного использования. На лицевой стороне над
+                              сбитыми рельефными розетками хорошо сохранившаяся надпись, выполненная
+                              красной краской.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">36,0</height>
@@ -57,8 +62,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Слегка изогнутые линии букв, мю и сигма с широко расставленными боковыми гастами, 
-                           ню с немного укороченной правой вертикалью, омикрон меньше остальных букв (1,2 см), небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Слегка изогнутые линии букв, мю и сигма с широко
+                           расставленными боковыми гастами, ню с немного укороченной правой
+                           вертикалью, омикрон меньше остальных букв (1,2 см), небольшие утолщения
+                           на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -70,15 +77,20 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 2008 г. в юго-восточном районе Херсонеса в ходе археологического изучения куртины 19 оборонительных стен. Обнаружена в слое третьего строительного периода. Раскопки В.Г. Самойленко.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 2008 г. в юго-восточном районе Херсонеса
+                           в ходе археологического изучения куртины 19 оборонительных стен.
+                           Обнаружена в слое третьего строительного периода. Раскопки В.Г.
+                           Самойленко.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,7 +107,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
          <change when="2015-08-24" who="CB">App crit check</change>
@@ -123,7 +138,6 @@
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -136,7 +150,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -146,8 +162,15 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Самое раннее упоминание граждан метрополии Херсонеса Гераклеи Понтийской в херсонесской эпиграфике. Другие свидетельства относятся к римскому времени (ср. Avram PPE 1865 слл.), среди которых которых, в частности, два надгробия: Гераклеонa, сынa Менофонта (ipe544) и Понтикa, сына Немерия (ipe545).</p>
-            <p>Личные имена общегреческого характера Πασίων и Διότιμος в гераклейской просопографии до настоящего времени не встречались (LGPN VA). В то же время ЛИ Пасион неоднократно засвидетельствовано в Херсонесе в III–II в. до н.э. (LGPN IV), а Диотим упоминается во второй половине II в. до н.э. как монетарий на двух разновидностях херсонесских серебряных монет (Анохин 1977, 146, № 181, 183).</p>
+            <p> Самое раннее упоминание граждан метрополии Херсонеса Гераклеи Понтийской в
+               херсонесской эпиграфике. Другие свидетельства относятся к римскому времени (ср. Avram
+               PPE 1865 слл.), среди которых которых, в частности, два надгробия: Гераклеонa, сынa
+               Менофонта (ipe544) и Понтикa, сына Немерия (ipe545).</p>
+            <p>Личные имена общегреческого характера Πασίων и Διότιμος в гераклейской просопографии
+               до настоящего времени не встречались (LGPN VA). В то же время ЛИ Пасион неоднократно
+               засвидетельствовано в Херсонесе в III–II в. до н.э. (LGPN IV), а Диотим упоминается
+               во второй половине II в. до н.э. как монетарий на двух разновидностях херсонесских
+               серебряных монет (Анохин 1977, 146, № 181, 183).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела, украшенная фронтоном с тремя акротериями (стесаны при вторичном использовании). 
-                              Сохранилась верхняя часть, расколотая на два фрагмента. Под карнизом вырезана и обведена красной краской трехстрочная надпись. 
-                              Под надписью видны следы краски (вероятно, изображение тэний).</p>
+                           <p xml:lang="ru">Стела, украшенная фронтоном с тремя акротериями (стесаны
+                              при вторичном использовании). Сохранилась верхняя часть, расколотая на
+                              два фрагмента. Под карнизом вырезана и обведена красной краской
+                              трехстрочная надпись. Под надписью видны следы краски (вероятно,
+                              изображение тэний).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">84,0</height>
@@ -58,7 +63,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, крупное омикрон, широко расходящиеся наклонные линии ипсилон, отсутствие утолщений на концах букв.</seg>
+                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, крупное омикрон,
+                           широко расходящиеся наклонные линии ипсилон, отсутствие утолщений на
+                           концах букв.</seg>
                         <seg xml:lang="en">Nu with short right vertical</seg>
                         <height unit="cm">3,2</height>
                      </handNote>
@@ -70,16 +77,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0400" notAfter="-0351" evidence="палеография" precision="low">
+                     <origDate notBefore="-0400" notAfter="-0351" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IVth century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII (башня Зенона) оборонительных стен. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,12 +102,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2014-09-24" who="CB">Tagging biblio</change>
@@ -121,9 +134,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 62, №<citedRange>8</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="НЭПХ2"/>, <citedRange>142</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, № <citedRange>41</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 62,
+                  №<citedRange>8</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="НЭПХ2"/>, <citedRange>142</citedRange></bibl>
+               <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974,
+                  380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, №
+                     <citedRange>41</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,7 +158,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -151,11 +170,14 @@
             <p>Myttina, wife of Dionysios.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В этой надписи (а также в нескольких других надписях, см. № neph 140; 156; 158; ipe520; ср. № neph162) 
-               не указан патронимик замужней женщины (см. комментарий к № neph140).</p>
-            <p>Женское ЛИ Μυττίνα, вероятно, представляет собой гипокористик группы μυττός («немой»; Hsch. s.v.). 
-               Ср. Μυτίνα на херсонесском граффити IV-III в. до н.э. (SEG 44, 657). Ср. также засвидетельствованнoe в Херсонесе мужское имя Κλεμυτάδας (LGPN IV). 
-               Подробнее см. Robert 1963, 192 сл.; Masson 1982, 23 (= OGS II 405); Masson 1994, 142 (= OGS III 211).</p>
+            <p>В этой надписи (а также в нескольких других надписях, см. № neph 140; 156; 158;
+               ipe520; ср. № neph162) не указан патронимик замужней женщины (см. комментарий к №
+               neph140).</p>
+            <p>Женское ЛИ Μυττίνα, вероятно, представляет собой гипокористик группы μυττός («немой»;
+               Hsch. s.v.). Ср. Μυτίνα на херсонесском граффити IV-III в. до н.э. (SEG 44, 657). Ср.
+               также засвидетельствованнoe в Херсонесе мужское имя Κλεμυτάδας (LGPN IV). Подробнее
+               см. Robert 1963, 192 сл.; Masson 1982, 23 (= OGS II 405); Masson 1994, 142 (= OGS III
+               211).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

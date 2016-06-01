@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Дионисия</title>
-             <title xml:lang="en">Epitaph of Dionysios</title>
+            <title xml:lang="en">Epitaph of Dionysios</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>67/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>67/36847</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>67/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,13 +35,18 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом с антефиксами (сбиты). Разбита на две части. На лицевой и боковых гранях рельефные 
-                              розетки. Между карнизом и розетками по предварительной разметке черной краской нанесена двухстрочная надпись. 
-                              Под надписью рельефное изображение меча (сбит) с портупеей, а также стригиля с арибаллом (отколоты внизу).</p>
+                           <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом с антефиксами
+                              (сбиты). Разбита на две части. На лицевой и боковых гранях рельефные
+                              розетки. Между карнизом и розетками по предварительной разметке черной
+                              краской нанесена двухстрочная надпись. Под надписью рельефное
+                              изображение меча (сбит) с портупеей, а также стригиля с арибаллом
+                              (отколоты внизу).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">95,0</height>
@@ -58,8 +64,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Правая вертикаль ню слегка приподнята, крупная омега без сближения нижних концов дуги, слегка изогнутые линии букв, 
-                           небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Правая вертикаль ню слегка приподнята, крупная омега без
+                           сближения нижних концов дуги, слегка изогнутые линии букв, небольшие
+                           утолщения на концах линий букв.</seg>
                         <seg xml:lang="en">Nu with short right vertical</seg>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -67,9 +74,9 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace>
+                     <origPlace>
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0251" evidence="палеография">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
@@ -78,9 +85,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII оборонительных стен (башня Зенона). 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII оборонительных стен (башня Зенона). Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -97,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-02" who="CB">Metadata and app crit</change>
@@ -120,9 +132,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 65, № <citedRange>16</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>150</citedRange></bibl> <bibl> (<!--Bull.ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, <citedRange>431</citedRange>, № 5</bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 65, №
+                     <citedRange>16</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>150</citedRange></bibl>
+               <bibl> (<!--Bull.ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974,
+                     380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, <citedRange>431</citedRange>, №
+                  5</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -140,7 +156,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -150,12 +168,15 @@
             <p>Dionysios, (son of) Sannion.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Имя Διονύσιος многократно засвидетельствовано в Херсонесе (ср. LGPN IV). O Саннионe и его семье см. комментарий к № neph146.</p>
-            <p>Изображение воинских атрибутов и атрибутов гимнасия делают вероятным предположение о принадлежности умершего к категории νέοι 
-               – молодых людей, достигших совершеннолетия и уже обладавших гражданскими правами, но обязанными посещать гимнасий 
-               (ср. также надгробие Бакоса № neph138 и замечания в Макаров 2013, 320 сл.). 
-               Судя по отсутствию атрибутов гимнасия на стелах его братьев Мегакла и Аполлония Дионисий был младшим из трех сыновей Санниона. 
-               Не исключено, что он являлся супругом упомянутой в надписи № neph151 Аполлонии, дочери Геродота.</p>
+            <p>Имя Διονύσιος многократно засвидетельствовано в Херсонесе (ср. LGPN IV). O Саннионe и
+               его семье см. комментарий к № neph146.</p>
+            <p>Изображение воинских атрибутов и атрибутов гимнасия делают вероятным предположение о
+               принадлежности умершего к категории νέοι – молодых людей, достигших совершеннолетия и
+               уже обладавших гражданскими правами, но обязанными посещать гимнасий (ср. также
+               надгробие Бакоса № neph138 и замечания в Макаров 2013, 320 сл.). Судя по отсутствию
+               атрибутов гимнасия на стелах его братьев Мегакла и Аполлония Дионисий был младшим из
+               трех сыновей Санниона. Не исключено, что он являлся супругом упомянутой в надписи №
+               neph151 Аполлонии, дочери Геродота.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

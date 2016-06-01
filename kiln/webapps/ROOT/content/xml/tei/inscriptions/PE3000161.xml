@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -34,14 +35,18 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Прямоугольная плита с закругленным верхом (возможно, предназначалась для вставки в массивный блок). 
-                              На рельефе в нише погрудное изображение женщины в хитоне и плаще, накинутом на голову. По верхнему краю вырезана трехстрочная надпись. 
-                              В момент обнаружения памятник не имел серьезных повреждений. В настоящее время расколот верх, отбита нижняя правая часть плиты, 
-                              утерян левый нижний угол.</p>
+                           <p xml:lang="ru">Прямоугольная плита с закругленным верхом (возможно,
+                              предназначалась для вставки в массивный блок). На рельефе в нише
+                              погрудное изображение женщины в хитоне и плаще, накинутом на голову.
+                              По верхнему краю вырезана трехстрочная надпись. В момент обнаружения
+                              памятник не имел серьезных повреждений. В настоящее время расколот
+                              верх, отбита нижняя правая часть плиты, утерян левый нижний угол.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">43,0</height>
@@ -59,7 +64,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией из двух пересекающихся наклонных, курсивные мю, сигма, омега.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией из двух пересекающихся
+                           наклонных, курсивные мю, сигма, омега.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,8</height>
                      </handNote>
@@ -71,21 +77,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1896 г. (или с меньшей вероятностью в 1897 г.) в юго-восточном районе Херсонеса на участке некрополя. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5, л. 13, № 21).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1896 г. (или с меньшей вероятностью в
+                           1897 г.) в юго-восточном районе Херсонеса на участке некрополя. Раскопки
+                           К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5, л. 13, № 21).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -93,12 +103,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-19" who="CB">tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-11-06" who="KK">Leidenised</change>
@@ -120,7 +133,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> IV, 307, № <citedRange>466</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> IV, 307, №
+                  <citedRange>466</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>515</citedRange></bibl>
             </listBibl>
          </div>
@@ -128,7 +142,8 @@
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--KW--><ptr target="bib:b0519"/> № 766.1</bibl>
-               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 372 (предлагаемая датировка: III-IV в. н.э.)</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 372 (предлагаемая датировка: III-IV в.
+                  н.э.)</bibl>
                <bibl><!--Орлов 1983--><ptr target="bib:b0786"/>, 139 (BullEp 1990, 563</bibl>
                <bibl><!--SEG--><ptr target="bib:SEG"/> 40, 617)</bibl>
             </listBibl>
@@ -148,7 +163,9 @@
                   <rdg source="bib:b0519">[Θε]ομ[- - -]</rdg>
                   <rdg>[Δ]όμ[να]<note> - Solomonik apud Orlov 1983, e.g.</note></rdg>
                </app>
-               <app loc="2-3"><rdg source="bib:IOSPE">[γ]υν[ά]</rdg></app>
+               <app loc="2-3">
+                  <rdg source="bib:IOSPE">[γ]υν[ά]</rdg>
+               </app>
                <app loc="3">
                   <rdg source="bib:IOSPE">νʹ</rdg>
                   <rdg source="bib:b0519 ">λʹ <note>Solomonik apud Orlov 1983.</note></rdg>

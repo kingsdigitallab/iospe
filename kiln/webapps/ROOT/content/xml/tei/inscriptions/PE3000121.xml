@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент надгробия</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент надгробия</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>31284</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>31284</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Расколота на два соединяющихся фрагмента. Лицевая сторона тщательно затерта. 
-                              В верхней части следы углубления, под которым частично сохранилась одна строка надписи.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Расколота на два соединяющихся
+                              фрагмента. Лицевая сторона тщательно затерта. В верхней части следы
+                              углубления, под которым частично сохранилась одна строка надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">17,5</height>
@@ -57,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой перекладиной, тета с точкой, мю имеет параллельные боковые линии, ню с вертикальными гастами одинаковой длины, 
+                        <seg xml:lang="ru">Альфа с прямой перекладиной, тета с точкой, мю имеет
+                           параллельные боковые линии, ню с вертикальными гастами одинаковой длины,
                            апексы на концах линий букв</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">3,0</height>
@@ -66,9 +71,9 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos</seg>
+                        <seg xml:lang="en">Chersonesos</seg>
                      </origPlace>
                      <origDate notBefore="-0133" notAfter="-0051" evidence="палеография">
                         <seg xml:lang="ru">Кон. II – 1-я пол. I в. до н.э.</seg>
@@ -77,7 +82,8 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
                         <rs type="circumstances">Неизвестны. Поступила из частной коллекции.</rs>
                         <rs type="context"/>
                      </seg>
@@ -90,12 +96,15 @@
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
-                  </provenance> 
+                  </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2015-09-24" who="CB">bibliography</change>
          <change when="2015-08-27" who="CB">app crit</change>
@@ -133,8 +142,13 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>В начале стк. след вертикальной гасты.</note></app>
-               <app loc="1"><rdg source="bib:НЭПХ">[--- ζήσας] | [ἔτ]η̣ μʹ ἐνθάδε [κεῖται] <note>vel</note> [--- γῆ] μ’ ἐνθάδε [καλύπτει] <note>(cf. Peek, GVI 486; 509)</note>.</rdg></app>
+               <app>
+                  <note>В начале стк. след вертикальной гасты.</note>
+               </app>
+               <app loc="1">
+                  <rdg source="bib:НЭПХ">[--- ζήσας] | [ἔτ]η̣ μʹ ἐνθάδε [κεῖται] <note>vel</note>
+                     [--- γῆ] μ’ ἐνθάδε [καλύπτει] <note>(cf. Peek, GVI 486; 509)</note>.</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

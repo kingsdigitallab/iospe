@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Скифа</title>
-             <title xml:lang="en">Epitaph of Skythas</title>
+            <title xml:lang="ru">Надгробие Скифа</title>
+            <title xml:lang="en">Epitaph of Skythas</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,14 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Тонкая плита, вставленная в массивный известняковый блок. Состоит из нескольких соединяющихся в контакте фрагментов. 
-                              Лицевая сторона тщательно обработана В поле рельефа изображение мужского бюста, 
-                              под рельефом в нижней части плиты аккуратно вырезанная двухстрочная надпись. 
-                              Справа имеется пустое гнездо для второй подобной плиты, вероятно для портрета жены умершего.</p>
+                           <p xml:lang="ru">Тонкая плита, вставленная в массивный известняковый
+                              блок. Состоит из нескольких соединяющихся в контакте фрагментов.
+                              Лицевая сторона тщательно обработана В поле рельефа изображение
+                              мужского бюста, под рельефом в нижней части плиты аккуратно вырезанная
+                              двухстрочная надпись. Справа имеется пустое гнездо для второй подобной
+                              плиты, вероятно для портрета жены умершего.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">43,0</height>
@@ -59,8 +63,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон (наряду с прямоугольным) и сигма, тета с замкнутой поперечной гастой; 
-                           овальный омикрон в габарите строки, небольшие апексы и утолщения на концах линий букв; точки-разделители, лигатуры</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон
+                           (наряду с прямоугольным) и сигма, тета с замкнутой поперечной гастой;
+                           овальный омикрон в габарите строки, небольшие апексы и утолщения на
+                           концах линий букв; точки-разделители, лигатуры</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -79,13 +85,16 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1907 г. в юго-восточном районе Херсонеса, на участке «цитадели». Раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1907 г. в юго-восточном районе Херсонеса,
+                           на участке «цитадели». Раскопки К.К. Косцюшко-Валюжинича.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -97,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Biblio</change>
          <change when="2015-09-01" who="CB">App Crit</change>
@@ -105,7 +117,8 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-25" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek names from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek names from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -121,15 +134,19 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1908--><ptr target="bib:b0149"/>, 19, № <citedRange>6</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/> <citedRange>493</citedRange></bibl>
+               <bibl><!--Латышев 1908--><ptr target="bib:b0149"/>, 19, №
+                  <citedRange>6</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/>
+                  <citedRange>493</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Иванова 1941--><ptr target="bib:b0470"/>, 110 (датировка временем Антонинов)</bibl>
-               <bibl><!--АСХ--><ptr target="bib:b0523"/>, № 359 (датировка временем Антонинов)</bibl>
+               <bibl><!--Иванова 1941--><ptr target="bib:b0470"/>, 110 (датировка временем
+                  Антонинов)</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/>, № 359 (датировка временем
+                  Антонинов)</bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, № 90</bibl>
             </listBibl>
          </div>
@@ -141,7 +158,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="2"><note>ΤΗ в лигатуре; перед Λ точка разделитель.</note></app>
+               <app loc="2">
+                  <note>ΤΗ в лигатуре; перед Λ точка разделитель.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

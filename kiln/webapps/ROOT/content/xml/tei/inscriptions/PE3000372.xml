@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon5">Карниз.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon5"
+                              >Карниз.</objectType>
                            <objectType xml:lang="en">Cornice.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббит со всех сторон. Сохранились остатки одной строки надписи. Лицевая и тыльная сторона сглажены.</p>
+                           <p xml:lang="ru">Оббит со всех сторон. Сохранились остатки одной строки
+                              надписи. Лицевая и тыльная сторона сглажены.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">11,5</height>
@@ -56,7 +59,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Крупныe, глубоко вырезанные буквы, концы линий букв украшены апексами.</seg>
+                        <seg xml:lang="ru">Крупныe, глубоко вырезанные буквы, концы линий букв
+                           украшены апексами.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm" precision="low">6</height>
                      </handNote>
@@ -75,7 +79,8 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -97,7 +102,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -114,7 +122,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Соломоник 1974, 42, № 10 (предположение о соединении этого фрагмента с надписью № ipe742)</bibl>
+               <bibl>Соломоник 1974, 42, № 10 (предположение о соединении этого фрагмента с надписью
+                  № ipe742)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -132,7 +141,11 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>В конце стк. скорее всего Η, менее вероятна вертикаль, за которой следует горизонтальная черта-разделитель. Ed. pr. допускает Ση[βεύς], Σή[μων], Ση[βῆρος].</note></app>
+               <app>
+                  <note>В конце стк. скорее всего Η, менее вероятна вертикаль, за которой следует
+                     горизонтальная черта-разделитель. Ed. pr. допускает Ση[βεύς], Σή[μων],
+                     Ση[βῆρος].</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

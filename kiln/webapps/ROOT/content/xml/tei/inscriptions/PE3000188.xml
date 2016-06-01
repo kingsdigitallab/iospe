@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Метрическая эпитафия Парфенокла</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Метрическая эпитафия Парфенокла</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранилась полностью. Стела представляет собой неправильную трапецию: левый край перпендикулярен основанию, 
-                              правый край скошен. Лицевая поверхность обработана достаточно тщательно. В верхней части вырезаны три круга, в каждом из которых помещена розетка с шестью лепестками. Под розетками расположены шесть строк надписи.</p>
+                           <p xml:lang="ru">Сохранилась полностью. Стела представляет собой
+                              неправильную трапецию: левый край перпендикулярен основанию, правый
+                              край скошен. Лицевая поверхность обработана достаточно тщательно. В
+                              верхней части вырезаны три круга, в каждом из которых помещена розетка
+                              с шестью лепестками. Под розетками расположены шесть строк
+                              надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">69,0</height>
@@ -57,9 +63,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Неровные, немного вытянутые буквы. альфа с иногда прямой, иногда слегка наклонной перекладиной, 
-                           курсивные эпсилон, сигма, мю, омега, пи с вертикалями одинаковой длины и выходящей за их пределы горизонталью, слегка изогнутые линии некоторых букв, 
-                           «декоративные» уменьшенные омикрон и омега, отсутствие апексов.</seg>
+                        <seg xml:lang="ru">Неровные, немного вытянутые буквы. альфа с иногда прямой,
+                           иногда слегка наклонной перекладиной, курсивные эпсилон, сигма, мю,
+                           омега, пи с вертикалями одинаковой длины и выходящей за их пределы
+                           горизонталью, слегка изогнутые линии некоторых букв, «декоративные»
+                           уменьшенные омикрон и омега, отсутствие апексов.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,0</height>
                      </handNote>
@@ -71,21 +79,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0201" notAfter="0300" evidence="палеография" precision="low">
+                     <origDate notBefore="0201" notAfter="0300" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. н.э.</seg>
                         <seg xml:lang="en">IIIrd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1903 г. в южном районе городища, на участке  античного театра III в. до н.э. 
-                           Раскопки К.К. Косцюшко-Валюжинича («храм с ковчегом», НА НЗХТ, д. 12, л. 21; д. 32, л. 3, № 232).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1903 г. в южном районе городища, на
+                           участке античного театра III в. до н.э. Раскопки К.К. Косцюшко-Валюжинича
+                           («храм с ковчегом», НА НЗХТ, д. 12, л. 21; д. 32, л. 3, № 232).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -93,16 +105,19 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-22" who="CB">Metadata</change>
-          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-10-21" who="KK">Leidenised</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -119,16 +134,19 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 108, № <citedRange>17</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>485</citedRange></bibl>
+               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 108, №
+                     <citedRange>17</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>485</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--KW--><ptr target="bib:b0519"/> № 50</bibl>
-               <bibl><!--Соломоник 1964--><ptr target="bib:b0503"/>, 143</bibl> <bibl>(ср. <!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, с. 215 сл., рис. 186 б)</bibl>
-               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 388</bibl> 
+               <bibl><!--Соломоник 1964--><ptr target="bib:b0503"/>, 143</bibl>
+               <bibl>(ср. <!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, с. 215 сл., рис. 186 б)</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 388</bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b506"/>, 100, № 102</bibl>
             </listBibl>
          </div>
@@ -145,13 +163,21 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="2"><rdg>Παρθενοκλῖς = Παρθενοκλῆς<note>, буквы ΛΙΣ, меньшего размера, чем остальные, вырезаны над буквами в ΝΟΚ в конце стк.</note></rdg></app>
-               <app loc="3"><note>in.: в слове υἱός по обеим сторонам Ι точки-разделители. </note></app>
-               <app loc="6"><rdg>χαίροισθαι = χαίροισθε.</rdg></app>
+               <app loc="2">
+                  <rdg>Παρθενοκλῖς = Παρθενοκλῆς<note>, буквы ΛΙΣ, меньшего размера, чем остальные,
+                        вырезаны над буквами в ΝΟΚ в конце стк.</note></rdg>
+               </app>
+               <app loc="3">
+                  <note>in.: в слове υἱός по обеим сторонам Ι точки-разделители. </note>
+               </app>
+               <app loc="6">
+                  <rdg>χαίροισθαι = χαίροισθε.</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Я, Парфенокл, сын Проклиона, лежу в этой могиле, трижды исполнив десятилетний срок. Здравствуйте и прощайте, прохожие.</p>
+            <p>Я, Парфенокл, сын Проклиона, лежу в этой могиле, трижды исполнив десятилетний срок.
+               Здравствуйте и прощайте, прохожие.</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

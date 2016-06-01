@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Посвящение Деве</title>
-             <title xml:lang="en">Dedication to Parthenos</title>
+            <title xml:lang="ru">Посвящение Деве</title>
+            <title xml:lang="en">Dedication to Parthenos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon23">Капитель.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon23"
+                              >Капитель.</objectType>
                            <objectType xml:lang="en">Capital.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m4">Песчаник.</material>
                            <material xml:lang="en">Sandstone.</material>
-                           <p xml:lang="ru">Сохранилась верхняя правая часть небольшой дорической капители с остатками двухстрочной надписи.</p>
+                           <p xml:lang="ru">Сохранилась верхняя правая часть небольшой дорической
+                              капители с остатками двухстрочной надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">5,0</height>
@@ -56,8 +59,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с немного укороченной правой вертикалью, крупное омикрон, правая вертикаль пи значительно укорочена, 
-                           сигма с расходящимися верхней и нижней гастами,  небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Ню с немного укороченной правой вертикалью, крупное
+                           омикрон, правая вертикаль пи значительно укорочена, сигма с расходящимися
+                           верхней и нижней гастами, небольшие утолщения на концах линий букв.</seg>
                         <seg xml:lang="en">four-bar sigma with splayed bars</seg>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -69,21 +73,26 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0350" notAfter="-0268" evidence="палеография" precision="low">
+                     <origDate notBefore="-0350" notAfter="-0268" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. IV - нач. III в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IV - early IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1896 г. в северо-восточном районе херсонесского городища, с северной стороны «склада древностей». 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5, л. 2, № 123; д. 25, л. 2, № 123).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1896 г. в северо-восточном районе
+                           херсонесского городища, с северной стороны «склада древностей». Раскопки
+                           К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5, л. 2, № 123; д. 25, л. 2, №
+                           123).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,19 +100,23 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-28" who="CB">correcting Bibliography</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -119,9 +132,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1899--><ptr target="bib:b0136"/>, 8, № <citedRange>5</citedRange></bibl>
+               <bibl><!--Латышев 1899--><ptr target="bib:b0136"/>, 8, №
+                  <citedRange>5</citedRange></bibl>
                <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> IV, <citedRange> 84</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>407</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>407</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -139,7 +154,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

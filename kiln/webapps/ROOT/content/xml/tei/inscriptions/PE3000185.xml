@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Метрическая эпитафия М. Аврелия Иасона</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Метрическая эпитафия М. Аврелия Иасона</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Material</material>
-                           <p xml:lang="ru">Сохранилась полностью, имеются небольшие сколы и выбоины. Лицевая сторона отшлифована. 
-                              В середине плиты расположены шесть строк надписи.</p>
+                           <p xml:lang="ru">Сохранилась полностью, имеются небольшие сколы и
+                              выбоины. Лицевая сторона отшлифована. В середине плиты расположены
+                              шесть строк надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">53,0</height>
@@ -57,8 +60,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Удлиненные пропорции букв, альфа с ломаной поперечной линией, ромбообразная тета с замкнутой перекладиной, ромбообразное омикрон, 
-                           пи с вертикалями одинаковой длины и выходящей за их пределы горизонталью, прямоугольная сигма, слабое апицирование.</seg>
+                        <seg xml:lang="ru">Удлиненные пропорции букв, альфа с ломаной поперечной
+                           линией, ромбообразная тета с замкнутой перекладиной, ромбообразное
+                           омикрон, пи с вертикалями одинаковой длины и выходящей за их пределы
+                           горизонталью, прямоугольная сигма, слабое апицирование.</seg>
                         <seg xml:lang="en">light serifs.</seg>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -70,20 +75,26 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0201" notAfter="0300" evidence="палеография" precision="low">
+                     <origDate notBefore="0201" notAfter="0300" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. н.э.</seg>
                         <seg xml:lang="en">IIIrd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1893 г. в северном районе городища при раскопках Северной базилики рядом с монастырским кладбищем, внутри базилики. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 3, л. 34, № 92; д. 22, л. 3, № 92).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1893 г. в северном районе городища при
+                           раскопках Северной базилики рядом с монастырским кладбищем, внутри
+                           базилики. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 3, л. 34, № 92;
+                           д. 22, л. 3, № 92).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,17 +102,20 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-19" who="CB">tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">Biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata</change>
-          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-10-21" who="KK">Leidenised</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -118,7 +132,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 15, № <citedRange>12</citedRange> (<!--Latyschew 1895-->, 519, № <citedRange>9</citedRange>)</bibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 15, № <citedRange>12</citedRange>
+                  (<!--Latyschew 1895-->, 519, № <citedRange>9</citedRange>)</bibl>
                <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>IV 108</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>479</citedRange></bibl>
             </listBibl>
@@ -144,16 +159,26 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>IOSPE I2 479.</note>--></app>
-               <app loc="1"><rdg>ἐνέσιεν = αἰνέσειεν</rdg></app>
-               <app loc="3"><rdg>στεφέεσιν <note>scripsi secundum lap.</note></rdg> 
-                <rdg>στέφε<supplied reason="omitted">σ</supplied>σιν <note>- edd.</note></rdg></app>
-               <app loc="5"><rdg>[κ]<unclear>λ</unclear>υτὸν <note>scripsi,</note></rdg> 
-                  <rdg source="bib:IOSPE">[κλ]υτὸν</rdg></app>
-               <app><note>В нижней части плиты следы букв: слева наклонная линия и Γ (?), справа Ν («ad titulim non pertinent» - IOSPE).</note></app>
+               <app loc="1">
+                  <rdg>ἐνέσιεν = αἰνέσειεν</rdg>
+               </app>
+               <app loc="3">
+                  <rdg>στεφέεσιν <note>scripsi secundum lap.</note></rdg>
+                  <rdg>στέφε<supplied reason="omitted">σ</supplied>σιν <note>- edd.</note></rdg>
+               </app>
+               <app loc="5">
+                  <rdg>[κ]<unclear>λ</unclear>υτὸν <note>scripsi,</note></rdg>
+                  <rdg source="bib:IOSPE">[κλ]υτὸν</rdg>
+               </app>
+               <app>
+                  <note>В нижней части плиты следы букв: слева наклонная линия и Γ (?), справа Ν
+                     («ad titulim non pertinent» - IOSPE).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Кто же не похвалит желанного среди смертных, выдающегося наградами и величайшего в трудах М. Аврелия Иасона, (сына) М. Архия, славного и почитаемого?</p>
+            <p>Кто же не похвалит желанного среди смертных, выдающегося наградами и величайшего в
+               трудах М. Аврелия Иасона, (сына) М. Архия, славного и почитаемого?</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

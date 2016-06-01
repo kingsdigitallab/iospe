@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Декрет</title>
-             <title xml:lang="en">Decree</title>
+            <title xml:lang="en">Decree</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Левый край плиты. Поверхность заглажена с лицевой и оборотной сторон. На лицевой стороне сохранилось остатки девяти строк 
-                              надписи, вырезанной с отсупом от края плиты (около 2, 5 см). Надпись в нижней левой и нижней правой части повреждена сколом. 
-                              Буквы в стк. 5–7 очень стерты и почти не поддаются прочтению.</p>
+                           <p xml:lang="ru">Левый край плиты. Поверхность заглажена с лицевой и
+                              оборотной сторон. На лицевой стороне сохранилось остатки девяти строк
+                              надписи, вырезанной с отсупом от края плиты (около 2, 5 см). Надпись в
+                              нижней левой и нижней правой части повреждена сколом. Буквы в стк. 5–7
+                              очень стерты и почти не поддаются прочтению.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">12,5</height>
@@ -58,8 +62,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Курсивные эпсилон, мю, сигма, омега; изогнутые линиии альфа, дельта, лямбда, ню; 
-                           правая гаста дельта и лямбда немного выступает за пересечение с левой гастой, овальный омикрон в габарите строки, небольшие апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Курсивные эпсилон, мю, сигма, омега; изогнутые линиии
+                           альфа, дельта, лямбда, ню; правая гаста дельта и лямбда немного выступает
+                           за пересечение с левой гастой, овальный омикрон в габарите строки,
+                           небольшие апексы на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">0,8</height>
                      </handNote>
@@ -78,9 +84,12 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдены в 1993 г. на южном участке городища во время раскопок городского водохранилища, 
-                           расположенного с внутренней стороны оборонительной стены, в засыпи IX в. (раскопки Л.В. Седиковой).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдены в 1993 г. на южном участке городища во
+                           время раскопок городского водохранилища, расположенного с внутренней
+                           стороны оборонительной стены, в засыпи IX в. (раскопки Л.В.
+                           Седиковой).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -97,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added missing biblio tag</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-28" who="CB">correcting bibliography</change>
@@ -106,7 +118,8 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -122,8 +135,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Макаров 2006--><ptr target="bib:b0758"/>, 95, № <citedRange>5</citedRange></bibl> <bibl> (<!--SEG--><ptr target="SEG"/> <citedRange>56, 874</citedRange></bibl>
-               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:BE"/> <citedRange>2007, 410</citedRange> (Avram))</bibl>
+               <bibl><!--Макаров 2006--><ptr target="bib:b0758"/>, 95, №
+                  <citedRange>5</citedRange></bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/>
+                  <citedRange>56, 874</citedRange></bibl>
+               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:BE"/>
+                  <citedRange>2007, 410</citedRange> (Avram))</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -156,18 +173,28 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>В начале и в конце строки видна нижняя часть вертикальной гасты.</note></app>
-               <app loc="5"><rdg><note>Cf. № ipe364, l. 7/8:</note> [παρ᾿] ἁ|μὲς καλῶς ἐπιδαμήσας</rdg></app>
+               <app loc="1">
+                  <note>В начале и в конце строки видна нижняя часть вертикальной гасты.</note>
+               </app>
+               <app loc="5">
+                  <rdg><note>Cf. № ipe364, l. 7/8:</note> [παρ᾿] ἁ|μὲς καλῶς ἐπιδαμήσας</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[поскольку --- он] достойным и прекраснейшим образом [исполняет гражданские обязанности на родине ? и, сделав свое пребывание у нас] дружеским, доказал свою преданность [… по отношению к городу… заботясь словно гражданин ? о делах города… мы приняли решение о том, что подобает] за это удостоить сего мужа  ответных почестей ---</p>
+            <p>[поскольку --- он] достойным и прекраснейшим образом [исполняет гражданские
+               обязанности на родине ? и, сделав свое пребывание у нас] дружеским, доказал свою
+               преданность [… по отношению к городу… заботясь словно гражданин ? о делах города… мы
+               приняли решение о том, что подобает] за это удостоить сего мужа ответных почестей
+               ---</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Мотивировочная часть декрета римского времени. По поводу εὔνοια (стк. 3/4) в херсонесских декрета ср. № ipe 357, стк. 6; 364, стк. 14; 365, стк. 11; 371, стк . 2.</p>
+            <p>Мотивировочная часть декрета римского времени. По поводу εὔνοια (стк. 3/4) в
+               херсонесских декрета ср. № ipe 357, стк. 6; 364, стк. 14; 365, стк. 11; 371, стк .
+               2.</p>
             <p>II в. н.э., скорее всего около середины века.</p>
          </div>
          <div type="commentary" xml:lang="en">

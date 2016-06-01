@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент надгробия (?)</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент надгробия (?)</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,9 +35,11 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m12" cert="low">Гранит (?).</material>
+                           <material xml:lang="ru" ref="material-search.xml#m12" cert="low">Гранит
+                              (?).</material>
                            <material xml:lang="en">Granite</material>
                            <p xml:lang="ru">Сохранилась часть карниза (Латышев).</p>
                            <p xml:lang="en"/>
@@ -56,8 +59,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной перекладиной, тета с чертой, мю с вертикальными боковыми линиями крупное омикрон, 
-                           сигма с параллельными верхней и нижней линиями, практически отсутствуют украшения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной перекладиной, тета с чертой, мю с
+                           вертикальными боковыми линиями крупное омикрон, сигма с параллельными
+                           верхней и нижней линиями, практически отсутствуют украшения на концах
+                           линий букв.</seg>
                         <seg xml:lang="en">Alpha with broken crossbar</seg>
                         <height unit="cm">1,8 - 2,8.</height>
                      </handNote>
@@ -65,25 +70,29 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0133" notAfter="-0051" evidence="палеография" precision="low">
+                     <origDate notBefore="-0133" notAfter="-0051" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">Кон. II – 1-я пол. I в. до н.э.</seg>
                         <seg xml:lang="en">Late II - 1st half of Ist centuries B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1898 г. при раскопках в юго-восточном районе около башни XVII оборонительной стены («башня Зенона»). 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 7, № 153).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1898 г. при раскопках в юго-восточном
+                           районе около башни XVII оборонительной стены («башня Зенона»). Раскопки
+                           К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 7, № 153).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -92,14 +101,18 @@
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi.  В настоящее время местонахождение камня неизвестно.</seg>
+                     <seg xml:lang="ru">Non vidi.  В настоящее время местонахождение камня
+                        неизвестно.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2015-10-27" who="CB">Correction to biblio</change>
          <change when="2015-09-24" who="CB">Bibliography</change>
@@ -123,10 +136,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1899-->,<ptr target="bib:IOSPE"/>, 20, <citedRange>27</citedRange></bibl> 
-               <bibl><!-- IOSPE--> <ptr target="bib:IOSPE"/>, <citedRange>IV, 161</citedRange></bibl>
-               <bibl> <!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>589</citedRange></bibl>
-         </listBibl>
+               <bibl><!--Латышев 1899-->,<ptr target="bib:IOSPE"/>, 20,
+                  <citedRange>27</citedRange></bibl>
+               <bibl><!-- IOSPE-->
+                  <ptr target="bib:IOSPE"/>, <citedRange>IV, 161</citedRange></bibl>
+               <bibl>
+                  <!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>589</citedRange></bibl>
+            </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
@@ -142,9 +158,17 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg source="bib:IOSPE">[Εὔ]δαμος <note>vel</note> [Εὐρύ]δαμος <note>vel</note> [Εὐθύ]δαμος Ἀθλί|[ωνος] <note>vel</note> Ἀθλί|[α]</rdg></app>
-               <app loc="1"><rdg source="bib:IOSPE">[Εὔ]δαμος Ἀθλί[α ἀνέθηκεν ? ]</rdg></app>
-               <app><note>(по эстампажу; однако Л. там же указывает на мнение Е.М. Придика, соглсно которому памятник представляет собой «фрагмент надгробной стелы»).</note></app>
+               <app loc="1">
+                  <rdg source="bib:IOSPE">[Εὔ]δαμος <note>vel</note> [Εὐρύ]δαμος <note>vel</note>
+                     [Εὐθύ]δαμος Ἀθλί|[ωνος] <note>vel</note> Ἀθλί|[α]</rdg>
+               </app>
+               <app loc="1">
+                  <rdg source="bib:IOSPE">[Εὔ]δαμος Ἀθλί[α ἀνέθηκεν ? ]</rdg>
+               </app>
+               <app>
+                  <note>(по эстампажу; однако Л. там же указывает на мнение Е.М. Придика, соглсно
+                     которому памятник представляет собой «фрагмент надгробной стелы»).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -154,7 +178,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Э.И. Соломоник (НЭПХ II 174) не исключает, что архитрав относился к семейному надгробному сооружению, оформленному в виде наиска (ср. № ipe708 и neph174).</p>
+            <p>Э.И. Соломоник (НЭПХ II 174) не исключает, что архитрав относился к семейному
+               надгробному сооружению, оформленному в виде наиска (ср. № ipe708 и neph174).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

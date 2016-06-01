@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки трех строк надписи. Лицевая сторона отшлифована.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки трех строк
+                              надписи. Лицевая сторона отшлифована.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">11,0</height>
@@ -56,7 +59,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Объемный круглый омикрон, ипсилон с широко расходщимися наклонными, вертикаль фи выступает за верхнюю линию строки, апексы.</seg>
+                        <seg xml:lang="ru">Объемный круглый омикрон, ипсилон с широко расходщимися
+                           наклонными, вертикаль фи выступает за верхнюю линию строки, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,5</height>
                      </handNote>
@@ -68,16 +72,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">Ii century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена случайно М.И. Скубетовым в 1905 г. в юго-восточном районе около башни XVII оборонительной стены 
-                           («башня Зенона»). НА НЗХТ, д. 14, № 263; д. 34, л. 1, № 263.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена случайно М.И. Скубетовым в 1905 г. в
+                           юго-восточном районе около башни XVII оборонительной стены («башня
+                           Зенона»). НА НЗХТ, д. 14, № 263; д. 34, л. 1, № 263.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -90,14 +97,17 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
 
-          <change when="2015-11-13" who="KK">Tokenised</change>
+         <change when="2015-11-13" who="KK">Tokenised</change>
 
          <change when="2015-11-13" who="CB">Added origDate</change>
 
@@ -120,8 +130,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1906--><ptr target="bib:b0146"/>, 120, № <citedRange>33</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>635</citedRange></bibl>
+               <bibl><!--Латышев 1906--><ptr target="bib:b0146"/>, 120, №
+                     <citedRange>33</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>635</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,8 +153,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>видна нижняя часть вертикальной линии. </note></app>
-               <app loc="2"><note>в конце стк. след буквы.</note></app>
+               <app loc="1">
+                  <note>видна нижняя часть вертикальной линии. </note>
+               </app>
+               <app loc="2">
+                  <note>в конце стк. след буквы.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -152,8 +168,9 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В предыдущих изданиях указано, что сохранилась левая сторона плиты. Это не исключено, однако такой вывод сделан лишь постольку, 
-               поскольку слева от начала стк. 2 имеется vacat величиной в одну букву.</p>
+            <p>В предыдущих изданиях указано, что сохранилась левая сторона плиты. Это не исключено,
+               однако такой вывод сделан лишь постольку, поскольку слева от начала стк. 2 имеется
+               vacat величиной в одну букву.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

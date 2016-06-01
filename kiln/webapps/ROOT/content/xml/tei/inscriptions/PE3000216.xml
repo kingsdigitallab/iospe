@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Декрет в честь Г. Юлия Сатира</title>
-             <title xml:lang="en">Decree honouring G. Iulius Satyros</title>
+            <title xml:lang="ru">Декрет в честь Г. Юлия Сатира</title>
+            <title xml:lang="en">Decree honouring G. Iulius Satyros</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон кроме правой. Поле надписи ограничено широкой рельефной рамкой.</p>
+                           <p xml:lang="ru">Оббита со всех сторон кроме правой. Поле надписи
+                              ограничено широкой рельефной рамкой.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">12,0</height>
@@ -56,9 +59,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с чертой, мю с немного расходящимися внешними гастами, омикрон немного меньше остальных букв, 
-                           пи с вертикалями одинаковой длины и выходящей за их пределы горизонталью, сигма с параллельными верхней и нижней линиями, 
-                           овальная омега с удлиненными нижними горизонталями, отсутствие украшений на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с чертой, мю с
+                           немного расходящимися внешними гастами, омикрон немного меньше остальных
+                           букв, пи с вертикалями одинаковой длины и выходящей за их пределы
+                           горизонталью, сигма с параллельными верхней и нижней линиями, овальная
+                           омега с удлиненными нижними горизонталями, отсутствие украшений на концах
+                           линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">0,8</height>
                      </handNote>
@@ -70,15 +76,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0046" notAfter="-0046" evidence="титулатура" cert="medium" precision="medium">
+                     <origDate notBefore="-0046" notAfter="-0046" evidence="титулатура"
+                        cert="medium" precision="medium">
                         <seg xml:lang="ru">Около 46 г. до н.э.</seg>
                         <seg xml:lang="en">Circa 46 B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1911 г. в северо-восточном районе Херсонеса (вблизи батареи Канэ). Раскопки Р.Х. Лепера (НА НЗХТ, д. 104, л. 15, № 1389).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1911 г. в северо-восточном районе
+                           Херсонеса (вблизи батареи Канэ). Раскопки Р.Х. Лепера (НА НЗХТ, д. 104,
+                           л. 15, № 1389).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -99,7 +109,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-18" who="CB">Added missing biblio tags</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
@@ -107,7 +120,8 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -127,8 +141,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/> <citedRange>691</citedRange></bibl>
-               <bibl><!--ISE III--><ptr target="bib:ISE"/> 3, <citedRange>148</citedRange> (<!--cf. AGR-->, <citedRange>225</citedRange>)</bibl>
+               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/>
+                  <citedRange>691</citedRange></bibl>
+               <bibl><!--ISE III--><ptr target="bib:ISE"/> 3, <citedRange>148</citedRange>
+                  (<!--cf. AGR-->, <citedRange>225</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -138,9 +154,11 @@
                <bibl><!--Rostowzew 1917--><ptr target="bib:b0440"/>, 27</bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, № 16</bibl>
                <bibl><!--Виноградов 1997a--><ptr target="bib:b0453"/>, 19</bibl>
-               <bibl><!--Макаров 2005--><ptr target="bib:b0485"/>, 84</bibl> <bibl> (<!--SEG--><ptr target="SEG"/> 55, 839</bibl>
+               <bibl><!--Макаров 2005--><ptr target="bib:b0485"/>, 84</bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/> 55, 839</bibl>
                <bibl><!--Bull. ép. 2006--><ptr target="bib:BE"/>, 2006, 299)</bibl>
-               <bibl><!--Makarov 2007--><ptr target="bib:b0434"/>, 878</bibl> <bibl> (<!--SEG--><ptr target="SEG"/> 57, 696</bibl>
+               <bibl><!--Makarov 2007--><ptr target="bib:b0434"/>, 878</bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/> 57, 696</bibl>
                <bibl><!--Bull. ép. 2008--><ptr target="bib:BE"/>, 2008, 411)</bibl>
             </listBibl>
          </div>
@@ -168,27 +186,53 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>supplevi (cf. ipe347, стк. 1)</note></app>
-               <app loc="2"><note>fin.: [---]ά<unclear>σ</unclear>[ιο]ς̣</note></app>
-               <app loc="2-5"><rdg source="bib:IOSPE2"/></app>
-               <app loc="6"><rdg><note>vel</note> Θε[αγ]ένου</rdg></app>
-               <app loc="7"><rdg><unclear>επ</unclear>[ὶ τῶν] πατέρων <note>– scripsi</note></rdg></app> 
-               <app loc="7"><rdg source="bib:b0453"><unclear>ἔ</unclear>τ[ι ἐ]πὶ πατέρων</rdg></app>  
-               <app loc="7"><rdg source="bib:ISE">[ὑ]π[ὸ τῶν] πατέρων</rdg></app> 
-               <app loc="11"><rdg source="bib:IOSPE2">in.</rdg></app>
+               <app loc="1">
+                  <note>supplevi (cf. ipe347, стк. 1)</note>
+               </app>
+               <app loc="2">
+                  <note>fin.: [---]ά<unclear>σ</unclear>[ιο]ς̣</note>
+               </app>
+               <app loc="2-5">
+                  <rdg source="bib:IOSPE2"/>
+               </app>
+               <app loc="6">
+                  <rdg><note>vel</note> Θε[αγ]ένου</rdg>
+               </app>
+               <app loc="7">
+                  <rdg><unclear>επ</unclear>[ὶ τῶν] πατέρων <note>– scripsi</note></rdg>
+               </app>
+               <app loc="7">
+                  <rdg source="bib:b0453"><unclear>ἔ</unclear>τ[ι ἐ]πὶ πατέρων</rdg>
+               </app>
+               <app loc="7">
+                  <rdg source="bib:ISE">[ὑ]π[ὸ τῶν] πατέρων</rdg>
+               </app>
                <app loc="11">
-                  <rdg source="bib:b0485"><note>fin. – 12: scripsi;</note> ο<unclear>ἰ</unclear>[κειότητα καὶ συγ]|[γένειαν ---] <note>vel</note> ο<unclear>ἰ</unclear>[κειότητα καὶ φιλίαν] <note>(cf. Макаров 2005)</note></rdg>
+                  <rdg source="bib:IOSPE2">in.</rdg>
+               </app>
+               <app loc="11">
+                  <rdg source="bib:b0485"><note>fin. – 12: scripsi;</note>
+                     ο<unclear>ἰ</unclear>[κειότητα καὶ συγ]|[γένειαν ---] <note>vel</note>
+                        ο<unclear>ἰ</unclear>[κειότητα καὶ φιλίαν] <note>(cf. Макаров
+                     2005)</note></rdg>
                   <rdg><unclear>ΕΦΩ</unclear>ΝΑΝ[---][---]̣ΑΥΤΟΥΣΑΜΩΝΟΙ</rdg>
-                <rdg>ἐφ’ ὧν ἀνε[̣κτάσατο][τὰ δίκαια πο]<unclear>τ</unclear>’ αὐτοὺς ἁμῶν ὁ<unclear>μο</unclear>[λογίαν ἐπανεγ][κών ---]</rdg></app>
-               <app loc="12"><rdg source="bib:IOSPE">[---]ε αὐτοὺς ἁμῶν[---] <note>vel</note> [---]ε αὖ τοὺς ἁμῶν[---]</rdg> 
-                  <rdg source="bib:ISE">[---]ἑαυτοὺς ἁμῶν [---]</rdg></app>
+                  <rdg>ἐφ’ ὧν ἀνε[̣κτάσατο][τὰ δίκαια πο]<unclear>τ</unclear>’ αὐτοὺς ἁμῶν
+                        ὁ<unclear>μο</unclear>[λογίαν ἐπανεγ][κών ---]</rdg>
+               </app>
+               <app loc="12">
+                  <rdg source="bib:IOSPE">[---]ε αὐτοὺς ἁμῶν[---] <note>vel</note> [---]ε αὖ τοὺς
+                     ἁμῶν[---]</rdg>
+                  <rdg source="bib:ISE">[---]ἑαυτοὺς ἁμῶν [---]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[В добрый час. Номофилаки – – –],  Ламах, (сын) Даматрия, Аполлоний, (сын) Зета, и стоящий во главе управления Атаней, 
-               (сын) Стратоника, внесли предложение: поскольку Гай Юлий Сатир, сын Фе[о]гена, получив право гражданства [у] наших отцов, [исполнил обязанности гражданина] 
-               достойно этой милости, совершив посольство в Рим к сенату римлян и к Гаю Юлию Цезарю трижды консулу и трижды диктатору, (находясь) перед которыми, 
-               он напомнил о наших давних связях [и – – –]</p>
+            <p>[В добрый час. Номофилаки – – –], Ламах, (сын) Даматрия, Аполлоний, (сын) Зета, и
+               стоящий во главе управления Атаней, (сын) Стратоника, внесли предложение: поскольку
+               Гай Юлий Сатир, сын Фе[о]гена, получив право гражданства [у] наших отцов, [исполнил
+               обязанности гражданина] достойно этой милости, совершив посольство в Рим к сенату
+               римлян и к Гаю Юлию Цезарю трижды консулу и трижды диктатору, (находясь) перед
+               которыми, он напомнил о наших давних связях [и – – –]</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
@@ -196,8 +240,9 @@
          <div type="commentary" xml:lang="ru">
             <p>2. Виноградов по эстампажу, но эти буквы не поддаются надежному определению.</p>
             <p>2-5. (со ссылкой на IOSPE I2 347, стк. 1–3).</p>
-            <p>11. – эстампаж; часть букв на котором сомнительны, т.к. прорисованы карандашом поверх первоначальных отпечатков. 
-               Виноградов (по эстампажу, но некоторые из читаемых им букв не поддаются надежному определению)</p>
+            <p>11. – эстампаж; часть букв на котором сомнительны, т.к. прорисованы карандашом поверх
+               первоначальных отпечатков. Виноградов (по эстампажу, но некоторые из читаемых им букв
+               не поддаются надежному определению)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

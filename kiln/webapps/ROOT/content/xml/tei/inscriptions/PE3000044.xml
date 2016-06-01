@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Эвтих[---]</title>
-             <title xml:lang="en">Epitaph of Eutych[---]</title>
+            <title xml:lang="en">Epitaph of Eutych[---]</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела, лицевая и боковые стороны которой украшены розетками. Надпись нанесена красной краской.</p>
+                           <p xml:lang="ru">Стела, лицевая и боковые стороны которой украшены
+                              розетками. Надпись нанесена красной краской.</p>
                            <p xml:lang="en"/>
                            <dimensions/>
                         </support>
@@ -71,9 +75,13 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1914 г. Р.Х. Лепером при исследовании западных оборонительных стен Херсонеса, в насыпи между стенами. 
-                           Единственным источником информации о стеле является краткая запись в дневнике раскопок Р.Х. Лепера за 1914 г. (НА НЗХТ д.94, л.8; д.110, л.18, № 1028).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1914 г. Р.Х. Лепером при исследовании
+                           западных оборонительных стен Херсонеса, в насыпи между стенами.
+                           Единственным источником информации о стеле является краткая запись в
+                           дневнике раскопок Р.Х. Лепера за 1914 г. (НА НЗХТ д.94, л.8; д.110, л.18,
+                           № 1028).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -87,14 +95,18 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi.  В настоящее время местонахождение камня неизвестно.</seg>
+                     <seg xml:lang="ru">Non vidi.  В настоящее время местонахождение камня
+                        неизвестно.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-15" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
@@ -115,14 +127,16 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>179</citedRange> (без иллюстраций, без текста надписи)</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>179</citedRange> (без
+                  иллюстраций, без текста надписи)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Соломоник справедливо предполагает, что следует восстанавливать одно из ЛИ группы εὐτυχής. 
-                  В Северном Причерноморье засвидетельствованы имена Εὐτύχης, Εὐτυχία, Εὐτυχίδης, Εὔτυχος (LGPN IV)</bibl>
+               <bibl>Соломоник справедливо предполагает, что следует восстанавливать одно из ЛИ
+                  группы εὐτυχής. В Северном Причерноморье засвидетельствованы имена Εὐτύχης,
+                  Εὐτυχία, Εὐτυχίδης, Εὔτυχος (LGPN IV)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -132,7 +146,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

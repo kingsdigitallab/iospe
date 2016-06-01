@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Пожертвование на изготовление колонны</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Пожертвование на изготовление колонны</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon22">Колонна.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon22"
+                              >Колонна.</objectType>
                            <objectType xml:lang="en">Column.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Вторично использована при строительстве христианской базилики. 
-                              Сохранились остатки пяти строк надписи.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Вторично использована при
+                              строительстве христианской базилики. Сохранились остатки пяти строк
+                              надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">37,0</height>
@@ -57,9 +60,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Слегка изогнутые линии букв, овальное омикрон в высоту строки, курсивные эпсилон, кси, сигма, узкое пи 
-                           с равными вертикалями и выходящей за их пределы горизонталью, фи с туловом в виде листа плюща и вертикалью, выходящей за линии строки, 
-                           апексы.</seg>
+                        <seg xml:lang="ru">Слегка изогнутые линии букв, овальное омикрон в высоту
+                           строки, курсивные эпсилон, кси, сигма, узкое пи с равными вертикалями и
+                           выходящей за их пределы горизонталью, фи с туловом в виде листа плюща и
+                           вертикалью, выходящей за линии строки, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">4,5</height>
                      </handNote>
@@ -78,8 +82,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Точных данных нет. Вероятно, обнаружена в 1853 г. в северо-восточном районе городища, в ходе раскопок Уваровской базилики (№ 23). Раскопки А.С. Уварова.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Точных данных нет. Вероятно, обнаружена в 1853 г. в
+                           северо-восточном районе городища, в ходе раскопок Уваровской базилики (№
+                           23). Раскопки А.С. Уварова.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,12 +99,15 @@
                      <seg xml:lang="ru">Москва, Россия.</seg>
                      <seg xml:lang="en">Moscow, Russia.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
          <change when="2016-04-13" who="Chris de Lisle">Encoded text</change>
       </revisionDesc>
@@ -138,15 +148,26 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>IOSPE I2 448.</note></app>
-               <app><note>1: Αὐ[ρήλιος - - -] - IOSPE.</note></app>
-               <app><note>2: Ξάν[θου - - -] - IOSPE.</note></app>
-               <app><note>4: εἰς τὸν [κείονα δην - - -] - IOSPE.</note></app>
-               <app><note>5: ἐπειδ - IOSPE.</note></app>
+               <app>
+                  <note>IOSPE I2 448.</note>
+               </app>
+               <app>
+                  <note>1: Αὐ[ρήλιος - - -] - IOSPE.</note>
+               </app>
+               <app>
+                  <note>2: Ξάν[θου - - -] - IOSPE.</note>
+               </app>
+               <app>
+                  <note>4: εἰς τὸν [κείονα δην - - -] - IOSPE.</note>
+               </app>
+               <app>
+                  <note>5: ἐπειδ - IOSPE.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Аврелий [- - -], (сын) Ксан[- - -], (посвятил), пожертвовав на колонну [- - - денариев], когда/поскольку - - -</p>
+            <p>Аврелий [- - -], (сын) Ксан[- - -], (посвятил), пожертвовав на колонну [- - -
+               денариев], когда/поскольку - - -</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

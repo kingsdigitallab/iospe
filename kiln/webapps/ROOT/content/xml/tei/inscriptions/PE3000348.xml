@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки трех строк надписи, вырезанной по разметке. Лицевая сторона отполирована.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки трех строк
+                              надписи, вырезанной по разметке. Лицевая сторона отполирована.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">9,0</height>
@@ -56,7 +59,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Удлиненная форма букв, овальный омикрон, равный по величине остальным буквам, сильное апицирование.</seg>
+                        <seg xml:lang="ru">Удлиненная форма букв, овальный омикрон, равный по
+                           величине остальным буквам, сильное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,0</height>
                      </handNote>
@@ -75,13 +79,18 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1889 г. в северном районе херсонесского городища на берегу моря, между монастырским кладбищем и купальней (раскоп I). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 15; д. 18, л. 3, № 15.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1889 г. в северном районе херсонесского
+                           городища на берегу моря, между монастырским кладбищем и купальней (раскоп
+                           I). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 15; д. 18, л. 3,
+                           № 15.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot"/>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -89,12 +98,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -138,14 +150,23 @@
          <div type="apparatus">
             <div type="textpart" n="1">
                <listApp>
-                  <app><note/></app>
+                  <app>
+                     <note/>
+                  </app>
                </listApp>
             </div>
             <div type="textpart" n="2">
                <listApp>
-                  <app><note>1: после Α вертикальная линия, затем низ наклонной гасты.</note></app>
-                  <app><note>2: в конце стк. вертикальная линия.</note></app>
-                  <app><note>3: в начале стк. верняя часть круглой буквы (Ο или Θ), в конце стк. след верхней горизонтали.</note></app>
+                  <app>
+                     <note>1: после Α вертикальная линия, затем низ наклонной гасты.</note>
+                  </app>
+                  <app>
+                     <note>2: в конце стк. вертикальная линия.</note>
+                  </app>
+                  <app>
+                     <note>3: в начале стк. верняя часть круглой буквы (Ο или Θ), в конце стк. след
+                        верхней горизонтали.</note>
+                  </app>
                </listApp>
             </div>
          </div>

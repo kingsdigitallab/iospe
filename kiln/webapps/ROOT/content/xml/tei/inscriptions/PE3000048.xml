@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Гера[---]</title>
-             <title xml:lang="en">Epitaph of Hera[---]</title>
+            <title xml:lang="ru">Надгробие Гера[---]</title>
+            <title xml:lang="en">Epitaph of Hera[---]</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился левый верхний угол. Эпиграфическое поле ограничено рельефной рамкой.</p>
-                           <p xml:lang="en">Top left corner is preserved. The epigraphic field is outlined with a framing line in relief.</p>
+                           <p xml:lang="ru">Сохранился левый верхний угол. Эпиграфическое поле
+                              ограничено рельефной рамкой.</p>
+                           <p xml:lang="en">Top left corner is preserved. The epigraphic field is
+                              outlined with a framing line in relief.</p>
                            <dimensions>
                               <height unit="cm">5,0</height>
                               <width unit="cm">6,0</width>
@@ -56,8 +60,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы ровные, с заметными утолщениями на концах линий.</seg>
-                        <seg xml:lang="en">Even letters, with distinct thickening of the ends of hastae.</seg>
+                        <seg xml:lang="ru">Буквы ровные, с заметными утолщениями на концах
+                           линий.</seg>
+                        <seg xml:lang="en">Even letters, with distinct thickening of the ends of
+                           hastae.</seg>
                         <height unit="cm">1,5</height>
                      </handNote>
                   </handDesc>
@@ -75,26 +81,35 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1898 г. при раскопках в юго-восточном районе херсонесского городища близ оборонительной стены. 
-                           Раскопки К.К. Косцюшко-Валюжинича (в НА НЗХТ сохранилось фото эстампажа, № 11847/28; 11849/26, 26).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1898 г. при раскопках в юго-восточном
+                           районе херсонесского городища близ оборонительной стены. Раскопки К.К.
+                           Косцюшко-Валюжинича (в НА НЗХТ сохранилось фото эстампажа, № 11847/28;
+                           11849/26, 26).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in 1898 [...]... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in 1898 [...]... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi. В настоящее время местонахождение камня неизвестно.</seg>
-                     <seg xml:lang="en">Non vidi. At present, the monument's whereabouts are unknown.</seg>
+                     <seg xml:lang="ru">Non vidi. В настоящее время местонахождение камня
+                        неизвестно.</seg>
+                     <seg xml:lang="en">Non vidi. At present, the monument's whereabouts are
+                        unknown.</seg>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-15" who="CB">Tagging bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
@@ -122,7 +137,6 @@
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -132,7 +146,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

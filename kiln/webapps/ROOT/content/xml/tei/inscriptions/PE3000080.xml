@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент воинского надгробия</title>
-             <title xml:lang="en">Epitaph of a warrior</title>
+            <title xml:lang="ru">Фрагмент воинского надгробия</title>
+            <title xml:lang="en">Epitaph of a warrior</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>35123</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>35123</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Сохранился маленький фрагмент, обломанный с трех сторон, с рельефным изображением рукояти меча и остатками двухстрочной 
-                              (?) надписи, нанесенной по предварительной разметке.</p>
+                           <p xml:lang="ru">Сохранился маленький фрагмент, обломанный с трех сторон,
+                              с рельефным изображением рукояти меча и остатками двухстрочной (?)
+                              надписи, нанесенной по предварительной разметке.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">13,5</height>
@@ -65,24 +69,28 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Происходит, вероятно, из раскопок К.К. Косцюшко-Валюжинича (фото памятника сделано при его жизни; см. НА НЗХТ, д. 58, IV, № 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Происходит, вероятно, из раскопок К.К.
+                           Косцюшко-Валюжинича (фото памятника сделано при его жизни; см. НА НЗХТ,
+                           д. 58, IV, № 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">excavations of K.K. Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -94,7 +102,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-03" who="CB">Metadata and app crit</change>
@@ -116,7 +127,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/> <citedRange>31</citedRange></bibl>
+               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/>
+                  <citedRange>31</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -135,8 +147,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>Сохранился след вертикальной гасты.</note></app>
-               <app loc="2"><note>Вероятно, одно из многочисленных личных имен на Ἡρ-.</note></app>
+               <app loc="1">
+                  <note>Сохранился след вертикальной гасты.</note>
+               </app>
+               <app loc="2">
+                  <note>Вероятно, одно из многочисленных личных имен на Ἡρ-.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -146,9 +162,10 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Единственный известный пример херсонесского эллинистического памятника, где надпись расположена сбоку от рельефного изображения меча. 
-               Изображение указывает на воинский характер погребения. Отсутсвуют следы изображения портупеи, типичного для большинства памятников 
-               этого типа (ср. Posamentir 2011, 41, № 30; 118, № C45).</p>
+            <p> Единственный известный пример херсонесского эллинистического памятника, где надпись
+               расположена сбоку от рельефного изображения меча. Изображение указывает на воинский
+               характер погребения. Отсутсвуют следы изображения портупеи, типичного для большинства
+               памятников этого типа (ср. Posamentir 2011, 41, № 30; 118, № C45).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Наны</title>
-             <title xml:lang="en">Epitaph of Nana</title>
+            <title xml:lang="ru">Надгробие Наны</title>
+            <title xml:lang="en">Epitaph of Nana</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>4776</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>4776</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4776</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,11 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Отбит левый край. Изготовлена из обломка плиты с текстом декрета II в. до н.э. (частично сохранился на тыльной стороне, см. № ipe690). На лицевой стороне по предварительной разметке вырезана трехстрочная надпись.</p>
+                           <p xml:lang="ru">Отбит левый край. Изготовлена из обломка плиты с текстом
+                              декрета II в. до н.э. (частично сохранился на тыльной стороне, см. №
+                              ipe690). На лицевой стороне по предварительной разметке вырезана
+                              трехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,0</height>
@@ -56,28 +61,34 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией и просветом сверху, эпсилон с короткой средней горизонталью, 
-                           пи с укороченной правой вертикалью и выступающей за края горизонталью, верхняя и нижняя гасты сигма параллельны, концы линий букв украшены апексами.</seg>
-                        <seg xml:lang="en">Alpha with broken crossbar and, epsilon with a short middle bar</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией и просветом сверху,
+                           эпсилон с короткой средней горизонталью, пи с укороченной правой
+                           вертикалью и выступающей за края горизонталью, верхняя и нижняя гасты
+                           сигма параллельны, концы линий букв украшены апексами.</seg>
+                        <seg xml:lang="en">Alpha with broken crossbar and, epsilon with a short
+                           middle bar</seg>
                         <height unit="cm">1,1</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0150" notAfter="-0101" evidence="палеография" precision="low">
+                     <origDate notBefore="-0150" notAfter="-0101" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. - конец II в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IInd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1914 г. в западном районе Херсонеса, в оборонительной стене (НА НЗХТ, д. 110, л. 18, № 1015).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1914 г. в западном районе Херсонеса, в
+                           оборонительной стене (НА НЗХТ, д. 110, л. 18, № 1015).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -94,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-03" who="CB">Added origDate</change>
          <change when="2015-09-24" who="CB">Tagging bibliography</change>
          <change when="2015-07-14" who="KK">Add photo file name</change>
@@ -121,7 +135,9 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Соломоник 1978--><ptr target="bib:b0505"/>, 68, прим. 11</bibl> <bibl> (<!--SEG--><ptr target="SEG"/> <citedRange>28, 637</citedRange>)</bibl>
+               <bibl><!--Соломоник 1978--><ptr target="bib:b0505"/>, 68, прим. 11</bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/>
+                  <citedRange>28, 637</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -133,7 +149,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

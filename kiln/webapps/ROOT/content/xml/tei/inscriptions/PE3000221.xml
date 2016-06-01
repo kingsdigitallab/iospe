@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Декрет</title>
-             <title xml:lang="en">Decree</title>
+            <title xml:lang="en">Decree</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Лицевая сторона заглажена. Сохранилось 10 строк надписи,  частично поддающейся восстановлению.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Лицевая сторона заглажена.
+                              Сохранилось 10 строк надписи, частично поддающейся восстановлению.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">17,0</height>
@@ -56,10 +59,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Широкие, довольно глубоко вырезанные буквы, 
-                           мю с немного расходящимися внешними гастами и пересечением внутренних гаст чуть ниже середины, 
-                           пи с вертикалями одинаковой длины и выходящей за их пределы горизонталью, 
-                           сигма слегка наклоненная вправо с параллельными верхней и нижней линиями, йота adscriptum, слабые утолщения на концах линий букв</seg>
+                        <seg xml:lang="ru">Широкие, довольно глубоко вырезанные буквы, мю с немного
+                           расходящимися внешними гастами и пересечением внутренних гаст чуть ниже
+                           середины, пи с вертикалями одинаковой длины и выходящей за их пределы
+                           горизонталью, сигма слегка наклоненная вправо с параллельными верхней и
+                           нижней линиями, йота adscriptum, слабые утолщения на концах линий
+                           букв</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1–1,2.</height>
                      </handNote>
@@ -71,15 +76,20 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0086" notAfter="0087" evidence="указание_надписи" cert="low">
+                     <origDate notBefore="0086" notAfter="0087" evidence="указание_надписи"
+                        cert="low">
                         <seg xml:lang="ru">86/87 г. н.э.</seg>
                         <seg xml:lang="en">86/87 C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1996 г. в южном районе Херсонеса, на участке  античного театра III в. до н.э., в заполнении ямы (работы по доследованию вблизи цистерны, открытой в 1970 г. во время раскопок О.И. Домбровского).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1996 г. в южном районе Херсонеса, на
+                           участке античного театра III в. до н.э., в заполнении ямы (работы по
+                           доследованию вблизи цистерны, открытой в 1970 г. во время раскопок О.И.
+                           Домбровского).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,14 +106,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">app crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -153,23 +167,34 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="3"><note>после даты точка-разделитель.</note></app>
-               <app loc="5"><rdg cert="low">[ἐπὶ ἀρχόν]των τῶν [περί] <note>(cf. № ipe404, стк. 50).</note></rdg></app>
-               <app loc="7"><rdg cert="low">[τῶ]ν περί Η[---]</rdg></app>
-               <app loc="8"><note>в начале строки вертикальная гаста.</note></app>
+               <app loc="3">
+                  <note>после даты точка-разделитель.</note>
+               </app>
+               <app loc="5">
+                  <rdg cert="low">[ἐπὶ ἀρχόν]των τῶν [περί] <note>(cf. № ipe404, стк.
+                     50).</note></rdg>
+               </app>
+               <app loc="7">
+                  <rdg cert="low">[τῶ]ν περί Η[---]</rdg>
+               </app>
+               <app loc="8">
+                  <note>в начале строки вертикальная гаста.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[– – – поставить (стелу) на самом видном месте акрополя. Это решено] Советом и Народом в царствование [Девы ?], в 111 году, при жреце [---], месяца [– – –].</p>
+            <p>[– – – поставить (стелу) на самом видном месте акрополя. Это решено] Советом и
+               Народом в царствование [Девы ?], в 111 году, при жреце [---], месяца [– – –].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Начало надписи содержит частично сохранившиеся элементы постановляющей части херсонесского декрета: клаузулу публикации, 
-               формулу санкции и формулу датировки. 
-               В стк. 4 указана точная дата - 111 г. херсонесской эры, т.е. 86/7 г. н.э. Таким образом, это документ из немногочисленной группы декретов I в. н.э. 
-               и самый ранний из сохранившихся декретов римского времени, содержащий дату по местной эре.</p>
+            <p>Начало надписи содержит частично сохранившиеся элементы постановляющей части
+               херсонесского декрета: клаузулу публикации, формулу санкции и формулу датировки. В
+               стк. 4 указана точная дата - 111 г. херсонесской эры, т.е. 86/7 г. н.э. Таким
+               образом, это документ из немногочисленной группы декретов I в. н.э. и самый ранний из
+               сохранившихся декретов римского времени, содержащий дату по местной эре.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

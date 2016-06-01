@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент надгробной надписи</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент надгробной надписи</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Сохранился нижний край с остатками двух строк сильно поврежденной надписи.</p>
+                           <p xml:lang="ru">Сохранился нижний край с остатками двух строк сильно
+                              поврежденной надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">27,0</height>
@@ -75,9 +79,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1894 г. «in coemeterio antiquo» (IOSPE), вероятно, при раскопках К.К. Косцюшко-Валюжиничем некрополя у южного 
-                           и юго-западного участков оборонительной стены.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1894 г. «in coemeterio antiquo» (IOSPE),
+                           вероятно, при раскопках К.К. Косцюшко-Валюжиничем некрополя у южного и
+                           юго-западного участков оборонительной стены.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +104,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">Biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata tagging</change>
@@ -136,7 +145,7 @@
          </div>
          <div type="apparatus">
             <listApp>
-              <app><!--<note>IOSPE I2 537.</note>--></app>
+               <app><!--<note>IOSPE I2 537.</note>--></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

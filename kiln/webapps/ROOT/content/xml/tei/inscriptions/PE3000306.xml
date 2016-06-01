@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum (фрагмент строительной надписи ?)</title>
+            <title xml:lang="ru">Incertum (фрагмент строительной надписи ?)</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon22">Колонна.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon22"
+                              >Колонна.</objectType>
                            <objectType xml:lang="en"/>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en"/>
-                           <p xml:lang="ru">Оббита со всех сторон. Сохранились остатки одной строки надписи, следы вертикальной разметки. 
-                              Поверхность колонны отполирована.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Сохранились остатки одной строки
+                              надписи, следы вертикальной разметки. Поверхность колонны
+                              отполирована.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">14,0</height>
@@ -57,7 +60,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Каппа с длинными, слегка изогнутыми наклонными, декоративный омикрон, апексы.</seg>
+                        <seg xml:lang="ru">Каппа с длинными, слегка изогнутыми наклонными,
+                           декоративный омикрон, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,5</height>
                      </handNote>
@@ -69,16 +73,19 @@
                         <seg xml:lang="ru">Херсонес (?).</seg>
                         <seg xml:lang="en">Chersonesos ?.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена случайно в 1900 г. в северо-восточном районе,  
-                           «при очистке Уваровской базилики» (№ 23). (НА НЗХТ, д. 29, л. 3, № 179).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена случайно в 1900 г. в северо-восточном
+                           районе, «при очистке Уваровской базилики» (№ 23). (НА НЗХТ, д. 29, л. 3,
+                           № 179).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -91,13 +98,16 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-13" who="CB">Added origDate</change>
          <change when="2015-11-06" who="KK">Leidenised</change>
          <change when="2015-11-02" who="CB">biblio and app crit</change>
@@ -118,7 +128,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 175</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV 175</citedRange></bibl>
                <bibl><!--IOSPE I2 --><ptr target="bib:IOSPE2"/>, <citedRange>645</citedRange></bibl>
             </listBibl>
          </div>
@@ -137,7 +148,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -147,7 +160,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Сохранившиеся буквы – возможно, часть числительного, обозначающего сумму в денариях, пожертвованную на изготовление колонны (e.g. [δι]ακό|[σια], ср. № ipe444).</p>
+            <p>Сохранившиеся буквы – возможно, часть числительного, обозначающего сумму в денариях,
+               пожертвованную на изготовление колонны (e.g. [δι]ακό|[σια], ср. № ipe444).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Список победителей на мусических состязаниях</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Список победителей на мусических состязаниях</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Частично сохранился левый край с остатками семи строк надписи. Лицевая сторона отшлифована.</p>
+                           <p xml:lang="ru">Частично сохранился левый край с остатками семи строк
+                              надписи. Лицевая сторона отшлифована.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">14,0</height>
@@ -56,9 +59,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Каппа с короткими наклонными линиями, мю с немного расходящимися внешними гастами и соединением 
-                           коротких внутренних гаст чуть ниже середины строки, пи с вертикалями одинаковой длины и немного выходящей за их пределы перекладиной, 
-                           сигма с параллельными верхней и нижней линиями, омега в форме подковы, слабое апицирование некоторых букв.</seg>
+                        <seg xml:lang="ru">Каппа с короткими наклонными линиями, мю с немного
+                           расходящимися внешними гастами и соединением коротких внутренних гаст
+                           чуть ниже середины строки, пи с вертикалями одинаковой длины и немного
+                           выходящей за их пределы перекладиной, сигма с параллельными верхней и
+                           нижней линиями, омега в форме подковы, слабое апицирование некоторых
+                           букв.</seg>
                         <seg xml:lang="en">light serifs on some letters.</seg>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -77,13 +83,19 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1903 г. в южном районе («на акрополе») Херсонеса, на участке  античного театра III в. до н.э. (северо-западнее позднейшего «крестообразного храма с ковчегом», возможно, на месте современного античного отдела музея). Раскопки К.К. Косцюшко-Валюжинича  НА НЗХТ, д. 12, л. 21, № 228; д. 32, л. 2, № 228).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1903 г. в южном районе («на акрополе»)
+                           Херсонеса, на участке античного театра III в. до н.э. (северо-западнее
+                           позднейшего «крестообразного храма с ковчегом», возможно, на месте
+                           современного античного отдела музея). Раскопки К.К. Косцюшко-Валюжинича
+                           НА НЗХТ, д. 12, л. 21, № 228; д. 32, л. 2, № 228).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,13 +103,17 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-         <change when="2015-11-23" who="CB">Leidenised, tokenised, metadata, origDate, biblio and app crit</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-23" who="CB">Leidenised, tokenised, metadata, origDate, biblio and
+            app crit</change>
          <change when="2015-11-13" who="PC">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -114,16 +130,20 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 111, № <citedRange>24</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bibIOSPE2"/> <citedRange>433</citedRange></bibl>
+               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 111, №
+                     <citedRange>24</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bibIOSPE2"/>
+                  <citedRange>433</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Robert 1938-->, 22 <ptr target="bib:BE"/> 1939, 245</bibl> <bibl>(cf. <!--BullEp--><ptr target="bib:BE"/> 1962, 248)</bibl>
+               <bibl><!--Robert 1938-->, 22 <ptr target="bib:BE"/> 1939, 245</bibl>
+               <bibl>(cf. <!--BullEp--><ptr target="bib:BE"/> 1962, 248)</bibl>
                <bibl><!--Соломоник 1967a--><ptr target="bib:b0502."/>, 70</bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, с. 99 сл., (cf. BullEp 1974, 380, p. 249)</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, с. 99 сл., (cf. BullEp 1974, 380, p.
+                  249)</bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 60, № 52</bibl>
             </listBibl>
          </div>
@@ -143,23 +163,36 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg source="bib:b0502 bib:b0506">χο[ραύλας] <note>vel</note> χο[ροκιθαρεῖς]</rdg>
-                 <rdg source="bib:IOSPE">[.]ο[- - -]</rdg></app>
-               <app loc="2"><rdg source="bib:IOSPE">κω[μωιδούς ?]</rdg>
-                  <rdg>[ἐνί]κω[ν] <!--- Robert--></rdg></app>
-               <app loc="6"><rdg source="bib:IOSPE">ἐνκώμιο[ν]· Μάρκος</rdg></app>
-               <app loc="7"><rdg source="bib:НЭПХ"><note>leg.</note></rdg>
-                  <rdg source="bib:IOSPE">[. . . . . . . Πο]λύδ[ωρος ?]</rdg></app>
+               <app loc="1">
+                  <rdg source="bib:b0502 bib:b0506">χο[ραύλας] <note>vel</note> χο[ροκιθαρεῖς]</rdg>
+                  <rdg source="bib:IOSPE">[.]ο[- - -]</rdg>
+               </app>
+               <app loc="2">
+                  <rdg source="bib:IOSPE">κω[μωιδούς ?]</rdg>
+                  <rdg>[ἐνί]κω[ν] <!--- Robert--></rdg>
+               </app>
+               <app loc="6">
+                  <rdg source="bib:IOSPE">ἐνκώμιο[ν]· Μάρκος</rdg>
+               </app>
+               <app loc="7">
+                  <rdg source="bib:НЭПХ"><note>leg.</note></rdg>
+                  <rdg source="bib:IOSPE">[. . . . . . . Πο]λύδ[ωρος ?]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>- - - среди (авторов) ком[едий] - - - (среди) глашатаев - - - (среди) трубачей: Те[-  - -] в эпиграмме - - - в энкомии: Марк - - -</p>
+            <p>- - - среди (авторов) ком[едий] - - - (среди) глашатаев - - - (среди) трубачей:
+               Те[-  - -] в эпиграмме - - - в энкомии: Марк - - -</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>На основании эпиграфических параллелей можно предположить, что списку предшествовал заголовок οἵδε ἐνίκων τὸν ἀγῶνα vel sim. (Robert 1938, 22). По поводу синтаксической конструкции надписи ср. замечание Латышева (IOSPE, comm.): "casus accusativus, quibus certamina sunt indicata, a praedicato subaudito ἐνίκα pendere vix est quod moneam".</p>
+            <p>На основании эпиграфических параллелей можно предположить, что списку предшествовал
+               заголовок οἵδε ἐνίκων τὸν ἀγῶνα vel sim. (Robert 1938, 22). По поводу синтаксической
+               конструкции надписи ср. замечание Латышева (IOSPE, comm.): "casus accusativus, quibus
+               certamina sunt indicata, a praedicato subaudito ἐνίκα pendere vix est quod
+               moneam".</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

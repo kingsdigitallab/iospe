@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon17" cert="low">Архитектурная деталь (?).</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon17" cert="low"
+                              >Архитектурная деталь (?).</objectType>
                            <objectType xml:lang="en">Architectural detail.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Нижний край спилен при вторичном использовании, остальные стороны отбиты. На сглаженной лицевой стороне сохранились 
+                           <p xml:lang="ru">Нижний край спилен при вторичном использовании,
+                              остальные стороны отбиты. На сглаженной лицевой стороне сохранились
                               остатки одной строки надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
@@ -57,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Монументальны шрифт римского времени, крупные глубоко вырезанные буквы.</seg>
+                        <seg xml:lang="ru">Монументальны шрифт римского времени, крупные глубоко
+                           вырезанные буквы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">7,5</height>
                      </handNote>
@@ -76,8 +81,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1909 г. в северо-восточном районе Херсонеса, близ баптистерия Уваровской базилики («к северу от часовни»). Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, № 2797).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1909 г. в северо-восточном районе
+                           Херсонеса, близ баптистерия Уваровской базилики («к северу от часовни»).
+                           Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, № 2797).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -90,12 +98,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -130,7 +141,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>перед Δ, возможно, след горизонтальной гасты от Ε или Σ, om. IOSPE.</note></app>
+               <app>
+                  <note>перед Δ, возможно, след горизонтальной гасты от Ε или Σ, om. IOSPE.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Гермеса</title>
-             <title xml:lang="en">Epitaph of Hermes</title>
+            <title xml:lang="ru">Надгробие Гермеса</title>
+            <title xml:lang="en">Epitaph of Hermes</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>34864</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>34864</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34864</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Нижний левый угол плиты, состоящий из двух найденных по отдельности и впоследствии объединенных фрагментов. 
-                              Лицевая сторона отшлифована. Вверху следы прямоугольного углубления для скульптурного изображения. Под углублением трехстрочная надпись.</p>
+                           <p xml:lang="ru">Нижний левый угол плиты, состоящий из двух найденных по
+                              отдельности и впоследствии объединенных фрагментов. Лицевая сторона
+                              отшлифована. Вверху следы прямоугольного углубления для скульптурного
+                              изображения. Под углублением трехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">16,0</height>
@@ -57,34 +61,40 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Курсивные эпсилон, мю, сигма, слабое апицирование, знаки-разделители.</seg>
-                        <seg xml:lang="en">Cursive epsilon, mu, sigma, light serifs, {separation marks - interpunctum?}.</seg>
+                        <seg xml:lang="ru">Курсивные эпсилон, мю, сигма, слабое апицирование,
+                           знаки-разделители.</seg>
+                        <seg xml:lang="en">Cursive epsilon, mu, sigma, light serifs, {separation
+                           marks - interpunctum?}.</seg>
                         <height unit="cm">2,5</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Фрагмент 1 (левый) найден в 1900 г. в юго-восточном районе 
-                           Херсонеса при раскопках на участке с внешней стороны куртин 17 и 19 оборонительных стен. Раскопки К.К. Косцюшко-Валюжинича 
-                           (НА НЗХТ, д. 9, л. 17, № 177; д. 29, л. 3, № 177). Фрагмент 2 (правый) случайно найден в 1900 г.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Фрагмент 1 (левый) найден в 1900 г. в юго-восточном
+                           районе Херсонеса при раскопках на участке с внешней стороны куртин 17 и
+                           19 оборонительных стен. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 9,
+                           л. 17, № 177; д. 29, л. 3, № 177). Фрагмент 2 (правый) случайно найден в
+                           1900 г.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot"/>
-                        <rs type="circumstances">excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">excavations of K.K. Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -96,11 +106,14 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-26" who="CB">Biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata tags</change>
-          <change when="2015-09-30" who="AS">Leidenised Greek text</change>
+         <change when="2015-09-30" who="AS">Leidenised Greek text</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -117,10 +130,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> IV,<citedRange>171</citedRange></bibl> <bibl><!--(IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>622</citedRange>) – фрагмент 1</bibl>
-               <bibl><!--Латышев 1902a--><ptr target="bib:b0143"/>, 25, № <citedRange>6</citedRange></bibl>
-               <bibl><!-->IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>497 – фрагмент 2</citedRange></bibl>
-               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 77, № <citedRange>6 (объединение фрагментов 1 и 2)</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> IV,<citedRange>171</citedRange></bibl>
+               <bibl><!--(IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>622</citedRange>) – фрагмент 1</bibl>
+               <bibl><!--Латышев 1902a--><ptr target="bib:b0143"/>, 25, №
+                  <citedRange>6</citedRange></bibl>
+               <bibl><!-->IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>497 – фрагмент
+                     2</citedRange></bibl>
+               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 77, № <citedRange>6 (объединение
+                     фрагментов 1 и 2)</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -138,10 +156,19 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><rdg source="bib:b0239"/></app>
-               <app loc="1"><rdg source="bib:b0143"><note>suppl.</note></rdg></app>
-               <app loc="2"><note> между Σ и Ζ знак-разделитель в виде листа плюща, om. edd.</note></app>
-               <app loc="3"><rdg source="bib:b0143">[ἔτ]η <note>по обеим сторонам числового обозначения ΜΕ знаки-разделители в виде листьев плюща, om. edd.</note></rdg></app>
+               <app>
+                  <rdg source="bib:b0239"/>
+               </app>
+               <app loc="1">
+                  <rdg source="bib:b0143"><note>suppl.</note></rdg>
+               </app>
+               <app loc="2">
+                  <note> между Σ и Ζ знак-разделитель в виде листа плюща, om. edd.</note>
+               </app>
+               <app loc="3">
+                  <rdg source="bib:b0143">[ἔτ]η <note>по обеим сторонам числового обозначения ΜΕ
+                        знаки-разделители в виде листьев плюща, om. edd.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

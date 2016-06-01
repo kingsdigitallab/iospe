@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Декрет в честь посла (или стратега?) Митридата Евпатора</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Декрет в честь посла (или стратега?) Митридата Евпатора</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -13,7 +14,8 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country/>
+               <msIdentifier>
+                  <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Национальный заповедник "Херсонес Таврический"</repository>
                      <idno>34845 и 34875</idno>
@@ -33,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Три соединяющихся в контакте фрагмента плиты, оббитой со всех сторон.</p>
+                           <p xml:lang="ru">Три соединяющихся в контакте фрагмента плиты, оббитой со
+                              всех сторон.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">29,0</height>
@@ -55,11 +59,15 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа  с незамкнутым верхом и ломаной поперечной линией, бета с коротким верхним и удлиненным нижним полукружием, 
-                           гамма с широкой горизонталью, наклонные линии дельта не сомкнуты вверху, эпсилон с короткой средней горизонталью, дзета, 
-                           состоящая из одной вертикали и двух горизонталей, каппа с короткими наклонными линиями, мю имеет параллельные боковые линии, 
-                           правая вертикаль ню слегка приподнята, омикрон меньше размера строки, пи с короткой правой вертикалью и выступающей за края горизонталью, 
-                           сигма с расходящимися верхней и нижней гастами, штрихи и утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с незамкнутым верхом и ломаной поперечной линией,
+                           бета с коротким верхним и удлиненным нижним полукружием, гамма с широкой
+                           горизонталью, наклонные линии дельта не сомкнуты вверху, эпсилон с
+                           короткой средней горизонталью, дзета, состоящая из одной вертикали и двух
+                           горизонталей, каппа с короткими наклонными линиями, мю имеет параллельные
+                           боковые линии, правая вертикаль ню слегка приподнята, омикрон меньше
+                           размера строки, пи с короткой правой вертикалью и выступающей за края
+                           горизонталью, сигма с расходящимися верхней и нижней гастами, штрихи и
+                           утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,0</height>
                      </handNote>
@@ -71,15 +79,23 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0120" notAfter="-0063" evidence="просопография" precision="low">
+                     <origDate notBefore="-0120" notAfter="-0063" evidence="просопография"
+                        precision="low">
                         <seg xml:lang="ru">ca. 120–63 гг. до н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Нижний правый фрагмент найден в 1891 г. в центральной части городища. близ собора св. Владимира. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 20, л. 3, № 48). Нижний левый обломок случайно обнаружен в 1913 г. в ходе раскопок Р.Х. Лепера в северо-восточной части городища (НА НЗХТ, д. 109, л. 40, № 2929). Верхний фрагмент найден случайно "внутри монастырской ограды, поле XIX" в ходе раскопок Р.Х. Лепера 1914 г. (НА НЗХТ, д. 110, л. 4, № 126).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Нижний правый фрагмент найден в 1891 г. в
+                           центральной части городища. близ собора св. Владимира. Раскопки К.К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 20, л. 3, № 48). Нижний левый обломок
+                           случайно обнаружен в 1913 г. в ходе раскопок Р.Х. Лепера в
+                           северо-восточной части городища (НА НЗХТ, д. 109, л. 40, № 2929). Верхний
+                           фрагмент найден случайно "внутри монастырской ограды, поле XIX" в ходе
+                           раскопок Р.Х. Лепера 1914 г. (НА НЗХТ, д. 110, л. 4, № 126).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,12 +108,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
          <change when="2016-04-13" who="Chris de Lisle">Encoded text</change>
       </revisionDesc>
@@ -125,7 +144,9 @@
             <listBibl>
                <bibl>Латышев 1895, 77, ad № 3 (corrigendum к Латышев 1892, 18, № 3)</bibl>
                <bibl>НЭПХ II 110 (восстановление имени в стк. 3)</bibl>
-               <bibl>Avram 2002, 69</bibl> <bibl>(BullEp 2004, 230 (Ph. Gauthier)</bibl> <bibl>SEG 52, 735)</bibl>
+               <bibl>Avram 2002, 69</bibl>
+               <bibl>(BullEp 2004, 230 (Ph. Gauthier)</bibl>
+               <bibl>SEG 52, 735)</bibl>
                <bibl>Avram, PPEE 30, № 309, 310</bibl>
             </listBibl>
          </div>
@@ -159,17 +180,50 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>IOSPE I2 349. Подчеркнуты буквы, читавшиеся на камне предыдущими издателями, но не поддающиеся прочтению сейчас.</note></app>
-               <app><note>2: [- - - κλ]εῖος - IOSPE I2.</note></app>
-               <app><note>5: чтение окончания патронимика при нынешнем состоянии камня не поддается проверке; [ὁ δ. - - -]λάδα Μη[. . . . . .πρεσ]|[βευτάς] - IOSPE I2 (предполагая возможность этникона, производного от Μητρόπολις); [Κε]φαλᾶ̣ Ἀμι[σηνὸς πρεσ]|[βευτάς]  corr. НЭПХ; [---]φαλᾶ̣ Ἀμι[σηνὸς στρα]|[ταγός] - Avram (cf. SEG 47, 1125: 4-5).</note></app>
-               <app><note>7-8: от последней буквы в стк. 7 видна лишь горизонтальная черта (скорее всего Τ̣); τὰ τ[ᾶς πρεσβείας] | [ἄριστα κατα]σκευάζ[ει] - IOSPE I2; τὰ π[ρὸς τὸν]| [καιρὸν παρα]σκευάζ[ει] - Avram, по фотографии (cf. Syll3, 707 = ISM I 65, l. 15).</note></app>
-               <app><note>10, fin.: τᾶι πόλει scripsi; τῶι δάμωι - IOSPE I2 .</note></app>
-               <app><note>17: στάλαι - IOSPE I2; εἰς στάλαν scripsi (в соответствии c херсонесской формулой публикации эллинистического времени).</note></app>
-               <app><note>21, fin.: ожидается стандартная формула датировки (βασιλεύοντος ΔΔ, προαισυμνῶντος ΔΔ, γραμματεύοντος ΔΔ).</note></app>
+               <app>
+                  <note>IOSPE I2 349. Подчеркнуты буквы, читавшиеся на камне предыдущими издателями,
+                     но не поддающиеся прочтению сейчас.</note>
+               </app>
+               <app>
+                  <note>2: [- - - κλ]εῖος - IOSPE I2.</note>
+               </app>
+               <app>
+                  <note>5: чтение окончания патронимика при нынешнем состоянии камня не поддается
+                     проверке; [ὁ δ. - - -]λάδα Μη[. . . . . .πρεσ]|[βευτάς] - IOSPE I2 (предполагая
+                     возможность этникона, производного от Μητρόπολις); [Κε]φαλᾶ̣ Ἀμι[σηνὸς
+                     πρεσ]|[βευτάς] corr. НЭПХ; [---]φαλᾶ̣ Ἀμι[σηνὸς στρα]|[ταγός] - Avram (cf. SEG
+                     47, 1125: 4-5).</note>
+               </app>
+               <app>
+                  <note>7-8: от последней буквы в стк. 7 видна лишь горизонтальная черта (скорее
+                     всего Τ̣); τὰ τ[ᾶς πρεσβείας] | [ἄριστα κατα]σκευάζ[ει] - IOSPE I2; τὰ π[ρὸς
+                     τὸν]| [καιρὸν παρα]σκευάζ[ει] - Avram, по фотографии (cf. Syll3, 707 = ISM I
+                     65, l. 15).</note>
+               </app>
+               <app>
+                  <note>10, fin.: τᾶι πόλει scripsi; τῶι δάμωι - IOSPE I2 .</note>
+               </app>
+               <app>
+                  <note>17: στάλαι - IOSPE I2; εἰς στάλαν scripsi (в соответствии c херсонесской
+                     формулой публикации эллинистического времени).</note>
+               </app>
+               <app>
+                  <note>21, fin.: ожидается стандартная формула датировки (βασιλεύοντος ΔΔ,
+                     προαισυμνῶντος ΔΔ, γραμματεύοντος ΔΔ).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[Номофилаки - - - и стоящий во главе] управления [- - -] внесли [предложение: поскольку - - - (сын) - - -], ам[исенец, посланный] царем [Митридатом] Евпатором в [наш город в качестве  - - - являет всяческую] преданность, [наилучшим образом] устраивает - - - и делает свое [пребывание] подобающим [и полезным для] царя [и нашего города], пусть [Совет] и народ решит похвалить его за это, [даровать ему самому] и (его) потомкам проксению, [гражданство], право входа в гавань и выхода из гавани без риска конфискации [и необходимости заключения договора], им самим и их имуществу; пусть симмнамоны напишут постановление на беломраморной [плите] и поставят в [- - -] пусть казначеи священных сумм выдадут понесенный [расход. Это решено Советом и народом] в месяц [- - -]</p>
+            <p>[Номофилаки - - - и стоящий во главе] управления [- - -] внесли [предложение:
+               поскольку - - - (сын) - - -], ам[исенец, посланный] царем [Митридатом] Евпатором в
+               [наш город в качестве - - - являет всяческую] преданность, [наилучшим образом]
+               устраивает - - - и делает свое [пребывание] подобающим [и полезным для] царя [и
+               нашего города], пусть [Совет] и народ решит похвалить его за это, [даровать ему
+               самому] и (его) потомкам проксению, [гражданство], право входа в гавань и выхода из
+               гавани без риска конфискации [и необходимости заключения договора], им самим и их
+               имуществу; пусть симмнамоны напишут постановление на беломраморной [плите] и поставят
+               в [- - -] пусть казначеи священных сумм выдадут понесенный [расход. Это решено
+               Советом и народом] в месяц [- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

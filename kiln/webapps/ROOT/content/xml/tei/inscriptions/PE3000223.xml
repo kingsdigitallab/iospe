@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Проксения амастрийцу П. (Сер?)вилию</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Проксения амастрийцу П. (Сер?)вилию</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Два соединяющихся в контакте фрагмента большой мраморной плиты из мелкозернистого мрамора. 
-                              Лицевая сторона тщательно обработана, тыльная сторона сглажена.</p>
+                           <p xml:lang="ru">Два соединяющихся в контакте фрагмента большой мраморной
+                              плиты из мелкозернистого мрамора. Лицевая сторона тщательно
+                              обработана, тыльная сторона сглажена.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">32,0</height>
@@ -57,10 +60,13 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Глубокие, довольно узкие буквы, альфа с прямой перекладиной и пересекающимися вверху наклонными, 
-                           мю с параллельными боковыми линиями и пересекающимися внутренними линиями, овальный омикрон в габарите строки, 
-                           пи с вертикалями одинаковой длины и выходящей за их пределы горизонталью, прямоугольная сигма, 
-                           ипсилон с короткой не доходящей до середины строки вертикалью, йота adscriptum, апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Глубокие, довольно узкие буквы, альфа с прямой
+                           перекладиной и пересекающимися вверху наклонными, мю с параллельными
+                           боковыми линиями и пересекающимися внутренними линиями, овальный омикрон
+                           в габарите строки, пи с вертикалями одинаковой длины и выходящей за их
+                           пределы горизонталью, прямоугольная сигма, ипсилон с короткой не
+                           доходящей до середины строки вертикалью, йота adscriptum, апексы на
+                           концах линий букв.</seg>
                         <seg xml:lang="en">alpha with straight crossbar</seg>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -81,14 +87,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit checking</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -105,7 +115,7 @@
             <!-- Издания -->
          </div>
          <div type="bibliography" subtype="commentaries">
-            <!-- Комментарии -->   
+            <!-- Комментарии -->
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -136,28 +146,51 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Fr. 2 ad fr. 1 adiunxit Макаров 2006; fr. 1 = стк. 2-6, справа; fr. 2 = стк. 1-8, слева.</note></app>
-               <app loc="1"><note>В начале строки виден нижний апекс.</note></app>
-               <app loc="5"><note>В начале строки виден низ вертикальной гасты (след Ι или Η). Вероятно восстановление инфинитива;  в конце строки τᾶς или τάς</note></app>
-                  <app loc="5"><rdg source="bib:IOSPE">[---]στα[---]</rdg></app>
-               <app loc="5"><rdg source="bib:НЭПХ">ΣΡΑΙ</rdg></app>
-               <app loc="5"><rdg><note> in.:</note> [ναύκλαρον?] Ἀμαστρια[νό]ν <note>(cf. № ipe 364, стк. 19).</note></rdg></app>
-               <app loc="6"><rdg source="bib:НЭПХ">ἔκπλο[υν] <note>legit</note></rdg></app>
-                <app loc="6"><rdg source="bib:IOSPE">[---]ενιγ[---]</rdg></app>
+               <app>
+                  <note>Fr. 2 ad fr. 1 adiunxit Макаров 2006; fr. 1 = стк. 2-6, справа; fr. 2 = стк.
+                     1-8, слева.</note>
+               </app>
+               <app loc="1">
+                  <note>В начале строки виден нижний апекс.</note>
+               </app>
+               <app loc="5">
+                  <note>В начале строки виден низ вертикальной гасты (след Ι или Η). Вероятно
+                     восстановление инфинитива; в конце строки τᾶς или τάς</note>
+               </app>
+               <app loc="5">
+                  <rdg source="bib:IOSPE">[---]στα[---]</rdg>
+               </app>
+               <app loc="5">
+                  <rdg source="bib:НЭПХ">ΣΡΑΙ</rdg>
+               </app>
+               <app loc="5">
+                  <rdg><note> in.:</note> [ναύκλαρον?] Ἀμαστρια[νό]ν <note>(cf. № ipe 364, стк.
+                        19).</note></rdg>
+               </app>
+               <app loc="6">
+                  <rdg source="bib:НЭПХ">ἔκπλο[υν] <note>legit</note></rdg>
+               </app>
+               <app loc="6">
+                  <rdg source="bib:IOSPE">[---]ενιγ[---]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[- - -  поэтому] пусть будет решено Советом и народом: восхвалить за это П. [Сер]вилия [- - -], амастрийца, даровать ему гражданство на основании проксении, 
-               право входа в гавань и выхода из гавани, в мирное и военное время, без риска конфискации и необходимости заключения договора, ему самому, 
-               его потомкам и имуществу, а также обладание всеми правами [- - -]</p>
+            <p>[- - - поэтому] пусть будет решено Советом и народом: восхвалить за это П. [Сер]вилия
+               [- - -], амастрийца, даровать ему гражданство на основании проксении, право входа в
+               гавань и выхода из гавани, в мирное и военное время, без риска конфискации и
+               необходимости заключения договора, ему самому, его потомкам и имуществу, а также
+               обладание всеми правами [- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Восстанавливаемый набор почестей и привилегий имеет стандартный характер, что указывает на обычный статус их амастрийского адресата, 
-               являвшегося скорее всего купцом или навклером, как и большинство южнопонтийских обладателей херсонесских проксений императорского времени. 
-               Среди них неоднократно встречаются римские граждане.</p>
+            <p>Восстанавливаемый набор почестей и привилегий имеет стандартный характер, что
+               указывает на обычный статус их амастрийского адресата, являвшегося скорее всего
+               купцом или навклером, как и большинство южнопонтийских обладателей херсонесских
+               проксений императорского времени. Среди них неоднократно встречаются римские
+               граждане.</p>
             <p>II в. н.э., скорее всего около середины века.</p>
          </div>
          <div type="commentary" xml:lang="en">

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Декрет в честь Гая</title>
-             <title xml:lang="en">Decree honouring Gaius</title>
+            <title xml:lang="ru">Декрет в честь Гая</title>
+            <title xml:lang="en">Decree honouring Gaius</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,14 +35,18 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Плита с фронтоном и акротериями (центральный акротерий сбит). Обломана снизу и справа. Лицевая поверхность обработана тщательно, 
-                              тыльная сторона – суммарно. Частично сохранились 15 строк надписи, вырезанной по предварительной разметке. 
-                              Первая строка-заголовок помещена в тимпане фронтона и выровнена по центру. 
-                              Остальные строки расположены ниже фронтона с небольшим отступом (0,8 см) от левого края плиты.</p>
+                           <p xml:lang="ru">Плита с фронтоном и акротериями (центральный акротерий
+                              сбит). Обломана снизу и справа. Лицевая поверхность обработана
+                              тщательно, тыльная сторона – суммарно. Частично сохранились 15 строк
+                              надписи, вырезанной по предварительной разметке. Первая
+                              строка-заголовок помещена в тимпане фронтона и выровнена по центру.
+                              Остальные строки расположены ниже фронтона с небольшим отступом (0,8
+                              см) от левого края плиты.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">19,0</height>
@@ -59,10 +64,13 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, тета с точкой, 
-                           мю с немного расходящимися внешними гастами и пересечением внутренних линий иногда на уровне середины строки, иногда чуть выше; 
-                           круглые буквы меньше остальных букв; пи имеет двоякое начертание: то с равными вертикалями и слегка выходящей за их пределы горизонталью, 
-                           то с немного укороченной правой вертикалью и не выходящей за пределы боковых верхней поперечной гастой; слабое апицирование.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, тета с точкой, мю с
+                           немного расходящимися внешними гастами и пересечением внутренних линий
+                           иногда на уровне середины строки, иногда чуть выше; круглые буквы меньше
+                           остальных букв; пи имеет двоякое начертание: то с равными вертикалями и
+                           слегка выходящей за их пределы горизонталью, то с немного укороченной
+                           правой вертикалью и не выходящей за пределы боковых верхней поперечной
+                           гастой; слабое апицирование.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar, light serifs.</seg>
                         <height unit="cm">0,8 (в стк. 1 – 1,2 см).</height>
                      </handNote>
@@ -74,15 +82,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0033" notAfter="0067" evidence="палеография формула" precision="low">
+                     <origDate notBefore="-0033" notAfter="0067" evidence="палеография формула"
+                        precision="low">
                         <seg xml:lang="ru">Посл. треть I в. до н.э. – сер. I в. н.э.</seg>
-                        <seg xml:lang="en">Last third of Ist century B.C. - mid Ist century C.E.</seg>
+                        <seg xml:lang="en">Last third of Ist century B.C. - mid Ist century
+                           C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 2013 г. в северном районе городища, в квартале IX «A» в засыпи подвала № 2. Раскопки С.Г. Рыжова.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 2013 г. в северном районе городища, в
+                           квартале IX «A» в засыпи подвала № 2. Раскопки С.Г. Рыжова.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,14 +107,17 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-23" who="CB">Tokenised, metadata, origDate and app crit</change>
-          <change when="2015-11-20" who="KK">Leidenised</change>
+         <change when="2015-11-20" who="KK">Leidenised</change>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -168,29 +183,58 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="6"><note>fin.: после Α ясно видна вертикальная гаста (и, возможно, петля от Ρ или Β).</note></app>
-               <app loc="6/7"><rdg><note>не исключаю</note> <unclear>αἱ</unclear>[ρού]/μενο[ς δὲ - - -] 
-                  <note>vel</note> ἀ<unclear>ρ</unclear>[ξά]/μενο[ς δὲ - - -] <note>vel</note> ἀ<unclear>ρ</unclear>[ξα]/μένο[υ δὲ - - -].</rdg></app>
-               <app loc="7"><note>в начале стк. после Ο следы буквы не поддаются идентификации; в середине стк. после Ι скорее всего следы треугольной буквы (Α, Δ, Λ). </note></app>
-               <app loc="8"><note>in.: после μ<unclear>ων</unclear> следы вертикальной гасты</note> 
+               <app loc="6">
+                  <note>fin.: после Α ясно видна вертикальная гаста (и, возможно, петля от Ρ или
+                     Β).</note>
+               </app>
+               <app loc="6/7">
+                  <rdg><note>не исключаю</note>
+                     <unclear>αἱ</unclear>[ρού]/μενο[ς δὲ - - -] <note>vel</note>
+                        ἀ<unclear>ρ</unclear>[ξά]/μενο[ς δὲ - - -] <note>vel</note>
+                        ἀ<unclear>ρ</unclear>[ξα]/μένο[υ δὲ - - -].</rdg>
+               </app>
+               <app loc="7">
+                  <note>в начале стк. после Ο следы буквы не поддаются идентификации; в середине
+                     стк. после Ι скорее всего следы треугольной буквы (Α, Δ, Λ). </note>
+               </app>
+               <app loc="8">
+                  <note>in.: после μ<unclear>ων</unclear> следы вертикальной гасты</note>
                   <note>перед Ι часть верхней горизонтальной линии (<unclear>Σ</unclear> ?)</note>
-                  <rdg><note>возможно,</note> μ<unclear>ων ἐ</unclear>[ν ἅπα]<unclear>σ</unclear>ιν [καιροῖς] εὐσχήμονας κτλ.</rdg></app>
-               <app loc="8"><rdg><note>fin.: форма мн. ч.</note> κιν<unclear>δ</unclear>[ύνοις] <note>превышает размер лакуны.</note></rdg></app>
-               <app loc="9"><rdg><note>in.:</note> ὄ<unclear>ν</unclear>[των <note>vel</note> τας ?]</rdg>
-                  <note>после Α нижняя часть наклонной гасты (Δ, Λ, Μ, Σ ?).</note></app>
-               <app loc="10"><note>перед Σ, возможно, следы Υ</note>
-                 <rdg><note>не исключаю</note> [- - - ἑαυτὸν] ἐ<unclear>π</unclear>[ιδιδο]<unclear>ὺ</unclear>ς σπουδαῖον κτλ.</rdg></app>
-               <app loc="12"><note>перед Σ, возможно, следы Ο или Ω</note> 
-                <rdg><note>не исключаю</note> ΤΑ++<unclear>Σ</unclear> <unclear>ἔ</unclear>[πηξιώθη <note>vel sim.</note>] πιστωθεὶς κτλ. 
-                   <note>(ср. в херсонесском декрете римского времени № seg45, 985, l. 9: πάσᾳ τᾷ παρ’ ἁμεῖν τει[μᾷ ἐ]<unclear>π</unclear>αξιωθῆμεν).</note></rdg></app>
+                  <rdg><note>возможно,</note> μ<unclear>ων ἐ</unclear>[ν ἅπα]<unclear>σ</unclear>ιν
+                     [καιροῖς] εὐσχήμονας κτλ.</rdg>
+               </app>
+               <app loc="8">
+                  <rdg><note>fin.: форма мн. ч.</note> κιν<unclear>δ</unclear>[ύνοις]
+                        <note>превышает размер лакуны.</note></rdg>
+               </app>
+               <app loc="9">
+                  <rdg><note>in.:</note> ὄ<unclear>ν</unclear>[των <note>vel</note> τας ?]</rdg>
+                  <note>после Α нижняя часть наклонной гасты (Δ, Λ, Μ, Σ ?).</note>
+               </app>
+               <app loc="10">
+                  <note>перед Σ, возможно, следы Υ</note>
+                  <rdg><note>не исключаю</note> [- - - ἑαυτὸν]
+                        ἐ<unclear>π</unclear>[ιδιδο]<unclear>ὺ</unclear>ς σπουδαῖον κτλ.</rdg>
+               </app>
+               <app loc="12">
+                  <note>перед Σ, возможно, следы Ο или Ω</note>
+                  <rdg><note>не исключаю</note> ΤΑ++<unclear>Σ</unclear>
+                     <unclear>ἔ</unclear>[πηξιώθη <note>vel sim.</note>] πιστωθεὶς κτλ. <note>(ср. в
+                        херсонесском декрете римского времени № seg45, 985, l. 9: πάσᾳ τᾷ παρ’ ἁμεῖν
+                        τει[μᾷ ἐ]<unclear>π</unclear>αξιωθῆμεν).</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>В добрый час. Проедры Совета внесли предложение: поскольку Гай, сын Антиоха, стект[ориец], а также амастриец, посетив наш город, провел время 
-               должным и подобающим образом, показывая достойное отношение ко всем гражданам, как в целом, так и к [каждому в отдельности, - - - (и являя1 ?)] 
-               нашему городу безупречные [во всех обстоятельствах ? - - -] своего образа действий, во время опасности [- - -] восстановил некоторые2 [- - - будучи ?] 
-               усердным и преданным нашему городу, [- - - он был удостоен] почестей и венков [- - -]; когда народ обратился к нему с призывом дать согласие [- - -], 
-               не сомневаясь, что он (scil. Гай, сын Антиоха) может оказать [помощь - - -].</p>
+            <p>В добрый час. Проедры Совета внесли предложение: поскольку Гай, сын Антиоха,
+               стект[ориец], а также амастриец, посетив наш город, провел время должным и подобающим
+               образом, показывая достойное отношение ко всем гражданам, как в целом, так и к
+               [каждому в отдельности, - - - (и являя1 ?)] нашему городу безупречные [во всех
+               обстоятельствах ? - - -] своего образа действий, во время опасности [- - -]
+               восстановил некоторые2 [- - - будучи ?] усердным и преданным нашему городу, [- - - он
+               был удостоен] почестей и венков [- - -]; когда народ обратился к нему с призывом дать
+               согласие [- - -], не сомневаясь, что он (scil. Гай, сын Антиоха) может оказать
+               [помощь - - -].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Декрет</title>
-             <title xml:lang="en">Decree</title>
+            <title xml:lang="en">Decree</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломок верхней части плиты, украшенной фронтоном и акротериями. Лицевая поверхность обработана тщательно, 
-                              тыльная сторона – суммарно. Частично сохранились четырех строк надписи, вырезанной по предварительной разметке. 
-                              Первая строка-заголовок помещена в тимпане фронтона с обеих сторон рельефной розетки. Остальные строки расположены под фронтоном.</p>
+                           <p xml:lang="ru">Обломок верхней части плиты, украшенной фронтоном и
+                              акротериями. Лицевая поверхность обработана тщательно, тыльная сторона
+                              – суммарно. Частично сохранились четырех строк надписи, вырезанной по
+                              предварительной разметке. Первая строка-заголовок помещена в тимпане
+                              фронтона с обеих сторон рельефной розетки. Остальные строки
+                              расположены под фронтоном.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">24,5</height>
@@ -58,8 +63,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с чертой, круглые буквы в высоту строки, пи с равными вертикалями и 
-                           слегка выходящей за их пределы горизонталью, горизонатальные гасты сигма выступают за пересечение с наклонными, сильное апицирование.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, тета с чертой, круглые
+                           буквы в высоту строки, пи с равными вертикалями и слегка выходящей за их
+                           пределы горизонталью, горизонатальные гасты сигма выступают за
+                           пересечение с наклонными, сильное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1 (стк. 1 – 1,5 см).</height>
                      </handNote>
@@ -71,15 +78,20 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0033" notAfter="0067" evidence="палеография формула" precision="low">
+                     <origDate notBefore="-0033" notAfter="0067" evidence="палеография формула"
+                        precision="low">
                         <seg xml:lang="ru">Посл. треть I в. до н.э. – сер. I в. н.э.</seg>
-                        <seg xml:lang="en">Last third of Ist century B.C. - mid Ist century C.E.</seg>
+                        <seg xml:lang="en">Last third of Ist century B.C. - mid Ist century
+                           C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1978 г. в северо-восточном районе Херсонеса (III поперечная улица, позднеантичный слой). Раскопки М.И. Золотарева.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1978 г. в северо-восточном районе
+                           Херсонеса (III поперечная улица, позднеантичный слой). Раскопки М.И.
+                           Золотарева.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,14 +104,17 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-23" who="CB">tokenised, metadata, origDate and biblio tags</change>
-          <change when="2015-11-20" who="KK">Leidenised</change>
+         <change when="2015-11-20" who="KK">Leidenised</change>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -116,7 +131,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Шелов-Коведяев 1982-->, <citedRange>81</citedRange> (<!--SEG--><ptr target="bib:SEG"/> <citedRange>32, 786</citedRange>)</bibl>
+               <bibl><!--Шелов-Коведяев 1982-->, <citedRange>81</citedRange> (<!--SEG--><ptr
+                     target="bib:SEG"/>
+                  <citedRange>32, 786</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,21 +158,36 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="2-4"><note>suppl. Макаров 2015; два варианта дополнения были предложены в ed. pr.: </note></app>
-               <app><rdg><note>(1)</note> [νομοφύλακες ε]ἶ̣παν· Ἐπ[ι...... τοῦ δεῖνος, ὁ δεῖ]/[να τοῦ δεῖνος,] <unclear>Κ</unclear>άλλίστ<unclear>ρ</unclear>[ατος τοῦ δεῖνος καὶ ὁ]
-                  / [ἐπὶ τᾶς διοικέσ]<unclear>ε</unclear>ος [ὁ δεῖνα τοῦ δεῖνος - - -]</rdg>
-                 <rdg>(2) [νομοφύλακες ε]ἶ̣παν· ἐπ[ειδὴ ὁ δεῖνα] / [τοῦ δεῖνος τοῦ]̣ Κάλλιστρ[̣άτου ἀνὴρ καλὸς καὶ ἀγα]/[θὸς διὰ παν]<unclear>τ</unclear>ὸς [γνησίως 
-                    <note> (vel sim.)</note> ἑαυτὸν ἐπιδι]/[δοὺς - - -] 
-                    <note>vel</note> [προγόνων εὐεργετῶν / γεγονὼς καὶ αὐ]<unclear>τ</unclear>ὸς [βουλόμενος <note>(vel sim.)</note> - - -]</rdg></app>
-               <app loc="3"><rdg source="bib:b0773"><unclear>κ</unclear>άλλιστ<unclear>α</unclear> <note>corr.</note></rdg>
-                  <rdg><note>vel</note> <unclear>κ</unclear>αλλίστ<unclear>α</unclear>[ν] <!--- Макаров 2015.--></rdg></app>
-               <app loc="4"><note>в начале стк., вероятно, Κ;</note> 
-                  <rdg><unclear>κ</unclear>οσ[μίως <note>vel sim. ?</note>] <!--- Макаров 2015.--></rdg></app>
+               <app loc="2-4">
+                  <note>suppl. Макаров 2015; два варианта дополнения были предложены в ed. pr.:
+                  </note>
+               </app>
+               <app>
+                  <rdg><note>(1)</note> [νομοφύλακες ε]ἶ̣παν· Ἐπ[ι...... τοῦ δεῖνος, ὁ δεῖ]/[να τοῦ
+                     δεῖνος,] <unclear>Κ</unclear>άλλίστ<unclear>ρ</unclear>[ατος τοῦ δεῖνος καὶ ὁ]
+                     / [ἐπὶ τᾶς διοικέσ]<unclear>ε</unclear>ος [ὁ δεῖνα τοῦ δεῖνος - - -]</rdg>
+                  <rdg>(2) [νομοφύλακες ε]ἶ̣παν· ἐπ[ειδὴ ὁ δεῖνα] / [τοῦ δεῖνος τοῦ]̣ Κάλλιστρ[̣άτου
+                     ἀνὴρ καλὸς καὶ ἀγα]/[θὸς διὰ παν]<unclear>τ</unclear>ὸς [γνησίως <note> (vel
+                        sim.)</note> ἑαυτὸν ἐπιδι]/[δοὺς - - -] <note>vel</note> [προγόνων εὐεργετῶν
+                     / γεγονὼς καὶ αὐ]<unclear>τ</unclear>ὸς [βουλόμενος <note>(vel sim.)</note> - -
+                     -]</rdg>
+               </app>
+               <app loc="3">
+                  <rdg source="bib:b0773"><unclear>κ</unclear>άλλιστ<unclear>α</unclear>
+                     <note>corr.</note></rdg>
+                  <rdg><note>vel</note>
+                     <unclear>κ</unclear>αλλίστ<unclear>α</unclear>[ν] <!--- Макаров 2015.--></rdg>
+               </app>
+               <app loc="4">
+                  <note>в начале стк., вероятно, Κ;</note>
+                  <rdg><unclear>κ</unclear>οσ[μίως <note>vel sim. ?</note>]
+                     <!--- Макаров 2015.--></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>В добрый час. Проедры Совета внесли предложение: поскольку [такой-то, сын такого-то, посетив наш город, провел время насколько возможно] 
-               наилучшим образом [- - -]</p>
+            <p>В добрый час. Проедры Совета внесли предложение: поскольку [такой-то, сын такого-то,
+               посетив наш город, провел время насколько возможно] наилучшим образом [- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

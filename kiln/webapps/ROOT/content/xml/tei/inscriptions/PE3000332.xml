@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки одной строки надписи. Буквы очень стерты.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки одной
+                              строки надписи. Буквы очень стерты.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">10,0</height>
@@ -56,7 +60,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с вертикальными гастами одинаковой длины, маленький круглый омикрон, прямоугольная сигма.</seg>
+                        <seg xml:lang="ru">Ню с вертикальными гастами одинаковой длины, маленький
+                           круглый омикрон, прямоугольная сигма.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -75,7 +80,8 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -90,14 +96,18 @@
                      <seg xml:lang="en">Previously Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi. В настоящее время камень считается утерянным.</seg>
+                     <seg xml:lang="ru">Non vidi. В настоящее время камень считается
+                        утерянным.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -134,9 +144,15 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Чтение букв дано по маюскульной копии в IOSPE.</note></app>
-               <app><note>1: в начале стк. вертикальная гаста.</note></app>
-               <app><note>2: в начале стк. часть полукружия Ω (?).</note></app>
+               <app>
+                  <note>Чтение букв дано по маюскульной копии в IOSPE.</note>
+               </app>
+               <app>
+                  <note>1: в начале стк. вертикальная гаста.</note>
+               </app>
+               <app>
+                  <note>2: в начале стк. часть полукружия Ω (?).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

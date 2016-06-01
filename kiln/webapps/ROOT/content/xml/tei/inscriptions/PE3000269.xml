@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился нижний край. Лицевая поверхность тщательно обработана. На ней остатки трех строк надписи.</p>
+                           <p xml:lang="ru">Сохранился нижний край. Лицевая поверхность тщательно
+                              обработана. На ней остатки трех строк надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">16,0</height>
@@ -56,8 +59,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, эпсилон с незамкнутой средней горизонталью, тета с незамкнутой поперечной гастой, 
-                           сигма с параллельными верхней и нижней линиями, узкий ипсилон на короткой ножке, сильное апицирование.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной поперечной линией, эпсилон с незамкнутой
+                           средней горизонталью, тета с незамкнутой поперечной гастой, сигма с
+                           параллельными верхней и нижней линиями, узкий ипсилон на короткой ножке,
+                           сильное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">4 (стк.1-2); 2,8 (стк. 3).</height>
                      </handNote>
@@ -69,21 +74,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1891 г. в центральной части городища, на площади около собора св. Владимира. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 2, № 44; д. 20, л. 2, № 44).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1891 г. в центральной части городища, на
+                           площади около собора св. Владимира. Раскопки К.К. Косцюшко-Валюжинича (НА
+                           НЗХТ, д. 2, № 44; д. 20, л. 2, № 44).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,13 +100,16 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="KK">Leidenised</change>
          <change when="2015-10-30" who="CB">biblio and app crit</change>
@@ -125,7 +137,8 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 78 (corrigenda ad Латышев 1892, 31, № 13)</bibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 78 (corrigenda ad Латышев 1892,
+                  31, № 13)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -139,10 +152,15 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>IOSPE I2 591. </note>--></app>
-               <app loc="1"><rdg source="bib:IOSPE">[- - -]ος Βε[- - -]</rdg>
-                 <note> в начале стк. видна нижняя часть вертикальной гасты, не исключаю [ὁ δᾶ]μ̣ος; в конце стк. видна вертикальная линия.</note></app>
-               <app loc="3"><note>scripsi</note> 
-                  <rdg source="bib:IOSPE">[κ]αὶ εὐερ[γέτας?]</rdg></app>
+               <app loc="1">
+                  <rdg source="bib:IOSPE">[- - -]ος Βε[- - -]</rdg>
+                  <note> в начале стк. видна нижняя часть вертикальной гасты, не исключаю [ὁ
+                     δᾶ]μ̣ος; в конце стк. видна вертикальная линия.</note>
+               </app>
+               <app loc="3">
+                  <note>scripsi</note>
+                  <rdg source="bib:IOSPE">[κ]αὶ εὐερ[γέτας?]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

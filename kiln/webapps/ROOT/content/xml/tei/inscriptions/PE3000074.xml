@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Мегакла</title>
-             <title xml:lang="en">Epitaph of Megakles</title>
+            <title xml:lang="en">Epitaph of Megakles</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>6/36847 + 56/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>6/36847 + 56/36847</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>6/36847 + 56/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,14 +35,19 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела с карнизом и антефиксами (сколоты). Разбита на две части. Сохранилась практически полностью 
-                              (незначительно повреждены профилированный цоколь слева и шип для вставки в постамент). 
-                              Лицевая и боковые грани украшены рельефными розетками. Между карнизом и розетками по предварительной разметке черной краской нанесена 
-                              двухстрочная надпись. Под надписью рельефное изображение меча в ножнах и портупеи, висящей на гвозде.</p>
+                           <p xml:lang="ru">Стела с карнизом и антефиксами (сколоты). Разбита на две
+                              части. Сохранилась практически полностью (незначительно повреждены
+                              профилированный цоколь слева и шип для вставки в постамент). Лицевая и
+                              боковые грани украшены рельефными розетками. Между карнизом и
+                              розетками по предварительной разметке черной краской нанесена
+                              двухстрочная надпись. Под надписью рельефное изображение меча в ножнах
+                              и портупеи, висящей на гвозде.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">178,0</height>
@@ -59,19 +65,21 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, наклонные линии каппа укорочены, правая вертикаль ню слегка приподнята, 
-                           омега немного меньше остальных 
-                           букв, слегка изогнутые линии альфы, лямбды, мю, сигмы, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Epsilon with a short middle bar, nu with short right vertical</seg>
+                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, наклонные линии
+                           каппа укорочены, правая вертикаль ню слегка приподнята, омега немного
+                           меньше остальных букв, слегка изогнутые линии альфы, лямбды, мю, сигмы,
+                           утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Epsilon with a short middle bar, nu with short right
+                           vertical</seg>
                         <height unit="cm">2,6</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0251" evidence="палеография">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
@@ -80,8 +88,10 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 гг. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 гг. в юго-восточном районе
+                           Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен.
                            Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
@@ -99,7 +109,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-02" who="CB">Metadata and app crit</change>
@@ -122,10 +135,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 64, № <citedRange>14</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>148</citedRange> (<!--Bull.ép. 1974-->, <citedRange>380</citedRange>)</bibl>
-               <bibl><!--SEG 53--><ptr target="bib:SEG"/>, 53, 767, № <citedRange>3</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 430, № <citedRange>3</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 64, №
+                     <citedRange>14</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>148</citedRange>
+                  (<!--Bull.ép. 1974-->, <citedRange>380</citedRange>)</bibl>
+               <bibl><!--SEG 53--><ptr target="bib:SEG"/>, 53, 767, №
+                  <citedRange>3</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 430, №
+                  <citedRange>3</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -143,7 +160,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg source="bib:SEG">Μεγακλῆ <note>- (ошибочно).</note></rdg></app>
+               <app loc="1">
+                  <rdg source="bib:SEG">Μεγακλῆ <note>- (ошибочно).</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -153,10 +172,12 @@
             <p>Megakles, (son of) Sannion.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>О Саннионe и его семье, а также о фигурирующих в надписи личных именах см. комментарий к № neph146.</p>
+            <p>О Саннионe и его семье, а также о фигурирующих в надписи личных именах см.
+               комментарий к № neph146.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p>On Sannion and his family, as well as other personal names in this inscription, see commentary to № neph146.</p>
+            <p>On Sannion and his family, as well as other personal names in this inscription, see
+               commentary to № neph146.</p>
          </div>
       </body>
    </text>

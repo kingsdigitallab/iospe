@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон, на лицевой стороне частично сохранилось изображение венка; внутри венка остатки двух строк надписи.</p>
+                           <p xml:lang="ru">Обломана со всех сторон, на лицевой стороне частично
+                              сохранилось изображение венка; внутри венка остатки двух строк
+                              надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">11,0</height>
@@ -56,8 +60,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с незамкнутым верхом и ломаной перекладиной, узкая гамма, широкая тау, узкий ипсилон с немного изогнутыми наклонными, 
-                           слабое апицирование.</seg>
+                        <seg xml:lang="ru">Альфа с незамкнутым верхом и ломаной перекладиной, узкая
+                           гамма, широкая тау, узкий ипсилон с немного изогнутыми наклонными, слабое
+                           апицирование.</seg>
                         <seg xml:lang="en">light serifs.</seg>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -69,21 +74,26 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография орфография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография орфография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1889 г. в северном районе херсонесского городища на берегу моря, между монастырским кладбищем и купальней. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 18; д. 18, № 18).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1889 г. в северном районе херсонесского
+                           городища на берегу моря, между монастырским кладбищем и купальней.
+                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 18; д. 18, №
+                           18).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,17 +101,20 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">biblio and app crit</change>
          <change when="2015-10-23" who="CB">Metadata</change>
-          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-10-21" who="KK">Leidenised</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -118,14 +131,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 21, № <citedRange>24</citedRange></bibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 21, №
+                  <citedRange>24</citedRange></bibl>
                <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>,<citedRange>IV 163</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>585</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -137,7 +150,10 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>IOSPE I2 585. </note>--></app>
-               <app loc="3"><note>scripsi. «Nihil aliud coronae inscriptum fuisse videtur. Cf. similes titulos IosPE II1, nn° 314 et 315» - IOSPE.</note></app>
+               <app loc="3">
+                  <note>scripsi. «Nihil aliud coronae inscriptum fuisse videtur. Cf. similes titulos
+                     IosPE II1, nn° 314 et 315» - IOSPE.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -147,7 +163,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Вытеснение дорийских форм формами койне в херсонесских надписях датируется второй половиной II в. н.э.</p>
+            <p>Вытеснение дорийских форм формами койне в херсонесских надписях датируется второй
+               половиной II в. н.э.</p>
             <p>II в. н.э. (скорее всего вторая половина).</p>
          </div>
          <div type="commentary" xml:lang="en">

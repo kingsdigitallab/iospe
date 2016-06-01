@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Эвия</title>
-             <title xml:lang="en">Epitaph of Euios</title>
+            <title xml:lang="en">Epitaph of Euios</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limstone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы с карнизом (спереди поврежден). Тыльная сторона заглажена.</p>
-                           <p xml:lang="en">Upper part of a stele with cornice (damaged on the front). The back is smoothed. </p>
+                           <p xml:lang="ru">Верхняя часть стелы с карнизом (спереди поврежден).
+                              Тыльная сторона заглажена.</p>
+                           <p xml:lang="en">Upper part of a stele with cornice (damaged on the
+                              front). The back is smoothed. </p>
                            <dimensions>
                               <height unit="cm">208,0</height>
                               <width unit="cm">44,0</width>
@@ -49,15 +54,17 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru">Под карнизом вырезана по предварительной разметке и обведена красной и синей краской двухстрочная надпись.</seg>
+                           <seg xml:lang="ru">Под карнизом вырезана по предварительной разметке и
+                              обведена красной и синей краской двухстрочная надпись.</seg>
                            <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Поперечная линия альфы чуть изогнута, ню с немного укороченной правой вертикалью, широко расходящиеся наклонные линии ипсилон, 
-                           слабые утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Поперечная линия альфы чуть изогнута, ню с немного
+                           укороченной правой вертикалью, широко расходящиеся наклонные линии
+                           ипсилон, слабые утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,2</height>
                      </handNote>
@@ -76,15 +83,18 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в ЮВ районе Херсонеса, в кладке ядра башни XVII оборонительных стен Херсонеса (башня Зенона). 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в ЮВ районе Херсонеса, в кладке
+                           ядра башни XVII оборонительных стен Херсонеса (башня Зенона). Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in 1961 in the southeastern area of Chersonesos, in the masonry of Tower XVI (Zeno's Tower). 
-                           Excavations of [...] С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <rs type="circumstances">Found in 1961 in the southeastern area of
+                           Chersonesos, in the masonry of Tower XVI (Zeno's Tower). Excavations of
+                           [...] С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -96,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
@@ -118,9 +131,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 69, № <citedRange>29</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> <citedRange>163</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 440, № <citedRange>44</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 69, №
+                     <citedRange>29</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>
+                  <citedRange>163</citedRange></bibl>
+               <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974,
+                     380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 440, №
+                     <citedRange>44</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -137,7 +155,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -147,12 +167,14 @@
             <p>Euios, (son of) Theophanes.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Согласно Posamentir 2011, 53 к этой стеле относится фрагмент инв. № 53/36847, представляющий ее нижнюю часть. 
-               Теофорное личное имя Εὔιος, возникшее из эпиклезы Диониса (ср. Bechtel, HPN, 531), в Херсонесе упомянуто только в этой надписи. 
-               Оно хорошо засвидетельствовано на Боспоре в римское время (LGPN IV).
-               Теофорное имя Θεοφάνης неоднократно встречается в эпиграфике Херсонеса (LGPN IV). В надписях эллинистического времени 
-               окончаниe gen. sg. личных имен с основами на -σ- сохраняется в неслитной форме -εος (ср. -ειος). 
-               Об атрибуции этой и ряда других стел кругу «мастерской Даматрия» см. Posamentir 2011, 185.</p>
+            <p>Согласно Posamentir 2011, 53 к этой стеле относится фрагмент инв. № 53/36847,
+               представляющий ее нижнюю часть. Теофорное личное имя Εὔιος, возникшее из эпиклезы
+               Диониса (ср. Bechtel, HPN, 531), в Херсонесе упомянуто только в этой надписи. Оно
+               хорошо засвидетельствовано на Боспоре в римское время (LGPN IV). Теофорное имя
+               Θεοφάνης неоднократно встречается в эпиграфике Херсонеса (LGPN IV). В надписях
+               эллинистического времени окончаниe gen. sg. личных имен с основами на -σ- сохраняется
+               в неслитной форме -εος (ср. -ειος). Об атрибуции этой и ряда других стел кругу
+               «мастерской Даматрия» см. Posamentir 2011, 185.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

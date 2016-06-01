@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие [---]ениона</title>
-             <title xml:lang="en">Epitaph of [---]enion</title>
+            <title xml:lang="ru">Надгробие [---]ениона</title>
+            <title xml:lang="en">Epitaph of [---]enion</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,7 +35,8 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -56,9 +58,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон, сигма, омега; тета с замкнутой перекладиной, 
-                           овальный омикрон в габарите строки, пи с равными вертикалями и выходящей за их пределы горизонталью, умеренное апицирование, 
-                           треугольники-разделители.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон,
+                           сигма, омега; тета с замкнутой перекладиной, овальный омикрон в габарите
+                           строки, пи с равными вертикалями и выходящей за их пределы горизонталью,
+                           умеренное апицирование, треугольники-разделители.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">2,2</height>
                      </handNote>
@@ -70,22 +73,27 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0250" evidence="палеография" precision="low">
+                     <origDate notBefore="0151" notAfter="0250" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. II в. н.э. – 1-я пол. III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II - 1st half of IIIrd centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном районе херсонесского городища, в римской «цитадели» 
-                           (вынут из монастырской «дополнительной» стены, сложенной около 1880 г. на поврежденных участках древней оборонительной стены). 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 16, № 315; д. 36, л. 5, № 315).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном
+                           районе херсонесского городища, в римской «цитадели» (вынут из
+                           монастырской «дополнительной» стены, сложенной около 1880 г. на
+                           поврежденных участках древней оборонительной стены). Раскопки К.К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 16, № 315; д. 36, л. 5, № 315).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -101,8 +109,11 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-26" who="CB">Biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata</change>
@@ -123,7 +134,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1908--><ptr target="bib:b0149"/>, 18, № <citedRange>5</citedRange></bibl>
+               <bibl><!--Латышев 1908--><ptr target="bib:b0149"/>, 18, №
+                  <citedRange>5</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>486</citedRange></bibl>
             </listBibl>
          </div>
@@ -145,21 +157,33 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg source="bib:IOSPE2">[Παρμ]ενίων Χα[ρίτωνος ?]</rdg></app>
-               <app loc="2"><note>после Η треугольник-разделитель.</note></app>
-               <app loc="3"><rdg source="bib:IOSPE2">[Μαρ]κιανὸς Ἀλε[ξάνδρου ?]</rdg></app>
-               <app loc="4"><note>συνγενῖ = συνγενεῖ</note>
-                 <rdg source="bib:IOSPE2"> [τύμβον] <note>«dubitanter»</note></rdg>
-                  <note>не исключено [βωμόν], которое, впрочем, не характерно для надгробий Северного Причерноморья (cf. tamen № ipe542).</note></app>
-               <app loc="5-6"><rdg><note>vel</note> χ[αῖρε] | παροδῖ[τα]</rdg></app>
+               <app loc="1">
+                  <rdg source="bib:IOSPE2">[Παρμ]ενίων Χα[ρίτωνος ?]</rdg>
+               </app>
+               <app loc="2">
+                  <note>после Η треугольник-разделитель.</note>
+               </app>
+               <app loc="3">
+                  <rdg source="bib:IOSPE2">[Μαρ]κιανὸς Ἀλε[ξάνδρου ?]</rdg>
+               </app>
+               <app loc="4">
+                  <note>συνγενῖ = συνγενεῖ</note>
+                  <rdg source="bib:IOSPE2"> [τύμβον] <note>«dubitanter»</note></rdg>
+                  <note>не исключено [βωμόν], которое, впрочем, не характерно для надгробий
+                     Северного Причерноморья (cf. tamen № ipe542).</note>
+               </app>
+               <app loc="5-6">
+                  <rdg><note>vel</note> χ[αῖρε] | παροδῖ[τα]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[---]енион, (сын) Ха[---], проживший [---] лет. [---]киан, (сын) [---], поставил надгробие родственнику. Приветствую (вас), путники.</p>
+            <p>[---]енион, (сын) Ха[---], проживший [---] лет. [---]киан, (сын) [---], поставил
+               надгробие родственнику. Приветствую (вас), путники.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p>[---]enion, (son of) Cha[---], having lived [---] years. [---]kianos, (son of) [---], set up this grave monument for a relative. Greeting to you,
-            passers by.</p>
+            <p>[---]enion, (son of) Cha[---], having lived [---] years. [---]kianos, (son of) [---],
+               set up this grave monument for a relative. Greeting to you, passers by.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p/>

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон разбита на две части. Сохранились остатки двух строк надписи. Лицевая сторона отполирована.</p>
+                           <p xml:lang="ru">Оббита со всех сторон разбита на две части. Сохранились
+                              остатки двух строк надписи. Лицевая сторона отполирована.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">9,0</height>
@@ -56,7 +59,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Крупные, глубоко вырезанные буквы, отдельные линии букв слегка изогнуты, апексы.</seg>
+                        <seg xml:lang="ru">Крупные, глубоко вырезанные буквы, отдельные линии букв
+                           слегка изогнуты, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -75,8 +79,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена случайно В.А. Анохиным в 1957 г. в центральной части городища, около собора св. Владимира (примерно 100 м к юго-западу от собора).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена случайно В.А. Анохиным в 1957 г. в
+                           центральной части городища, около собора св. Владимира (примерно 100 м к
+                           юго-западу от собора).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -90,14 +97,18 @@
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">В фондах НЗХТ удалось обнаружить только верхнюю часть фрагмента.</seg>
+                     <seg xml:lang="ru">В фондах НЗХТ удалось обнаружить только верхнюю часть
+                        фрагмента.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -133,7 +144,10 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>2: в конце стк. небольшая горизонтальная черта - ed. pr.,  [Θεῷ Ὑ]ψίσ[τῳ] ? - ed. pr.</note></app>
+               <app>
+                  <note>2: в конце стк. небольшая горизонтальная черта - ed. pr., [Θεῷ Ὑ]ψίσ[τῳ] ? -
+                     ed. pr.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

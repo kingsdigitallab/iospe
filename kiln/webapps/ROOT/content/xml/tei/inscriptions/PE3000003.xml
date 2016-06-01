@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Артемидора</title>
-             <title xml:lang="en">Epitaph of Artemidoros</title>
+            <title xml:lang="en">Epitaph of Artemidoros</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы с карнизом. Поверхность плиты заглажена. 
-                              Под карнизом вырезана по предварительной разметке и обведена красной краской двухстрочная надпись.</p>
+                           <p xml:lang="ru">Верхняя часть стелы с карнизом. Поверхность плиты
+                              заглажена. Под карнизом вырезана по предварительной разметке и
+                              обведена красной краской двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">44,0</height>
@@ -57,9 +61,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, мю с наклонными боковыми, крупные омикрон и омега, сигма с расходящимися верхними и нижними линиями, 
-                           отсутствуют утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Nu with short right vertical, mu with slanting outer hastae</seg>
+                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, мю с наклонными
+                           боковыми, крупные омикрон и омега, сигма с расходящимися верхними и
+                           нижними линиями, отсутствуют утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Nu with short right vertical, mu with slanting outer
+                           hastae</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
@@ -70,15 +76,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0350" notAfter="-0301" evidence="палеография" precision="low">
+                     <origDate notBefore="-0350" notAfter="-0301" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IV of century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1969 г. в юго-восточном районе Херсонеса в кладке куртины 20 оборонительных стен. Раскопки И.А. Антоновой.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1969 г. в юго-восточном районе Херсонеса
+                           в кладке куртины 20 оборонительных стен. Раскопки И.А. Антоновой.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,7 +104,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
@@ -118,8 +130,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1978--><ptr target="bib:b0775"/>, 66, № <citedRange>1</citedRange></bibl> <bibl> (<!--SEG--><ptr target="bib:SEG"/><citedRange>28, 364</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 444, № <citedRange>56</citedRange></bibl>
+               <bibl><!--Соломоник 1978--><ptr target="bib:b0775"/>, 66, №
+                     <citedRange>1</citedRange></bibl>
+               <bibl> (<!--SEG--><ptr target="bib:SEG"/><citedRange>28, 364</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 444, №
+                     <citedRange>56</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -136,7 +151,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -146,10 +163,11 @@
             <p>Artemidoros, (son of) Xanthias.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Фрагмент стелы из НЗХТ (инв. №: 156/36847), возможно, является нижней частью этого памятника (Posamentir 2011, 64,  № 56а). 
-               Оба личных имени имеют общегреческий характер; следует отметить дорийскую форму gen. sg. патронимика. 
-               Имя Ἀρτεμίδωρος засвидетельствовано в Херсонесе многократно,
-               имя Ξανθίας предположительно читается также в одном граффито эллинистического времени (LGPN IV).</p>
+            <p>Фрагмент стелы из НЗХТ (инв. №: 156/36847), возможно, является нижней частью этого
+               памятника (Posamentir 2011, 64, № 56а). Оба личных имени имеют общегреческий
+               характер; следует отметить дорийскую форму gen. sg. патронимика. Имя Ἀρτεμίδωρος
+               засвидетельствовано в Херсонесе многократно, имя Ξανθίας предположительно читается
+               также в одном граффито эллинистического времени (LGPN IV).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

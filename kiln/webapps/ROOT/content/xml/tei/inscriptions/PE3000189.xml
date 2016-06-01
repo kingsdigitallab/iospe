@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент метрической (?) эпитафии</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент метрической (?) эпитафии</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Вероятно, была вторично использована в качестве крышки для пифоса. 
-                              Поверхность мрамора сильно пострадала от огня. В верхней части обломка, в неглубокой нише, сохранилось рельефное 
-                              изображение складок длинной женской одежды. Под рельефом остатки плохо сохранившейся надписи; буквы были обведены красной краской.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Вероятно, была вторично
+                              использована в качестве крышки для пифоса. Поверхность мрамора сильно
+                              пострадала от огня. В верхней части обломка, в неглубокой нише,
+                              сохранилось рельефное изображение складок длинной женской одежды. Под
+                              рельефом остатки плохо сохранившейся надписи; буквы были обведены
+                              красной краской.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">34,0</height>
@@ -58,7 +63,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы неровные, разной ширины, вырезаны тонкими линиями; треугольные буквы с сильно выступающей правой гастой, узкое омикрон, прямоугольная сигма, угловатая омега, неравномерное апицирование.</seg>
+                        <seg xml:lang="ru">Буквы неровные, разной ширины, вырезаны тонкими линиями;
+                           треугольные буквы с сильно выступающей правой гастой, узкое омикрон,
+                           прямоугольная сигма, угловатая омега, неравномерное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,8</height>
                      </handNote>
@@ -77,8 +84,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1911 г. в западном районе Херсонеса, с внешней стороны западной оборонительной стены. Раскопки Р.Х. Лепера (НА НЗХТ, д. 104, л. 7, № 486; д. 112, л. 5).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1911 г. в западном районе Херсонеса, с
+                           внешней стороны западной оборонительной стены. Раскопки Р.Х. Лепера (НА
+                           НЗХТ, д. 104, л. 7, № 486; д. 112, л. 5).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -91,13 +101,17 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-         <change when="2015-11-20" who="CB">Metadata, tokenisation, origDate and app crit tags</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-20" who="CB">Metadata, tokenisation, origDate and app crit
+            tags</change>
          <change when="2015-11-20" who="KK">Leidenised</change>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
@@ -114,8 +128,10 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl><bibl><!--Соломоник 1964--><ptr target="bib:НЭПХ2"/>, 4, <citedRange>139-143</citedRange></bibl>
-          
+            <listBibl>
+               <bibl><!--Соломоник 1964--><ptr target="bib:НЭПХ2"/>, 4,
+                     <citedRange>139-143</citedRange></bibl>
+
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,25 +157,44 @@
          </div>
          <div type="apparatus">
             <listApp>
-              <!-- <app><note>Соломоник 1964.</note></app>-->
-               <app loc="1"><rdg source="bib:НЭПХ2">[τὴ]ν <note>ed. pr.</note></rdg></app>
-               <app loc="2"><rdg source="bib:НЭПХ2">in.: [καὶ τὴν] ed. pr.</rdg>
-                  <rdg source="bib:НЭПХ2">ΟΘΝ <note>leg.</note></rdg></app>
-               <app loc="3"><rdg source="bib:НЭПХ2"><note>in:</note> [τῇδε] <note>ed. pr. (om. НЭПХ per errorem ?)</note>;</rdg>
-                  <rdg source="bib:НЭПХ2"><note>fin.:</note> Διογέν[ους - - -] <note>- ed. pr.</note></rdg></app>
-               <app loc="4"><rdg source="bib:НЭПХ2">κοσ[μίω]ς</rdg>
-                  <rdg source="bib:НЭПХ2">δεκ[ά]δ[α]ς</rdg> 
-                <rdg>[δεκά]δ[α]ς <note>- ed. pr.</note></rdg></app>
-               <app loc="5"><rdg>τρῖς <note>scripsi sec. lap.</note></rdg> 
+               <!-- <app><note>Соломоник 1964.</note></app>-->
+               <app loc="1">
+                  <rdg source="bib:НЭПХ2">[τὴ]ν <note>ed. pr.</note></rdg>
+               </app>
+               <app loc="2">
+                  <rdg source="bib:НЭПХ2">in.: [καὶ τὴν] ed. pr.</rdg>
+                  <rdg source="bib:НЭПХ2">ΟΘΝ <note>leg.</note></rdg>
+               </app>
+               <app loc="3">
+                  <rdg source="bib:НЭПХ2"><note>in:</note> [τῇδε] <note>ed. pr. (om. НЭПХ per
+                        errorem ?)</note>;</rdg>
+                  <rdg source="bib:НЭПХ2"><note>fin.:</note> Διογέν[ους - - -] <note>- ed.
+                        pr.</note></rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:НЭПХ2">κοσ[μίω]ς</rdg>
+                  <rdg source="bib:НЭПХ2">δεκ[ά]δ[α]ς</rdg>
+                  <rdg>[δεκά]δ[α]ς <note>- ed. pr.</note></rdg>
+               </app>
+               <app loc="5">
+                  <rdg>τρῖς <note>scripsi sec. lap.</note></rdg>
                   <rdg>τρ<supplied reason="omitted">ε</supplied>ῖς<note> - edd.</note></rdg>
-                  <rdg source="bib:НЭПХ2"><note>fin.: scripsi,</note> κ[αὶ - - -]</rdg></app>
-               <app loc="6-8"><rdg source="bib:НЭПХ2"><note>leg. et suppl., om. ed. pr.</note></rdg></app>
-               <app loc="8"><rdg source="bib:НЭПХ2"><note>in.: </note>[χαίρετε]</rdg> 
-                 <rdg>[χαίρετε, ὦ] <note> Белецкий ap. Соломоник 1964, 141 metri causa</note>.</rdg></app>
+                  <rdg source="bib:НЭПХ2"><note>fin.: scripsi,</note> κ[αὶ - - -]</rdg>
+               </app>
+               <app loc="6-8">
+                  <rdg source="bib:НЭПХ2"><note>leg. et suppl., om. ed. pr.</note></rdg>
+               </app>
+               <app loc="8">
+                  <rdg source="bib:НЭПХ2"><note>in.: </note>[χαίρετε]</rdg>
+                  <rdg>[χαίρετε, ὦ] <note> Белецкий ap. Соломоник 1964, 141 metri
+                     causa</note>.</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>--- в доме --- на брачном ложе --- супруг(у/а) Диоген[---] благочестиво и достойно --- три десятилетия --- исполнившую срок (жизни) --- любимая и самая дорогая --- здравствуйте, прохожие.</p>
+            <p>--- в доме --- на брачном ложе --- супруг(у/а) Диоген[---] благочестиво и достойно
+               --- три десятилетия --- исполнившую срок (жизни) --- любимая и самая дорогая ---
+               здравствуйте, прохожие.</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

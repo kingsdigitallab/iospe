@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Тимоксены</title>
-             <title xml:lang="en">Epitaph of Timoxena</title>
+            <title xml:lang="en">Epitaph of Timoxena</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>3652</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>3652</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Сохранилась бóльшая часть стелы за исключением верхнего и нижнего профиля. На лицевой и боковых сторонах следы рельефных 
-                              розеток. Под ними остатки рельефного изображение перевязанных узлом и свисающих тэний и висящего на шнуре алабастра. 
-                              Выше розеток вырезана четырехстрочная надпись.</p>
+                           <p xml:lang="ru">Сохранилась бóльшая часть стелы за исключением верхнего
+                              и нижнего профиля. На лицевой и боковых сторонах следы рельефных
+                              розеток. Под ними остатки рельефного изображение перевязанных узлом и
+                              свисающих тэний и висящего на шнуре алабастра. Выше розеток вырезана
+                              четырехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">69,0</height>
@@ -58,9 +63,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Надпись вырезана небрежно, мелкими буквами. мю с наклонными боковыми линиями, вертикальные гасты 
-                           ню имеют почти одинаковую длину, омикрон немного меньше остальных букв, верхняя поперечная линия пи выступает за короткую правую вертикаль, 
-                           небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Надпись вырезана небрежно, мелкими буквами. мю с
+                           наклонными боковыми линиями, вертикальные гасты ню имеют почти одинаковую
+                           длину, омикрон немного меньше остальных букв, верхняя поперечная линия пи
+                           выступает за короткую правую вертикаль, небольшие утолщения на концах
+                           линий букв.</seg>
                         <seg xml:lang="en">mu with slanting outer hastae</seg>
                         <height unit="cm">1,3</height>
                      </handNote>
@@ -68,9 +75,9 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0250" notAfter="-0201" evidence="палеография">
                         <seg xml:lang="ru">2-я пол. III в. до н.э.</seg>
@@ -79,14 +86,17 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1894 г. при раскопках некрополя у южного и юго-западного участков оборонительной стены. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 4, № 102; д. 23, л. 2, № 102).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1894 г. при раскопках некрополя у южного
+                           и юго-западного участков оборонительной стены. Раскопки К.К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 4, № 102; д. 23, л. 2, № 102).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in..... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in..... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -98,7 +108,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-02" who="CB">Metadata and app crit</change>
@@ -147,7 +160,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -157,8 +172,12 @@
             <p>Timoxena, (daughter of) Apollophanes, wife of Apollonios.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	ЛИ Τιμοξένα засвидетельствовано в Северном Причерноморье только в этой надписи. Однокоренные имена отца и мужа умершей, Ἀπολλοφάνης и Ἀπολλωνιος, неоднократно встречаются в Херсонесе (LGPN IV). </p>
-            <p>	По поводу характерного для херсонесских надписей эллинистического времени написания ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с примерами); ср. Thumb-Kieckers 137, § 132.</p>
+            <p> ЛИ Τιμοξένα засвидетельствовано в Северном Причерноморье только в этой надписи.
+               Однокоренные имена отца и мужа умершей, Ἀπολλοφάνης и Ἀπολλωνιος, неоднократно
+               встречаются в Херсонесе (LGPN IV). </p>
+            <p> По поводу характерного для херсонесских надписей эллинистического времени написания
+               ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с
+               примерами); ср. Thumb-Kieckers 137, § 132.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

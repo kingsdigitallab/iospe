@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Гераклеона</title>
-             <title xml:lang="en">Epitaph of Herakleon</title>
+            <title xml:lang="ru">Надгробие Гераклеона</title>
+            <title xml:lang="en">Epitaph of Herakleon</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Плита, украшенная рельефным фронтоном с акротериями. Обломана снизу. В центре фронтона рельефный диск. 
-                              Под фронтоном вырезана пятистрочная надпись.</p>
+                           <p xml:lang="ru">Плита, украшенная рельефным фронтоном с акротериями.
+                              Обломана снизу. В центре фронтона рельефный диск. Под фронтоном
+                              вырезана пятистрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">71,0</height>
@@ -57,7 +60,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Тета с точкой, каппа с короткими наклонными, курсивная сигма, широкое {полукружие} омега, слабое апицирование.</seg>
+                        <seg xml:lang="ru">Тета с точкой, каппа с короткими наклонными, курсивная
+                           сигма, широкое {полукружие} омега, слабое апицирование.</seg>
                         <seg xml:lang="en">light serifs.</seg>
                         <height unit="cm">3,0</height>
                      </handNote>
@@ -69,21 +73,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1902  г. в юго-восточном районе Херсонеса, на участке некрополя у Карантинной бухты. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 31, л. 2, № 221).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1902 г. в юго-восточном районе Херсонеса,
+                           на участке некрополя у Карантинной бухты. Раскопки К.К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 31, л. 2, № 221).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,12 +99,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-19" who="CB">Leidenised and tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">biblio and app crit</change>
@@ -117,7 +128,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1904--><ptr target="bib:b0144"/>, 24, № <citedRange>17</citedRange></bibl>
+               <bibl><!--Латышев 1904--><ptr target="bib:b0144"/>, 24, №
+                  <citedRange>17</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>544</citedRange></bibl>
             </listBibl>
          </div>
@@ -139,14 +151,18 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="3"><rdg>ΗΡΛΚ <note>- lap.</note></rdg></app>
+               <app loc="3">
+                  <rdg>ΗΡΛΚ <note>- lap.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Гераклеон, (сын) Менофона, он же Сисир, гераклеот, 39 лет. Здравствуй.{Обычно: Приветствую}</p>
+            <p>Гераклеон, (сын) Менофона, он же Сисир, гераклеот, 39 лет. Здравствуй.{Обычно:
+               Приветствую}</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p>Herakleon, (son of) Menophon, also known as Sisyros, citizen of Herakleia, 39 years old, greeting.</p>
+            <p>Herakleon, (son of) Menophon, also known as Sisyros, citizen of Herakleia, 39 years
+               old, greeting.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p/>

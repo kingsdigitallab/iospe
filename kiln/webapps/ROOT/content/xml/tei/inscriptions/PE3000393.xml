@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,12 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть спилена, левый край обломан, снизу украшена рельефной рамкой. Лицевая сторона сглажена. 
-                              Сохранилась четырехстрочная надпись, вырезанная, вероятно, на уже обломанной плите.</p>
+                           <p xml:lang="ru">Верхняя часть спилена, левый край обломан, снизу
+                              украшена рельефной рамкой. Лицевая сторона сглажена. Сохранилась
+                              четырехстрочная надпись, вырезанная, вероятно, на уже обломанной
+                              плите.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">55,5</height>
@@ -57,7 +62,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы неровные, угловатая бета, прямоугольная сигма, отсутствие апексов.</seg>
+                        <seg xml:lang="ru">Буквы неровные, угловатая бета, прямоугольная сигма,
+                           отсутствие апексов.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">6,0–9,0</height>
                      </handNote>
@@ -76,8 +82,10 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#kaloslimen">Черноморское (Калос Лимен).</placeName>
-                        <rs type="circumstances">Найдена случайно в 1965 г. в районе южной оборонительной стены (НА НЗХТ, Книга поступлений, № 130).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#kaloslimen">Черноморское
+                           (Калос Лимен).</placeName>
+                        <rs type="circumstances">Найдена случайно в 1965 г. в районе южной
+                           оборонительной стены (НА НЗХТ, Книга поступлений, № 130).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -90,12 +98,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -133,7 +144,10 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>3: Εὐτύ<supplied reason="omitted">χ</supplied>ης - Тохтасьев (ср. LGPN IV).</note></app>
+               <app>
+                  <note>3: Εὐτύ<supplied reason="omitted">χ</supplied>ης - Тохтасьев (ср. LGPN
+                     IV).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -143,9 +157,13 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Стк.1: согласно Тохтасьев 1988, 168 сл. Ἀβαχης, возможно, греческое личное имя Ἀβάχης (= * Ἀβάκχης), </p>
-            <p>Стк.3: ed. pr. не исключает Εὐτύης = Εὐτύχης / Εὐσύης / Εὐφύης. Это может быть как ошибка резчика, так и форма греческого имени, имевшая хождение в варварской среде.</p>
-            <p>Стк.4: ср. мифологическое имя Aἰζειός (Dion. Halic., Ant. Rom. 1.11; указано в Тохтасьев 1988, 168).</p>
+            <p>Стк.1: согласно Тохтасьев 1988, 168 сл. Ἀβαχης, возможно, греческое личное имя Ἀβάχης
+               (= * Ἀβάκχης), </p>
+            <p>Стк.3: ed. pr. не исключает Εὐτύης = Εὐτύχης / Εὐσύης / Εὐφύης. Это может быть как
+               ошибка резчика, так и форма греческого имени, имевшая хождение в варварской
+               среде.</p>
+            <p>Стк.4: ср. мифологическое имя Aἰζειός (Dion. Halic., Ant. Rom. 1.11; указано в
+               Тохтасьев 1988, 168).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

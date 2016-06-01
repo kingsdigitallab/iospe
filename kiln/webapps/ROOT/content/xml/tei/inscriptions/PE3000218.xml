@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент декрета с упоминанием святилища Асклепия</title>
-             <title xml:lang="en">Decree concerning the Asklepieion</title>
+            <title xml:lang="ru">Фрагмент декрета с упоминанием святилища Асклепия</title>
+            <title xml:lang="en">Decree concerning the Asklepieion</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Лицевая сторона тщательно обработана.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Лицевая сторона тщательно
+                              обработана.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">10,5</height>
@@ -56,8 +59,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Узкие, неглубоко вырезанные буквы, альфа с прямой поперечной линией, наклонные линии каппа касаются линий строки, 
-                           пи с вертикалями одинаковой длины и выходящей за их пределы горизонталью, крестообразное пси, отсутствие украшений на концах линий букв.</seg>
+                        <seg xml:lang="ru">Узкие, неглубоко вырезанные буквы, альфа с прямой
+                           поперечной линией, наклонные линии каппа касаются линий строки, пи с
+                           вертикалями одинаковой длины и выходящей за их пределы горизонталью,
+                           крестообразное пси, отсутствие украшений на концах линий букв.</seg>
                         <seg xml:lang="en">alpha with straight crossbar</seg>
                         <height unit="cm">0,7</height>
                      </handNote>
@@ -76,9 +81,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена случайно С.Г. Рыжовым в 2001 г. в северном районе Херсонеса 
-                           (квадрат 10-Б, около стены бывшего монастыря cв. Владимира). Сохранилось пять строк надписи.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена случайно С.Г. Рыжовым в 2001 г. в северном
+                           районе Херсонеса (квадрат 10-Б, около стены бывшего монастыря cв.
+                           Владимира). Сохранилось пять строк надписи.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,7 +102,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-18" who="CB">Added missing biblio tags</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
@@ -103,7 +113,8 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-15" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -119,8 +130,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Макаров 2006,--> <ptr target="bib:b0758"/> 83, № <citedRange>1</citedRange></bibl> <bibl> (<!--SEG--><ptr target="SEG"/> <citedRange>56, 871</citedRange></bibl>
-               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:BE"/> <citedRange>2007, 410</citedRange> (Avram))</bibl>
+               <bibl><!--Макаров 2006,-->
+                  <ptr target="bib:b0758"/> 83, № <citedRange>1</citedRange></bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/>
+                  <citedRange>56, 871</citedRange></bibl>
+               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:BE"/>
+                  <citedRange>2007, 410</citedRange> (Avram))</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -151,21 +166,28 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="2-3"><note>cf. № ipe340, стк. 5–6).</note></app>
-               <app loc="5"><note>в конце строки видна верхняя часть вертикальной гасты.</note></app>
+               <app loc="2-3">
+                  <note>cf. № ipe340, стк. 5–6).</note>
+               </app>
+               <app loc="5">
+                  <note>в конце строки видна верхняя часть вертикальной гасты.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[– – –] даровать право входа в гавань и выхода из гавани ему самому и его имуществу], без риска конфискации и необходимости заключения договора, 
-               в мирное и военное время. Это постановление записать на белокаменной стеле и поместить [в святилище] Асклепия [– – –].</p>
+            <p>[– – –] даровать право входа в гавань и выхода из гавани ему самому и его имуществу],
+               без риска конфискации и необходимости заключения договора, в мирное и военное время.
+               Это постановление записать на белокаменной стеле и поместить [в святилище] Асклепия
+               [– – –].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Надпись представляет собой концовку постановляющей части проксенического декрета c перечислением традиционных привилегий, 
-               за которым следует клаузула публикации. Упоминание святилища Асклепия в лапидарной эпиграфике 
-               Херсонеса встречается также во фрагменте декрета № ipe376.</p>
+            <p>Надпись представляет собой концовку постановляющей части проксенического декрета c
+               перечислением традиционных привилегий, за которым следует клаузула публикации.
+               Упоминание святилища Асклепия в лапидарной эпиграфике Херсонеса встречается также во
+               фрагменте декрета № ipe376.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

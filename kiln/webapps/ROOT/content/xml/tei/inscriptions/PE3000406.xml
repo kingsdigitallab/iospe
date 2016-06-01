@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент декрета римского времени</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент декрета римского времени</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -13,7 +14,8 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country/>
+               <msIdentifier>
+                  <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Одесский археологический музей</repository>
                      <idno>50483</idno>
@@ -33,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки восьми строк надписи, вырезанной по предварительной разметке. 
-                              Лицевая поверхность обработана тщательно, тыльная сторона – суммарно.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки восьми
+                              строк надписи, вырезанной по предварительной разметке. Лицевая
+                              поверхность обработана тщательно, тыльная сторона – суммарно.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">18,0</height>
@@ -56,9 +60,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Верхняя и нижняя гасты эпсилон значительно выступают влево за вертикаль, слегка изогнутые наклонные гасты каппа и мю; 
-                           внутренние гасты мю касаются вертикалей почти посередине; широкая низкая омега с удлиненными горизонталями и с загнутыми внутрь 
-                           концами полукружия; знаки-разделители, апексы.</seg>
+                        <seg xml:lang="ru">Верхняя и нижняя гасты эпсилон значительно выступают
+                           влево за вертикаль, слегка изогнутые наклонные гасты каппа и мю;
+                           внутренние гасты мю касаются вертикалей почти посередине; широкая низкая
+                           омега с удлиненными горизонталями и с загнутыми внутрь концами
+                           полукружия; знаки-разделители, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -77,8 +83,10 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена до 1884 г., возможно, в ходе археологических исследований ООИД.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена до 1884 г., возможно, в ходе
+                           археологических исследований ООИД.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -91,12 +99,15 @@
                      <seg xml:lang="ru">Одесса.</seg>
                      <seg xml:lang="en">Odessa.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
          <change when="2016-04-14" who="Chris de Lisle">Encoded text</change>
       </revisionDesc>
@@ -158,12 +169,20 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>IOSPE I2 360.</note></app>
-               <app><note>1, fin.: [καὶ τοῖς ἄλλοις] - Латышев 1907.</note></app>
+               <app>
+                  <note>IOSPE I2 360.</note>
+               </app>
+               <app>
+                  <note>1, fin.: [καὶ τοῖς ἄλλοις] - Латышев 1907.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[- - -] обладание [всеми (правами), которыми обладают] херсонеситы; записать [это постановление на белокаменной стеле и поставить на самом] видном [месте акрополя. Это решено] Советом и народом, [когда обязанности царя исполняла Дева, в году . . ]4, при жреце [- - - месяца [- - -] 24 (дня), при секретаре [Тите Флавии Агеполисе, сыне Флавия Аристона (?) - - -].</p>
+            <p>[- - -] обладание [всеми (правами), которыми обладают] херсонеситы; записать [это
+               постановление на белокаменной стеле и поставить на самом] видном [месте акрополя. Это
+               решено] Советом и народом, [когда обязанности царя исполняла Дева, в году . . ]4, при
+               жреце [- - - месяца [- - -] 24 (дня), при секретаре [Тите Флавии Агеполисе, сыне
+               Флавия Аристона (?) - - -].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

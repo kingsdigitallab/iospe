@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Метрическая эпитафия Басса</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Метрическая эпитафия Басса</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,14 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Нижняя часть надгробия с фрагментом рельефа в прямоугольном углублении и пятистрочной надписью, 
-                              вырезанной по предварительной разметке. Лицевая и боковые стороны плиты тщательно обработаны. 
-                              На рельефе была изображена стоящая мужская фигура в длинной одежде. 
-                              Слева от нее – свернутые и перевязанные свитки, справа – фигурка слуги (сохранилась нижняя часть).</p>
+                           <p xml:lang="ru">Нижняя часть надгробия с фрагментом рельефа в
+                              прямоугольном углублении и пятистрочной надписью, вырезанной по
+                              предварительной разметке. Лицевая и боковые стороны плиты тщательно
+                              обработаны. На рельефе была изображена стоящая мужская фигура в
+                              длинной одежде. Слева от нее – свернутые и перевязанные свитки, справа
+                              – фигурка слуги (сохранилась нижняя часть).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">38,0</height>
@@ -59,8 +63,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Удлиненные пропорции букв, слегка изогнутые линни отдельных букв, курсивные эпсилон, сигма, омега; 
-                           ромбообразные омикрон и тета, слабое апицирование.</seg>
+                        <seg xml:lang="ru">Удлиненные пропорции букв, слегка изогнутые линни
+                           отдельных букв, курсивные эпсилон, сигма, омега; ромбообразные омикрон и
+                           тета, слабое апицирование.</seg>
                         <seg xml:lang="en">light serifs.</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
@@ -72,15 +77,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0168" notAfter="0300" evidence="палеография" precision="low">
+                     <origDate notBefore="0168" notAfter="0300" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">Кон. II – III в. н.э.</seg>
                         <seg xml:lang="en">Late II - IIIrd centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1932 г. в северном районе Херсонеса, на  участке базилики «1932 г.» Раскопки Г.Д. Белова.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1932 г. в северном районе Херсонеса, на
+                           участке базилики «1932 г.» Раскопки Г.Д. Белова.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -93,23 +101,26 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata</change>
-          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-10-21" who="KK">Leidenised</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">                         
+         <graphic url="">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
@@ -120,7 +131,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 77, № <citedRange>8</citedRange></bibl>
+               <bibl><!--Шангин 1938--><ptr target="bib:b0239"/>, 77, №
+                  <citedRange>8</citedRange></bibl>
                <bibl><!--Peek, GVI--><ptr target="bib:b0521"/>, <citedRange>1672</citedRange></bibl>
             </listBibl>
          </div>
@@ -128,7 +140,8 @@
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--BullEp--><ptr target="bib:BE"/> 1936, 244</bibl>
-               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 312 (датировка: конец III в. н.э., следуя ed. pr.)</bibl>
+               <bibl><!--АСХ--><ptr target="bib:b0523"/> № 312 (датировка: конец III в. н.э., следуя
+                  ed. pr.)</bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 105, № 105</bibl>
             </listBibl>
          </div>
@@ -144,16 +157,24 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>Peek, GVI 1672.</note>--></app>
-               <app loc="1"><rdg>οἴμμοι ἐγὼ [κ]ότοιο λαχὼν πικρὰ<supplied reason="omitted">ν</supplied> ἤματα μοιρῶ[ν] <note>- ed. pr. corr. Robert in BullEp (Peek).</note></rdg></app>
-               <app loc="4"><note>in.: <supplied reason="omitted">δὲ</supplied> scripsi</note> 
-                 <rdg> ΑΥΤΟΣΕΗΜΗΘΗΝ <note>- lap.</note></rdg>
-                  <rdg>αὐτόσε ... ἠμήθην <note>- ed. pr. (перевод: «там под волной скошена моя жизнь»)</note></rdg>
-                  <rdg source="bib:b0521">αὐτὸς δ’ ἠμήθην.</rdg></app>
+               <app loc="1">
+                  <rdg>οἴμμοι ἐγὼ [κ]ότοιο λαχὼν πικρὰ<supplied reason="omitted">ν</supplied> ἤματα
+                     μοιρῶ[ν] <note>- ed. pr. corr. Robert in BullEp (Peek).</note></rdg>
+               </app>
+               <app loc="4">
+                  <note>in.: <supplied reason="omitted">δὲ</supplied> scripsi</note>
+                  <rdg> ΑΥΤΟΣΕΗΜΗΘΗΝ <note>- lap.</note></rdg>
+                  <rdg>αὐτόσε ... ἠμήθην <note>- ed. pr. (перевод: «там под волной скошена моя
+                        жизнь»)</note></rdg>
+                  <rdg source="bib:b0521">αὐτὸς δ’ ἠμήθην.</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Горе мне, получившему в удел от Мойр горькую пряжу жизни. Меня, хотя я и не желал отправляться в путь, 
-               Пагуба заставила собирать плоды светлых вод моря. Но у меня самого, Басса, (сына) Патериона, волна забрала жизнь в возрасте трех одиннадцатилетий.</p>
+            <p>Горе мне, получившему в удел от Мойр горькую пряжу жизни. Меня, хотя я и не желал
+               отправляться в путь, Пагуба заставила собирать плоды светлых вод моря. Но у меня
+               самого, Басса, (сына) Патериона, волна забрала жизнь в возрасте трех
+               одиннадцатилетий.</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

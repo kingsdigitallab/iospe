@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru"> Надгробие Бассиана</title>
-             <title xml:lang="en">Epitaph of Bassianos</title>
+            <title xml:lang="ru"> Надгробие Бассиана</title>
+            <title xml:lang="en">Epitaph of Bassianos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>16/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>16/36504</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>16/36504</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранилась нижняя часть надгробия, выполненного при вторичном использовании крупной архитектурной детали. 
-                              Тыльная сторона обработана грубо. В верхней части фрагмента имеются остатки рельефа — ноги стоящей в фас мужской фигуры в длинной одежде. 
-                              Слева от него ступни ног маленькой фигуры, очевидно, слуги. Под рельефом расположена трехстрочная надпись.</p>
+                           <p xml:lang="ru">Сохранилась нижняя часть надгробия, выполненного при
+                              вторичном использовании крупной архитектурной детали. Тыльная сторона
+                              обработана грубо. В верхней части фрагмента имеются остатки рельефа —
+                              ноги стоящей в фас мужской фигуры в длинной одежде. Слева от него
+                              ступни ног маленькой фигуры, очевидно, слуги. Под рельефом расположена
+                              трехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20,0</height>
@@ -58,8 +63,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон, сигма; пи с вертикалями одинаковой длины и не выходящей за их пределы горизонталью;
-                           ипсилон с короткой не доходящей до середины строки вертикалью; чуть изогнутые линии хи; апексы на концах линий букв; точки-разделители; лигатуры.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон,
+                           сигма; пи с вертикалями одинаковой длины и не выходящей за их пределы
+                           горизонталью; ипсилон с короткой не доходящей до середины строки
+                           вертикалью; чуть изогнутые линии хи; апексы на концах линий букв;
+                           точки-разделители; лигатуры.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -67,20 +75,23 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Случайная находка 1961 г. на участке херсонесского некрополя, расположенного к югу от башни XVII (Зенона) 
-                           на западном склоне Девичьей горы.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Случайная находка 1961 г. на участке херсонесского
+                           некрополя, расположенного к югу от башни XVII (Зенона) на западном склоне
+                           Девичьей горы.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -97,7 +108,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-18" who="CB">Adding biblio and app crit tags</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-27" who="CB">correcting bibliography</change>
@@ -107,7 +121,8 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-25" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -123,8 +138,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1965--><ptr target="bib:b0503"/>, <citedRange>97</citedRange></bibl>
-               <bibl><!--НЭПХ II--> <ptr target="bib:НЭПХ2"/> <citedRange>183</citedRange></bibl> <bibl> (<!--cf. Bull. ép.1968--><ptr target="bib:BE"/>, <citedRange>1968, 376</citedRange>)</bibl>
+               <bibl><!--Соломоник 1965--><ptr target="bib:b0503"/>,
+                  <citedRange>97</citedRange></bibl>
+               <bibl><!--НЭПХ II-->
+                  <ptr target="bib:НЭПХ2"/>
+                  <citedRange>183</citedRange></bibl>
+               <bibl> (<!--cf. Bull. ép.1968--><ptr target="bib:BE"/>, <citedRange>1968,
+                     376</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -143,23 +163,25 @@
          <div type="apparatus">
             <listApp>
                <app loc="3">
-              <note>in.: ΤΗ в лигатуре</note> 
-              <note>med.: с обеих сторон Ι точки-разделители</note>
-               <rdg>χε͂ρε = χαῖρε</rdg>
-              <note>f in.: монограмма, в которой читаются, вероятно, буквы Π и Α. Возможно, 
-                  сокращения звательного падежа παῖ (обращение к умершему) или παροδεῖτα (обращение к путнику).</note>
+                  <note>in.: ΤΗ в лигатуре</note>
+                  <note>med.: с обеих сторон Ι точки-разделители</note>
+                  <rdg>χε͂ρε = χαῖρε</rdg>
+                  <note>f in.: монограмма, в которой читаются, вероятно, буквы Π и Α. Возможно,
+                     сокращения звательного падежа παῖ (обращение к умершему) или παροδεῖτα
+                     (обращение к путнику).</note>
                </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
             <p>Бассиан, (сын) Афинея, проживший 16 лет, приветствую тебя, [сын ?].</p>
-                    <p/>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
             <p>Bassianos, (son of) Athenaios, having lived 16 years, greeting you, [son?].</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Личное имя Βασσιανός латинского происхождения, но засвидетельствовано в грекоязычных областях в римскую эпоху.</p>
+            <p>Личное имя Βασσιανός латинского происхождения, но засвидетельствовано в грекоязычных
+               областях в римскую эпоху.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

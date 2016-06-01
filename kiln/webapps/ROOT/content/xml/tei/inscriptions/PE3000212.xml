@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Декрет</title>
-             <title xml:lang="en">Decree</title>
+            <title xml:lang="ru">Декрет</title>
+            <title xml:lang="en">Decree</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился правый край, однако в результате отслаивания поверхности использования поле надписи уничтожено почти полностью: 
-                              видны лишь незнчительные остатки нескольких строк в правом нижнем углу.</p>
+                           <p xml:lang="ru">Сохранился правый край, однако в результате отслаивания
+                              поверхности использования поле надписи уничтожено почти полностью:
+                              видны лишь незнчительные остатки нескольких строк в правом нижнем
+                              углу.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20,0</height>
@@ -57,9 +61,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной перекладиной, иногда не замкнута вверху, правая вертикаль ню чуть приподнята, 
-                           мю с немного расходящимися боковыми линиями, омикрон меньше остальных букв, сигма то с параллельными, то с немного расходящимися верхней и нижней гастами, 
-                           полукруглая омега с апицированными боковыми горизонталями, утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной перекладиной, иногда не замкнута вверху,
+                           правая вертикаль ню чуть приподнята, мю с немного расходящимися боковыми
+                           линиями, омикрон меньше остальных букв, сигма то с параллельными, то с
+                           немного расходящимися верхней и нижней гастами, полукруглая омега с
+                           апицированными боковыми горизонталями, утолщения на концах линий
+                           букв.</seg>
                         <seg xml:lang="en">Alpha with broken crossbar</seg>
                         <height unit="cm">0,9</height>
                      </handNote>
@@ -78,9 +85,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1937 г. в северном районе Херсонеса, в римском слое помещения 2 (НА НЗХТ, д. 353, № 3071). 
-                           Раскопки Г.Д. Белова.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1937 г. в северном районе Херсонеса, в
+                           римском слое помещения 2 (НА НЗХТ, д. 353, № 3071). Раскопки Г.Д.
+                           Белова.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -93,19 +102,23 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Tagging app crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -152,16 +165,33 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Tекст ed. pr. (cf. № ipe352 B26 sq.) с некоторыми изменениями.</note></app>
-               <app loc="1"><rdg>[--- τὸ δὲ | ψάφισμα τοῦτο ἀναγράψαι εἰς στάλαν | λευκοῦ λίθου καὶ θέμεν εἰς τὸ πρόν]αον <note>– ed. pr.</note></rdg></app>
-               <app loc="3"><rdg><note>не исключаю</note> [τὸν ταμίαν τῶν ἱ]ερῶν <note>(cf. № ipe34425 и ipe352 B26).</note></rdg></app>
-               <app loc="5/6"><note>Согласно ed. pr. ожидается genetivus патронимика на Το-.</note></app>
-               <app loc="7"><note>in.: genetivus патронимика – ed. pr.</note></app>
-               <app loc="8"><note>genetivus имени и патронимика на -ων – ed. pr.</note></app>
+               <app>
+                  <note>Tекст ed. pr. (cf. № ipe352 B26 sq.) с некоторыми изменениями.</note>
+               </app>
+               <app loc="1">
+                  <rdg>[--- τὸ δὲ | ψάφισμα τοῦτο ἀναγράψαι εἰς στάλαν | λευκοῦ λίθου καὶ θέμεν εἰς
+                     τὸ πρόν]αον <note>– ed. pr.</note></rdg>
+               </app>
+               <app loc="3">
+                  <rdg><note>не исключаю</note> [τὸν ταμίαν τῶν ἱ]ερῶν <note>(cf. № ipe34425 и
+                        ipe352 B26).</note></rdg>
+               </app>
+               <app loc="5/6">
+                  <note>Согласно ed. pr. ожидается genetivus патронимика на Το-.</note>
+               </app>
+               <app loc="7">
+                  <note>in.: genetivus патронимика – ed. pr.</note>
+               </app>
+               <app loc="8">
+                  <note>genetivus имени и патронимика на -ων – ed. pr.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[- - - поместить (стелу с декретом) в пронаосе храма Девы; понесенный расход пусть выдатут казначеи (vel: выдаст казначей)] священных сумм. [Это решено Советом и Народом --- числа] месяца Гераклия [при царе ---, при председателе эсимнетов ---, при секретаре - - -].</p>
+            <p>[- - - поместить (стелу с декретом) в пронаосе храма Девы; понесенный расход пусть
+               выдатут казначеи (vel: выдаст казначей)] священных сумм. [Это решено Советом и
+               Народом --- числа] месяца Гераклия [при царе ---, при председателе эсимнетов ---, при
+               секретаре - - -].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

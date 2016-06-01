@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Псюхе</title>
-             <title xml:lang="en">Epitaph of Psyche</title>
+            <title xml:lang="ru">Надгробие Псюхе</title>
+            <title xml:lang="en">Epitaph of Psyche</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>3650</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>3650</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3650</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Сохранилась верхняя часть стелы, украшенной карнизом без антефиксов. 
-                              На верхней грани прямоугольное углубление для крепления венчающей части. Лицевая сторона заглажена. Розетки отсутствуют. 
-                              Под карнизом без предварительной разметки тонкими неровными буквами вырезана трехстрочная надпись, вероятно, непрофессиональным резчиком. 
+                           <p xml:lang="ru">Сохранилась верхняя часть стелы, украшенной карнизом без
+                              антефиксов. На верхней грани прямоугольное углубление для крепления
+                              венчающей части. Лицевая сторона заглажена. Розетки отсутствуют. Под
+                              карнизом без предварительной разметки тонкими неровными буквами
+                              вырезана трехстрочная надпись, вероятно, непрофессиональным резчиком.
                               Поверхность с надписью пострадала от выветривания.</p>
                            <p xml:lang="en"/>
                            <dimensions>
@@ -59,8 +64,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной перекладиной и пересекающимися наклонными, эпсилон с незамкнутой средней горизонталью, тета с точкой, 
-                           ню с вертикальными гастами одинаковой длины, крупное омикрон, сигма с параллельными верхней и нижней линиями, слегка наклоненная вправо, 
+                        <seg xml:lang="ru">Альфа с ломаной перекладиной и пересекающимися
+                           наклонными, эпсилон с незамкнутой средней горизонталью, тета с точкой, ню
+                           с вертикальными гастами одинаковой длины, крупное омикрон, сигма с
+                           параллельными верхней и нижней линиями, слегка наклоненная вправо,
                            практически отсутствуют украшения на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with broken crossbar</seg>
                         <height unit="cm">1,8 - 2,8.</height>
@@ -69,9 +76,9 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0101" notAfter="-0001" evidence="палеография">
                         <seg xml:lang="ru">I в. до н.э.</seg>
@@ -80,13 +87,19 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном районе херсонесского городища близ оборонительной стены у Карантинной бухты («участок между шлюпочным сараем и оборонительной стеной»). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 16, № 322; д. 36, № 322).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном
+                           районе херсонесского городища близ оборонительной стены у Карантинной
+                           бухты («участок между шлюпочным сараем и оборонительной стеной»).
+                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 16, № 322; д. 36, №
+                           322).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -98,7 +111,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2015-09-24" who="CB">Bibliography</change>
          <change when="2015-08-21" who="CB">Bibliography and app crit</change>
@@ -120,15 +136,19 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl> <!--Латышев 1908--> <ptr target="bib:b0149"/>, 22, <citedRange>11</citedRange></bibl>
-            <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/>, <citedRange>523</citedRange></bibl>
-         </listBibl>
+               <bibl>
+                  <!--Латышев 1908-->
+                  <ptr target="bib:b0149"/>, 22, <citedRange>11</citedRange></bibl>
+               <bibl><!--IOSPE I2-->
+                  <ptr target="bib:IOSPE2"/>, <citedRange>523</citedRange></bibl>
+            </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--АСХ--><ptr target="bib:b0523"/> № 193</bibl>
-               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 115, № C41 (памятник ошибочно назван неопубликованным и обозначен как «stele of a woman, wife of Brouos»)</bibl>
+               <bibl><!--Posamentir 2011--><ptr target="bib:b0439"/>, 115, № C41 (памятник ошибочно
+                  назван неопубликованным и обозначен как «stele of a woman, wife of Brouos»)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -140,7 +160,10 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>В нижнем левом углу сохранилась следы буквы Ν, вырезанной другой рукой.</note></app>
+               <app>
+                  <note>В нижнем левом углу сохранилась следы буквы Ν, вырезанной другой
+                     рукой.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru"> Надгробие Александра</title>
-             <title xml:lang="en">Epitaph of Alexander</title>
+            <title xml:lang="ru"> Надгробие Александра</title>
+            <title xml:lang="en">Epitaph of Alexander</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>35120</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>35120</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Возможно, вставка, предназначавшаяся для крепления в массивном известняковом блоке. 
-                              Сохранилась левая половина н центральная часть увенчивавшего плиту фронтона, но сам левый угол сбит. В центре тимпана</p>
+                           <p xml:lang="ru">Возможно, вставка, предназначавшаяся для крепления в
+                              массивном известняковом блоке. Сохранилась левая половина н
+                              центральная часть увенчивавшего плиту фронтона, но сам левый угол
+                              сбит. В центре тимпана</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20,0</height>
@@ -57,8 +61,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, овальный омикрон в габарите строки, сигма с параллельными верхней и нижней линиями, 
-                           выходящими за пересечение с наклонными, кси с изогнутой наклонной линией, апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, овальный омикрон в
+                           габарите строки, сигма с параллельными верхней и нижней линиями,
+                           выходящими за пересечение с наклонными, кси с изогнутой наклонной линией,
+                           апексы на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
@@ -66,19 +72,23 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Случайная находка 1936 г. в западном районе Херсонеса, у Песочной бухты («в груде камней»; НА НЗХТ, инв. книга № 9).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Случайная находка 1936 г. в западном районе
+                           Херсонеса, у Песочной бухты («в груде камней»; НА НЗХТ, инв. книга №
+                           9).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,14 +105,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-09-28" who="CB">Bibliography</change>
          <change when="2015-08-21" who="CB">App crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-25" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -138,8 +152,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1-3"><rdg source="bib:b0239"><note>rest.</note></rdg></app>
-               <app loc="4"><note>следы 1 или 2 букв, не поддающихся идентификации.</note></app>
+               <app loc="1-3">
+                  <rdg source="bib:b0239"><note>rest.</note></rdg>
+               </app>
+               <app loc="4">
+                  <note>следы 1 или 2 букв, не поддающихся идентификации.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

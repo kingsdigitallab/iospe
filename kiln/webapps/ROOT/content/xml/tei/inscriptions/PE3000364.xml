@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum (фрагмент надгробия ?)</title>
+            <title xml:lang="ru">Incertum (фрагмент надгробия ?)</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Частично сохранился нижний край с остатками одной строки надписи. Лицевая и нижняя грань отшлифованы.</p>
+                           <p xml:lang="ru">Частично сохранился нижний край с остатками одной строки
+                              надписи. Лицевая и нижняя грань отшлифованы.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">4,1</height>
@@ -56,9 +59,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, тета с точкой меньше остальных букв, правая вертикаль ню слегка приподнята, 
-                           слабые утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Alpha with straight crossbar, nu with short right vertical</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, тета с точкой меньше
+                           остальных букв, правая вертикаль ню слегка приподнята, слабые утолщения
+                           на концах линий букв.</seg>
+                        <seg xml:lang="en">Alpha with straight crossbar, nu with short right
+                           vertical</seg>
                         <height unit="cm">1,0</height>
                      </handNote>
                   </handDesc>
@@ -76,13 +81,16 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена случайно в 1899 г. в центральной части городища при замощении плошади вокруг собора св. Владимира. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 28, л. 2, № 162).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена случайно в 1899 г. в центральной части
+                           городища при замощении плошади вокруг собора св. Владимира. Раскопки К.К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 28, л. 2, № 162).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot"/>
-                        <rs type="circumstances">excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">excavations of K.K. Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -90,12 +98,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -131,7 +142,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>В конце стк. следы линий одной или двух букв.</note></app>
+               <app>
+                  <note>В конце стк. следы линий одной или двух букв.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -141,7 +154,9 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Вероятно, надпись содержит или остатки имени божества в дорийской форме [Ἀ]θανᾶ  или производного от него личного имени, например, хорошо засвидетельствованного в эллинистическом Херсонесе [Ἀ]θάνα[ιος].</p>
+            <p>Вероятно, надпись содержит или остатки имени божества в дорийской форме [Ἀ]θανᾶ или
+               производного от него личного имени, например, хорошо засвидетельствованного в
+               эллинистическом Херсонесе [Ἀ]θάνα[ιος].</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

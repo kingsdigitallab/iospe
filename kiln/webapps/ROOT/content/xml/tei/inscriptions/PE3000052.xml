@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Герофанта</title>
-             <title xml:lang="en">Epitaph of Herophantos</title>
+            <title xml:lang="ru">Надгробие Герофанта</title>
+            <title xml:lang="en">Epitaph of Herophantos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>4609</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>4609</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,14 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом с антефиксами (правый угол сбит). На лицевой грани изображены две 
-                              рельефные розетки и портупея. На боковых гранях имеется по одной розетке. 
-                              Между карнизом и розетками в прямоугольное углубление вставлена мраморная плитка, на которой вырезана и обведена красной краской 
-                              двухстрочная надпись.</p>
+                           <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом с антефиксами
+                              (правый угол сбит). На лицевой грани изображены две рельефные розетки
+                              и портупея. На боковых гранях имеется по одной розетке. Между карнизом
+                              и розетками в прямоугольное углубление вставлена мраморная плитка, на
+                              которой вырезана и обведена красной краской двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">43,0</height>
@@ -59,8 +63,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Поперечная линия альфы слегка выгнута, тета и омикрон меньше остальных букв, вертикальные гасты ню одинаковой длины, 
-                           верхние и нижние линии сигма немного расходятся, заметные утолщения и штрихи на концах линий букв.</seg>
+                        <seg xml:lang="ru">Поперечная линия альфы слегка выгнута, тета и омикрон
+                           меньше остальных букв, вертикальные гасты ню одинаковой длины, верхние и
+                           нижние линии сигма немного расходятся, заметные утолщения и штрихи на
+                           концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,4</height>
                      </handNote>
@@ -68,20 +74,24 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0250" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0250" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1910 г. в юго-восточном районе Херсонеса на юго-западном участке некрополя на берегу 
-                           Карантинной бухты в вырубной могиле № 115 (49)1. Раскопки Р.Х. Лепера (НА НЗХТ, д. 103, л. 19, № 1038; д. 71, л. 74).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1910 г. в юго-восточном районе Херсонеса
+                           на юго-западном участке некрополя на берегу Карантинной бухты в вырубной
+                           могиле № 115 (49)1. Раскопки Р.Х. Лепера (НА НЗХТ, д. 103, л. 19, № 1038;
+                           д. 71, л. 74).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +108,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-15" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Metadata and app crit</change>
@@ -141,7 +154,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -151,8 +166,12 @@
             <p>Herophantos, (son of) Theophantos.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Оба теофорных имени встречаются на надгробиях IV-III вв. до н.э. (neph139 и neph172+ipe710), обнаруженных также в юго-восточном районе 
-               Херсонеса, однако нет данных для установления родственных связей между носителями имен. Ср. также засвидетельствованые в Херсонесе близкие ЛИ <persName type="attested">Ἡροφάνης</persName> и <persName type="attested">Θεοφάνης</persName> (LGPN IV).</p>
+            <p> Оба теофорных имени встречаются на надгробиях IV-III вв. до н.э. (neph139 и
+               neph172+ipe710), обнаруженных также в юго-восточном районе Херсонеса, однако нет
+               данных для установления родственных связей между носителями имен. Ср. также
+               засвидетельствованые в Херсонесе близкие ЛИ <persName type="attested"
+                  >Ἡροφάνης</persName> и <persName type="attested">Θεοφάνης</persName> (LGPN
+               IV).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

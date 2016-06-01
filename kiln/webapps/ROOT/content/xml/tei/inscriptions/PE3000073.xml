@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Аполлонии</title>
-             <title xml:lang="en">Epitaph of Apollonia</title>
+            <title xml:lang="en">Epitaph of Apollonia</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>16/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>16/36847</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>16/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы с фронтоном и акротериями (сбиты). Тыльная сторона тщательно обработана. Все четыре грани украшены 
-                              рельефными розетками. На лицевой стороне над розетками красной краской нанесена четырехстрочная надпись. 
-                              Под розетками выполненое кистью изображение перевязанных узлом и свисающих тэний.</p>
+                           <p xml:lang="ru">Верхняя часть стелы с фронтоном и акротериями (сбиты).
+                              Тыльная сторона тщательно обработана. Все четыре грани украшены
+                              рельефными розетками. На лицевой стороне над розетками красной краской
+                              нанесена четырехстрочная надпись. Под розетками выполненое кистью
+                              изображение перевязанных узлом и свисающих тэний.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">73,0</height>
@@ -58,7 +63,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Правая вертикаль ню приподнята, верхняя поперечная линия пи слегка выступает за короткую правую вертикаль, омикрон меньше остальных букв,</seg>
+                        <seg xml:lang="ru">Правая вертикаль ню приподнята, верхняя поперечная линия
+                           пи слегка выступает за короткую правую вертикаль, омикрон меньше
+                           остальных букв,</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2–2,5 (стк. 4: 1,8).</height>
                      </handNote>
@@ -66,9 +73,9 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0300" notAfter="-0251" evidence="палеография">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
@@ -77,8 +84,10 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 гг. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 гг. в юго-восточном районе
+                           Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен.
                            Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
@@ -96,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-02" who="CB">Metadata and app crit</change>
@@ -119,9 +131,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 65, № <citedRange>17</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 65, №
+                     <citedRange>17</citedRange></bibl>
                <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>151</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 449, № <citedRange>71</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 449, №
+                     <citedRange>71</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,7 +155,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="4"><note>Слово γυνά вписано между розетками чуть меньшими буквами.</note></app>
+               <app loc="4">
+                  <note>Слово γυνά вписано между розетками чуть меньшими буквами.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -151,9 +167,20 @@
             <p>Apollonia, (daughter of) Herodotos, wife of Dionysios.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Теофорное женское имя Ἀπολλωνία засвидетельствовано в Херсонесе еще один раз в эллинистической надписи № ipe505. </p>
-            <p>	Не исключено, что супруг Аполлонии тождествен Дионисию, сыну Санниона (№ neph150). В пользу того, что надгробные памятники Аполлонии и Дионисия происходили, вероятно, с одного и того же участка некрополя, свидетельствует их расположение в соседних рядах кладки башни XVII (Даниленко 1966, 172; Perlman 2011, 389). Мнению Э.И. Соломоник (НЭПХ II, с. 152) о том, что Дионисий был «возможно, не достигшим совешеннолетия» и, следовательно, не мог быть мужем Аполлонии, противоречит изображение воинских атрибутов на его надгробии (см. комментарий к № neph150).</p>
-            <p>	Высказывалось также предположение, что Геродот, отец Аполлонии, может быть отождествлен с Геродотом, сыном Аполлая, надписи № neph153. Основанием для этого помимо хронологической близости двух стел может считаться наличие общего теофорного элемента в именах Аполлонии и Аполлая, отца Геродота (Даниленко 1966, 172; Perlman 2011, 389).</p>
+            <p> Теофорное женское имя Ἀπολλωνία засвидетельствовано в Херсонесе еще один раз в
+               эллинистической надписи № ipe505. </p>
+            <p> Не исключено, что супруг Аполлонии тождествен Дионисию, сыну Санниона (№ neph150). В
+               пользу того, что надгробные памятники Аполлонии и Дионисия происходили, вероятно, с
+               одного и того же участка некрополя, свидетельствует их расположение в соседних рядах
+               кладки башни XVII (Даниленко 1966, 172; Perlman 2011, 389). Мнению Э.И. Соломоник
+               (НЭПХ II, с. 152) о том, что Дионисий был «возможно, не достигшим совешеннолетия» и,
+               следовательно, не мог быть мужем Аполлонии, противоречит изображение воинских
+               атрибутов на его надгробии (см. комментарий к № neph150).</p>
+            <p> Высказывалось также предположение, что Геродот, отец Аполлонии, может быть
+               отождествлен с Геродотом, сыном Аполлая, надписи № neph153. Основанием для этого
+               помимо хронологической близости двух стел может считаться наличие общего теофорного
+               элемента в именах Аполлонии и Аполлая, отца Геродота (Даниленко 1966, 172; Perlman
+               2011, 389).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

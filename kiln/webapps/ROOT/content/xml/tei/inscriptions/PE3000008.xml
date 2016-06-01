@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Эвбула</title>
-             <title xml:lang="en">Epitaph of Euboulos</title>
+            <title xml:lang="en">Epitaph of Euboulos</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела, украшенная анфемием. Расколота на пять частей. 
-                              Немного повреждена справа. Шип для вставки в постамент отбит. 
-                              Надпись сохранила следы красной краски.</p>
+                           <p xml:lang="ru">Стела, украшенная анфемием. Расколота на пять частей.
+                              Немного повреждена справа. Шип для вставки в постамент отбит. Надпись
+                              сохранила следы красной краски.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">176,0</height>
@@ -58,10 +61,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, кси с вертикальной чертой, крупное омикрон, 
-                           сигма с расходящимися верхней и нижней гастами, омега широкая без сближения нижних концов дуги, 
-                           отсутствие утолщений на концах букв.</seg>
-                        <seg xml:lang="en">Nu with short right vertical, four-bar sigma with splayed bars</seg>
+                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, кси с вертикальной
+                           чертой, крупное омикрон, сигма с расходящимися верхней и нижней гастами,
+                           омега широкая без сближения нижних концов дуги, отсутствие утолщений на
+                           концах букв.</seg>
+                        <seg xml:lang="en">Nu with short right vertical, four-bar sigma with splayed
+                           bars</seg>
                         <height unit="cm">3,5</height>
                      </handNote>
                   </handDesc>
@@ -79,9 +84,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII оборонительных стен (башня Зенона). 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII оборонительных стен (башня Зенона). Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
@@ -122,9 +132,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 59, № <citedRange>3</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>137</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 446, № <citedRange>62</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 59, №
+                     <citedRange>3</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>137</citedRange></bibl>
+               <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974,
+                  380</citedRange>)</bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 446, №
+                     <citedRange>62</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -144,7 +158,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><note>Υ вырезан поверх Ο.</note></app>
+               <app loc="1">
+                  <note>Υ вырезан поверх Ο.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -154,11 +170,14 @@
             <p>Euboulos, (son of) Xenon.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>На принадлежность нижнего анэпиграфного фрагмента данной стеле (инв. №: 162/36847) впервые указано в работе Posamentir 2011, 70, No. 62+62a. 
-               В стк. 1 с большей вероятностью следует видеть хорошо известное личное имя Εὔβουλος с все еще характерной для IV в до н.э. 
-               передачей о долгого закрытого через Ο (ср. Виноградов 1975, 174), нежели крайне редкое ЛИ Εὔβολος 
-               (засвидетельствовано в конце II в. до н.э. на Делосе для выходца с Боспора, LGPN IV). 
-               Примечательна также первоначальная передача дифтонга ευ через εο (ср. Bull. ép. 1974, 380: «on avait ... pris d’abord une graphie ionienne ancienne»).</p>
+            <p>На принадлежность нижнего анэпиграфного фрагмента данной стеле (инв. №: 162/36847)
+               впервые указано в работе Posamentir 2011, 70, No. 62+62a. В стк. 1 с большей
+               вероятностью следует видеть хорошо известное личное имя Εὔβουλος с все еще
+               характерной для IV в до н.э. передачей о долгого закрытого через Ο (ср. Виноградов
+               1975, 174), нежели крайне редкое ЛИ Εὔβολος (засвидетельствовано в конце II в. до
+               н.э. на Делосе для выходца с Боспора, LGPN IV). Примечательна также первоначальная
+               передача дифтонга ευ через εο (ср. Bull. ép. 1974, 380: «on avait ... pris d’abord
+               une graphie ionienne ancienne»).</p>
             <p>Имена Εὔβουλος и Ξένων засвидетельствованы в Херсонесе неоднократно (см. LGPN).</p>
          </div>
          <div type="commentary" xml:lang="en">

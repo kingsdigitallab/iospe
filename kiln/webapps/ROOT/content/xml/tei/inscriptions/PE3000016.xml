@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Андрокла</title>
-             <title xml:lang="en">Epitaph of Androkles</title>
+            <title xml:lang="ru">Надгробие Андрокла</title>
+            <title xml:lang="en">Epitaph of Androkles</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m4">Песчаник.</material>
                            <material xml:lang="en">Sandstone.</material>
-                           <p xml:lang="ru">Фрагмент надгробия, использованного вторично в качестве карниза.
-                              Сохранилась вырезанная по заранее нанесенной разметке двухстрочная надпись.</p>
+                           <p xml:lang="ru">Фрагмент надгробия, использованного вторично в качестве
+                              карниза. Сохранилась вырезанная по заранее нанесенной разметке
+                              двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">29,0</height>
@@ -57,9 +60,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, правая вертикаль пи значительно укорочена, 
-                           сигма с расходящимися верхней и нижней гастами, омега широкая без сближения нижних концов дуги, отсутствие утолщений на концах букв.</seg>
-                        <seg xml:lang="en">Nu with short right vertical, four-bar sigma with splayed bars</seg>
+                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, правая вертикаль пи
+                           значительно укорочена, сигма с расходящимися верхней и нижней гастами,
+                           омега широкая без сближения нижних концов дуги, отсутствие утолщений на
+                           концах букв.</seg>
+                        <seg xml:lang="en">Nu with short right vertical, four-bar sigma with splayed
+                           bars</seg>
                         <height unit="cm">2,5</height>
                      </handNote>
                   </handDesc>
@@ -77,14 +83,17 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol ">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найден в 1891 г. в северном районе Херсонеса, на берегу около монастырской купальни;
-                           раскоп III (вблизи будущего раскопа 1931 г.). Раскопки К.К. Косцюшко-Валюжинича (ОАК за 1891, 6; НА НЗХТ, д. 2, л. 5 № 52; д. 3, л. 11; д. 20, л. 4, № 52).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol ">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найден в 1891 г. в северном районе Херсонеса, на
+                           берегу около монастырской купальни; раскоп III (вблизи будущего раскопа
+                           1931 г.). Раскопки К.К. Косцюшко-Валюжинича (ОАК за 1891, 6; НА НЗХТ, д.
+                           2, л. 5 № 52; д. 3, л. 11; д. 20, л. 4, № 52).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">excavations of K.K. Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -96,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Biblio</change>
          <change when="2015-09-28" who="CB">Biblio and app crit</change>
@@ -119,9 +131,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1892-->, <ptr target="bib:b0125"/>26, № <citedRange>8</citedRange></bibl>
-               <bibl><!--IOSPE --> <ptr target="bib:IOSPE"/> <citedRange>IV 99</citedRange></bibl>
-               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>463</citedRange></bibl>
+               <bibl><!--Латышев 1892-->, <ptr target="bib:b0125"/>26, №
+                  <citedRange>8</citedRange></bibl>
+               <bibl><!--IOSPE -->
+                  <ptr target="bib:IOSPE"/>
+                  <citedRange>IV 99</citedRange></bibl>
+               <bibl><!--IOSPE I2-->
+                  <ptr target="bib:IOSPE2"/>
+                  <citedRange>463</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -142,7 +159,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -152,9 +171,10 @@
             <p>Androkles, (son of) Promathion.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Стела могла изначально находиться на территории раннего некрополя на Северном берегу, 
-               прекратившего существование не позднее третьей четверти IV в. (ср. Буйских, 2008, 50, 61). 
-               Личное имя Προμαθίων неоднократно засвидетельствовано в Херсонесе (LGPN IV), антропоним Ἀνδροκλῆς встречается только в этой надписи.</p>
+            <p>Стела могла изначально находиться на территории раннего некрополя на Северном берегу,
+               прекратившего существование не позднее третьей четверти IV в. (ср. Буйских, 2008, 50,
+               61). Личное имя Προμαθίων неоднократно засвидетельствовано в Херсонесе (LGPN IV),
+               антропоним Ἀνδροκλῆς встречается только в этой надписи.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Акис</title>
-             <title xml:lang="en">Epitaph of Akis</title>
+            <title xml:lang="ru">Надгробие Акис</title>
+            <title xml:lang="en">Epitaph of Akis</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранилась полностью. По заранее нанесенной разметке вырезана трехстрочная надпись.</p>
+                           <p xml:lang="ru">Сохранилась полностью. По заранее нанесенной разметке
+                              вырезана трехстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,0</height>
@@ -56,9 +59,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, ню с немного приподнятой правой гастой, омикрон меньше остальных букв, 
-                           сигма с расходящимися верхней и нижней линиями, слегка изогнутые линии отдельных букв, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Epsilon with a short middle bar, nu with slightly shorter right harta</seg>
+                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, ню с немного
+                           приподнятой правой гастой, омикрон меньше остальных букв, сигма с
+                           расходящимися верхней и нижней линиями, слегка изогнутые линии отдельных
+                           букв, утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Epsilon with a short middle bar, nu with slightly shorter
+                           right harta</seg>
                         <height unit="cm">1,0</height>
                      </handNote>
                   </handDesc>
@@ -69,22 +75,26 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1896 г. в юго-восточном районе Херсонеса на участке некрополя, 
-                           расположенного «между Карантинной бухтой и военной дорогой в Севастополь». 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5, л. 16, № 504; д. 25, л. 4, № 131).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1896 г. в юго-восточном районе Херсонеса
+                           на участке некрополя, расположенного «между Карантинной бухтой и военной
+                           дорогой в Севастополь». Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 5,
+                           л. 16, № 504; д. 25, л. 4, № 131).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in 1896... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in 1896... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -96,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-02-15" who="SS">corrected references to alists; tidied xml</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Biblio</change>
@@ -120,15 +133,19 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1899--><ptr target="bib:b0136"/>, 16, № <citedRange>16</citedRange></bibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV, 130</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>504</citedRange></bibl>
+               <bibl><!--Латышев 1899--><ptr target="bib:b0136"/>, 16, №
+                  <citedRange>16</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV, 130</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>504</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--KW--><ptr target="bib:b0519"/> № 15d</bibl> <!--abbreviated title in Makarov notes: KW-->
+               <bibl><!--KW--><ptr target="bib:b0519"/> № 15d</bibl>
+               <!--abbreviated title in Makarov notes: KW-->
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -141,7 +158,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -151,12 +170,14 @@
             <p>Akis, (daughter of) Geron, wife of Onasikles.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Личные имена Ἀκίς (засвидетельствовано также на Боспоре,  LGPN IV) и Ὀνασικλῆς встречаются в Херсoнесе только в этой надписи. 
-               ЛИ Γέρων известно в других херсонесских надписях эллинистического времени.</p>
+            <p>Личные имена Ἀκίς (засвидетельствовано также на Боспоре, LGPN IV) и Ὀνασικλῆς
+               встречаются в Херсoнесе только в этой надписи. ЛИ Γέρων известно в других
+               херсонесских надписях эллинистического времени.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p>Personal names Ἀκίς (also attested in Bosporus, LGPN IV) and Ὀνασικλῆς occur in Chersonesos only in this inscription. The name Γέρων
-            is know from other Chersonesian inscriptions of the Hellenistic period.</p>
+            <p>Personal names Ἀκίς (also attested in Bosporus, LGPN IV) and Ὀνασικλῆς occur in
+               Chersonesos only in this inscription. The name Γέρων is know from other Chersonesian
+               inscriptions of the Hellenistic period.</p>
          </div>
       </body>
    </text>

@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Нижний край плиты с рельефной рамкой. В тщательно обработанном поле надписи сохранились остатки двух строк.</p>
+                           <p xml:lang="ru">Нижний край плиты с рельефной рамкой. В тщательно
+                              обработанном поле надписи сохранились остатки двух строк.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">14,0</height>
@@ -56,8 +59,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Эпсилон с незамкнутой средней горизонталью, перекрещивающиеся внутренние наклонные сигма, 
-                           достаточно широкий ипсилон на короткой ножке, подковообразная омега, утолщения и апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Эпсилон с незамкнутой средней горизонталью,
+                           перекрещивающиеся внутренние наклонные сигма, достаточно широкий ипсилон
+                           на короткой ножке, подковообразная омега, утолщения и апексы на концах
+                           линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -69,15 +74,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0068" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0068" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">Кон. I или II в. н.э.</seg>
                         <seg xml:lang="en">Late I or IInd centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена до 1872 г., когда камень был отправлен в Москву.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена до 1872 г., когда камень был отправлен в
+                           Москву.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -90,17 +98,20 @@
                      <seg xml:lang="ru">Москва, Россия.</seg>
                      <seg xml:lang="en">Moscow, Russia.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">Biblio and app crit</change>
          <change when="2015-10-23" who="CB">Metadata</change>
-          <change when="2015-10-21" who="KK">Leidenised</change>
+         <change when="2015-10-21" who="KK">Leidenised</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -118,7 +129,10 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>I 238</citedRange></bibl>
-               <bibl><!--Латышев 1892a--><ptr target="bib:b0136"/>, <citedRange>367</citedRange></bibl> <bibl> (<!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV p. 283, ad № 238</citedRange>)</bibl>
+               <bibl><!--Латышев 1892a--><ptr target="bib:b0136"/>,
+                  <citedRange>367</citedRange></bibl>
+               <bibl> (<!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV p. 283, ad № 238</citedRange>)</bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>593</citedRange></bibl>
             </listBibl>
          </div>
@@ -139,7 +153,10 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>IOSPE I2 593 (только маюскульная копия). </note>--></app>
-               <app loc="1"><rdg><note>e.g.</note> [παντοπ]ώλιν (= παντοπώλιον) <note>или другое существительное, сложное с корнем πωλ-.</note></rdg></app>
+               <app loc="1">
+                  <rdg><note>e.g.</note> [παντοπ]ώλιν (= παντοπώλιον) <note>или другое
+                        существительное, сложное с корнем πωλ-.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -149,7 +166,10 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Латышев отмечает (IOSPE I2 593), что нет причин считать надпись нагробной (мнение Н.П. Кондакова, копией которого Латышев пользовался при первом издании фрагмента). Я не исключаю, что в документе шла речь о строительстве или восстановлении рынка на средства, полученные от налога на продажу (τέλος).</p>
+            <p>Латышев отмечает (IOSPE I2 593), что нет причин считать надпись нагробной (мнение
+               Н.П. Кондакова, копией которого Латышев пользовался при первом издании фрагмента). Я
+               не исключаю, что в документе шла речь о строительстве или восстановлении рынка на
+               средства, полученные от налога на продажу (τέλος).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

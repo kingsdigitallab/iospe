@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент метрической эпитафии</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент метрической эпитафии</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился левый верхний угол плиты с остатками шести строк надписи, которая в результате вторичного использования 
-                              была нанесена на тыльную сторону плиты с декретом середины – второй половины II в. до н.э. (№ ipe348).</p>
+                           <p xml:lang="ru">Сохранился левый верхний угол плиты с остатками шести
+                              строк надписи, которая в результате вторичного использования была
+                              нанесена на тыльную сторону плиты с декретом середины – второй
+                              половины II в. до н.э. (№ ipe348).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">9,0</height>
@@ -57,10 +61,12 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной перекладиной и просветом вверху, наклонные линии дельта не сомкнуты вверху, 
-                           узкое эпсилон, мю с вертикальными или слегка наклоненными боковыми линиями, 
-                           омикрон меньше остальных букв, пи с короткой правой вертикалью и перекладиной, выступающей далеко вправо, 
-                           сигма с параллельными верхней и нижней гастами, апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с ломаной перекладиной и просветом вверху,
+                           наклонные линии дельта не сомкнуты вверху, узкое эпсилон, мю с
+                           вертикальными или слегка наклоненными боковыми линиями, омикрон меньше
+                           остальных букв, пи с короткой правой вертикалью и перекладиной,
+                           выступающей далеко вправо, сигма с параллельными верхней и нижней
+                           гастами, апексы на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with broken crossbar</seg>
                         <height unit="cm">1,3</height>
                      </handNote>
@@ -79,14 +85,17 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1903 г. в южной части Херсонеса (так называемый «акрополь»). 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА ИИМК, Р 2, № 125).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1903 г. в южной части Херсонеса (так
+                           называемый «акрополь»). Раскопки К.К. Косцюшко-Валюжинича (НА ИИМК, Р 2,
+                           № 125).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -102,9 +111,13 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-         <change when="2015-11-20" who="CB">tokenised, metadata, biblio, app crit and origDate tags</change>
-          <change when="2015-11-20" who="KK">Leidenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-20" who="CB">tokenised, metadata, biblio, app crit and origDate
+            tags</change>
+         <change when="2015-11-20" who="KK">Leidenised</change>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -121,7 +134,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 111, № <citedRange>25</citedRange></bibl>
+               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 111, №
+                     <citedRange>25</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE"/>, <citedRange>579</citedRange></bibl>
             </listBibl>
          </div>
@@ -145,12 +159,28 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1"><rdg>Θεογ<unclear>ν</unclear> <note>- scripsi</note></rdg> <rdg source="bib:IOSPE" cert="low">θεὸς</rdg></app>
-               <app loc="1/2"><rdg>[κα]|τίσχει <note>- scripsi (scil. τύμβος vel sim.)</note></rdg> <rdg source="bib:IOSPE" cert="low">[ἀν]τίσχει</rdg></app>
-               <app loc="1/2"><note>fin.: vestigia.</note></app>
-               <app loc="3"><note> не исключаю также διαπ[- - -].</note></app>
-               <app loc="4"><note>fin.: после Ο вертикальная гаста</note> <rdg source="bib:IOSPE">[ἐν προ]μάχοι[σι]</rdg></app>
-               <app loc="5"><rdg source="bib:IOSPE">πατρί[δα] <note>vel sim.</note></rdg></app>
+               <app loc="1">
+                  <rdg>Θεογ<unclear>ν</unclear>
+                     <note>- scripsi</note></rdg>
+                  <rdg source="bib:IOSPE" cert="low">θεὸς</rdg>
+               </app>
+               <app loc="1/2">
+                  <rdg>[κα]|τίσχει <note>- scripsi (scil. τύμβος vel sim.)</note></rdg>
+                  <rdg source="bib:IOSPE" cert="low">[ἀν]τίσχει</rdg>
+               </app>
+               <app loc="1/2">
+                  <note>fin.: vestigia.</note>
+               </app>
+               <app loc="3">
+                  <note> не исключаю также διαπ[- - -].</note>
+               </app>
+               <app loc="4">
+                  <note>fin.: после Ο вертикальная гаста</note>
+                  <rdg source="bib:IOSPE">[ἐν προ]μάχοι[σι]</rdg>
+               </app>
+               <app loc="5">
+                  <rdg source="bib:IOSPE">πατρί[δα] <note>vel sim.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -160,7 +190,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В стк. 2 vacat, по-видимому, служит для обозначения окончания первого стиха дактиличекого гекзаметра.</p>
+            <p>В стк. 2 vacat, по-видимому, служит для обозначения окончания первого стиха
+               дактиличекого гекзаметра.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

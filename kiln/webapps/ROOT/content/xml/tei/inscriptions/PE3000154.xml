@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие с формулой заклятия</title>
-             <title xml:lang="en">Epitaph with a curse</title>
+            <title xml:lang="ru">Надгробие с формулой заклятия</title>
+            <title xml:lang="en">Epitaph with a curse</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился левый верхний угол. Камень пострадал от огня. Эпиграфическое поле ограничено широкой рельефной рамкой. 
-                              Тыльная сторона обработана суммарно. Сохранились остатки девяти строк надписи.</p>
+                           <p xml:lang="ru">Сохранился левый верхний угол. Камень пострадал от огня.
+                              Эпиграфическое поле ограничено широкой рельефной рамкой. Тыльная
+                              сторона обработана суммарно. Сохранились остатки девяти строк
+                              надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">27,0</height>
@@ -57,8 +61,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон, сигма, йота mutum, овальный омикрон в габарите строки, 
-                           пи с равными вертикалями и выходящей за их пределы горизонталью, умеренное апицирование, лигатуры.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, курсивные эпсилон,
+                           сигма, йота mutum, овальный омикрон в габарите строки, пи с равными
+                           вертикалями и выходящей за их пределы горизонталью, умеренное
+                           апицирование, лигатуры.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">1,4</height>
                      </handNote>
@@ -70,16 +76,20 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">В НА НЗХТ сведений нет. Найдена до 1881 г., возможно, в ходе раскопок Одесского археологического общества в 1879-1880 г. 
-                           (проводились в северо-восточном районе городища, около Восточной и Уваровской базилик).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">В НА НЗХТ сведений нет. Найдена до 1881 г.,
+                           возможно, в ходе раскопок Одесского археологического общества в 1879-1880
+                           г. (проводились в северо-восточном районе городища, около Восточной и
+                           Уваровской базилик).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -92,12 +102,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-19" who="CB">Corrected Leidenisation</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="KK">Leidenised</change>
@@ -119,7 +132,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Юргевич 1881а--><ptr target="bib:b0513"/>, 220, № <citedRange>2</citedRange> (многочисленные ошибки в чтении и дополнении надписи)</bibl>
+               <bibl><!--Юргевич 1881а--><ptr target="bib:b0513"/>, 220, №
+                     <citedRange>2</citedRange> (многочисленные ошибки в чтении и дополнении
+                  надписи)</bibl>
                <bibl><!--IOSPE I--><ptr target="bib:IOSPE"/>, <citedRange>212</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>451</citedRange></bibl>
             </listBibl>
@@ -148,16 +163,25 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><rdg source="bib:IOSPE2"/></app>
-               <app loc="2"><rdg source="bib:IOSPE">[οἱ - - -]</rdg></app>
-               <app loc="4"><rdg source="bib:b0785"><note>legit <!--Соломоник 1979--></note></rdg>
-                  <rdg source="bib:b0513 IOSPE">δησσαν [Κ]ατίωνος [- - -]</rdg></app>
-               <app loc="7"><rdg source="bib:IOSPE">μν[ημείῳ μήτε τὸ - - -  σῶ]</rdg></app>
+               <app>
+                  <rdg source="bib:IOSPE2"/>
+               </app>
+               <app loc="2">
+                  <rdg source="bib:IOSPE">[οἱ - - -]</rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:b0785"><note>legit <!--Соломоник 1979--></note></rdg>
+                  <rdg source="bib:b0513 IOSPE">δησσαν [Κ]ατίωνος [- - -]</rdg>
+               </app>
+               <app loc="7">
+                  <rdg source="bib:IOSPE">μν[ημείῳ μήτε τὸ - - - σῶ]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Согласно решению [Совета и Народного собрания ? ] уведомляют [---], (сын) Луция, и Арриан [---]д, (сын) Самбатиона, 
-               [---] не класть в мо[гилу никого другого], не вынимать [тело из могилы. Если кто-то] совершит [что-либо вопреки этому ---].</p>
+            <p>Согласно решению [Совета и Народного собрания ? ] уведомляют [---], (сын) Луция, и
+               Арриан [---]д, (сын) Самбатиона, [---] не класть в мо[гилу никого другого], не
+               вынимать [тело из могилы. Если кто-то] совершит [что-либо вопреки этому ---].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент женского надгробия</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент женского надгробия</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Тыльная сторона обтесана. На камне многочисленные следы известкового раствора. 
-                              Сохранились остатки трех строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Тыльная сторона обтесана. На
+                              камне многочисленные следы известкового раствора. Сохранились остатки
+                              трех строк надписи, вырезанной по предварительной разметке.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">11,0</height>
@@ -57,7 +61,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Крупные, глубоко вырезанные буквы, тета с незамкнутой поперечной линией, омикрон немного меньше остальных букв, ипсилон с перекрестием, апексы.</seg>
+                        <seg xml:lang="ru">Крупные, глубоко вырезанные буквы, тета с незамкнутой
+                           поперечной линией, омикрон немного меньше остальных букв, ипсилон с
+                           перекрестием, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,0</height>
                      </handNote>
@@ -69,15 +75,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1990 г. в северном районе городища (квадрат 10A, 9-я поперечная улица). Раскопки С.Г. Рыжова.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1990 г. в северном районе городища
+                           (квадрат 10A, 9-я поперечная улица). Раскопки С.Г. Рыжова.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -90,12 +99,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata</change>
@@ -135,8 +147,14 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="2"><rdg><note>e.g.:</note> [Ξάν]θου vel [Ζήθ]ου <note>(среди личных имен, засвидетельствованных в Херсонесе).</note></rdg></app>
-               <app loc="3"><rdg><note>e.g.:</note> [Δαμα]<unclear>τ</unclear>ρ[ίου] <note>vel</note> [Μη]<unclear>τ</unclear>ρ[οδώρου] <note>vel sim.</note></rdg></app>
+               <app loc="2">
+                  <rdg><note>e.g.:</note> [Ξάν]θου vel [Ζήθ]ου <note>(среди личных имен,
+                        засвидетельствованных в Херсонесе).</note></rdg>
+               </app>
+               <app loc="3">
+                  <rdg><note>e.g.:</note> [Δαμα]<unclear>τ</unclear>ρ[ίου] <note>vel</note>
+                        [Μη]<unclear>τ</unclear>ρ[οδώρου] <note>vel sim.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

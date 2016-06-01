@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент надгробия</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент надгробия</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,9 +35,11 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Обломана сверху. Тыльная сторона заглажена.</p>
                            <p xml:lang="en"/>
@@ -56,8 +59,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы неровные, вырезаны небрежно, альфа с ломаной поперечной линией, курсивная эпсилон с горизонталью не касающейся полукружия, 
-                           мю с расходящимися внешними гастами, отсутствие апицирования.</seg>
+                        <seg xml:lang="ru">Буквы неровные, вырезаны небрежно, альфа с ломаной
+                           поперечной линией, курсивная эпсилон с горизонталью не касающейся
+                           полукружия, мю с расходящимися внешними гастами, отсутствие
+                           апицирования.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,5</height>
                      </handNote>
@@ -69,15 +74,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена случайно М.И. Скубетовым в 1908 г. в южном районе херсонесского городища, в куче камней.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена случайно М.И. Скубетовым в 1908 г. в южном
+                           районе херсонесского городища, в куче камней.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -98,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-26" who="CB">Bibliography and app crit</change>
          <change when="2015-10-22" who="CB">Metadata tags</change>
@@ -119,7 +130,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1909b--><ptr target="bib:b0478"/>, 44, № <citedRange>5</citedRange></bibl>
+               <bibl><!--Латышев 1909b--><ptr target="bib:b0478"/>, 44, №
+                  <citedRange>5</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>502</citedRange></bibl>
             </listBibl>
          </div>
@@ -139,7 +151,9 @@
          <div type="apparatus">
             <listApp>
                <!--<app><note>IOSPE I2 502.</note></app>-->
-               <app loc="1"><rdg>[ὁ δεῖνα] <note>- edd.</note></rdg></app>
+               <app loc="1">
+                  <rdg>[ὁ δεῖνα] <note>- edd.</note></rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

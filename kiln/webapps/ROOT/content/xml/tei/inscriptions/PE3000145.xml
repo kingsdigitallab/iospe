@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Каллеаса и Гедитеи</title>
-             <title xml:lang="en">Epitaph of Kalleas and Hedytea</title>
+            <title xml:lang="ru">Надгробие Каллеаса и Гедитеи</title>
+            <title xml:lang="en">Epitaph of Kalleas and Hedytea</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,14 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранилась верхняя левая часть. Вверху в рельефе изображен фронтон с акротериями и розеткой в типмане. 
-                              В прямоугольном углублении остатки рельефного изображения сцены загробной трапезы: 
-                              рука мужчины, держащая венок над женской (?) головой (сильно повреждена). 
-                              На архитраве между фронтоном и углублением аккуратно глубокими буквами вырезана двухстрочная надпись.</p>
+                           <p xml:lang="ru">Сохранилась верхняя левая часть. Вверху в рельефе
+                              изображен фронтон с акротериями и розеткой в типмане. В прямоугольном
+                              углублении остатки рельефного изображения сцены загробной трапезы:
+                              рука мужчины, держащая венок над женской (?) головой (сильно
+                              повреждена). На архитраве между фронтоном и углублением аккуратно
+                              глубокими буквами вырезана двухстрочная надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">29,0</height>
@@ -59,8 +63,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой перекладиной, верхняя и нижняя гасты эпсилон значительно выступают влево за вертикаль, 
-                           омикрон меньше остальных букв, сигма с параллельными верхней и нижней линиями, крупные апексы и утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с прямой перекладиной, верхняя и нижняя гасты
+                           эпсилон значительно выступают влево за вертикаль, омикрон меньше
+                           остальных букв, сигма с параллельными верхней и нижней линиями, крупные
+                           апексы и утолщения на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">1,5</height>
                      </handNote>
@@ -72,16 +78,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="medium">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="medium">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес) (?).</placeName>
-                        <rs type="circumstances">Памятник найден не позднее 1872 г., когда он был перевезен в Москву. Обстоятельства находки неизвестны. 
-                           До 1872 г. хранился в Херсонесе.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес) (?).</placeName>
+                        <rs type="circumstances">Памятник найден не позднее 1872 г., когда он был
+                           перевезен в Москву. Обстоятельства находки неизвестны. До 1872 г.
+                           хранился в Херсонесе.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -102,14 +111,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
          <change when="2015-09-29" who="CB">Bibliography</change>
          <change when="2015-08-21" who="CB">App Crit</change>
          <change when="2015-06-25" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-13" who="AV">programmatically tagging Greek words from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -125,10 +138,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE--><ptr target="IOSPE"/> <citedRange>I 216</citedRange></bibl>
-               <bibl><!--Латышев 1892--><ptr target="bib:b0125"/>, <citedRange>366</citedRange></bibl>
-               <bibl><!--IOSPE--><ptr target="IOSPE/"/> <citedRange>IV p. 281</citedRange>, ad № 216</bibl>
-               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/> <citedRange>454</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="IOSPE"/>
+                  <citedRange>I 216</citedRange></bibl>
+               <bibl><!--Латышев 1892--><ptr target="bib:b0125"/>,
+                  <citedRange>366</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="IOSPE/"/>
+                  <citedRange>IV p. 281</citedRange>, ad № 216</bibl>
+               <bibl><!--IOSPE I2--><ptr target="IOSPE2"/>
+                  <citedRange>454</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -147,8 +164,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><rdg source="bib:b0125"><note>Rest.</note></rdg></app>
-               <app loc="1"><note>патронимик Γαίου с обеих сторон выделен знаками-разделителями.</note></app>
+               <app>
+                  <rdg source="bib:b0125"><note>Rest.</note></rdg>
+               </app>
+               <app loc="1">
+                  <note>патронимик Γαίου с обеих сторон выделен знаками-разделителями.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

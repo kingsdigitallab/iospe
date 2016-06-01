@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Даматрия</title>
-             <title xml:lang="en">Epitaph of Damatrios</title>
+            <title xml:lang="en">Epitaph of Damatrios</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела, украшенная карнизом (сбит при вторичном использовании). Сохранилась верхняя часть.</p>
+                           <p xml:lang="ru">Стела, украшенная карнизом (сбит при вторичном
+                              использовании). Сохранилась верхняя часть.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">57,0</height>
@@ -49,15 +53,19 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru">Под карнизом по предварительной разметке вырезана и обведена красной краской двухстрочная надпись.</seg>
+                           <seg xml:lang="ru">Под карнизом по предварительной разметке вырезана и
+                              обведена красной краской двухстрочная надпись.</seg>
                            <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">мю имеет приближающиеся к параллельным боковые линии, правая вертикаль ню чуть приподнята, круглые буквы (тета и омикрон) 
-                           немного меньше остальных букв, линии сигма чуть изогнуты, широко расходящиеся наклонные линии ипсилон, слабые утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">мю имеет приближающиеся к параллельным боковые линии,
+                           правая вертикаль ню чуть приподнята, круглые буквы (тета и омикрон)
+                           немного меньше остальных букв, линии сигма чуть изогнуты, широко
+                           расходящиеся наклонные линии ипсилон, слабые утолщения на концах линий
+                           букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,6</height>
                      </handNote>
@@ -76,9 +84,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
-                           Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII (башня Зенона) оборонительных стен. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
          <change when="2015-08-24" who="CB">App crit check</change>
@@ -117,9 +130,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 66, № <citedRange>21</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 66, №
+                     <citedRange>21</citedRange></bibl>
                <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>, <citedRange>155</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 435, № <citedRange>35</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 435, №
+                     <citedRange>35</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -137,7 +152,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -147,8 +164,14 @@
             <p>Damatrios, (son of) Euanthes.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Весьма вероятно, что изготовленные в той же мастерской надгробия Коттихи (№ neph156) и Артемидора (neph157) принадлежат жене и сыну упомянутого в этой надписи Даматрия (подробнее см. Perlman 2011, 390). Об атрибуируемых этой мастерской («the Damatrios workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл.</p>
-            <p>Теофорное личное имя Δημήτριος в дорийской огласовке многократно встречается в Херсонесе (форма койне Δημήτριος засвидетельствована дважды на памятниках, херсонесское происхождение которых вызывает сомнения; ср. LGPN IV). ЛИ имя Εὐάνθης в Херсонесе больше не встречается.</p>
+            <p>Весьма вероятно, что изготовленные в той же мастерской надгробия Коттихи (№ neph156)
+               и Артемидора (neph157) принадлежат жене и сыну упомянутого в этой надписи Даматрия
+               (подробнее см. Perlman 2011, 390). Об атрибуируемых этой мастерской («the Damatrios
+               workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл.</p>
+            <p>Теофорное личное имя Δημήτριος в дорийской огласовке многократно встречается в
+               Херсонесе (форма койне Δημήτριος засвидетельствована дважды на памятниках,
+               херсонесское происхождение которых вызывает сомнения; ср. LGPN IV). ЛИ имя Εὐάνθης в
+               Херсонесе больше не встречается.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

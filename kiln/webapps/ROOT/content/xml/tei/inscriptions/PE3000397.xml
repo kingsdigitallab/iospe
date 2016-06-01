@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Матродор[---]</title>
-             <title xml:lang="en">Epitaph of Matrodor[---]</title>
+            <title xml:lang="ru">Надгробие Матродор[---]</title>
+            <title xml:lang="en">Epitaph of Matrodor[---]</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3" cert="low">Стела (?)</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3" cert="low">Стела
+                              (?)</objectType>
                            <objectType xml:lang="en">Stele (?)</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Квадр, изготовленный, вероятно, из стелы. 
-                              Под верхним краем сохранились остатки едва заметной двухстрочной надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="ru">Квадр, изготовленный, вероятно, из стелы. Под верхним
+                              краем сохранились остатки едва заметной двухстрочной надписи,
+                              вырезанной по предварительной разметке.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">53,5</height>
@@ -57,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Согласно ed. pr. шрифт надписи позволяет датировать ее скорее всего IV в. до н.э.</seg>
+                        <seg xml:lang="ru">Согласно ed. pr. шрифт надписи позволяет датировать ее
+                           скорее всего IV в. до н.э.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">3,5</height>
                      </handNote>
@@ -69,15 +74,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0400" notAfter="-0301" cert="low" evidence="палеография" precision="low">
+                     <origDate notBefore="-0400" notAfter="-0301" cert="low" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">IV в. до н.э.</seg>
                         <seg xml:lang="en">IVth century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1960 или 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1960 или 1961 г. в юго-восточном районе
+                           Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен.
                            Раскопки С.Ф. Стржелецкого.</rs>
                         <rs type="context"/>
                      </seg>
@@ -92,14 +100,18 @@
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi.  В настоящее время местонахождение камня неизвестно.</seg>
+                     <seg xml:lang="ru">Non vidi.  В настоящее время местонахождение камня
+                        неизвестно.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-18" who="CB">Adding biblio and app crit tags</change>
          <change when="2015-11-03" who="CB">Adding origDate tag</change>
          <change when="2015-09-24" who="CB">Biblio tagging</change>
@@ -120,8 +132,11 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl> 
-               <bibl><!--Соломоник 1978--><ptr target="bib:b0775"/>, 68, № <citedRange>3</citedRange></bibl> <bibl> (<!--SEG--><ptr target="SEG"/> <citedRange>28, 635</citedRange>)</bibl>
+            <listBibl>
+               <bibl><!--Соломоник 1978--><ptr target="bib:b0775"/>, 68, №
+                     <citedRange>3</citedRange></bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/>
+                  <citedRange>28, 635</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -138,8 +153,13 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Дополнения Соломоник.</note></app>
-               <app loc="1"><rdg source="bib:b0775"> Ματρο<unclear>δώρ</unclear>[α ---] <note>vel</note> Ματρό<unclear>δωρ</unclear>[ος]</rdg></app>
+               <app>
+                  <note>Дополнения Соломоник.</note>
+               </app>
+               <app loc="1">
+                  <rdg source="bib:b0775"> Ματρο<unclear>δώρ</unclear>[α ---] <note>vel</note>
+                        Ματρό<unclear>δωρ</unclear>[ος]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

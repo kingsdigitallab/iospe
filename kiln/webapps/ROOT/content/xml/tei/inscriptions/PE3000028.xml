@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Артемидора</title>
-             <title xml:lang="en">Epitaph of Artemidoros</title>
+            <title xml:lang="en">Epitaph of Artemidoros</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела, украшенная карнизом (частично сбит). Состоит из трех фрагментов. Нижняя часть не сохранилась. 
-                              Поврежден левый верхний угол.</p>
+                           <p xml:lang="ru">Стела, украшенная карнизом (частично сбит). Состоит из
+                              трех фрагментов. Нижняя часть не сохранилась. Поврежден левый верхний
+                              угол.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">169,5</height>
@@ -50,16 +54,20 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru">Под карнизом по предварительной разметке вырезана и обведена красной краской двухстрочная надпись.</seg>
+                           <seg xml:lang="ru">Под карнизом по предварительной разметке вырезана и
+                              обведена красной краской двухстрочная надпись.</seg>
                            <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">мю имеет сближенные, почти параллельные боковые линии, омикрон и омега немного меньше остальных букв, 
-                           сигма с наклонно поставленными верхней и нижней линиями, широко расходящиеся наклонные линии ипсилон, слабые утолщения на концах букв.</seg>
-                        <seg xml:lang="en">Omicron and omega slighly smaller than the rest of the letters</seg>
+                        <seg xml:lang="ru">мю имеет сближенные, почти параллельные боковые линии,
+                           омикрон и омега немного меньше остальных букв, сигма с наклонно
+                           поставленными верхней и нижней линиями, широко расходящиеся наклонные
+                           линии ипсилон, слабые утолщения на концах букв.</seg>
+                        <seg xml:lang="en">Omicron and omega slighly smaller than the rest of the
+                           letters</seg>
                         <height unit="cm">3,5</height>
                      </handNote>
                   </handDesc>
@@ -77,9 +85,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) 
-                           оборонительных стен. Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1961 г. в юго-восточном районе Херсонеса,
+                           в кладке ядра башни XVII (башня Зенона) оборонительных стен. Раскопки
+                           С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Tagging app crit</change>
@@ -119,9 +132,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 67, № <citedRange>23</citedRange></bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 67, №
+                     <citedRange>23</citedRange></bibl>
                <bibl><!--НЭПХ--><ptr target="bib:НЭПХ"/>, II, <citedRange>157</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 436, № <citedRange>37</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 436, №
+                     <citedRange>37</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -149,15 +164,18 @@
             <p>Arte[midoros], (son of) Da[matrios].</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>По наблюдению Posamentir 2011, 46, в средней части стелы имелось рельефное изображение меча.</p>
-            <p>Весьма вероятно, что изготовленные в той же мастерской надгробия Даматрия (№ neph155) и Коттихи (№ neph156, найдено в том же самом ряду кладки башни XVII, 
-               через один блок от стелы Артемидора) принадлежат родителям упомянутого в этой надписи Артемидора (НЭПХ II, с. 160; Perlman 2011, 390). 
-               Об атрибуируемых этой мастерской («the Damatrios workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл. 
+            <p>По наблюдению Posamentir 2011, 46, в средней части стелы имелось рельефное
+               изображение меча.</p>
+            <p>Весьма вероятно, что изготовленные в той же мастерской надгробия Даматрия (№ neph155)
+               и Коттихи (№ neph156, найдено в том же самом ряду кладки башни XVII, через один блок
+               от стелы Артемидора) принадлежат родителям упомянутого в этой надписи Артемидора
+               (НЭПХ II, с. 160; Perlman 2011, 390). Об атрибуируемых этой мастерской («the
+               Damatrios workshop») стелах см. Posamentir 2006, 39 сл.; Posamentir 2011, 182 слл.
                Теофорное ЛИ Ἀρτεμίδωρος многократно засвидетельствовано в Херсонесе (LGPN IV).</p>
             <p>Восстановление Соломоник 1969 (НЭПХ).</p>
-            <p>2. Под надписью видны следы букв, соскобленных резчиком. 
-               По предположению Perlman 2011 первоначально патронимик был вырезан с пропуском одной буквы, 
-               что заставило резчика соскоблить надпись и вырезать ее повторно.</p>
+            <p>2. Под надписью видны следы букв, соскобленных резчиком. По предположению Perlman
+               2011 первоначально патронимик был вырезан с пропуском одной буквы, что заставило
+               резчика соскоблить надпись и вырезать ее повторно.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

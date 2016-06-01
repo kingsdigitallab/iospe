@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Посвящение алтаря Немесиде</title>
-             <title xml:lang="en">Dedication of altar to Nemesis</title>
+            <title xml:lang="ru">Посвящение алтаря Немесиде</title>
+            <title xml:lang="en">Dedication of altar to Nemesis</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,15 +35,19 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon37">Алтарь.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon37"
+                              >Алтарь.</objectType>
                            <objectType xml:lang="en">Altar.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Небольшой прямоугольный алтарь, сохранился почти полностью (сколот левый нижний угол, 
-                              отбитый левый верхний угол найден вместе с алтарем и присоединен в контакте). 
-                              Цоколь и карниз профилированы со всех сторон за исключением тыльной. На верхней плоскости вырезано углубление прямоугольной формы 
-                              (размеры: 3,6 х 1,2, глубина 2,4 см). В верхней части следы горения (вероятно, на алтаре совершались воскурения). 
-                              На лицевой стороне тулова надпись в пять строк.</p>
+                           <p xml:lang="ru">Небольшой прямоугольный алтарь, сохранился почти
+                              полностью (сколот левый нижний угол, отбитый левый верхний угол найден
+                              вместе с алтарем и присоединен в контакте). Цоколь и карниз
+                              профилированы со всех сторон за исключением тыльной. На верхней
+                              плоскости вырезано углубление прямоугольной формы (размеры: 3,6 х 1,2,
+                              глубина 2,4 см). В верхней части следы горения (вероятно, на алтаре
+                              совершались воскурения). На лицевой стороне тулова надпись в пять
+                              строк.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">19,5</height>
@@ -60,7 +65,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы разной величины, курсивные эпсилон, мю, сигма; тета с замкнутой поперечной гастой, йота subscriptum, штрихи и апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Буквы разной величины, курсивные эпсилон, мю, сигма; тета
+                           с замкнутой поперечной гастой, йота subscriptum, штрихи и апексы на
+                           концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">0,7–1.</height>
                      </handNote>
@@ -72,15 +79,19 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0233" evidence="палеография орфография" precision="low">
+                     <origDate notBefore="0151" notAfter="0233" evidence="палеография орфография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. II – нач. III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II - early IIIrd centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найден в 1964 г. в южном районе Херсонеса, на участке античного театра, в слое IV в. н.э. Раскопки О.И. Домбровского.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найден в 1964 г. в южном районе Херсонеса, на
+                           участке античного театра, в слое IV в. н.э. Раскопки О.И.
+                           Домбровского.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -97,14 +108,18 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Tagging app crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-26" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-15" who="AV">programmatically tagging Greek names from Word docs</change>
+         <change when="2015-05-15" who="AV">programmatically tagging Greek names from Word
+            docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
@@ -120,13 +135,17 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ--><ptr target="bib:НЭПХ"/> <citedRange>II 126</citedRange></bibl> <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--НЭПХ--><ptr target="bib:НЭПХ"/>
+                  <citedRange>II 126</citedRange></bibl>
+               <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974,
+                     380</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Соломоник 1967a--><ptr target="bib:b0502"/>, 69 (в прим. 1 упомянута сданная в печать, но так и не вышедшая публикация надписи), 74</bibl>
+               <bibl><!--Соломоник 1967a--><ptr target="bib:b0502"/>, 69 (в прим. 1 упомянута
+                  сданная в печать, но так и не вышедшая публикация надписи), 74</bibl>
                <bibl><!--АСХ--><ptr target="bib:b0523"/> 170, № 545</bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 53, № 47</bibl>
             </listBibl>
@@ -142,7 +161,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -152,12 +173,21 @@
             <p>Good fortune. Basilides, (son of Kalous), (dedicated) to Goddess Nemesis.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>На датировку не ранее середины II в. до н.э. указывает использование форм койне вместо доризмов, характерных для более раннего времени.</p>
-            <p>	Поблизости от места находки этого памятника в 1957 г. был найден другой небольшой алтарь с латинским посвящением Немесиде (ЛНХТ 10). 
-               Обнаружение обоих посвящений Немесиде в районе театра позволяет уточнить характер культа Немесиды в Херсонесе. Речь идет о божестве, 
-               связанном с агонами, в частности – с гладиаторскими боями (см. подробнее Robert, Gladiateurs, 64 и № 167, а также рельеф с надписью № ipe483).</p>
-            <p>	Личное имя Βασιλείδης хорошо известно в Северном Причерноморье. В Херсонесе оно, возможно, также засвидетельствовано на граффито IV в. н.э. 
-               (ВДИ. 1998. № 1, 212; ср. LGPN IV). Антропоним Καλοῦς, неоднократно встречающийся на Боспоре начиная приблизительно с I в. до н.э., в Херсонесе встречается еще один раз в римское время (№ inedAnt/тетр1). Как и другие личные имена с формантом -οῦς, это имя имеет негреческое происхождение (иранское или фракийское (?); ср. Masson 1957, 165); Обычным окончанием генетива для этих имен является -οῦ (Доватур 1965, 815, § 7.3; подробнее об их флексии см. Тохтасьев 2009, 510; 2011, 521).</p>
+            <p>На датировку не ранее середины II в. до н.э. указывает использование форм койне
+               вместо доризмов, характерных для более раннего времени.</p>
+            <p> Поблизости от места находки этого памятника в 1957 г. был найден другой небольшой
+               алтарь с латинским посвящением Немесиде (ЛНХТ 10). Обнаружение обоих посвящений
+               Немесиде в районе театра позволяет уточнить характер культа Немесиды в Херсонесе.
+               Речь идет о божестве, связанном с агонами, в частности – с гладиаторскими боями (см.
+               подробнее Robert, Gladiateurs, 64 и № 167, а также рельеф с надписью № ipe483).</p>
+            <p> Личное имя Βασιλείδης хорошо известно в Северном Причерноморье. В Херсонесе оно,
+               возможно, также засвидетельствовано на граффито IV в. н.э. (ВДИ. 1998. № 1, 212; ср.
+               LGPN IV). Антропоним Καλοῦς, неоднократно встречающийся на Боспоре начиная
+               приблизительно с I в. до н.э., в Херсонесе встречается еще один раз в римское время
+               (№ inedAnt/тетр1). Как и другие личные имена с формантом -οῦς, это имя имеет
+               негреческое происхождение (иранское или фракийское (?); ср. Masson 1957, 165);
+               Обычным окончанием генетива для этих имен является -οῦ (Доватур 1965, 815, § 7.3;
+               подробнее об их флексии см. Тохтасьев 2009, 510; 2011, 521).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Посвящение Формиона</title>
-             <title xml:lang="en">Dedication of Phormion</title>
+            <title xml:lang="ru">Посвящение Формиона</title>
+            <title xml:lang="en">Dedication of Phormion</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,13 +35,17 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12"
+                              >Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">На верхней плоскости остатки трех углублений различной формы с обломанными краями (диаметр ок. 5-7,5 см, глубина ок. 4-9 см) 
-                              с остатками свинцовой заливки. На нижней поверхности круглое отверстие. Имеются следы неоднократного вторичного использования. 
-                              Частично сохранилась двухстрочная надпись (в середине повреждена выбоиной, нижняя строка почти целиком уничтожена желобком карниза, 
+                           <p xml:lang="ru">На верхней плоскости остатки трех углублений различной
+                              формы с обломанными краями (диаметр ок. 5-7,5 см, глубина ок. 4-9 см)
+                              с остатками свинцовой заливки. На нижней поверхности круглое
+                              отверстие. Имеются следы неоднократного вторичного использования.
+                              Частично сохранилась двухстрочная надпись (в середине повреждена
+                              выбоиной, нижняя строка почти целиком уничтожена желобком карниза,
                               вырезанным при вторичном использования камня).</p>
                            <p xml:lang="en"/>
                            <dimensions>
@@ -59,10 +64,13 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Слегка изогнутые линии альфа, мю с наклонными боковыми линиями и короткими внутренними гастами, 
-                           вертикальные гасты ню имеют почти одинаковую длину, сигма с расходящимися верхней и нижней гастами, 
-                           омикрон и омега почти того же размера, что и остальные буквы, небольшие утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">mu with slanting outer hastae, omicron and omega are almost the same size as the rest of the letters</seg>
+                        <seg xml:lang="ru">Слегка изогнутые линии альфа, мю с наклонными боковыми
+                           линиями и короткими внутренними гастами, вертикальные гасты ню имеют
+                           почти одинаковую длину, сигма с расходящимися верхней и нижней гастами,
+                           омикрон и омега почти того же размера, что и остальные буквы, небольшие
+                           утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">mu with slanting outer hastae, omicron and omega are
+                           almost the same size as the rest of the letters</seg>
                         <height unit="cm">1,7</height>
                      </handNote>
                   </handDesc>
@@ -73,21 +81,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1890 г. в центральной части городища, на площади около собора св. Владимира (раскоп I). 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 38; д. 19, л. 5, № 38).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1890 г. в центральной части городища, на
+                           площади около собора св. Владимира (раскоп I). Раскопки К.К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 38; д. 19, л. 5, № 38).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -99,13 +111,17 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-26" who="CB">Tagging metadata</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -122,8 +138,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 11, № <citedRange>6</citedRange></bibl> <bibl> (<!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 88</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>415</citedRange>)</bibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 11, №
+                  <citedRange>6</citedRange></bibl>
+               <bibl> (<!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV 88</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>415</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -146,8 +166,9 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <rdg source="bib:b0524">Ἤριος <note>ed. pr., corr.</note></rdg> 
-                  <note>ἐὼγ = ἐὼν per assimilationem ἐ[ών ---].</note></app>
+                  <rdg source="bib:b0524">Ἤριος <note>ed. pr., corr.</note></rdg>
+                  <note>ἐὼγ = ἐὼν per assimilationem ἐ[ών ---].</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -157,8 +178,14 @@
             <p>Phormion, (son of) Herios, serving as priest and king, [---] dedicated.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Ed. pr. предположил, ссылаясь на место находки постамента, что постамент со статуей были посвящены Деве. Эта гипотеза подтверждается тем фактом, что магистратура царя-эпонима согласно эпиграфическим данным была несомненно связана с культом богини-покровительницы Херсонеса (ср. № ipe410, 414, ined).</p>
-            <p>	Личное имя Ἦρις (в индексе IOSPE I2 в качестве номинатива указана форма Ἤριος) интерпретировано Л. Робером как диминутив теофорного ЛИ группы Ἥρα (Firatli–Robert 164), возможно, мегарского происхождения. Засвидетельствовано в Византии, Хакедоне, на Делосе (ср. Masson 1994, 140 = OGS III 209).</p>
+            <p>Ed. pr. предположил, ссылаясь на место находки постамента, что постамент со статуей
+               были посвящены Деве. Эта гипотеза подтверждается тем фактом, что магистратура
+               царя-эпонима согласно эпиграфическим данным была несомненно связана с культом
+               богини-покровительницы Херсонеса (ср. № ipe410, 414, ined).</p>
+            <p> Личное имя Ἦρις (в индексе IOSPE I2 в качестве номинатива указана форма Ἤριος)
+               интерпретировано Л. Робером как диминутив теофорного ЛИ группы Ἥρα (Firatli–Robert
+               164), возможно, мегарского происхождения. Засвидетельствовано в Византии, Хакедоне,
+               на Делосе (ср. Masson 1994, 140 = OGS III 209).</p>
             <p>III в. до н.э. (скорее всего 1-я пол.).</p>
          </div>
          <div type="commentary" xml:lang="en">

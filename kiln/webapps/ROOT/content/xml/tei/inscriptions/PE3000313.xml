@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,14 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon41">Весовая гиря (?).</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon41">Весовая гиря
+                              (?).</objectType>
                            <objectType xml:lang="en">Weight (?).</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m11">Диорит.</material>
                            <material xml:lang="en">Diorite</material>
-                           <p xml:lang="ru">Сохранилась полностью, содержит однострочную надпись.</p>
+                           <p xml:lang="ru">Сохранилась полностью, содержит однострочную
+                              надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                         <dim type="diameter">19,0</dim>
+                              <dim type="diameter">19,0</dim>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -73,7 +76,8 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес) (?).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес) (?).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -88,15 +92,19 @@
                      <seg xml:lang="en">Previously Sevastopol.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi. В настоящее время камень считается утерянным.</seg>
+                     <seg xml:lang="ru">Non vidi. В настоящее время камень считается
+                        утерянным.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-13" who="CB">Added origDate</change>
          <change when="2015-11-06" who="KK">Leidenised</change>
          <change when="2015-11-02" who="CB">biblio and app crit</change>
@@ -117,8 +125,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 184</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>653</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV 184</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>653</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -134,7 +144,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Над ΔΠ в середине горизонтальная черта - edd.</note></app>
+               <app>
+                  <note>Над ΔΠ в середине горизонтальная черта - edd.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -144,7 +156,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Надпись имеет, по-видимому, цифровое значение 26. «Litterae ... videntur lapidis pondus significare» (IOSPE)</p>
+            <p>Надпись имеет, по-видимому, цифровое значение 26. «Litterae ... videntur lapidis
+               pondus significare» (IOSPE)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

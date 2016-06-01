@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Дионисия</title>
-             <title xml:lang="en">Epitaph of Dionysios</title>
+            <title xml:lang="ru">Надгробие Дионисия</title>
+            <title xml:lang="en">Epitaph of Dionysios</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранилась полностью за исключением правого верхнего угла. На плитке вырезана двухстрочная надпись. 
-                              Лицевая сторона повреждена выбоинами. В момент обнаружения была вставлена в надгробную стелу, впоследствии утерянную.</p>
+                           <p xml:lang="ru">Сохранилась полностью за исключением правого верхнего
+                              угла. На плитке вырезана двухстрочная надпись. Лицевая сторона
+                              повреждена выбоинами. В момент обнаружения была вставлена в надгробную
+                              стелу, впоследствии утерянную.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">8,5</height>
@@ -57,9 +61,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Правая вертикаль ню слегка приподнята, омикрон меньше остальных букв, 
-                           сигма с наклонными верхней и нижней гастами, изогнутые линии некоторых букв, небольшие утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Nu with short right vertical, omicron smaller than other letters, four-bar sigma with splayed bars</seg>
+                        <seg xml:lang="ru">Правая вертикаль ню слегка приподнята, омикрон меньше
+                           остальных букв, сигма с наклонными верхней и нижней гастами, изогнутые
+                           линии некоторых букв, небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Nu with short right vertical, omicron smaller than other
+                           letters, four-bar sigma with splayed bars</seg>
                         <height unit="cm">1,6</height>
                      </handNote>
                   </handDesc>
@@ -77,8 +83,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1911 г. на участке некрополя у Карантинной бухты, в насыпи около могилы № 46. Раскопки Р.Х. Лепера (НА НЗХТ, д. 104, л. 37, № 2867).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1911 г. на участке некрополя у
+                           Карантинной бухты, в насыпи около могилы № 46. Раскопки Р.Х. Лепера (НА
+                           НЗХТ, д. 104, л. 37, № 2867).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -95,7 +104,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
@@ -122,7 +134,6 @@
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -132,7 +143,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -142,8 +155,12 @@
             <p>Dionysios, (son of) Kalliadas.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Оба ЛИ имеют неоднократно встречаются в Херсонесе. Следует отметить дорийскую форму gen. sg. патронимика.</p>
-            <p>В силу сходства имен и патронимиков нельзя исключать возможность родственных связей между Дионисием, сыном Каллиада, этой надписи и херсонесским астиномом Каллиадом, сыном Дионисия, чья деятельность, вероятно, датируется ок. рубежа III/II в. до н.э. (Stolba 2005, 170; 230-е гг. до н.э. согласно Кац 1994, 100, № 65).</p>
+            <p>Оба ЛИ имеют неоднократно встречаются в Херсонесе. Следует отметить дорийскую форму
+               gen. sg. патронимика.</p>
+            <p>В силу сходства имен и патронимиков нельзя исключать возможность родственных связей
+               между Дионисием, сыном Каллиада, этой надписи и херсонесским астиномом Каллиадом,
+               сыном Дионисия, чья деятельность, вероятно, датируется ок. рубежа III/II в. до н.э.
+               (Stolba 2005, 170; 230-е гг. до н.э. согласно Кац 1994, 100, № 65).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

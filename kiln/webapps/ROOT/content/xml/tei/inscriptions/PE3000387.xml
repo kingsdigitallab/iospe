@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент посвящения Деметре</title>
-             <title xml:lang="en">Dedication to Demeter</title>
+            <title xml:lang="ru">Фрагмент посвящения Деметре</title>
+            <title xml:lang="en">Dedication to Demeter</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -16,7 +17,8 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Государственный музей изобразительных искусств им. Пушкина</repository>
+                     <repository>Государственный музей изобразительных искусств им.
+                        Пушкина</repository>
                      <idno>724</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
@@ -34,12 +36,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon37">Небольшой алтарь (?).</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon37">Небольшой
+                              алтарь (?).</objectType>
                            <objectType xml:lang="en">Small altar.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранились верхняя, нижняя и две боковых грани. Поверхности тщательно обработаны. На верхней плоскости небольшое углубление.
-                              На боковых гранях частично сохранилась надпись.</p>
+                           <p xml:lang="ru">Сохранились верхняя, нижняя и две боковых грани.
+                              Поверхности тщательно обработаны. На верхней плоскости небольшое
+                              углубление. На боковых гранях частично сохранилась надпись.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">5,0</height>
@@ -57,7 +61,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Буквы нанесены по заранее проведенным линиям. Средняя горизонталь эпсилон укорочена, мю с расходящимися боковыми гастами. 
+                        <seg xml:lang="ru">Буквы нанесены по заранее проведенным линиям. Средняя
+                           горизонталь эпсилон укорочена, мю с расходящимися боковыми гастами.
                            Утолщения и черточки на концах букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,5</height>
@@ -70,16 +75,19 @@
                         <seg xml:lang="ru">Неаполь Скифский.</seg>
                         <seg xml:lang="en">Neapolis Scythica.</seg>
                      </origPlace>
-                     <origDate notBefore="-0200" notAfter="-0101" evidence="палеография" precision="low">
+                     <origDate notBefore="-0200" notAfter="-0101" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. до н.э.</seg>
                         <seg xml:lang="en">IInd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot">Керменчик (юго-восточная часть совр. Симферополя). Обстоятельства находки: 
-                           Обнаружен в ходе раскопок 1949 г. в южной части городища, в районе южной оборонительной стены, к северу от стены около общественного 
-                           сооружения эллинистического времени.</placeName>
+                        <placeName type="ancientFindspot">Керменчик (юго-восточная часть совр.
+                           Симферополя). Обстоятельства находки: Обнаружен в ходе раскопок 1949 г. в
+                           южной части городища, в районе южной оборонительной стены, к северу от
+                           стены около общественного сооружения эллинистического
+                           времени.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -97,7 +105,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-02" who="CB">Metadata and app crit</change>
@@ -130,8 +141,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1958--><ptr target="bib:b0498"/>, 310, № <citedRange>2</citedRange></bibl> 
-               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/> , 52, № <citedRange>19</citedRange></bibl>
+               <bibl><!--Соломоник 1958--><ptr target="bib:b0498"/>, 310, №
+                     <citedRange>2</citedRange></bibl>
+               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/> , 52, №
+                  <citedRange>19</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -148,8 +161,12 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Legit Соломоник 1958, которая не исключает, что надпись располагалась на всех четырех гранях памятника. В этом случае, 
-                  по мнению ed. pr., возможны более полные варианты дополнения: [Δή]μητρι Εὐμέ[νης τοῦ δ. ἀνέθηκεν] или Εὐμέ[νης τοῦ δ. Ὀλβιοπολίτης (?) [Δή]μητρι.</note></app>
+               <app>
+                  <note>Legit Соломоник 1958, которая не исключает, что надпись располагалась на
+                     всех четырех гранях памятника. В этом случае, по мнению ed. pr., возможны более
+                     полные варианты дополнения: [Δή]μητρι Εὐμέ[νης τοῦ δ. ἀνέθηκεν] или Εὐμέ[νης
+                     τοῦ δ. Ὀλβιοπολίτης (?) [Δή]μητρι.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -159,11 +176,13 @@
             <p>Eumenes (dedicated) to Demeter.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Надпись несомненно является посвящением, хотя характер самого памятника не поддается точному определению. 
-               Возможно, это миниатюрный алтарь (ср. Зайцев 2003, 52) или маленький постамент (Соломоник 1958, 310). 
-               Не исключено, что дедикант был ольвиополитом, как и Посидей, сын Посидея, автор других посвящений, найденных 
-               в «Неаполе Скифском» (Виноградов 1989, 246, прим.74). Во всяком случае на территории Северного Причерноморья личное 
-               имя Εὐμένης зафиксировано пока только в эллинистической Ольвии (см. LGPN IV, s.v.).</p>
+            <p>Надпись несомненно является посвящением, хотя характер самого памятника не поддается
+               точному определению. Возможно, это миниатюрный алтарь (ср. Зайцев 2003, 52) или
+               маленький постамент (Соломоник 1958, 310). Не исключено, что дедикант был
+               ольвиополитом, как и Посидей, сын Посидея, автор других посвящений, найденных в
+               «Неаполе Скифском» (Виноградов 1989, 246, прим.74). Во всяком случае на территории
+               Северного Причерноморья личное имя Εὐμένης зафиксировано пока только в
+               эллинистической Ольвии (см. LGPN IV, s.v.).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

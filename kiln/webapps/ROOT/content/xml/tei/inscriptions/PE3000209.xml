@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Декрет</title>
-             <title xml:lang="en">Decree</title>
+            <title xml:lang="ru">Декрет</title>
+            <title xml:lang="en">Decree</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,7 +35,8 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -56,9 +58,11 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой перекладиной, каппа с короткими наклонными, вертикали ню почти одинаковой длины, гасты мю слегка наклонены, 
-                           пи с перекладиной, выступающей за  укороченную правую боковую вертикаль, горизонтали сигма то слегка расходятся, 
-                           то параллельны, утолщения и черточки на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа с прямой перекладиной, каппа с короткими
+                           наклонными, вертикали ню почти одинаковой длины, гасты мю слегка
+                           наклонены, пи с перекладиной, выступающей за укороченную правую боковую
+                           вертикаль, горизонтали сигма то слегка расходятся, то параллельны,
+                           утолщения и черточки на концах линий букв.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar</seg>
                         <height unit="cm">1,0</height>
                      </handNote>
@@ -70,16 +74,20 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0233" notAfter="-0251" evidence="палеография" precision="low">
+                     <origDate notBefore="-0233" notAfter="-0251" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">Кон. III – 1-я пол. II в. до н.э.</seg>
                         <seg xml:lang="en">Late III - 1st half of IInd centuries B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1901 г. в северо-восточном районе у правого нефа Уваровской базилики (№ 23). 
-                           Раскопки К. К. Косцюшко-Валюжинича (НА НЗХТ, д. 30, л. 5, № 215; д. 10, эст. № 215).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1901 г. в северо-восточном районе у
+                           правого нефа Уваровской базилики (№ 23). Раскопки К. К.
+                           Косцюшко-Валюжинича (НА НЗХТ, д. 30, л. 5, № 215; д. 10, эст. №
+                           215).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,7 +104,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-27" who="CB">correction to app crit</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
@@ -121,14 +132,18 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1902--> <ptr target="bib:b0142"/>, 21, № <citedRange>1</citedRange></bibl>
-               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>342</citedRange></bibl>
+               <bibl><!--Латышев 1902-->
+                  <ptr target="bib:b0142"/>, 21, № <citedRange>1</citedRange></bibl>
+               <bibl><!--IOSPE I2-->
+                  <ptr target="bib:IOSPE2"/>
+                  <citedRange>342</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Лепер 1912--> <ptr target="bib:b0152"/>, 42</bibl>
+               <bibl><!--Лепер 1912-->
+                  <ptr target="bib:b0152"/>, 42</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -160,24 +175,43 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>Подчеркнутые буквы в настоящее время не читаются на камне.</note></app>
-               <app loc="1-3"><note>дополнения Лепера (с незначительными изменениями).</note></app>
-               <app loc="3"><rdg>ΗΡΑΚΕΙΔΑ <note>Lapis.</note></rdg></app>
+               <app>
+                  <note>Подчеркнутые буквы в настоящее время не читаются на камне.</note>
+               </app>
+               <app loc="1-3">
+                  <note>дополнения Лепера (с незначительными изменениями).</note>
+               </app>
+               <app loc="3">
+                  <rdg>ΗΡΑΚΕΙΔΑ <note>Lapis.</note></rdg>
+               </app>
                <app loc="3-4">
                   <rdg source="bib:IOSPE2">[τοῦ δάμου] | σπεύδοντος ποτὶ τ[ὸν πόλεμον? ---]</rdg>
-                  <note>не исключено дополнение инфинитива с приставкой ποτι-.</note></app>
-               <app loc="6-7"><rdg source="bib:b0142 bib:IOSPE2">[τὸν ἑαυ]|τοῦ κίνδυνον</rdg></app>
-               <app loc="6-7"><note>однако в конце стк. 7 скорее следы Υ, чем Ν, за ним следы еще одной буквы (возможно, часть верхней петли Β).</note></app>
+                  <note>не исключено дополнение инфинитива с приставкой ποτι-.</note>
+               </app>
+               <app loc="6-7">
+                  <rdg source="bib:b0142 bib:IOSPE2">[τὸν ἑαυ]|τοῦ κίνδυνον</rdg>
+               </app>
+               <app loc="6-7">
+                  <note>однако в конце стк. 7 скорее следы Υ, чем Ν, за ним следы еще одной буквы
+                     (возможно, часть верхней петли Β).</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>Номофилаки Гераклид, [(сын) такого-то, такой-то, (сын) ---]дора, Алкиной, (сын) Гераклида и стоящий во главе управления [---]дор, сын Гераклида внесли предложение: поскольку [такой-то, (сын) такого-то, когда народ(?)] стремился --- граждан никоим образом --- он уступил --- военная опасность --- услуги --- почестями --- граждан --- проявить ---.</p>
+            <p>Номофилаки Гераклид, [(сын) такого-то, такой-то, (сын) ---]дора, Алкиной, (сын)
+               Гераклида и стоящий во главе управления [---]дор, сын Гераклида внесли предложение:
+               поскольку [такой-то, (сын) такого-то, когда народ(?)] стремился --- граждан никоим
+               образом --- он уступил --- военная опасность --- услуги --- почестями --- граждан ---
+               проявить ---.</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Декрет, принятый по предложению коллегии из трех номофилаков и "стоящего во главе управления". О формуляре преамбулы декретов эллинистического времени и упоминаемых в ней магистратурах см. «Введение». Относительно χρείας (стк. 8) см. комментарий к № ipe341.</p>
+            <p> Декрет, принятый по предложению коллегии из трех номофилаков и "стоящего во главе
+               управления". О формуляре преамбулы декретов эллинистического времени и упоминаемых в
+               ней магистратурах см. «Введение». Относительно χρείας (стк. 8) см. комментарий к №
+               ipe341.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

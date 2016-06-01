@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Эвтены</title>
-             <title xml:lang="en">Epitaph of </title>
+            <title xml:lang="en">Epitaph of </title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,7 +35,8 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m4">Песчаник.</material>
                            <material xml:lang="en">Sandstone.</material>
@@ -56,8 +58,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, сигма с расходящимися верхней и нижней гастами, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Nu with short right vertical, four-bar sigma with splayed bars</seg>
+                        <seg xml:lang="ru">Ню с укороченной правой вертикалью, сигма с расходящимися
+                           верхней и нижней гастами, утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Nu with short right vertical, four-bar sigma with splayed
+                           bars</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
@@ -68,21 +72,24 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0333" notAfter="-0251" evidence="палеография" precision="low">
+                     <origDate notBefore="-0333" notAfter="-0251" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">Кон. IV – 1-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">Late IV - 1st half of IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найден в 1895 г. в западном районе Херсонеса, на участке некрополя в гробнице № 579. 
-                           Раскопки К.К. Косцюшко-Валюжинича (ОАК за 1895, 109 сл; НА НЗХТ, д. 24, № 119).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найден в 1895 г. в западном районе Херсонеса, на
+                           участке некрополя в гробнице № 579. Раскопки К.К. Косцюшко-Валюжинича
+                           (ОАК за 1895, 109 сл; НА НЗХТ, д. 24, № 119).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">excavations of K.K. Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -94,7 +101,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
          <change when="2015-08-26" who="CB">App crit</change>
@@ -116,9 +126,13 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1899-->,<ptr target="bib:b0136"/> 16, № <citedRange>18</citedRange></bibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 99</citedRange></bibl>
-               <bibl><!--IOSPE I2--> <ptr target="bib:IOSPE2"/> <citedRange>512</citedRange></bibl>
+               <bibl><!--Латышев 1899-->,<ptr target="bib:b0136"/> 16, №
+                  <citedRange>18</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>
+                  <citedRange>IV 99</citedRange></bibl>
+               <bibl><!--IOSPE I2-->
+                  <ptr target="bib:IOSPE2"/>
+                  <citedRange>512</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -135,7 +149,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="3"><rdg source="bib:b0136">[Εὐ]θήνα</rdg></app>
+               <app loc="3">
+                  <rdg source="bib:b0136">[Εὐ]θήνα</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -145,12 +161,16 @@
             <p>Euthena, (daughter of) Theoteles, wife of Goson.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>ЛИ [Εὐ]θήνα и Θεοτέλης встречаются в Херсoнесе только в этой надписи. Относительно характерного для херсонесских надписей эллинистического 
-               времени написания ειος (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с примерами); ср. Thumb-Kieckers 137, § 132. </p>
-            <p>Мужское имя Γόσων встречается еще раз в надписи эллинистического времени № neph028 (за пределами Херсонеса не засвидетельствовано; 
-               ср. также женское имя Γόσα в № Lat/iak65). Не исключено, что речь идет об одном и том же лице. 
-               Высказывались предположения об иранском (Zgusta 1955, § 96) и, что более вероятно, греческом происхождении имени (вариант ЛИ Κόσων с озвончением, 
-               Stolba 1996, 446 сл.; ср. Zgusta 1955, § 131).</p>
+            <p>ЛИ [Εὐ]θήνα и Θεοτέλης встречаются в Херсoнесе только в этой надписи. Относительно
+               характерного для херсонесских надписей эллинистического времени написания ειος
+               (наряду с -εος) для окончания gen. sg. основ на -σ- см. Тохтасьев 1997, 399 (с
+               примерами); ср. Thumb-Kieckers 137, § 132. </p>
+            <p>Мужское имя Γόσων встречается еще раз в надписи эллинистического времени № neph028
+               (за пределами Херсонеса не засвидетельствовано; ср. также женское имя Γόσα в №
+               Lat/iak65). Не исключено, что речь идет об одном и том же лице. Высказывались
+               предположения об иранском (Zgusta 1955, § 96) и, что более вероятно, греческом
+               происхождении имени (вариант ЛИ Κόσων с озвончением, Stolba 1996, 446 сл.; ср. Zgusta
+               1955, § 131).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

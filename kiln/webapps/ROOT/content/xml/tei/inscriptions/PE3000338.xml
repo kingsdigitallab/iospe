@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Оббита со всех сторон. Сохранились остатки трех строк надписи, вырезанной по разметке. 
-                              Лицевая сторона тщательно обработана, сейчас повреждена сколами и выбоинами.</p>
+                           <p xml:lang="ru">Оббита со всех сторон. Сохранились остатки трех строк
+                              надписи, вырезанной по разметке. Лицевая сторона тщательно обработана,
+                              сейчас повреждена сколами и выбоинами.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,5</height>
@@ -57,8 +60,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Слегка удлиненные пропорции букв, курсивное эпсилон с горизонталью не касающейся полукружия, овальный омикрон, 
-                           пи с равными вертикалями и выходящей за их пределы горизонталью, курсивная сигма, незначительное апицирование.</seg>
+                        <seg xml:lang="ru">Слегка удлиненные пропорции букв, курсивное эпсилон с
+                           горизонталью не касающейся полукружия, овальный омикрон, пи с равными
+                           вертикалями и выходящей за их пределы горизонталью, курсивная сигма,
+                           незначительное апицирование.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,7</height>
                      </handNote>
@@ -77,7 +82,8 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес) (?).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес) (?).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -91,12 +97,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -133,8 +142,14 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>1: после Α слева направо вертикальная гаста, неясные следы, нижняя часть окружности, нижняя часть окружности с горизонталью (Ε или Θ), наклонная гаста; ΝΤΑΜΟΘΑ - ed. pr., μόθα[ξ] - ed. pr.</note></app>
-               <app><note>2: supplevi.</note></app>
+               <app>
+                  <note>1: после Α слева направо вертикальная гаста, неясные следы, нижняя часть
+                     окружности, нижняя часть окружности с горизонталью (Ε или Θ), наклонная гаста;
+                     ΝΤΑΜΟΘΑ - ed. pr., μόθα[ξ] - ed. pr.</note>
+               </app>
+               <app>
+                  <note>2: supplevi.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -144,7 +159,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В стк., возможно, следует видеть остатки формулы εἰς τὰ κοινὰ τῆς πόλεως πράγματα φιλοδοξία vel sim. В этом случае фрагмент является частью почетному декрету.</p>
+            <p>В стк., возможно, следует видеть остатки формулы εἰς τὰ κοινὰ τῆς πόλεως πράγματα
+               φιλοδοξία vel sim. В этом случае фрагмент является частью почетному декрету.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

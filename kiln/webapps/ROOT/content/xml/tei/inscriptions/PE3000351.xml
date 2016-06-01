@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки двух строк надписи, вырезанной по разметке. 
-                              Лицевая и тыльная сторона отполированы.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Сохранились остатки двух строк
+                              надписи, вырезанной по разметке. Лицевая и тыльная сторона
+                              отполированы.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">6,5</height>
@@ -57,7 +60,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Овальный омикрон, равный по величине остальным буквам, курсивная сигма, апексы.</seg>
+                        <seg xml:lang="ru">Овальный омикрон, равный по величине остальным буквам,
+                           курсивная сигма, апексы.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,5–3,0</height>
                      </handNote>
@@ -76,13 +80,19 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном районе херсонесского городища близ оборонительной стены у Карантинной бухты («участок между шлюпочным сараем и оборонительной стеной»). Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 16, № 329; д. 36, л. 7, № 329).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1907 г. при раскопках в юго-восточном
+                           районе херсонесского городища близ оборонительной стены у Карантинной
+                           бухты («участок между шлюпочным сараем и оборонительной стеной»).
+                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 16, № 329; д. 36, л. 7, №
+                           329).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot"/>
-                        <rs type="circumstances">Found in....excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in....excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -90,12 +100,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -131,7 +144,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>2: в начале стк. вертикальная гаста; 	[- - -]ΙΣ - ed. pr.</note></app>
+               <app>
+                  <note>2: в начале стк. вертикальная гаста; [- - -]ΙΣ - ed. pr.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

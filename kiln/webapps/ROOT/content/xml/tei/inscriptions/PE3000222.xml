@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Декрет (c упоминанием «приложивших печати»)</title>
-             <title xml:lang="en">Decree {those who sealed it}</title>
+            <title xml:lang="en">Decree {those who sealed it}</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Три соединяющихся фрагмента плиты, оббитой со всех сторон. Лицевая сторона тщательно обработана.</p>
+                           <p xml:lang="ru">Три соединяющихся фрагмента плиты, оббитой со всех
+                              сторон. Лицевая сторона тщательно обработана.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">26,0</height>
@@ -56,10 +59,14 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа и дельта имеют слегка изогнутые линии, курсивные эпсилон и сигма, йота adscriptum, каппа с удлиненными наклонными, 
-                           сходящимися под максимально острым углом, мю с параллельными боковыми линиями и внутренними гастами, 
-                           пересекающимися выше середины строки, маленький «декоративный» омикрон, ипсилон с короткой не доходящей до середины строки вертикалью, 
-                           курсивное хи с изогнутыми линиями, полукруглая омега с удлиненными горизонталями на уровне нижней линии строки, апексы на концах линий букв.</seg>
+                        <seg xml:lang="ru">Альфа и дельта имеют слегка изогнутые линии, курсивные
+                           эпсилон и сигма, йота adscriptum, каппа с удлиненными наклонными,
+                           сходящимися под максимально острым углом, мю с параллельными боковыми
+                           линиями и внутренними гастами, пересекающимися выше середины строки,
+                           маленький «декоративный» омикрон, ипсилон с короткой не доходящей до
+                           середины строки вертикалью, курсивное хи с изогнутыми линиями,
+                           полукруглая омега с удлиненными горизонталями на уровне нижней линии
+                           строки, апексы на концах линий букв.</seg>
                         <seg xml:lang="en">cursive chi with curved hastae</seg>
                         <height unit="cm">1 – 1,5.</height>
                      </handNote>
@@ -71,15 +78,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0125" evidence="палеография указание_надписи просопография" cert="low">
+                     <origDate notBefore="0101" notAfter="0125"
+                        evidence="палеография указание_надписи просопография" cert="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдены в 2001 г. в северном районе Херсонеса (квадрат 9, помещение 5). Раскопки С.Г. Рыжова.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдены в 2001 г. в северном районе Херсонеса
+                           (квадрат 9, помещение 5). Раскопки С.Г. Рыжова.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -96,7 +106,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-18" who="CB">Added miossing biblio tags</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
@@ -104,7 +117,9 @@
          <change when="2015-07-15" who="KK">Add photo file name</change>
          <change when="2015-06-29" who="CB">Tagging metadata</change>
          <change when="2015-05-08" who="AGi">programmatically created XML from Word docs</change>
-         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word docs</change>      </revisionDesc>
+         <change when="2015-05-14" who="AV">programmatically tagging Greek words from Word
+            docs</change>
+      </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
@@ -119,8 +134,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Макаров 2006--><ptr target="bib:b0758"/>, 92, № <citedRange>4</citedRange></bibl> <bibl> (<!--SEG--><ptr target="SEG"/> <citedRange>56, 873</citedRange></bibl>
-               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:BE"/>, <citedRange>2007, 410</citedRange> (Avram))</bibl>
+               <bibl><!--Макаров 2006--><ptr target="bib:b0758"/>, 92, №
+                  <citedRange>4</citedRange></bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/>
+                  <citedRange>56, 873</citedRange></bibl>
+               <bibl><!--cf. Bull. ép. 2007--><ptr target="bib:BE"/>, <citedRange>2007,
+                     410</citedRange> (Avram))</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -155,23 +174,37 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="4"><note>В конце строки над Ρ горизонтальная черта, после Ρ виден верх вертикали.</note></app>
-               <app loc="5"><note>Следы четырех букв в начале строки не поддаются надежному определению; возможно, <unclear>ΑΝ</unclear>, 
-                  затем следы курсивного Ε или Θ; в конце стк. нижняя часть вертикальной гасты.</note></app>
-               <app loc="6"><rdg><note>vel </note>[--- ἐσ]φραγίσα[ντο· θεὰ βασίλισσα Παρθένος]</rdg></app>
-               <app loc="7"><rdg><note> вероятно,</note> [῾Ηροΐ]δας.</rdg></app>
+               <app loc="4">
+                  <note>В конце строки над Ρ горизонтальная черта, после Ρ виден верх
+                     вертикали.</note>
+               </app>
+               <app loc="5">
+                  <note>Следы четырех букв в начале строки не поддаются надежному определению;
+                     возможно, <unclear>ΑΝ</unclear>, затем следы курсивного Ε или Θ; в конце стк.
+                     нижняя часть вертикальной гасты.</note>
+               </app>
+               <app loc="6">
+                  <rdg><note>vel </note>[--- ἐσ]φραγίσα[ντο· θεὰ βασίλισσα Παρθένος]</rdg>
+               </app>
+               <app loc="7">
+                  <rdg><note> вероятно,</note> [῾Ηροΐ]δας.</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p>[--- записать постановление] на белокаменной стеле [и выставить в пронаосе храма богини Девы ?]. 
-               Это решено Советом и народом в царствование Девы, в 1.. году, при жреце [---], месяца [---, при секретаре ---]. Приложили печати [в первомм ряду: 
-               богиня царица Дева, ---], (сын) Дамокла, [первый архонт ---], архонт, Диоскурид [сын) ---, --- (сын) Герогейта, архонт [---] номофилак [---].</p>
+            <p>[--- записать постановление] на белокаменной стеле [и выставить в пронаосе храма
+               богини Девы ?]. Это решено Советом и народом в царствование Девы, в 1.. году, при
+               жреце [---], месяца [---, при секретаре ---]. Приложили печати [в первомм ряду:
+               богиня царица Дева, ---], (сын) Дамокла, [первый архонт ---], архонт, Диоскурид [сын)
+               ---, --- (сын) Герогейта, архонт [---] номофилак [---].</p>
          </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Сохранилось заключение постановляющей части декрета с клаузулой публикации, формулой санкции, датировкой и списком членов Совета, присутствовавших во время принятия постановления.</p>
+            <p>Сохранилось заключение постановляющей части декрета с клаузулой публикации, формулой
+               санкции, датировкой и списком членов Совета, присутствовавших во время принятия
+               постановления.</p>
             <p>II в. н.э., скорее всего не позднее первой четверти.</p>
          </div>
          <div type="commentary" xml:lang="en">

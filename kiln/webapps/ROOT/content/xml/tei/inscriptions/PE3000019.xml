@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title xml:lang="ru">Надгробие Аполлония</title>
-             <title xml:lang="en">Epitaph of Apollonios</title>
+            <title xml:lang="en">Epitaph of Apollonios</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,8 +21,8 @@
                      <idno>3654</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>3654</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3654</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Верхняя часть стелы, карниз сбит. На лицевой стороне рельефное изображение двух розеток и портупеи, 
-                              висящей на гвозде.</p>
+                           <p xml:lang="ru">Верхняя часть стелы, карниз сбит. На лицевой стороне
+                              рельефное изображение двух розеток и портупеи, висящей на гвозде.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">43,5</height>
@@ -50,14 +53,16 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru">Выше розеток крупными буквами вырезана двухстрочная надпись.</seg>
+                           <seg xml:lang="ru">Выше розеток крупными буквами вырезана двухстрочная
+                              надпись.</seg>
                            <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Омикрон немного меньше остальных букв, правая вертикаль пи значительно укорочена, небольшие утолщения на концах линий букв.</seg>
+                        <seg xml:lang="ru">Омикрон немного меньше остальных букв, правая вертикаль
+                           пи значительно укорочена, небольшие утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">2,7</height>
                      </handNote>
@@ -65,25 +70,29 @@
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                          <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0350" notAfter="-0301" evidence="палеография" precision="low">
+                     <origDate notBefore="-0350" notAfter="-0301" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IVth century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1903 г. в южном районе Херсонеса, на участке  античного театра III в. до н.э. 
-                           Раскопки К.К. Косцюшко-Валюжинича («храм с ковчегом», НА НЗХТ, д. 12, л. 21).</rs>
+                        <placeName type="ancientFindspot" ref="sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1903 г. в южном районе Херсонеса, на
+                           участке античного театра III в. до н.э. Раскопки К.К. Косцюшко-Валюжинича
+                           («храм с ковчегом», НА НЗХТ, д. 12, л. 21).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances">Found in 1903... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in 1903... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -95,7 +104,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
          <change when="2015-09-28" who="CB">Bibliography</change>
@@ -118,8 +130,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 106, № <citedRange>14</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>467</citedRange></bibl>
+               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 106, №
+                     <citedRange>14</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>
+                  <citedRange>467</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -143,7 +157,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -153,10 +169,11 @@
             <p>Apollonios, (son of) Polyarchos.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Судя по месту обнаружения надгробия, оно могло изначально находиться на участке южного некрополя, на территории которого в III в. до н.э. 
-               был построен античный театр (ср. № neph180 и Буйских 2008, 61). 
-               Posamentir 2011, 119 отмечает, что по качеству исполнения памятник близок стелам «мастерской Санниона». 
-               Оба ЛИ известны в других херсонесских надписях эллинистического времени.</p>
+            <p>Судя по месту обнаружения надгробия, оно могло изначально находиться на участке
+               южного некрополя, на территории которого в III в. до н.э. был построен античный театр
+               (ср. № neph180 и Буйских 2008, 61). Posamentir 2011, 119 отмечает, что по качеству
+               исполнения памятник близок стелам «мастерской Санниона». Оба ЛИ известны в других
+               херсонесских надписях эллинистического времени.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

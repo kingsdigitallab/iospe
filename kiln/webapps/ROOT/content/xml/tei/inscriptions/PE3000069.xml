@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Надгробие Санниона</title>
-             <title xml:lang="en">Epitaph of Sannion</title>
+            <title xml:lang="ru">Надгробие Санниона</title>
+            <title xml:lang="en">Epitaph of Sannion</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>5/36847</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
                      <idno>5/36847</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,17 +35,23 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2"
+                              >Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
-                           <p xml:lang="ru">Стела с карнизом и антефиксами (почти полностью сбиты). Расколота на три части. Низ не сохранился. 
-                              Лицевая и боковые грани украшены рельефными полихромными розетками. 
-                              На лицевой стороне темно-красной охрой нанесено изображение суковатого посоха. 
-                              Между карнизом и розетками по предварительной разметке черной краской нанесена двухстрочная надпись.</p>
-                           <p xml:lang="en">Stele topped by a cornice with antefixes (badly damaged). Broken into three pieces. The bottom is missing.
-                              The front and sides are decorated with relief polychrome rosettes. Two-line inscription painted in black [по предварительной разметке]
-                           appears between the cornice and the rosettes.</p>
+                           <p xml:lang="ru">Стела с карнизом и антефиксами (почти полностью сбиты).
+                              Расколота на три части. Низ не сохранился. Лицевая и боковые грани
+                              украшены рельефными полихромными розетками. На лицевой стороне
+                              темно-красной охрой нанесено изображение суковатого посоха. Между
+                              карнизом и розетками по предварительной разметке черной краской
+                              нанесена двухстрочная надпись.</p>
+                           <p xml:lang="en">Stele topped by a cornice with antefixes (badly
+                              damaged). Broken into three pieces. The bottom is missing. The front
+                              and sides are decorated with relief polychrome rosettes. Two-line
+                              inscription painted in black [по предварительной разметке] appears
+                              between the cornice and the rosettes.</p>
                            <dimensions>
                               <height unit="cm">127,0</height>
                               <width unit="cm">37,0</width>
@@ -61,28 +68,33 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, наклонные линии каппа укорочены, правая вертикаль ню слегка приподнята, 
-                           слегка изогнутые линии букв, утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en">Epsilon with a short middle bar, nu with short right vertical</seg>
+                        <seg xml:lang="ru">Эпсилон с короткой средней горизонталью, наклонные линии
+                           каппа укорочены, правая вертикаль ню слегка приподнята, слегка изогнутые
+                           линии букв, утолщения на концах линий букв.</seg>
+                        <seg xml:lang="en">Epsilon with a short middle bar, nu with short right
+                           vertical</seg>
                         <height unit="cm">2,4</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0251" evidence="палеография" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0251" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">1st half of IIIrd century B.C.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1960 - 1961 гг. в юго-восточном районе Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен. 
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1960 - 1961 гг. в юго-восточном районе
+                           Херсонеса, в кладке ядра башни XVII (башня Зенона) оборонительных стен.
                            Раскопки С.Ф. Стржелецкого (НА НЗХТ, д. 30).</rs>
                         <rs type="context"/>
                      </seg>
@@ -100,7 +112,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-15" who="CB">Bibliography</change>
          <change when="2015-09-01" who="CB">Metadata and app crit</change>
@@ -123,10 +138,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 63, № <citedRange>12</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>  <citedRange>146</citedRange></bibl> <bibl> (<!--Bull.ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974, 380</citedRange>)</bibl>
+               <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 63, №
+                     <citedRange>12</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/>
+                  <citedRange>146</citedRange></bibl>
+               <bibl> (<!--Bull.ép. 1974--><ptr target="bib:BE"/>, <citedRange>1974,
+                     380</citedRange>)</bibl>
                <bibl><!--SEG 53--><ptr target="bib:SEG"/>, <citedRange>767, № 4</citedRange></bibl>
-               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/> , 429, № <citedRange>1</citedRange></bibl>
+               <bibl><!--Perlman 2011--><ptr target="bib:b0437"/> , 429, №
+                     <citedRange>1</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -144,7 +164,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -154,9 +176,20 @@
             <p>Sannion, (son of) Megakles.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>	Саннион, сын Мегакла, фигурирует также в надписях на стелах № neph147-150, принадлежащих его жене Мендико и сыновьям Мегаклу, Аполлонию и Дионисию. На принадлежность всех упомянутых лиц к одной семье указывает стилистическое единство исполнения памятников, изготовленных в одной мастерской («the Sannion workshop», см. Posamentir 2011, 170), а также близкое расположение стел в кладке башни № XVII – свидетельство их происхождения с одного и того же семейного участка херсонесского некрополя. Ср. Даниленко 1966, 172; Зубарь 2005, 459 сл.; Perlman 2011, 388 (стемма семьи Санниона). </p>
-            <p>	Относительно происхождения личного имени Σαννίων см. Bechtel, HPN 504 (раздел «Höhnisch und schmeichlerisch»); Chantraine, DELG, s.v. σαίνω. Другие носители этого ЛИ в Херсонесе до настоящего времени не засвидетельствованы. ЛИ Мегакл встречается в Херсонесе лишь как имя отца и сына этого Санниона (№ neph148). </p>
-            <p>	Об окончании gen. sg. -κλέος для личных имен, заканчивающихся в nom. sg. на -κλῆς ср. Thumb-Kieckers 138, § 132.9; Тохтасьев 1997, 399.</p>
+            <p> Саннион, сын Мегакла, фигурирует также в надписях на стелах № neph147-150,
+               принадлежащих его жене Мендико и сыновьям Мегаклу, Аполлонию и Дионисию. На
+               принадлежность всех упомянутых лиц к одной семье указывает стилистическое единство
+               исполнения памятников, изготовленных в одной мастерской («the Sannion workshop», см.
+               Posamentir 2011, 170), а также близкое расположение стел в кладке башни № XVII –
+               свидетельство их происхождения с одного и того же семейного участка херсонесского
+               некрополя. Ср. Даниленко 1966, 172; Зубарь 2005, 459 сл.; Perlman 2011, 388 (стемма
+               семьи Санниона). </p>
+            <p> Относительно происхождения личного имени Σαννίων см. Bechtel, HPN 504 (раздел
+               «Höhnisch und schmeichlerisch»); Chantraine, DELG, s.v. σαίνω. Другие носители этого
+               ЛИ в Херсонесе до настоящего времени не засвидетельствованы. ЛИ Мегакл встречается в
+               Херсонесе лишь как имя отца и сына этого Санниона (№ neph148). </p>
+            <p> Об окончании gen. sg. -κλέος для личных имен, заканчивающихся в nom. sg. на -κλῆς
+               ср. Thumb-Kieckers 138, § 132.9; Тохтасьев 1997, 399.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

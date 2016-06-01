@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Incertum</title>
+            <title xml:lang="ru">Incertum</title>
             <title xml:lang="en">Incertum</title>
          </titleStmt>
          <publicationStmt>
@@ -34,14 +35,15 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Сохранился левый край.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                           <dim>Нет данных.</dim>
+                              <dim>Нет данных.</dim>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -54,7 +56,8 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Прямоугольная сигма, лигатуры мюэпсилон, нюомега, омегамю.</seg>
+                        <seg xml:lang="ru">Прямоугольная сигма, лигатуры мюэпсилон, нюомега,
+                           омегамю.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">Нет данных.</height>
                      </handNote>
@@ -66,15 +69,18 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0300" evidence="палеография" precision="low">
+                     <origDate notBefore="0151" notAfter="0300" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">2-я пол. II – III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II - IIIrd centuries C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Случайно найден Д.М. Струковым в 1871 г. на херсонесском городище.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Случайно найден Д.М. Струковым в 1871 г. на
+                           херсонесском городище.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -88,18 +94,22 @@
                      <seg xml:lang="en">Unknown.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Non vidi. Камень считается утерянным начиная с 1880-х гг.</seg>
+                     <seg xml:lang="ru">Non vidi. Камень считается утерянным начиная с 1880-х
+                        гг.</seg>
                      <seg xml:lang="en"/>
                   </provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
-          <change when="2015-11-13" who="KK">Tokenised</change>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-11-02" who="CB">Biblio and app crit</change>
-          <change when="2015-10-30" who="KK">Leidenised</change>
+         <change when="2015-10-30" who="KK">Leidenised</change>
          <change when="2015-10-23" who="CB">Metadata</change>
          <change when="2015-09-25" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
@@ -117,7 +127,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>I 225</citedRange></bibl>  <bibl>(по копии Д.М. Струкова <!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>603</citedRange>)</bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/>, <citedRange>I 225</citedRange></bibl>
+               <bibl>(по копии Д.М. Струкова <!--IOSPE I2--><ptr target="bib:IOSPE2"/>,
+                     <citedRange>603</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -140,13 +152,22 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>IOSPE I2 603.</note>--></app>
-               <app loc="1"><note>после Ι нижняя часть прямоугольной буквы и вертикали.</note></app>
-               <app loc="2"><rdg>ΜΕ <note>в лигатуре.</note></rdg></app>
-               <app loc="4"><rdg source="bib:IOSPE">[τ]ᾶς <supplied reason="omitted">γ</supplied>νώμ[ας ? - - -]<note>, однако учитывая датировку текста дорийские формы маловероятны</note></rdg> 
-                             <rdg source="bib:IOSPE">ΤΝΝΩΜ <note>- копия Струкова</note></rdg>
-                             <rdg>ΝΩ, ΩΜ <note>в лигатуре.</note></rdg>
+               <app loc="1">
+                  <note>после Ι нижняя часть прямоугольной буквы и вертикали.</note>
                </app>
-               <app loc="5"><note>в начале стк. две вертикальных гасты.</note></app>
+               <app loc="2">
+                  <rdg>ΜΕ <note>в лигатуре.</note></rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:IOSPE">[τ]ᾶς <supplied reason="omitted">γ</supplied>νώμ[ας ? - -
+                        -]<note>, однако учитывая датировку текста дорийские формы
+                        маловероятны</note></rdg>
+                  <rdg source="bib:IOSPE">ΤΝΝΩΜ <note>- копия Струкова</note></rdg>
+                  <rdg>ΝΩ, ΩΜ <note>в лигатуре.</note></rdg>
+               </app>
+               <app loc="5">
+                  <note>в начале стк. две вертикальных гасты.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

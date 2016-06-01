@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент почетной надписи эллинистического времени</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент почетной надписи эллинистического времени</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -13,7 +14,8 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country/>
+               <msIdentifier>
+                  <country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Национальный заповедник "Херсонес Таврический"</repository>
                      <idno>3670</idno>
@@ -33,11 +35,16 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12"
+                              >Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Частично сохранился верх постамента. В римское время камень был вторично использован для изготовления надгробной стелы с рельефом и надписью на первоначальной нижней грани (см. № ipe464). На лицевой грани постамента видны остатки рельефного изображения венка и одной строки надписи, вырезанной посередине венка.</p>
+                           <p xml:lang="ru">Частично сохранился верх постамента. В римское время
+                              камень был вторично использован для изготовления надгробной стелы с
+                              рельефом и надписью на первоначальной нижней грани (см. № ipe464). На
+                              лицевой грани постамента видны остатки рельефного изображения венка и
+                              одной строки надписи, вырезанной посередине венка.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">20,0</height>
@@ -55,8 +62,9 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа  с прямой поперечной линией, сигма с чуть изогнутыми расходящимися и верхней и нижней линиями, 
-                           правая вертикаль ню слегка приподнята.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, сигма с чуть изогнутыми
+                           расходящимися и верхней и нижней линиями, правая вертикаль ню слегка
+                           приподнята.</seg>
                         <seg xml:lang="en"/>
                         <height unit="cm">1,0</height>
                      </handNote>
@@ -75,8 +83,12 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1900 г. в юго-восточном районе Херсонеса при раскопках на участке с наружной стороны куртины 19 оборонительных стен. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 9, л. 17, № 178; д. 29, л. 3, № 180).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1900 г. в юго-восточном районе Херсонеса
+                           при раскопках на участке с наружной стороны куртины 19 оборонительных
+                           стен. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 9, л. 17, № 178; д.
+                           29, л. 3, № 180).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -89,12 +101,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
          <change when="2016-04-16" who="Federica Micucci">Encoded text</change>
       </revisionDesc>
@@ -131,7 +146,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>1: [ἱερατ]εύσαντα vel [βασιλ]εύσαντα vel sim. - IOSPE.</note></app>
+               <app>
+                  <note>1: [ἱερατ]εύσαντα vel [βασιλ]εύσαντα vel sim. - IOSPE.</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

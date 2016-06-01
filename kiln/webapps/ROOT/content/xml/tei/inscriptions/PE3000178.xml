@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент надгробной надписи</title>
-             <title xml:lang="en"/>
+            <title xml:lang="ru">Фрагмент надгробной надписи</title>
+            <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -34,12 +35,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
+                              >Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Сохранился нижний край с остатками двух строк надписи, вырезанной по предварительной разметке. 
-                              Лицевая и оборотная сторона отшлифованы.</p>
+                           <p xml:lang="ru">Сохранился нижний край с остатками двух строк надписи,
+                              вырезанной по предварительной разметке. Лицевая и оборотная сторона
+                              отшлифованы.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,0</height>
@@ -57,8 +60,10 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с прямой поперечной линией, овальный омикрон, слегка вытянутые буквы, слабое апицирование</seg>
-                        <seg xml:lang="en">Alpha with straight crossbar, oval omicron, slightly elongated letters, light serifs.</seg>
+                        <seg xml:lang="ru">Альфа с прямой поперечной линией, овальный омикрон,
+                           слегка вытянутые буквы, слабое апицирование</seg>
+                        <seg xml:lang="en">Alpha with straight crossbar, oval omicron, slightly
+                           elongated letters, light serifs.</seg>
                         <height unit="cm">2,0</height>
                      </handNote>
                   </handDesc>
@@ -69,21 +74,25 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
+                        precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1907 г. на территории некрополя в районе Загородного («крестного») храма. 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 15, л. 13, № 301; д. 35, л. 6, № 301).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1907 г. на территории некрополя в районе
+                           Загородного («крестного») храма. Раскопки К.К. Косцюшко-Валюжинича (НА
+                           НЗХТ, д. 15, л. 13, № 301; д. 35, л. 6, № 301).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos)</placeName>
-                        <rs type="circumstances">Found in.... excavations of  K.K. Kostsyushko-Valyuzhinich</rs>
+                        <rs type="circumstances">Found in.... excavations of K.K.
+                           Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
                      </seg>
                   </provenance>
@@ -91,12 +100,15 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-                  
+
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-09" who="CB">Added origDate</change>
          <change when="2015-10-30" who="CB">biblio and app crit</change>
          <change when="2015-10-22" who="CB">Metadata</change>
@@ -117,7 +129,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1907--><ptr target="bib:b0148"/>, 36, № <citedRange>14</citedRange></bibl>
+               <bibl><!--Латышев 1907--><ptr target="bib:b0148"/>, 36, №
+                  <citedRange>14</citedRange></bibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>539</citedRange></bibl>
             </listBibl>
          </div>
@@ -137,9 +150,12 @@
          <div type="apparatus">
             <listApp>
                <app><!--<note>IOSPE I2 539.</note>--></app>
-               <app loc="1"><note>scripsi, om. edd.</note> 
-                  <note>В начале стк. нижняя часть наклонной гасты, в конце стк. нижняя часть вертикальной линии. 
-                     Вероятно, личное имя [Στρ]<unclear>α</unclear>τόν<unclear>ι</unclear>[κος]</note></app>
+               <app loc="1">
+                  <note>scripsi, om. edd.</note>
+                  <note>В начале стк. нижняя часть наклонной гасты, в конце стк. нижняя часть
+                     вертикальной линии. Вероятно, личное имя
+                        [Στρ]<unclear>α</unclear>τόν<unclear>ι</unclear>[κος]</note>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

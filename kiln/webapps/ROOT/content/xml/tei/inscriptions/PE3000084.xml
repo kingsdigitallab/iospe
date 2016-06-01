@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title xml:lang="ru">Фрагмент вставки к женскому надгробию</title>
-             <title xml:lang="en">Epitaph of a woman</title>
+            <title xml:lang="ru">Фрагмент вставки к женскому надгробию</title>
+            <title xml:lang="en">Epitaph of a woman</title>
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
@@ -20,12 +21,12 @@
                      <idno>34933</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                      <repository>National Preserve of Tauric Chersonesos</repository>
-                      <idno>34933</idno>
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34933</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                   <summary corresp="document-search.xml#doc2">
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробная надпись.</seg>
                      <seg xml:lang="en">Epitaph.</seg>
                   </summary>
@@ -34,11 +35,13 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
+                              >Стела</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана слева. Сохранились остатки трехстрочной надписи.</p>
+                           <p xml:lang="ru">Обломана слева. Сохранились остатки трехстрочной
+                              надписи.</p>
                            <p xml:lang="en">Broken on the left. Traces of three lines of text.</p>
                            <dimensions>
                               <height unit="cm">5,0</height>
@@ -56,18 +59,20 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">Альфа с ломаной перекладиной, правая вертикаль ню слегка приподнята, омикрон меньше остальных букв сигма имеет сильно расставленные 
-                           боковые гасты, выходящие за линию строки.</seg>
-                        <seg xml:lang="en">Alpha with broken crossbar, nu with short right vertical</seg>
+                        <seg xml:lang="ru">Альфа с ломаной перекладиной, правая вертикаль ню слегка
+                           приподнята, омикрон меньше остальных букв сигма имеет сильно
+                           расставленные боковые гасты, выходящие за линию строки.</seg>
+                        <seg xml:lang="en">Alpha with broken crossbar, nu with short right
+                           vertical</seg>
                         <height unit="cm">0,7</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                      <origPlace ref="origPlace.xml#p003">
+                     <origPlace ref="origPlace.xml#p003">
                         <seg xml:lang="ru">Херсонес.</seg>
-                         <seg xml:lang="en">Chersonesos.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0251" notAfter="-0201" evidence="палеография">
                         <seg xml:lang="ru">2-я пол. III в. до н.э.</seg>
@@ -76,8 +81,11 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1911 г. на территории некрополя в районе Загородного храма в могиле 11. Раскопки Р.Х. Лепера (НА НЗХТ, д. 104, л. 39, № 3007).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
+                           (Херсонес).</placeName>
+                        <rs type="circumstances">Найдена в 1911 г. на территории некрополя в районе
+                           Загородного храма в могиле 11. Раскопки Р.Х. Лепера (НА НЗХТ, д. 104, л.
+                           39, № 3007).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -94,7 +102,10 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml"><xi:fallback><!--encodingDesc should have been included here--></xi:fallback></xi:include><revisionDesc>
+      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
          <change when="2015-09-03" who="CB">Metadata and app crit</change>
@@ -118,12 +129,13 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/>, <citedRange>714</citedRange></bibl>
-               <bibl><!--Соломоник 1983--><ptr target="bib:b0208"/>, 78, № <citedRange>10</citedRange></bibl> <bibl> (<!--SEG--><ptr target="SEG"/>, <citedRange>33, 600</citedRange>)</bibl>
+               <bibl><!--Соломоник 1983--><ptr target="bib:b0208"/>, 78, №
+                     <citedRange>10</citedRange></bibl>
+               <bibl> (<!--SEG--><ptr target="SEG"/>, <citedRange>33, 600</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -134,7 +146,9 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note/></app>
+               <app>
+                  <note/>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
