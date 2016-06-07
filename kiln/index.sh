@@ -45,4 +45,4 @@ do
 done
 
 echo "Indexing finished, checking for errors..."
-grep -Ri error _tmp || echo "No errors found"
+grep -Ri --colour=always error _tmp || echo "No errors found"
