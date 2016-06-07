@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SERVER_URL="http://localhost:9999/admin/solr/index/tei/tei/inscriptions"
 SLEEP_TIME=30
@@ -22,6 +22,8 @@ done
 
 counter=0
 
+mkdir -p _tmp
+
 for f in webapps/ROOT/content/xml/tei/inscriptions/*.xml
 do
     counter=$((counter + 1))
@@ -31,7 +33,7 @@ do
 
     if [[ $filename =~ ^[5P]{1}.*$ ]]; then
         echo $SERVER_URL/$filename.html
-        wget --timeout=0 $SERVER_URL/$filename.html
+        wget -q --directory-prefix _tmp --timeout=0 $SERVER_URL/$filename.html
     fi
 
     if [[ $((counter % 100)) = 0 ]]; then
@@ -39,3 +41,6 @@ do
         sleep $SLEEP_TIME
     fi
 done
+
+echo "Indexing finished, checking for errors..."
+grep -Ri error _tmp || echo "No errors found"
