@@ -1,6 +1,8 @@
 #!/bin/bash
 
-SERVER_URL="http://localhost:9999/admin/solr/index/tei/tei/inscriptions"
+SERVER_URL="http://localhost:9999"
+SERVER_PATH="admin/solr/index/tei/tei/inscriptions"
+
 SLEEP_TIME=30
 
 while getopts ":s:w:" optval "$@"
@@ -32,7 +34,7 @@ do
     filename="${filename%.*}"
 
     if [[ $filename =~ ^[5P]{1}.*$ ]]; then
-        echo $SERVER_URL/$filename.html
+        echo $SERVER_URL/$SERVER_PATH/$filename.html
         wget -q --directory-prefix _tmp --timeout=0 $SERVER_URL/$filename.html
     fi
 
