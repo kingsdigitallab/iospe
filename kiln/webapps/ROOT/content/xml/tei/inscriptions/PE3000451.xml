@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Фрагмент декрета римского времени</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="IM2015">30.281</idno>
+            <idno type="filename">PE3000451</idno>
+            <idno type="PE">PE3000451</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>31285</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>31285</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru" corresp="document-search.xml#doc15">Декрет.</seg>
+                     <seg xml:lang="en">Decree.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Обломана со всех сторон кроме верхней; сохранились следы фронтона. Лицевая поверхность хорошо сглажена.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">31,5</height>
+                              <width unit="cm">13,0</width>
+                              <depth unit="cm">6,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="en"></seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Маленький круглый омикрон, пи с равными вертикалями и выходящей за их пределы горизонталью, сигма с горизонтальными верхней и 
+                           нижней гастами, далеко выступающими за пересечение с наклонными, и наклонными, образующими тупой угол, вертикаль фи выходит за 
+                           линии строки, крупная круглая омега, утолщения и апексы на концах линий букв, знаки-разделители.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">1,7 (стк 1: 2,6 см).</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсонес.</seg>
+                        <seg xml:lang="en">Chersonesos.</seg>
+                     </origPlace>
+                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                        <seg xml:lang="ru">II в. н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Нет данных.</placeName>
+                        <rs type="circumstances">Поступила в Херсонесский музей ранее 1964 г. из частной коллекции.</rs>
+                        <rs type="context"></rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot"></placeName>
+                        <rs type="circumstances"></rs>
+                        <rs type="context"></rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь.</seg>
+                     <seg xml:lang="en">Sevastopol.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <xi:include href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2016-06-09" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="30.281">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>НЭПХ I 3</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		[ἀγαθᾶι τ]ύχ[αι]
+               		[πρόεδροι Χερσονασειτᾶν τᾶν ποτὶ τᾶι] Ταυρικ̣[ᾶι εἶπαν]
+               		[ἐπειδὴ - - - - - - - - - - - - - - - - - - - - - - - - - σ]ώφρων [- - -]
+               	4	[- - - - - - - - - - - - - - - - - - - - - - - - - - - - - π]άσας +[- - -]
+               		[- - - - - - - - - - - - - - - - - - - - - - - - - - - τὰν] ἐκ παίδ[ων]
+               		[καλοκἀγαθίαν - - - - - - - - - - - - - - - - - -] τοῖς χρα[- - -]
+               		[- - - - - - - - - - - - - - - - - - - - - - - - - - - - - τ]ὰν πόλιν [ἁμῶν]
+               	8	[- - - - - - - - - - - - - - - - - - - - - - - - - - - - φιλά]νθρωπ[α - - -]
+               		[- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - το]ὺς πο[λίτας ? - - -]
+               		[- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -]Σ+[- - -]
+               		[- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -]Α+[- - -]
+               		- - -
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>НЭПХ I 3.</note></app>
+               <app><note>3, fin.: [- - - ἀνὴρ σ]ώφρων [καὶ] - НЭПХ.</note></app>
+               <app><note>4: [- - - ὑπάρχων - - - ἀρετᾶς π]άσας - НЭПХ; fin.: после Σ знак-разделитель, затем низ вертикальной гасты.</note></app>
+               <app><note>5: в начале стк. знак-разделитель; [- - - καὶ τὰν] - НЭПХ.</note></app>
+               <app><note>6, fin.: возможно, χρά[μασι] vel χρά[σταις].</note></app>
+               <app><note>6-7: [καλοκἀγαθίαν δείξας καὶ νῦν] τοῖς χρά[μασι] / [ἐβοήθησε - - - περὶ τ]ὰν πόλιν [ἁμῶν] - НЭПХ.</note></app>
+               <app><note>8: [τὰ φιλά]νθρωπ[α vel [φιλα]νθρώπ[ως] - НЭПХ.</note></app>
+               <app><note>9: между Σ и Π знак-разделитель.</note></app>
+               <app><note>10, fin.: след наклонной линии.</note></app>
+               <app><note>11, fin.: следы двух перпендикулярных линий и утолщения на конце одной из них (Π̣ ?)</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>[В добрый ч]ас.</p>
+            <p>[Проедры херсонеситов, что близ] Таврики, [внесли предложение]:</p>
+            <p>[поскольку (такой-то, сын такого-то) - - - скромный - - - всяческой/всяческие - - - благородство с детских лет - - - нашего города - - - щедрость - - - граждан (?) - - -</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p></p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>II в. н.э. (вероятно, первая половина)</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p></p>
+         </div>
+      </body>
+   </text>
+</TEI>
