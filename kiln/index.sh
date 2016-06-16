@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Usage:  ./index.sh -s SERVER_URL
+# Usage:     ./index.sh -s SERVER_URL
+# Example:   ./index.sh -s https://iospe-stg.cch.kcl.ac.uk  
 # if -s is not used, it defaults to localhost
 
 SERVER_URL="http://localhost:9999"
