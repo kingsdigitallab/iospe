@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Usage:  ./index.sh -s SERVER_URL
+# if -s is not used, it defaults to localhost
+
 SERVER_URL="http://localhost:9999"
 SERVER_PATH="admin/solr/index/tei/tei/inscriptions"
 
@@ -45,4 +48,4 @@ do
 done
 
 echo "Indexing finished, checking for errors..."
-grep -Ri --colour=always error _tmp || echo "No errors found"
+grep -Ri --colour=always OutOfMemoryError _tmp || echo "No errors found"
