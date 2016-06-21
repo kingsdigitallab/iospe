@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Usage:     ./index.sh -s SERVER_URL
-# Example:   ./index.sh -s https://iospe-stg.cch.kcl.ac.uk  
-# if -s is not used, it defaults to localhost
+# Usage:     ./index.sh -i SERVER_INSTANCE -s SERVER_URL
+# Example:   ./index.sh -I -s iospe-stg.cch.kcl.ac.uk  
+# if -i and -s  not used, it defaults to local server instance and localhost
 
 SERVER_URL="http://localhost:9999"
 SERVER_PATH="admin/solr/index/tei/tei/inscriptions"
