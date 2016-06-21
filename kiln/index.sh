@@ -11,7 +11,7 @@ SERVER_INSTANCE="local"
 
 SLEEP_TIME=30
 
-while getopts ":s:w:" optval "$@"
+while getopts ":i:s:w:" optval "$@"
 do
     case $optval in
         "i")
@@ -31,25 +31,33 @@ do
     esac
 done
 
+if [[ $SERVER_INSTANCE =~ dev|stg|liv ]]; then
+    echo "Stopping tomcat6-"$SERVER_INSTANCE
+    sudo service tomcat6-$SERVER_INSTANCE stop
+fi
+
+echo 
+echo "Backing up the previous index"
+tar -czf index.tar.gz webapps/solr/data/index
+
+echo 
+echo "Removing the previous index"
+rm -rf webapps/solr/data/index
+echo 
+
+if [[ $SERVER_INSTANCE =~ dev|stg|liv ]]; then
+    echo "Starting tomcat6-"$SERVER_INSTANCE
+    sudo service tomcat6-$SERVER_INSTANCE start
+fi
+
+echo 
+echo "Waiting for the index directory to be created"
+sleep 30
+
 counter=0
 
 mkdir -p _tmp
-
-if [[ $SERVER_INSTANCE =~ [dev|stg|liv] ]]; then
-    echo "Stopping tomcat-"$SERVER_INSTANCE
-    sudo service tomcat-$SERVER_INSTANCE stop
-fi
-
-echo "Backing up the previous index"
-tar -czvf index.tar.gz webapps/solr/data/index
-
-echo "Removing the previous index"
-rm -rf webapps/solr/data/index
-
-if [[ $SERVER_INSTANCE =~ [dev|stg|liv] ]]; then
-    echo "Starting tomcat-"$SERVER_INSTANCE
-    sudo service tomcat-$SERVER_INSTANCE start
-fi
+rm -rf _tmp/*
 
 for f in webapps/ROOT/content/xml/tei/inscriptions/*.xml
 do
@@ -60,7 +68,7 @@ do
 
     if [[ $filename =~ ^[5P]{1}.*$ ]]; then
         echo $SERVER_URL/$SERVER_PATH/$filename.html
-        wget -q --directory-prefix _tmp --timeout=0 $SERVER_URL/$filename.html
+        wget -q --directory-prefix _tmp --timeout=0 $SERVER_URL/$SERVER_PATH/$filename.html
     fi
 
     if [[ $((counter % 100)) = 0 ]]; then
@@ -69,6 +77,6 @@ do
     fi
 done
 
-
+echo 
 echo "Indexing finished, checking for errors..."
 grep -Ri --colour=always OutOfMemoryError _tmp || echo "No errors found"
