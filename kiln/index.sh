@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Usage:     ./index.sh -i SERVER_INSTANCE -s SERVER_URL
-# Example:   ./index.sh -I -s iospe-stg.cch.kcl.ac.uk  
+# Example:   ./index.sh -i stg -s iospe-stg.cch.kcl.ac.uk
 # if -i and -s  not used, it defaults to local server instance and localhost
 
 SERVER_URL="http://localhost:9999"
@@ -34,25 +34,23 @@ done
 if [[ $SERVER_INSTANCE =~ dev|stg|liv ]]; then
     echo "Stopping tomcat6-"$SERVER_INSTANCE
     sudo service tomcat6-$SERVER_INSTANCE stop
-fi
 
-echo 
-echo "Backing up the previous index"
-tar -czf index.tar.gz webapps/solr/data/index
+    echo 
+    echo "Backing up the previous index"
+    tar -czf index.tar.gz webapps/solr/data/index
 
-echo 
-echo "Removing the previous index"
-rm -rf webapps/solr/data/index
-echo 
+    echo 
+    echo "Removing the previous index"
+    rm -rf webapps/solr/data/index
+    echo 
 
-if [[ $SERVER_INSTANCE =~ dev|stg|liv ]]; then
     echo "Starting tomcat6-"$SERVER_INSTANCE
     sudo service tomcat6-$SERVER_INSTANCE start
-fi
 
-echo 
-echo "Waiting for the index directory to be created"
-sleep 30
+    echo 
+    echo "Waiting for the index directory to be created"
+    sleep 15
+fi
 
 counter=0
 
