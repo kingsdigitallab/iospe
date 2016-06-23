@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -83,8 +86,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена до 1884 г., возможно, в ходе
                            археологических исследований ООИД.</rs>
                         <rs type="context"/>
@@ -125,10 +127,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1884, 26 (Latychew 1885, 285)</bibl>
-               <bibl>IOSPE I 190</bibl>
-               <bibl>Латышев 1907, 50</bibl>
-               <bibl>IOSPE I2 360</bibl>
+               <bibl><!-- Латышев 1884 --><ptr target="bib:b0811"/>, <citedRange>26</citedRange></bibl> 
+               <bibl> (<!-- Latychew 1885 --><ptr target="bib:b0812"/>, <citedRange>285</citedRange>)</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> I <citedRange>190</citedRange></bibl>
+               <bibl><!-- Латышев 1907 --><ptr target="bib:b0148"/>, <citedRange>50</citedRange></bibl>
+               <bibl><!-- IOSPE2 --><ptr target="bib:IOSPE2"/> <citedRange>360</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
