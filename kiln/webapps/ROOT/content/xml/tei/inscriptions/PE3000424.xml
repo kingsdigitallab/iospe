@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -35,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon12"
-                              >Постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -129,27 +131,31 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев1887, 66 (Latyschew 1887, 164)</bibl>
-               <bibl>IOSPE IV 93 (ср. Латышев 1890, 140)</bibl>
-               <bibl>(IGR I 862)</bibl>
-               <bibl>IOSPE I2 422</bibl>
+               <bibl><!-- Латышев1887 --><ptr target="bib:b0813"/>, <citedRange>66</citedRange></bibl> 
+               <bibl> (<!-- Latyschew 1887a --><ptr target="bib:b0814"/>, <citedRange>164</citedRange>)</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> IV <citedRange>93</citedRange></bibl> 
+               <bibl> (cf. <!-- Латышев 1890 --><ptr target="bib:b0793"/>, <citedRange>140</citedRange>)</bibl>
+               <bibl> (<!-- IGR --><ptr target="bib:IGR"/> <citedRange>I 862</citedRange>)</bibl>
+               <bibl><!-- IOSPE I2 --> <ptr target="bib:IOSPE2"/> <citedRange>422</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Minns 1913, 523</bibl>
-               <bibl>Stein 1940, 58</bibl>
-               <bibl>McCrum, Woodhead 1961, 310</bibl>
-               <bibl>Кадеев 1981, 24</bibl>
-               <bibl>Соломоник 1990, 31, № 21. Зубарь 1994, 30</bibl>
+               <bibl><!-- Minns 1913 --><ptr target="bib:b0336"/>, <citedRange>523</citedRange></bibl>
+               <bibl><!-- Stein 1940 --><ptr target="bib:b0815"/>, <citedRange>58</citedRange></bibl>
+               <bibl><!-- McCrum, Woodhead 1961 --><ptr target="bib:b0816"/>, <citedRange>310</citedRange></bibl>
+               <bibl><!-- Кадеев 1981 --><ptr target="bib:b0472"/>, <citedRange>24</citedRange></bibl>
+               <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, 31, № <citedRange>21</citedRange></bibl> 
+               <bibl><!-- Зубарь 1994 --><ptr target="bib:b0077"/>, <citedRange>30</citedRange></bibl>
                <bibl>Кадеев 1996, 12</bibl>
-               <bibl>Трейстер 1999, 141, № 7 (28)</bibl>
+               <bibl><!-- Трейстер 1999 --><ptr target="bib:b0509"/>, 141, № <citedRange>7 (28)</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><persName type="attested"><name>Σέξστον</name> <name>Ὀκτάουιον</name> <name>Φρόντωνα</name></persName> <w>πρεσβευ
+               		<lb n="1"/><persName type="attested"><name type="praenomen">Σέξστον</name> <name type="gentilicum">Ὀκτάουιον</name> 
+               		   <name type="cognomen">Φρόντωνα</name></persName> <w>πρεσβευ
                		<lb n="2" break="no"/>τὴν</w> <w>καὶ</w> <w>ἀντιστράτηγον</w> <persName type="ruler"><w>Αὐτοκράτορος</w> <name>Δομε
                		<lb n="3" break="no"/>τιανοῦ</name> <name>Καίσαρος</name> <w>θεοῦ</w> <name>Σεβαστοῦ</name> <name>Γερμανι
                		<lb n="4"/>κοῦ</name></persName> <space quantity="9" unit="character" precision="low"/> <w>ὁ</w> <w>δάμος</w>
