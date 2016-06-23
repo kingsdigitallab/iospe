@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -128,8 +125,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Лепер 1912, 62, № 10</bibl>
-               <bibl>IOSPE I2 389 (cf. IOSPE I2, p. 594, corrigendum)</bibl>
+               <bibl><!-- Лепер 1912 --><ptr target="bib:b0480"/>, 62, № <citedRange>10</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>389</citedRange></bibl> 
+               <bibl> (cf. <!-- IOSPE I2 --><ptr target="bib:IOSPE2"/>, p. <citedRange>594</citedRange>, corrigendum)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">

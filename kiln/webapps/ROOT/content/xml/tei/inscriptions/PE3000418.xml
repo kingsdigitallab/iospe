@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -126,9 +123,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1906, 118, № 29</bibl>
-               <bibl>– Латышев 1907, 64, ad № 29</bibl>
-               <bibl>IOSPE I2 390</bibl>
+               <bibl><!-- Латышев 1906 --><ptr target="bib:b0146"/>, 118, № <citedRange>29</citedRange></bibl>
+               <bibl><!-- Латышев 1907 --><ptr target="bib:b0148"/>, 64, <citedRange>ad № 29</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>390</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,23 +138,24 @@
             <ab>
            <lb n="0"/>    	<gap reason="lost" extent="unknown" unit="line"/>
            <lb n="1"/>    	<gap reason="lost" extent="unknown" unit="character"/> 
-                                    <supplied reason="lost"><persName type="attested"><name><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name>
-                                    <name>Φλάουιος</name></persName></supplied> 
-                                    <placeName type="ethic"><supplied reason="lost">Ἀγ</supplied><unclear>έ</unclear>πολις</placeName> 
-                                    <supplied reason="lost"><w>υἱὸς</w> <persName type="attested"><persName type="attested"><name>Φλαουίου</name></persName> 
-                                    <persName type="attested"><name>Ἀρίστωνος</name></persName></persName></supplied> 
+                                    <persName type="attested"><supplied reason="lost"><name type="praenomen"><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name>
+                                    <name type="gentilicum">Φλάουιος</name></supplied> 
+                                    <name type="cognomen"><supplied reason="lost">Ἀγ</supplied><unclear>έ</unclear>πολις</name> 
+                                    <supplied reason="lost"><w>υἱὸς</w> <persName type="attested"><name>Φλαουίου</name> 
+                                    <name>Ἀρίστωνος</name></persName></supplied></persName> 
                                     <gap reason="lost" extent="unknown" unit="character"/>
            <lb n="2"/>    	<gap reason="lost" extent="unknown" unit="character"/> 
-                                    <persName type="attested"><persName type="attested"><name><supplied reason="lost">Δημοκράτ</supplied><unclear>η</unclear>ς</name></persName> 
+                                    <persName type="attested"><name><supplied reason="lost">Δημοκράτ</supplied><unclear>η</unclear>ς</name> 
                                     <persName type="attested"><name>Βοΐσκου</name></persName></persName>, 
                                     <persName type="attested"><name><seg part="I">Ἱερ</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
            <lb n="3"/>    	<gap reason="lost" extent="unknown" unit="character"/> 
                                     <persName type="attested"><name>Ἡρακλεί<supplied reason="lost">δας</supplied></name></persName>
                                     <gap reason="lost" extent="unknown" unit="character"/>
-           <lb n="4"/>	<gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><persName type="attested"><name>Μᾶρκος</name> 
-                                    <name>Οὔλπιος</name></persName></supplied> 
-                                    <gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ς</unclear></w> 
-                                    <w>υἱὸς</w> <persName type="attested"><name>Οὐ<supplied reason="lost">λπίου</supplied></name></persName> 
+           <lb n="4"/>	<gap reason="lost" extent="unknown" unit="character"/> 
+                                    <persName type="attested"><supplied reason="lost"><name type="praenomen">Μᾶρκος</name> 
+                                    <name type="gentilicum">Οὔλπιος</name></supplied> 
+                                    <gap reason="lost" extent="unknown" unit="character"/><name type="cognomen"><seg part="F"><unclear>ς</unclear></seg></name> 
+                                    <w>υἱὸς</w> <persName type="attested"><name>Οὐ<supplied reason="lost">λπίου</supplied></name></persName></persName> 
                                     <gap reason="lost" extent="unknown" unit="character"/>
            <lb n="5"/>    	<gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Τ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
            <lb n="5a"/>    	<gap reason="lost" extent="unknown" unit="line"/>

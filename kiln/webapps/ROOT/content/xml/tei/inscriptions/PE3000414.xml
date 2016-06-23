@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -43,7 +41,8 @@
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
-                           <p xml:lang="ru">Обломана со всех сторон. Лицевая поверхность отшлифована. Частично сохранились пять строк надписи, вырезанной по предварительной разметке.</p>
+                           <p xml:lang="ru">Обломана со всех сторон. Лицевая поверхность отшлифована. Частично сохранились пять строк надписи, 
+                              вырезанной по предварительной разметке.</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">14,0</height>
@@ -83,7 +82,8 @@
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1908 г. в северо-восточном районе городища около Восточной базилики (№ 36), в помещении O6. Раскопки Р. Х. Лепера (НА НЗХТ, д. 101, л. 41, № 4241; д. 64, л. 23; д. 67, л. 65).</rs>
+                        <rs type="circumstances">Найдена в 1908 г. в северо-восточном районе городища около Восточной базилики (№ 36), в помещении O6. 
+                           Раскопки Р. Х. Лепера (НА НЗХТ, д. 101, л. 41, № 4241; д. 64, л. 23; д. 67, л. 65).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -118,8 +118,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Лепер 1912, 61, № 9</bibl>
-               <bibl>IOSPE I2 386</bibl>
+               <bibl><!-- Лепер 1912 --><ptr target="bib:b0480"/>, 61, № <citedRange>9</citedRange></bibl>
+               <bibl><!-- IOSPE2 --><ptr target="bib:IOSPE2"/> <citedRange>386</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">

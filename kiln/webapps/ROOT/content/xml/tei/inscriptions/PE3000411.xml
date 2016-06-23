@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -128,10 +125,14 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl>
-               <bibl>Фрагмент 1 (правый): Юргевич 1881a, 221, № 4</bibl>
-               <bibl>IOSPE I 192. Фрагмент 2 (левый): Latyschew 1891, 27, № 33</bibl>
-               <bibl>IOSPE IV 75. – IOSPE I2 382 (объединение фрагментов)</bibl>
+            <listBibl n="1">
+               <bibl><!-- Юргевич 1881a --><ptr target="bib:b0513"/>, 221, № <citedRange>4</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> I <citedRange>192</citedRange></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl><!-- Latyschew 1891 --><ptr target="bib:b0158"/>, 27, № <citedRange>33</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> IV <citedRange>75</citedRange></bibl>
+               <bibl><!-- IOSPE2 --><ptr target="bib:IOSPE2"/> <citedRange>382</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -193,7 +194,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>IOSPE IV 75. – IOSPE I2 382 (объединение фрагментов)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
