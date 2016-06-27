@@ -38,15 +38,14 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Частично сохранился левый край плиты с остатками пяти
                               строк надписи. Лицевая поверхность отполирована. После последнего
                               издания надписи была отколота нижняя правая часть фрагмента (с буквой
-                              Υ).</p>
+                              ипсилон).</p>
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">16,0</height>
@@ -78,15 +77,14 @@
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0161" notAfter="0233"
-                        evidence="Палеография упоминание_императорского_родового_имени_Aurelius">
+                        evidence="Палеография просопография">
                         <seg xml:lang="ru">161 г. н.э. – нач. III в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1912 г. в северо-восточном районе
                            Херсонеса, в помещении 70е, в яме. Раскопки Р.Х. Лепера (НА НЗХТ, д. 106,
                            л. 28, № 1668; д. 87, л. 22).</rs>
@@ -124,7 +122,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1915, 32, № 4 (IOSPE I2 393)</bibl>
+               <bibl><!-- Латышев 1915 --><ptr target="bib:b0154"/>, 32, № <citedRange>4</citedRange></bibl> 
+               <bibl> (<!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>393</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -135,19 +134,19 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="0"/>	                     <gap reason="lost" extent="unknown" unit="line"/>
-               <lb n="1"/>	                     <persName type="attested"><name>Μᾶρκ<supplied reason="lost">ος</supplied></name></persName> 
-                                                            <gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="2"/>	                     <persName type="attested"><name>Μᾶρκο<supplied reason="lost">ς</supplied></name></persName> 
-                                                            <gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="3"/>	                     <w part="F">ρου</w>, <persName type="attested"><name>Αὐρ<supplied reason="lost">ήλιος</supplied></name></persName> 
-                                                            <gap reason="lost" extent="unknown" unit="character"/> 
-                                                            <persName type="attested"><name><seg part="I"><supplied reason="lost">Αὐ</supplied></seg></name></persName>
-               <lb n="4" break="no"/>     <persName type="attested"><name><seg part="F"><choice><sic>ρή</sic><corr>λ</corr><sic>ιος</sic></choice></seg></name></persName> 
-                                                            <persName type="attested"><name><seg part="I">Χ</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="5"/>	                     <w>ὁ</w> <w>καὶ</w> <persName type="attested"><name><seg part="I">Ῥου<supplied reason="lost">φ</supplied></seg></name></persName> 
-                                                            <gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="5a"/>	                     <gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="1"/><persName type="attested"><name>Μᾶρκ<supplied reason="lost">ος</supplied></name></persName> 
+                                 <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><persName type="attested"><name>Μᾶρκο<supplied reason="lost">ς</supplied></name></persName> 
+                              <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="3"/><w part="F">ρου</w>, <persName type="attested"><name>Αὐρ<supplied reason="lost">ήλιος</supplied></name></persName> 
+                           <gap reason="lost" extent="unknown" unit="character"/> 
+                           <persName type="attested"><name><seg part="I"><supplied reason="lost">Αὐ</supplied></seg></name></persName>
+               <lb n="4" break="no"/><persName type="attested"><name><seg part="F"><choice><sic>ρή</sic><corr>λ</corr><sic>ιος</sic></choice></seg></name></persName> 
+                        <persName type="attested"><name><seg part="I">Χ</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="5"/><w>ὁ</w> <w>καὶ</w> <persName type="attested"><name><seg part="I">Ῥου<supplied reason="lost">φ</supplied></seg></name></persName> 
+                           <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="5a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">

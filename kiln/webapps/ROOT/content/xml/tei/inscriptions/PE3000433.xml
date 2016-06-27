@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -35,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon43">Вставка в
-                              постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon43">Вставка в постамент.</objectType>
                            <objectType xml:lang="en"/>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -67,7 +69,7 @@
                            перекрещивающимися наклонными линиям, курсивная омега; знаки-разделители;
                            небольшие утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">1,8. (в последней стк. около 1 см)</height>
+                        <height unit="cm">1,8 (в последней стк. около 1 см)</height>
                      </handNote>
                   </handDesc>
                </physDesc>
@@ -84,8 +86,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1912 г. в северо-восточном районе
                            Херсонеса (при «раскопках внутри монастырской ограды, в помещении V, под
                            полом»). Раскопки Р.Х. Лепера (НА НЗХТ, д. 106, л. 29, № 1720; д. 87, л.
@@ -128,7 +129,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1915, 28, № 1 (IOSPE I2 432)</bibl>
+               <bibl><!-- Латышев 1915 --><ptr target="bib:b0154"/>, 28, № <citedRange>1</citedRange></bibl> 
+               <bibl> (<!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>432</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">

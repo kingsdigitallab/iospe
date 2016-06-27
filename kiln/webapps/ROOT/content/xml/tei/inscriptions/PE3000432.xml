@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -35,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon12"
-                              >Постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -86,8 +88,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Обнаружена не позднее августа 1821 г., когда была
                            впервые осмотрена Г.К.Э. Кёлером в Севастополе, в частной коллекции И.П.
                            Псомаса.</rs>
@@ -129,15 +130,16 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Koehler 1826, 782, note 812 (CIG II 2098)</bibl>
-               <bibl>IOSPE I 198</bibl>
-               <bibl>IOSPE I2 431</bibl>
+               <bibl><!-- Koehler 1826 --><ptr target="bib:b0789"/>, <citedRange>782, note 812</citedRange></bibl> 
+               <bibl>( <!-- CIG --><ptr target="bib:Kirchhof"/> <citedRange>II 2098</citedRange>)</bibl> 
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>I 198</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="IOSPE2"/> <citedRange>431</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Сапрыкин 1998, 50 (просопография)</bibl>
+               <bibl><!-- Сапрыкин 1998 --><ptr target="bib:b0818"/>, <citedRange>50</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -173,6 +175,7 @@
          </div>
          <div type="commentary" xml:lang="ru">
             <p>II в. н.э. (вероятно, первая четверть века).</p>
+            <p>Сапрыкин 1998, 50 (просопография)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

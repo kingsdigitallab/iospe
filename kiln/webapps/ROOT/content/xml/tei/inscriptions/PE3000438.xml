@@ -38,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -84,8 +83,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1891 г. в центральной части городища, на
                            площади около собора св. Владимира (раскоп I). Раскопки К.К.
                            Косцюшко-Валюжинича (НА НЗХТ, д. 2, № 58; д. 20, № 58).</rs>
@@ -127,8 +125,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1892, 33, № 17 (IOSPE IV 98)</bibl>
-               <bibl>IOSPE I2 397</bibl>
+               <bibl><!-- Латышев 1892 --><ptr target="bib:b0125"/>, 33, № <citedRange>17</citedRange></bibl> 
+               <bibl> (<!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 98</citedRange>)</bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="IOSPE2"/> <citedRange>397</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -139,15 +138,15 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="0"/>	<gap reason="lost" extent="unknown" unit="line"/>
-               <lb n="1"/>	<gap reason="lost" extent="unknown" unit="character"/><w part="F">ία</w> 
+               <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ία</w> 
                                        <space quantity="1" unit="character"/>
-               <lb n="2"/>	<gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><w part="F">σ<unclear>α</unclear></w> 
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><w part="F">σ<unclear>α</unclear></w> 
                                        <space quantity="1" unit="character"/>
-               <lb n="3"/>	<gap reason="lost" extent="unknown" unit="character"/> 
+               <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> 
                                        <persName type="attested"><name><supplied reason="lost">Φ</supplied>ορμίων</name></persName><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="4"/>	<gap reason="lost" extent="unknown" unit="character"/><w part="M"><unclear>θ</unclear>αιο</w><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="4a"/>	<gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w part="M"><unclear>θ</unclear>αιο</w><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">

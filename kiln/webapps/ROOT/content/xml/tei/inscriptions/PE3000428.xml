@@ -20,7 +20,7 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>ОАМ</repository>
+                     <repository>Одесский археологический музей</repository>
                      <idno>50608</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
@@ -38,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon12"
-                              >Постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -86,8 +85,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol" cert="low"
-                           >Севастополь (Херсонес) (?).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol" cert="low">Севастополь (Херсонес) (?).</placeName>
                         <rs type="circumstances">В 1883 г. камень находился в музее ООИД.
                            Относительно его происхождения имеются противоречивые указания. По
                            свидетельствам В.В. Латышева и В.Н. Юргевича, директор музея ООИД Н.Н.
@@ -127,24 +125,24 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>IOSPE I 113 (издана как ольвийская надпись)</bibl>
-               <bibl>IOSPE I2 427 (издана как херсонесская надпись)</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> I <citedRange>113</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>427</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Юргевич 1887, 67, № 14</bibl>
-               <bibl>Латышев 1890, 145, ad № 113</bibl>
+               <bibl><!-- Юргевич 1887 --><ptr target="bib:b0514"/>, 67, № <citedRange>14</citedRange></bibl>
+               <bibl><!-- Латышев 1890 --><ptr target="bib:b0793"/>, 145, <citedRange>ad № 113</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/>		<gap reason="lost" extent="unknown" unit="character"/> 
-                                                    <supplied reason="lost"><w>καλῶς</w></supplied> 
-                                                    <w><supplied reason="lost">πολιτευσ</supplied><unclear>ά</unclear>μενον</w> 
-                                                    <space extent="unknown" unit="character"/>
-               <lb n="2"/>		<space extent="unknown" unit="character"/>
+            <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> 
+                            <supplied reason="lost"><w>καλῶς</w></supplied> 
+                            <w><supplied reason="lost">πολιτευσ</supplied><unclear>ά</unclear>μενον</w> 
+                            <space extent="unknown" unit="character"/>
+               <lb n="2"/><space extent="unknown" unit="character"/>
             </ab>
          </div>
          <div type="apparatus">
@@ -161,7 +159,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>IOSPE I 113 (издана как ольвийская надпись); IOSPE I2 427 (издана как херсонесская надпись)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
