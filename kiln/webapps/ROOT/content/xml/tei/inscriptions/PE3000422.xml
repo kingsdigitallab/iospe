@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon12"
-                              >Постамент.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -87,8 +84,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#taman" cert="low">Тамань
-                           (?).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#taman" cert="low">Тамань (?).</placeName>
                         <rs type="circumstances">Согласно первому изданию фрагмента (CIG) он был
                            подарен Феодосийскому музею древностей Ф. Дюбуа де Монпере (F. Dubois de
                            Montpéreux), в записях которого указывается, что камень был привезен из
@@ -132,15 +128,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>CIG II, p. 1000, № 2098. b (по чужой копии)</bibl>
-               <bibl>IOSPE I2 194 (по чужому эстампажу) (IOSPE I2 400)</bibl>
+               <bibl><!-- CIG --><ptr target="bib:Kirchhof"/> <citedRange>II, p. 1000, № 2098. b</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>194</citedRange></bibl>
+               <bibl> (<!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>400</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Robert 1937, 245 слл. (по поводу титулатуры Гераклеи Понтийской в херсонесских
-                  надписях)</bibl>
+               <bibl><!-- Robert 1937 --><ptr target="bib:b0810"/>, <citedRange>245 слл.</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -239,6 +235,8 @@
                время, или речь идет об обозначении, принятом лишь в гераклейских документах и
                имевшем чисто пропагандистский характер (Robert 1937, 245 слл.; ср. Heller 2006, 298
                сл.).</p>
+            <p>CIG II, p. 1000, № 2098. b (по чужой копии); IOSPE I2 194 (по чужому эстампажу); 
+               Robert 1937, 245 слл. (по поводу титулатуры Гераклеи Понтийской в херсонесских надписях)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

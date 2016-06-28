@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -65,7 +62,7 @@
                   </objectDesc>
                   <handDesc>
                      <handNote>
-                        <seg xml:lang="ru">эта с незамкнутой поперечной гастой, уменьшенный омикрон,
+                        <seg xml:lang="ru">Эта с незамкнутой поперечной гастой, уменьшенный омикрон,
                            омега в виде окружности и удлиненной горизонтали на уровне нижней линии
                            строки, апексы.</seg>
                         <seg xml:lang="en"/>
@@ -86,8 +83,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1888 г. в юго-восточном районе на берегу
                            Карантинной бухты, справа от Главной улицы. Раскопки К.К.
                            Косцюшко-Валюжинича (НА НЗХТ, д. 1, № 3; д. 17, л. 2, № 3).</rs>
@@ -125,17 +121,17 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Latyschev 1891, 28, № 35</bibl>
-               <bibl>IOSPE IV 96</bibl>
-               <bibl>IOSPE I2 391</bibl>
-               <bibl>НЭПХ II 112 в (ошибочное объединение с №№ ipe361, 363 и Taht)</bibl>
+               <bibl><!-- Latyschev 1891 --><ptr target="bib:b0124"/>, 28, № <citedRange>35</citedRange></bibl>
+               <bibl><!-- IOSPE --> <citedRange>IV 96</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>391</citedRange></bibl>
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ2"/> <citedRange>112</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Латышев 1907, 62, ad № 96</bibl>
-               <bibl>Макаров 2013а, 106-108</bibl>
+               <bibl><!-- Латышев 1907 --><ptr target="bib:b0148"/>, 62, <citedRange>ad № 96</citedRange></bibl>
+               <bibl><!-- Макаров 2013а --><ptr target="bib:b0809"/>, <citedRange>106-108</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -167,7 +163,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>НЭПХ II 112 в (ошибочное объединение с №№ ipe361, 363 и Taht)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

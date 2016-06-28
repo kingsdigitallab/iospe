@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -22,7 +20,7 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>ГИМ</repository>
+                     <repository>Государственный исторический музей</repository>
                      <idno>без номера (постоянная экспозиция)</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -82,18 +79,15 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0100"
-                        evidence="Палеография_см_также_комментарий">
+                     <origDate notBefore="0001" notAfter="0100" evidence="Палеография">
                         <seg xml:lang="ru">I в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol" cert="low"
-                           >Севастополь (Херсонес) (?).</placeName>
-                        <rs type="circumstances">До 1872 г. камень хранился в Херсонесе (ср.
-                           Мансветов 1872, 72).</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol" cert="low">Севастополь (Херсонес) (?).</placeName>
+                        <rs type="circumstances">До 1872 г. камень хранился в Херсонесе (ср. Мансветов 1872, 72).</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -132,19 +126,22 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1884, 43 (Latychew 1885, 274)</bibl>
-               <bibl>IOSPE I 196 (ср. IGR I 867)</bibl>
-               <bibl>IOSPE I2 420</bibl>
+               <bibl><!-- Латышев 1884 --><ptr target="bib:b0811"/>, <citedRange>43</citedRange></bibl>
+               <bibl> (<!-- Latychew 1885 --><ptr target="bib:b0812"/>, <citedRange>274</citedRange>)</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> I <citedRange>196</citedRange></bibl>
+               <bibl> (cf. <!-- IGR --><ptr target="bib:IGR"/> <citedRange>I 867</citedRange>)</bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>420</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Minns 1913, 524, n.3</bibl>
-               <bibl>Виноградов 1992, 137 (Vinogradov 1997, 572)</bibl>
-               <bibl>Соломоник 1990, 28, № 19</bibl>
-               <bibl>Сарновски 2006, 124</bibl>
-               <bibl>Зубарь 2004а, 49</bibl>
+               <bibl><!-- Minns 1913 --><ptr target="bib:b0336"/>, 524, n. <citedRange>3</citedRange></bibl>
+               <bibl><!-- Виноградов 1992 --><ptr target="bib:b0757"/>, <citedRange>137</citedRange></bibl> 
+               <bibl> (<!-- Vinogradov 1997 --><ptr target="bib:b0453"/>, <citedRange>572</citedRange>)</bibl>
+               <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, 28, № <citedRange>19</citedRange></bibl>
+               <bibl><!-- Сарновски 2006 --><ptr target="bib:b0826"/>, <citedRange>124</citedRange></bibl>
+               <bibl><!-- Зубарь 2004 --><ptr target="bib:b0468"/>, <citedRange>49</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">

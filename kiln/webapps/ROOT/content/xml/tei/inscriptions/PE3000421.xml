@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader type="text">
@@ -40,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -86,8 +83,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1891 г. в центральной части городища, на
                            площади около собора св. Владимира (раскоп I). Раскопки К.К.
                            Косцюшко-Валюжинича (НА НЗХТ, д. 2, № 59; д. 20, № 59).</rs>
@@ -125,8 +121,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1892, 32, № 16 (IOSPE IV 97</bibl>
-               <bibl>IOSPE I2 396)</bibl>
+               <bibl><!-- Латышев 1892 --><ptr target="bib:b0125"/>, 32, № <citedRange>16</citedRange></bibl> 
+               <bibl> (<!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 97</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>396</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
