@@ -46,8 +46,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -108,8 +107,7 @@
                   <history>
                      <provenance type="found">
                         <seg xml:lang="ru">
-                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol"
-                              >Севастополь (Херсонес).</placeName>
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                            <rs type="circumstances">Найден в 1888 г. в юго-восточном районе на
                               берегу Карантинной бухты, справа от Главной улицы. Раскопки К.К.
                               Косцюшко-Валюжинича (НА НЗХТ, д. 17, л. 2, № 4; д. 1, № 4).</rs>
@@ -127,7 +125,7 @@
                      </provenance>
                   </history>
                </msPart>
-               <msPart n="2-3">
+               <msPart n="2 3">
                   <msIdentifier/>
                   <physDesc>
                      <objectDesc>
@@ -145,8 +143,7 @@
                   <history>
                      <provenance type="found" n="2 3">
                         <seg xml:lang="ru">
-                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol"
-                              >Севастополь (Херсонес).</placeName>
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                            <rs type="circumstances">Фрагмент 2 (левый) найден в 1909 г., в
                               северо-восточном районе Херсонеса, (помещение XIV, пол). Раскопки Р.Х.
                               Лепера (НА НЗХТ, д. 102, л. 27, № 1679). Фрагмент 3 (правый) найден в
@@ -195,89 +192,95 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl>
-               <bibl>Фрагмент 1: Latyschev 1890, 28, № 34</bibl>
-               <bibl>IOSPE IV 74</bibl>
-               <bibl>IOSPE I2 380. Фрагмент 2: IOSPE I2 702. Фрагмент 3: Латышев 1905, 105, №
-                  13</bibl>
-               <bibl>IOSPE I2 385. Издание объединенных фрагментов 1–3: НЭПХ II 113</bibl>
+            <listBibl n="1">
+               <bibl><!-- Latyschev 1890 --><ptr target="bib:b0158"/>, 28, № <citedRange>34</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 74</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>380</citedRange></bibl> 
+            </listBibl>
+            <listBibl n="2 3">
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>702</citedRange></bibl> 
+               <bibl><!-- Латышев 1905 --><ptr target="bib:b0145"/>, 105, № <citedRange>13</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>385</citedRange></bibl> 
+            </listBibl>
+            <listBibl n="1 2 3">
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ2"/> <citedRange>113</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Соломоник 1990, 40, № 30</bibl>
+               <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, 40, № <citedRange>30</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
                 <div type="textpart" subtype="fragment" n="1">
                     <ab>
-                        <lb n="0"/> 	<gap reason="lost" extent="unknown" unit="line"/>
-                        <lb n="1"/> 	<gap reason="lost" extent="unknown" unit="character"/><orig>ΣΠΟ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                        <lb n="2"/> 	<gap reason="lost" extent="unknown" unit="character"/>
-                                                    <w>καθ<unclear>ᾶ</unclear><supplied reason="lost">κον</supplied></w> 
-                                                    <supplied reason="lost"><w>ἐψαφισάμεθα</w>· <w>δι’</w> <w>ἃ</w> <w>δεδόχθαι</w> 
-                                                    <w>τᾷ</w> <w>βουλᾷ</w> <w>καὶ</w> <w>τῷ</w></supplied>
-                        <lb n="3"/> 	<supplied reason="lost"><w>δάμῳ</w></supplied>· 
-                                                    <w><supplied reason="lost">ἐπαι</supplied>νέσ<supplied reason="lost">αι</supplied></w> 
-                                                    <supplied reason="lost"><w>μὲν</w> <w>ἐπὶ</w> <w>τούτοις</w></supplied> 
-                                                    <gap reason="lost" extent="unknown" unit="character"/>
-                        <lb n="4"/>	<gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w>, <w>δόμεν</w> <w>δὲ</w> 
-                                                    <w>α<supplied reason="lost">ὐτῷ</supplied></w> <supplied reason="lost"><w>προξενίας</w> <w>πολιτείαν</w>,
-                                                     <w>ἔσπλουν</w> <w>τε</w></supplied>
-                        <lb n="5"/> 	<supplied reason="lost"><w>καὶ</w></supplied> <w><supplied reason="lost">ἔκπ</supplied>λουν</w> <w>ἐν</w> 
-                                                    <w>εἰ<supplied reason="lost">ράνᾳ</supplied></w> <supplied reason="lost"><w>καὶ</w> <w>ἐν</w> 
-                                                    <w>πολέμῳ</w> <w>ἀσυλεὶ</w> 
-                                                    <w>καὶ</w> <w>ἀσπονδεὶ</w></supplied>
-                        <lb n="6"/> 	<supplied reason="lost"><w>αὐτῷ</w> <w>τε</w> <w>καὶ</w></supplied> 
-                                                    <w><supplied reason="lost">ἐκ</supplied><unclear>γ</unclear>όνο<unclear>ις</unclear></w> <w>καὶ</w> 
-                                                    <w>χ<supplied reason="lost">ράμασι</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
-                        <lb n="6a"/>      <gap reason="lost" extent="unknown" unit="line"/>
+                        <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΣΠΟ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>
+                                           <w>καθ<unclear>ᾶ</unclear><supplied reason="lost">κον</supplied></w> 
+                                           <supplied reason="lost"><w>ἐψαφισάμεθα</w>· <w>δι’</w> <w>ἃ</w> <w>δεδόχθαι</w> 
+                                           <w>τᾷ</w> <w>βουλᾷ</w> <w>καὶ</w> <w>τῷ</w></supplied>
+                        <lb n="3"/><supplied reason="lost"><w>δάμῳ</w></supplied>· 
+                                           <w><supplied reason="lost">ἐπαι</supplied>νέσ<supplied reason="lost">αι</supplied></w> 
+                                           <supplied reason="lost"><w>μὲν</w> <w>ἐπὶ</w> <w>τούτοις</w></supplied> 
+                                           <gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w>, <w>δόμεν</w> <w>δὲ</w> 
+                                           <w>α<supplied reason="lost">ὐτῷ</supplied></w> <supplied reason="lost"><w>προξενίας</w> <w>πολιτείαν</w>,
+                                            <w>ἔσπλουν</w> <w>τε</w></supplied>
+                        <lb n="5"/><supplied reason="lost"><w>καὶ</w></supplied> <w><supplied reason="lost">ἔκπ</supplied>λουν</w> <w>ἐν</w> 
+                                           <w>εἰ<supplied reason="lost">ράνᾳ</supplied></w> <supplied reason="lost"><w>καὶ</w> <w>ἐν</w> 
+                                           <w>πολέμῳ</w> <w>ἀσυλεὶ</w> 
+                                           <w>καὶ</w> <w>ἀσπονδεὶ</w></supplied>
+                        <lb n="6"/><supplied reason="lost"><w>αὐτῷ</w> <w>τε</w> <w>καὶ</w></supplied> 
+                                           <w><supplied reason="lost">ἐκ</supplied><unclear>γ</unclear>όνο<unclear>ις</unclear></w> <w>καὶ</w> 
+                                           <w>χ<supplied reason="lost">ράμασι</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="6a"/><gap reason="lost" extent="unknown" unit="line"/>
                     </ab>
                 </div>
-             <div type="textpart" subtype="fragment" n="2-3">
+             <div type="textpart" subtype="fragment" n="2 3">
                  <ab>
-                    <lb n="1"/>     <gap reason="lost" extent="unknown" unit="character"/>
-                                            <w><supplied reason="lost">γρα</supplied><unclear>μμ</unclear><supplied reason="lost">ατεύοντος</supplied></w> 
-                                            <persName type="attested"><supplied reason="lost"><name><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name> 
-                                            <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name></supplied> 
-                                            <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>υἱοῦ</w></supplied> 
-                                            <persName type="attested"><supplied reason="lost"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name></supplied>
-                    <lb n="2"/>     <persName type="attested"><name><supplied reason="lost">Ἀρ</supplied>ίσ<supplied reason="lost">τω</supplied>νος</name></persName></persName></persName>· 
-                                            <g type="punctus"/> <w>ἐσφραγίσαν<supplied reason="lost">το</supplied></w> 
-                                            <supplied reason="lost"><num value="1">α</num> <w>στίχῳ</w>· <w>θεὰ</w> <w>βασίλισσα</w> 
-                                            <persName type="divine"><name>Παρθένος</name></persName></supplied>,
-                    <lb n="3"/>     <persName type="attested"><name><expan><abbr><unclear>Τ</unclear></abbr><ex>ίτος</ex></expan></name> 
-                                            <g type="punctus"/> <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name> 
-                                            <name>Παρθενοκλῆς</name> <w>υἱὸ<supplied reason="lost">ς</supplied></w> 
-                                            <persName type="attested"><supplied reason="lost"><name><unclear>Φλ</unclear>αουίου</name></supplied> 
-                                            <supplied reason="lost" cert="low"><name>Νάσωνος</name></supplied></persName></persName> 
-                                            <supplied reason="lost"><w>πρῶτος</w> <w>ἄρχων</w></supplied>, 
-                                            <persName type="attested"><supplied reason="lost"><name><expan><abbr><unclear>Τ</unclear></abbr><ex>ίτος</ex></expan></name> 
-                                            <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name></supplied> 
-                                            <supplied reason="lost"><name><seg part="I">Ἀρίσ</seg></name></supplied>
-                    <lb n="4" break="no"/>     <name><seg part="F"><supplied reason="lost">τ</supplied>ων</seg></name> 
-                                                                 <w>υἱὸς</w> <persName type="attested"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name></persName> 
-                                                                 <name>Ἀρίστωνος</name></persName>, 
-                                                                 <persName type="attested"><name><seg part="I">Ε</seg></name><gap reason="lost" extent="unknown" unit="character"/>
-                                                                 <supplied reason="lost"><w>υἱος</w></supplied> 
-                                                                 <persName type="attested"><supplied reason="lost"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name></supplied>
-                    <lb n="5"/>     <name><supplied reason="lost">Ἀ</supplied>γεπόλεος</name></persName></persName>, 
-                                            <persName type="attested"><name>Μητρόδω<supplied reason="lost">ρος</supplied></name> 
-                                            <persName type="attested"><name><supplied reason="lost" cert="low">Διοσκουρίδου</supplied></name></persName></persName>
-                                            <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="6"/>     <gap reason="lost" quantity="1" unit="character"/><w part="I">νος</w>, 
-                                            <persName type="attested"><orig>Γ.</orig> <name>Ἰούλιος</name> 
-                                            <persName type="attested"><name>Αἰ<unclear>μ</unclear><supplied reason="lost" cert="low">ιλιανός</supplied></name></persName>
-                                            <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="7"/>     <w><supplied reason="lost">υἱὸ</supplied>ς</w> 
-                                            <persName type="attested"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name> 
-                                            <name>Ἀρίστω<supplied reason="lost">νος</supplied></name></persName></persName> 
-                                            <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="8"/>     <persName type="attested"><name><supplied reason="lost">Φιλ</supplied><unclear>ό</unclear>μουσ<supplied reason="lost">ος</supplied></name> 
-                                            <persName type="attested"><name>Ἀπολλωνίδου</name></persName></persName> 
-                                            <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="8a"/>  <gap reason="lost" extent="unknown" unit="line"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>
+                                   <w><supplied reason="lost">γρα</supplied><unclear>μμ</unclear><supplied reason="lost">ατεύοντος</supplied></w> 
+                                   <persName type="attested"><supplied reason="lost"><name><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name> 
+                                   <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name></supplied> 
+                                   <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>υἱοῦ</w></supplied> 
+                                   <persName type="attested"><supplied reason="lost"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name></supplied>
+                    <lb n="2"/><persName type="attested"><name><supplied reason="lost">Ἀρ</supplied>ίσ<supplied reason="lost">τω</supplied>νος</name></persName></persName></persName>· 
+                                      <g type="punctus"/> <w>ἐσφραγίσαν<supplied reason="lost">το</supplied></w> 
+                                      <supplied reason="lost"><num value="1">α</num> <w>στίχῳ</w>· <w>θεὰ</w> <w>βασίλισσα</w> 
+                                      <persName type="divine"><name>Παρθένος</name></persName></supplied>,
+                    <lb n="3"/><persName type="attested"><name><expan><abbr><unclear>Τ</unclear></abbr><ex>ίτος</ex></expan></name> 
+                                   <g type="punctus"/> <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name> 
+                                   <name>Παρθενοκλῆς</name> <w>υἱὸ<supplied reason="lost">ς</supplied></w> 
+                                   <persName type="attested"><supplied reason="lost"><name><unclear>Φλ</unclear>αουίου</name></supplied> 
+                                   <supplied reason="lost" cert="low"><name>Νάσωνος</name></supplied></persName></persName> 
+                                   <supplied reason="lost"><w>πρῶτος</w> <w>ἄρχων</w></supplied>, 
+                                   <persName type="attested"><supplied reason="lost"><name><expan><abbr><unclear>Τ</unclear></abbr><ex>ίτος</ex></expan></name> 
+                                   <name><expan><abbr>Φλ</abbr><ex>αουίος</ex></expan></name></supplied> 
+                                   <supplied reason="lost"><name><seg part="I">Ἀρίσ</seg></name></supplied>
+                    <lb n="4" break="no"/><name><seg part="F"><supplied reason="lost">τ</supplied>ων</seg></name> 
+                                   <w>υἱὸς</w> <persName type="attested"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name></persName> 
+                                   <name>Ἀρίστωνος</name></persName>, 
+                                   <persName type="attested"><name><seg part="I">Ε</seg></name><gap reason="lost" extent="unknown" unit="character"/>
+                                   <supplied reason="lost"><w>υἱος</w></supplied> 
+                                   <persName type="attested"><supplied reason="lost"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name></supplied>
+                    <lb n="5"/><name><supplied reason="lost">Ἀ</supplied>γεπόλεος</name></persName></persName>, 
+                                   <persName type="attested"><name>Μητρόδω<supplied reason="lost">ρος</supplied></name> 
+                                   <persName type="attested"><name><supplied reason="lost" cert="low">Διοσκουρίδου</supplied></name></persName></persName>
+                                   <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="6"/><gap reason="lost" quantity="1" unit="character"/><w part="I">νος</w>, 
+                                   <persName type="attested"><orig>Γ.</orig> <name>Ἰούλιος</name> 
+                                   <persName type="attested"><name>Αἰ<unclear>μ</unclear><supplied reason="lost" cert="low">ιλιανός</supplied></name></persName>
+                                   <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="7"/><w><supplied reason="lost">υἱὸ</supplied>ς</w> 
+                                   <persName type="attested"><name><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name> 
+                                   <name>Ἀρίστω<supplied reason="lost">νος</supplied></name></persName></persName> 
+                                   <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="8"/><persName type="attested"><name><supplied reason="lost">Φιλ</supplied><unclear>ό</unclear>μουσ<supplied reason="lost">ος</supplied></name> 
+                                   <persName type="attested"><name>Ἀπολλωνίδου</name></persName></persName> 
+                                   <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="8a"/><gap reason="lost" extent="unknown" unit="line"/>
                  </ab>
              </div>
          </div>
@@ -341,6 +344,7 @@
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Ε̣[ρμοκλῆς Ἀπολλωνίου] - НЭПХ ; cf. n. IPE359 ; NEPH111.</p>
+            <p>Издание объединенных фрагментов 1–3: НЭПХ II 113</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

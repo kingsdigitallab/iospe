@@ -38,8 +38,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -78,8 +77,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найден ранее 1892 г., когда был осмотрен В.В.
                            Латышевым в Херсонесе.</rs>
                         <rs type="context"/>
@@ -124,8 +122,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>IOSPE IV 74 («fragmentum alterum»)</bibl>
-               <bibl>IOSPE I2 380 («fragmentum alterum»)</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 74</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>380</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -136,13 +134,13 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="0"/>	<gap reason="lost" extent="unknown" unit="line"/>
-               <lb n="1"/>	<gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>Υ</orig><gap reason="lost" quantity="1" unit="character"/><orig>ΗΝ</orig><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="2"/>	<gap reason="lost" extent="unknown" unit="character"/><orig>ΓΕΝΟΥΣ</orig><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="3"/>	<gap reason="lost" extent="unknown" unit="character"/><orig>ΝΤ</orig><gap reason="lost" quantity="1" unit="character"/><orig>ΟΟΜ</orig><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="4"/>	<gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="3" unit="character"/><orig>ΟΥΣ</orig><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="5"/>	<gap reason="lost" extent="unknown" unit="character"/><orig>ТО</orig><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="5a"/>	<gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>Υ</orig><gap reason="lost" quantity="1" unit="character"/><orig>ΗΝ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΓΕΝΟΥΣ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΝΤ</orig><gap reason="lost" quantity="1" unit="character"/><orig>ΟΟΜ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="3" unit="character"/><orig>ΟΥΣ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><orig>ТО</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="5a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
@@ -167,6 +165,7 @@
          <div type="commentary" xml:lang="ru">
             <p>Согласно предположению В.В. Латышева (IOSPE), фрагмент мог относиться к декрету со
                списком «приложивших печати» №neph113.</p>
+            <p>IOSPE IV 74 («fragmentum alterum»); IOSPE I2 380 («fragmentum alterum»)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

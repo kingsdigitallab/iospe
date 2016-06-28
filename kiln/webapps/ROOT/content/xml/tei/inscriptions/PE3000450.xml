@@ -88,8 +88,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
-                           (Херсонес).</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена до 1872 г., когда камень был отправлен в
                            Москву.</rs>
                         <rs type="context"/>
@@ -131,30 +130,31 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>НЭПХ I 109</bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> I <citedRange>109</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Виноградов 1975, 170</bibl>
-               <bibl>Соломоник 1990, 17, № 8</bibl>
+               <bibl><!-- Виноградов 1975 --><ptr target="bib:b0450"/>, <citedRange>170</citedRange></bibl>
+               <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, 17, № <citedRange>8</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
              <div type="textpart" subtype="cor" n="1">
                  <ab>
-               <lb n="1"/>     <w>ὁ</w> <w>δᾶμος</w>
-               <lb n="2"/>	<gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"></gap><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>T</unclear></orig><gap reason="illegible" quantity="2" unit="character"/>
+               <lb n="1"/><w>ὁ</w> <w>δᾶμος</w>
+               <lb n="2"/><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"></gap>
+                    <gap reason="illegible" quantity="1" unit="character"/><orig><unclear>T</unclear></orig><gap reason="illegible" quantity="2" unit="character"/>
                  </ab>
              </div>
              <div type="textpart" subtype="cor" n="2">
                  <ab>
-               <lb n="3"/>      <gap reason="lost" extent="unknown" unit="character" cert="low"/>  
-                                       <w><supplied reason="lost">Ὀ</supplied><unclear>λ</unclear>βιοπ<supplied reason="lost">ο</supplied><unclear>λι</unclear></w>
-               <lb n="4" break="no"/>	  <supplied reason="lost"><w>τῶν</w> <w>ὁ</w></supplied> 
-                                                                   <w><supplied reason="lost">δ</supplied><unclear>ᾶμο</unclear>ς</w>
-               <lb n="5"/>	  <gap reason="illegible" quantity="1" unit="character"/>
+               <lb n="3"/><gap reason="lost" extent="unknown" unit="character" cert="low"/>  
+                              <w><supplied reason="lost">Ὀ</supplied><unclear>λ</unclear>βιοπ<supplied reason="lost">ο</supplied><unclear>λι</unclear></w>
+               <lb n="4" break="no"/><supplied reason="lost"><w>τῶν</w> <w>ὁ</w></supplied> 
+                               <w><supplied reason="lost">δ</supplied><unclear>ᾶμο</unclear>ς</w>
+               <lb n="5"/><gap reason="illegible" quantity="1" unit="character"/>
                  </ab>   
              </div>
          </div>
