@@ -128,15 +128,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--IOSPE I--><ptr target="bib:IOSPE"/> <citedRange>220</citedRange>, по копии
-                  Н.П. Кондакова (IOSPE I2 540)</bibl>
+               <bibl><!--IOSPE I--><ptr target="bib:IOSPE"/> <citedRange>220</citedRange></bibl>
+               <bibl> (<!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>540</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Мансветов 1872--><ptr target="bib:b0489"/>, 51, № 14</bibl>
-               <bibl><!--KW--><ptr target="bib:b0519"/> № 478</bibl>
+               <bibl><!--Мансветов 1872--><ptr target="bib:b0489"/>, 51, № <citedRange>14</citedRange></bibl>
+               <bibl><!--KW--><ptr target="bib:b0519"/>, № <citedRange>478</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -147,9 +147,8 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <!-- <app><note>IOSPE I2 540.</note></app>-->
                <app>
-                  <note>«Dubito, num recte haec sint excripta» (Латышев в IOSPE I2).</note>
+                  <note source="bib:IOSPE2">«Dubito, num recte haec sint excripta».</note>
                </app>
             </listApp>
          </div>
@@ -160,7 +159,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>IOSPE I 220, по копии Н.П. Кондакова.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
