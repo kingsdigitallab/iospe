@@ -45,7 +45,8 @@
                               надписи.</p>
                            <p xml:lang="en"/>
                            <dimensions>
-                              <!-- 10 (диаметр)/3,5 (толщина)-->
+                              <depth unit="cm">3,5</depth>
+                              <dim type="diameter" unit="cm">10,0</dim>
                            </dimensions>
                         </support>
                      </supportDesc>
@@ -127,8 +128,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ I-->
-                  <ptr target="bib:НЭПХ"/> <citedRange>41</citedRange></bibl>
+               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/> <citedRange>41</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -147,9 +147,6 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1">
-                  <note>От двух букв сохранились следы вертикальных линий.</note>
-               </app>
                <app loc="2-4">
                   <rdg source="bib:НЭПХ"/>
                </app>
@@ -162,7 +159,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>1. От двух букв сохранились следы вертикальных линий.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
