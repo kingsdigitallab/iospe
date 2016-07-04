@@ -126,7 +126,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>IOSPE I2 690 (оборотная сторона издана в IOSPE I2 713)</bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>690</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>713</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -140,18 +141,20 @@
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="2"/><w><unclear>π</unclear>ροαισιμνῶντος</w> <gap reason="lost" extent="unknown" unit="character"/>
                <persName type="attested"><name><supplied reason="lost">Ἡρα</supplied>
-               		<lb n="3" break="no"/>κλείου</name></persName>, <w>γραμματε<supplied reason="lost">ύοντος</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="4"/><space quantity="5" unit="character" cert="low"/> <w>δώ<supplied reason="lost">ρ</supplied>ου</w> <w>τοῦ</w> <orig>Σ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="3" break="no"/>κλείου</name></persName>, 
+               <w>γραμματε<supplied reason="lost">ύοντος</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="4"/><space quantity="5" unit="character" cert="low"/> <w>δώ<supplied reason="lost">ρ</supplied>ου</w> <w>τοῦ</w> 
+               <orig>Σ</orig><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="5"/><space extent="unknown" unit="character"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
-               <app>
-                  <note>1, in.: [π]ροαισιμνῶντος - IOSPE.</note>
+               <app loc="1">
+                  <rdg source="bib:IOSPE">[π]ροαισιμνῶντος</rdg>
                </app>
-               <app>
-                  <note>2/3: [Ματρο?]|δώ[ρ]ου - IOSPE.</note>
+               <app loc="2-3">
+                  <rdg source="bib:IOSPE">[Ματρο?]|δώ[ρ]ου</rdg>
                </app>
             </listApp>
          </div>
@@ -163,7 +166,7 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>IOSPE I2 690 (оборотная сторона издана в IOSPE I2 713).</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
