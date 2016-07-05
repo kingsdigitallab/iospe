@@ -73,7 +73,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="палеография формула">
+                     <origDate notBefore="0001" notAfter="0200" evidence="палеография формула">
                         <seg xml:lang="ru">I – II в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
@@ -89,7 +89,7 @@
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">Found in....excavations of K.K.
                            Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
@@ -125,14 +125,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>IOSPE IV 183 (IOSPE I2 642)</bibl>
-               <bibl>НЭПХ I 4</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 183</citedRange></bibl> 
+               <bibl> (<!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>642</citedRange>)</bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>4</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl>Nadel 1976, 199</bibl>
+               <bibl><!-- Nadel 1976 --><ptr target="bib:b0436"/>, <citedRange>199</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -145,14 +146,11 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app>
-                  <note>НЭПХ I 4.</note>
+               <app loc="1">
+                  <rdg source="bib:IOSPE">Τάντα[λος] ?</rdg>
                </app>
-               <app>
-                  <note>1: Τάντα[λος] ? - IOSPE.</note>
-               </app>
-               <app>
-                  <note>2: supplevi.</note>
+               <app loc="2">
+                  <note>supplevi</note>
                </app>
             </listApp>
          </div>

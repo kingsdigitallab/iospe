@@ -73,7 +73,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="палеография">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
@@ -89,7 +89,7 @@
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">Found in....excavations of K.K.
                            Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
@@ -125,8 +125,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1902a, 24, № 4</bibl>
-               <bibl>IOSPE I2 375</bibl>
+               <bibl><!-- Латышев 1902a --><ptr target="bib:b0143"/>, 24, № <citedRange>4</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>375</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -147,20 +147,19 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app>
-                  <note>IOSPE I2 375.</note>
-               </app>
-               <app>
-                  <note>1: без чтения - edd.; в начале стк. часть вертикали, вероятно, от Γ или Τ, в
+               <app loc="1">
+                  <note>без чтения - edd.; в начале стк. часть вертикали, вероятно, от Γ или Τ, в
                      конце стк. низ вертикальной гасты.</note>
                </app>
-               <app>
-                  <note>2, in: [δι’ ὃ] supplevi; fin.: [τῶι] - edd; [ἐπαινέσαι] scripsi;
-                     [ἐπαινῆσθαι] - edd.</note>
+               <app loc="2">
+                  <rdg><note>in:</note> [δι’ ὃ] <note>supplevi</note></rdg> 
+                  <rdg><note>fin.:</note> [τῶι] <note>edd.</note></rdg>
+                  <rdg>[ἐπαινέσαι] <note>scripsi</note></rdg>
+                  <rdg>[ἐπαινῆσθαι] <note>edd.</note></rdg>
                </app>
-               <app>
-                  <note>3, in.: [Τ. Φλάουιον Εὐρύδα]μον ? - IOSPE (cf. IOSPE I2 363); fin.: υἱὸ[ν] -
-                     edd.</note>
+               <app loc="3">
+                  <rdg source="bib:IOSPE"><note>in.:</note> [Τ. Φλάουιον Εὐρύδα]μον ? <note>(cf. IOSPE I<hi rend="superscript">2</hi> 363)</note></rdg> 
+                  <rdg><note>fin.:</note> υἱὸ[ν] <note>edd.</note></rdg>
                </app>
             </listApp>
          </div>

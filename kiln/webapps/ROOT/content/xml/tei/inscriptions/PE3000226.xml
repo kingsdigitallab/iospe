@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Decree</title>
+            <title xml:lang="ru">Декрет</title>
             <title xml:lang="en">Decree</title>
          </titleStmt>
          <publicationStmt>
@@ -73,7 +73,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="палеография">
+                     <origDate notBefore="0151" notAfter="0233" evidence="палеография">
                         <seg xml:lang="ru">2-я пол. II – нач. III в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
@@ -90,7 +90,7 @@
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances">Found in....excavations of K.K.
                            Kostsyushko-Valyuzhinich</rs>
                         <rs type="context"/>
@@ -126,8 +126,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Латышев 1908, 27, № 17</bibl>
-               <bibl>IOSPE I2 398</bibl>
+               <bibl><!-- Латышев 1908 --><ptr target="bib:b0149"/>, 27, № <citedRange>17</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>398</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -149,17 +149,14 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app>
-                  <note>IOSPE I2 398.</note>
+               <app loc="1">
+                  <rdg><note>in.:</note> [ἐπειδὴ - - -] <note>edd.</note></rdg>
                </app>
-               <app>
-                  <note>1, in.: [ἐπειδὴ - - -] - edd.</note>
+               <app loc="3-4">
+                  <note>без чтения - edd.</note>
                </app>
-               <app>
-                  <note>3-4: без чтения - edd.</note>
-               </app>
-               <app>
-                  <note>4: в конце стк. верх вертикальной линии.</note>
+               <app loc="4">
+                  <note>в конце стк. верх вертикальной линии.</note>
                </app>
             </listApp>
          </div>
