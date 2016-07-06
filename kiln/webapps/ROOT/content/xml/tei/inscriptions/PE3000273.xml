@@ -57,14 +57,6 @@
                         </layout>
                      </layoutDesc>
                   </objectDesc>
-                  <handDesc>
-                     <handNote>
-                        <seg xml:lang="ru">Буквы вырезаны по разметке, курсивные эпсилон, сигма,
-                           декоративное омикрон, апексы.</seg>
-                        <seg xml:lang="en"/>
-                        <height unit="cm">1,5</height>
-                     </handNote>
-                  </handDesc>
                </physDesc>
                <history>
                   <origin>
@@ -99,8 +91,31 @@
                      <seg xml:lang="ru">Севастополь.</seg>
                      <seg xml:lang="en">Sevastopol.</seg>
                   </provenance>
-
                </history>
+               <msPart n="1">
+                  <msIdentifier/>
+                  <physDesc>
+                     <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Буквы вырезаны по разметке, курсивные сигма и омега, ипсилон с изогнутыми наклонными, апексы.</seg>
+                        <seg xml:lang="en"/>
+                        <height unit="cm">3,0</height>
+                     </handNote>
+                  </handDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier/>
+                  <physDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">Буквы вырезаны по разметке, курсивные эпсилон, сигма, декоративное омикрон, апексы.</seg>
+                           <seg xml:lang="en"/>
+                           <height unit="cm">1,5</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -128,11 +143,13 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 112, № <citedRange>27,
-                     б</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>598, b</citedRange> (без
-                  чтения)</bibl>
+            <listBibl n="1">
+               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 112, № <citedRange>27, a</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>598, a</citedRange>)</bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 112, № <citedRange>27, б</citedRange></bibl>
+               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>598, b</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
