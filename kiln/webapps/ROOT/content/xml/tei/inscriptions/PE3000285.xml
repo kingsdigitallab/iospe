@@ -131,7 +131,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев В.В. 1899--><ptr target="bib:b0136"/></bibl>
+               <bibl><!--Латышев В.В. 1899--><ptr target="bib:b0136"/>, 25, № <citedRange>39</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 169</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>618</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -148,14 +150,26 @@
                 <lb n="3"/><gap reason="lost" extent="9" unit="character"/><orig>μα</orig><gap reason="lost" extent="unknown" unit="character"/>
 	       <lb n="4"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
-
          </div>
-         <div type="apparatus"> </div>
-         <div type="translation" xml:lang="ru"> </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1">
+                  <rdg><note>в начале стк. следы круглой буквы, возможно,</note> [- - -] ο̣ὐδὲ χ[θ]ονό[ς - - -]</rdg>
+               </app>
+               <app loc="2">
+                  <rdg source="bib:IOSPE">ΙΑ</rdg>
+               </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p/>
+         </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
-         <div type="commentary" xml:lang="ru"> </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Восстановление χ[θ]ονό[ς - - -] в стк. 1 делает возможным предположение, что надпись представляла собой метрическую эпитафию.</p>
+         </div>
          <div type="commentary" xml:lang="en">
             <p/>
          </div>
