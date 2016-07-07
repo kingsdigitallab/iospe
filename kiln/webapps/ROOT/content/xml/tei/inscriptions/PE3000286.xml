@@ -130,18 +130,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Соломоник Э.И. 1967a--><ptr target="bib:b0502"/> 1,
-                     <citedRange>69–79</citedRange></bibl>
-            </listBibl>
-            <listBibl>
-               <bibl><!--Латышев В.В. 1905--><ptr target="bib:b0145"/>
-                  <citedRange>94-137</citedRange></bibl>
+               <bibl><!--Латышев В.В. 1905--><ptr target="bib:b0145"/> 114, № <citedRange>33</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>620</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--Соломоник 1967a--><ptr target="bib:b0502"/>, 70, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> 7 (НЭПХ II, с. 98,
+               <bibl><!--Соломоник 1967a--><ptr target="bib:b0502"/>, 70, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> 7</bibl> 
+               <bibl> (<!-- НЭПХ II --><ptr target="bib:НЭПХ2"/>, с. 98,
                   <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> 5)</bibl>
             </listBibl>
          </div>
@@ -157,12 +154,29 @@
               </ab>
             
          </div>
-         <div type="apparatus"> </div>
-         <div type="translation" xml:lang="ru"> </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1">
+                  <note>в начале стк. Ο или Θ, в конце стк. низ вертикальной гасты</note>
+                  <rdg source="bib:IOSPE">om.</rdg>
+               </app>
+               <app loc="2-3">
+                  <rdg source="bib:IOSPE">suppl.</rdg>
+                  <note>форма nom. sg. условна</note>
+               </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p/>
+         </div>
          <div type="translation" xml:lang="en">
             <p/>
          </div>
-         <div type="commentary" xml:lang="ru"> </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Личное имя Аттинас неоднократно засвидетельствовано в херсонесской эпиграфике II в. н.э. (LGPN IV, s. v., 9-16).
+               Эта и другие надписи, связанные с агонами, найдены в одном и том же районе вблизи античного театра и указывают на возможную локализацию 
+               херсонесского гимнасия.</p>
+         </div>
          <div type="commentary" xml:lang="en">
             <p/>
          </div>

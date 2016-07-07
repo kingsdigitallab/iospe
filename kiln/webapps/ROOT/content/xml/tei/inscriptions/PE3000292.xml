@@ -107,11 +107,8 @@
          <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
       </xi:include>
       <revisionDesc>
-
          <change when="2015-11-13" who="KK">Tokenised</change>
-
          <change when="2015-11-13" who="CB">Added origDate</change>
-
          <change when="2015-11-06" who="KK">Leidenised</change>
          <change when="2015-11-02" who="CB">biblio and app crit</change>
          <change when="2015-10-23" who="CB">Metadata</change>
@@ -131,17 +128,15 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 22, №
-                  <citedRange>27</citedRange></bibl>
-               <bibl><!--IOSPE-->, <citedRange>IV 179</citedRange> (<!--IOSPE I2-->
-                  <ptr target="bib:IOSPE2"/>
-                  <citedRange>628</citedRange>)</bibl>
+               <bibl><!--Латышев 1895--><ptr target="bib:b0130"/>, 22, № <citedRange>27</citedRange></bibl>
+               <bibl><!--IOSPE--><ptr target="bib:IOSPE"/> <citedRange>IV 179</citedRange></bibl> 
+               <bibl> (<!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>628</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> с. 49</bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> с. <citedRange>49</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
