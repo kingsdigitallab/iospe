@@ -502,7 +502,9 @@
         </xsl:for-each>
       </xsl:when>
       
+      
       <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
+      
       <xsl:when
         test="//tei:div[@type = 'edition'][descendant::tei:div[@subtype = 'fragment'][descendant::tei:div[@subtype = 'inscription']]]">
         
@@ -547,24 +549,23 @@
         </xsl:for-each>
       </xsl:when>
       
-      
       <xsl:otherwise>
         <!-- support section per fragment, if any -->
         <xsl:for-each select="//tei:msDesc/tei:msPart">
           <xsl:if
             test="
-              descendant::tei:support/tei:objectType
-              | descendant::tei:support/tei:material
-              | descendant::tei:support/tei:p
-              | descendant::tei:provenance
-              | descendant::tei:support/tei:dimensions
-              | descendant::tei:origPlace">
+            descendant::tei:support/tei:objectType
+            | descendant::tei:support/tei:material
+            | descendant::tei:support/tei:p
+            | descendant::tei:provenance
+            | descendant::tei:support/tei:dimensions
+            | descendant::tei:origPlace">
             <xsl:apply-templates select="." mode="do_fragment_or_monument">
               <xsl:with-param name="n" select="@n"/>
             </xsl:apply-templates>
           </xsl:if>
         </xsl:for-each>
-
+        
         <xsl:choose>
           <xsl:when
             test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n][descendant::tei:origDate][descendant::tei:msContents]">
@@ -598,12 +599,12 @@
             
             <xsl:call-template name="do_textpart"/>
           </xsl:otherwise>
-
+          
         </xsl:choose>
-
+        
         <xsl:text> </xsl:text>
-
-      </xsl:otherwise>
+        
+      </xsl:otherwise> 
     
     </xsl:choose>
     <div class="row">
@@ -1098,7 +1099,7 @@
                         </xsl:when>
                         <xsl:when test="$f_n and (not($tx_n) or $tx_n='0')">
                           <xsl:apply-templates
-                            select="//v_in//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $f_n, '-'))]"
+                            select="//v_in//div[@id = 'edition'][1]//div[@class='textpart'][child::span[@class='ab'][starts-with(@id, concat('div', $f_n, '-'))]]"
                             mode="copyEpidoc"/>
                           <xsl:apply-templates
                             select="//v_in//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-'))]"
@@ -1133,7 +1134,7 @@
                         </xsl:when>
                         <xsl:when test="$f_n and (not($tx_n) or $tx_n='0')">
                           <xsl:apply-templates
-                            select="//v_di//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $f_n, '-'))]"
+                            select="//v_di//div[@id = 'edition'][1]//div[@class='textpart'][child::span[@class='ab'][starts-with(@id, concat('div', $f_n, '-'))]]"
                             mode="copyEpidoc"/>
                           <xsl:apply-templates
                             select="//v_di//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-'))]"
