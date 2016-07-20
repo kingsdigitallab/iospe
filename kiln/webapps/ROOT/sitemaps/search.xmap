@@ -18,10 +18,10 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='en/200/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>          
+            <map:redirect-to uri='en/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>          
           </map:when>
           <map:otherwise>
-            <map:redirect-to uri="en/200/1800/"/>
+            <map:redirect-to uri="en/-500/1800/"/>
           </map:otherwise>
         </map:select>
       </map:match>
@@ -30,10 +30,10 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='ru/200/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
+            <map:redirect-to uri='ru/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
           </map:when>
           <map:otherwise>
-            <map:redirect-to uri="ru/200/1800/"/>
+            <map:redirect-to uri="ru/-500/1800/"/>
           </map:otherwise>
         </map:select>
       </map:match>
@@ -43,10 +43,10 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='200/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
+            <map:redirect-to uri='-500/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
           </map:when>
           <map:otherwise>
-            <map:redirect-to uri="200/1800/"/>
+            <map:redirect-to uri="-500/1800/"/>
           </map:otherwise>
         </map:select>
       </map:match>
