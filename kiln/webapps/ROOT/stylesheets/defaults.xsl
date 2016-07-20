@@ -17,7 +17,7 @@
 
 
   <!-- minimum and maximums years of inscriptions -->
-  <xsl:variable as="xs:integer" name="kiln:min-year" select="200"/>
+  <xsl:variable as="xs:integer" name="kiln:min-year" select="-500"/>
   <xsl:variable as="xs:integer" name="kiln:max-year" select="1800"/>
 
   <!-- Specify a mount path if you are mounting the webapp in a
