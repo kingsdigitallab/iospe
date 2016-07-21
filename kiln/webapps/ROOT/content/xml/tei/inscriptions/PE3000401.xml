@@ -65,7 +65,7 @@
                            горизонталью, овальная омега с боковыми гастами в форме треугольников,
                            небольшие утолщения на концах линий букв.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm">1 (междустрочный интервал - 0,5 см)</height>
+                        <height unit="cm">1,0 (междустрочный интервал - 0,5 см)</height>
                      </handNote>
                   </handDesc>
                </physDesc>
@@ -89,7 +89,7 @@
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -126,9 +126,10 @@
             <listBibl>
                <bibl><!-- Соломоник 1996 --><ptr target="bib:b0773"/>, 44, № <citedRange>2</citedRange></bibl> 
                <bibl> (<!-- SEG --><ptr target="bib:SEG"/> <citedRange>46, 923</citedRange>)</bibl>
-               <bibl><!-- Макаров 2000 --><ptr target="bib:b0801"/>, <citedRange>117</citedRange></bibl> <bibl> (= <!-- Makarov 2002 --><ptr target="bib:b0802"/>, <citedRange>197</citedRange></bibl>
-               <bibl>(cf. <!-- SEG --><ptr target="bib:SEG"/> <citedRange>52, 734</citedRange>)</bibl>
-               <bibl>(<!-- SEG --><ptr target="bib:SEG"/> <citedRange>46, 923</citedRange>)</bibl>
+               <bibl><!-- Макаров 2000 --><ptr target="bib:b0801"/>, <citedRange>117</citedRange></bibl> 
+               <bibl> (= <!-- Makarov 2002 --><ptr target="bib:b0802"/>, <citedRange>197</citedRange></bibl>
+               <bibl> (cf. <!-- SEG --><ptr target="bib:SEG"/> <citedRange>52, 734</citedRange>)</bibl>
+               <bibl> (<!-- SEG --><ptr target="bib:SEG"/> <citedRange>46, 923</citedRange>)</bibl>
                <bibl><!-- Lupu 2009 --><ptr target="bib:b0803"/>, <citedRange>269, XVI</citedRange> (cf. p. 513)</bibl>
             </listBibl>
          </div>
@@ -141,7 +142,7 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="-1"/><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="00"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">τοῦ</supplied></w>
                		<lb n="1"/><w><supplied reason="lost">δ</supplied>άμου</w> <w>ψάφι<supplied reason="lost">σμα</supplied></w> 
                <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> <w><supplied reason="lost">τῶι</supplied></w> 
@@ -165,42 +166,43 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app>
-                  <note>0-1: [τοῦ] | [δ]άμου ψάφι[σμα - - - ] - Соломоник; [ - - - (e.g.) ἀκολούθως
-                     τοῖς τε νόμοις καὶ τοῖς τοῦ] | [δ]άμου ψαφί[σμασιν - - -] - Макаров (ошибочно
-                     воспроизведено в SEG 46, 923: [δ]άμου ψαφίσμασιν [- - -]); форма nom. sg.
-                     ψάφι[σμα] поставлена здесь условно.</note>
+               <app loc="0-1">
+                  <rdg source="bib:b0773">[τοῦ] | [δ]άμου ψάφι[σμα - - - ]</rdg> 
+                  <rdg source="bib:b0801">[ - - - (e.g.) ἀκολούθως τοῖς τε νόμοις καὶ τοῖς τοῦ] | [δ]άμου ψαφί[σμασιν - - -] <note>(ошибочно воспроизведено в 
+                     SEG 46, 923: [δ]άμου ψαφίσμασιν [- - -])</note></rdg> 
+                  <note>форма nom. sg. ψάφι[σμα] поставлена здесь условно</note>
                </app>
-               <app>
-                  <note>1/2: ἐν τῶι γυμνα]|σίωι suppl. Макаров.</note>
+               <app loc="1-2">
+                  <rdg source="bib:b0801">ἐν τῶι γυμνα]|σίωι <note>suppl.</note></rdg>
                </app>
-               <app>
-                  <note>2: Ἑρμαίο[ις] suppl. Соломоник; Ἑρμαίο[ις ἀγῶνας τίθεσθαι - - - ποιῆσαι] -
-                     Макаров.</note>
+               <app loc="2">
+                  <rdg source="bib:b0773">Ἑρμαίο[ις] <note>suppl.</note></rdg> 
+                  <rdg source="bib:b0801">Ἑρμαίο[ις ἀγῶνας τίθεσθαι - - - ποιῆσαι]</rdg>
                </app>
-               <app>
-                  <note>3: ΣΕΤΑ[.]Ε̣ΑΡΑΤΑΙ[- - -] - Соломоник; τ̣ε ταῦτα κατὰ τὰ[ν μαντείαν τοῦ
-                     θεοῦ· - - -] - Макаров.</note>
+               <app loc="3">
+                  <rdg source="bib:b0773">ΣΕΤΑ[.]<unclear>Ε</unclear>ΑΡΑΤΑΙ[- - -]</rdg>
+                  <rdg source="bib:b0801"><unclear>τ</unclear>ε ταῦτα κατὰ τὰ[ν μαντείαν τοῦ θεοῦ· - - -]</rdg>
                </app>
-               <app>
-                  <note>3-4: [Δία Κτήσ]|ιον καὶ Καθυπερ[δέξιον ἱλάσασθαι] - suppl. Макаров. </note>
+               <app loc="3-4">
+                  <rdg source="bib:b0801">[Δία Κτήσ]|ιον καὶ Καθυπερ[δέξιον ἱλάσασθαι] <note>suppl.</note></rdg>
                </app>
-               <app>
-                  <note>5: θεῶι Ἑρμ̣[εῖ ? - - -] - Соломоник; θεῶι Ἑρμ[ᾶι θυσίαν συντελεῖν] -
-                     Макаров, e.g.</note>
+               <app loc="5">
+                  <rdg source="bib:b0773">θεῶι Ἑρμ̣[εῖ ? - - -]</rdg>                   
+                  <rdg source="bib:b0801">θεῶι Ἑρμ[ᾶι θυσίαν συντελεῖν] <note>e.g.</note></rdg>
                </app>
-               <app>
-                  <note>6: Σ[.]ΑΤ[- - -] - Соломоник; [..]ΑΤ[- - -] - Макаров. </note>
+               <app loc="6">
+                  <rdg source="bib:b0773">Σ[.]ΑΤ[- - -]</rdg> 
+                  <rdg source="bib:b0801">[..]ΑΤ[- - -]</rdg>
                </app>
-               <app>
-                  <note>8, med.: (слева направо) часть вертикали, неясные очертания, Ξ или Σ, след
-                     верхней горизонтали, неясные очертания (Ο ?); fin.: после ΙΕΡ низ наклонной
-                     гасты; не исключаю ἱερά̣ [- - -] vel Ι Ἑρμ̣[αῖα - - -]. </note>
+               <app loc="8">
+                  <note>med.: (слева направо) часть вертикали, неясные очертания, Ξ или Σ, след
+                     верхней горизонтали, неясные очертания (Ο ?)</note> 
+                  <note>fin.: после ΙΕΡ низ наклонной гасты</note>
+                  <rdg><note>не исключаю</note> ἱερ<unclear>ά</unclear> [- - -] <note>vel</note> Ι Ἑρμ̣[αῖα - - -]</rdg>
                </app>
-               <app>
-                  <note>8-9: [. . .] Ξ.ΟΙΕΦ̣Ι̣[- - - (e.g.) τοὺς ἐφήβους] | παραπέμπ[οντα]ς [τὰ ἱερά
-                     - - -] - Макаров; ΠΑΡΑ[.]ΕΣΙ[..]Ε[.]ΟΙΕΡΜ̣[- - -] | παραπέμπε[ι τ]οὺς ε[ - - -]
-                     - Соломоник.</note>
+               <app loc="8-9">
+                  <rdg source="bib:b0801">[. . .] Ξ.ΟΙΕ<unclear>ΦΙ</unclear>[- - - (e.g.) τοὺς ἐφήβους] | παραπέμπ[οντα]ς [τὰ ἱερά - - -]</rdg> 
+                  <rdg source="bib:b0773">ΠΑΡΑ[.]ΕΣΙ[..]Ε[.]ΟΙΕΡ<unclear>Μ</unclear>[- - -] | παραπέμπε[ι τ]οὺς ε[ - - -]</rdg>
                </app>
             </listApp>
          </div>
