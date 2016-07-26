@@ -130,7 +130,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> I <citedRange>109</citedRange></bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>109</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -143,51 +143,53 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
              <div type="textpart" subtype="cor" n="1">
                  <ab>
-               <lb n="1"/><w>ὁ</w> <w>δᾶμος</w>
-               <lb n="2"/><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"></gap>
+                     <lb n="1"/><w>ὁ</w> <w>δᾶμος</w>
+                     <lb n="2"/><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"></gap>
                     <gap reason="illegible" quantity="1" unit="character"/><orig><unclear>T</unclear></orig><gap reason="illegible" quantity="2" unit="character"/>
                  </ab>
              </div>
              <div type="textpart" subtype="cor" n="2">
                  <ab>
-               <lb n="3"/><gap reason="lost" extent="unknown" unit="character" cert="low"/>  
-                              <w><supplied reason="lost">Ὀ</supplied><unclear>λ</unclear>βιοπ<supplied reason="lost">ο</supplied><unclear>λι</unclear>
-               <lb n="4" break="no"/>   <supplied reason="lost">τῶν</supplied></w> <supplied reason="lost"><w>ὁ</w></supplied>
-                               <w><supplied reason="lost">δ</supplied><unclear>ᾶμο</unclear>ς</w>
-               <lb n="5"/><gap reason="illegible" quantity="1" unit="character"/>
+                        <lb n="3"/><gap reason="lost" extent="unknown" unit="character" cert="low"/>  
+                                       <w><supplied reason="lost">Ὀ</supplied><unclear>λ</unclear>βιοπ<supplied reason="lost">ο</supplied><unclear>λι</unclear>
+                        <lb n="4" break="no"/>   <supplied reason="lost">τῶν</supplied></w> <supplied reason="lost"><w>ὁ</w></supplied>
+                                        <w><supplied reason="lost">δ</supplied><unclear>ᾶμο</unclear>ς</w>
+                        <lb n="5"/><gap reason="illegible" quantity="1" unit="character"/>
                  </ab>   
              </div>
          </div>
          <div type="apparatus">
-            <listApp>
-               <app>
-                  <note>Венок 1.</note>
-               </app>
+            <div type="textpart" n="1">
+               <listApp>
                <app loc="1">
                   <note>слева следы изображения венка - om. ed. pr.</note>
                </app>
                <app loc="2">
-                  <note>внизу слева следы изображения венка (?); в начале стк., возможно, след
-                     круглой буквы; в конце стк., возможно, Τ и перед ним вертикальная гаста, однако
-                     за буквы могут быть приняты случайные черты или остатки изображения венка; ο̣ .
-                     . λ̣ . . .λ̣ιτ[--] - НЭПХ; ὁ Ὀλβι[ο] (omitted)πο(omitted)λιτ[ῶν] -
-                     Виноградов.</note>
-               </app>
-               <app>
-                  <note>Венок 2 (?) с надписью расположен справа от венка 1.</note>
-               </app>
-               <app>
-                  <note>3: слева следы изображения венка (?); [Ὀ]λ̣βιοπ[ο]λ̣ί̣τ[- - -] -
-                     НЭПХ.</note>
-               </app>
-               <app>
-                  <note>4:внизу справа след изображения венка (?); suppl. Виноградов; [- - -].μος -
-                     НЭПХ.</note>
-               </app>
-               <app>
-                  <note>5: в начале стк., возможно, верхняя часть Τ; τ[- - -] - НЭПХ.</note>
+                  <note>внизу слева следы изображения венка (?)</note>
+                  <note>в начале стк., возможно, след круглой буквы</note> 
+                  <note>в конце стк., возможно, Τ и перед ним вертикальная гаста, однако за буквы могут быть приняты случайные черты или остатки изображения венка</note> 
+                  <rdg source="bib:НЭПХ">ο̣ . . λ̣ . . .λ̣ιτ[--]</rdg>
+                  <rdg source="bib:b0450">ὁ Ὀλβι[ο] (omitted)πο(omitted)λιτ[ῶν]</rdg>
                </app>
             </listApp>
+            </div>
+            <div type="textpart" n="2">
+               <listApp>
+               <app loc="3">
+                  <note>слева следы изображения венка (?)</note>
+                  <rdg source="bib:НЭПХ">[Ὀ]λ̣βιοπ[ο]λ̣ί̣τ[- - -]</rdg>
+               </app>
+               <app loc="4">
+                  <note>внизу справа след изображения венка (?)</note> 
+                  <rdg source="bib:b0450"><note>suppl.</note></rdg>
+                  <rdg source="bib:НЭПХ">[- - -].μος</rdg>
+               </app>
+               <app loc="5">
+                  <note>в начале стк., возможно, верхняя часть Τ</note> 
+                  <rdg source="bib:НЭПХ">τ[- - -]</rdg>
+               </app>
+            </listApp>
+         </div>
          </div>
          <div type="translation" xml:lang="ru">
             <p>Венок 1:</p>
