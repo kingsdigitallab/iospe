@@ -71,7 +71,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0001" evidence="Палеография">
+                     <origDate notBefore="-0033" notAfter="0001" evidence="Палеография">
                         <seg xml:lang="ru">Кон. I в. до н.э. – I в. н.э.</seg>
                         <seg xml:lang="en"></seg>
                      </origDate>
@@ -84,7 +84,7 @@
                         <rs type="context"></rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"></placeName>
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
                         <rs type="circumstances"></rs>
                         <rs type="context"></rs>
                      </seg>
@@ -131,31 +131,50 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               <lb n="1"/><gap reason="lost" quantity="4" unit="character" precision="low"/><orig>Π</orig><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="2"/><gap reason="lost" quantity="4" unit="character" precision="low"/><orig>ΡΟΝ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="1"/><gap reason="lost" quantity="4" unit="character" precision="low"/><orig><supplied reason="undefined" evidence="previouseditor">Π</supplied></orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><gap reason="lost" quantity="4" unit="character" precision="low"/><orig><supplied reason="undefined" evidence="previouseditor">ΡΟΝ</supplied></orig><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><unclear>ἁ</unclear>μὲς</w> 
                            <orig>Υ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                            <w><supplied reason="lost">βα</supplied>
                <lb n="4" break="no"/>   <supplied reason="lost">σ</supplied>ιλεύουσα</w> <w>προέστ<supplied reason="lost" cert="low">α</supplied></w> 
                           <gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="5"/><orig><unclear>Π</unclear>ΟΤ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/><orig>Σ<unclear>Ο</unclear></orig><gap reason="illegible" quantity="1" unit="character"/><orig>ΝΟΥΜΕΝ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="5"/><orig><unclear>Π</unclear>ΟΤ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="2" 
+                  unit="character"/><orig>Σ<unclear>Ο</unclear></orig><gap reason="illegible" quantity="1" 
+                     unit="character"/><orig>ΝΟΥΜΕ<supplied reason="undefined" evidence="previouseditor">Ν</supplied></orig><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="6"/><w>προδεικνύμενος</w> <gap reason="lost" extent="unknown" unit="character"/>
                <lb n="7"/><w>διώκων</w> <w>ἀπὸ</w> <w>τᾶς</w> <w part="I">β</w><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="8"/><w>σει</w> <w>καὶ</w> <w>λόγωι</w> <w part="I">σωτη<supplied reason="lost">ρίωι</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="8"/><w>σει</w> <w>καὶ</w> <w><supplied reason="undefined" evidence="previouseditor">λόγ</supplied>ωι</w> 
+                        <w part="I"><supplied reason="undefined" evidence="previouseditor">σωτ</supplied>η<supplied reason="lost">ρίωι</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="9"/><w part="F">μους</w> <w>ῥᾳδίως</w> <w part="I">ὑπο</w><gap reason="lost" extent="unknown" unit="character"/>
-               <lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><w part="M">οθυν</w><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><w part="M"><supplied reason="undefined" 
+                        evidence="previouseditor">ο</supplied>θυ<supplied reason="undefined" evidence="previouseditor">ν</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="10a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>IOSPE I2 370 (незначительные расхождения не отмечены). Подчеркнуты буквы, читавшиеся на камне ранее, но не поддающиеся прочтению сейчас.</note></app>
-               <app><note>2: [- - -]ιον[- - -] - IOSPE IV.</note></app>
-               <app><note>3: scripsi; после Υ, возможно, следы Π; [- - -]οι μεσυ[- - - βα] - IOSPE I2.</note></app>
-               <app><note>4: προεστ[ώς ? - - -] - IOSPE IV.</note></app>
-               <app><note>4-5: [- - - ὑ/ποτα[γ]ὰς - IOSPE IV.</note></app>
-               <app><note>5: ποτα[. .]ς ὀνουμεν[- - -] - IOSPE I2; после Τ буква не поддается определению; между Ο и Ν низ вертикальной гасты.</note></app>
-               <app><note>7: ἀπὸ τᾶς β[ουλᾶς ? - - -] - IOSPE IV.</note></app>
+               <app loc="2">
+                  <rdg source="bib:IOSPE">[- - -]ιον[- - -]</rdg>
+               </app>
+               <app loc="3">
+                  <note>scripsi</note>
+                  <note>после Υ, возможно, следы Π</note>
+                  <rdg source="bib:IOSPE2">[- - -]οι μεσυ[- - - βα]</rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:IOSPE">προεστ[ώς ? - - -]</rdg>
+               </app>
+               <app loc="4-5">
+                  <rdg source="bib:IOSPE">[- - - ὑ/ποτα[γ]ὰς</rdg>
+               </app>
+               <app loc="5">
+                  <rdg source="bib:IOSPE2">ποτα[. .]ς ὀνουμεν[- - -]</rdg>
+                  <note>после Τ буква не поддается определению</note>
+                  <note>между Ο и Ν низ вертикальной гасты</note>
+               </app>
+               <app loc="7">
+                  <rdg source="bib:IOSPE">ἀπὸ τᾶς β[ουλᾶς ? - - -]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
