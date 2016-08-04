@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<!-- <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?> -->
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -178,40 +178,107 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		[- - -]
-               		▴ Λ̣[- - -]
-               		ΚΑ̣[- - -]
-               		ΣΕΡ̣[- - -]
-               		χρ⁽ησ⁾α̣[- - -]
-               	5	θειότ̣α̣[τ- αὐτοκρατ-  - - - ὑπε-]
-               		ρηύξ⁽η[[σ⁾[ε - - -]
-               		a  ΕΙΣΤΑΚΑ⁽ΤΕ⁾[ - - -]
-               		NA ⁽ἡμε⁾ῖ⁽ν Ε⁾Θ.[- - -]
-               		διὰ ⁽τῆς⁾ τῶν Δ[- - -]
-               	10	παρὰ τοὺς ⁽ἡγ⁾ο[υμένους? - - - περὶ τῶν]
-               		συμφερό⁽ντ⁾ω[ν ἡμεῖν vel τῷ δήμῳ vel sim. - - - ἀν-]
-               		δρὸς γεγονότ̣[ος - - - δε-]
-               		δόχθαι ⁽τῇ β⁾ουλ⁽ῇ κ⁾αὶ̣ τ̣ῷ̣ δ⁽ήμ⁾ῳ Κο̣[κκήιον - - -] b
-               		νο⁽ν τε⁾⁽τε⁾ι⁽μῆσ⁾θαι̣ χ̣ρυσῷ σ⁽τε⁾φάνῳ [[κα̣ὶ̣ τ̣]][ύπ]ῳ ἐπι[χρύσῳ ?], c
-               	15	τό ⁽τε⁾ ψήφισμα̣ ⁽τε⁾λειωθὲν ὑπὸ [[τοῦ]] γρα⁽μμ⁾?α[τέως]
-               		⁽τῆς⁾ πόλεως Οὐα̣λ̣ερίου ῾Ρούφου δοθ̣⁽ῆν⁾αι τῷ π̣[ατρὶ]
-               		αὐτοῦ Κοκκηίῳ Οὐάλε⁽ντ⁾ι καὶ τὸ ἀ⁽ντ⁾ίγραφον ἀ[ποτ]ε-
-               		θ⁽ῆν⁾αι εἰς τὰ δημ̣όσια. ▴ ἐγέ⁽νη⁾το ἐ⁽ν Τ⁾ύρᾳ ⁽πρ⁾ὸ ▴ εʹ ▴ κα̣[[λ(ανδῶν) ▴ Μα-]]
-               		ΐων Αὐτοκράτο̣ρι Κομόδῳ τὸ ▴ γʹ ▴ καὶ Ἀ⁽ντ⁾ιστίῳ Β[[ούρ-]]
-               	20	ρῳ ὑπάτοις, ὡς δὲ Τυρανοὶ ἄγουσι⁽ν, ἔ⁾τους ▴ εκρʹ ▴ ἀ[[ρχόν-]]
-               		των δὲ τῶ⁽ν πε⁾ρὶ Θεόδωρο⁽ν Β⁾οήθου, ⁽μην⁾ὸς Ἀρ⁽τε⁾⁽με̣⁾ισι̣- i
-               		ῶνος ▴ λʹ ▴ vac. 1 litt. ʼΕσφραγίσα⁽ντ⁾ο· vac. 1 litt. Θεόδωρος Βοήθου ⁽πρ⁾ῶ-
-               		g  τ̣ο̣ς̣ ἄ̣ρ̣χ̣ω̣ν̣ ▴ Κα̣ῖ̣σαρ Ζουρη ἄρχων ▴ Λαϊσθέ⁽νης⁾ Μοκκα
-               		ἄρχων ▴ Αἴλιος Λούκιος ἄρχω̣ν̣ ▴ Οὐαλεριαν̣ὸς Πον-
-               	25	τικοῦ εἰσηγητ⁽ής⁾ ▴ Τιβ(έριος) ▴ Κλαύδιος Ἀ⁽ντ⁾[ι]σ̣[θένη]ς ▴ Σε̣πτού̣- e
-               		d  μιος ῾Ιεροσῶ⁽ντ⁾ος ▴ Πιδανος Πιτφαρν̣[ακου ▴ Οὐα]λ̣έ̣ρ̣ι̣ο̣ς̣ k
-               		Βασσιανοῦ ▴ ῾Ιερώνυμος Ἀρ⁽τε⁾μιδώρ̣ο̣υ̣ ▴ Θε̣οδᾶ̣[ς] ʼ̣Αρ̣τ̣ε̣μ̣ι̣-
-               		δώρου ▴ Χρύσι⁽ππ⁾ος Χρυσί⁽ππ⁾ου ▴ Νίγερ Ἀρ⁽τε⁾μιδώρου ▴ Μα-
-               		κάριος Ἀρ⁽τε⁾μιδώρου ▴ Διονυσόδωρος Ἀχιλλαίου
-               	30	Λούκιος Σατορ⁽νε⁾ίλου ▴ Φιλόκαλος Φιλοκάλου ▴ Διο-
-               		νύσιος Πίσκα ▴ ⁽Ἡρ⁾ακλέω⁽ν Σ⁾ωμᾶ ▴ Δελφὸς Δελφοῦ ❧
-               		⁽Οὐ⁾αλέριος Ῥοῦφος γρα⁽μμ⁾α⁽τε⁾ὺς ἐ⁽τε⁾λειώσατο
-               		▴ 〈τὸ〉 ψήφισμα. ▴
+               	<lb n="0"/><gap reason="lost" extent="unknown" unit="line"></gap>
+               	<lb n="1"/><g type="punctus"/> <orig><unclear>Λ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="2"/><orig>Κ<unclear>Α</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="3"/><orig>ΣΕ<unclear>Ρ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="4"/><w part="I">χρ<choice><corr>ησ</corr></choice><unclear>α</unclear></w><gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="5"/><w part="I">θειό<unclear>τα</unclear><supplied reason="lost">τ</supplied></w> 
+                                  <w part="I"><supplied reason="lost">αὐτοκρατ</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> 
+                                 <w part="I"><supplied reason="lost">ὑπε</supplied>
+               	<lb n="6" break="no"/>ρηύξ<choice><corr>η</corr></choice><del rend="erasure"><choice><corr>σ</corr></choice><supplied reason="lost">ε</supplied></del></w> 
+                                 <gap reason="lost" extent="unknown" unit="character"/> <!-- double check -->
+               
+               	<lb n="7"/><!-- a -->  <orig>ΕΙΣΤΑΚΑ<choice><corr>ΤΕ</corr></choice></orig><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="8"/><orig>NA</orig> <w><choice><corr>ἡμε</corr></choice>ῖ<choice><corr>ν</corr></choice></w> 
+               	                 <choice><corr><orig>Ε</orig></corr></choice><orig>Θ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="9"/><w>διὰ</w> <w><choice><corr>τῆς</corr></choice></w> <w>τῶν</w> <orig>Δ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="10"/><w>παρὰ</w> <w>τοὺς</w> <w><choice><corr>ἡγ</corr></choice>ο<supplied reason="lost" cert="low">υμένους</supplied></w> 
+                                    <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>περὶ</w> <w>τῶν</w></supplied>
+               	<lb n="11"/><w>συμφερό<choice><corr>ντ</corr></choice>ω<supplied reason="lost">ν</supplied></w> 
+                                    <supplied reason="lost"><w>ἡμεῖν</w></supplied> <note>vel</note> <supplied reason="lost"><w>τῷ</w> <w>δήμῳ</w></supplied> <note>vel sim.</note> 
+                                    <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἀν</supplied>
+               	<lb n="12" break="no"/>δρὸς</w> <w>γεγονό<unclear>τ</unclear><supplied reason="lost">ος</supplied></w> 
+                                    <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">δε</supplied>
+               	<lb n="13" break="no"/>δόχθαι</w> <w><choice><corr>τῇ</corr></choice></w> 
+                                    <w><choice><corr>β</corr></choice>ουλ<choice><corr>ῇ</corr></choice></w> <w><choice><corr>κ</corr></choice>α<unclear>ὶ</unclear></w> 
+                                    <w><unclear>τῷ</unclear></w> <w>δ<choice><corr>ήμ</corr></choice>ῳ</w> 
+                                    <placeName>Κ<unclear>ο</unclear><supplied reason="lost">κκήιον</supplied></placeName> <gap reason="lost" extent="unknown" unit="character"/> <!-- b -->
+               
+               	<lb n="14"/><w part="F">νο<choice><corr>ν</corr></choice></w> 
+                                    <w><choice><corr>τε</corr></choice><choice><corr>τε</corr></choice>ι<choice><corr>μῆσ</corr></choice>θα<unclear>ι</unclear></w> 
+                                    <w><unclear>χ</unclear>ρυσῷ</w> <w>σ<choice><corr>τε</corr></choice>φάνῳ</w> 
+                                    <w><del rend="erasure">κ<unclear>αὶ</unclear></del></w> <w><del rend="erasure"><unclear>τ</unclear></del><supplied reason="lost">ύπ</supplied>ῳ</w> 
+                                    <w>ἐπι<supplied reason="lost" cert="low">χρύσῳ</supplied></w>, <!-- c -->
+               
+               	<lb n="15"/><w>τό</w> <w><choice><corr>τε</corr></choice></w> <w>ψήφισμ<unclear>α</unclear></w> 
+                                    <w><choice><corr>τε</corr></choice>λειωθὲν</w> <w>ὑπὸ</w> <w><del rend="erasure">τοῦ</del></w> 
+                                    <w>γρα<choice><corr cert="low">μμ</corr></choice>α<supplied reason="lost">τέως</supplied></w>
+               	<lb n="16"/><w><choice><corr>τῆς</corr></choice></w> <w>πόλεως</w> 
+                                    <persName type="attested"><name type="gentilicum">Οὐ<unclear>αλ</unclear>ερίου</name> <name type="cognomen">῾Ρούφου</name></persName> 
+                                    <w>δο<unclear>θ</unclear><choice><corr>ῆν</corr></choice>αι</w> <w>τῷ</w> <w><unclear>π</unclear><supplied reason="lost">ατρὶ</supplied></w>
+               	<lb n="17"/><w>αὐτοῦ</w> <persName type="attested"><name type="gentilicum">Κοκκηίῳ</name> <name type="cognomen">Οὐάλε<choice><corr>ντ</corr></choice>ι</name></persName> 
+                                    <w>καὶ</w> <w>τὸ</w> <w>ἀ<choice><corr>ντ</corr></choice>ίγραφον</w> <w>ἀ<supplied reason="lost">ποτ</supplied>ε
+               	<lb n="18" break="no"/>θ<choice><corr>ῆν</corr></choice>αι</w> <w>εἰς</w> <w>τὰ</w> <w>δη<unclear>μ</unclear>όσια</w>. 
+                                    <g type="punctus"/> <w>ἐγέ<choice><corr>νη</corr></choice>το</w> <w>ἐ<choice><corr>ν</corr></choice></w> 
+                                    <placeName><choice><corr>Τ</corr></choice>ύρᾳ</placeName> <w><choice><corr>πρ</corr></choice>ὸ</w> <g type="punctus"/> <num value="5">ε</num> 
+                                    <g type="punctus"/> <w><expan><abbr>κ<unclear>α</unclear><del rend="erasure">λ</del></abbr><ex>ανδῶν</ex></expan></w> <!-- double check expansion in a deletion -->
+                                    <g type="punctus"/> <w><del rend="erasure">Μα</del>
+               	<lb n="19" break="no"/>ΐων</w> <persName type="emperor"><w>Αὐτοκράτ<unclear>ο</unclear>ρι</w> <name type="cognomen">Κομόδῳ</name></persName> 
+                                       <w>τὸ</w> <g type="punctus"/> <num value="3">γ</num> <g type="punctus"/> 
+                                       <w>καὶ</w> <persName type="consul"><name>Ἀ<choice><corr>ντ</corr></choice>ιστίῳ</name> <name>Β<del rend="erasure">ούρ</del> <!-- double check names -->
+               	<lb n="20" break="no"/>ρῳ</name></persName> <w>ὑπάτοις</w>, <w>ὡς</w> <w>δὲ</w> <w>Τυρανοὶ</w> <w>ἄγουσι<choice><corr>ν</corr></choice></w>, 
+                                    <w><choice><corr>ἔ</corr></choice>τους</w> <g type="punctus"/> <num value="125">εκρ</num> <g type="punctus"/> 
+                                    <w>ἀ<del rend="erasure">ρχόν</del>
+               	<lb n="21" break="no"/>των</w> <w>δὲ</w> <w>τῶ<choice><corr>ν</corr></choice></w> <w><choice><corr>πε</corr></choice>ρὶ</w> 
+                                    <persName type="attested"><name>Θεόδωρο<choice><corr>ν</corr></choice></name> 
+                                             <persName type="attested"><name><choice><corr>Β</corr></choice>οήθου</name></persName></persName>, 
+                                    <w><choice><corr>μην</corr></choice>ὸς</w> <w>Ἀρ<choice><corr>τε</corr></choice><choice><corr>μ<unclear>ε</unclear></corr></choice>ισ<unclear>ι</unclear> <!-- i -->
+                                    
+               	<lb n="22" break="no"/>ῶνος</w> <g type="punctus"/> <num value="13">λ</num> <!-- double check --> <g type="punctus"/> <space quantity="1" unit="character"/> 
+                                 <w>ʼΕσφραγίσα<choice><corr>ντ</corr></choice>ο</w>· <space quantity="1" unit="character"/>
+                                 <persName type="attested"><name>Θεόδωρος</name> <persName type="attested"><name>Βοήθου</name></persName></persName> <w><choice><corr>πρ</corr></choice>ῶ
+               
+               	<lb n="23" break="no"/><!-- g --> <unclear>τος</unclear></w> <w><unclear>ἄρχων</unclear></w> <g type="punctus"/> 
+                                    <persName type="attested"><name>Κ<unclear>αῖ</unclear>σαρ</name> <persName type="attested"><name>Ζουρη</name></persName></persName> 
+                                    <w>ἄρχων</w> <g type="punctus"/> <persName type="attested"><name>Λαϊσθέ<choice><corr>νης</corr></choice></name> 
+                                    <persName type="attested"><name>Μοκκα</name></persName></persName>
+               	<lb n="24"/><w>ἄρχων</w> <g type="punctus"/> <persName type="attested"><name type="gentilicum">Αἴλιος</name> <name type="cognomen">Λούκιος</name></persName> 
+                                       <w>ἄρχ<unclear>ων</unclear></w> <g type="punctus"/> <persName type="attested"><name type="gentilicum">Οὐαλερια<unclear>ν</unclear>ὸς</name> 
+                                          <name type="cognomen">Πον
+               	<lb n="25" break="no"/>τικοῦ</name></persName> <w>εἰσηγητ<choice><corr>ής</corr></choice></w> <g type="punctus"/> 
+                                    <persName type="attested"><name type="praenomen"><expan><abbr>Τιβ</abbr><ex>έριος</ex></expan></name> <g type="punctus"/> 
+                                    <name type="gentilicum">Κλαύδιος</name> 
+                                    <name type="cognomen">Ἀ<choice><corr>ντ</corr></choice><supplied 
+                                       reason="lost">ι</supplied><unclear>σ</unclear><supplied reason="lost">θένη</supplied>ς</name></persName> 
+                                    <g type="punctus"/> <persName type="attested"><name>Σ<unclear>ε</unclear>πτου<unclear>́</unclear> <!-- e -->
+               
+               	<lb n="26" break="no"/><!-- d --> μιος</name> <persName type="attested"><name>῾Ιεροσῶ<choice><corr>ντ</corr></choice>ος</name></persName></persName> 
+                                    <g type="punctus"/> <persName type="attested"><name>Πιδανος</name> 
+                                    <persName type="attested"><name>Πιτφαρ<unclear>ν</unclear><supplied reason="lost">ακου</supplied></name></persName></persName> 
+                                    <g type="punctus"/> <persName type="attested"><name><supplied reason="lost">Οὐα</supplied><unclear>λέριος</unclear></name> <!-- k -->
+               	<lb n="27"/><name>Βασσιανοῦ</name></persName> <g type="punctus"/> <persName type="attested"><name>῾Ιερώνυμος</name> 
+               	                 <persName type="attested"><name>Ἀρ<choice><corr>τε</corr></choice>μιδώ<unclear>ρου</unclear></name></persName></persName> <g type="punctus"/> 
+                                    <persName type="attested"><name>Θ<unclear>ε</unclear>οδᾶ<unclear></unclear><supplied reason="lost">ς</supplied></name> 
+                                       <persName type="attested"><name>Α<unclear>ρτεμι</unclear> <!-- check name -->
+               	<lb n="28" break="no"/>δώρου</name></persName></persName> <g type="punctus"/> <persName type="attested"><name>Χρύσι<choice><corr>ππ</corr></choice>ος</name> 
+                                       <persName type="attested"><name>Χρυσί<choice><corr>ππ</corr></choice>ου</name></persName></persName> 
+                                       <g type="punctus"/> <persName type="attested"><name>Νίγερ</name> 
+                                       <persName type="attested"><name>Ἀρ<choice><corr>τε</corr></choice>μιδώρου</name></persName></persName> <g type="punctus"/> 
+                                       <persName type="attested"><name>Μα
+               	<lb n="29" break="no"/>κάριος</name> <persName type="attested"><name>Ἀρ<choice><corr>τε</corr></choice>μιδώρου</name></persName></persName> 
+                                    <g type="punctus"/> <persName type="attested"><name>Διονυσόδωρος</name> <name>Ἀχιλλαίου</name></persName>
+               	<lb n="30"/><persName type="attested"><name>Λούκιος</name> <persName type="attested"><name>Σατορ<choice><corr>νε</corr></choice>ίλου</name></persName></persName> 
+                                    <g type="punctus"/> <persName type="attested"><name>Φιλόκαλος</name> <name>Φιλοκάλου</name></persName> <g type="punctus"/> 
+                                    <persName type="attested"><name>Διο
+               	<lb n="31" break="no"/>νύσιος</name> <name>Πίσκα</name></persName> <g type="punctus"/> 
+                                    <persName type="attested"><name><choice><corr>Ἡρ</corr></choice>ακλέω<choice><corr>ν</corr></choice></name> 
+                                    <persName type="attested"><name><choice><corr>Σ</corr></choice>ωμᾶ</name></persName></persName> 
+                                    <g type="punctus"/> <persName type="attested"><name>Δελφὸς</name> <name>Δελφοῦ</name></persName> <g type="leaf"/> <!-- double check hedera -->
+               	<lb n="32"/><persName type="attested"><name type="gentilicum"><choice><corr>Οὐ</corr></choice>αλέριος</name> 
+               	                 <name type="cognomen">Ῥοῦφος</name></persName> <w>γρα<choice><corr>μμ</corr></choice>α<choice><corr>τε</corr></choice>ὺς</w> 
+                                    <w>ἐ<choice><corr>τε</corr></choice>λειώσατο</w>
+               	<lb n="33"/><g type="punctus"/> <supplied reason="omitted"><w>τὸ</w></supplied> <w>ψήφισμα</w>. <g type="punctus"/>
             </ab>
          </div>
          <div type="apparatus">
