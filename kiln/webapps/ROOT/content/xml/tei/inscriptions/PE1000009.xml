@@ -2,13 +2,11 @@
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Фрагмент декрета (?).</title>
+            <title xml:lang="ru">Фрагмент декрета (?)</title>
             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -21,17 +19,16 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Белгород-Днестровский историко-краеведческий музей, А-4666,
-                        КП-38251.</repository>
-                     <idno/>
+                     <repository>Белгород-Днестровский историко-краеведческий музей</repository>
+                     <idno>А-4666, КП-38251</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
-                     <idno/>
+                     <idno>А-4666, КП-38251</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc15" cert="low">
                      <seg xml:lang="ru">Почетный декрет ?.</seg>
                      <seg xml:lang="en"/>
                   </summary>
@@ -40,33 +37,49 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор сероватый.</material>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор сероватый.</material>
                            <material xml:lang="en"/>
                            <p xml:lang="ru">Передний и оборотный фасы отшлифованы, нижний заглажен
                               немного менее тщательно, остальные отбиты. Нижний край плиты.</p>
+                           <p>Декор: Под полем надписи находится изображение крупного листа, над ним – маленькое квадратное углубление.</p>
                            <p xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">11,5</height>
+                              <width unit="cm">10,4</width>
+                              <depth unit="cm">2,4</depth>
+                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон, кроме нижней. 
+                              Размеры полей: нижнее 7,8.</seg>
                            <seg xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">3,2</height>
+                              <width unit="cm">7,8</width>
+                           </dimensions>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны достаточно небрежно и не очень ровно. Мю
-                           имеет курсивную форму.</seg>
+                           имеет курсивную форму.
+                           Среднее расстояние между строк: 0,3.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm"/>
+                        <height unit="cm"/><!-- Верхняя строка: 0,7; нижняя строка 1,1-1,4. -->
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
                      <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в.</seg>
                         <seg xml:lang="en"/>
@@ -82,18 +95,18 @@
                         <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Белгород-Днестровский.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">А.И. Иванчик, август 2006.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
+                     <seg xml:lang="en">A. I. Ivantchik, <date when="2006-08">August 2006</date>.</seg>
                   </provenance>
                </history>
             </msDesc>
@@ -104,12 +117,14 @@
       </xi:include>
       <!-- volNum = ﻿10-->
       <revisionDesc>
+         <change when="2016-08-25" who="SS">encoded metadata</change>
+         <change when="2016-08-02" who="SS">encoded Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">
+         <graphic url="10.9">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
@@ -132,7 +147,7 @@
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΝΡΑ</unclear></orig><gap reason="lost" 
                		                   extent="unknown" unit="character"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><unclear>μ</unclear>ηνὸς</w> 
-                                                   <w>Ἀ<unclear>ρ</unclear><supplied reason="lost">τεμισίωνος</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+                                                   <w>Ἀ<unclear>ρ</unclear><supplied reason="lost">τεμισίωνος</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
             </ab>
          </div>
          <div type="apparatus">

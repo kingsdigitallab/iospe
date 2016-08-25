@@ -2,12 +2,11 @@
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Фрагмент надписи.</title>
+            <title xml:lang="ru">Фрагмент надписи</title>
             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -20,38 +19,46 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Белгород-Днестровский историко-краеведческий музей,
-                        А-1665.</repository>
-                     <idno/>
+                     <repository>Белгород-Днестровский историко-краеведческий музей</repository>
+                     <idno>А-1665</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
-                     <idno/>
+                     <idno>А-1665</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc22">
                      <seg xml:lang="ru">Неизвестен.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Unknown.</seg>
                   </summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор белый, сероватый.</material>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый, сероватый.</material>
                            <material xml:lang="en"/>
                            <p xml:lang="ru">Лицевой фас отшлифован, оборотный, скорее всего, оббит.
                               Остальные также оббиты.</p>
                            <p xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">10,2</height>
+                              <width unit="cm">10,0</width>
+                              <depth unit="cm">2,7</depth>
+                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон.</seg>
                            <seg xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">8,4</height>
+                              <width unit="cm">7,8</width>
+                           </dimensions>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -61,16 +68,20 @@
                            разметки, украшены апексами. Альфа с ломаной горизонтальной чертой. Во
                            второй строке ромбовидный омикрон выбит неуверенно, он имеет слегка
                            округлую форму, образующие нижнюю часть линии слегка заходят за точку
-                           пересечения.</seg>
+                           пересечения.
+                           Среднее расстояние между строк: 0,5.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm"/>
+                        <height unit="cm">2,1-2,3</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="0201" notAfter="0300"
-                        evidence="Палеография омикрон_ромбической_формы">
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
+                     <origDate notBefore="0201" notAfter="0300" evidence="Палеография">
                         <seg xml:lang="ru">III в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
@@ -83,18 +94,18 @@
                         <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Белгород-Днестровский.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">А.И. Иванчик, август 2006.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
+                     <seg xml:lang="en">A. I. Ivantchik, <date when="2006-08">August 2006</date>.</seg>
                   </provenance>
                </history>
             </msDesc>
@@ -105,12 +116,14 @@
       </xi:include>
       <!-- volNum = ﻿10-->
       <revisionDesc>
+         <change when="2016-08-25" who="SS">encoded metadata</change>
+         <change when="2016-08-02" who="SS">encoded Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">
+         <graphic url="10.16">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>

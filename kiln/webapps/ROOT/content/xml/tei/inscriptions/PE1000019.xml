@@ -2,12 +2,11 @@
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Почетная надпись в честь императора Севера Александра.</title>
+            <title xml:lang="ru">Почетная надпись в честь императора Севера Александра</title>
             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -20,8 +19,7 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Неизвестен. В 2001 г. находилась в частной коллекции в
-                        Киеве.</repository>
+                     <repository>Неизвестен. В 2001 г. находилась в частной коллекции в Киеве.</repository>
                      <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
@@ -30,30 +28,36 @@
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc21">
                      <seg xml:lang="ru">Почетная надпись в честь императора.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Honorary inscription</seg>
                   </summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор серый с синими прожилками,
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор серый с синими прожилками,
                               крупнозернистый.</material>
                            <material xml:lang="en"/>
                            <p xml:lang="ru">Сохранилась правая часть плиты, включая правый и нижний
                               фас. Верхний край оббит, но эпиграфическое поле не пострадало. Левый
                               край оббит.</p>
                            <p xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">41,5</height>
+                              <width unit="cm">22,0-31,5</width>
+                              <depth unit="cm">8,0</depth>
+                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">Лицевой фас. Оббито слева.</seg>
                            <seg xml:lang="en"/>
+                           <dimensions/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -72,29 +76,32 @@
                            см, расстояние между последней и предпоследней строками 1,0 см),
                            последняя из которых сохранилась. Слово δόγμ(ατι) в строке 6 сокращено,
                            после сокращения стоит знак интерпункции в виде небольшого треугольника
-                           (высота 0,8 см).</seg>
+                           (высота 0,8 см).
+                           Среднее расстояние между строк: 1,4-1,6.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm"/>
+                        <height unit="cm"/> <!-- В первой строке 2,2-2,3, в следующих колеблется между 3,3-4,0 см. -->
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate notBefore="0222" notAfter="0235"
-                        evidence="Упоминание_имени_Севера_Александра">
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
+                     <origDate notBefore="0222" notAfter="0235" evidence="Указание_надписи Просопография">
                         <seg xml:lang="ru">222-235 гг.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#unknown"
-                           >Неизвестно.</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
                         <rs type="circumstances">Неизвестны.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Unknown.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
@@ -104,8 +111,8 @@
                      <seg xml:lang="en"/>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">Н.А. Сон, 2001 г.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">Н.А. Сон, <date when="2001">2001</date> г.</seg>
+                     <seg xml:lang="en">H.A. Son, <date when="2001">2001</date>.</seg>
                   </provenance>
                </history>
             </msDesc>
@@ -116,12 +123,14 @@
       </xi:include>
       <!-- volNum = ﻿10-->
       <revisionDesc>
+         <change when="2016-08-25" who="SS">encoded metadata</change>
+         <change when="2016-08-02" who="SS">encoded Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">
+         <graphic url="10.19">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
@@ -143,34 +152,34 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><space extent="unknown" unit="character"/> <w><supplied reason="explanation">Ἀγαθῇ</supplied></w> 
+               		<lb n="1"/><space extent="unknown" unit="character"/> <w><supplied reason="lost">Ἀγαθῇ</supplied></w> 
                                                    <w>τύχῃ</w> <space extent="unknown" unit="character"/>
-               		<lb n="2"/><persName type="emperor"><w><supplied reason="explanation">Αὐτοκράτορα</supplied></w> <w><unclear>Κ</unclear>αίσαρα</w> 
+               		<lb n="2"/><persName type="emperor"><w><supplied reason="lost">Αὐτοκράτορα</supplied></w> <w><unclear>Κ</unclear>αίσαρα</w> 
                                                    <name type="praenomen"><expan><abbr>Μ</abbr><ex>ᾶρκον</ex></expan></name> 
                                                    <name type="gentilicum"><expan><abbr>Αὐρ</abbr><ex>ήλιον</ex></expan></name>
-               		<lb n="3"/><name type="gentilicum"><supplied reason="explanation">Σεουῆρον</supplied></name> 
-                                                   <name type="cognomen"><supplied reason="explanation">Ἀλέξα</supplied><unclear>ν</unclear>δρον</name> 
+               		<lb n="3"/><name type="gentilicum"><supplied reason="lost">Σεουῆρον</supplied></name> 
+                                                   <name type="cognomen"><supplied reason="lost">Ἀλέξα</supplied><unclear>ν</unclear>δρον</name> 
                                                    <name type="epithet">Εὐτυχῆ</name>
                		<lb n="4"/><name type="epithet"><supplied reason="lost">Εὐσεβῆ</supplied></name> 
                		                   <name type="epithet"><supplied reason="lost">Σεβαστὸν</supplied></name></persName> 
                                                    <persName type="attested"><name type="praenomen"><expan><abbr><unclear>Μ</unclear></abbr><ex>ᾶρκος</ex></expan></name> 
                                                    <name type="gentilicum"><expan><abbr>Αὐρ</abbr><ex>ήλιος</ex></expan></name> 
-                                                   <name type="cognomen">Ἀρ<choice><corr>τέ</corr></choice><choice><corr>µω</corr></choice>ν</name> <name type="ethnic">Ἰ
+                                                   <name type="cognomen">Ἀρτέµων</name> <name type="ethnic">Ἰ
                		<lb n="5" break="no"/><supplied reason="lost">στριανὸς</supplied></name>, <name type="ethnic"><supplied reason="lost">Ethnicum</supplied></name>, 
-                                                   <name type="ethnic"><supplied reason="lost">Ἡ</supplied><unclear>ρ</unclear>ακλε<choice><corr>ώτ</corr></choice><choice><corr>ης</corr></choice></name>, 
+                                                   <name type="ethnic"><supplied reason="lost">Ἡ</supplied><unclear>ρ</unclear>ακλεώτης</name>, 
                                                       <name type="ethnic">Τυ
                		<lb n="6" break="no"/><supplied reason="lost">ρανὸς</supplied></name>, <name type="ethnic"><supplied reason="lost">Ethnicum</supplied></name></persName> 
-                                                   <w><supplied reason="lost">β</supplied><unclear>ο</unclear>υλευ<choice><corr>τὴς</corr></choice></w> 
-                                                      <w><expan><abbr>δό<choice><corr>γμ</corr></choice></abbr><ex>ατι</ex></expan></w> <!-- check abbreviation --><g ref="#punctus"/>
+                                                   <w><supplied reason="lost">β</supplied><unclear>ο</unclear>υλευτὴς</w> 
+                                                      <w><expan><abbr>δόγμ</abbr><ex>ατι</ex></expan></w> <g ref="#punctus"/>
                		<lb n="7"/><supplied reason="lost"><w>τῆς</w> <w>ἱερωτάτης</w> <w><expan><abbr>β</abbr><ex>ουλῆς</ex></expan></w></supplied> 
-                                                   <w><supplied reason="lost">κα</supplied>ὶ</w> <w>τοῦ</w> <w>λαμ<choice><corr>πρ</corr></choice>ο
+                                                   <w><supplied reason="lost">κα</supplied>ὶ</w> <w>τοῦ</w> <w>λαμπρο
                		<lb n="8" break="no"/><supplied reason="lost">τάτου</supplied></w> <w><supplied reason="lost">δήμο</supplied>υ</w>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
-               <app>
-                  <note>6: πολίτης καὶ? β]ο̣υλευτὴς An.Ep., SEG, δόγμα(τι) An.Ep.</note>
+               <app loc="6">
+                  <note>πολίτης καὶ? β]ο̣υλευτὴς An.Ep., SEG, δόγμα(τι) An.Ep.</note>
                </app>
             </listApp>
          </div>

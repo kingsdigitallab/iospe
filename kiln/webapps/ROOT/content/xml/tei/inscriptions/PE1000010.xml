@@ -2,12 +2,11 @@
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Надгробие.</title>
+            <title xml:lang="ru">Надгробие</title>
             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -20,38 +19,46 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Белгород-Днестровский историко-краеведческий музей, А-5833
-                        (1377).</repository>
-                     <idno/>
+                     <repository>Белгород-Днестровский историко-краеведческий музей</repository>
+                     <idno>А-5833 (1377)</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
-                     <idno/>
+                     <idno>А-5833 (1377)</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc2">
                      <seg xml:lang="ru">Надгробие.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Epitaph.</seg>
                   </summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор белый сероватого оттенка.</material>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый сероватого оттенка.</material>
                            <material xml:lang="en"/>
                            <p xml:lang="ru">Лицевой и оборотный фасы отполированы, остальные оббиты,
                               задняя сторона несколько закопчена.</p>
                            <p xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">11,6</height>
+                              <width unit="cm">11,0</width>
+                              <depth unit="cm">1,5-1,9</depth>
+                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон, кроме верхней. Сверху верхнее поле размером не менее 3,5 см или пропуск строки.</seg>
                            <seg xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">8,0</height>
+                              <width unit="cm">10,8</width>
+                           </dimensions>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -59,14 +66,19 @@
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко, но достаточно небрежно и не
                            вполне ровно, украшены небольшими апексами. Перекладина альфы
-                           горизонтальна или слегка наклонна.</seg>
+                           горизонтальна или слегка наклонна.
+                           Среднее расстояние между строк: 2,2.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm"/>
+                        <height unit="cm">3,1-3,3</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
                      <origDate notBefore="0101" notAfter="0300" evidence="Палеография">
                         <seg xml:lang="ru">II-III вв.</seg>
                         <seg xml:lang="en"/>
@@ -81,18 +93,18 @@
                         <rs type="context">Вторичный.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Белгород-Днестровский.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">А.И. Иванчик, август 2006.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
+                     <seg xml:lang="en">A. I. Ivantchik, <date when="2006-08">August 2006</date>.</seg>
                   </provenance>
                </history>
             </msDesc>
@@ -103,12 +115,14 @@
       </xi:include>
       <!-- volNum = ﻿10-->
       <revisionDesc>
+         <change when="2016-08-25" who="SS">encoded metadata</change>
+         <change when="2016-08-02" who="SS">encoded Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">
+         <graphic url="10.10">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
@@ -119,7 +133,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Неиздана.</bibl>
+               <bibl>Ineditum</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -128,11 +142,11 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ρ</unclear>ΑΙ</orig> 
-                                                   <gap reason="lost" quantity="1" unit="character"/> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ρ</unclear>ΑΙ</orig><gap reason="lost" quantity="1" 
+               		                   unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">γυναῖ</supplied><unclear>κ</unclear>ι</w> 
-                                                      <persName type="attested"><name type="gentilicum">Αὐρη<supplied reason="lost">λίᾳ</supplied></name></persName> 
-                                                      <gap reason="lost" extent="unknown" unit="character"/>
+                                                      <persName type="attested"><name type="gentilicum">Αὐρη<supplied reason="lost">λίᾳ</supplied></name></persName><gap 
+                                                         reason="lost" extent="unknown" unit="character"/>
                		<lb n="2a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
