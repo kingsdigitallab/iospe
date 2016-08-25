@@ -42,10 +42,10 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
                            <material xml:lang="en">White marble.</material>
                            <p xml:lang="ru">Лицевой фас тщательно обработан, поле надписи отполировано и окружено рельефной рамкой с полировкой. 
-                              Левый и нижний фасы обработаны суммарно с помощью траянки, оборотный грубыми сколами, остальные оббиты. 
-                              Орнаментация: Поле надписи было окружено рельефной рамкой. Слева рамка сложно профилирована и состоит из плоского поля, 
+                              Левый и нижний фасы обработаны суммарно с помощью траянки, оборотный грубыми сколами, остальные оббиты.</p> 
+                              <p>Орнаментация: Поле надписи было окружено рельефной рамкой. Слева рамка сложно профилирована и состоит из плоского поля, 
                               отделенного глубокой бороздой от валика, плавно переходящего в плоскую поверхность, который переходит к полю надписи посредством ребра, 
-                              образующего прямой угол.</p>
+                              образующего прямой угол.</p> <!-- do we encode decoration separately? -->
                            <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">10,9</height>
@@ -58,7 +58,7 @@
                         <layout>
                            <seg xml:lang="ru">Ширина рамки 6,0. Поле надписи углублено по сравнению с рамкой на 0,8. 
                               Эпиграфическое поле: Оббито со всех сторон, кроме левой. Находится внутри рельефной рамки. Левое 1,5.
-                              Среднее расстояние между строк: 0,4.</seg>
+                              Среднее расстояние между строк: 0,4.</seg> <!-- figure out dimensions -->
                            <seg xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">10,3</height>
@@ -78,7 +78,10 @@
                </physDesc>
                <history>
                   <origin>
-                     
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
                      <origDate notBefore="0211" notAfter="0211" evidence="Указание_надписи титулатура">
                         <seg xml:lang="ru">211 г.</seg>
                         <seg xml:lang="en"/>
@@ -112,6 +115,7 @@
          <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
       </xi:include>
       <revisionDesc>
+         <change when="2016-08-02" who="SS">encoded metadata and Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -138,9 +142,9 @@
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="1"/><w>δοθῆ<supplied reason="lost">ναι</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐπ</supplied>
-               		<lb n="2" break="no"/><choice><corr>ηνγ</corr></choice>ελ<choice><corr>με</corr></choice>ν<supplied reason="lost" cert="low">α</supplied></w> 
+               		<lb n="2" break="no"/>ηνγελμεν<supplied reason="lost" cert="low">α</supplied></w> 
                               <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="3"/><orig>ΡΙ</orig> <w><choice><corr>τε</corr></choice>λειωθ<supplied reason="lost">ὲν</supplied></w> 
+               		<lb n="3"/><orig>ΡΙ</orig> <w>τελειωθ<supplied reason="lost">ὲν</supplied></w> 
                                     <supplied reason="lost"><w>τὸ</w> <w>ψήφισμα</w> <w>ὑπὸ</w> <w>τοῦ</w> <w>γραμματέως</w> <w>τῆς</w> <w>πόλεως</w></supplied> 
                                     <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><w part="F">ου</w> <persName type="attested"><name>῾Ρούφ<unclear>ο</unclear><supplied reason="lost">υ</supplied></name></persName> 
@@ -150,7 +154,7 @@
                                        <supplied reason="lost"><w>τῆς</w> <w>πόλεως</w> <w>τόπῳ</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="6"/><w>ἐγένετ<unclear>ο</unclear></w> <supplied reason="lost"><w>ἐν</w> <placeName>Τύρᾳ</placeName></supplied> 
                                           <gap reason="lost" extent="unknown" unit="character"/> <persName type="consul"><name type="gentilicum">Λολλιανῷ</name> 
-               		<lb n="7"/><name type="cognomen"><unclear>Γ</unclear>ε<choice><corr>ντ</corr></choice><unclear>ι</unclear><supplied reason="lost">ανῷ</supplied></name></persName> 
+               		<lb n="7"/><name type="cognomen"><unclear>Γ</unclear>εντ<unclear>ι</unclear><supplied reason="lost">ανῷ</supplied></name></persName> 
                                  <supplied reason="lost"><w>καὶ</w> <persName type="consul"><name type="gentilicum">Πομπωνίῳ</name> 
                                              <name type="cognomen">Βάσσῳ</name></persName> <w>ὑπάτοις</w>,
                                     <w>ὡς</w> <w>δὲ</w> <w>Τυρανοὶ</w></supplied>

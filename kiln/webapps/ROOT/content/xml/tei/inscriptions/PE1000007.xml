@@ -2,12 +2,11 @@
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Фрагменты декрета (?).</title>
+            <title xml:lang="ru">Фрагменты декрета (?)</title>
             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -20,17 +19,16 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru" n="2">
-                     <repository>Белгород-Днестровский историко-краеведческий музей, А-7711,
-                        КП-7743.</repository>
-                     <idno/>
+                     <repository>Белгород-Днестровский историко-краеведческий музей</repository>
+                     <idno>А-7711, КП-7743</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en" n="2">
                      <repository/>
-                     <idno/>
+                     <idno>А-7711, КП-7743</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc15" cert="low">
                      <seg xml:lang="ru">Почетный декрет ?</seg>
                      <seg xml:lang="en"/>
                   </summary>
@@ -39,9 +37,9 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор серый.</material>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор серый.</material>
                            <material xml:lang="en"/>
                            <p xml:lang="ru">Лицевой фас отполирован, но сильно поврежден длительным
                               трением, оборотный и правый фасы обработаны грубыми сколами, остальные
@@ -51,83 +49,149 @@
                         </support>
                      </supportDesc>
                      <layoutDesc>
-                        <layout>
-                           <seg xml:lang="ru"/>
-                           <seg xml:lang="en"/>
-                        </layout>
+                        <layout/>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
-                     <handNote>
-                        <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, по линиям
-                           предварительной разметки, еще заметным на камне, некоторые, но не все,
-                           украшены небольшими апексами. Альфа преимущественно с прямой
-                           горизонтальной гастой, но иногда с ломаной, правый штрих далеко выступает
-                           за место пересечения с левым. Ножки омеги как правило расположены не
-                           горизонтально, а под небольшим углом, но в некоторых случаях
-                           горизонтально. Вертикальная гаста фи далеко выступает за пределы строки
-                           сверху и снизу. Применяются лигатуры и словоделители в виде точек,
-                           расположенных посередине строки.</seg>
-                        <seg xml:lang="en"/>
-                        <height unit="cm"/>
-                     </handNote>
+                     <handNote/>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
                      <origDate notBefore="0151" notAfter="0200" evidence="Палеография">
-                        <seg xml:lang="ru">Вторая половина II в. н.э.</seg>
+                        <seg xml:lang="ru">2-я пол. II в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
                   </origin>
-                  <provenance type="found" n="2">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
-                           >Белгород-Днестровский, Украина, Одесская обл.</placeName>
-                        <rs type="circumstances">Обнаружена в сентябре 1958 г. при строительных
-                           работах между крепостью и современным городом в начале Портовой улицы, у
-                           обрыва к лиману; тогда же поступила в музей. В инвентарную книгу камень
-                           внесен 7 июня 1978 г.</rs>
-                        <rs type="context">Неизвестен.</rs>
-                     </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
-                     </seg>
-                  </provenance>
-                  <provenance type="found" n="1">
-                     <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
-                           >Аккерман / Белгород-Днестровский, Украина, Одесская обл.</placeName>
-                        <rs type="circumstances">Обнаружена в 1900 г. при строительстве пристани,
-                           между крепостью и лиманом на гласисе крепости.</rs>
-                        <rs type="context">Неизвестен.</rs>
-                     </seg>
-                     <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
-                     </seg>
-                  </provenance>
-                  <provenance type="observed" n="2">
-                     <seg xml:lang="ru">Белгород-Днестровский.</seg>
-                     <seg xml:lang="en"/>
-                  </provenance>
-                  <provenance type="observed" n="1">
-                     <seg xml:lang="ru">Неизвестно с 1963 г., до 1941 г. хранился в Одесском
-                        археологическом музее.</seg>
-                     <seg xml:lang="en"/>
-                  </provenance>
-                  <provenance type="autopsy" n="2">
-                     <seg xml:lang="ru">А.И. Иванчик, август 2006.</seg>
-                     <seg xml:lang="en"/>
-                  </provenance>
-                  <provenance type="autopsy" n="1">
-                     <seg xml:lang="ru">Нет.</seg>
-                     <seg xml:lang="en"/>
-                  </provenance>
                </history>
+               <msPart n="1">
+                  <msIdentifier/>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions>
+                                 <height unit="cm">23,0</height>
+                                 <width unit="cm">20,0</width> <!-- или 21,0 -->
+                                 <depth unit="cm">6,5</depth> <!-- или 8,0 (по данным В.В. Латышева и Э.Р. фон Штерна). -->
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout>
+                              <seg xml:lang="ru">Лицевой фас. Сохранился правый край, остальные отбиты. Размеры полей: правое 2,0.</seg>
+                              <seg xml:lang="en"/>
+                              <dimensions/>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">Буквы вырезаны неглубоко по линиям предварительной разметки, применяются лигатуры. 
+                              Среднее расстояние между строк: Неизвестно.</seg>
+                           <seg xml:lang="en"/>
+                           <height unit="cm">1,2</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <provenance type="found" n="1">
+                        <seg xml:lang="ru">
+                           <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
+                              >Аккерман / Белгород-Днестровский, Украина, Одесская обл.</placeName>
+                           <rs type="circumstances">Обнаружена в 1900 г. при строительстве пристани,
+                              между крепостью и лиманом на гласисе крепости.</rs>
+                           <rs type="context">Неизвестен.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                           <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
+                           <rs type="circumstances"/>
+                           <rs type="context"/>
+                        </seg>
+                     </provenance>
+                     <provenance type="observed" n="1">
+                        <seg xml:lang="ru">Неизвестно с 1963 г., до 1941 г. хранился в Одесском
+                           археологическом музее.</seg>
+                        <seg xml:lang="en"/>
+                     </provenance>
+                     <provenance type="observed" subtype="autopsy" n="1">
+                        <seg xml:lang="ru">Нет.</seg>
+                        <seg xml:lang="en"/>
+                     </provenance>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier/>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <dimensions>
+                                 <height unit="cm">19,7</height>
+                                 <width unit="cm">20,0</width>
+                                 <depth unit="cm">7,0-7,2</depth>
+                              </dimensions>
+                           </support>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout>
+                              <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон, кроме правой; сильно вытерто.</seg>
+                              <seg xml:lang="en"/>
+                              <dimensions>
+                                 <height unit="cm">17,8</height>
+                                 <width unit="cm">17,0</width>
+                              </dimensions>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, по линиям
+                              предварительной разметки, еще заметным на камне, некоторые, но не все,
+                              украшены небольшими апексами. Альфа преимущественно с прямой
+                              горизонтальной гастой, но иногда с ломаной, правый штрих далеко выступает
+                              за место пересечения с левым. Ножки омеги как правило расположены не
+                              горизонтально, а под небольшим углом, но в некоторых случаях
+                              горизонтально. Вертикальная гаста фи далеко выступает за пределы строки
+                              сверху и снизу. Применяются лигатуры и словоделители в виде точек,
+                              расположенных посередине строки.
+                              Среднее расстояние между строк: 0,5.</seg>
+                           <seg xml:lang="en"/>
+                           <height unit="cm">1,0-1,2</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <provenance type="found" n="2">
+                        <seg xml:lang="ru">
+                           <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
+                              >Белгород-Днестровский, Украина, Одесская обл.</placeName>
+                           <rs type="circumstances">Обнаружена в сентябре 1958 г. при строительных
+                              работах между крепостью и современным городом в начале Портовой улицы, у
+                              обрыва к лиману; тогда же поступила в музей. В инвентарную книгу камень
+                              внесен 7 июня 1978 г.</rs>
+                           <rs type="context">Неизвестен.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                           <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
+                           <rs type="circumstances"/>
+                           <rs type="context"/>
+                        </seg>
+                     </provenance>
+                     <provenance type="observed" n="2">
+                        <seg xml:lang="ru">Белгород-Днестровский.</seg>
+                        <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
+                     </provenance>
+                     <provenance type="observed" subtype="autopsy" n="2">
+                        <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
+                        <seg xml:lang="en">A. I. Ivantchik, <date when="2006-08">August 2006</date>.</seg>
+                     </provenance>
+                  </history>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -136,12 +200,18 @@
       </xi:include>
       <!-- volNum = ﻿10-->
       <revisionDesc>
+         <change when="2016-08-25" who="SS">encoded metadata</change>
+         <change when="2016-08-02" who="SS">encoded Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">
+         <graphic url="10.7-1">
+            <desc xml:lang="en"/>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="10.7-2">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
@@ -166,24 +236,24 @@
                <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="M">ωρισ</w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ε</supplied>ι<choice><corr>ν</corr></choice></w> 
-                                             <w><choice><corr>κ</corr></choice>ατὰ</w> <w>τ<choice><corr>ὴν</corr></choice></w> <w>συ<choice><corr>νή</corr></choice>θει
-               		<lb n="3" break="no"/><supplied reason="lost">αν</supplied></w> <gap reason="lost" extent="unknown" unit="character"/><w part="F">σια</w> 
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ε</supplied>ιν</w> 
+                                             <w>κατὰ</w> <w>τὴν</w> <w>συνήθει
+               		<lb n="3" break="no"/><supplied reason="lost">αν</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F">σια</w> 
                                              <w>μισθὸν</w> <w>λαμβά
-               		<lb n="4" break="no"/><supplied reason="lost">ν</supplied></w> <gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w> 
+               		<lb n="4" break="no"/><supplied reason="lost">ν</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w> 
                                              <w>οἱ</w> <w>βάρβαροι</w> <w>φορτία</w>
                	         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">κατ</supplied>ακλεῖσαι</w> <w>ἐπὶ</w> <w>τὸ</w> <w part="I">αὔ</w>
-               		<lb n="6" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <w>οἱ</w> <w>στρατιῶται</w> <w>ὑ<choice><corr>πὲ</corr></choice>ρ</w>
-               		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">κατ</supplied>ατιθέσθωσαν</w> <w>οἱ</w> <w>τρα
-               		<lb n="8" break="no"/><supplied reason="lost" cert="low">πεζῖται</supplied></w> <gap reason="lost" extent="unknown" unit="character"/><w part="F">ωσαν</w> 
-                                                <w>χαρακτ<choice><corr>ῆρ</corr></choice>α</w> <w part="I">ἔχον
-               		<lb n="9" break="no"/><supplied reason="lost">τ</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> 
-                                             <w><supplied reason="lost">χα</supplied>λκοῦ<choice><corr>ν</corr></choice></w> <w><choice><corr>ἢ</corr></choice></w> 
+               		<lb n="6" break="no"/><gap reason="lost" extent="unknown" unit="character"/><w>οἱ</w> <w>στρατιῶται</w> <w>ὑπὲρ</w>
+               		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">κατ</supplied>ατιθέσθωσαν</w> <w>οἱ</w> <w>τρα
+               		<lb n="8" break="no"/><supplied reason="lost" cert="low">πεζῖται</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F">ωσαν</w> 
+                                                <w>χαρακτῆρα</w> <w part="I">ἔχον
+               		<lb n="9" break="no"/><supplied reason="lost">τ</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied 
+               		                      reason="lost">χα</supplied>λκοῦν</w> <w>ἢ</w> 
                                              <w>σιδηροῦν</w> <w>ἢ</w>
-               		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/> <w>ποιήσα<choice><corr>ντ</corr></choice>α</w> <w>ὁ</w> <w>ἑκατον</w> <!-- double check -->
-               		<lb n="11" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">οἱ</supplied></w> 
-                                             <w><supplied reason="lost">ξ</supplied>ένοι</w> <w>αὐθημερὸ<choice><corr>ν</corr></choice></w> <w part="I"><choice><corr>ἐ</corr></choice>κκα</w>
-               		<lb n="12" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἡμέ</supplied>ραις</w>· 
+               		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><w>ποιήσαντα</w> <w>ὁ</w> <w part="I">ἑκατον</w>
+               		<lb n="11" break="no"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">οἱ</supplied></w> 
+                                             <w><supplied reason="lost">ξ</supplied>ένοι</w> <w>αὐθημερὸν</w> <w part="I">ἐκκα</w>
+               		<lb n="12" break="no"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἡμέ</supplied>ραις</w>· 
                                                 <w>εἰ</w> <w>δὲ</w> <w>εἶεν</w> <w>ξένοι</w> <w>ἐκ</w>
                		<lb n="13"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΤΑΙ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="14"/><gap reason="lost" extent="unknown" unit="line"/>
@@ -193,14 +263,14 @@
             <div type="textpart" subtype="fragment" n="2">
                <ab>   		
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ε</unclear>ΙΤ<unclear>ΕΛΕ</unclear></orig> 
-                                             <gap reason="lost" quantity="1" unit="character"/> <gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><unclear>ἐ</unclear><choice><corr>ν</corr></choice></w> 
-                                             <w><choice><corr>τ</corr></choice>ῷ</w> <w>ἐπιφα<choice><corr>νε</corr></choice><unclear>στ</unclear><supplied reason="lost">ά</supplied></w>
-               		<lb n="3"/><supplied reason="lost"><w>τῳ</w> <w>τόπῳ</w></supplied> <gap reason="lost" extent="unknown" unit="character"/><w part="F">σα</w> 
+                                             <gap reason="lost" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><unclear>ἐ</unclear>ν</w> 
+                                             <w>τῷ</w> <w>ἐπιφανε<unclear>στ</unclear><supplied reason="lost">ά</supplied></w>
+               		<lb n="3"/><supplied reason="lost"><w>τῳ</w> <w>τόπῳ</w></supplied><gap reason="lost" extent="unknown" unit="character"/><w part="F">σα</w> 
                                              <w>ὅθεν</w> <w part="I">ἀναγνωσ</w>
                		<lb n="4" break="no"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>λ</unclear>ατων</w> 
                                              <w><unclear>στ</unclear><supplied reason="lost">ρ</supplied><unclear>α</unclear>τιώτῃ</w> <g ref="#punctus"/>
-               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">στρα</supplied><unclear>τ</unclear>ιώτης</w> 
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">στρα</supplied><unclear>τ</unclear>ιώτης</w> 
                                              <orig><unclear>Ρ</unclear></orig><gap reason="lost" quantity="2" unit="character"/><orig><unclear>Ο</unclear>ΤΗΚΑΤ<unclear>Α</unclear></orig>
                		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><w part="I"><supplied reason="lost">λ</supplied><unclear>αμβ</unclear>αν</w><gap reason="lost" 
                		                   extent="unknown" unit="character"/><w part="F">ας</w> <g ref="#punctus"/> <orig>ΕΙ</orig>
@@ -211,46 +281,46 @@
                                              unit="character"/><orig><unclear>Θ</unclear>Α<unclear>Ι</unclear></orig><gap reason="lost" quantity="3" unit="character"/><orig><unclear>Η</unclear>Τ</orig> 
                                              <gap reason="lost" quantity="4" unit="character"/>
                		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="lost" quantity="1" unit="character"/> 
-                                             <orig>Σ</orig><gap reason="lost" quantity="2" unit="character"/><orig>Ρ</orig><gap reason="lost" quantity="1" unit="character"/> <!-- double check gaps -->
-                                             <gap reason="lost" quantity="1" unit="character"/> <orig><unclear>ΙΥ</unclear></orig> 
+                                             <orig>Σ</orig><gap reason="lost" quantity="2" unit="character"/><orig>Ρ</orig><gap reason="lost" quantity="1" unit="character"/> 
+                                             <!-- double check gaps: . and [.] -->
+                                             <gap reason="lost" quantity="1" unit="character"/><orig><unclear>ΙΥ</unclear></orig> 
                                              <gap reason="lost" extent="unknown" unit="character"/><orig>ΡΑ</orig><gap reason="lost" quantity="5" unit="character"/>
-               		<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><orig><choice><corr><unclear>Η</unclear>Ρ</corr></choice>Ο<unclear>Υ</unclear></orig><gap 
+               		<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Η</unclear>ΡΟ<unclear>Υ</unclear></orig><gap 
                		                   reason="lost" extent="unknown" unit="character"/><gap reason="lost" quantity="1" unit="character"/><orig>ΕΠ</orig><gap 
                                               reason="lost" quantity="5" unit="character"/>
                		<lb n="12"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΑΤ</unclear></orig><gap reason="lost" extent="unknown" 
-               		                   unit="character"/><gap reason="lost" quantity="2" unit="character"/> <orig>ΟΝ</orig> <g ref="#punctus"/> 
+               		                   unit="character"/><gap reason="lost" quantity="2" unit="character"/><orig>ΟΝ</orig> <g ref="#punctus"/> 
                                              <orig>ΚΑ</orig><gap reason="lost" quantity="5" unit="character"/>
                		<lb n="12a"/><gap reason="lost" extent="unknown" unit="character"/>
                </ab>
             </div>
          </div>
          <div type="apparatus">
-            <listApp>
-               <app>
-                  <note>Fr. 1</note>
+            <div type="textpart" n="1">
+               <listApp>
+               <app loc="1">
+                  <note>ὡρῖσ[αι von Stern</note>
                </app>
-               <app>
-                  <note>1: ὡρῖσ[αι von Stern</note>
+               <app loc="4">
+                  <note>[νειν von Stern</note>
                </app>
-               <app>
-                  <note>4: [νειν von Stern</note>
+               <app loc="6">
+                  <note>[τὸ von Stern, [ριον? Latyshev</note>
                </app>
-               <app>
-                  <note>6: [τὸ von Stern, [ριον? Latyshev</note>
+               <app loc="7">
+                  <note>]α τιθέσθωσαν von Stern</note>
                </app>
-               <app>
-                  <note>7: ]α τιθέσθωσαν von Stern</note>
+               <app loc="8">
+                  <note>τιθέσ]θωσαν von Stern</note>
                </app>
-               <app>
-                  <note>8: τιθέσ]θωσαν von Stern</note>
+               <app loc="9">
+                  <note>[τα von Stern</note>
                </app>
-               <app>
-                  <note>9: [τα von Stern</note>
-               </app>
-               <app>
-                  <note>11: [τάρχης? Latyshev, ]εν αὐθήμερον ἐκ κα- von Stern</note>
+               <app loc="11">
+                  <note>[τάρχης? Latyshev, ]εν αὐθήμερον ἐκ κα- von Stern</note>
                </app>
             </listApp>
+            </div>
          </div>
          <div type="translation" xml:lang="ru">
             <p>[- - -] в соответствии с обычаем [- - -] получ[- - -] плату [- - -] варвары товары [-

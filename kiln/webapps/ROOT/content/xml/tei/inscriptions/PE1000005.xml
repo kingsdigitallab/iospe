@@ -6,7 +6,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="ru">Фрагмент почетного декрета.</title>
+            <title xml:lang="ru">Фрагмент почетного декрета</title>
             <title xml:lang="en"/>
          </titleStmt>
          <publicationStmt>
@@ -19,17 +19,16 @@
                <msIdentifier>
                   <country/>
                   <altIdentifier xml:lang="ru">
-                     <repository>Белгород-Днестровский историко-краеведческий музей, А-8918,
-                        КП-34958.</repository>
-                     <idno/>
+                     <repository>Белгород-Днестровский историко-краеведческий музей</repository>
+                     <idno>А-8918, КП-34958</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
                      <repository/>
-                     <idno/>
+                     <idno>А-8918, КП-34958</idno>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>
+                  <summary corresp="document-search.xml#doc15">
                      <seg xml:lang="ru">Почетный декрет.</seg>
                      <seg xml:lang="en"/>
                   </summary>
@@ -38,21 +37,30 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru">Плита.</objectType>
-                           <objectType xml:lang="en"/>
-                           <material xml:lang="ru">Мрамор белый.</material>
-                           <material xml:lang="en"/>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
+                           <material xml:lang="en">White marble.</material>
                            <p xml:lang="ru">Лицевой фас тщательно обработан, поле надписи
                               отполировано и окружено рельефной рамкой с полировкой. Левый и нижний
                               фасы обработаны суммарно с помощью траянки, оборотный грубыми сколами,
                               остальные оббиты.</p>
+                           <p>Орнаментация: Поле надписи было окружено рельефной рамкой. Снизу рамка плоская, слева сложно профилирована и 
+                              состоит из плоского поля, отделенного глубокой бороздой от валика, плавно переходящего в плоскую поверхность, который переходит 
+                              к полю надписи посредством ребра, образующего прямой угол. </p>
                            <p xml:lang="en"/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"/>
+                           <seg xml:lang="ru">Лицевой фас. Сохранился левый нижний угол, оббито сверху и справа. 
+                              Размеры полей: левое 0,6, нижнее 0,6. 
+                           </seg>
                            <seg xml:lang="en"/>
+                           <dimensions>
+                              <height unit="cm">9,0</height>
+                              <width unit="cm">4,8</width>
+                           </dimensions>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -61,16 +69,20 @@
                         <seg xml:lang="ru">Буквы вырезаны глубоко, но не очень аккуратно, украшены
                            достаточно крупными апексами. Сигма курсивная квадратная, однажды
                            использована некурсивная форма. Вертикальная гаста фи далеко выступает за
-                           пределы строки сверху и снизу, пси – снизу.</seg>
+                           пределы строки сверху и снизу, пси – снизу. Среднее расстояние между строк: 0,4.</seg>
                         <seg xml:lang="en"/>
-                        <height unit="cm"/>
+                        <height unit="cm">1,0-1,2</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
                      <origDate notBefore="0201" notAfter="0233"
-                        evidence="Упоминание_Валерия_Руфа бывшего_секретарем_в_момент_составления_надписи_10_4 и_палеография">
+                        evidence="просопография палеография">
                         <seg xml:lang="ru">Начало III в. н.э.</seg>
                         <seg xml:lang="en"/>
                      </origDate>
@@ -84,18 +96,18 @@
                         <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Белгород-Днестровский.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">А.И. Иванчик, август 2006.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
+                     <seg xml:lang="en">A. I. Ivantchik, <date when="2006-08">August 2006</date>.</seg>
                   </provenance>
                </history>
             </msDesc>
@@ -106,12 +118,13 @@
       </xi:include>
       <!-- volNum = ﻿10-->
       <revisionDesc>
+         <change when="2016-08-02" who="SS">encoded metadata and Leiden</change>
          <change when="2016-05-18" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="">
+         <graphic url="10.5">
             <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
@@ -122,7 +135,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Неиздана.</bibl>
+               <bibl>Ineditum</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -139,10 +152,11 @@
                		<lb n="4"/><persName type="attested"><name><seg part="I">᾽Αττα</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="5"/><persName type="attested"><name>Καλλί<unclear>μ</unclear><supplied reason="lost">αχος</supplied></name></persName> <note>vel sim.</note> 
                                              <gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἀνα</supplied>
-               		<lb n="6" break="no"/><choice><corr>γρ</corr></choice>άψας</w> 
-                                          <persName type="attested"><name cert="low"><seg part="I">Χ<unclear>υ</unclear></seg></name></persName><gap reason="lost" extent="unknown" unit="character"/> <!-- double check name -->
+               		<lb n="6" break="no"/>γράψας</w> 
+                                          <persName type="attested"><name cert="low"><seg part="I">Χ<unclear>υ</unclear></seg></name></persName><gap 
+                                             reason="lost" extent="unknown" unit="character"/> <!-- double check name -->
                                           <persName type="attested"><name><supplied reason="lost" cert="low">῾Ροῦ</supplied>
-               		<lb n="7" break="no"/>φος</name></persName> <w><choice><corr>γρ</corr></choice><unclear>α</unclear><supplied reason="lost">μματεὺς</supplied></w> 
+               		<lb n="7" break="no"/>φος</name></persName> <w>γρ<unclear>α</unclear><supplied reason="lost">μματεὺς</supplied></w> 
                                           <supplied reason="lost"><w>ἐτελειώσατο</w> <w>τὸ</w> <w>ψήφισμα</w></supplied> <space extent="unknown" unit="character"/>
             </ab>
          </div>
