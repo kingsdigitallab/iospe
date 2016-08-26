@@ -252,6 +252,9 @@
           <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"
           />
         </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
         <map:transform src="cocoon://_internal/template/inscription.xsl">
           <map:parameter name="url" value="{1}.html"/>
           <xml:parameter name="lang" value="en"/>

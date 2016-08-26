@@ -85,7 +85,7 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <!-- Get search results. -->
+      <!-- Get search results. CALLED BY LINE 68 ABOVE -->
       <map:match id="local-search-query" pattern="*/*/*.xml">
         <map:generate src="../assets/queries/solr/{3}.xml"/>
         <map:transform src="../stylesheets/solr/merge-parameters.xsl">
