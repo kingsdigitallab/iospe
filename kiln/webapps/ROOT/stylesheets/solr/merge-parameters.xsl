@@ -23,7 +23,8 @@
                  string starting with an &amp; -->
         <xsl:if test="contains(., '=')">
           <xsl:element name="{substring-before(., '=')}">
-            <xsl:value-of select="substring-after(., '=')"/>
+            <!-- PC 9 Sep 2016:  the translate() function strips out all special characters so that the search string being sent to Solr should match the version indexed in the 'barebones' edition field -->
+            <xsl:value-of select="encode-for-uri(translate(normalize-unicode(substring-after(., '='),'NFD'),'&#x0300;&#x0301;&#x0308;&#x0313;&#x0314;&#x0323;&#x0342;&#x0345;&#x02bc;&#x02bd;&#x0302;&#x0340;&#x0341;&#x0343;&#x0344;',''))"/>
           </xsl:element>
         </xsl:if>
       </xsl:for-each>
