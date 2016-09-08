@@ -224,6 +224,7 @@
     <field indexed="true" multiValued="true" name="apparatus" required="false" stored="true" type="text_general" />
     <field indexed="true" multiValued="true" name="edition" required="false" stored="true" type="text_general" />
     <field indexed="true" multiValued="true" name="diplomatic" required="false" stored="true" type="text_general" />
+    <field indexed="true" multiValued="true" name="barebones" required="false" stored="true" type="text_general" />
     <field indexed="true" multiValued="true" name="lemma" required="false" stored="true" type="text_general" />
 
     <!-- catchall field, containing all other searchable text fields
@@ -242,6 +243,7 @@
     <copyField source="apparatus" dest="text" />
     <copyField source="edition" dest="text" />
     <copyField source="diplomatic" dest="text" />
+    <copyField source="barebones" dest="text" />
     <copyField source="lemma" dest="text" />
 
 
