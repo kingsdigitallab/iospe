@@ -18,7 +18,7 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='en/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>          
+            <map:redirect-to uri="en/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}"/>
           </map:when>
           <map:otherwise>
             <map:redirect-to uri="en/-500/1800/"/>
@@ -30,7 +30,7 @@
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='ru/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
+            <map:redirect-to uri="ru/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}"/>
           </map:when>
           <map:otherwise>
             <map:redirect-to uri="ru/-500/1800/"/>
@@ -38,12 +38,12 @@
         </map:select>
       </map:match>
 
-<!-- THIS IS THE TEMPLATE HANDLING THE NAVBAR SEARCH BOX INPUT -->
+      <!-- THIS IS THE TEMPLATE HANDLING THE NAVBAR SEARCH BOX INPUT -->
       <map:match pattern="(en|ru)/$" type="regexp">
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri='-500/1800/?fq=text:{url-encode:{raw-request-param:query}}'/>
+            <map:redirect-to uri="-500/1800/?fq=text:{url-encode:{raw-request-param:query}}"/>
           </map:when>
           <map:otherwise>
             <map:redirect-to uri="-500/1800/"/>
@@ -85,11 +85,11 @@
         <map:serialize type="xhtml"/>
       </map:match>
 
-      <!-- Get search results. CALLED BY LINE 68 ABOVE -->
+      <!-- Get search results. -->
       <map:match id="local-search-query" pattern="*/*/*.xml">
         <map:generate src="../assets/queries/solr/{3}.xml"/>
         <map:transform src="../stylesheets/solr/merge-parameters.xsl">
-          <map:parameter name="query-string" value="{request:queryString}"/>
+          <map:parameter name="query-string" value="{url-decode:{request:queryString}}"/>
           <map:parameter name="min-year" value="{1}"/>
           <map:parameter name="max-year" value="{2}"/>
         </map:transform>
