@@ -80,6 +80,9 @@
             src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
         <map:transform src="cocoon://_internal/template/concordances-publication.xsl">
           <map:parameter name="url" value="conc/publications/{1}.html"/>
           <map:parameter name="concordance" value="publication"/>

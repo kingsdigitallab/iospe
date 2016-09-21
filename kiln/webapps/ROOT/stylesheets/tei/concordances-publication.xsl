@@ -71,6 +71,7 @@
     <xsl:for-each select="$pubs/*[name()='publication'][position() mod $ncols = 1 or $ncols = 1]">
       <tr xsl:exclude-result-prefixes="#all">
         <xsl:for-each select=". | following-sibling::publication[position() &lt; $ncols]">
+          <xsl:variable name="volnum" select="str[@name='volume']"/>
           <td class="head">
             <xsl:value-of select="@publication-id"/>
           </td>
@@ -82,10 +83,15 @@
               <xsl:for-each select="distinct-values(str[@name='tei-id'])">
                 <li>
                   <a href="../../{.}.html">
-                    <xsl:number value="substring-before(.,'.')" format="I"/>
+                    <xsl:choose><xsl:when test="$volnum = 5">
+                      <xsl:number value="substring-before(.,'.')" format="I"/>
                     <xsl:text>&#xa0;</xsl:text>
                     <xsl:number value="substring-after(.,'.')" format="1"/>
-                    <!--<xsl:value-of select="substring-after(str[@name='tei-id'],'byz')"/>-->
+                    </xsl:when>
+                      <xsl:otherwise>
+                        <xsl:value-of select="."/>
+                      </xsl:otherwise>
+                    </xsl:choose>
                   </a>
                 </li>
 
