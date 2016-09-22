@@ -808,7 +808,7 @@
                     />
                   </xsl:when>
                   <xsl:otherwise>
-                    <i18n:text>Unknown._lh</i18n:text><!-- <i18n:text>Unknown_lh</i18n:text> -->
+                    <i18n:text>Unknown_lh</i18n:text>
                   </xsl:otherwise>
                </xsl:choose>
               </p>
