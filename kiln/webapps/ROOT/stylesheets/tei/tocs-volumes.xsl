@@ -12,10 +12,10 @@
     <xsl:template name="tocVolumeTitle">
         <xsl:choose>
             <xsl:when test="starts-with($url, '1')">
-                <i18n:text>I. Tyras and vicinity</i18n:text>
+                I. <i18n:text>Inscriptions of Tyras and vicinity</i18n:text>
             </xsl:when>
             <xsl:when test="starts-with($url, '3')">
-                <i18n:text>III. Inscriptions of Chersonesos and vicinity</i18n:text>
+                III. <i18n:text>Inscriptions of Chersonesos and vicinity</i18n:text>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
@@ -37,8 +37,7 @@
                             <xsl:text>]</xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="str[@name = concat('inscription-title-', $lang)]"
-                            />
+                            <xsl:value-of select="str[@name = concat('inscription-title-', $lang)]"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </dt>
