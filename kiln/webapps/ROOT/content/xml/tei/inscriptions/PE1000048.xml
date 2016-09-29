@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+             <title xml:lang="ru">Посвящение египетским богам</title>
+             <title xml:lang="en"></title>
+         </titleStmt>
+         <publicationStmt>
+            <authority>King's College London</authority>
+            <idno type="AI2015">10.48</idno>
+            <idno type="filename">PE1000048</idno>
+            <idno type="PE">PE1000048</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный исторический музей</repository>
+                     <idno>25519, оп. 5/I</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Historical Museum</repository>
+                     <idno>25519, оп. 5/I</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвящение.</seg>
+                     <seg xml:lang="en">Dedicatory inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
+                           <objectType xml:lang="en">Base.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор серый.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Левая часть отбита. Лицевой фас обработан аккуратно и заглажен без полировки, верхний и нижний фасы 
+                              также обработаны аккуратно, на них заметны следы траянки. Оборотный фас обработан грубо.</p>
+                           <p xml:lang="en"></p>
+                           <dimensions>
+                              <height unit="cm">9,5</height>
+                              <width unit="cm">24,0</width>
+                              <depth unit="cm">16,2</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <seg xml:lang="ru">Лицевая сторона. Оббито слева.
+                              Размеры полей: Правое 0,7; верхнее 1,5; нижнее 5,2.</seg>
+                           <seg xml:lang="en"></seg>
+                           <dimensions>
+                              <height unit="cm">2,8</height>
+                              <width unit="cm">22,8</width>
+                           </dimensions>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Буквы вырезаны аккуратно по линиям предварительной разметки, украшены небольшими  апексами. 
+                           Альфа с ломаной гастой; косые штрихи каппы укорочены; омикрон круглый, немного уменьшен; пи с несколько укороченной правой гастой; 
+                           ипсилон с отогнутыми наружу верхними штрихами.
+                           Омикрон 1,0. Среднее расстояние между строк: 0,3.</seg>
+                        <seg xml:lang="en"></seg>
+                        <height unit="cm">1,1-1,2</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p061">
+                        <seg xml:lang="ru">Тира.</seg>
+                        <seg xml:lang="en">Tyras.</seg>
+                     </origPlace>
+                     <origDate notBefore="0200" notAfter="0101" evidence="Палеография">
+                        <seg xml:lang="ru">II-I вв. до н.э.</seg>
+                        <seg xml:lang="en"></seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород Днестровский, Украина, Одесская обл.</placeName>
+                        <rs type="circumstances">Обнаружен Ф.И. Кнауером, профессором Киевского университета, в 1891 г. в 
+                           Аккермане у местного жителя Григория Антонова. По словам последнего, обнаружен им случайно при рытье ямы 
+                           в собственном дворе в 1889 г., возле крепости, к юго-западу от нее.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
+                        <rs type="circumstances"></rs>
+                        <rs type="context"></rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Москва.</seg>
+                     <seg xml:lang="en">Moscow.</seg>
+                  </provenance>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">А.И. Иванчик, <date when="2009-09">сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en">A.I. Ivantchik, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <xi:include href="encoding-desc.xml">
+         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+      </xi:include>
+      <revisionDesc>
+         <change when="2016-09-28" who="SS">encoded metadata</change>
+         <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="10.48">
+            <desc xml:lang="en"></desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <!-- Издания -->
+            <listBibl>
+               <bibl>L1. Латышев 1892, 58, n° 1 (по эстампажу Ф. Кнауера)</bibl>
+               <bibl>2. Латышев 1895, 82 (по фотографии Орешникова)</bibl>
+               <bibl>2.1. IOSPE IV, 1</bibl>
+               <bibl>2.2. IOSPE I2, 5</bibl>
+               <bibl>2.2.1. Bricault 2005, I, 188, No. 115/0101.</bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="commentaries">
+            <!-- Комментарии -->
+            <listBibl>
+               <bibl>Сонни 1893, 53-55</bibl>
+               <bibl>2. Латышев 1893, 140-142.</bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               		<lb n="1"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/>ς</name> 
+               		                   <persName type="attested"><name>Κρατίνου</name></persName></persName> 
+                                             <persName type="divine"><name>Σαράπιδι</name></persName>, <persName type="divine"><name>῎Ισιδι</name></persName>,
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w>θεοῖς</w> <w>συν<supplied reason="omitted">ν</supplied>άοις</w> 
+                                          <w>χαριστήριον</w>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app><note>2. [᾽Ανούβιδι ?] θεοῖς συν〈ν〉άοις χαριστήριον Bricault</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>[- - -], сын Кратина, Сарапису, Исиде [- - -], богам, почитаемым в общем храме, благодарственное приношение.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p></p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Камень передан в Императорскую археологическую комиссию в 1891 г., а оттуда в Московский исторический музей (ГИМ) в 1892 г.</p>
+            <p>В начале первой строки следует восстанавливать имя посвятителя, а в начале второй – имя Анубиса или Гарпократа, 
+               почитавшихся совместно с Сараписом и Исидой. Это восстановление предлагал еще В.В. Латышев, однако не внес его в текст, 
+               считая невозможным выбрать между Гарпократом и Анубисом и даже предполагая возможность (на мой взгляд, невероятную) 
+               восстановления обоих имен. Брико, хотя и со знаком вопроса, выбирает Анубиса, что представляется наиболее вероятным. 
+               Попытка Сонни (1893) оспорить датировку надписи и отнести ее к римскому времени неубедитльна (ср. Латышев 1893).</p>
+            <p>Надпись является одним из свидетельств распространения культа египетских богов в Северном Причерноморье в эллинистическую эпоху. 
+               Самые ранние его свидетельства в этом регионе (в Истрии и Херсонесе) относятся к ΙΙΙ в. до н.э. См. подробно с литературой Иванчик, Самойлова 2007.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p></p>
+         </div>
+      </body>
+   </text>
+</TEI>
