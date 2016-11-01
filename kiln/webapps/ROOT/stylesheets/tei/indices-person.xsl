@@ -404,7 +404,7 @@
                   <i18n:text>sister of</i18n:text>
                 </xsl:when>
                 <xsl:when test="@name = 'related'">
-                  <i18n:text>related of</i18n:text>
+                  <i18n:text>related to</i18n:text>
                 </xsl:when>
                 <xsl:when test="@name = 'fiancé'">
                   <i18n:text>fiancé of</i18n:text>
@@ -426,6 +426,12 @@
                 </xsl:when>
                 <xsl:when test="@name = 'granddaughter'">
                   <i18n:text>granddaughter of</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'fostered'">
+                  <i18n:text>fostered by</i18n:text>
+                </xsl:when>
+                <xsl:when test="@name = 'foster'">
+                  <i18n:text>fostered</i18n:text>
                 </xsl:when>
               </xsl:choose>
               <!-- space after relationship -->
