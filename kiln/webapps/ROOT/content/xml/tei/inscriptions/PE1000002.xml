@@ -183,11 +183,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>L1. Юргевич 1883, 7-16 (= Jurgiewicz 1883, 83-88)</bibl>
-               <bibl>2. IOSPE I, 2 (все фрагменты, кроме h, воспроизведенного по Юргевичу)</bibl>
-               <bibl>2.1. IGR, I, add. n° 1438</bibl>
-               <bibl>2.2. Minns 1913, 639, n° 3</bibl>
-               <bibl>2.3. IOSPE I2, 2</bibl>
+               <bibl><!-- Юргевич 1883 --><ptr target="bib:b0886"/>, <citedRange>7-16</citedRange></bibl> 
+               <bibl> (<!-- Jurgiewicz 1883 --><ptr target="bib:b0887"/>, <citedRange>83-88</citedRange>)</bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>I, 2</citedRange></bibl>
+               <bibl><!-- IGR --><ptr target="bib:IGR"/> <citedRange>I, add. n° 1438</citedRange></bibl>
+               <bibl><!-- Minns 1913 --><ptr target="bib:b0336"/>, <citedRange>639, n° 3</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/>, <citedRange>2</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -304,36 +305,36 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <note>Α̣ Latyshev</note>
+                  <rdg source="bib:IOSPE">Α̣</rdg>
                </app>
                <app loc="3">
-                     <note>3: ΣΕΙ Jurgiewicz, Latyshev.</note>
+                  <rdg source="bib:b0887 bib:IOSPE">ΣΕΙ</rdg>
                </app>
                <app loc="4">
-                  <note>χρήσ[ιμος vel εὔχρηστος ἐγένετο τῇ πατρίδι] Jurgiewicz.</note>
+                  <rdg source="bib:b0887">χρήσ[ιμος vel εὔχρηστος ἐγένετο τῇ πατρίδι]</rdg>
                   <note>ΗΣ in ligatura</note>
                </app>
                <app loc="4-5">
-                     <note>4-5: πλ]εῖστα κα⁽τε⁾[σκεύασε Mordtmann apud Latyshev.</note>
+                  <rdg source="bib:IOSPE">πλ]εῖστα κα⁽τε⁾[σκεύασε <note>Mordtmann apud Latyshev</note></rdg>
                </app>
                <app loc="5-6">
-                  <note>θειότ[ατος - - - ῥωμαίων αὐτοκράτω]|ρ ηὔξησε [τὴν πόλιν ἡμῶν].</note>
+                  <rdg>θειότ[ατος - - - ῥωμαίων αὐτοκράτω]|ρ ηὔξησε [τὴν πόλιν ἡμῶν]</rdg>
                </app>
                <app loc="6">
-                  <note>ρηύξησ[ε Latyshev</note>
+                  <rdg source="bib:IOSPE">ρηύξησ[ε</rdg>
                   <note>ΗΣ in ligatura</note>
                </app>
                <app loc="7">
                   <note>ΤΕ in ligatura</note>
                </app>
                <app loc="7-8">
-                  <note>τὰ κοι]νὰ ἡμεῖν ἔθ[η Mordtmann apud Latyshev.</note>
+                  <rdg source="bib:IOSPE">τὰ κοι]νὰ ἡμεῖν ἔθ[η <note>Mordtmann apud Latyshev</note></rdg>
                </app>
                <app loc="8">
                   <note>ΗΜΕ, ΝΕ in ligatura</note>
                </app>
                <app loc="9">
-                  <note>δ[ημοσίων ἐνδείας Mordtmann apud Latyshev.</note>
+                  <rdg source="bib:IOSPE">δ[ημοσίων ἐνδείας <note>Mordtmann apud Latyshev</note></rdg>
                   <note>ΤΗΣ in ligatura</note>
                </app>
                <app loc="10">
@@ -343,17 +344,17 @@
                   <note>ΝΤ in ligatura</note>
                </app>
                <app loc="10-11">
-                  <note>τῷ δήμῳ συμφερόντω[ν - - - ὠφελίμου ἀν-] Jurgiewicz.</note>
+                  <rdg source="bib:b0887">τῷ δήμῳ συμφερόντω[ν - - - ὠφελίμου ἀν-]</rdg>
                </app>
                <app loc="13">
                   <note>ΤΗΒ, ΗΚ, ΗΜ in ligatura</note>
                </app>
                <app loc="14">
-                  <note>καὶ [ὅπλ]ῳ ἐπι[χρύσῳ] Jurgiewicz.</note>
+                  <rdg source="bib:b0887">καὶ [ὅπλ]ῳ ἐπι[χρύσῳ]</rdg>
                   <note>ΝΤΕ, ΤΕ, ΜΗΣ, ΤΕ in ligatura</note>
                </app>
                <app loc="15">
-                  <note>γραμμ[ατέως] Latyshev.</note>
+                  <rdg source="bib:IOSPE">γραμμ[ατέως]</rdg>
                   <note>ΤΕ, ΤΕ, ΜΜ in ligatura</note>
                </app>
                <app loc="16">
@@ -372,26 +373,28 @@
                   <note>ΝΕ in ligatura</note>
                </app>
                <app loc="21">
-                  <note>Ἀρτεμισι- Jurgiewicz.</note>
+                  <rdg source="bib:b0887">Ἀρτεμισι-</rdg>
                   <note>ΝΠΕ, ΝΒ, ΜΗΝ, ΤΕ, ΜΕ in ligatura</note>
                </app>
                <app loc="22">
                   <note>ΝΤ, ΠΡ in ligatura</note>
                </app>
                <app loc="23">
-                  <note>Κ[α]ῖσαρ Latyshev.</note>
+                  <rdg source="bib:IOSPE">Κ[α]ῖσαρ</rdg>
                   <note>ΝΗΣ in ligatura</note>
                </app>
                <app loc="25">
-                  <note>Ἀν[τέρωτο]ς Σ.πτου- Jurgiewicz.</note>
+                  <rdg source="bib:b0887">Ἀν[τέρωτο]ς Σ.πτου-</rdg>
                   <note>ΗΣ, ΝΤ in ligatura</note>
                </app>
                <app loc="26">
-                  <note>Πιτφαρ . . . . . . . . ος Jurgiewicz, Πιτφαρ[νάκ]ο[υ Οὐα]λ[έρ]ιος Latyshev.</note>
+                  <rdg source="bib:b0887">Πιτφαρ . . . . . . . . ος</rdg>
+                  <rdg source="bib:IOSPE">Πιτφαρ[νάκ]ο[υ Οὐα]λ[έρ]ιος</rdg>
                   <note>ΝΤ in ligatura</note>
                </app>
                <app loc="27">
-                  <note>Θεόδ[ωρος Θεο]- Jurgiewicz, Θεοδ[ᾶς Ἀρτε]μι- Latyshev.</note>
+                  <rdg source="bib:b0887">Θεόδ[ωρος Θεο]-</rdg> 
+                  <rdg source="bib:IOSPE">Θεοδ[ᾶς Ἀρτε]μι-</rdg>
                   <note>ΤΕ in ligatura</note>
                </app>
                <app loc="28">
@@ -401,7 +404,7 @@
                   <note>ΤΕ in ligatura</note>
                </app>
                <app loc="30">
-                  <note>Σατορνείλου Jurgiewicz. Fr. f, h Latyshev desunt.</note>
+                  <rdg source="bib:b0887">Σατορνείλου <note>Fr. f, h Latyshev desunt</note></rdg>
                   <note>ΝΕ in ligatura</note>
                </app>
                <app loc="31">

@@ -223,12 +223,14 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl>
-               <bibl>Фрагмент 1: L1. Штерн 1901, 3, № 2</bibl>
-               <bibl>2. IOSPE IV, add. n° 452</bibl>
-               <bibl>2.1. IOSPE I2, 3 Фрагмент 2: L1. Карышковский 1963, 102-103, № 1, рис. 1-2
-                  (описание, фото, неточная прорисовка, без текста и перевода).</bibl>
+            <listBibl n="1">
+               <bibl><!-- Штерн 1901 --><ptr target="bib:b0888"/>, <citedRange>3, № 2</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV, add. n° 452</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/>, <citedRange>3</citedRange></bibl> 
             </listBibl>
+           <listBibl n="2">
+              <bibl><!-- Карышковский 1963 --><ptr target="bib:b0885"/>, <citedRange>102-103, № 1, pic. 1-2</citedRange></bibl>
+           </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
@@ -301,34 +303,36 @@
             <div type="textpart" n="1">
                <listApp>
                <app loc="1">
-                  <note>ὡρῖσ[αι von Stern</note>
+                  <rdg source="bib:b0888">ὡρῖσ[αι</rdg>
                </app>
                   <app loc="2">
                      <note>ΝΚ, ΗΝ, ΝΗ in ligatura</note>
                   </app>
                <app loc="4">
-                  <note>[νειν von Stern</note>
+                  <rdg source="bib:b0888">[νειν</rdg>
                </app>
                <app loc="6">
-                  <note>[τὸ von Stern, [ριον? Latyshev</note>
+                  <rdg source="bib:b0888">[τὸ</rdg>
+                  <rdg source="bib:IOSPE">[ριον? Latyshev</rdg>
                   <note>ΠΕ in ligatura</note>
                </app>
                <app loc="7">
-                  <note>]α τιθέσθωσαν von Stern</note>
+                  <rdg source="bib:b0888">]α τιθέσθωσαν</rdg>
                </app>
                <app loc="8">
-                  <note>τιθέσ]θωσαν von Stern</note>
+                  <rdg source="bib:b0888">τιθέσ]θωσαν</rdg>
                   <note>ΗΡ in ligatura</note>
                </app>
                <app loc="9">
-                  <note>[τα von Stern</note>
+                  <rdg source="bib:b0888">[τα von</rdg>
                   <note>ΝΗ in ligatura</note>
                </app>
                   <app loc="10">
                      <note>ΝΤ in ligatura</note>
                   </app>
                <app loc="11">
-                  <note>[τάρχης? Latyshev, ]εν αὐθήμερον ἐκ κα- von Stern</note>
+                  <rdg source="bib:IOSPE">[τάρχης? Latyshev</rdg>
+                  <rdg source="bib:b0888">]εν αὐθήμερον ἐκ κα-</rdg>
                   <note>ΝΕ in ligatura</note>
                </app>
             </listApp>
