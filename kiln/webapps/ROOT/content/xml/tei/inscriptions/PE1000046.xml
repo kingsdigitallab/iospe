@@ -133,9 +133,10 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>L1. Карышковский, Клейман 1985, 87-88, рис. 30 (фото без чтения и краткий комментарий)</bibl>
-               <bibl>1.1. Сапрыкин 1995, 412-425 = 1997, 46-57</bibl>
-               <bibl>1.1.1. SEG 45, 1025</bibl>
+               <bibl><!-- Карышковский, Клейман 1985 --><ptr target="bib:b0912"/>, <citedRange>87-88, pic. 30</citedRange></bibl>
+               <bibl><!-- Сапрыкин 1995 --><ptr target="bib:b0913"/>, <citedRange>412-425</citedRange></bibl>
+               <bibl> (<!-- Сапрыкин 1997 --><ptr target="bib:b0914"/>, <citedRange>46-57</citedRange>)</bibl>
+               <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>45, 1025</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -156,7 +157,10 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note>[Γάϊος Ἰούλιος βασιλεὺς Θρᾳκῶν Ῥοιμητάλκας βασιλέως Κότυος υἱωνὸς | καὶ βασ]ιλέως Ῥ̣[οιμητάλκου θυγατριδοῦς καὶ Ῥησκουπόρεως δὲ Θρᾳκῶν δυ|νάστου] υἱὸς τῆι̣ [Τυρανῶν πόλει διὰ τὴν πρὸς αὐτὸν εὔνοιαν τε καὶ τείμην] Saprykin</note></app>
+               <app>
+                  <rdg source="bib:b0913">[Γάϊος Ἰούλιος βασιλεὺς Θρᾳκῶν Ῥοιμητάλκας βασιλέως Κότυος υἱωνὸς | καὶ βασ]ιλέως 
+                  Ῥ̣[οιμητάλκου θυγατριδοῦς καὶ Ῥησκουπόρεως δὲ Θρᾳκῶν δυ|νάστου] υἱὸς τῆι̣ [Τυρανῶν πόλει διὰ τὴν πρὸς αὐτὸν εὔνοιαν τε καὶ τείμην]</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">

@@ -129,9 +129,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>L1. Nicorescu 1924, 394-396, fig. 9-10</bibl>
-               <bibl>1.1. SEG 3, 565 (Hondius)</bibl>
-               <bibl>1.2. Карышковский 1959, 115, № 3.</bibl>
+               <bibl><!-- Nicorescu 1924 --><ptr target="bib:b0907"/>, <citedRange>394-396, fig. 9-10</citedRange></bibl>
+               <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>3, 565</citedRange></bibl>
+               <bibl><!-- Карышковский 1959 --><ptr target="bib:b0908"/>, <citedRange>115, № 3</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -185,22 +185,25 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <note>-]αύσω τὰ ἐπὶ [ eds.</note>
+                  <rdg>-]αύσω τὰ ἐπὶ [ eds.</rdg>
                </app>
                <app loc="4">
-                  <note>πο]ρεύεσθαι eds.</note>
+                  <rdg>πο]ρεύεσθαι eds.</rdg>
                </app>
                <app loc="6">
-                  <note>εἰσ[βολὴν? eds.</note>
+                  <rdg>εἰσ[βολὴν? eds.</rdg>
                </app>
                <app loc="11">
-                  <note>]αιρῷ λιβυρνὸς ὁ ἐκε[ίνου? Nicorescu, κ]αιρῷ λιβυρνὸς ὁ ἐκε[ Hondius, κ]αιρῷ λιβυρνὸς ὁ ἐκε[ίνου? Karyshkovskii</note>
+                  <rdg source="bib:b0907">]αιρῷ λιβυρνὸς ὁ ἐκε[ίνου?</rdg>
+                  <rdg source="bib:SEG">κ]αιρῷ λιβυρνὸς ὁ ἐκε[</rdg>
+                  <rdg source="bib:b0908">κ]αιρῷ λιβυρνὸς ὁ ἐκε[ίνου?</rdg>
                </app>
                <app loc="15">
-                  <note>ἄγ]οντας σωματ[ Nicorescu, Karyshkovskii, ]οντας σωματ[ Hondius</note>
+                  <rdg source="bib:b0907 bib:b0908">ἄγ]οντας σωματ[</rdg>
+                     <rdg source="bib:SEG">]οντας σωματ[</rdg>
                </app>
                <app loc="19">
-                  <note>ίζωντα[ι Hondius</note>
+                  <rdg source="bib:SEG">ίζωντα[ι</rdg>
                </app>
             </listApp>
          </div>

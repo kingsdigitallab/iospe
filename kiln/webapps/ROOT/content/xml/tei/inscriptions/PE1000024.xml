@@ -199,14 +199,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>L1. Виноградов 1999</bibl>
-               <bibl>1.2. SEG 49, 1051 (Pleket). Избранные переводы и комментарии: Ruscu 2004</bibl>
-               <bibl>SEG 54, 707.</bibl>
+               <bibl><!-- Виноградов 1999 --><ptr target="bib:b0909"/></bibl>
+               <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>49, 1051</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
+            <bibl><!-- Ruscu 2004 --><ptr target="bib:b0910"/></bibl>
+            <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>54, 707</citedRange></bibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <div type="textpart" subtype="fragment" n="A">
@@ -260,22 +260,39 @@
             <div type="textpart" n="A">
                <listApp>
                <app loc="3">
-                  <note>πο]λ̣ὺ̣ ἔργα ? Vinogradov</note>
+                  <rdg source="bib:b0909">πο]λ̣ὺ̣ ἔργα ?</rdg>
                </app>
                <app loc="5">
-                  <note>τ]οῦδε vel ]ου δὲ Vinogradov</note>
+                  <rdg source="bib:b0909">τ]οῦδε vel ]ου δὲ</rdg>
                </app>
             </listApp>
             </div>
             <div type="textpart" n="B">
                <listApp>
-                  <app><note>2: δ]ήμ{ο}⟨ω⟩ι Vinogradov, Pleket; μίστην (sic) Vinogradov, μ⟨εγ⟩ίστην vel εἰς {μισ} τὴν Pleket</note></app>
-                  <app><note>3: ἰδίαι τὰ ἀξιούμενα τοῖ]ς̣ Vinogradov, Pleket</note></app>
-                  <app><note>4: [κούει, ὡς δὲ e.g. ἠναγκάσθησαν ἡμῖν συνεπιφά]νθαι Vinogradov, Pleket</note></app>
-                  <app><note>5: [e.g. εἰσ/ἐμ/ἐπιβολὴν τῶν δείνων - - -] Vinogradov, Pleket</note></app>
-                  <app><note>6: [κήσεως αὐτῶν σῖτον ἱκανὸν διδόναι συνέ]π̣εισε; Ἰστριανῶν, καὶ οὐκ Vinogradov, Pleket</note></app>
-                  <app><note>7: [γωγίμου σίτου (?) - - - κατ]άγειν Vinogradov, Pleket; κατ]άγειν κατὰ θάλασσαν οὐ δυνηθεὶς (τὸ) δόμα ⟨διὰ⟩ τὸ κατειληφέν⟨α⟩ι | [e.g. τοὺς βαρβάρους τὰ πλοῖα? Pleket</note></app>
-                  <app><note>8: μ[ό]νον [- - -]Α.ΤΗΝ Vinogradov, Pleket</note></app>
+                  <app loc="2">
+                     <rdg source="bib:b0909 bib:SEG">δ]ήμ{ο}⟨ω⟩ι</rdg>
+                     <rdg source="bib:b0909">μίστην (sic)</rdg>
+                     <rdg source="bib:SEG">μ⟨εγ⟩ίστην <note>vel</note> εἰς {μισ} τὴν</rdg> 
+                  </app>
+                  <app loc="3">
+                     <rdg source="bib:b0909 bib:SEG">ἰδίαι τὰ ἀξιούμενα τοῖ]ς̣</rdg>
+                  </app>
+                  <app loc="4">
+                     <rdg source="bib:b0909 bib:SEG">[κούει, ὡς δὲ e.g. ἠναγκάσθησαν ἡμῖν συνεπιφά]νθαι</rdg>
+                  </app>
+                  <app loc="5">
+                     <rdg source="bib:b0909 bib:SEG">[e.g. εἰσ/ἐμ/ἐπιβολὴν τῶν δείνων - - -]</rdg>
+                  </app>
+                  <app loc="6">
+                     <rdg source="bib:b0909 bib:SEG">[κήσεως αὐτῶν σῖτον ἱκανὸν διδόναι συνέ]π̣εισε; Ἰστριανῶν, καὶ οὐκ</rdg>
+                  </app>
+                  <app loc="7">
+                     <rdg source="bib:b0909 bib:SEG">[γωγίμου σίτου (?) - - - κατ]άγειν</rdg>
+                     <rdg source="bib:SEG">κατ]άγειν κατὰ θάλασσαν οὐ δυνηθεὶς (τὸ) δόμα ⟨διὰ⟩ τὸ κατειληφέν⟨α⟩ι | [e.g. τοὺς βαρβάρους τὰ πλοῖα?</rdg>
+                  </app>
+                  <app loc="8">
+                     <rdg source="bib:b0909 bib:SEG">μ[ό]νον [- - -]Α.ΤΗΝ</rdg>
+                  </app>
                </listApp>
             </div>
          </div>
