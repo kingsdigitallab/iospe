@@ -132,9 +132,9 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>L1. Штерн 1901, 1-2, № 1</bibl>
-               <bibl>1.1. IOSPE IV, add. n° 453</bibl>
-               <bibl>1.1.1. IOSPE I2, 7</bibl>
+               <bibl><!-- Штерн 1901 --><ptr target="bib:b0888"/>, <citedRange>1-2, № 1</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV, add. n° 453</citedRange></bibl>
+               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/>, <citedRange>7</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -151,10 +151,11 @@
          <div type="apparatus">
             <listApp>
                <app>
-                  <note>Πρεῖσκος Φ[λάβιος ἄρχ-]|ων τὸν [δεῖνα] von Stern</note>
+                  <rdg source="bib:b0888">Πρεῖσκος Φ[λάβιος ἄρχ-]|ων τὸν [δεῖνα]</rdg>
                </app>
                <app loc="2">
-                  <note>τὸν μ[- - -] IOSPE IV; τὸν ν[αὸν? - - -] IOSPE I2</note>
+                  <rdg source="bib:IOSPE">τὸν μ[- - -]</rdg>
+                  <rdg source="bib:IOSPE2">τὸν ν[αὸν? - - -]</rdg>
                </app>
             </listApp>
          </div>
