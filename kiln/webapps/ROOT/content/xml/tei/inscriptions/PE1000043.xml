@@ -129,7 +129,8 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Ineditum</bibl>
+               <bibl><!-- Дмитров 1952 --><ptr target="bib:b0920"/>, <citedRange>62, pic. 4</citedRange></bibl>
+               <bibl><!-- Карышковский 1959 --><ptr target="bib:b0908"/>, <citedRange>121-122, № 14</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -145,13 +146,19 @@
                		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ν</unclear></orig> <space quantity="1" unit="character"/> 
                                           <w part="I">ἐψη<supplied reason="lost">φίσ</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ω</unclear></orig> <g ref="#stop"/> 
-                                          <w>ἀν<unclear>τ</unclear><supplied reason="lost" cert="low">ίγραφον</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+                                          <persName type="attested"><name><seg part="I">Ἀν<unclear>τ</unclear><supplied reason="lost" cert="low">ωνί</supplied></seg></name></persName> 
+                                          <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note></note></app>
+               <app loc="2">
+                  <rdg source="bib:b0908">ΘΗΝΑ</rdg>
+               </app>
+               <app loc="4">
+                  <rdg source="bib:b0908">ΟΑΝΤ</rdg>
+               </app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
@@ -161,7 +168,11 @@
             <p></p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В верхней строке остаток горизонтальной нижней гасты, завершающийся апексом.</p>
+            <p>В 1959 г., согласно указанию Карышковского (возможно, ошибочному), надпись хранилась в Институте археологии АН УССР в Киеве. 
+               Карышковский надпись по всей видимости не видел. В публикации он не предлагал восстановлений, ограничившись воспроизведением 
+               текста маюскулами. </p>
+            <p>1. В верхней строке остаток горизонтальной нижней гасты, завершающийся апексом.</p>
+            <p>3. Возможно восстановление по аналогии с SEG 38, 735: τὸ οὖν ἐψηφισμ[ένον.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p></p>
