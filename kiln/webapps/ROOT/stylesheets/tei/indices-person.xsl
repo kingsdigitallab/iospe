@@ -479,15 +479,17 @@
 
       <td class="occupation">
         <xsl:value-of select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:occupation"/>
-        <xsl:text> </xsl:text>
-        <xsl:if test="@key='stonecutter'">
-          <i18n:text>stonecutter</i18n:text>
-          <xsl:text> </xsl:text>
-        </xsl:if>
-        <xsl:if test="@key='priest'">
-          <i18n:text>stonecutter</i18n:text>
-          <xsl:text> </xsl:text>
-        </xsl:if>
+        <xsl:choose>
+          <xsl:when test="@key='stonecutter'">
+            <i18n:text>stonecutter</i18n:text>
+          </xsl:when>
+          <xsl:when test="@key='priest'">
+            <i18n:text>priest</i18n:text>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text> </xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
       </td>
 
       <td class="inscriptions">
