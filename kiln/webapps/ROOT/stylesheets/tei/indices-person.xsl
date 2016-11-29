@@ -480,6 +480,14 @@
       <td class="occupation">
         <xsl:value-of select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:occupation"/>
         <xsl:text> </xsl:text>
+        <xsl:if test="@key='stonecutter'">
+          <i18n:text>stonecutter</i18n:text>
+          <xsl:text> </xsl:text>
+        </xsl:if>
+        <xsl:if test="@key='priest'">
+          <i18n:text>stonecutter</i18n:text>
+          <xsl:text> </xsl:text>
+        </xsl:if>
       </td>
 
       <td class="inscriptions">
