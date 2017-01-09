@@ -2,9 +2,16 @@
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
-
+    
+    
+    <!-- ***************************************************************************************************** -->
+    <!-- Note that this stylesheet does not handle the TOC for volume 5; that is handled by tocs-locations.xsl -->
+    <!-- ***************************************************************************************************** -->
+    
+    <xsl:import href="inscription.xsl"/>
     <xsl:param name="toc"/>
     <xsl:param name="url"/>
+    <xsl:param name="lang"/>
 
     <xsl:template match="/"/>
 
@@ -25,7 +32,7 @@
             <xsl:for-each select="//doc">
                 <xsl:sort select="int[@name = 'sortable-id']" order="ascending"/>
                 <dt>
-                    <a href="/{str[@name='tei-id']}.html">
+                    <a href="/{str[@name='tei-id']}{$kiln:url-lang-suffix}.html">
                         <xsl:value-of select="str[@name = 'tei-id']"/>
                     </a>
                     <xsl:text> </xsl:text>

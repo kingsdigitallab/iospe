@@ -48,9 +48,12 @@
         <map:mount check-reload="yes" src="search.xmap" uri-prefix="search/"/>
       </map:match>
     </map:pipeline>
-
+    
+    
+ 
     <map:pipeline>
-      <!-- volumes -->
+      <!-- volumes -->     
+      <!-- English: lists of inscriptions in each volume -->
       <map:match pattern="1/toc.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=1/toc.html"/>
@@ -113,9 +116,10 @@
         <map:serialize type="xhtml"/>
       </map:match>
       
+      <!-- Russian: lists of inscriptions in each volume -->
       <map:match pattern="1/toc-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.xml?url=1/toc-{1}.html"/>
+          <map:part src="cocoon://_internal/menu/main.ru.xml?url=1/toc-{1}.html"/>
           <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
           <map:part element="toc"
             src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:1&amp;fl=tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
@@ -135,7 +139,7 @@
       
       <map:match pattern="3/toc-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.xml?url=3/toc-{1}.html"/>
+          <map:part src="cocoon://_internal/menu/main.ru.xml?url=3/toc-{1}.html"/>
           <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
           <map:part element="toc"
             src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:3&amp;fl=tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
@@ -155,7 +159,7 @@
       
       <map:match pattern="5/toc-*.html">
         <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.xml?url=5/toc-{1}.html"/>
+          <map:part src="cocoon://_internal/menu/main.ru.xml?url=5/toc-{1}.html"/>
           <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
           <map:part element="toc"
             src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:5&amp;fl=tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
@@ -172,8 +176,10 @@
         </map:transform>
         <map:serialize type="xhtml"/>
       </map:match>
-    </map:pipeline>
-
+    </map:pipeline> 
+    
+    
+    
     <map:pipeline>
       <!-- Indices, volume description pages, concordances -->
       <!-- Concordances -->
@@ -190,21 +196,27 @@
       <map:match pattern="indices/**">
         <map:mount check-reload="yes" src="indices.xmap" uri-prefix="indices/"/>
       </map:match>
-    </map:pipeline>
-
+    </map:pipeline>   
+    
+    
+    
     <map:pipeline>
       <!-- Inscriptions -->
       <map:match pattern="inscriptions/**">
         <map:mount check-reload="yes" src="inscriptions.xmap" uri-prefix="inscriptions/"/>
       </map:match>
-    </map:pipeline>
-
+    </map:pipeline>   
+    
+    
+    
     <map:pipeline>
-      <!-- Inscriptions -->
+      <!-- Authority lists -->
       <map:match pattern="alists/**">
         <map:mount check-reload="yes" src="alists.xmap" uri-prefix="alists/"/>
       </map:match>
-    </map:pipeline>
+    </map:pipeline>   
+    
+    
 
     <!-- Main display pipeline. -->
     <map:pipeline>
@@ -214,7 +226,6 @@
       </map:match>
 
       <!-- Main -->
-
       <map:match pattern="index.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=index.html"/>
