@@ -5,31 +5,44 @@ require(['jquery'],
   });
 
   this.parse_inscription = function(query) {
+    // Matches inscription with PEXXXXXX numbers
+    // This will eventually become the default
+    var n = query.match(/^(PE)(\d{7})$/);
 
-    // Matches inscriptions in various forms:
-    // V 1 = 5.1 = v.0001
-    // 5.88a
-    // XXX 20 = 30.20
+    if (n && n[2]) {
+      return {
+          'corpus': n[1],
+          'n': n[2],
+          'suffix': ''
+      }
+    } else {
 
-    var n = query.match(/^(?:(\w+)[\.\s])?(\d{1,4})\s?(\w{0,1})$/);
+      // Matches inscriptions in various forms:
+      // V 1 = 5.1 = v.0001
+      // 5.88a
+      // XXX 20 = 30.20
 
-    if (!n || !n[2]) {
-      return false;
+      var n = query.match(/^(?:(\w+)[\.\s])?(\d{1,4})\s?(\w{0,1})$/);
+
+      if (!n || !n[2]) {
+          return false;
+      }
+
+      n[1] = this.clean_corpus(n[1]);
+
+      if (!n[1]) {
+          return false;
+      }
+
+      n[2] = parseInt(n[2]);
+
+      return {
+          'corpus': '' + n[1] + '.',
+          'n': n[2],
+          'suffix': n[3]
+      }
+
     }
-
-    n[1] = this.clean_corpus(n[1]);
-
-    if (!n[1]) {
-      return false;
-    }
-
-    n[2] = parseInt(n[2]);
-
-    return {
-      'corpus': '' + n[1] + '.',
-      'n': n[2],
-      'suffix': n[3]
-    };
   };
 
   this.clean_corpus = function(parsed_corpus) {
@@ -101,6 +114,7 @@ require(['jquery'],
       var $nt = $('#numTxt'),
         query = $nt.val(),
         i = parse_inscription(query);
+        console.log(i);
 
       $nt.removeClass('error').next('small').remove();
 
