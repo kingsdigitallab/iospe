@@ -1784,13 +1784,13 @@
             <xsl:text>2</xsl:text>
           </xsl:element>
         </xsl:when>
-        <xsl:when test="@xml:id = 'b0209'">
+        <xsl:when test="@xml:id = 'НЭПХ'">
           <xsl:text>НЭПХ I</xsl:text> 
         <xsl:if test="$lang = 'en'">  
             <xsl:text> (Solomonik 1964)</xsl:text>
         </xsl:if>
         </xsl:when>
-        <xsl:when test="@xml:id = 'b0958'">
+        <xsl:when test="@xml:id = 'НЭПХ2'">
           <xsl:text>НЭПХ II</xsl:text>
           <xsl:if test="$lang = 'en'">  
             <xsl:text> (Solomonik 1973)</xsl:text>
