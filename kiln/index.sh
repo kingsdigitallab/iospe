@@ -35,19 +35,19 @@ if [[ $SERVER_INSTANCE =~ dev|stg|liv ]]; then
     echo "Stopping tomcat6-"$SERVER_INSTANCE
     sudo service tomcat6-$SERVER_INSTANCE stop
 
-    echo 
+    echo
     echo "Backing up the previous index"
     tar -czf index.tar.gz webapps/solr/data/index
 
-    echo 
+    echo
     echo "Removing the previous index"
     rm -rf webapps/solr/data/index
-    echo 
+    echo
 
     echo "Starting tomcat6-"$SERVER_INSTANCE
     sudo service tomcat6-$SERVER_INSTANCE start
 
-    echo 
+    echo
     echo "Waiting for the index directory to be created"
     sleep 15
 fi
@@ -75,6 +75,6 @@ do
     fi
 done
 
-echo 
+echo
 echo "Indexing finished, checking for errors..."
 grep -Ri --colour=always OutOfMemoryError _tmp || echo "No errors found"
