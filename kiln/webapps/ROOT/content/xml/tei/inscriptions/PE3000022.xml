@@ -107,6 +107,7 @@
          <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
       </xi:include>
       <revisionDesc>
+         <change when="2017-03-13" who="PY">corrected Leiden</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-08-24" who="CB">Correcting metadata tags and app crit.</change>
          <change when="2015-07-10" who="KK">Add photo file name</change>
@@ -142,9 +143,16 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               	<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person505"><name nymRef="Α—"><seg part="I">Α<gap reason="illegible" quantity="1" unit="character"/></seg></name>
-             	<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person506"><name nymRef="Πα—"><seg part="I">Πα</seg></name></persName>
-               	<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person507"><name nymRef="Διω—"><seg part="I">Διω</seg></name></persName>
+               	<lb n="1"/>
+               <persName type="attested" ref="#person505"><name nymRef="Α—"><seg part="I">Α<gap reason="illegible" quantity="1" unit="character"/></seg></name>
+                  <gap reason="lost" extent="unknown" unit="character"/>
+             	<lb n="2"/>
+                  <persName type="attested" ref="#person506">
+                     <name nymRef="Πα—"><seg part="I">Πα</seg></name><gap reason="lost" extent="unknown" unit="character"/>
+                  </persName>
+               	<lb n="3"/>
+                  <persName type="attested" ref="#person507"><name nymRef="Διω—"><seg part="I">Διω</seg></name></persName>
+                  <gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="4"/><w>γυν<supplied reason="lost">ά</supplied></w></persName>
             </ab>
          </div>
