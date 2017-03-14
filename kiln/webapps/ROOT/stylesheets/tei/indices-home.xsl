@@ -74,7 +74,7 @@
       <li>
         <xsl:choose>
           <xsl:when test="//person//result[@numFound &gt; 0]">
-            <a href="person/letters/{//person//str[@name='first-letter']}{$kiln:url-lang-suffix}.html">
+            <a href="person/letters/A{$kiln:url-lang-suffix}.html">
               <i18n:text>Attested Persons</i18n:text>
             </a>
           </xsl:when>
