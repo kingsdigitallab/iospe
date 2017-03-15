@@ -1787,13 +1787,13 @@
         <xsl:when test="@xml:id = 'НЭПХ'">
           <xsl:text>НЭПХ I</xsl:text> 
         <xsl:if test="$lang = 'en'">  
-            <xsl:text> (Solomonik)</xsl:text>
+            <xsl:text> (Solomonik 1963)</xsl:text>
         </xsl:if>
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ2'">
           <xsl:text>НЭПХ II</xsl:text>
           <xsl:if test="$lang = 'en'">  
-            <xsl:text> (Solomonik)</xsl:text>
+            <xsl:text> (Solomonik 1973)</xsl:text>
           </xsl:if>
         </xsl:when>
         <xsl:when test="descendant::tei:title[@type = 'abbreviated']">
