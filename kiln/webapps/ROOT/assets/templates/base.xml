@@ -126,14 +126,10 @@
                       <i18n:text>Top of Page</i18n:text>
                     </a>
                   </p>
-                  <p>
-                    <xsl:text>&#xa9; </xsl:text>
-                    <i18n:text>King's College London</i18n:text>
-                  </p>
 
                   <xsl:choose>
                     <xsl:when test="$lang='en'">
-                      <p>&#xa9; 2011 King's College London</p>
+                      <p>Website &#xa9; 2011 King's College London</p>
                     </xsl:when>
                     <xsl:when test="$lang='ru'">
                       <p>&#xa9; 2011 Кингс Колледж Лондон</p>

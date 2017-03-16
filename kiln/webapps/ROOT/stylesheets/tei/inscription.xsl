@@ -628,7 +628,8 @@
         <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
           <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
         </a>
-        <xsl:text>&#160;</xsl:text>
+        <xsl:text>&#160;</xsl:text> © 2015 (<i18n:text>Volume</i18n:text> V), © 2017 (<i18n:text>Volume</i18n:text> I, III) <xsl:value-of select="//tei:titleStmt/tei:editor/tei:persName[@xml:lang = $lang]"/>
+        <br />
         <i18n:text>You may download this</i18n:text>
         <xsl:text>&#160;</xsl:text>
         <a href="{$filename}">
