@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Фрагмент посвящения (?)</title>
-             <title xml:lang="en"></title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент посвящения (?)</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.738</idno>
@@ -24,7 +16,7 @@
                      <idno>СП-86/135</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository></repository>
+                     <repository/>
                      <idno>СП-86/135</idno>
                   </altIdentifier>
                </msIdentifier>
@@ -45,7 +37,7 @@
                            <p xml:lang="ru">Частично сохранился левый нижний угол миниатюрной плитки. Под прямоугольным углублением, 
                               предназначенном для не сохранившегося рельефа, остатки надписи, вырезанной по предварительной разметке. 
                               Ширина рамки слева - 1,7 см, внизу - 2,2 см (отбита). Поверхность тщательно обработана.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">5,3</height>
                               <width unit="cm">5,4</width>
@@ -55,8 +47,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -64,7 +56,7 @@
                      <handNote>
                         <seg xml:lang="ru">Внутренние гасты мю касаются вертикалей почти посередине, овальный омикрон 
                            равен по величине остальным буквам, апексы на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,2</height>
                      </handNote>
                   </handDesc>
@@ -84,25 +76,23 @@
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#saki">Сакская пересыпь (Северо-Западный Крым).</placeName>
                         <rs type="circumstances">Найдена в 1986 г. кладоискателями.</rs>
-                        <rs type="context"></rs>
+                        <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"></placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Саки, Крым.</seg>
-                     <seg xml:lang="en"></seg>
+                     <seg xml:lang="en"/>
                   </provenance>
                   </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-03-13" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-28" who="AGi">programmatically created XML from Word docs</change>
@@ -111,7 +101,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -127,7 +117,7 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl></bibl>
+               <bibl/>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -149,13 +139,13 @@
             <p>Филом[- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

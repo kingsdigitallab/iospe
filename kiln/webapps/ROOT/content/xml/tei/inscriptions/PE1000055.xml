@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Фрагмент надписи неясного жанра</title>
-             <title xml:lang="en">Incertum</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи неясного жанра</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.55</idno>
@@ -43,7 +35,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый с серыми прожилками.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Лицевой фас тщательно заглажен, остальные отбиты.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">6,5</height>
                               <width unit="cm">13,6</width>
@@ -54,7 +46,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. </seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                            <dimensions><!-- левое не менее 6,0; верхнее не менее 2,0; нижнее не менее 3,2 -->
                               <height unit="cm">1,4</height>
                               <width unit="cm">5,7</width>
@@ -66,14 +58,14 @@
                      <handNote>
                         <seg xml:lang="ru">Написана глубоко врезанными, но неровными буквами, апексы отсутствуют. 
                            Альфа с горизонтальной гастой. Ню с укороченным правым штрихом, слегка наклоненным наружу.</seg>
-                       <seg xml:lang="en"></seg>
+                       <seg xml:lang="en"/>
                         <height unit="cm">1,3-1,6</height>
                      </handNote>
                   </handDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace  ref="origPlace.xml#p064">
+                     <origPlace ref="origPlace.xml#p064">
                         <seg xml:lang="ru">Никоний.</seg>
                         <seg xml:lang="en">Nikonion.</seg>
                      </origPlace>
@@ -90,7 +82,7 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Roxolany.</placeName>
-                        <rs type="circumstances"></rs>
+                        <rs type="circumstances"/>
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
@@ -106,9 +98,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-02-27" who="PY">encoded metadata and Leiden</change>
          <change when="2016-11-29" who="AGi">programmatically created XML from Word docs</change>
@@ -117,7 +107,7 @@
    <facsimile>
       <surface>
          <graphic url="10.55">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -141,14 +131,14 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note></note></app>
+               <app><note/></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Место и условия находки указаны в соответствии с музейной документацией. 
@@ -162,7 +152,7 @@
                начинающееся на Τανα-.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Декрет в честь Ксенона</title>
-            <title xml:lang="en">Decree honouring Xenon</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Декрет в честь Ксенона</title><title xml:lang="en">Decree honouring Xenon</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.277</idno>
@@ -35,8 +31,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
-                              >Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -81,8 +76,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0046" notAfter="-0046" evidence="титулатура"
-                        precision="medium">
+                     <origDate notBefore="-0046" notAfter="-0046" evidence="титулатура" precision="medium">
                         <seg xml:lang="ru">ок. 46 г. до н.э.</seg>
                         <seg xml:lang="en">ca. 46 B.C.</seg>
                      </origDate>
@@ -106,8 +100,7 @@
                   <history>
                      <provenance type="found">
                         <seg xml:lang="ru">
-                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol"
-                              >Севастополь (Херсонес).</placeName>
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                            <rs type="circumstances">Найден в 1904 г. в ходе раскопок К.К.
                               Косцюшко-Валюжинича (НА НЗХТ, д. 30, л.11; д.
                               33, № 243).</rs>
@@ -146,8 +139,7 @@
                   <history>
                      <provenance type="found">
                         <seg xml:lang="ru">
-                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol"
-                              >Севастополь (Херсонес).</placeName>
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                            <rs type="circumstances">Найдена в 1976 г. Раскопки М. И. Золотарева (НА НЗХТ, д. 101, л.
                               51, № 4861; д. 67, л. 27).</rs>
                            <rs type="context">В северо-восточном районе во
@@ -170,9 +162,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-18" who="CB">Added missing biblio tags</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
@@ -227,8 +217,7 @@
                                   <persName type="attested" ref="#person922"><name nymRef="Ζῆθος">Ζήθου</name></persName></persName>
                                    <w>καὶ</w> <w>ὁ</w> <w>ἐ<supplied reason="lost">πὶ</supplied></w>
                	<lb n="3"/><w><supplied reason="lost">τᾶς</supplied></w> <w><supplied reason="lost">διοικήσιος</supplied></w>
-                                 <persName type="attested" ref="#person923"><name nymRef="Ἀθάναιος">Ἀθάναιος</name> <persName type="attested" 
-                                    ref="#person924"><name nymRef="Στρατόνικος">Στρατ<unclear>ο</unclear><supplied reason="lost">νίκου</supplied></name></persName></persName>
+                                 <persName type="attested" ref="#person923"><name nymRef="Ἀθάναιος">Ἀθάναιος</name> <persName type="attested" ref="#person924"><name nymRef="Στρατόνικος">Στρατ<unclear>ο</unclear><supplied reason="lost">νίκου</supplied></name></persName></persName>
                	<lb n="4"/><w><supplied reason="lost">εἶπαν</supplied></w>· <w><supplied reason="lost">ἐπειδὴ</supplied></w>
                                  <persName type="attested" ref="#person928"><name nymRef="Ξένων"><supplied reason="lost">Ξέ</supplied>νων</name> 
                                  <persName type="attested" ref="#person929"><name nymRef="Τιμόθεος">Τιμοθέο<supplied reason="lost">υ</supplied></name></persName></persName>

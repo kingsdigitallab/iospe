@@ -1,14 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Почетная надпись в честь Автокла, сына Эниада</title>
-             <title xml:lang="en">Honourary inscription for Autokles, son of Oiniades</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Почетная надпись в честь Автокла, сына Эниада</title><title xml:lang="en">Honourary inscription for Autokles, son of Oiniades</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.24</idno>
@@ -52,7 +45,7 @@
                               нижнему фасу первого блока. Нижняя часть завершается сложной профилировкой иного профиля, чем на карнизе первого блока. 
                               Сохранились лицевой и левый фасы, правый и задний оббиты. Его размеры: 17 х 53 х 41.</p>
                            <p>Высота карниза 12,5. Высота профилированной части 5,0.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">28,0</height>
                               <width unit="cm">64,0</width>
@@ -89,8 +82,8 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -111,7 +104,7 @@
                               <seg xml:lang="ru">Лицевой фас, который по-видимому находился на длинной стороне прямоугольного в плане постамента. 
                                  Расположено на вертикальной поверхности карниза. Сохранилась лишь правая часть.
                                  Размеры полей: верхнее 2,5; правое 15,6; нижнее 4,1.</seg> <!-- how do these relate to the ones in dimensions? -->
-                              <seg xml:lang="en"></seg>
+                              <seg xml:lang="en"/>
                               <dimensions>
                                  <height unit="cm">10,17</height>
                                  <width unit="cm">16,7</width>
@@ -141,7 +134,7 @@
                                  На базе, под карнизом, заполняя практически всю сохранившуюся поверхность камня. Оббито слева, нижняя строка 
                                  частично повреждена. Надпись продолжалась на блоке, примыкавшем снизу к публикуемому.
                                  Размеры полей: верхнее 4,5; правое 0,5.</seg> <!-- how do these relate to the ones in dimensions? -->
-                              <seg xml:lang="en"></seg>
+                              <seg xml:lang="en"/>
                               <dimensions>
                                  <height unit="cm">10,2</height>
                                  <width unit="cm">40,7</width>
@@ -167,9 +160,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-09-26" who="SS">encoded metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -178,19 +169,19 @@
    <facsimile>
       <surface>
          <graphic url="10.24-1">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="10.24-2">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="10.24-3">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="10.24-4">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -237,8 +228,7 @@
                                                    <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">τοῖ</supplied><unclear>ς</unclear></w> 
                                                    <w>π<unclear>ο</unclear>λίταις</w> <w>μετὰ</w> <w>πάσης</w> <w>εὐνοίας</w>, <w>εἰς</w> <w>ἃ</w> 
                                                    <w>ἂν</w> <w>παρακαλῆται</w>, <w>προθύμως</w> <w>ὑπα
-               		<lb n="4" break="no"/><supplied reason="lost">κούει</supplied></w>, <gap reason="lost" extent="unknown" 
-               		                   unit="character"/><w part="F"><unclear>ν</unclear>θαι</w> <w>κατοικοῦντες</w> <w>τὸ</w> <placeName>Νικώνεον</placeName> 
+               		<lb n="4" break="no"/><supplied reason="lost">κούει</supplied></w>, <gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ν</unclear>θαι</w> <w>κατοικοῦντες</w> <w>τὸ</w> <placeName>Νικώνεον</placeName> 
                                                    <w>ἐγλιπόντες</w> <w>τὸν</w> <w>τόπον</w> <w>διὰ</w> <w>τὴν</w>
                		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> <w>ἀποστα<supplied reason="lost">λεὶ</supplied>ς</w> 
                                                    <w>πρεσβευτὴς</w> <w>εἰς</w> <placeName>Ἴστρον</placeName> <w>ὑπὲρ</w> <w>ἀναστάσεως</w> <w>καὶ</w> <w>ἐνοι
@@ -251,8 +241,7 @@
                                                    <w>κατειληφέν<surplus>δ</surplus><supplied reason="omitted">α</supplied>ι</w>
                		<lb n="8"/><supplied reason="lost" cert="low"><w>ἐνδέον</w></supplied> <gap reason="lost" extent="unknown" unit="character"/> 
                                                    <w><supplied reason="lost">δι</supplied>ασώισας</w>, <w>ἕως</w> <w>μ<supplied reason="lost">ό</supplied>νον</w> 
-                                                   <orig>A</orig> <gap reason="illegible" quantity="2" unit="character"/> <orig>ΤΗΝΓΠΡΕ</orig><gap reason="illegible" 
-                                                      quantity="1" unit="character"/><orig>ΙΣΑΛΟΜ</orig><gap reason="illegible" quantity="3" unit="character"/>
+                                                   <orig>A</orig> <gap reason="illegible" quantity="2" unit="character"/> <orig>ΤΗΝΓΠΡΕ</orig><gap reason="illegible" quantity="1" unit="character"/><orig>ΙΣΑΛΟΜ</orig><gap reason="illegible" quantity="3" unit="character"/>
                		<lb n="8a"/><gap reason="lost" extent="unknown" unit="line"/>
                </ab>
          </div>
@@ -311,7 +300,7 @@
             </div>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Первая часть надписи, видимо, содержала эпиграмму из шести строк, от которой сохранилось лишь окончания, 
@@ -356,7 +345,7 @@
                не был независимым полисом (во всяком случае не считался таковым в Тире) и скорее всего входил в состав полиса Тиры.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

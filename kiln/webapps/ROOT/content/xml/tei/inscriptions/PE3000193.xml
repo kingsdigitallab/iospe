@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Метрическая эпитафия [---]оны</title>
-            <title xml:lang="en">Metrical epitaph of a woman</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Метрическая эпитафия [---]оны</title><title xml:lang="en">Metrical epitaph of a woman</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.223</idno>
@@ -38,8 +34,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon38">Стенка
                               саркофага.</objectType>
                            <objectType xml:lang="en">Sarcophagus.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2"
-                              >Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Частично сохранилась слева и сверху. Расколота на два
                               соединяющихся фрагмента. Лицевая грань плиты обтесана мелкой зубаткой,
@@ -110,9 +105,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-20" who="CB">Metadata, tokenisation, origDate and app crit
             tags</change>
@@ -147,8 +140,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="1"/><lg><l met="hexameter"><w>οὔνομά</w> <w>μοι</w> <w>θέσα<supplied reason="lost">ν</supplied></w> 
-                                 <persName type="attested" ref="#person855"><name nymRef="—όνα"><gap reason="lost" extent="unknown" unit="character"/><seg 
-                                       part="F">όνα</seg></name></persName> <w>καλέεσθαι</w> <w>τοκῆες</w>.</l>
+                                 <persName type="attested" ref="#person855"><name nymRef="—όνα"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">όνα</seg></name></persName> <w>καλέεσθαι</w> <w>τοκῆες</w>.</l>
                	<lb n="2"/><l met="hexameter"><w>ἐννέα</w> <w>δὴ</w> <w>δὶς</w> <w>ἔμι<supplied reason="lost">μν</supplied>ον</w> 
                	             <w>ἐγὼ</w> <w>κούρη</w> <w>λυκάβαντ<supplied reason="lost">ας</supplied></w>,</l> 
                	<lb n="3"/><l met="hexameter"><w>ἐνεακαιδεκάτο<supplied reason="lost">υ</supplied></w> <w><supplied reason="lost">δὲ</supplied></w> 

@@ -1,14 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Почетная надпись в честь неизвестного</title>
-             <title xml:lang="en">Honourary inscription for anonymous</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Почетная надпись в честь неизвестного</title><title xml:lang="en">Honourary inscription for anonymous</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.22</idno>
@@ -23,7 +16,7 @@
                      <idno>Б-Д-1959, № 1156</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository></repository>
+                     <repository/>
                      <idno>Б-Д-1959, № 1156</idno>
                   </altIdentifier>
                </msIdentifier>
@@ -45,7 +38,7 @@
                               Рамка на лицевом фасе обработана суммарно, поле надписи внутри рамки отполировано. Боковые фасы обработаны суммарно, 
                               на них хорошо видны следы каменотесных орудий, оборотный и нижний – грубыми сколами. Верхняя часть отбита.</p>
                            <p>Ширина рамки справа и слева: 1,7, снизу: 9,0.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">46,5</height>
                               <width unit="cm">28,8-31,8</width>
@@ -59,7 +52,7 @@
                               изображения шести венков в три ряда, по два венка в ряду. Из них сохранились четыре нижних венка и нижняя часть левого венка верхнего ряда. 
                               Два нижних и верхние венки плющевые, центральные – лавровые, перевязанные лентами. 
                               Размеры лавровых венков 9,5 х 10,5 см, плющевых – 11,5 х 10 см. Над каждым венком расположена одна строка надписи.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">37,5</height>
                               <width unit="cm">26,0-28,0</width>
@@ -97,8 +90,8 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -113,9 +106,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-09-26" who="SS">encoded metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -124,7 +115,7 @@
    <facsimile>
       <surface>
          <graphic url="10.22">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -189,7 +180,7 @@
             <p>[- - - увенчанного золотыми венками тиритами ?, - - -], ольвиополитами [- - -], кизикинцами, родосцами.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Предложенное Фурманской восстановление утраченного начала надписи, опирающееся на надпись IGBulg I, 320 из Месамбрии (см. о ней Ruscu 2000), 
@@ -214,7 +205,7 @@
                бы восстанавливать название Византия. Однако это предположение остается лишь гипотезой.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

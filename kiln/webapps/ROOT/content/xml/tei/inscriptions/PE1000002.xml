@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Декрет в честь Коккея</title>
-            <title xml:lang="en">Decree honouring Kokkeios</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Декрет в честь Коккея</title><title xml:lang="en">Decree honouring Kokkeios</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.2</idno>
@@ -43,8 +35,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru">Мрамор серый.</material>
                            <material xml:lang="en">Grey marble.</material>
@@ -134,8 +125,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot"
-                           ref="findspot.xml#belgorod-dnestrovskyvicinity">с. Чобручи (Молдавия,
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovskyvicinity">с. Чобручи (Молдавия,
                            Слободзейский район) на левом берегу Днестра, поблизости от Слободзеи, в
                            100 км от Аккермана (Белгорода).</placeName>
                         <rs type="circumstances">Обнаружен в 1881 г. случайно во дворе крестьянского
@@ -161,9 +151,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <!-- volNum = ﻿10-->
       <revisionDesc>
          <change when="2016-08-02" who="SS">encoded metadata and Leiden</change>
@@ -196,7 +184,7 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               	<lb n="0"/><gap reason="lost" extent="unknown" unit="line"></gap>
+               	<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                	<lb n="1"/><g ref="#stop"/> <orig><unclear>Λ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="2"/><orig>Κ<unclear>Α</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="3"/><orig>ΣΕ<unclear>Ρ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
@@ -268,18 +256,16 @@
                	<lb n="25" break="no"/>τικοῦ</name></persName> <w>εἰσηγητής</w> <g ref="#stop"/> 
                                     <persName type="attested"><name type="praenomen"><expan><abbr>Τιβ</abbr><ex>έριος</ex></expan></name> <g ref="#stop"/> 
                                     <name type="gentilicium">Κλαύδιος</name> 
-                                    <name type="cognomen">Ἀντ<supplied 
-                                       reason="lost">ι</supplied><unclear>σ</unclear><supplied reason="lost">θένη</supplied>ς</name></persName> 
+                                    <name type="cognomen">Ἀντ<supplied reason="lost">ι</supplied><unclear>σ</unclear><supplied reason="lost">θένη</supplied>ς</name></persName> 
                                     <g ref="#stop"/> <persName type="attested"><name>Σ<unclear>ε</unclear>πτου<unclear>́</unclear><milestone unit="block" n="e"/>
                
                	<lb n="26" break="no"/><milestone unit="block" n="d"/>μιος</name> <persName type="attested"><name>῾Ιεροσῶντος</name></persName></persName> 
                                     <g ref="#stop"/> <persName type="attested"><name>Πιδανος</name> 
                                     <persName type="attested"><name>Πιτφαρ<unclear>ν</unclear><supplied reason="lost">ακου</supplied></name></persName></persName> 
-                                    <g ref="#stop"/> <persName type="attested"><name><supplied reason="lost">Οὐα</supplied><unclear>λέριος</unclear></name><milestone 
-                                             unit="block" n="k"/>
+                                    <g ref="#stop"/> <persName type="attested"><name><supplied reason="lost">Οὐα</supplied><unclear>λέριος</unclear></name><milestone unit="block" n="k"/>
                	<lb n="27"/><name>Βασσιανοῦ</name></persName> <g ref="#stop"/> <persName type="attested"><name>῾Ιερώνυμος</name> 
                	                 <persName type="attested"><name>Ἀρτεμιδώ<unclear>ρου</unclear></name></persName></persName> <g ref="#stop"/> 
-                                    <persName type="attested"><name>Θ<unclear>ε</unclear>οδᾶ<unclear></unclear><supplied reason="lost">ς</supplied></name> 
+                                    <persName type="attested"><name>Θ<unclear>ε</unclear>οδᾶ<unclear/><supplied reason="lost">ς</supplied></name> 
                                        <persName type="attested"><name>Α<unclear>ρτεμι</unclear>
                	<lb n="28" break="no"/>δώρου</name></persName></persName> <g ref="#stop"/> <persName type="attested"><name>Χρύσιππος</name> 
                                        <persName type="attested"><name>Χρυσίππου</name></persName></persName> 

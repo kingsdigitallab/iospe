@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Надгробие Дионисии Пии, жены Суса</title>
-             <title xml:lang="en"></title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие Дионисии Пии, жены Суса</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.54</idno>
@@ -45,15 +37,15 @@
                            <p xml:lang="ru">Нижняя часть отбита. В верхней части находится рельеф, довольно грубо исполненный, 
                               изображающий сидящую женщину, перед которой стоит мальчик, а за ее спиной – другая женщина. 
                               Головы изображенных на рельефе фигур повреждены.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                           <!-- Dimensions - uknown -->
-                           <dimensions></dimensions>
+                           <dimensions/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас, под рельефом.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -63,7 +55,7 @@
                            «надгробие, по-видимому, римского императорского периода, 
                            хотя форма буквы N могла бы рекомендовать более раннюю датировку».</seg>
                         <seg xml:lang="en">Unknown.</seg>
-                        <height unit="character"></height>
+                        <height unit="character"/>
                      </handNote>
                   </handDesc>
                </physDesc>
@@ -75,7 +67,7 @@
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="Просопография">
                         <seg xml:lang="ru">Римское время.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -86,7 +78,7 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Shabo.</placeName>
-                        <rs type="circumstances"></rs>
+                        <rs type="circumstances"/>
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
@@ -98,9 +90,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-02-27" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-29" who="AGi">programmatically created XML from Word docs</change>
@@ -109,7 +99,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -147,7 +137,7 @@
             <p>Дионисия Пия, жена Суса, прощай.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Единственный исследователь, видевший камень – Э. фон Штерн, однако он издал его без какой-либо иллюстрации, 
@@ -166,7 +156,7 @@
                во Фракии и Малой Азии.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

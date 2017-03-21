@@ -1,14 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Строительная надпись</title>
-             <title xml:lang="en">Building inscription</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Строительная надпись</title><title xml:lang="en">Building inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.47</idno>
@@ -46,7 +39,7 @@
                               площадка шириной 9-10 см, затем плоскость идет на сужение. В центре фрагмента находится круглый след (диаметр 10 см) 
                               какого-то объекта, для которого блок служил базой при третьем использовании; он повредил латинскую надпись, 
                               нанесенную при вторичном использовании.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">28,2</height>
                               <width unit="cm">36,6</width>
@@ -60,7 +53,7 @@
                               Центр поля поврежденм круглым следом объекта, для которого блок служил базой при вторичном использовании. 
                               Латинская надпись нанесена без учета профилировки блока, что, очевидно, свидетельствует о ее вторичном характере. 
                               Оббито со всех сторон.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">27,5</height>
                               <width unit="cm">34,6</width>
@@ -72,7 +65,7 @@
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко, ровно и тщательно, украшены небольшими апексами.
                            Среднее расстояние между строк: 1,0.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">6,0 - 10,5</height> <!-- Первая строка 10,5; вторая строка 9,6; третья строка около 6,0 (целиком не сохранились). -->
                      </handNote>
                   </handDesc>
@@ -85,7 +78,7 @@
                      </origPlace>
                      <origDate notBefore="0114" notAfter="0117" evidence="Титулатура палеография">
                         <seg xml:lang="ru">114-117 гг.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -97,8 +90,8 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -113,9 +106,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-09-28" who="SS">encoded metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -124,7 +115,7 @@
    <facsimile>
       <surface>
          <graphic url="10.47">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -157,14 +148,14 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note></note></app>
+               <app><note/></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
             <p>[Императору Нерве Тр]аяну [Цезарю, Лучшему Августу, Г]ерма[нскому, Дакийскому - - -] через векс[иляцию легиона - - - сделал]</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>1-2. В первой и второй строках восстановление имени Траяна и его победного титула Germanicus не вызывает сомнений, 
@@ -183,7 +174,7 @@
                центуриона V Македонского легиона.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

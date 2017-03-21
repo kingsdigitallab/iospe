@@ -1,14 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Фрагмент официального письма (?) римского времени</title>
-             <title xml:lang="en">Letter (?)</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент официального письма (?) римского времени</title><title xml:lang="en">Letter (?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.412</idno>
@@ -53,8 +46,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -87,7 +80,7 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances"></rs>
+                        <rs type="circumstances"/>
                         <rs type="context">Southeast sector of Chersonesos, by the Quarantine Bay ("fortress" chapel by the fortification wall").</rs>
                      </seg>
                   </provenance>
@@ -103,9 +96,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-09-13" who="SS">encoded text and metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -114,11 +105,11 @@
    <facsimile>
       <surface>
          <graphic url="30.412">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="30.412A">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -142,8 +133,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <placeName type="ethnic"><supplied reason="lost" 
-               		                   cert="low">Χερσονη</supplied><unclear>σ</unclear>σει<unclear>τ</unclear>ῶν</placeName> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <placeName type="ethnic"><supplied reason="lost" cert="low">Χερσονη</supplied><unclear>σ</unclear>σει<unclear>τ</unclear>ῶν</placeName> <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ων</w> <w>τῆς</w> 
                                                    <w part="I">χ</w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w> <w>οἱ</w> 
@@ -164,16 +154,16 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

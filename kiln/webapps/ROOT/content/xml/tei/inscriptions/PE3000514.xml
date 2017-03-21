@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Фрагмент декрета с упоминанием воинов</title>
-             <title xml:lang="en">Decree</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент декрета с упоминанием воинов</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.370</idno>
@@ -43,7 +35,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Частично сохранился левый край плиты с рельефной профилированной рамкой.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">32,5</height>
                               <width unit="cm">28,0</width>
@@ -53,8 +45,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -62,7 +54,7 @@
                      <handNote>
                         <seg xml:lang="ru">Слегка удлиненная форма букв, кси с изогнутой наклонной линией, овальное омикрон в высоту строки, 
                            сигма с параллельными верхней и нижней линиями, лигатуры, апексы на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">1,8</height>
                      </handNote>
                   </handDesc>
@@ -83,12 +75,12 @@
                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найден в 1968 г. в юго-восточной части Херсонеса, в портовом районе. 
                            Раскопки В.И. Кадеева.</rs>
-                        <rs type="context"></rs>
+                        <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -99,9 +91,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-10-10" who="SS">encoded text and metadata</change>
          <change when="2016-10-07" who="AGi">programmatically created XML from Word docs</change>
@@ -110,7 +100,7 @@
    <facsimile>
       <surface>
          <graphic url="30.370">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -205,13 +195,13 @@
             <p>- - - [у] нас воины - - - варварские - - - мы сказали (?) - - - щедро[стью?] - - - священным - - - знаменит[- - - демо]кратия - - -</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

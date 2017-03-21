@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Метрическая эпитафия Ойнанфы</title>
-            <title xml:lang="en">Metrical epitaph of Oinanthe </title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Метрическая эпитафия Ойнанфы</title><title xml:lang="en">Metrical epitaph of Oinanthe </title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.217</idno>
@@ -35,8 +31,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon3"
-                              >Стела.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -77,8 +72,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
-                        precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd century C.E.</seg>
                      </origDate>
@@ -107,9 +101,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-19" who="CB">Leidenised, tokenised, app crit</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
@@ -150,10 +142,9 @@
                <lb n="1"/><persName type="attested" ref="#person848"><name nymRef="Οἰνάνθη">Οἰνάνθη</name> 
                            <persName type="attested" ref="#person849"><name nymRef="Γλαυκίας">Γλαυκίου</name></persName></persName>
                <lb n="2"/><lg>
-                        <l met="hexameter" n="1"><w>ἆ</w> <w>βάλε</w> <w>τοι</w> <persName type="divine"><name>Μοῦ<supplied 
-                              reason="omitted">σαι</supplied></name></persName> <w>σὰ</w> <w>χαρείσια</w>, 
+                        <l met="hexameter" n="1"><w>ἆ</w> <w>βάλε</w> <w>τοι</w> <persName type="divine"><name>Μοῦ<supplied reason="omitted">σαι</supplied></name></persName> <w>σὰ</w> <w>χαρείσια</w>, 
                            <w>κάμμορε</w> <w>νύμφη</w></l> 
-               <lb n="3"/><l met="hexameter" n="2"><persName type="attested"  ref="#person848"><name nymRef="Οἰνάνθη">Οἰνάνθη</name></persName>, 
+               <lb n="3"/><l met="hexameter" n="2"><persName type="attested" ref="#person848"><name nymRef="Οἰνάνθη">Οἰνάνθη</name></persName>, 
                                  <w>πα<supplied reason="omitted">ί</supplied><choice><corr>δ</corr><sic>Λ</sic></choice>ων</w> 
                            <w>ἐπὶ</w> <w>γούνασι</w> <w>σεῖο</w> <w>τεθέντων</w>,</l>
                <lb n="4"/><l met="hexameter" n="3"><w>φώνησα<choice><corr>ν</corr><sic>ι</sic></choice></w> <w>λοχίης</w> <w>τε</w> <w>καλὸν</w> 

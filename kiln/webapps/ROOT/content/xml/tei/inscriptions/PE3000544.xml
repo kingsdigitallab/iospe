@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Incertum</title>
-             <title xml:lang="en"></title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Incertum</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="filename">30.680</idno>
@@ -45,7 +37,7 @@
                            <p xml:lang="ru">Фрагментарно сохранилась часть первоначальной плиты, которая была вторично использована в позднеэллинистическое 
                               время для изготовления нового носителя с надписью на тыльной стороне (см. № neph044b). Уже после публикации лицевая сторона была 
                               повреждена новыми сколами, в результате чего часть букв была утеряна.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">9,0</height>
                               <width unit="cm">14,5</width>
@@ -55,15 +47,15 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Aльфа с прямой поперечной линией, сигма с расходящимися верхней и нижней гастами, небольшие утолщения на концах линий букв.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">2</height>
                      </handNote>
                   </handDesc>
@@ -84,12 +76,12 @@
                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1899 г. на границе южного и юго-восточного районов Херсонеса, в периболе у куртины 16 (у стены А). 
                            Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 8, № 161; д. 28, л. 2, № 161).</rs>
-                        <rs type="context"></rs>
+                        <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -100,9 +92,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-03-08" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-28" who="AGi">programmatically created XML from Word docs</change>
@@ -111,7 +101,7 @@
    <facsimile>
       <surface>
          <graphic url="30.680">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -150,16 +140,16 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

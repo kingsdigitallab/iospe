@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Посвящение Деве</title>
-            <title xml:lang="en">Dedication to Parthenos</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Посвящение Деве</title><title xml:lang="en">Dedication to Parthenos</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.418</idno>
@@ -106,9 +102,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-28" who="CB">correcting app crit</change>
@@ -148,11 +142,9 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               	<lb n="1"/><persName type="attested" ref="#person949"><name nymRef="Ἱπποκ—"><supplied reason="lost">Ἱ</supplied><unclear>π</unclear>π<supplied 
-               	                 reason="lost"><unclear>ο</unclear></supplied>κ</name></persName><gap reason="lost" extent="unknown" unit="character"/> 
+               	<lb n="1"/><persName type="attested" ref="#person949"><name nymRef="Ἱπποκ—"><supplied reason="lost">Ἱ</supplied><unclear>π</unclear>π<supplied reason="lost"><unclear>ο</unclear></supplied>κ</name></persName><gap reason="lost" extent="unknown" unit="character"/> 
                                  <w><supplied reason="lost">ὑπὲρ</supplied></w> 
-               	<lb n="2"/><w><supplied reason="lost">τ</supplied>ᾶς</w> <w>θυγατρὸς</w> <persName type="attested" nymRef="#person950"><name nymRef="Σ—"><seg 
-               	                 part="I"><unclear>Σ</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name> </persName>
+               	<lb n="2"/><w><supplied reason="lost">τ</supplied>ᾶς</w> <w>θυγατρὸς</w> <persName type="attested" nymRef="#person950"><name nymRef="Σ—"><seg part="I"><unclear>Σ</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name> </persName>
                	<lb n="3"/><space extent="unknown" unit="character"/> <persName type="divine"><name>Παρθένωι</name></persName> 
                                     <w><supplied reason="lost">ἀνέθηκεν</supplied></w>
             </ab>

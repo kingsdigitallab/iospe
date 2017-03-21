@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Надгробие Феагена и Ульпии Макарии</title>
-             <title xml:lang="en">Epitaph of Theagenes and Ulpia Makaria</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие Феагена и Ульпии Макарии</title><title xml:lang="en">Epitaph of Theagenes and Ulpia Makaria</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.154</idno>
@@ -49,7 +41,7 @@
                               Под рельефом помещена трехстрочная надпись, выполненная по предварительной разметке. Буквы в третьей строке выполнены более небрежно 
                               и имеют меньшую высоту: они были вырезаны позднее другой рукой (возможно, на месте более раннего текста, который по какой-то причине 
                               был сбит).</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">101,0</height>
                               <width unit="cm">53,5</width>
@@ -59,8 +51,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -93,12 +85,12 @@
                         <rs type="circumstances">Найдена в 1793 г. в одном из скальных склепов за городской оборонительной стеной, 
                            затем находилась в притворе церкви св. Иоанна Крестителя (ср. Clarke 1810, 495; Мурзакевич 1837, 645; 
                            Dubois de Montpéreux 1843, 169; KW 61, № 355). В 1846 г. камень был отправлен в Санкт-Петербург.</rs>
-                        <rs type="context"></rs>
+                        <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -110,9 +102,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-10-10" who="SS">encoded text and metadata</change>
          <change when="2016-10-07" who="AGi">programmatically created XML from Word docs</change>
@@ -121,11 +111,11 @@
    <facsimile>
       <surface>
          <graphic url="30.154">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="30.154a">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>

@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Надгробие дочери Феогена</title>
-            <title xml:lang="en">Epitaph of a daughter of Theogenes</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие дочери Феогена</title><title xml:lang="en">Epitaph of a daughter of Theogenes</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.82</idno>
@@ -35,11 +31,9 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
-                           <material xml:lang="ru" ref="material-search.xml#m2"
-                              >Известняк.</material>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Обломана со всех сторон. Тыльная сторона обработана
                               грубо. В верхней части сохранились две строки надписи, вырезанной
@@ -79,8 +73,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0251" evidence="палеография"
-                        precision="low">
+                     <origDate notBefore="-0300" notAfter="-0251" evidence="палеография" precision="low">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">1st half of IIIrd century B.C.E.</seg>
                      </origDate>
@@ -108,9 +101,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-18" who="CB">Added missing biblio tags</change>
          <change when="2015-11-06" who="CB">Added origDate</change>
@@ -146,8 +137,7 @@
             <ab>
                	<lb n="1"/><persName type="attested" ref="#person640"><name nymRef="—α"><gap reason="lost" extent="unknown" unit="character"/><seg part="F"><orig>α</orig></seg></name>
                                  <persName type="attested" ref="#person641"><name nymRef="Θευγένης">Θευγένειο<supplied reason="lost">ς</supplied></name></persName>
-               	<lb n="2"/><persName type="attested" ref="#person642"><name><seg part="F"><gap reason="lost" extent="unknown" unit="character"/><gap 
-               	   reason="illegible" quantity="1" unit="character"/><orig>ίου</orig></seg></name></persName> <w>γυνά</w></persName>.
+               	<lb n="2"/><persName type="attested" ref="#person642"><name><seg part="F"><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ίου</orig></seg></name></persName> <w>γυνά</w></persName>.
             </ab>
          </div>
          <div type="apparatus">

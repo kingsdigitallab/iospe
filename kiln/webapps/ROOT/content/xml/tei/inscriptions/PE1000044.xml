@@ -1,14 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Фрагмент надписи</title>
-            <title xml:lang="en">Incertum</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.44</idno>
@@ -44,7 +37,7 @@
                            <p xml:lang="ru">Лицевой и оборотный фасы отполированы, остальные оббиты. На лицевом фасе находится греческая надпись 10.43. 
                               Оборотный фас использован вторично для нанесения латинской надписи. При вторичном использовании мраморная плита крепилась 
                               к стене с помощью раствора, следы которого ней хорошо видны.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">8,5</height>
                               <width unit="cm">9,8</width>
@@ -55,7 +48,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Оборотный фас. Оббито со всех сторон.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">7,0</height>
                               <width unit="cm">9,4</width>
@@ -67,7 +60,7 @@
                      <handNote>
                         <seg xml:lang="ru">Буквы врезаны глубоко, ровно и аккуратно, украшены апексами. R незамкнута, O овальной формы, сильно вытянуто. 
                            Среднее расстояние между строк: 0,7.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">4,7</height>
                      </handNote>
                   </handDesc>
@@ -91,8 +84,8 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -107,9 +100,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-09-28" who="SS">encoded metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -118,7 +109,7 @@
    <facsimile>
       <surface>
          <graphic url="10.44">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -146,21 +137,21 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app><note></note></app>
+               <app><note/></app>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>В первой строке сохранился нижней апекс вертикальной гасты. Во второй строке чтение первой буквы как T сомнительно. 
                В последней строке сохранился левый край верхней горизонтальной гасты, которая могла принадлежать, например, T.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

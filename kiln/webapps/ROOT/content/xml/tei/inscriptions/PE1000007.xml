@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Фрагменты декрета (?)</title>
-            <title xml:lang="en">Honourary decree (?)</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагменты декрета (?)</title><title xml:lang="en">Honourary decree (?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.7</idno>
@@ -87,7 +80,7 @@
                            <layout>
                               <seg xml:lang="ru">Лицевой фас. Сохранился правый край, остальные отбиты. Размеры полей: правое 2,0.</seg>
                               <seg xml:lang="en">On the front. The right side is preserved, others are broken off. The right margin is 2,0.</seg>
-                              <dimensions></dimensions>
+                              <dimensions/>
                            </layout>
                         </layoutDesc>
                      </objectDesc>
@@ -103,8 +96,7 @@
                   <history>
                      <provenance type="found" n="1">
                         <seg xml:lang="ru">
-                           <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
-                              >Белгород-Днестровский (Аккерман).</placeName>
+                           <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский (Аккерман).</placeName>
                            <rs type="circumstances">Обнаружена в 1900 г. при строительстве пристани.</rs>
                            <rs type="context">Между крепостью и лиманом на гласисе крепости.</rs>
                         </seg>
@@ -171,8 +163,7 @@
                   <history>
                      <provenance type="found" n="2">
                         <seg xml:lang="ru">
-                           <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
-                              >Белгород-Днестровский.</placeName>
+                           <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский.</placeName>
                            <rs type="circumstances">Обнаружена в сентябре 1958 г. при строительных
                               работах; тогда же поступила в музей. В инвентарную книгу камень
                               внесен 7 июня 1978 г.</rs>
@@ -199,9 +190,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <!-- volNum = ﻿10-->
       <revisionDesc>
          <change when="2016-08-25" who="SS">encoded metadata</change>
@@ -253,8 +242,7 @@
                		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">κατ</supplied>ατιθέσθωσαν</w> <w>οἱ</w> <w>τρα
                		<lb n="8" break="no"/><supplied reason="lost" cert="low">πεζῖται</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F">ωσαν</w> 
                                                 <w>χαρακτῆρα</w> <w part="I">ἔχον
-               		<lb n="9" break="no"/><supplied reason="lost">τ</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied 
-               		                      reason="lost">χα</supplied>λκοῦν</w> <w>ἢ</w> 
+               		<lb n="9" break="no"/><supplied reason="lost">τ</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">χα</supplied>λκοῦν</w> <w>ἢ</w> 
                                              <w>σιδηροῦν</w> <w>ἢ</w>
                		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><w>ποιήσαντα</w> <w>ὁ</w> <w part="I">ἑκατον</w>
                		<lb n="11" break="no"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">οἱ</supplied></w> 
@@ -278,23 +266,17 @@
                                              <w><unclear>στ</unclear><supplied reason="lost">ρ</supplied><unclear>α</unclear>τιώτῃ</w> <g ref="#stop"/>
                		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">στρα</supplied><unclear>τ</unclear>ιώτης</w> 
                                              <orig><unclear>Ρ</unclear></orig><gap reason="lost" quantity="2" unit="character"/><orig><unclear>Ο</unclear>ΤΗΚΑΤ<unclear>Α</unclear></orig>
-               		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><w part="I"><supplied reason="lost">λ</supplied><unclear>αμβ</unclear>αν</w><gap reason="lost" 
-               		                   extent="unknown" unit="character"/><w part="F">ας</w> <g ref="#stop"/> <orig>ΕΙ</orig>
+               		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><w part="I"><supplied reason="lost">λ</supplied><unclear>αμβ</unclear>αν</w><gap reason="lost" extent="unknown" unit="character"/><w part="F">ας</w> <g ref="#stop"/> <orig>ΕΙ</orig>
                		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐ</supplied><unclear>π</unclear>ειδὲ</w>
                		<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">σεται</w> <w>τ<unclear>ὸν</unclear></w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ς</unclear></w> 
-                                             <w part="I">πα<unclear>ρευ</unclear></w><gap reason="lost" quantity="1" unit="character"/><gap reason="lost" quantity="2" 
-                                             unit="character"/><orig><unclear>Θ</unclear>Α<unclear>Ι</unclear></orig><gap reason="lost" quantity="3" unit="character"/><orig><unclear>Η</unclear>Τ</orig> 
+                                             <w part="I">πα<unclear>ρευ</unclear></w><gap reason="lost" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/><orig><unclear>Θ</unclear>Α<unclear>Ι</unclear></orig><gap reason="lost" quantity="3" unit="character"/><orig><unclear>Η</unclear>Τ</orig> 
                                              <gap reason="lost" quantity="4" unit="character"/>
                		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/> 
-                                             <orig>Σ</orig><gap reason="lost" quantity="2" unit="character"/><orig>Ρ</orig><gap reason="lost" quantity="1" 
-                                                unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ΙΥ</unclear></orig> 
+                                             <orig>Σ</orig><gap reason="lost" quantity="2" unit="character"/><orig>Ρ</orig><gap reason="lost" quantity="1" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ΙΥ</unclear></orig> 
                                              <gap reason="lost" extent="unknown" unit="character"/><orig>ΡΑ</orig><gap reason="lost" quantity="5" unit="character"/>
-               		<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Η</unclear>ΡΟ<unclear>Υ</unclear></orig><gap 
-               		                   reason="lost" extent="unknown" unit="character"/><gap reason="lost" quantity="1" unit="character"/><orig>ΕΠ</orig><gap 
-                                              reason="lost" quantity="5" unit="character"/>
-               		<lb n="12"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΑΤ</unclear></orig><gap reason="lost" extent="unknown" 
-               		                   unit="character"/><gap reason="illegible" quantity="2" unit="character"/><orig>ΟΝ</orig> <g ref="#stop"/> 
+               		<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Η</unclear>ΡΟ<unclear>Υ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/><gap reason="lost" quantity="1" unit="character"/><orig>ΕΠ</orig><gap reason="lost" quantity="5" unit="character"/>
+               		<lb n="12"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΑΤ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><orig>ΟΝ</orig> <g ref="#stop"/> 
                                              <orig>ΚΑ</orig><gap reason="lost" quantity="5" unit="character"/>
                		<lb n="12a"/><gap reason="lost" extent="unknown" unit="character"/>
                </ab>

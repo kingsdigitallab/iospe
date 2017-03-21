@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Фрагмент надписи</title>
-            <title xml:lang="en">Incertum</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.11</idno>
@@ -91,8 +84,7 @@
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky"
-                           >Белгород-Днестровский, Украина, Одесская обл.</placeName>
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Украина, Одесская обл.</placeName>
                         <rs type="circumstances">Обнаружен в 1962 г. на берегу лимана, у стен
                            картинной фабрики. Поступил от С.З. Белецкого.</rs>
                         <rs type="context">Неизвестен.</rs>
@@ -115,9 +107,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <!-- volNum = ﻿10-->
       <revisionDesc>
          <change when="2016-08-25" who="SS">encoded metadata</change>
@@ -147,18 +137,15 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" 
-               		                   unit="character"/><orig><unclear>ΕΑΙ</unclear></orig><gap reason="lost" quantity="1" unit="character"/> 
-                                                   <orig><unclear>ΗΟ</unclear></orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" 
-                                                      extent="unknown" unit="character"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ΕΑΙ</unclear></orig><gap reason="lost" quantity="1" unit="character"/> 
+                                                   <orig><unclear>ΗΟ</unclear></orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><unclear>α</unclear>ὐτὸν</w> 
                                                    <w part="I">λαμβα<unclear>ν</unclear></w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">α</supplied>ὐτὴν</w> 
                                                    <w>εἶναι</w> <w>ἀντὶ</w> 
                                                    <w>ἱ<unclear>ε</unclear><supplied reason="lost" cert="low">ρωσύνης</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name>Δικαίῳ</name> 
-               		                         <persName type="attested"><name><seg part="I">Γουοσ</seg></name></persName></persName><gap reason="illegible" 
-               		                      quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               		                         <persName type="attested"><name><seg part="I">Γουοσ</seg></name></persName></persName><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΛΙΒΥ</unclear></orig><gap reason="illegible" quantity="1" unit="character"/> 
                                                       <gap reason="lost" quantity="4" unit="character"/><orig><unclear>Β</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                		 <lb n="5a"/><gap reason="lost" extent="unknown" unit="line"/>

@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Фрагмент надписи</title>
-             <title xml:lang="en">Incertum</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.58</idno>
@@ -44,7 +36,7 @@
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Фрагмент блока, который, вероятно, служил перекрытием двери. 
                               Один край закруглен. Оббит справа и слева.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions><!-- По данным Кочубинского -->
                               <height unit="cm">35,0</height>
                               <width unit="cm">70,0</width>
@@ -55,7 +47,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито справа и слева.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -64,7 +56,7 @@
                         <seg xml:lang="ru">Буквы вырезаны довольно тщательно, украшены небольшими апексами. 
                            Альфа с горизонтальной перекладиной. 
                            Омега украшена загнутыми внутрь окружности завитками на нижних концах круга.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">5,0</height><!-- по Латышеву -->
                      </handNote>
                   </handDesc>
@@ -89,7 +81,7 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Diviziya.</placeName>
-                        <rs type="circumstances"></rs>
+                        <rs type="circumstances"/>
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
@@ -101,9 +93,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-02-27" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-29" who="AGi">programmatically created XML from Word docs</change>
@@ -112,7 +102,7 @@
    <facsimile>
       <surface>
          <graphic url="10.58">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -145,10 +135,10 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>По предположению Латышева, блок являлся верхним косяком дверного проема.</p>
@@ -165,7 +155,7 @@
                что дало бы чтение ἐν] τῳ ναῷ.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

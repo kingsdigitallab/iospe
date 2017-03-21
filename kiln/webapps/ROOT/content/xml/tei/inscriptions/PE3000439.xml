@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Декрет в честь гражданина Гераклеи Фрасимеда</title>
-            <title xml:lang="en">Decree honouring Thrasimedes of Herakleia</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Декрет в честь гражданина Гераклеи Фрасимеда</title><title xml:lang="en">Decree honouring Thrasimedes of Herakleia</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.292</idno>
@@ -111,9 +104,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <!-- volNum = ﻿30-->
       <revisionDesc>
          <change when="2016-05-25" who="AGi">programmatically created XML from Word docs</change>
@@ -226,8 +217,7 @@
                                         <persName type="attested" ref="#person1168"><name type="praenomen" nymRef="Τίτος">Τίτου</name> 
                                           <name type="gentilicium" nymRef="Φλάουιος">Φλαουίου</name>
                <lb n="24"/><supplied reason="lost"><name type="cognomen" nymRef="Ἀρίστων">Ἀρίστωνος</name> 
-                                        <w>υἱοῦ</w></supplied> <persName type="attested" ref="#person1048"><name type="gentilicium" nymRef="Φλάουιος"><supplied 
-                                           reason="lost">Φλαουί</supplied>ου</name> 
+                                        <w>υἱοῦ</w></supplied> <persName type="attested" ref="#person1048"><name type="gentilicium" nymRef="Φλάουιος"><supplied reason="lost">Φλαουί</supplied>ου</name> 
                                         <name type="cognomen" nymRef="Ἀγέπολις">Ἀγεπό<unclear>λιδ</unclear>ος</name></persName></persName>, 
                                         <w>μηνὸς</w> 
                                         <w><supplied reason="undefined" evidence="previouseditor">Δι</supplied>
@@ -250,7 +240,7 @@
          <div type="apparatus">
             <listApp>
                <app>
-                  <note source="bib:b0480"></note>
+                  <note source="bib:b0480"/>
                </app>
                <app loc="2">
                   <rdg source="bib:b0480"><note>med.:</note>Χερσονασειτᾶν ποτὶ <note>(в соответствии с камнем)</note></rdg>
@@ -260,7 +250,7 @@
                </app>
                <app loc="7">
                   <rdg>ΞΥΝΟΙΑΝ <note>lapis</note></rdg> 
-                  <rdg>[εἶχ]εν &#x2e22;ε&#x2e23;ὔνοιαν [μεγ]ίσταν, καλ̣οκἀγαθίαν δείξας <note>scripsi et interpunxi</note></rdg> 
+                  <rdg>[εἶχ]εν ⸢ε⸣ὔνοιαν [μεγ]ίσταν, καλ̣οκἀγαθίαν δείξας <note>scripsi et interpunxi</note></rdg> 
                   <rdg source="bib:b0480">[εἶχ]εν ξύν&lt;ν&gt;οιαν, [μεγ]ίσταν κα[λ]οκἀγαθίαν</rdg>
                   <rdg source="bib:IOSPE">(ε)ὔνοιαν, [εἴ τ]ις τὰν κα[λ]οκἀγαθίαν δείξας</rdg>
                </app>

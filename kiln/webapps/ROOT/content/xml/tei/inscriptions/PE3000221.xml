@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Декрет</title>
-            <title xml:lang="en">Decree</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.282</idno>
@@ -35,8 +31,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -76,8 +71,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0086" notAfter="0087" evidence="указание_надписи"
-                        cert="low">
+                     <origDate notBefore="0086" notAfter="0087" evidence="указание_надписи" cert="low">
                         <seg xml:lang="ru">86/87 г. н.э.</seg>
                         <seg xml:lang="en">86/87 C.E.</seg>
                      </origDate>
@@ -106,9 +100,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-14" who="CB">Bibliography</change>
@@ -156,20 +148,16 @@
                	<lb n="3"/><persName type="divine"><name><supplied reason="lost" cert="low">Παρθένου</supplied></name></persName> 
                                 <w><supplied reason="lost">ἔτεος</supplied></w> <space extent="unknown" unit="character"/> <num value="111">αιρ</num>, 
                                  <space extent="unknown" unit="character"/> 
-                                <w>ἱερέ<supplied reason="lost">ως</supplied></w> <w>δὲ</w> <persName type="attested" ref="#person932"><name><gap reason="lost" 
-                                    extent="unknown" unit="character"/></name></persName>
+                                <w>ἱερέ<supplied reason="lost">ως</supplied></w> <w>δὲ</w> <persName type="attested" ref="#person932"><name><gap reason="lost" extent="unknown" unit="character"/></name></persName>
                	<lb n="4"/><gap reason="lost" quantity="1" unit="line"/><w><seg part="F">ος</seg></w> <space extent="unknown" unit="character"/> 
                                  <w>μη<supplied reason="lost">νὸς</supplied></w> <gap reason="lost" quantity="1" unit="line"/>
                	<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><seg part="M">ΤΩΝΤΩΝ</seg></w><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><w><seg part="M">ΙΟΝΝΑ</seg></w><gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w><seg part="M"><unclear>Ν</unclear>ΠΕΡΙΗ</seg></w><gap 
-               	                    reason="lost" extent="unknown" unit="character"/>
-               	<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><w><seg part="M">ΤΩΝ</seg></w><gap 
-               	                    reason="lost" extent="unknown" unit="character"/>
+               	<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w><seg part="M"><unclear>Ν</unclear>ΠΕΡΙΗ</seg></w><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><w><seg part="M">ΤΩΝ</seg></w><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><w><seg part="M">ΟΝΤ</seg></w><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/> 
-                                    <persName type="attested" ref="#person933"><name type="gentilicium" nymRef="Φλάουιος"><expan><abbr>Φλ</abbr><app 
-                                       type="alternative"><rdg><ex>άουιος</ex></rdg></app><app type="alternative"><rdg><ex>αουίου</ex></rdg></app></expan></name></persName> 
+                                    <persName type="attested" ref="#person933"><name type="gentilicium" nymRef="Φλάουιος"><expan><abbr>Φλ</abbr><app type="alternative"><rdg><ex>άουιος</ex></rdg></app><app type="alternative"><rdg><ex>αουίου</ex></rdg></app></expan></name></persName> 
                                     <supplied reason="lost" quantity="1" unit="character"/>
                	<lb n="10a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>

@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Надгробие Артемидора, сына Гефестия</title>
-             <title xml:lang="en"></title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие Артемидора, сына Гефестия</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.746</idno>
@@ -43,7 +35,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Верхняя часть стелы, украшенной карнизом и монолитным акротерием. Под карнизом вырезана двухстрочная надпись.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">48,0</height>
                               <width unit="cm">31,0</width>
@@ -53,8 +45,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -63,7 +55,7 @@
                         <seg xml:lang="ru">Надпись выполнена небрежно, строки не выровнены по центру, буквы неровные. 
                            Альфа с прямой перекладиной, мю с наклонными боковыми линиями и короткими внутренними гастами, 
                            сигма с расходящимися верхней и нижней гастами, широкая омега без сближения нижних концов дуги.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">3</height>
                      </handNote>
                   </handDesc>
@@ -83,12 +75,12 @@
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#kaloslimen">Черноморское (Северо-Западный Крым).</placeName>
                         <rs type="circumstances">Найдена случайно в 2008 г. на северном берегу Ак-Мечетской бухты (извлечена со дна моря).</rs>
-                        <rs type="context"></rs>
+                        <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Chernomorskoye.</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -99,9 +91,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-03-13" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-28" who="AGi">programmatically created XML from Word docs</change>
@@ -110,7 +100,7 @@
    <facsimile>
       <surface>
          <graphic url="30.746">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -126,7 +116,7 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl></bibl>
+               <bibl/>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -137,20 +127,20 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app></app>
+               <app/>
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
             <p>Артемидор, (сын) Гефестия.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

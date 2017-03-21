@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Список победителей на спортивных состязаниях</title>
-            <title xml:lang="en">Victory list</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Список победителей на спортивных состязаниях</title><title xml:lang="en">Victory list</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.503</idno>
@@ -35,8 +31,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -59,7 +54,7 @@
                            по величине остальным буквам пи с равными вертикалями и выходящей за их
                            пределы горизонталью, курсивная сигма, знаки-разделители.</seg>
                         <seg xml:lang="en">Alpha with straight crossbar, cursive sigma</seg>
-                        <height unit="cm"></height>
+                        <height unit="cm"/>
                      </handNote>
                   </handDesc>
                </physDesc>
@@ -69,8 +64,7 @@
                         <seg xml:lang="ru">Херсонес (?).</seg>
                         <seg xml:lang="en">Chersonesos ?.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография"
-                        precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd cent. C.E.</seg>
                      </origDate>
@@ -102,9 +96,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-26" who="CB">leidenised, tokenised, metadata, origDate, biblio and
             app crit</change>
@@ -141,8 +133,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               	<lb n="1"/><gap reason="lost" quantity="7" unit="character"/> <w><supplied reason="lost">ἀ</supplied><unclear>κ</unclear>όν<supplied 
-               	                    reason="lost">τιν</supplied></w>
+               	<lb n="1"/><gap reason="lost" quantity="7" unit="character"/> <w><supplied reason="lost">ἀ</supplied><unclear>κ</unclear>όν<supplied reason="lost">τιν</supplied></w>
                	<lb n="2"/><gap reason="lost" quantity="6" unit="character"/> <w><supplied reason="lost">ἀκόν</supplied>τιν</w>, 
                                  <w>δρόμ<supplied reason="lost">ον</supplied></w>· 
                	<lb n="3"/><gap reason="lost" quantity="10" unit="character"/> <w>πάλην</w>· <persName type="attested" ref="#person1000"><name nymRef="Νεικ—"><seg part="I">Νει

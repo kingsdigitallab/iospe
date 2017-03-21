@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt>
-                <title xml:lang="ru">Incertum (преамбула декрета ?)</title>
-                <title xml:lang="en">Incertum (decree ?)</title>
-            </titleStmt>
+            <titleStmt><title xml:lang="ru">Incertum (преамбула декрета ?)</title><title xml:lang="en">Incertum (decree ?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
             <publicationStmt>
                 <authority>King's College London</authority>
                 <idno type="IM2015">30.658</idno>
@@ -58,8 +54,7 @@
                                 <seg xml:lang="ru">Херсонес.</seg>
                                 <seg xml:lang="en">Chersonesos.</seg>
                             </origPlace>
-                            <origDate notBefore="0101" notAfter="0200" evidence="палеография"
-                                precision="low">
+                            <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
                                 <seg xml:lang="ru">II в. н.э.</seg>
                                 <seg xml:lang="en">IInd century C.E.</seg>
                             </origDate>
@@ -103,7 +98,7 @@
                                 </seg>
                                 <seg xml:lang="en">
                                     <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                                    <rs type="circumstances"></rs>
+                                    <rs type="circumstances"/>
                                     <rs type="context"/>
                                 </seg>
                             </provenance>
@@ -142,8 +137,7 @@
                         <history>
                             <provenance type="found">
                                 <seg xml:lang="ru">
-                                    <placeName type="ancientFindspot" ref="findspot.xml#sevastopol"
-                                        >Севастополь (Херсонес)</placeName>
+                                    <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес)</placeName>
                                     <rs type="circumstances">Найден в 1960 г. в западной части
                                         Херсонеса, в районе первой куртины западной оборонительной
                                         стены, в слое IX-X вв. Раскопки Е.Г. Сурова (НА НЗХТ, д.
@@ -193,8 +187,7 @@
                         <history>
                             <provenance type="found">
                                 <seg xml:lang="ru">
-                                    <placeName type="ancientFindspot" ref="findspot.xml#sevastopol"
-                                        >Севастополь (Херсонес).</placeName>
+                                    <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                                     <rs type="circumstances"> Найден в 1928 г. в западной части
                                         Херсонеса, к северу от Западной базилики. Раскопки К.Э.
                                         Гриневича (НА НЗХТ, д. 278, л. 4).</rs>
@@ -217,9 +210,7 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-            <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-        </xi:include>
+        
         <revisionDesc>
             <change when="2015-11-24" who="CB">Leidenised, tokenised, metadata, origDate, biblio and
                 app crit mark up</change>
@@ -263,11 +254,8 @@
                 <div type="textpart" subtype="inscription" n="3">
                     <ab>
                         <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" extent="unknown" 
-                                            unit="character"/><orig>ο</orig><gap reason="illegible" extent="unknown" unit="character"/><gap 
-                                            reason="lost" extent="unknown" unit="character"/>	
-                        <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" extent="unknown" 
-                                            unit="character"/><orig>μ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" extent="unknown" unit="character"/><orig>ο</orig><gap reason="illegible" extent="unknown" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>	
+                        <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" extent="unknown" unit="character"/><orig>μ</orig><gap reason="lost" extent="unknown" unit="character"/>
                         <lb n="2a"/><gap reason="lost" extent="unknown" unit="line"/>
                     </ab>
                 </div>

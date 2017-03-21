@@ -1,15 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Надгробие, поставленное Лаистеном</title>
-             <title xml:lang="en"></title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие, поставленное Лаистеном</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.64</idno>
@@ -24,7 +16,7 @@
                      <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository></repository>
+                     <repository/>
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
@@ -50,7 +42,7 @@
                               Рельеф и надпись были окружены рамкой довольно сложного профиля, сохранившейся сверху и слева. 
                               Лицевой фас заглажен, хотя на поле надписи заметны следы каменотесного инструмента, поле надписи отполировано. 
                               Левый и верхний фасы обработаны аккуратно, оборотный – грубыми сколами, остальные оббиты.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions><!-- по Блаватской, в настоящее время высота фрагмента 1 - 17,8, фрагмента 2 - 37,8 -->
                               <!-- Утолщается книзу. Глубина поля рельефа и надписи 1,5, ширина рамки 7,6 -->
                               <height unit="cm">62,0</height>
@@ -62,7 +54,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас, непосредственно под рельефом. Оббито справу и снизу.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                            <dimensions><!-- Размеры полей: верхнее 1,0, левое 0,7 -->
                               <height unit="cm">10,5</height>
                               <width unit="cm">24,5</width>
@@ -74,7 +66,7 @@
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, украшены небольшими апексами. 
                            Альфа с прямой перекладиной, сигма квадратная, тета и омикрон ромбовидные.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">3,3 - 3,4</height><!-- Среднее расстояние между строк: 1,0 -->
                      </handNote>
                   </handDesc>
@@ -97,8 +89,8 @@
                         <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"></placeName>
-                        <rs type="circumstances"></rs>
+                        <placeName type="ancientFindspot"/>
+                        <rs type="circumstances"/>
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
@@ -114,9 +106,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2017-02-28" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-29" who="AGi">programmatically created XML from Word docs</change>
@@ -125,15 +115,15 @@
    <facsimile>
       <surface>
          <graphic url="10.64-1">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="10.64-2">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
          <graphic url="10.64-3">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -157,7 +147,7 @@
                		<lb n="1"/><persName type="attested"><name>Λαϊσθένης</name> 
                		   <persName type="attested"><name><unclear>Μ̣</unclear><supplied reason="lost">όκ</supplied>
                	                 <lb n="2" break="no"/>κα</name></persName></persName> 
-                                             <w part="Y">OYM<unclear>ẠḄ</unclear></w><gap reason="lost" quantity="4" unit="character"></gap>
+                                             <w part="Y">OYM<unclear>ẠḄ</unclear></w><gap reason="lost" quantity="4" unit="character"/>
                		<lb n="3"/><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/>
             </ab>
@@ -174,7 +164,7 @@
             <p>Лаистен, сын М[ок]ки [- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Плита, видимо, в относительно целом виде была обнаружена местными жителями при рытьи земли на току возле фермы 
@@ -201,7 +191,7 @@
                гаммой, сигмой или эпсилон.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

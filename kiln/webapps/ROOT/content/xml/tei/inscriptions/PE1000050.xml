@@ -1,14 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Посвящение Приска</title>
-            <title xml:lang="en">Dedicatory inscription</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Посвящение Приска</title><title xml:lang="en">Dedicatory inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.50</idno>
@@ -44,7 +37,7 @@
                            <p xml:lang="ru">Лицевой фас отполирован, левый обработан суммарно, на нем видны следы траянки, нижний также суммарно. 
                               Верхний фас отполирован, на нем имеется небольшое чашеобразное углубление, значительная часть верхнего фаса выщерблена. 
                               Правый и оборотный отбиты.</p>
-                           <p xml:lang="en"></p>
+                           <p xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">15,0</height>
                               <width unit="cm">60,0</width>
@@ -57,7 +50,7 @@
                            <seg xml:lang="ru">Лицевая сторона. Сохранилась левая часть, оббито справа. 
                               По сравнению с состоянием, в котором камень видел Латышев, имеются небольшие утраты.
                               Размеры полей: левое 3,5; верхнее 1,0; нижнее 1,5.</seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="en"/>
                            <dimensions>
                               <height unit="cm">11,7</height>
                               <width unit="cm">40,0</width>
@@ -70,7 +63,7 @@
                         <seg xml:lang="ru">Буквы вырезаны аккуратно, ровно и глубоко, украшены апексами. Центральный горизонтальный штрих эпсилон 
                            не соединяется с вертикальным.
                            Среднее расстояние между строк: 1,0.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                         <height unit="cm">4,8-5,0</height>
                      </handNote>
                   </handDesc>
@@ -83,7 +76,7 @@
                      </origPlace>
                      <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
-                        <seg xml:lang="en"></seg>
+                        <seg xml:lang="en"/>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -95,8 +88,8 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"></rs>
-                        <rs type="context"></rs>
+                        <rs type="circumstances"/>
+                        <rs type="context"/>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -111,9 +104,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-09-28" who="SS">encoded metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -122,7 +113,7 @@
    <facsimile>
       <surface>
          <graphic url="10.50">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -163,7 +154,7 @@
             <p>Приск, сын Ф[- - -] х[рам ? - - -]</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>1. Если предполагать, что имя Priscus является частью латинского имени, оно может быть только cognomen, поэтому восстановление 
@@ -176,7 +167,7 @@
                Учитывая, что надпись нанесена на базу, вероятно, статуи, можно предполагать восстановление τὸν ν[αὸν καὶ τὸ ἄγαλμα.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

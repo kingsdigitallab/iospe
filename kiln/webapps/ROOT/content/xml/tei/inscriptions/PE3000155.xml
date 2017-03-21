@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Надгробие [---]ениона</title>
-            <title xml:lang="en">Epitaph of [---]enion</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие [---]ениона</title><title xml:lang="en">Epitaph of [---]enion</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.170</idno>
@@ -35,8 +31,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -73,8 +68,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0250" evidence="палеография"
-                        precision="low">
+                     <origDate notBefore="0151" notAfter="0250" evidence="палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. II в. н.э. – 1-я пол. III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of IInd - 1st half of IIIrd cent. C.E.</seg>
                      </origDate>
@@ -110,9 +104,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
@@ -149,13 +141,10 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person803"><name nymRef="—ενίων"><seg part="F">ενίων</seg></name> 
-               	   <persName type="attested" ref="#person804"><name nymRef="Χα—"><seg part="I">Χα</seg></name></persName></persName><gap reason="lost" extent="unknown" 
-               	           unit="character"/>
-               	<lb n="2"/><w><supplied reason="lost">ζῆσ</supplied>ας</w> <w>ἔτη</w> <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" 
-               	           extent="unknown" unit="character"/>
+               	   <persName type="attested" ref="#person804"><name nymRef="Χα—"><seg part="I">Χα</seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="2"/><w><supplied reason="lost">ζῆσ</supplied>ας</w> <w>ἔτη</w> <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person805"><name nymRef="—κιανός"><seg part="F">κιανὸς</seg></name> 
-               	   <persName type="attested" ref="#person806"><name nymRef="Ἀλε—"><seg part="I">Ἀλε</seg></name></persName></persName><gap reason="lost" extent="unknown" 
-               	           unit="character"/>
+               	   <persName type="attested" ref="#person806"><name nymRef="Ἀλε—"><seg part="I">Ἀλε</seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="4"/><w><supplied reason="lost">τῷ</supplied></w> <w>συνγενῖ τὸν</w> <w><supplied reason="lost" cert="low">τύμβον</supplied></w>
                	<lb n="5"/><w><supplied reason="lost">ἀνέ</supplied>στησεν</w>· <w>χ<supplied reason="lost">αίρετε</supplied></w>
                	<lb n="6"/><w>παροδῖ<supplied reason="lost">ται</supplied></w>

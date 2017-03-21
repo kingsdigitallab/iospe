@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-            <title xml:lang="ru">Incertum (список имен ?)</title>
-            <title xml:lang="en">Incertum (list of names ?)</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Incertum (список имен ?)</title><title xml:lang="en">Incertum (list of names ?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.563</idno>
@@ -35,8 +31,7 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <objectType xml:lang="ru" ref="monument-search.xml#mon1"
-                              >Плита.</objectType>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
@@ -72,8 +67,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0250" evidence="палеография"
-                        precision="low">
+                     <origDate notBefore="0151" notAfter="0250" evidence="палеография" precision="low">
                         <seg xml:lang="ru">2-я пол. II – 1-я пол. III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II - 1st half of IIIrd centuries C.E.</seg>
                      </origDate>
@@ -107,9 +101,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2015-11-13" who="KK">Tokenised</change>
          <change when="2015-11-09" who="CB">Added origDate</change>
@@ -147,9 +139,7 @@
             <ab>
                	<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                	<lb n="1"/><gap reason="lost" quantity="1" unit="line"/><w part="M"><unclear>ατ</unclear>ρ</w><gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person1011"><name nymRef="Ματρόδωρος"><supplied 
-               	                 reason="lost">Μα</supplied><unclear>τ</unclear>ρόδ<unclear>ω</unclear><supplied reason="lost" cert="low">ρος</supplied></name></persName><gap 
-               	                    reason="lost" extent="unknown" unit="character"/>
+               	<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person1011"><name nymRef="Ματρόδωρος"><supplied reason="lost">Μα</supplied><unclear>τ</unclear>ρόδ<unclear>ω</unclear><supplied reason="lost" cert="low">ρος</supplied></name></persName><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="3"/><gap reason="lost" quantity="1" unit="line"/><persName type="attested" ref="#person1012"><name><seg part="F">ρος</seg></name></persName> 
                                  <orig>σ</orig><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>της</unclear></w><gap reason="lost" extent="unknown" unit="character"/>

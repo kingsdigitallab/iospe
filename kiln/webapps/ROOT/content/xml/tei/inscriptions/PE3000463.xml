@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
-             <title xml:lang="ru">Декрет римского времени</title>
-             <title xml:lang="en">Decree</title>
-         </titleStmt>
+         <titleStmt><title xml:lang="ru">Декрет римского времени</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.349</idno>
@@ -98,9 +91,7 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <xi:include href="encoding-desc.xml">
-         <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-      </xi:include>
+      
       <revisionDesc>
          <change when="2016-08-23" who="SS">encoded metadata, Leiden and appartus</change>
          <change when="2016-07-21" who="AGi">programmatically created XML from Word docs</change>
@@ -137,19 +128,16 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΝΟΜΕ</unclear></orig><gap reason="illegible" quantity="4" 
-               		                   unit="character"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>δι’</w> <w>ὃ</w> <w>δεδόχθαι</w> <w>τῇ</w> 
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ΝΟΜΕ</unclear></orig><gap reason="illegible" quantity="4" unit="character"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>δι’</w> <w>ὃ</w> <w>δεδόχθαι</w> <w>τῇ</w> 
                                           <w>βουλῇ</w> <w>καὶ</w> <w>τῷ</w> <w>δήμῳ</w></supplied>·
                		<lb n="2"/><w><supplied reason="lost">ἐπ</supplied><unclear>α</unclear>ινέσαι</w> <w>μ<supplied reason="lost">ὲν</supplied></w> 
-                                          <w><supplied reason="lost">ἐπὶ</supplied></w> <w><supplied reason="lost">τ</supplied><unclear>ούτο</unclear><supplied 
-                                             reason="lost">ις</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
+                                          <w><supplied reason="lost">ἐπὶ</supplied></w> <w><supplied reason="lost">τ</supplied><unclear>ούτο</unclear><supplied reason="lost">ις</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="3"/><w><supplied reason="lost">δ</supplied><unclear>όμεν</unclear></w> <w><supplied reason="lost">δὲ</supplied></w> 
                                           <w><supplied reason="lost">α</supplied>ὐτῷ</w> <w>προ<unclear>ξ</unclear><supplied reason="lost">ενίας</supplied></w> 
                                           <supplied reason="lost"><w>πολειτείαν</w>, <w>ἔσπλουν</w> <w>τε</w> <w>καὶ</w> <w>ἔκπλουν</w> <w>ἐν</w> <w>εἰράνᾳ</w> <w>καὶ</w></supplied>
                		<lb n="4"/><supplied reason="lost"><w>πολέμῳ</w> <w>ἀσυλεὶ</w></supplied> 
                                           <w><supplied reason="lost">ἀ</supplied><unclear>σ</unclear>πο<unclear>ν</unclear><supplied reason="lost">δεὶ</supplied></w> 
-                                          <supplied reason="lost"><w>αὐτῷ</w> <w>τε</w> <w>καὶ</w> <w>ἐκγόνοις</w> <w>καὶ</w> <w>χράμασι</w> <w>αὐτοῦ</w></supplied><gap 
-                                             reason="lost" extent="unknown" unit="character"/>
+                                          <supplied reason="lost"><w>αὐτῷ</w> <w>τε</w> <w>καὶ</w> <w>ἐκγόνοις</w> <w>καὶ</w> <w>χράμασι</w> <w>αὐτοῦ</w></supplied><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
