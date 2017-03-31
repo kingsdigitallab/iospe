@@ -324,13 +324,13 @@
     match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']"
     mode="persnames_fields">
     <field name="persnames">
-      <xsl:value-of select="local:replace-spaces('sacred or divine entity')"/>
+      <xsl:value-of select="local:replace-spaces('divine, religious, or mythic figures')"/>
     </field>
     <field name="persnames-ru">
-      <xsl:value-of select="local:replace-spaces('RU: sacred or divine entity')"/>
+      <xsl:value-of select="local:replace-spaces('Божественные, религиозные или мифические личности и персонажи')"/>
     </field>
     <field name="persnames-en">
-      <xsl:value-of select="local:replace-spaces('sacred or divine entity')"/>
+      <xsl:value-of select="local:replace-spaces('divine, religious, or mythic figures')"/>
     </field>
   </xsl:template>
 
@@ -338,13 +338,13 @@
     match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']"
     mode="persnames_fields">
     <field name="persnames">
-      <xsl:value-of select="local:replace-spaces('emperor or ruler')"/>
+      <xsl:value-of select="local:replace-spaces('rulers')"/>
     </field>
     <field name="persnames-ru">
-      <xsl:value-of select="local:replace-spaces('RU: emperor or ruler')"/>
+      <xsl:value-of select="local:replace-spaces('Правители')"/>
     </field>
     <field name="persnames-en">
-      <xsl:value-of select="local:replace-spaces('emperor or ruler')"/>
+      <xsl:value-of select="local:replace-spaces('rulers')"/>
     </field>
   </xsl:template>
 
@@ -352,13 +352,13 @@
     match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']"
     mode="persnames_fields">
     <field name="persnames">
-      <xsl:value-of select="local:replace-spaces('other person')"/>
+      <xsl:value-of select="local:replace-spaces('attested persons')"/>
     </field>
     <field name="persnames-ru">
-      <xsl:value-of select="local:replace-spaces('RU: other person')"/>
+      <xsl:value-of select="local:replace-spaces('Идентифицированные лица')"/>
     </field>
     <field name="persnames-en">
-      <xsl:value-of select="local:replace-spaces('other person')"/>
+      <xsl:value-of select="local:replace-spaces('attested persons')"/>
     </field>
   </xsl:template>
 

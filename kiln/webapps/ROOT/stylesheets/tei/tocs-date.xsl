@@ -4,7 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
   <xsl:param name="toc"/>
-  <xsl:param name="date-type"/>
+  <xsl:param name="date-type"/><!-- value will be that of {1} in indices/date/{1}.html -->
 
   <xsl:template match="/"/>
 
@@ -26,7 +26,7 @@
                 </xsl:if>
               </xsl:attribute>
               <a href="dated.html">
-                <i18n:text>Dated by year</i18n:text>
+                <i18n:text>All</i18n:text>
               </a>
             </li>
 
@@ -94,19 +94,19 @@
 
 
   <xsl:template name="generateTocDate">
-    <!-- exclude duplicates (caused by multiple inscriptions within the same file with the same date) -->
+    
     <dl class="indices indices-date tocs">
+      <!-- exclude duplicates (caused by multiple inscriptions within the same file with the same date) -->
       <xsl:for-each-group
         select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
                                   and not(str[@name='file'] = preceding-sibling::doc/str[@name='file']) ]"
         group-by="int[@name='date-notBefore']">
-        <xsl:sort select="int[@name='date-notBefore']"/>
         <xsl:for-each-group select="current-group()" group-by="int[@name='date-notAfter']">
           <xsl:sort select="int[@name='date-notAfter']"/>
           <xsl:if test="not(str[@name='tei-id'] = '')">
-            <!-- Remove empty elements which might have been indexed -->
             <dt>
               <xsl:choose>
+                <!-- Remove empty elements which might have been indexed -->
                 <xsl:when test="str[@name=concat($toc,'-',$lang)]!=''">
                   <xsl:value-of select="str[@name=concat($toc,'-',$lang)]"/>
                 </xsl:when>

@@ -126,7 +126,7 @@
           <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-notBefore%20asc&amp;rows=999"
           />
         </map:aggregate>
         <!-- TESTING -->

@@ -17,7 +17,7 @@
 
   <!-- set title -->
   <xsl:template name="indexTitlePerson">
-    <i18n:text>Rulers of Rome, Byzantium or Bosporan kingdoms</i18n:text>
+    <i18n:text>Rulers</i18n:text>
   </xsl:template>
 
   <!-- Generate Index -->

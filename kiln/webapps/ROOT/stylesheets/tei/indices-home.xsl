@@ -90,11 +90,11 @@
         <xsl:choose>
           <xsl:when test="//ruler//result[@numFound &gt; 0]">
             <a href="person/ruler{$kiln:url-lang-suffix}.html">
-              <i18n:text>Rulers of Rome, Byzantium or Bosporan kingdoms</i18n:text>
+              <i18n:text>Rulers</i18n:text>
             </a>
           </xsl:when>
           <xsl:otherwise>
-            <i18n:text>Rulers of Rome, Byzantium or Bosporan kingdoms</i18n:text>
+            <i18n:text>Rulers</i18n:text>
             <em>
               <i18n:text>(no results found)</i18n:text>
             </em>
