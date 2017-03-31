@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xsl:param name="toc"/>
   <xsl:param name="date-type"/><!-- value will be that of {1} in indices/date/{1}.html -->
@@ -38,8 +38,8 @@
               </li>
               <xsl:for-each
                 select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'BCE']">
-                <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num"
-                  data-type="number" order="descending"/>
+                <xsl:sort select="xs:integer(//list[@xml:lang=$lang]/century[@url=current()]/@num)"
+                  order="ascending"/>
 
                 <li>
                   <xsl:attribute name="class">
@@ -62,8 +62,7 @@
               </li>
               <xsl:for-each
                 select="//letters/letter[not(text()='dated')][substring-after(.,'-') = 'CE']">
-                <xsl:sort select="//list[@xml:lang=$lang]/century[@url=current()]/@num"
-                  data-type="number"/>
+                <xsl:sort select="xs:integer(//list[@xml:lang=$lang]/century[@url=current()]/@num)" order="ascending"/>
                 <li>
                   <xsl:attribute name="class">
                     <xsl:if test="current() = $date-type">
