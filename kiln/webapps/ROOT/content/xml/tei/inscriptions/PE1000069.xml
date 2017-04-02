@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator">
+            <persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.69</idno>
@@ -35,7 +36,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Оббит со всех сторон.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">Broken off on all sides.</p>
                            <dimensions>
                               <height unit="cm">8,0</height>
                               <width unit="cm">8,8</width>
@@ -46,7 +47,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front. Broken off on all sides.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -73,12 +74,12 @@
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский (Аккерман), Одесская область, Украина.</placeName>
                         <rs type="circumstances">Фрагмент найден в 1876 г. в Аккермане И.К. Суручаном.</rs>
-                        <rs type="context">Вторичный.</rs>
+                        <rs type="context">Неизвестен.{Вторичный}.</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Found in 1876 in Akkerman by I.K. Suruchan.</rs>
+                        <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -140,7 +141,7 @@
             <p>Фрагмент хранился в коллекции И.К. Суручана, который прислал Латышеву эстампаж с него. Впоследствии камень был, видимо, утерян.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The monument was in the personal collection of I.K. Suruchan, and the latter sent Latyshev an estampage. Subsequently, the stone was apparently lost.</p>
          </div>
       </body>
    </text>

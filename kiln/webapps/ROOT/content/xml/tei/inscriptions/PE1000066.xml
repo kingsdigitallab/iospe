@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент списка имен</title><title xml:lang="en">List of names.</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент списка имен</title><title xml:lang="en">List of names.</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.66</idno>
@@ -33,7 +34,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор желтоватый мелкозернистый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, yellowish, fine-grained.</material>
                            <p xml:lang="ru">Фрагмент левого края плиты. Оббит со всех сторон, кроме левой.</p>
                            <p xml:lang="en">Left side of a panel. Broken off on all sides except the left.</p>
                            <dimensions><!-- по Карышковскому -->
@@ -65,20 +66,20 @@
                         <seg xml:lang="en">Tyras.</seg>
                      </origPlace>
                      <origDate notBefore="-0250" notAfter="-0201" evidence="Палеография">
-                        <seg xml:lang="ru">Вторая половина или конец III в. до н.э.</seg>
-                        <seg xml:lang="en">2nd half or late III century B.C.</seg>
+                        <seg xml:lang="ru">2-я пол. или конец III в. до н.э.</seg>
+                        <seg xml:lang="en">2nd half or late III century B.C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Одесская область, Украина.</placeName>
-                        <rs type="circumstances">Фрагмент найден при раскопках 1960 г (инв. № 354) на глубине 8 м от дневной поверхности в засыпке подвала эллинистического здания (кв. 12).</rs>
-                        <rs type="context">Вторичен.</rs>
+                        <rs type="circumstances">Фрагмент найден при раскопках 1960 г (инв. № 354).</rs>
+                        <rs type="context">На глубине 8м от дневной поверхности в засыпке подвала эллинистического здания (кв. 12).</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Found in 1960, during excavations (Inv. № 354).</rs>
+                        <rs type="context">At the depth of 8m from the surface, in the fill of the basement of a Hellenistic house (grid square 12).</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -156,7 +157,13 @@
             <p/>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>Perikles (?) [or son of Perikles)
+            son of Eukles
+            Timotheos
+            Poseidonios [or son of Poseidonios]
+            Autokles, son of Ap[---]
+            Apollonios, son of Chr[---]
+            Hroida?, Απ?[---]</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Надпись хранилась в Киеве, в Музее или в фондах Института археологии НАНУ, однако там мне ее обнаружить не удалось.</p>
@@ -171,8 +178,15 @@
             <p>Все сохранившиеся в надписи имена являются греческими.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
-         </div>
+            <p>The inscription was at some point in Kiev, either in the Museum or in the Repository of Material Objects, Institute of Archaeology, 
+               National Academy of Sciences of Ukraine, however I was not able to locate it.</p>
+            <p>Karyshkovsky believed that the fragment constituted the final part of a decree and contained the list of names "of those who sealed it," as in the decree of Kokkeios
+               (PE1000002), dated to 181 B.C.E. This suggestion is easily assailable due to the large chronological gap between the two monuments: we have no grounds for expecting
+            no change in the political institutions of Tyras over the period of 400 years. It is safer not to attempt to identify the document type beyond a generic "list of names."</p>
+            <p>1. The restoration of the name Perikles is almost certain, although in principle other names, such as Περικλείδης or Περίκλυτος, are possible. It is unclear whether
+            the name was in the Nominative or Genitive (being, in that case, a patronymic).</p>
+            <p>5-7. The restorations of names, from which only the first two letters or other fragments are preserved, are approximate - the possibilities are too many to list.</p>
+         <p>All fully preserved names are Greek.</p></div>
       </body>
    </text>
 </TEI>

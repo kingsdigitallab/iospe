@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.68</idno>
@@ -16,7 +17,7 @@
                      <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
+                     <repository>Material Objects Repository, Institute of Archaeology, National Academy of Sciences of Ukraine.</repository>
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
@@ -36,7 +37,7 @@
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Лицевой и оборотный фасы отполированы, остальные оббиты. Оббит со всех сторон. 
                               Слева сохранилась профилированная рамка шириной 7,5.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">The front and back are polished, other sides are picked. Broken off on all sides. On the left - profiled border 7,5cm wide.</p>
                            <dimensions>
                               <height unit="cm">16,0</height>
                               <width unit="cm">12,1</width>
@@ -48,7 +49,8 @@
                         <layout>
                            <seg xml:lang="ru">Лицевой фас, внутри рельефной рамки. Надпись начинается непосредственно от рамки. 
                               Оббито справа и сверху, нижний край сохранился.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front, on the inside of profiled border. The text opening is set flush with the border. Broken off on the top and right, 
+                           the bottom is preserved.</seg>
                            <dimensions><!-- Размер полей: Левое: 0; нижнее: не менее 6,5 -->
                               <height unit="cm">5,0</height>
                               <width unit="cm">3,5</width>
@@ -59,7 +61,7 @@
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны не очень аккуратно, апексы отсутствуют. Применяются лигатуры.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">The letters are cut without particular care; no serifs; ligatures.</seg>
                         <height unit="cm">1,3</height>
                      </handNote>
                   </handDesc>
@@ -72,19 +74,19 @@
                      </origPlace>
                      <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
-                        <seg xml:lang="en">IInd century C.E.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Одесская область, Украина.</placeName>
                         <rs type="circumstances">Фрагмент найден при раскопках 1960 г., полевой номер Б-Д-60/3.</rs>
-                        <rs type="context">Вторичен.</rs>
+                        <rs type="context">{Вторичен}</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Found in 1960, in excavations, field notebook no. Б-Д-60/3.</rs>
+                        <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -118,7 +120,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl>Ineditum.</bibl>
+               <bibl>Ineditum</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -141,16 +143,16 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p/>
+            <p>Не предлагается.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>Not offered.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Надпись не поддается восстановлению. Фрагмент очень близок фрагменту 10.42; вероятно, они принадлежали одной надписи.</p>
+            <p>Надпись не поддается восстановлению. Фрагмент очень близок фрагменту {10.42}; вероятно, они принадлежали одной надписи.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The inscription is too fragmentary to make any restorations viable. The fragment closely resembles [10.42}, and the two possibly belonged to the same monument. </p>
          </div>
       </body>
    </text>
