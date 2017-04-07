@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Надгробие Каллистрата, сына Силия</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие Каллистрата, сына Силия</title>
+            <title xml:lang="en">Kallistratos, son of Seilios</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.53</idno>
@@ -33,13 +35,15 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, white.</material>
                            <p xml:lang="ru">Верхняя часть, на которой находился рельеф, отбита. 
                               От рельефа сохранилась лишь нижняя часть сидящей женской фигуры, различаются низ одежды и нога. 
                               Лицевой фас тщательно заглажен, правый и левый обработаны суммарно, правый несколько тщательнее; 
-                              оборотный и нижний грубыми сколами. Орнаментация: Рельеф в верхней части стелы.</p>
-                           <p xml:lang="en"/>
-                           <dimensions><!-- Расширяется книзу, толще слева. -->
+                              оборотный и нижний грубыми сколами. {Орнаментация: Рельеф в верхней части стелы.}</p>
+                           <p xml:lang="en">The top, which bore a relief, is missing. The relief, whose lower edge with a cloak and a foot is preserved, 
+                              represented a seated woman. The front is well planed, the right and left are treated summarily, the right a little better than the left; the back
+                           is roughly picked.</p>
+                           <dimensions><!-- Расширяется книзу, толще слева.-->
                               <height unit="cm">60,07</height>
                               <width unit="cm">62,0 - 63,4</width>
                               <depth unit="cm">11,0 - 12,8</depth>
@@ -49,7 +53,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас, под рельефом.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front, below the relief.</seg>
                            <dimensions>
                               <height unit="cm">18,5</height>
                               <width unit="cm">57,8</width>
@@ -62,7 +66,7 @@
                         <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, с использованием лигатур; 
                            применяются словоделители в виде листочков. Альфа с прямой перекладиной. 
                            Омега курсивная, угловатой формы.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Letters are deeply and neatly cut. Ligatures; word dividers in the sahpe of leaves. Alpha with a straight crossbar. Cursive angular omega.</seg>
                         <height unit="cm">2,5–2,7</height>
                      </handNote>
                   </handDesc>
@@ -75,7 +79,7 @@
                      </origPlace>
                      <origDate notBefore="0068" notAfter="0101" evidence="Палеография Просопография">
                         <seg xml:lang="ru">Последняя треть I в. н.э.</seg>
-                        <seg xml:lang="en">Last third of Ist century C.E.</seg>
+                        <seg xml:lang="en">Last third of I century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -86,8 +90,8 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky, vicinity</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Random find in 1892, in a vineyard between Belgorod (Akkerman) and Shabo.</rs>
+                        <rs type="context">Secondary.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -164,7 +168,7 @@
             <p>Каллистрату, сыну Силия, хорошо жившему и умершему в 60 лет. Флавий Юлиан, сын, ради памяти.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>For Kallistratos, son of Seilios, who lived well and died at 60 years of age. Flavius Julianus, his son, for commemoration.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Латышев сам камень не осматривал и судил о нем по фотографии, опубликованной Юргевичем 
@@ -179,7 +183,12 @@
                должна датироваться временем Флавиев или немного позже.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>Latyshev did not see the monument, but studied the photograph published by Yurgevich and a drawing made from the photograph. Yurgevich read the fourth letter of the 
+            patronymic as alpha, Latyshev as lambda, suspecting an attempt to transliterate the Latin name Silii. Unfortunatenly, the autopsy does not resolve the uncertainty: the
+surface in the centre of the letter is chipped and would have obliterated a crossbar if it had been there. The funerary monument was set up by a first-generation Roman citizen:
+he bears the name of Flavius Julianus and in accordance with the Roman custom does not use a patronymic. At the same time, his father is identified by a personal name and patronymic,
+            in accordance with the Greek custom, and his name is not Roman. The son's name suggests that he acquired Roman citizenship in the reign of Flavii, whose nomen he adopted
+           according to the usual practice. We could therefore date the inscription to the Flavian period or a little later.</p>
          </div>
       </body>
    </text>

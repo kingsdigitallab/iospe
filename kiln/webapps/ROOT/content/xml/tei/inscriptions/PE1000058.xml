@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.58</idno>
@@ -33,10 +34,10 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon6">Блок.</objectType>
                            <objectType xml:lang="en">Block.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк белый.</material>
-                           <material xml:lang="en">Limestone.</material>
+                           <material xml:lang="en">Limestone, white.</material>
                            <p xml:lang="ru">Фрагмент блока, который, вероятно, служил перекрытием двери. 
                               Один край закруглен. Оббит справа и слева.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">Fragment of a block that probably served as a lintel of a doorframe. One end is rounded. Broken off on the right and left.</p>
                            <dimensions><!-- По данным Кочубинского -->
                               <height unit="cm">35,0</height>
                               <width unit="cm">70,0</width>
@@ -47,16 +48,16 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито справа и слева.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front. Broken off on the right and left.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны довольно тщательно, украшены небольшими апексами. 
-                           Альфа с горизонтальной перекладиной. 
+                           Альфа с прямой перекладиной. 
                            Омега украшена загнутыми внутрь окружности завитками на нижних концах круга.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Letters are cut with care, decorated with small serifs. Alpha with straight crossbar. Rounded omega, open at the bottom, with inward-curving ends.</seg>
                         <height unit="cm">5,0</height><!-- по Латышеву -->
                      </handNote>
                   </handDesc>
@@ -69,7 +70,7 @@
                      </origPlace>
                      <origDate notBefore="0101" notAfter="0300" evidence="Палеография">
                         <seg xml:lang="ru">II-III в. н.э.</seg>
-                        <seg xml:lang="en">IInd - IIIrd century C.E.</seg>
+                        <seg xml:lang="en">II-III cent. C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -80,8 +81,9 @@
                         <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Diviziya.</placeName>
-                        <rs type="circumstances"/>
+                        <placeName type="ancientFindspot">Diviziya village, Tatarbunar district, Odessa region.</placeName>
+                        <rs type="circumstances">According to Kochubinsky, the monument was found in the winter of 1885-1886 by two local treasure hunters (Vakul and Alexander Kotlyarenko)
+                        during the excavation of a kurgan in the vicinity of the village.</rs>
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
@@ -155,8 +157,17 @@
                что дало бы чтение ἐν] τῳ ναῷ.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
-         </div>
+            <p>Latyshev suspected that the block was part of a door lintel.</p>
+            <p>The village Diviziya is situated about 37km southeast of Belgorod-Dnestrovsky, on the bank of the river Chadjider, near to the spot where it empties into
+            the estuary (lagune Chadjider). We may speculate that the block arrived there by sea from Akkerman/Belgorod as a spolion to be reused as building material.</p>
+            <p>No one of the publishers had seen the monument. Latyshev relied on an estampage, received in the spring of 1887 from N.P. Kondakov; the tracing of the estampage
+            is presented in IOSPE I2. Kochubinsky, who supplies information about the place and circumstances of discovery, learned about it from a correspondence of some journalist
+            working for the "Odessa News." He probably received a pencil drawing of the monument from the same journalist and relied on that in his opinion of the monument.
+            Apparently, no one else saw the stone. It never reached a museum and can be considered lost.</p>
+            <p>It is difficult to form an opinion of the content. Latyshev is probably right to read the word "temple" in the Dative. If we trust Kochubinsky's drawing, the first 
+               letter can be restored as tau, giving us ἐν] τῳ ναῷ.</p>
+
+<p></p>         </div>
       </body>
    </text>
 </TEI>

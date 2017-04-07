@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент почетной надписи (?)</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент почетной надписи (?)</title>
+            <title xml:lang="en">Honourary inscription (?)
+           </title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.60</idno>
@@ -22,8 +24,8 @@
                </msIdentifier>
                <msContents>
                   <summary corresp="document-search.xml#doc21">
-                     <seg xml:lang="ru">Почетная надпись?</seg>
-                     <seg xml:lang="en">Honorary inscription?</seg>
+                     <seg xml:lang="ru">Почетная надпись ?</seg>
+                     <seg xml:lang="en">Honourary inscription ?</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -33,9 +35,9 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, white.</material>
                            <p xml:lang="ru">Лицевой фас отшлифован, оборотный обработан грубыми сколами, остальные оббиты.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">The front is polished, the back is roughly picked. Other faces are broken off.</p>
                            <dimensions>
                               <height unit="cm">21,5</height>
                               <width unit="cm">16,8</width>
@@ -46,16 +48,17 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front. Broken off on all sides.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, вероятно, по линиям предварительной разметки, украшены крупными апексами. 
-                           Альфа с ломаной перекладиной. Применяются лигатуры. Поперечная перекладина эты не доходит до вертикальных гаст. 
-                           Омега в виде незамкнутой окружности с загнутыми внутрь нижними концами линий и горизонтальной чертой под ней.</seg>
-                        <seg xml:lang="en"/>
+                           Альфа с ломаной перекладиной. Поперечная перекладина эты не доходит до вертикальных гаст. 
+                           Омега в виде незамкнутой окружности с загнутыми внутрь нижними концами линий и горизонтальной чертой под ней. Применяются лигатуры.</seg>
+                        <seg xml:lang="en">Deeply and neatly cut letters, probably following ruled lines. Decorated with large serifs. Alpha with broken crossbar; eta with detached 
+                        crossbar; rounded omega, open at the bottom, with inward-pointing ends and a horizontal bar underneath. Ligatures.</seg>
                         <height unit="cm">2,4 - 3,0</height><!-- Среднее расстояние между строк: 0,8 -->
                      </handNote>
                   </handDesc>
@@ -65,7 +68,7 @@
                      
                      <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
-                        <seg xml:lang="en">IInd century C.E.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -73,12 +76,13 @@
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Одесская область, Украина.</placeName>
                         <rs type="circumstances">Случайная находка на берегу лимана. Передана Белогород-тирской экспедиции ОАМ находчиком О.И. Паниным в 1983 г. 
                            Полевой номер БД-83, № 80.</rs>
-                        <rs type="context">Вторичный.</rs>
+                        <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Random find on the shore of the estuary by O.I. Panin in 1983. Handed over to the Belgorod-Tyras expedition of the 
+                           Odessa Archaeological Museum. Field inv. number БД-83, № 80.</rs>
+                        <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -87,7 +91,7 @@
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">А.И. Иванчик, <date when="2007-08">август 2007</date></seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">A.I. Ivantchik, <date when="2007-08">August 2007</date></seg>
                   </provenance>
                </history>
             </msDesc>
@@ -155,14 +159,17 @@
             <p>[- - - наши] господа [императоры - - - главного] жреца [Августов- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>[- - - our] lords [the emperors - - - the] pontifex [maximus of Augusti- - -]</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>В первой строке нижняя часть вертикальной гасты. В начале второй строки вертикальная гаста буквы, слева от нее нижняя часть еще одной гасты. В начале пятой строки небольшой кусочек косой гасты или словоделителя. В последней строке на изломе сохранились верхние апексы двух вертикальных гаст.</p>
+            <p>В первой строке нижняя часть вертикальной гасты. В начале второй строки вертикальная гаста буквы, слева от нее нижняя часть еще одной гасты. 
+               В начале пятой строки небольшой кусочек косой гасты или словоделителя. В последней строке на изломе сохранились верхние апексы двух вертикальных гаст.</p>
             <p>Жанр надписи установить затруднительно, можно предполагать, что речь идет о почетной надписи, как-то связанной с римскими императорами и императорским культом.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>In line 1: bottom of a vertical. At the start of line 2: a vertical and to the left of it - remains of another hasta. At the start of line 5, there is a trace of a diagonal
+            or of a word division. In the last line, at the break, apices of two verticals are visible.</p>
+            <p>It is difficult to determmine the genre of the text; it is possibly an honourary inscription, in some way connected to Roman emperors and the imperial cult.</p>
          </div>
       </body>
    </text>

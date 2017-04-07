@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Гиря с надписью</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Гиря с надписью</title>
+            <title xml:lang="en">Weight measure.</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.56</idno>
@@ -23,7 +25,7 @@
                <msContents>
                   <summary>
                      <seg xml:lang="ru">Неясен.</seg>
-                     <seg xml:lang="en"/>
+                     <seg xml:lang="en">Unclear.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -35,7 +37,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Каменная гиря, имеет форму параллелепипеда, повреждена слева.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">A stone weight in the shape of a parallelepiped, damaged on the left.</p>
                            <dimensions>
                               <height unit="cm">7,0</height>
                               <width unit="cm">6,2</width>
@@ -47,14 +49,14 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">На нижнем фасе. Сохранилось практически полностью.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">Ont the bottom. Nearly fully preserved.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны довольно небрежно.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Letters are cut without much care.</seg>
                         </handNote>
                   </handDesc>
                </physDesc>
@@ -66,19 +68,19 @@
                      </origPlace>
                      <origDate notBefore="0001" notAfter="0001" evidence="Неясно">
                         <seg xml:lang="ru">Неясна.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Unclear.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
-                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород Днестровский, Украина, Одесская обл.</placeName>
-                        <rs type="circumstances">Найдена при раскопках Тиры в 1919 г., раскоп А (за пределами крепости, на берегу Днестра).</rs>
-                        <rs type="context">Неизвестен.</rs>
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Одесская область, Украина.</placeName>
+                        <rs type="circumstances">Найдена в 1919 г., раскопки Никореску.</rs>
+                        <rs type="context">Раскоп А (за пределами крепости, на берегу Днестра).</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context">Unknown.</rs>
+                        <rs type="circumstances">Found in 1919, excavations of Nicorescu.</rs>
+                        <rs type="context">Trench A (outside the confines of the fortress, on the bank of Dniester).</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -127,15 +129,15 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p/>
+            <p>Не предлагается.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>Not attempted.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Гиря, как и другие надписи из раскопок Никореску, вероятно, хранилась в Яссах, 
                но впоследствии пропала и теперь ее местонахождение неизвестно. 
-               Никорекску предполагал, что первоначальный вес гири составлял три мины или 1309,8 г. 
+               Никореску предполагал, что первоначальный вес гири составлял три мины или 1309,8 г. 
                Смысл надписи неясен. Можно предполагать, что это сокращение одного из имен, начинающихся на 
                Μητρο- с ошибочной перестановкой двух последних букв. Никореску предлагал чтение ΜΕΤΡΟ(ΝΟΜΩΝ), 
                требующее двух исправлений в тексте и предполагающее весьма сомнительное дополнение текста. 
@@ -143,7 +145,11 @@
                встречающемся, кажется, только один раз в посвящении VI в. до н.э. из Дидим.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The weight, as many other inscribed monuments from the excavations of Nicorescu, was probably taken to Jasi, but subsequently lost and now its 
+            whereabouts are unknown. Nicorescu surmised that the original weight of the object was 3 minae or 1309,8g. The meaning of the inscription is not clear.
+            It might be an abbreviation of a name that begins with Μητρο-, with a mistaken transposition of letters. Nicorescu advocated the reading ΜΕΤΡΟ(ΝΟΜΩΝ), which 
+            requires two corrections in the text and a doubtful expansion. His reading cannot be accepted. Equally doubtful is the analogy with the name Μητῶρος, made in 
+            SEG 3. The name is attested only once in a dedication of the VIth century B.C.E. from Didyma.</p>
          </div>
       </body>
    </text>

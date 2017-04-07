@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.59</idno>
@@ -33,9 +34,9 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, white.</material>
                            <p xml:lang="ru">Лицевой и оборотный фасы отполированы, остальные оббиты.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">The front and back are polished, the other faces are broken off.</p>
                            <dimensions>
                               <height unit="cm">21,1</height>
                               <width unit="cm">17,3</width>
@@ -46,7 +47,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front. Broken off on all sides.</seg>
                            <dimensions>
                               <height unit="cm">18,8</height>
                               <width unit="cm">15,6</width>
@@ -59,7 +60,8 @@
                         <seg xml:lang="ru">Написано глубоко и тщательно врезанными красивыми буквами, 
                            украшенными небольшими апексами. Применяются лигатуры и словоразделители в виде треугольников. 
                            Альфа с прямой перекладиной.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Deeply and neatly cut, beautiful letters with small serifs. Ligatures, word divisions in the shape of a triangle. Alpha with straight
+                        crossbar.</seg>
                         <height unit="cm">3,5</height>
                      </handNote>
                   </handDesc>
@@ -79,14 +81,13 @@
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский (Аккерман), 
                            Одесская область, Украина.</placeName>
-                        <rs type="circumstances">Найден в 1867 г. при строительстве на берегу Днестровского лимана 
-                           в северо-восточной части города Аккерман, за пределами крепости.</rs>
-                        <rs type="context">Неизвестен.</rs>
+                        <rs type="circumstances">Найден в 1867 г. при строительстве на берегу Днестровского лимана.</rs>
+                        <rs type="context">В северо-восточной части города Аккерман, за пределами крепости.</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context">Unknown.</rs>
+                        <rs type="circumstances">Found in 1867, during construction works on the shore of the Dniester estuary.</rs>
+                        <rs type="context">Northeast area of Akkerman, outside the fortress.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -172,18 +173,30 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p/>
+            <p>Не предлагается.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>Not attempted.</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Фрагмент первоначально находился в коллекции Новороссийского университета, где был изучен Латышевым в 1883 г. О месте и обстоятельствах его находки сообщает Кондаков.</p>
-            <p>В конце второй строки сохранилась нижняя часть вертикального штриха и левое окончание горизонтального штриха, украшавшего ипсилон, что позволяет надежно восстанавливать эту букву. В начале третьей строки сохранилась часть дуги буквы, которая могла принадлежать ро или менее вероятно бете.</p>
-            <p>Надпись не поддается восстановлению, за исключением последней строки, которая содержит датировку по году, очевидно, тирасской эры. От датировки сохранилась лишь первая буква, иота, обозначавшая цифру десять. Теоретически здесь можно восстанавливать ιρ или ισ, т.е. 110 или 210 год. Сходство шрифта надписи с шрифтом надписи 10.2, датированной 125 годом, заставляет предпочесть первый вариант. Надпись датирована, таким образом, 166 г. н.э. Можно предполагать, что речь идет об общественной надписи, например, почетном декрете.</p>
+            <p>Фрагмент первоначально находился в коллекции Новороссийского университета, где был изучен Латышевым в 1883 г. О месте и обстоятельствах его 
+               находки сообщает Кондаков.</p>
+            <p>В конце второй строки сохранилась нижняя часть вертикального штриха и левое окончание горизонтального штриха, украшавшего ипсилон, 
+               что позволяет надежно восстанавливать эту букву. В начале третьей строки сохранилась часть дуги буквы, которая могла принадлежать ро или менее вероятно бете.</p>
+            <p>Надпись не поддается восстановлению, за исключением последней строки, которая содержит датировку по году, очевидно, тирасской эры. 
+               От датировки сохранилась лишь первая буква, иота, обозначавшая цифру десять. Теоретически здесь можно восстанавливать ιρ или ισ, т.е. 110 или 210 год. 
+               Сходство шрифта надписи с шрифтом надписи 10.2, датированной 125 годом, заставляет предпочесть первый вариант. Надпись датирована, таким образом, 166 г. н.э. 
+               Можно предполагать, что речь идет об общественной надписи, например, почетном декрете.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The monument was originally in the collection of the University of Novorossiysk, where it was studied by Latyshev in 1883. Kondakov informs us about the place and 
+            circumstances of the find.</p>
+            <p>At the end of line 2: the bottom of a vertical stroke and a left end of a horizontal, a decorative crossbar of an ypsilon, which allows us to restore this letter.
+               The opening of line 3 preserves a curving stroke, which belonged either to a rho or, less likely, beta.</p>
+            <p>The inscription resists restoration, except for the last line, which contains a dating formula, apparently, according to the local era of Tyras. Only the first letter of the date,
+               an iota designating the numeral 10, is preserved. Theoretically, we could restore ιρ или ισ, that is, year 110 or 210. The similiarity of the script to that of 
+            PE1000002, dated to 125 C.E., argues in favour of the former option. Our date is therefore 166 C.E. It is a reasonable guess that the inscription was of public nature, 
+            e.g. an honourary decree. </p>
          </div>
       </body>
    </text>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Надгробие, поставленное Лаистеном</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Надгробие, поставленное Лаистеном</title>
+            <title xml:lang="en">Epitaph of Laisthenes</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName>
+               <persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.64</idno>
@@ -16,7 +19,7 @@
                      <idno/>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository/>
+                     <repository>The A.S. Pushkin State Museum of Fine Arts, Moscow.</repository>
                      <idno/>
                   </altIdentifier>
                </msIdentifier>
@@ -33,7 +36,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый с серыми прожилками.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, white with grey veins.</material>
                            <p xml:lang="ru">Состоит из двух фрагментов, которые при первой публикации и поступлении в музей сходились встык. 
                               Сейчас нижняя часть фрагмента 1 (примерно 7 см в высоту) утрачена и встык они не сходятся. 
                               В верхней части плиты находится погрудное женское изображение в фас; рельеф исполнен довольно условно. 
@@ -42,7 +45,11 @@
                               Рельеф и надпись были окружены рамкой довольно сложного профиля, сохранившейся сверху и слева. 
                               Лицевой фас заглажен, хотя на поле надписи заметны следы каменотесного инструмента, поле надписи отполировано. 
                               Левый и верхний фасы обработаны аккуратно, оборотный – грубыми сколами, остальные оббиты.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">Originally, at the time of editio princeps and the monument's arrival at the museum, the two fragments were joining. Since then,
+                           the bottom of Fragment 1 (about 7cm in height) has been lost and the fragments no longer join. The upper part of the stele bears a schematic relief of a female figure 
+                           down to the chestline and frontally facing. The inscription is carved immediately below. The relief shows a female chest and neck, with schematically rendered folds of clothing, as well as
+                           a shcematically rendered shawl covering the head and shoulders. The front is planed, the epigraphic feld is polished, although tool marks are visible.
+                           The left and top faces are well worked, the back is roughly picked; other sides are broken off.</p>
                            <dimensions><!-- по Блаватской, в настоящее время высота фрагмента 1 - 17,8, фрагмента 2 - 37,8 -->
                               <!-- Утолщается книзу. Глубина поля рельефа и надписи 1,5, ширина рамки 7,6 -->
                               <height unit="cm">62,0</height>
@@ -54,7 +61,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас, непосредственно под рельефом. Оббито справу и снизу.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front, below the relief. Broken of on the right and bottom.</seg>
                            <dimensions><!-- Размеры полей: верхнее 1,0, левое 0,7 -->
                               <height unit="cm">10,5</height>
                               <width unit="cm">24,5</width>
@@ -65,8 +72,8 @@
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, украшены небольшими апексами. 
-                           Альфа с прямой перекладиной, сигма квадратная, тета и омикрон ромбовидные.</seg>
-                        <seg xml:lang="en"/>
+                           Альфа с прямой перекладиной, {сигма квадратная}, тета и омикрон ромбовидные.</seg>
+                        <seg xml:lang="en">Deeply and carefully cut letters with small serifs. Alpha with straight crossbar, {rectangular sigma}, diamond theta and omicron.</seg>
                         <height unit="cm">3,3 - 3,4</height><!-- Среднее расстояние между строк: 1,0 -->
                      </handNote>
                   </handDesc>
@@ -79,7 +86,7 @@
                      </origPlace>
                      <origDate notBefore="0201" notAfter="0233" evidence="Палеография просопография">
                         <seg xml:lang="ru">Первая треть III в. н.э.</seg>
-                        <seg xml:lang="en">1st third of IIIrd century C.E.</seg>
+                        <seg xml:lang="en">1st third of III cent. C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -89,10 +96,9 @@
                         <rs type="context">Неизвестен.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"/>
-                        <rs type="circumstances"/>
-                        <rs type="context">Unknown.</rs>
-                     </seg>
+                        <placeName type="ancientFindspot">Belenkoye, Belgorod-Dnestrovsky district, {Одесская область, Украина.}</placeName>
+                        <rs type="circumstances">Found before 1973, by local residents while digging a threshing floor on the edge of the village.</rs>
+                        <rs type="context">Unknown.</rs>                     </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Москва.</seg>
@@ -164,7 +170,7 @@
             <p>Лаистен, сын М[ок]ки [- - -]</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>Laisthenes, son of M[okk]a [- - -]</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Плита, видимо, в относительно целом виде была обнаружена местными жителями при рытьи земли на току возле фермы 

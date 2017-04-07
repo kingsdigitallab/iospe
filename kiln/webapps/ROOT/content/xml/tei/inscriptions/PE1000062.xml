@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator">
+            <persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName>
+            <persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.62</idno>
@@ -33,9 +35,9 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
                            <objectType xml:lang="en">Panel.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, white.</material>
                            <p xml:lang="ru">Лицевой фас заглажен или отполирован. Оббит со всех сторон, кроме верхней.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">The front is either planed or polished. Broken off on all sides, except the top.</p>
                            <dimensions><!-- по Никореску -->
                               <height unit="cm">9,0</height>
                               <width unit="cm">12,5</width>
@@ -46,7 +48,7 @@
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон, кроме верхней. Правая верхняя часть вытерта.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front. Broken off on all sides, except the top. The top right area is {вытерта}.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -54,7 +56,7 @@
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко и тщательно, по линиям предварительной разметки, украшены апексами. 
                            Альфа с прямой перекладиной. Сигма лунарная.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">Deeply and neatly cut letters with serifs, following ruled lines. Alpha with straight crossbar. Lunate sigma.</seg>
                         <height unit="cm">2,3</height>
                      </handNote>
                   </handDesc>
@@ -67,19 +69,19 @@
                      </origPlace>
                      <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
-                        <seg xml:lang="en">IInd century C.E.</seg>
+                        <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Одесская область, Украина.</placeName>
-                        <rs type="circumstances">Найдена в 1929 г. при раскопках Тиры на раскопе 21, расположенном во внешнем дворе крепости, среди строительных остатков императорской эпохи.</rs>
-                        <rs type="context">Неизвестен.</rs>
+                        <rs type="circumstances">Найдена в 1929 г., раскопки Никореску.</rs>
+                        <rs type="context">На раскопе 21, расположенном во внешнем дворе крепости, среди строительных остатков {императорской эпохи}.</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context">Unknown.</rs>
+                        <rs type="circumstances">Found in 1929, excavations of Nicorescu.</rs>
+                        <rs type="context">Trench 21, outer courtyard of the fortress, among building remains of {the tsarist period}.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -134,10 +136,10 @@
             </listApp>
          </div>
          <div type="translation" xml:lang="ru">
-            <p/>
+            <p>Не предлагается.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>Not attempted.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Судьба этой надписи, как и других надписей из раскопок Никореску, неизвестна: на в Белгороде, ни в Яссах, ни в Бухаресте их обнаружить не удалось.</p>
@@ -147,7 +149,12 @@
                что надпись начиналась с императорской титулатуры. Ни одно из этих восстановлений, однако, не может считаться надежным.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The fate of this inscription, as well as of the others from the excavations of Nicorescu, is unknown: it has not been possible to locate them in Belgorod, Jasi, or 
+               Bucarest.</p>
+            <p>In line 1, we can restore -]ς ἀυτ̣ο̣[-: this might be a pronoun, beginning of a personal name, or a reference to an emperor.</p>
+            <p>In line 2, there is probably an ending of a personal name in the Genitive (a patronymic) and a beginning of one of many names in Ἀντι-, so -ο]υ̣ Ἀντ[ι-.
+               Alternatively, we could restore an emperor's name Ἀντ[ωνίνου in combination with θεοῦ or Μάρκου; in that case, we could be reasonably certain that the text opened with the imperial 
+            titulature. None of these restorations is however secure.</p>
          </div>
       </body>
    </text>

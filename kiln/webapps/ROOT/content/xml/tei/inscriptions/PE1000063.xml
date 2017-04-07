@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент почетной надписи</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент почетной надписи</title>
+            <title xml:lang="en">Honourary inscription</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname>
+            </persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.63</idno>
@@ -35,22 +38,23 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Лицевой фас заглажен или отполирован. Оббит со всех сторон.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">The front is either planed or polished. Broken off on all sides.</p>
                            <dimensions/>
                         </support>
                      </supportDesc>
                      <layoutDesc>
                         <layout>
                            <seg xml:lang="ru">Лицевой фас. Оббито со всех сторон, кроме левой.</seg>
-                           <seg xml:lang="en"/>
+                           <seg xml:lang="en">On the front. Broken off on all sides, except the left.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote>
                         <seg xml:lang="ru">Буквы вырезаны глубоко и ровно, украшены апексами. 
-                           Альфа с прямой перекладиной, сигма квадратная, омикрон ромбовидный, омега угловатая курсивная. Используются лигатуры.</seg>
-                        <seg xml:lang="en"/>
+                           Альфа с прямой перекладиной, сигма {квадратная}, омикрон ромбовидный, омега угловатая курсивная. Используются лигатуры.</seg>
+                        <seg xml:lang="en">Deeply and carefully cut letters with serifs. Alpha with straight crossbar, {rectangular sigma}, diamond omicron, angular cursive omega.
+                        Ligatures.</seg>
                         <height unit="cm">2,1</height>
                      </handNote>
                   </handDesc>
@@ -63,19 +67,19 @@
                      </origPlace>
                      <origDate notBefore="0201" notAfter="0300" evidence="Палеография">
                         <seg xml:lang="ru">III в. н.э.</seg>
-                        <seg xml:lang="en">IIIrd century C.E.</seg>
+                        <seg xml:lang="en">III century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский, Одесская область, Украина.</placeName>
-                        <rs type="circumstances">Найдена в 1929 г. при раскопках Тиры на раскопе 22, расположенном внутри юго-восточной башни цитадели.</rs>
-                        <rs type="context">Неизвестен.</rs>
+                        <rs type="circumstances">Найдена в 1929 г., раскопки Никореску.</rs>
+                        <rs type="context">На раскопе 22, расположенном внутри юго-восточной башни цитадели.</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context">Unknown.</rs>
+                        <rs type="circumstances">Found in 1929, excavations of Nicorescu.</rs>
+                        <rs type="context">Trench 22 insde the Southeast Tower of the citadel.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -149,13 +153,22 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>Судьба этой надписи, как и других надписей из раскопок Никореску, неизвестна: на в Белгороде, ни в Яссах, ни в Бухаресте их обнаружить не удалось.</p>
-            <p>Надпись настолько сильно фрагментирована, что восстановить связный текст вряд ли возможно. Тем не менее, характерная лексика позволяет считать, что речь идет о почетном декрете или государственной почетной надписи.</p>
-            <p>Предложенное восстановление кажется наиболее вероятным, но даже если его принять, длина строки не может быть определена, так как ее длина может увеличиться за счет использования орнаментальных эпитетов слова δῆμος, обычных в надписях этой эпохи. Здесь возможны и другие восстановления, например: τειμηθέντα vel sim. ὑπὸ τῆς Τυρανῶν] βουλῆς τ[ειμαῖς ταῖς ἀρίσταις vel sim.</p>
+            <p>Судьба этой надписи, как и других надписей из раскопок Никореску, неизвестна: ни в Белгороде, ни в Яссах, ни в Бухаресте их обнаружить не удалось.</p>
+            <p>Надпись настолько сильно фрагментирована, что восстановить связный текст вряд ли возможно. Тем не менее, характерная лексика позволяет считать, что 
+               речь идет о почетном декрете или государственной почетной надписи.</p>
+            <p>Предложенное восстановление кажется наиболее вероятным, но даже если его принять, длина строки не может быть определена, так как ее длина может 
+               увеличиться за счет использования орнаментальных эпитетов слова δῆμος, обычных в надписях этой эпохи. Здесь возможны и другие восстановления, 
+               например: τειμηθέντα vel sim. ὑπὸ τῆς Τυρανῶν] βουλῆς τ[ειμαῖς ταῖς ἀρίσταις vel sim.</p>
             <p>В пятой строке можно восстанавливать одну из формул со словом «время», обычной в почетных надписях, например ἐκ παλαιῶν] χρόν[ων, εἰς τὸν ἅπαντα] χρόν[ον и проч.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The fate of this inscription, as well as of the others from the excavations of Nicorescu, is unknown: it has not been possible to locate them in Belgorod, Jasi, or 
+            Bucarest.</p>
+            <p>The inscription is so badly fragmented that it is impossible to restore a continuous text. The characteristic vocabulary, however, allows us to suggest that it was either 
+            an honourary decree or another state honourary inscription.</p>
+            <p>The proposed restorations seem most likely, but even then the length of the line cannot be established, since ornamental epithets could have modified the word δῆμος in a 
+               manner common this period. Other restorations are also possible, e.g. τειμηθέντα vel sim. ὑπὸ τῆς Τυρανῶν] βουλῆς τ[ειμαῖς ταῖς ἀρίσταις vel sim.</p>
+            <p>In line 5, we may restore some formula with the word "time", common in honourary inscriptions, e.g. ἐκ παλαιῶν] χρόν[ων, εἰς τὸν ἅπαντα] χρόν[ον vel sim.</p>
          </div>
       </body>
    </text>
