@@ -99,6 +99,7 @@
       </fileDesc>
       
       <revisionDesc>
+         <change when="2017-04-10" who="PY">fixed commentaries</change>
          <change when="2017-02-28" who="PY">encoded Leiden and metadata</change>
          <change when="2016-11-29" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
@@ -117,13 +118,13 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Карышковский 1971 --><ptr target="bib:b0962"/></bibl>
-               <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>33, 619</citedRange>. Избранные комментарии: Nadel 1982, 184-185</bibl>
+               <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>33, 619</citedRange></bibl>
                <bibl><!-- Leschhorn 1993 --><ptr target="bib:b0963"/>, <citedRange>74</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
-            
+            <bibl><!-- Nadel 1982 --><ptr target="bib:b1009"/>, <citedRange>184-185</citedRange></bibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -143,18 +144,19 @@
                                           <w><supplied reason="lost">δ</supplied><unclear>ῆ</unclear>μος</w> 
                                           <w>τῶν</w> <placeName type="ethnic">Τυρανῶ<unclear>ν</unclear></placeName>
                		<lb n="9"/><supplied reason="lost"><w>ἐν</w> <w>τῷ</w> <num value="62">βξ</num></supplied> 
-                                          <w><supplied reason="lost">ἔτ</supplied><unclear>ε</unclear>ι</w> <rs type="month" ref="anthesterion"><w>Ἀνθεστηριῶνος</w></rs> <g type="#stop"/> <num value="19">θι</num>
+                                          <w><supplied reason="lost">ἔτ</supplied><unclear>ε</unclear>ι</w> <rs type="month" ref="anthesterion">
+                                             <w>Ἀνθεστηριῶνος</w></rs> <g ref="#stop"/> <num value="19">θι</num>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="6">
                   <rdg source="bib:b0962">[ἐξουσίας ὕ]πατον</rdg>
-                  <rdg source="bib:SEG">[ἐξουσίας (τὸ βʹ) ὕ]πατον</rdg>
+                  <rdg source="bib:b1009">[ἐξουσίας (τὸ βʹ) ὕ]πατον</rdg>
                </app>
                <app loc="7">
                   <rdg source="bib:b0962">[τὸ δεύτερ]ο̣ν</rdg>
-                  <rdg source="bib:SEG">[τὸ τρίτ]ο̣ν</rdg>
+                  <rdg source="bib:b1009">[τὸ τρίτ]ο̣ν</rdg>
                   <rdg source="bib:b0963">[τὸ τρίτ]ο̣ν</rdg>
                </app>
                <app loc="9">
