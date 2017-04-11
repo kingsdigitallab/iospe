@@ -51,7 +51,7 @@
     </field>
     <field name="volume">
       <xsl:choose>
-        <xsl:when test="starts-with($file-path-end, 'PE1')">1</xsl:when>
+        <xsl:when test="starts-with($file-path-end, '1.')">1</xsl:when>
         <xsl:when test="starts-with($file-path-end, 'PE3')">3</xsl:when>
         <xsl:when test="starts-with($file-path-end, 'PE4')">4</xsl:when>
         <xsl:when test="starts-with($file-path-end, '5.')">5</xsl:when>

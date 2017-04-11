@@ -626,13 +626,11 @@
     <div xsl:exclude-result-prefixes="tei" class="large-12 columns">
       <p>
         <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
-          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
-        </a><!--
-        <xsl:text>&#160;</xsl:text> © 2015 (<i18n:text>Volume</i18n:text> V), © 2017 (<i18n:text>Volume</i18n:text> I, III) <xsl:value-of select="//tei:titleStmt/tei:editor/tei:persName[@xml:lang = $lang]"/>
-        --><xsl:choose>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='1'">© 2017 Askold Ivantchik - Russian edition, Irene Polinskaya - English translation</xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='3'">© 2017 Igor Makarov - Russian edition, Irene Polinskaya - English translation</xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='5'">© 2015 Andrey Vinogradov - Russian edition, Irene Polinskaya - English translation</xsl:when>
+          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/><xsl:text> </xsl:text>
+        </a><xsl:choose>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='1'">© 2017 <i18n:text>Askold Ivantchik (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='3'">© 2017 <i18n:text>Igor Makarov (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='5'">© 2015 <i18n:text>Andrey Vinogradov (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
         </xsl:choose><br />
         <i18n:text>You may download this</i18n:text>
         <xsl:text>&#160;</xsl:text>
