@@ -24,6 +24,7 @@
             <xsl:when test="starts-with($url, '3')">
                 III. <i18n:text>Inscriptions of Chersonesos and vicinity</i18n:text>
             </xsl:when>
+            <!-- Nb we don't handle vol 5 here: see above -->
         </xsl:choose>
     </xsl:template>
 
@@ -51,5 +52,50 @@
             </xsl:for-each>
         </dl>
     </xsl:template>
+    
+    <!-- PC 12 APR 2017 TEST -->
+    <xsl:template name="generateTOCItem">
+        <xsl:param name="number"/>
+                <dd>
+                    <a href="/{$number}{$kiln:url-lang-suffix}.html">
+                        <!-- inscription number -->
+                        <xsl:call-template name="formatInscrNum">
+                            <xsl:with-param name="num" select="$number"/>
+                            <xsl:with-param name="printCorpus" select="true()"/>
+                        </xsl:call-template>
+                        
+                        <xsl:text> </xsl:text>
+                        <!-- title -->
+                        <xsl:choose>
+                            <xsl:when
+                                test="translate(normalize-space(//doc[str[@name='tei-id']=$number]/str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
+                                <xsl:text>[</xsl:text>
+                                <i18n:text>no title</i18n:text>
+                                <xsl:text>]</xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                    select="//doc[str[@name='tei-id']=$number]/str[@name=concat('inscription-title-', $lang)]"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="not(//doc[str[@name='tei-id']=$number]/str[@name='inscription-has-date'] = 'yes')">
+                            <xsl:choose>
+                                <xsl:when
+                                    test="//doc[str[@name='tei-id']=$number]/arr[@name=concat('origDate-', 'en')]/str[1] = 'Unknown.'">
+                                    <xsl:text>.</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>, </xsl:text>
+                                    <!-- origDate -->
+                                    <xsl:value-of
+                                        select="//doc[str[@name='tei-id']=$number]/arr[@name=concat('origDate-', $lang)]/str[1]"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:if>
+                        
+                    </a>
+                </dd>
+    </xsl:template>
+    <!-- END TEST -->
 
 </xsl:stylesheet>
