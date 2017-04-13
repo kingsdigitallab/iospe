@@ -8,6 +8,10 @@
     
     <xsl:param name="url"/>
     
+    <xsl:variable name="seq">
+        <xsl:sequence select="/aggregation/toc/response/result"/>
+    </xsl:variable>
+    
     <kiln:parent>
         <xi:include href="tocs.xml"/>
     </kiln:parent>
@@ -32,268 +36,88 @@
                 <xsl:when test="starts-with($url, '1')">
                     <dl class="indices indices-locations tocs">
                         <dt>
-                           <i18n:text>Vol 1 TOC group 01</i18n:text>
+                            <i18n:text>State decrees honouring citizens titties</i18n:text>
                         </dt>
-                        <!-- NB! THIS STUPID SOLUTION OF MULTIPLE CALL-TEMPLATE ELEMENTS IS ONLY 
-                            TEMPORARY AND WAS ADOPTED BECAUSE I COULDN'T GET PAST A PROBLEM WITH FOR-EACH WHERE THE PROCESSOR 
-                            KEPT COMPLAINING THAT IT WASN'T GETTING A NODE, EVEN THOUGH YOU ARE 
-                            SUPPOSED TO BE ABLE TO PROCESS A SEQUENCE OF ATOMIC VALUES WITH FOR-EACH
-                        PC 12 APR 2017 -->
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.1'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.2'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.3'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.4'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 02</i18n:text>
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.5'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.1', '1.2', '1.3', '1.4')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Vol 1 TOC group 03</i18n:text>. Varia
+                            <i18n:text>State decrees honouring foreigners</i18n:text>
                         </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.6'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.7'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.8'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.9'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.10'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.11'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 04</i18n:text>
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.12'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.13'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.14'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 05</i18n:text> (Varia)
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.15'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.16'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 06</i18n:text>
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.17'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.18'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.19'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.20'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.21'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.22'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 07</i18n:text>
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.23'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.24'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.25'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 08</i18n:text>
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.26'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.27'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.28'"/>
-                        </xsl:call-template>
-                        
-                        <dt>
-                            <i18n:text>Vol 1 TOC group 09</i18n:text>
-                        </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.29'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.5')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Vol 1 TOC group 10</i18n:text>. Varia
+                            <i18n:text>State decrees</i18n:text>. Varia
                         </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.30'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.6', '1.7', '1.8', '1.9', '1.10')"/>
                         </xsl:call-template>
-                        
                         <dt>
-                            <i18n:text>Vol 1 TOC group 11</i18n:text>
+                            <i18n:text>Public Inscriptions other than decrees</i18n:text><br /> &#x2014; <i18n:text>Letters of state officials</i18n:text>
                         </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.31'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.12', '1.13', '1.14')"/>
                         </xsl:call-template>
-                        
                         <dt>
-                            <i18n:text>Vol 1 TOC group 12</i18n:text>
+                            <i18n:text>Public inscriptions of uncertain type</i18n:text> (Varia)
                         </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.32'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.15', '1.16')"/>
                         </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.33'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.34'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.35'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.36'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.37'"/>
-                        </xsl:call-template>
-                        
                         <dt>
-                            <i18n:text>Vol 1 TOC group 13</i18n:text>
+                            <i18n:text>Dedicatory and other inscriptions with religious content</i18n:text><br /> &#x2014; <i18n:text>Dedications of private individuals</i18n:text>
                         </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.38'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.17', '1.18', '1.19', '1.20', '1.21', '1.22')"/>
                         </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.39'"/>
+                        <dt>
+                            <i18n:text>Building inscriptions</i18n:text><br /> &#x2014; <i18n:text>Building inscriptions of rulers and officials</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.23', '1.24', '1.25')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <i18n:text>Honorary inscriptions</i18n:text><br /> &#x2014; <i18n:text>Inscriptions honouring Roman emperors and their family members</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.26', '1.27', '1.28')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <i18n:text>Inscriptions honouring citizens</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.29')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <i18n:text>Honorary inscriptions</i18n:text>. Varia
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.30')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <i18n:text>Lists of names</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.31')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <i18n:text>Epitaphs</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.32', '1.33', '1.34', '1.35', '1.36', '1.37')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <i18n:text>Inscriptions on weights</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.38', '1.39')"/>
                         </xsl:call-template>
                         <dt>
                             Varia
                         </dt>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.40'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.41'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.42'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.43'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.44'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.45'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.46'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.47'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.48'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.49'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.50'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.51'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.52'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.53'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.54'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.55'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.56'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.57'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.58'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.59'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.60'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.61'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.62'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.63'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.64'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.65'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.66'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.67'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.68'"/>
-                        </xsl:call-template>
-                        <xsl:call-template name="generateTOCItem">
-                            <xsl:with-param name="number" select="'1.69'"/>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.40', '1.41', '1.42', '1.43', '1.44', '1.45', '1.46', '1.47', '1.48', '1.49', '1.50', '1.51', '1.52', '1.53', '1.54', '1.55', '1.56', '1.57', '1.58', '1.59', '1.60', '1.61', '1.62', '1.63', '1.64', '1.65', '1.66', '1.67', '1.68', '1.69')"/>
                         </xsl:call-template>
                     </dl>
                 </xsl:when>
