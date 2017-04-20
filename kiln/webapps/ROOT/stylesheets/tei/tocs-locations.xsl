@@ -18,7 +18,9 @@
     <dl class="indices indices-locations tocs">
       <xsl:for-each select="//AL//tei:place">
 
-        <dt>
+        <xsl:if test="//doc/arr[@name='origin-ref']/str[.=current()/@xml:id]">
+          
+          <dt>
           <xsl:value-of select="translate(tei:placeName[@xml:lang=$lang],'.','')"/>
         </dt>
 
@@ -69,6 +71,10 @@
             </a>
           </dd>
         </xsl:for-each>
+        
+        </xsl:if>
+        
+        
       </xsl:for-each>
     </dl>
   </xsl:template>

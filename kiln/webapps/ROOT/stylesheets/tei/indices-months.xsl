@@ -5,7 +5,7 @@
 
   <xsl:param name="index"/>
   <xsl:param name="sort"/>
-  <xsl:param name="ancient-lang" select="'n/a'"/>
+  <xsl:param name="lang"/>
 
   <xsl:template match="/"/>
 
@@ -28,7 +28,7 @@
           <tbody>
             <tr class="index_row row">
               <th class="table_sub_heading" colspan="2">
-                <xsl:value-of select="head"/>
+                <xsl:value-of select="head[@xml:lang = $lang]"/>
               </th>
             </tr>
 
