@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Incertum</title><title xml:lang="en">Unknown</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Incertum</title>
+            <title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.735</idno>
@@ -23,7 +24,7 @@
                <msContents>
                   <summary corresp="document-search.xml#doc22">
                      <seg xml:lang="ru">Incertum.</seg>
-                     <seg xml:lang="en">Unknown.</seg>
+                     <seg xml:lang="en">Incertum.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -35,7 +36,7 @@
                            <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
                            <material xml:lang="en">Limestone.</material>
                            <p xml:lang="ru">Сохранился правый верхний угол с остатками четырех строк надписи. Лицевая поверхность частично заглажена.</p>
-                           <p xml:lang="en"/>
+                           <p xml:lang="en">Top right corner is preserved with traces of four lines of text.The front is partly planed.</p>
                            <dimensions>
                               <height unit="cm">18,0</height>
                               <width unit="cm">13,0</width>
@@ -66,8 +67,13 @@
                         <seg xml:lang="en">Chora of Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0168" notAfter="-0001" evidence="Палеография">
+<<<<<<< .mine
+                        <seg xml:lang="ru">Конец II - I в. до н.э.</seg>
+                        <seg xml:lang="en">Late II - I century B.C.E.</seg>
+=======
                         <seg xml:lang="ru">конец II - I в. до н.э.</seg>
                         <seg xml:lang="en">late IInd - Ist century B.C.Е.</seg>
+>>>>>>> .r4383
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -77,7 +83,7 @@
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot">Kara-Tobe.</placeName>
+                        <placeName type="ancientFindspot">Kara-Tobe (Northwest Crimea).</placeName>
                         <rs type="circumstances"/>
                         <rs type="context"/>
                      </seg>

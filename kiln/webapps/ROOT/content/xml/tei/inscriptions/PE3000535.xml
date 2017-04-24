@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент официального документа (?)</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент официального документа (?)</title>
+            <title xml:lang="en">Regulation (?)</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.410</idno>
@@ -23,7 +25,7 @@
                <msContents>
                   <summary corresp="document-search.xml#doc31">
                      <seg xml:lang="ru">Официальный документ (?).</seg>
-                     <seg xml:lang="en">Official document (?).</seg>
+                     <seg xml:lang="en">Regulation (?).</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -68,21 +70,25 @@
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="0168" notAfter="0250" evidence="Палеография">
+<<<<<<< .mine
+                        <seg xml:lang="ru">Конец II - первая половина III в. н.э.</seg>
+                        <seg xml:lang="en">Late II - 1st half of III century C.E.</seg>
+=======
                         <seg xml:lang="ru">конец II - первая половина III в. н.э.</seg>
                         <seg xml:lang="en">late IInd - 1st half of IIIrd century C.E.</seg>
+>>>>>>> .r4383
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1909 г. в северо-восточном районе Херсонеса (II поперечная улица, помещение 2). 
-                           Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, л. 56, № 3524a; д. 71, л. 3; д. 112, л. 22).</rs>
-                        <rs type="context"/>
+                        <rs type="circumstances">Найдена в 1909 г. Раскопки Р.Х. Лепера (НА НЗХТ, д. 102, л. 56, № 3524a; д. 71, л. 3; д. 112, л. 22).</rs>
+                        <rs type="context">В северо-восточном районе Херсонеса (II поперечная улица, помещение 2).</rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Found in 1909, excavations of R.Ch. Loeper (НА НЗХТ, д. 102, л. 56, № 3524a; д. 71, л. 3; д. 112, л. 22).</rs>
+                        <rs type="context">Northeast sector of Chersonesos (IInd cross street, Enclosure 2).</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
