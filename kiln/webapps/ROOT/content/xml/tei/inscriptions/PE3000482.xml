@@ -75,7 +75,7 @@
                      </origPlace>
                      <origDate notBefore="0201" notAfter="0300" evidence="Палеография">
                         <seg xml:lang="ru">III в. н.э.</seg>
-                        <seg xml:lang="en"/>
+                        <seg xml:lang="en">III century C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -101,6 +101,7 @@
       </fileDesc>
       
       <revisionDesc>
+         <change when="2017-04-26" who="PY">moved Russian text to commentary</change>
          <change when="2016-09-13" who="SS">encoded text and metadata</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
@@ -148,24 +149,11 @@
          </div>
          <div type="apparatus">
             <listApp>
-               <app loc="1">
-                  <note>после ΚΑ две вертикальных линии</note>
-                  <note>между ними, возможно, знак-разделитель</note>
-                  <note>после Ι две треугольные буквы (возможно, ΛΛ) или буква Μ</note>
-               </app>
-               <app loc="2">
-                  <note>слева направо часть вертикальной линии, треугольная буква, часть наклонной линии</note>
-               </app>
                <app loc="1-2">
-                  <note source="bib:b0144 bib:IOSPE">строки оставлены без чтения</note>
+                  <note source="bib:b0144 bib:IOSPE"></note>
                   <rdg source="bib:b0519">Κα̣ιι Ἱλλαρο/σ̣λυ̣α</rdg>
-                  <note>возможность чтения Ἱμαρόκλεα или Ἱλλαρόκλεα отвергнута в Латышев 1904 и IOSPE («litterae v. 2 scriptae tali nomini non conveniunt»)</note>
-               </app>
-               <app loc="3">
-                  <note>точка-разделитель</note>
-               </app>
+                  </app>
                <app loc="4">
-                  <note>в начале стк, две треугольные буквы (возможно, ΛΛ) или буква Μ, затем вертикальная гаста (вероятно, Ι)</note>
                   <rdg>Μίλιος <note>edd.</note></rdg>
                   <note source="bib:LGPN">не исключает Λα̣ίλιος</note><!-- LGPN IV -->
                </app>
@@ -181,7 +169,11 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>1-2: в Латышев 1904 и IOSPE строки оставлены без чтения; возможность чтения Ἱμαρόκλεα или Ἱλλαρόκλεα отвергнута в Латышев 1904 и IOSPE («litterae v. 2 scriptae tali nomini non conveniunt»)</p>
+            <p>1: после ΚΑ две вертикальных линии; между ними, возможно, знак-разделитель; после Ι две треугольные буквы (возможно, ΛΛ) или буква Μ</p>
+            <p>2: слева направо часть вертикальной линии, треугольная буква, часть наклонной линии</p>
+            <p>3: точка-разделитель</p>
+            <p>4: в начале стк, две треугольные буквы (возможно, ΛΛ) или буква Μ, затем вертикальная гаста (вероятно, Ι)</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
