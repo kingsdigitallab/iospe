@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Incertum</title><title xml:lang="en"/><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Incertum</title>
+            <title xml:lang="en">Incertum</title>
+            <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="IM2015">30.680</idno>
@@ -23,7 +25,7 @@
                <msContents>
                   <summary corresp="document-search.xml#doc22">
                      <seg xml:lang="ru">Incertum.</seg>
-                     <seg xml:lang="en">Unknown.</seg>
+                     <seg xml:lang="en">Incertum.</seg>
                   </summary>
                </msContents>
                <physDesc>
@@ -67,21 +69,25 @@
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0368" notAfter="-0300" evidence="Палеография">
+<<<<<<< .mine
+                        <seg xml:lang="ru">Конец IV – III в. до н.э.</seg>
+                        <seg xml:lang="en">late IV - III century B.C.E.</seg>
+=======
                         <seg xml:lang="ru">конец IV – III в. до н.э.</seg>
-                        <seg xml:lang="en">late IVth - IIIrd century B.C.Е.</seg>
+                        <seg xml:lang="en">late IV - III century B.C.Е.</seg>
+>>>>>>> .r4383
                      </origDate>
                   </origin>
                   <provenance type="found">
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена в 1899 г. на границе южного и юго-восточного районов Херсонеса, в периболе у куртины 16 (у стены А). 
-                           Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 8, № 161; д. 28, л. 2, № 161).</rs>
-                        <rs type="context"/>
+                        <rs type="circumstances">Найдена в 1899 г. Раскопки К.К. Косцюшко-Валюжинича (НА НЗХТ, д. 8, № 161; д. 28, л. 2, № 161).</rs>
+                        <rs type="context">На границе южного и юго-восточного районов Херсонеса, в периболе у куртины 16 (у стены А). </rs>
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances"> Found in 1899, excavations of K.K. Kostsyushko-Valyuzhinich (НА НЗХТ, д. 8, № 161; д. 28, л. 2, № 161).</rs>
+                        <rs type="context">Border between the South and Southeast sectors of Chersonesos, in the peribolos by Curtain Wall 16 (between walls А and Б).</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
