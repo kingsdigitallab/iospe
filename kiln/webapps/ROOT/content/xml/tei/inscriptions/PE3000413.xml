@@ -68,8 +68,8 @@
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
                      <origDate notBefore="-0050" notAfter="0050" evidence="Палеография">
-                        <seg xml:lang="ru">Сер. I в. до н.э. - сер. I в. н.э.</seg>
-                        <seg xml:lang="en">Mid. Ist cent. B.C.E. - mid. Ist cent. C.E.</seg>
+                        <seg xml:lang="ru">сер. I в. до н.э. - сер. I в. н.э.</seg>
+                        <seg xml:lang="en">mid. Ist cent. B.C.E. - mid. Ist cent. C.E.</seg>
                      </origDate>
                   </origin>
                   <provenance type="found">
@@ -95,6 +95,7 @@
          </sourceDesc>
       </fileDesc>
       <revisionDesc>
+         <change when="2017-04-26" who="PY">moved Russian text to commentary</change>
          <change when="2016-04-06" who="AGi">programmatically created XML from Word docs</change>
       </revisionDesc>
    </teiHeader>
@@ -144,21 +145,20 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <note>scripsi</note>
+                  <rdg><note>scripsi</note></rdg>
                   <rdg source="bib:IOSPE">...ταν...</rdg>
-                  <note>в конце стк. низ вертикальной гасты</note>
-                  <rdg><note>не исключаю e.g.</note> [τὸ ἀνάλωμα (?) εἰς] τὰν ἀ̣ν̣αγ̣[ραφὰν δόμεν]</rdg>
+                  <rdg><note>e.g.</note> [τὸ ἀνάλωμα (?) εἰς] τὰν ἀ̣ν̣αγ̣[ραφὰν δόμεν]</rdg>
                </app>
                <app loc="2">
                   <rdg>τὸν̣ <note>scripsi</note></rdg>
                   <rdg source="bib:IOSPE">τὸ[...]</rdg>
                </app>
                <app loc="3">
-                  <rdg>βασιλε[υο - - -] <note>scripsi (см. коментарий)</note></rdg>
+                  <rdg>βασιλε[υο - - -] <note>scripsi (cf. comment.)</note></rdg>
                   <rdg source="bib:IOSPE">βασιλε[υούσας Παρθένου, ἔτεος . . .]</rdg>
                </app>
                <app loc="4">
-                  <rdg><note>fin.:</note> <note>scripsi, не исключаю</note> [προαισυμνῶντος] перед  именем [Ἀπολ]λωνίου</rdg>
+                  <rdg><note>fin.:</note> <note>scripsi, vel</note> [προαισυμνῶντος] ante [Ἀπολ]λωνίου</rdg>
                   <rdg source="bib:IOSPE">[ἱερέος δὲ Ἀπολ]λωνίου τ[. . .]</rdg>
                </app>
                <app loc="5">
@@ -173,7 +173,8 @@
             <p/>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p/>
+            <p>1: в конце стк. низ вертикальной гасты</p>
+            <p></p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
