@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Женское надгробие</title><title xml:lang="en">Epitaph of a woman</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.124</idno>
-            <idno type="filename">PE3000120</idno>
-            <idno type="PE">PE3000120</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.124</idno><idno type="PE">PE3000120</idno><idno type="filename">3.331</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -69,7 +65,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0133" notAfter="-0068" evidence="палеография">
+                     <origDate notBefore="-0133" notAfter="-0068" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">кон. II – нач. I в. до н.э.</seg>
                         <seg xml:lang="en">late II - early I century B.C.Е.</seg>
                      </origDate>
@@ -122,7 +118,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/> <citedRange>41</citedRange></bibl>
+               <bibl><!--НЭПХ I--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>41</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -134,15 +130,15 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                <lb n="1"/><persName type="attested" ref="#person724"><name><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/></name></persName>
-               <lb n="2"/><persName type="attested" ref="#person725"><name nymRef="Θεοφάνης"><supplied reason="lost">Θ</supplied>εοφάνειο<supplied reason="lost">ς</supplied></name></persName>
-               <lb n="3"/><persName type="attested" ref="#person726"><name nymRef="Ἀλκίμος"><supplied reason="lost">Ἀ</supplied>λκίμου</name></persName>
+               <lb n="2"/><persName type="attested" ref="#person725"><name nymRef="&#x398;&#x3B5;&#x3BF;&#x3C6;&#x3AC;&#x3BD;&#x3B7;&#x3C2;"><supplied reason="lost">Θ</supplied>εοφάνειο<supplied reason="lost">ς</supplied></name></persName>
+               <lb n="3"/><persName type="attested" ref="#person726"><name nymRef="&#x1F08;&#x3BB;&#x3BA;&#x3AF;&#x3BC;&#x3BF;&#x3C2;"><supplied reason="lost">Ἀ</supplied>λκίμου</name></persName>
                <lb n="4"/><w>γυνά</w>.
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="2-4">
-                  <rdg source="bib:НЭПХ"/>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"/>
                </app>
             </listApp>
          </div>

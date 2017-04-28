@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Фрагменты официальных писем</title>
             <title xml:lang="en">Correspondence of officials</title>
             <editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.413</idno>
-            <idno type="filename">PE3000537</idno>
-            <idno type="PE">PE3000537</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.413</idno><idno type="PE">PE3000537</idno><idno type="filename">3.105</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier><region>Crimea</region>
@@ -56,7 +52,7 @@
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0150" notAfter="0200" evidence="Палеография">
+                     <origDate notBefore="0150" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">вторая половина II в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II century C.E.</seg>
                      </origDate>
@@ -176,7 +172,7 @@
             <listBibl>
                <bibl><!-- Латышев 1915 --><ptr target="bib:b0154"/>, <citedRange>32, № 3</citedRange> (фрагмент 2)</bibl>
                <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>399</citedRange></bibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>I 14</citedRange> (фрагменты 1 и 2)</bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>I 14</citedRange> (фрагменты 1 и 2)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -232,30 +228,30 @@
          <div type="apparatus">
             <listApp n="1">
                <app loc="0">
-                  <rdg source="bib:НЭПХ">[ὁ δεῖνα Χερσονησιτῶν]</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[ὁ δεῖνα Χερσονησιτῶν]</rdg>
                </app>
                <app loc="2">
-                  <rdg source="bib:НЭПХ">[- - - ὅτι τὰ π]ερὶ ῾Ρωμαίους προθ[ύμως ἐπεμελήθητε - - -]</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - - ὅτι τὰ π]ερὶ ῾Ρωμαίους προθ[ύμως ἐπεμελήθητε - - -]</rdg>
                </app>
                <app loc="4">
-                  <rdg source="bib:НЭПХ">[- - -]οις τὸ ἐφόδιον δ[ιδόναι - - -]</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - -]οις τὸ ἐφόδιον δ[ιδόναι - - -]</rdg>
                   <rdg source="bib:BE"><note>corr. Robert in BullEp</note></rdg>
                </app>
                <app loc="6">
                   <rdg>scripsi</rdg>
-                  <rdg source="bib:НЭПХ">[- - -]ειν ὑ̣μ̣ᾶ̣ς̣ [- - -]</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - -]ειν ὑ̣μ̣ᾶ̣ς̣ [- - -]</rdg>
                </app>
                </listApp>
                <listApp n="2">
                   <app loc="1-2">
                      <rdg>[- - -]οσα[- - - /- - - δεδόχθαι τῇ βουλ]ῇ καὶ τῷ δ[ήμῷ - - -] <note> ed. pr.</note></rdg> 
-                     <rdg source="bib:НЭПХ">[Αὐτοκράτωρ Μ. Αὐρήλιος Κόμο]δ̣ος 
+                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[Αὐτοκράτωρ Μ. Αὐρήλιος Κόμο]δ̣ος 
                         Ἀ[ντονεῖνος Σεβαστὸς ... Χερσονησιτῶν τοῖς ἄρχουσι / καὶ τῇ 
                         βουλ]ῇ καὶ τῷ δ[ήμῷ χαίρειν]</rdg>
                   </app>
                   <app loc="4">
                      <rdg>[ὁ δ]ῆμος[ ---] <note>ed. pr.</note></rdg>
-                     <rdg source="bib:НЭПХ">δ]ημοσί[ᾳ - - -]</rdg>
+                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">δ]ημοσί[ᾳ - - -]</rdg>
                   </app>
                </listApp>
             </div>

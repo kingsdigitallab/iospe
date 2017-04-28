@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Проксения Тимагора</title><title xml:lang="en">Proxeny decree honouring Timagoras</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.264</idno>
-            <idno type="filename">PE3000207</idno>
-            <idno type="PE">PE3000207</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.264</idno><idno type="PE">PE3000207</idno><idno type="filename">3.4</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -74,7 +70,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0250" notAfter="-0201" evidence="палеография">
+                     <origDate notBefore="-0250" notAfter="-0201" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">2-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IIIrd century B.C.Е.</seg>
                      </origDate>
@@ -135,17 +131,17 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               <lb n="1"/><w>προξενία</w> <persName type="attested" ref="#person884"><name nymRef="Τιμαγόρας">Τιμαγόρα</name> 
+               <lb n="1"/><w>προξενία</w> <persName type="attested" ref="#person884"><name nymRef="&#x3A4;&#x3B9;&#x3BC;&#x3B1;&#x3B3;&#x3CC;&#x3C1;&#x3B1;&#x3C2;">Τιμαγόρα</name> 
                		       <placeName type="ethnic">Ῥο<unclear>δ</unclear><supplied reason="lost">ίου</supplied></placeName></persName>
                <lb n="2"/><w><supplied reason="lost">βου</supplied><unclear>λ</unclear>ὰ</w> <w>καὶ</w> <w>δᾶμος</w> <w>ἔδωκε</w>· 
-                              <persName type="attested" ref="#person886"><name nymRef="Θεότιμος">Θεότιμο<supplied reason="lost">ς</supplied></name> 
+                              <persName type="attested" ref="#person886"><name nymRef="&#x398;&#x3B5;&#x3CC;&#x3C4;&#x3B9;&#x3BC;&#x3BF;&#x3C2;">Θεότιμο<supplied reason="lost">ς</supplied></name> 
                               <persName type="attested" ref="#person887"><name><gap reason="lost" extent="unknown" unit="character"/></name></persName></persName>
-               <lb n="3"/><persName type="attested" ref="#person888"><name nymRef="—γονος"><gap reason="lost" quantity="2" unit="character"/><seg part="F">γονος</seg></name> 
-                                 <persName type="attested" ref="#person889"><name nymRef="Πρόνους">Πρόνου</name></persName> 
-                                 <w>τοῦ</w> <persName type="attested" ref="#person890"><name nymRef="Αὐτέας">Αὐτέα</name></persName></persName> <w>εἶπαν</w>· 
+               <lb n="3"/><persName type="attested" ref="#person888"><name nymRef="&#x2014;&#x3B3;&#x3BF;&#x3BD;&#x3BF;&#x3C2;"><gap reason="lost" quantity="2" unit="character"/><seg part="F">γονος</seg></name> 
+                                 <persName type="attested" ref="#person889"><name nymRef="&#x3A0;&#x3C1;&#x3CC;&#x3BD;&#x3BF;&#x3C5;&#x3C2;">Πρόνου</name></persName> 
+                                 <w>τοῦ</w> <persName type="attested" ref="#person890"><name nymRef="&#x391;&#x1F50;&#x3C4;&#x3AD;&#x3B1;&#x3C2;">Αὐτέα</name></persName></persName> <w>εἶπαν</w>· 
                                  <w><supplied reason="lost">δόμεν</supplied></w> 
-               		       <persName type="attested" ref="#person884"><name nymRef="Τιμαγόρας"><supplied reason="lost">Τιμαγό</supplied>
-              	<lb n="4" break="no"/><supplied reason="lost">ραι</supplied></name> <persName type="attested" ref="#person885"><name nymRef="Νικαγόρας"><unclear>Ν</unclear>ικαγόρα</name></persName> 
+               		       <persName type="attested" ref="#person884"><name nymRef="&#x3A4;&#x3B9;&#x3BC;&#x3B1;&#x3B3;&#x3CC;&#x3C1;&#x3B1;&#x3C2;"><supplied reason="lost">Τιμαγό</supplied>
+              	<lb n="4" break="no"/><supplied reason="lost">ραι</supplied></name> <persName type="attested" ref="#person885"><name nymRef="&#x39D;&#x3B9;&#x3BA;&#x3B1;&#x3B3;&#x3CC;&#x3C1;&#x3B1;&#x3C2;"><unclear>Ν</unclear>ικαγόρα</name></persName> 
                	                 <placeName type="ethnic"><name>Ῥοδίωι</name></placeName></persName> <w>προξενίαν</w> <w>καὶ</w> 
                                  <w>πο<supplied reason="lost">λιτείαν</supplied></w> 
                                     <w><supplied reason="lost">αὐ</supplied>

@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Список победителей на спортивных состязаниях, сопровождающийся
                метрической надписью</title><title xml:lang="en">Victory list with metrical inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.502</idno>
-            <idno type="filename">PE3000263</idno>
-            <idno type="PE">PE3000263</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.502</idno><idno type="PE">PE3000263</idno><idno type="filename">3.170</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -74,7 +70,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0100" evidence="палеография" precision="low">
+                     <origDate notBefore="0001" notAfter="0100" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
                         <seg xml:lang="ru">I в. н.э.</seg>
                         <seg xml:lang="en">Ist cent. C.E.</seg>
                      </origDate>
@@ -141,17 +137,17 @@
             <ab>
                	<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                	<lb n="1"/><space extent="unknown" unit="character"/> <gap reason="illegible" extent="3" unit="character"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" extent="4" unit="character"/>
-               	<lb n="2"/><w>στάδιον</w>· <persName type="attested" ref="#person996"><name nymRef="Διοκλῆς">Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="3"/><w>δίαυλον</w>· <persName type="attested" ref="#person996"><name nymRef="Διοκλῆς">Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="4"/><w>δόλιχον</w>· <persName type="attested" ref="#person997"><name nymRef="Ἀντίλοχος">Ἀντίλοχο<supplied reason="lost">ς</supplied></name></persName> 
+               	<lb n="2"/><w>στάδιον</w>· <persName type="attested" ref="#person996"><name nymRef="&#x394;&#x3B9;&#x3BF;&#x3BA;&#x3BB;&#x1FC6;&#x3C2;">Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="3"/><w>δίαυλον</w>· <persName type="attested" ref="#person996"><name nymRef="&#x394;&#x3B9;&#x3BF;&#x3BA;&#x3BB;&#x1FC6;&#x3C2;">Διοκλῆς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="4"/><w>δόλιχον</w>· <persName type="attested" ref="#person997"><name nymRef="&#x1F08;&#x3BD;&#x3C4;&#x3AF;&#x3BB;&#x3BF;&#x3C7;&#x3BF;&#x3C2;">Ἀντίλοχο<supplied reason="lost">ς</supplied></name></persName> 
                                  <gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="5"/><w>πάλην</w>· <persName type="attested" ref="#person998"><name nymRef="Κριτόβουλος">Κριτόβουλο<supplied reason="lost">ς</supplied></name></persName> 
+               	<lb n="5"/><w>πάλην</w>· <persName type="attested" ref="#person998"><name nymRef="&#x39A;&#x3C1;&#x3B9;&#x3C4;&#x3CC;&#x3B2;&#x3BF;&#x3C5;&#x3BB;&#x3BF;&#x3C2;">Κριτόβουλο<supplied reason="lost">ς</supplied></name></persName> 
                                  <gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="6"/><space extent="unknown" unit="character"/> <w>καὶ</w> <persName type="attested" ref="#person999"><name nymRef="Θεοδόσις">Θεοδόσις</name></persName>
+               	<lb n="6"/><space extent="unknown" unit="character"/> <w>καὶ</w> <persName type="attested" ref="#person999"><name nymRef="&#x398;&#x3B5;&#x3BF;&#x3B4;&#x3CC;&#x3C3;&#x3B9;&#x3C2;">Θεοδόσις</name></persName>
                                  <persName type="attested"><name><seg part="I">Η</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="7"/><w>πυγμήν</w>· <persName type="attested" ref="#person998"><name nymRef="Κριτόβουλος">Κριτόβου<supplied reason="lost">λος</supplied></name></persName> 
+               	<lb n="7"/><w>πυγμήν</w>· <persName type="attested" ref="#person998"><name nymRef="&#x39A;&#x3C1;&#x3B9;&#x3C4;&#x3CC;&#x3B2;&#x3BF;&#x3C5;&#x3BB;&#x3BF;&#x3C2;">Κριτόβου<supplied reason="lost">λος</supplied></name></persName> 
                                  <gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="8"/><space extent="unknown" unit="character"/> <w>καὶ</w> <persName type="attested" ref="#person997"><name nymRef="Ἀντίλοχος">Ἀντίλοχος</name></persName> 
+               	<lb n="8"/><space extent="unknown" unit="character"/> <w>καὶ</w> <persName type="attested" ref="#person997"><name nymRef="&#x1F08;&#x3BD;&#x3C4;&#x3AF;&#x3BB;&#x3BF;&#x3C7;&#x3BF;&#x3C2;">Ἀντίλοχος</name></persName> 
                                  <gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="9"/><space quantity="1" unit="line"/>
                	<lb n="10"/><l part="Y"><w>μηκύνου</w> <w part="I">ταρσ</w><gap reason="lost" extent="unknown" unit="character"/></l>

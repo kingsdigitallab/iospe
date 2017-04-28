@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Фрагмент посвящения</title><title xml:lang="en">Dedication</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.438</idno>
-            <idno type="filename">PE3000521</idno>
-            <idno type="PE">PE3000521</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.438</idno><idno type="PE">PE3000521</idno><idno type="filename">3.130</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier><country/>
@@ -66,7 +62,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0168" notAfter="0300" evidence="Палеография">
+                     <origDate notBefore="0168" notAfter="0300" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">кон. II – III в. н.э.</seg>
                         <seg xml:lang="en">end of IInd - early IIIrd cent. C.E.</seg>
                      </origDate>
@@ -114,7 +110,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Соломоник 1959a --><ptr target="bib:b0820"/>, <citedRange>165</citedRange></bibl>
-               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>19</citedRange></bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>19</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -140,18 +136,18 @@
          <div type="apparatus">
             <listApp>
                <app loc="1-2">
-                  <rdg source="bib:НЭПХ">Ἰούλι/[ος]</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Ἰούλι/[ος]</rdg>
                   <rdg>ʼΙουλι/[ανοῦ] vel ʼΙουλί/[ου]</rdg>
                </app>
                <app loc="2">
-                  <rdg source="bib:НЭПХ">[- - - Ἡρακ]λ̣είδης</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - - Ἡρακ]λ̣είδης</rdg>
                </app>
                <app loc="4-5">
-                  <rdg source="bib:НЭПХ">Χειμάσ/[ιος]</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Χειμάσ/[ιος]</rdg>
                   <rdg>Χειμᾶς (?) <note>LGPN IV</note></rdg>
                </app>
                <app loc="6">
-                  <rdg source="bib:НЭПХ">[ἀνεθήκα]μεν</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[ἀνεθήκα]μεν</rdg>
                </app>
             </listApp>
          </div>

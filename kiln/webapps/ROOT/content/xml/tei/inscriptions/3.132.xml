@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надпись агоранома о строительстве</title><title xml:lang="en">Building inscription of agoranomos</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.459</idno>
-            <idno type="filename">PE3000258</idno>
-            <idno type="PE">PE3000258</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.459</idno><idno type="PE">PE3000258</idno><idno type="filename">3.132</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -69,7 +65,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0180" notAfter="0180" evidence="указание_надписи">
+                     <origDate notBefore="0180" notAfter="0180" evidence="&#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x438;&#x435;_&#x43D;&#x430;&#x434;&#x43F;&#x438;&#x441;&#x438;">
                         <seg xml:lang="ru">180 г. н.э.</seg>
                         <seg xml:lang="en">180 C.E.</seg>
                      </origDate>
@@ -117,7 +113,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>26</citedRange></bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>26</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -145,20 +141,20 @@
          <div type="apparatus">
             <listApp>
                <app loc="0">
-                   <rdg source="bib:НЭПХ">[ὁ δεῖνα τοῦ δεῖνος]</rdg>
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[ὁ δεῖνα τοῦ δεῖνος]</rdg>
                </app>
                <app loc="0-1">
                   <rdg source="bib:b0436">[τὸν] | ἀγοραν̣[ομήσαντα ?] <note>vel</note> [τὸν] | ἀγοραν̣[όμιον ? οἰκοδομήσαντα]</rdg>
                </app>
                <app loc="1-2">
-                   <rdg source="bib:НЭПХ">ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ?
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">ἀγοραν̣[ομήσας ἐκ τῶν ἰδίων ἐν τῷ] | σε’ ἔτει ἀ[γορανόμιον ?
                      κατεσκεύασε]; <note>не исключаю</note> [ἐπεσκεύασε] <note>vel sim.</note></rdg> 
                </app>
                <app loc="2">
                   <note>по обеим сторонам слова ἔτει точки-разделители.</note>
                </app>
                <app loc="3">
-                   <rdg source="bib:НЭПХ"><note>в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ;</note>
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>в начале стк. верх вертикальной гасты, затем полукружие Ο или Θ;</note>
                      [- - -]ι̣ο̣υ̣[- - -]</rdg>
                </app>
             </listApp>

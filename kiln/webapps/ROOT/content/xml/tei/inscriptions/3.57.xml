@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.275</idno>
-            <idno type="filename">PE3000215</idno>
-            <idno type="PE">PE3000215</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.275</idno><idno type="PE">PE3000215</idno><idno type="filename">3.57</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -70,7 +66,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0100" notAfter="-0001" evidence="палеография">
+                     <origDate notBefore="-0100" notAfter="-0001" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">I в. до н.э.</seg>
                         <seg xml:lang="en">Ist century B.C.Е.</seg>
                      </origDate>
@@ -136,10 +132,10 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="1"/><w><supplied reason="lost">ἀγαθᾶι</supplied></w> <w><unclear>τ</unclear><supplied reason="lost">ύ</supplied>χ<unclear>α</unclear><supplied reason="lost"><unclear>ι</unclear></supplied></w>·
-               	<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person915"><name nymRef="Ἡρόδοτος"><supplied reason="lost"><unclear>Ἡ</unclear></supplied><unclear>ρ</unclear>όδοτος</name> 
-                                 <persName type="attested" ref="#person916"><name nymRef="Ἀρτ—"><seg part="I">Ἀρτ</seg><gap reason="lost" extent="unknown" unit="character"/></name></persName></persName>
-               	<lb n="3" break="no"/><persName type="attested" ref="#person917"><name nymRef="—νος"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">νος</seg></name>  
-                                 <persName type="attested" ref="#person918"><name nymRef="Ἀρίστων">Ἀρίστωνο<supplied reason="lost">ς</supplied></name></persName></persName> 
+               	<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person915"><name nymRef="&#x1F29;&#x3C1;&#x3CC;&#x3B4;&#x3BF;&#x3C4;&#x3BF;&#x3C2;"><supplied reason="lost"><unclear>Ἡ</unclear></supplied><unclear>ρ</unclear>όδοτος</name> 
+                                 <persName type="attested" ref="#person916"><name nymRef="&#x1F08;&#x3C1;&#x3C4;&#x2014;"><seg part="I">Ἀρτ</seg><gap reason="lost" extent="unknown" unit="character"/></name></persName></persName>
+               	<lb n="3" break="no"/><persName type="attested" ref="#person917"><name nymRef="&#x2014;&#x3BD;&#x3BF;&#x3C2;"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">νος</seg></name>  
+                                 <persName type="attested" ref="#person918"><name nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστωνο<supplied reason="lost">ς</supplied></name></persName></persName> 
                                  <w><supplied reason="lost">εἶπαν</supplied></w>· <w><supplied reason="lost">ἐπειδὴ</supplied></w> 
                                  <gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="4"/><w><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">περι</supplied><unclear>ε</unclear>χόντων</w> 

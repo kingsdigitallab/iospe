@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надгробие А[---]</title><title xml:lang="en">Epitaph of A[---]</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.22</idno>
-            <idno type="filename">PE3000022</idno>
-            <idno type="PE">PE3000022</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.22</idno><idno type="PE">PE3000022</idno><idno type="filename">3.226</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -69,7 +65,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0250" notAfter="-0201" evidence="палеография">
+                     <origDate notBefore="-0250" notAfter="-0201" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">2-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IIIrd century B.C.Е.</seg>
                      </origDate>
@@ -137,14 +133,14 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="1"/>
-               <persName type="attested" ref="#person505"><name nymRef="Α—"><seg part="I">Α<gap reason="illegible" quantity="1" unit="character"/></seg></name>
+               <persName type="attested" ref="#person505"><name nymRef="&#x391;&#x2014;"><seg part="I">Α<gap reason="illegible" quantity="1" unit="character"/></seg></name>
                   <gap reason="lost" extent="unknown" unit="character"/>
              	<lb n="2"/>
                   <persName type="attested" ref="#person506">
-                     <name nymRef="Πα—"><seg part="I">Πα</seg></name><gap reason="lost" extent="unknown" unit="character"/>
+                     <name nymRef="&#x3A0;&#x3B1;&#x2014;"><seg part="I">Πα</seg></name><gap reason="lost" extent="unknown" unit="character"/>
                   </persName>
                	<lb n="3"/>
-                  <persName type="attested" ref="#person507"><name nymRef="Διω—"><seg part="I">Διω</seg></name></persName>
+                  <persName type="attested" ref="#person507"><name nymRef="&#x394;&#x3B9;&#x3C9;&#x2014;"><seg part="I">Διω</seg></name></persName>
                   <gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="4"/><w>γυν<supplied reason="lost">ά</supplied></w></persName>
             </ab>

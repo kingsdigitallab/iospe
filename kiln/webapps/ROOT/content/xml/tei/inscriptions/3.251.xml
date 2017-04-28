@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надгробие Эвфрон[---]</title><title xml:lang="en">Epitaph of Euphron[---]</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.45</idno>
-            <idno type="filename">PE3000045</idno>
-            <idno type="PE">PE3000045</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.45</idno><idno type="PE">PE3000045</idno><idno type="filename">3.251</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -71,7 +67,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0251" evidence="палеография">
+                     <origDate notBefore="-0300" notAfter="-0251" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">1st half of III century B.C.Е.</seg>
                      </origDate>
@@ -125,7 +121,7 @@
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 73, №
                      <citedRange>39</citedRange></bibl>
                <bibl><!--НЭПХ II-->
-                  <ptr target="bib:НЭПХ2"/><citedRange>173</citedRange></bibl>
+                  <ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/><citedRange>173</citedRange></bibl>
                <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 452, <!--Arch-->№
                      <citedRange>1</citedRange></bibl>
             </listBibl>
@@ -135,17 +131,17 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-                  <lb n="1"/><persName type="attested" ref="#person568"><name nymRef="Εὐφρον—"><seg part="I">Εὐφρο<unclear>ν</unclear><gap reason="lost" extent="unknown" unit="character"/></seg></name>
-                  <lb n="2"/><persName type="attested" ref="#person569"><name nymRef="Αὐτοφ—"><seg part="I">Αὐτοφ<gap reason="lost" extent="unknown" unit="character"/></seg></name></persName>
-                  <lb n="3"/><persName type="attested" ref="#person570"><name nymRef="Δαλι—"><seg part="I">Δαλι<gap reason="lost" extent="unknown" unit="character"/></seg></name></persName></persName>
+                  <lb n="1"/><persName type="attested" ref="#person568"><name nymRef="&#x395;&#x1F50;&#x3C6;&#x3C1;&#x3BF;&#x3BD;&#x2014;"><seg part="I">Εὐφρο<unclear>ν</unclear><gap reason="lost" extent="unknown" unit="character"/></seg></name>
+                  <lb n="2"/><persName type="attested" ref="#person569"><name nymRef="&#x391;&#x1F50;&#x3C4;&#x3BF;&#x3C6;&#x2014;"><seg part="I">Αὐτοφ<gap reason="lost" extent="unknown" unit="character"/></seg></name></persName>
+                  <lb n="3"/><persName type="attested" ref="#person570"><name nymRef="&#x394;&#x3B1;&#x3BB;&#x3B9;&#x2014;"><seg part="I">Δαλι<gap reason="lost" extent="unknown" unit="character"/></seg></name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app>
-                  <rdg source="bib:НЭПХ2" n="1">Εὐφρό<unclear>ν</unclear>[ιον] | Αὐτοφ[ῶντος e.g.] |
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2" n="1">Εὐφρό<unclear>ν</unclear>[ιον] | Αὐτοφ[ῶντος e.g.] |
                      Δάλι[ος <note>(vel</note> Δαλί[ωνος) γυνά]</rdg>
-                  <rdg source="bib:НЭПХ2" n="2">Εὐφρο<unclear>ν</unclear>[ης] <note>(vel</note>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2" n="2">Εὐφρο<unclear>ν</unclear>[ης] <note>(vel</note>
                         Εὐφρό<unclear>ν</unclear>[ιος] <note>vel</note>
                      Εὐφρό<unclear>ν</unclear>[ιον]) | Αὐτοφ[ῶν e.g.] | Δάλι[ος] <note>(vel</note>
                      Δαλί[ωνος])</rdg>

@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Посвящение «внемлющим богам»</title><title xml:lang="en">Dedication</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.430</idno>
-            <idno type="filename">PE3000243</idno>
-            <idno type="PE">PE3000243</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.430</idno><idno type="PE">PE3000243</idno><idno type="filename">3.126</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -75,7 +71,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0050" evidence="палеография просопография" cert="low">
+                     <origDate notBefore="0001" notAfter="0050" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F; &#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x43F;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" cert="low">
                         <seg xml:lang="ru">1-я пол. I в. н.э.</seg>
                         <seg xml:lang="en">1st half of Ist century C.E.</seg>
                      </origDate>
@@ -143,11 +139,11 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                   <lb n="1"/><w><supplied reason="lost">ὑπὲρ</supplied></w> <w><supplied reason="lost">βασιλέ</supplied>ος</w> 
-                                    <persName type="ruler" key="kottys"><name nymRef="Κότυς">Κόττυος</name> 
-                                    <persName type="ruler" key="rhoem"><name nymRef="Ῥοιμητάλκης">Ῥο<supplied reason="lost">ιμητάλκα</supplied></name></persName></persName> 
+                                    <persName type="ruler" key="kottys"><name nymRef="&#x39A;&#x3CC;&#x3C4;&#x3C5;&#x3C2;">Κόττυος</name> 
+                                    <persName type="ruler" key="rhoem"><name nymRef="&#x1FEC;&#x3BF;&#x3B9;&#x3BC;&#x3B7;&#x3C4;&#x3AC;&#x3BB;&#x3BA;&#x3B7;&#x3C2;">Ῥο<supplied reason="lost">ιμητάλκα</supplied></name></persName></persName> 
                                     <gap reason="lost" extent="unknown" unit="character"/>
-                  <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person974"><name nymRef="—εινος"><seg part="F">εινος</seg></name> 
-                                    <persName type="attested" ref="#person975"><name nymRef="Γυμν—"><seg part="I">Γυμ<unclear>ν</unclear></seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/> 
+                  <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person974"><name nymRef="&#x2014;&#x3B5;&#x3B9;&#x3BD;&#x3BF;&#x3C2;"><seg part="F">εινος</seg></name> 
+                                    <persName type="attested" ref="#person975"><name nymRef="&#x393;&#x3C5;&#x3BC;&#x3BD;&#x2014;"><seg part="I">Γυμ<unclear>ν</unclear></seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/> 
                                     <w>ἀνέθηκεν</w> <gap reason="lost" quantity="1" unit="line"/>
                   <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">θε</supplied><unclear>ο</unclear>ῖς</w> 
                                     <w>ἐ<supplied reason="lost">π</supplied>η<supplied reason="lost">κόοις</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>

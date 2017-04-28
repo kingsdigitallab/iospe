@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надпись о строительстве (восстановлении) стены</title><title xml:lang="en">Building inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.458</idno>
-            <idno type="filename">PE3000257</idno>
-            <idno type="PE">PE3000257</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.458</idno><idno type="PE">PE3000257</idno><idno type="filename">3.138</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -70,7 +66,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="палеография">
+                     <origDate notBefore="0101" notAfter="0200" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd cent. C.E.</seg>
                      </origDate>
@@ -118,7 +114,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Соломоник 1961 --><ptr target="bib:b0762"/>, 31, № <citedRange>1</citedRange></bibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>25</citedRange></bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>25</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -142,14 +138,14 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                   <rdg source="bib:НЭПХ">[πόλει]</rdg>
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[πόλει]</rdg>
                </app>
                <app loc="2-3">
-                   <rdg source="bib:НЭПХ">[κατ]ε̣σκεύασ̣[εν ἐκ τῶ|ν ἰδί]ων</rdg> 
-                   <rdg source="bib:НЭПХ"><note>не исключено</note> [ἐπ]εσκεύασ̣[εν]</rdg>
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[κατ]ε̣σκεύασ̣[εν ἐκ τῶ|ν ἰδί]ων</rdg> 
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>не исключено</note> [ἐπ]εσκεύασ̣[εν]</rdg>
                </app>
                <app loc="3-4">
-                   <rdg source="bib:НЭПХ"><note>fin.-4: вероятно, остатки личного имени с патронимиком;</note> Πέ[λανος |
+                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>fin.-4: вероятно, остатки личного имени с патронимиком;</note> Πέ[λανος |
                      Στ]ρ̣ατοφ[ῶντος] ?</rdg>
                </app>
             </listApp>

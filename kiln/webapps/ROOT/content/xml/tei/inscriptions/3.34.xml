@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.343</idno>
-            <idno type="filename">PE3000460</idno>
-            <idno type="PE">PE3000460</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.343</idno><idno type="PE">PE3000460</idno><idno type="filename">3.34</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier><country/>
@@ -67,7 +63,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
+                     <origDate notBefore="0101" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">IInd cent. C.E.</seg>
                      </origDate>
@@ -113,7 +109,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>5</citedRange></bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>5</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -173,15 +169,15 @@
             <listApp>
                <app loc="3-4">
                   <rdg>Νοουέλ/[λιος] <note>scripsi</note></rdg>
-                  <rdg source="bib:НЭПХ">Νοουμ[ή/νιος] <note>Жебелев ap.</note></rdg>
-                  <rdg source="bib:НЭПХ">Νοουέν[ιος] <note>corr.</note></rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Νοουμ[ή/νιος] <note>Жебелев ap.</note></rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Νοουέν[ιος] <note>corr.</note></rdg>
                </app>
                <app loc="5">
                   <rdg>[διά]σ̣αμός <note>scripsi</note></rdg>
                   <rdg>[ἔνδ]αμος <note>edd.</note></rdg>
                </app>
                <app loc="6">
-                  <rdg source="bib:НЭПХ"><note>in.:</note> [πόλει ἁμῶν? - - -] τὰ λαμπρότατα <note>Жебелев ap.</note></rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>in.:</note> [πόλει ἁμῶν? - - -] τὰ λαμπρότατα <note>Жебелев ap.</note></rdg>
                   <rdg>[- - -]α̣τα <note>scripsi</note></rdg>
                   <rdg>[- - - πράγμ]α̣τα</rdg>
                </app>
@@ -197,7 +193,7 @@
                </app>
                <app loc="9-10">
                   <rdg>φιλά/[νθρωπον?] <note>scripsi</note></rdg>
-                  <rdg source="bib:НЭПХ">φιλά/[γαθον?] <note>Жебелев ap.</note></rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">φιλά/[γαθον?] <note>Жебелев ap.</note></rdg>
                </app>
                <app loc="10">
                   <rdg>ΕΠΟΑΙΑΤΟ <note>lapis</note></rdg>
@@ -216,15 +212,15 @@
                   <rdg><note>in.:</note> [ταχίσταν (?)] <note>scripserim</note></rdg>
                   <rdg><note>med.:</note> [(?) συ]ναισθήσει <note>proposui</note></rdg>
                   <rdg>[- - -] αἰσθήσει <note>Жебелев (архив)</note></rdg>
-                  <rdg source="bib:НЭПХ">[- - -]ν̣ αἰσθήσει</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - -]ν̣ αἰσθήσει</rdg>
                </app>
                <app loc="30">
                   <rdg><note>in.: vel</note> [ἀμ]οιβὰς τὰς</rdg>
-                  <rdg source="bib:НЭПХ">τοῖς - - - Υ</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">τοῖς - - - Υ</rdg>
                </app>
                <app loc="32">
                   <note>fin.: vestigia</note> 
-                  <rdg source="bib:НЭПХ">[- - -]ΥΟΥΣΣΠ (?)</rdg>
+                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - -]ΥΟΥΣΣΠ (?)</rdg>
                </app>
             </listApp>
          </div>

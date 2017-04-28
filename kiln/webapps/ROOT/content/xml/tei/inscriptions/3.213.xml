@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надгробие Гиеро</title><title xml:lang="en">Epitaph of Hiero</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
-         <publicationStmt>
-            <authority>King's College London</authority>
-            <idno type="IM2015">30.10</idno>
-            <idno type="filename">PE3000010</idno>
-            <idno type="PE">PE3000010</idno>
-         </publicationStmt>
+         <publicationStmt><authority>King's College London</authority><idno type="IM2015">30.10</idno><idno type="PE">PE3000010</idno><idno type="filename">3.213</idno></publicationStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -71,7 +67,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0351" notAfter="-0301" evidence="палеография" precision="low">
+                     <origDate notBefore="-0351" notAfter="-0301" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
                         <seg xml:lang="ru">2-я пол. IV в. до н.э.</seg>
                         <seg xml:lang="en">2nd half of IVth century B.C.Е.</seg>
                      </origDate>
@@ -124,7 +120,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 61, № <citedRange>6</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> <citedRange>140</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> <citedRange>140</citedRange></bibl>
                <bibl> (<!--Bull. ép. 1974--><ptr target="bib:BE"/><citedRange>1974, 380</citedRange>)</bibl>
                <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 438, № <citedRange>40</citedRange></bibl>
             </listBibl>
@@ -139,8 +135,8 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-                        <lb n="1"/><persName type="attested" ref="#person473"><name nymRef="Ἱερώ"><unclear>Ἱε</unclear>ρώ</name> <w>γυνὰ</w> 
-               		<lb n="2"/><persName type="attested" ref="#person474"><name nymRef="Ἀθάναιος">Ἀθαναίου</name></persName></persName>
+                        <lb n="1"/><persName type="attested" ref="#person473"><name nymRef="&#x1F39;&#x3B5;&#x3C1;&#x3CE;"><unclear>Ἱε</unclear>ρώ</name> <w>γυνὰ</w> 
+               		<lb n="2"/><persName type="attested" ref="#person474"><name nymRef="&#x1F08;&#x3B8;&#x3AC;&#x3BD;&#x3B1;&#x3B9;&#x3BF;&#x3C2;">Ἀθαναίου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
@@ -148,7 +144,7 @@
                <app loc="1">
                   <rdg source="bib:LGPN">[Ἱ]<unclear>ε</unclear>ρώ</rdg>
                   <rdg source="bib:b0437"><unclear>Ἱε</unclear>ρώ</rdg>
-                  <rdg source="bib:b0504 bib:НЭПХ2"><unclear>Ἐρώ</unclear></rdg>
+                  <rdg source="bib:b0504 bib:&#x41D;&#x42D;&#x41F;&#x425;2"><unclear>Ἐρώ</unclear></rdg>
                </app>
                <app loc="2">
                   <rdg source="bib:b0450">[Δι]αθαναίου</rdg>
