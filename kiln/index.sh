@@ -64,7 +64,7 @@ do
     filename=$(basename "$f")
     filename="${filename%.*}"
 
-    if [[ $filename =~ ^[15P]{1}.*$ ]]; then
+    if [[ $filename =~ ^[135]{1}.*$ ]]; then
         echo $SERVER_URL/$SERVER_PATH/$filename.html
         wget -q --directory-prefix _tmp --timeout=0 $SERVER_URL/$SERVER_PATH/$filename.html
     fi
