@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет в честь гражданина Гераклеи Фрасимеда</title><title xml:lang="en">Decree honouring Thrasimedes of Herakleia</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -46,8 +45,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                          <seg xml:lang="ru">Лицевой фас.</seg>
-                          <seg xml:lang="ru">On the front.</seg>
+                           <seg xml:lang="ru"/>
+                           <seg xml:lang="en"/>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -102,9 +101,6 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-     <xi:include href="encoding-desc.xml">
-     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-     </xi:include>
       
       <!-- volNum = ﻿30-->
       <revisionDesc>
@@ -137,7 +133,7 @@
                <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, 32 № <citedRange>23</citedRange></bibl>
                <bibl><!-- Corsten 2007 --><ptr target="bib:b0822"/>, <citedRange>133</citedRange></bibl>
                <bibl><!-- Avram, PPEE --><ptr target="bib:b0709"/>, 150, № <citedRange>1872</citedRange></bibl> 
-               <bibl type="confer"><!-- Avram, PPEE --><ptr target="bib:b0709"/> 149, № <citedRange>1871</citedRange></bibl>
+               <bibl> (cf. <!-- Avram, PPEE --><ptr target="bib:b0709"/> 149, № <citedRange>1871</citedRange>)</bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -311,8 +307,8 @@
             <p>Good fortune. Proedroi of Chersonesites who are near Tauris proposed: since Thrasymedes, (son of) Thrasymedes Satyros, a natural citizen of the metropoly of Herakleia,
             has made his sojourn with us worthy of respect and had the greatest goodwill such as good fathers (have) towards affectionate sons, displaying the nobility of character
             in most worthy of respect [...], because adorned with emeninent origin he had been taught to be a benefactor for the city, for which the man was deemed worthy of praise, and
-            on also on account of our mother-city) and (his fatherland) Herakleia, an isopolity was deemed good; because of these, the Council and the People shall deem it good to praise
-            for these Thrasymedes, (son of) Thrasymedes Satyros, of Herakleia, and to grant him citizenship on 
+            on also on account of our mother-city) and (his fatherland) Herakleia, an isopolity was deemed good; because of these, the Council and the People shall deem it good 
+            to praise, on this basis, Thrasymedes, (son of) Thrasymedes Satyros, of Herakleia, and to grant him citizenship on 
             the grounds of proxeny, the right of sailing in and out of the harbour in peace time and in war time, without a threat of confiscation and without a formal treaty,
             for him, his descendants and his goods, sharing in everything that the Chersonesites share in their city;  
             to inscribe this decision on a stele of white stone and [set it up] in the most prominent place of the acropolis. 
