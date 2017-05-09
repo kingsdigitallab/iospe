@@ -1357,7 +1357,10 @@
 
 
         <!-- Commentary -->
-        <xsl:choose>
+        <!-- PC  9 MAY 2017:  put in the 'if' condition as temporary measure to hide from display editor's 
+          commentary section for vol 3 files while corrections and improvements are made -->
+        <xsl:if test="not(starts-with(//tei:idno[@type = 'filename'], '3'))">
+          <xsl:choose>
           <xsl:when
             test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
             <div class="row">
@@ -1398,6 +1401,7 @@
             <!-- do nothing -->
           </xsl:otherwise>
         </xsl:choose>
+        </xsl:if>
 
 
         <!-- Images -->
