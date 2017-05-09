@@ -58,7 +58,7 @@
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=conc/publications/{1}-{2}.html"/>
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
-            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{url-encode:{1}}&amp;sort=pub-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/concordances-publication.xsl">
@@ -77,7 +77,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=conc/publications/{1}.html"/>
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
-            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{1}&amp;sort=pub-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{url-encode:{1}}&amp;sort=pub-sort%20asc&amp;rows=999"
           />
         </map:aggregate>
         <!-- TESTING -->
