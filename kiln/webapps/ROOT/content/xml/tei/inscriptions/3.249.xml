@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надгробие супругов</title><title xml:lang="en">Epitaph of a couple</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -71,7 +69,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0251" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0251" evidence="палеография" precision="low">
                         <seg xml:lang="ru">1-я пол. III в. до н.э.</seg>
                         <seg xml:lang="en">1st half of III century B.C.Е.</seg>
                      </origDate>
@@ -127,7 +125,7 @@
                <bibl><!--Соломоник 1969--><ptr target="bib:b0504"/>, 73, №
                      <citedRange>40</citedRange></bibl>
                <bibl><!--НЭПХ II-->
-                  <ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/><citedRange>174</citedRange>
+                  <ptr target="bib:НЭПХ2"/><citedRange>174</citedRange>
                (= <bibl><!--Bull.ép. 1974--><ptr target="bib:BE"/> <citedRange>1974, 380</citedRange></bibl>)</bibl>
                <bibl><!--Perlman 2011--><ptr target="bib:b0437"/>, 452, <!--Arch-->№
                      <citedRange>2</citedRange></bibl>
@@ -142,15 +140,15 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <div type="textpart" subtype="inscription" n="1">
                <ab>
-                  <lb n="1"/><persName type="attested" ref="#person560"><name nymRef="&#x395;&#x1F50;&#x3BE;&#x3AF;&#x3B8;&#x3B5;&#x3BF;&#x3C2;">Εὐξίθεος</name>
-                  <lb n="2"/><persName type="attested" ref="#person563"><name nymRef="&#x3A7;&#x3B1;&#x3B9;&#x3C1;&#x3BF;&#x3BC;&#x3AD;&#x3BD;&#x3B7;&#x3C2;">Χαιρομένεος</name></persName></persName>
+                  <lb n="1"/><persName type="attested" ref="#person560"><name nymRef="Εὐξίθεος">Εὐξίθεος</name>
+                  <lb n="2"/><persName type="attested" ref="#person563"><name nymRef="Χαιρομένης">Χαιρομένεος</name></persName></persName>
                </ab>
             </div>
             <div type="textpart" subtype="inscription" n="2">
                <ab>
-                  <lb n="1"/><persName type="attested" ref="#person565"><name nymRef="&#x1F39;&#x3B5;&#x3C1;&#x3CE;">Ἱερὼ</name> 
-                                    <persName type="attested" ref="#person566"><name nymRef="&#x39A;&#x3C1;&#x3CC;&#x3BD;&#x3B9;&#x3BF;&#x3C2;">Κρονίου</name></persName>
-                  <lb n="2"/><persName type="attested" ref="#person560"><name nymRef="&#x395;&#x1F50;&#x3BE;&#x3AF;&#x3B8;&#x3B5;&#x3BF;&#x3C2;">Εὐξιθέου</name> </persName><w>γυνά</w></persName>
+                  <lb n="1"/><persName type="attested" ref="#person565"><name nymRef="Ἱερώ">Ἱερὼ</name> 
+                                    <persName type="attested" ref="#person566"><name nymRef="Κρόνιος">Κρονίου</name></persName>
+                  <lb n="2"/><persName type="attested" ref="#person560"><name nymRef="Εὐξίθεος">Εὐξιθέου</name> </persName><w>γυνά</w></persName>
                </ab>
             </div>
          </div>

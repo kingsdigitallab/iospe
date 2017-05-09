@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надгробие</title><title xml:lang="en">Epitaph</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -66,7 +64,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
@@ -122,7 +120,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ I--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>57</citedRange>
+               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/> <citedRange>57</citedRange>
                (cf. <bibl type="comparison"><!--Bull. ép. 1964--><ptr target="bib:BE"/> <citedRange>1964, 314</citedRange></bibl>)</bibl>
             </listBibl>
          </div>
@@ -137,16 +135,16 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                   <lb n="0"/><persName type="attested" ref="#person766"><name><gap reason="lost" extent="unknown" unit="character"/></name>
-                  <lb n="1"/><persName type="attested" ref="#person767"><name nymRef="&#x1F08;&#x3C1;&#x3B9;&#x3C3;&#x3C4;&#x3BF;&#x2014;&#x3C7;&#x3BF;&#x3C2;"><supplied reason="lost">Ἀ</supplied><unclear>ρ</unclear>ιστο 
+                  <lb n="1"/><persName type="attested" ref="#person767"><name nymRef="Ἀριστο—χος"><supplied reason="lost">Ἀ</supplied><unclear>ρ</unclear>ιστο 
                   <lb n="2" break="no"/><gap reason="lost" quantity="2" unit="character"/><unclear>χ</unclear>ου</name></persName>
-                  <lb n="3"/><persName type="attested" ref="#person768"><name nymRef="&#x398;&#x3C1;&#x3B1;&#x3C3;&#x3C5;&#x2014;"><supplied reason="lost">Θρ</supplied>ασυ
+                  <lb n="3"/><persName type="attested" ref="#person768"><name nymRef="Θρασυ—"><supplied reason="lost">Θρ</supplied>ασυ
                   <lb n="4" break="no"/><gap reason="lost" extent="unknown" unit="character"/>υ</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="1-4">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[Ἀ]<unclear>ρ</unclear>ιστο|[λό]<unclear>χ</unclear>ου |
+                  <rdg source="bib:НЭПХ">[Ἀ]<unclear>ρ</unclear>ιστο|[λό]<unclear>χ</unclear>ου |
                      [Θρ]ασυ|[λόχο]υ <note>однако возможны другие восстановления личных
                      имен.</note></rdg>
                </app>

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Список победителей на спортивных состязаниях</title><title xml:lang="en">Victory list</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -61,7 +59,7 @@
                         <seg xml:lang="ru">Херсонес (?).</seg>
                         <seg xml:lang="en">Chersonesos ?.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
+                     <origDate notBefore="0101" notAfter="0200" evidence="палеография" precision="low">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
@@ -126,7 +124,7 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> с. 103, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> <citedRange>31</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> с. 103, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> <citedRange>31</citedRange></bibl>
                <bibl><!--Тункина 2002--><ptr target="bib:b0228"/>, 505, рис. 138</bibl>
             </listBibl>
          </div>
@@ -136,21 +134,21 @@
                	<lb n="1"/><gap reason="lost" quantity="7" unit="character"/> <w><supplied reason="lost">ἀ</supplied><unclear>κ</unclear>όν<supplied reason="lost">τιν</supplied></w>
                	<lb n="2"/><gap reason="lost" quantity="6" unit="character"/> <w><supplied reason="lost">ἀκόν</supplied>τιν</w>, 
                                  <w>δρόμ<supplied reason="lost">ον</supplied></w>· 
-               	<lb n="3"/><gap reason="lost" quantity="10" unit="character"/> <w>πάλην</w>· <persName type="attested" ref="#person1000"><name nymRef="&#x39D;&#x3B5;&#x3B9;&#x3BA;&#x2014;"><seg part="I">Νει
+               	<lb n="3"/><gap reason="lost" quantity="10" unit="character"/> <w>πάλην</w>· <persName type="attested" ref="#person1000"><name nymRef="Νεικ—"><seg part="I">Νει
                	<lb n="4" break="no"/><supplied reason="lost">κ</supplied></seg></name></persName> <gap reason="lost" extent="unknown" unit="character"/> 
-                              <persName type="attested" ref="#person1001"><name nymRef="&#x1F29;&#x3C1;&#x3B1;&#x3BA;&#x3BB;&#x3B5;&#x3AF;&#x3B4;&#x3B7;&#x3C2;"><supplied reason="lost">Ἡρ</supplied><unclear>α</unclear>κλείδης</name> 
-                              <persName type="attested" ref="#person1002"><name nymRef="&#x1F29;&#x3C1;&#x3BF;&#x2014;"><seg part="I">Ἡρο</seg></name></persName></persName> 
+                              <persName type="attested" ref="#person1001"><name nymRef="Ἡρακλείδης"><supplied reason="lost">Ἡρ</supplied><unclear>α</unclear>κλείδης</name> 
+                              <persName type="attested" ref="#person1002"><name nymRef="Ἡρο—"><seg part="I">Ἡρο</seg></name></persName></persName> 
                	<lb n="5" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost" cert="low">ἀκόντι</supplied>ν</w>, 
-                              <w>δρόμον</w>· <persName type="attested" ref="#person1003"><name nymRef="&#x39C;&#x3AD;&#x3C3;&#x3C4;&#x3C1;&#x3B9;&#x3C2;">Μέστρις</name></persName> 
+                              <w>δρόμον</w>· <persName type="attested" ref="#person1003"><name nymRef="Μέστρις">Μέστρις</name></persName> 
                	<lb n="6"/><persName type="attested" ref="#person1004"><gap reason="lost" extent="unknown" unit="character"/> 
                	                 <supplied reason="lost"><w>ὁ</w> <w>δ</w></supplied>. 
-                              <persName type="attested" ref="#person1005"><name nymRef="&#x1F08;&#x3BB;&#x3AD;&#x3BE;&#x3B1;&#x3BD;&#x3B4;&#x3C1;&#x3BF;&#x3C2;"><supplied reason="lost">Ἀλ</supplied>εξάνδρου</name></persName></persName>· 
+                              <persName type="attested" ref="#person1005"><name nymRef="Ἀλέξανδρος"><supplied reason="lost">Ἀλ</supplied>εξάνδρου</name></persName></persName>· 
                                  <w>πάλην</w>· 
                	<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ν</unclear></w>, <w>δρόμον</w>, <w>ἀκόντιν</w>·
                	<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/> <w>δρόμον</w>, <w>ἀκόντιν</w>· 
                	<lb n="9"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἀκό</supplied><unclear>ν</unclear>τιν</w>, <w>ἀγκυλομαχίαν</w>· 
-               	<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested" ref="#person1006"><name nymRef="&#x39C;&#x3B1;&#x3C1;&#x3BA;&#x3B9;&#x3B1;&#x3BD;&#x3CC;&#x3C2;">Μαρκιανὸς</name> 
-               	                 <persName type="attested" ref="#person1007"><name nymRef="&#x3A6;&#x3B9;&#x3BB;&#x3BF;&#x2014;"><seg part="I">Φιλο</seg></name></persName></persName>
+               	<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested" ref="#person1006"><name nymRef="Μαρκιανός">Μαρκιανὸς</name> 
+               	                 <persName type="attested" ref="#person1007"><name nymRef="Φιλο—"><seg part="I">Φιλο</seg></name></persName></persName>
                	<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἀ</supplied>κόντιν</w>
                	<lb n="11a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>

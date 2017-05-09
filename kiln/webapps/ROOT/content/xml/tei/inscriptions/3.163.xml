@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Почетная надписть граждан Тия</title><title xml:lang="en">Honorific inscription set up by the polis of Tios</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -69,7 +67,7 @@
                         <seg xml:lang="ru">Тий.</seg>
                         <seg xml:lang="en">Tios.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0233" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0151" notAfter="0233" evidence="палеография">
                         <seg xml:lang="ru">2-я пол. II в. н.э. – нач. III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II - early III century C.E.</seg>
                      </origDate>
@@ -78,7 +76,7 @@
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
                         <rs type="circumstances">Найдена в 1956 г. Е.Н. Жеребцовым в северном
-                           районе городища, в ходе реставрационных работ в Базилике 1935 г.</rs>
+                           районе городища, в ходе реставрационных работ в Базилике 1935 г.</rs>
                         <rs type="context"/>
                      </seg>
                      <seg xml:lang="en">
@@ -119,7 +117,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Соломоник 1959a --><ptr target="bib:b0820"/>, <citedRange>163</citedRange></bibl>
-               <bibl><!-- НЭПХ I --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>13</citedRange></bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>13</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -132,7 +130,7 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                	<lb n="0"/><persName type="attested" ref="#person1146"> <persName type="attested" ref="#person1147"><gap reason="lost" extent="unknown" unit="line"/>
-               	<lb n="1"/><w><unclear>τ</unclear>οῦ</w> <persName type="attested" ref="#person1148"><name nymRef="&#x3A0;&#x3B1;&#x3C0;&#x3AF;&#x3B1;&#x3C2;">Παπίου</name></persName></persName></persName>  
+               	<lb n="1"/><w><unclear>τ</unclear>οῦ</w> <persName type="attested" ref="#person1148"><name nymRef="Παπίας">Παπίου</name></persName></persName></persName>  
                                              <w>τὸν</w> <w>ἀρ
                	<lb n="2" break="no"/>χιερέα</w> <w>καὶ</w> <w>φιλόπα
                  <lb n="3" break="no"/> τριν</w> <w>ἡ</w> <placeName type="ethnic">Τιανῶν</placeName> <w>πόλις</w>
@@ -143,8 +141,8 @@
          <div type="apparatus">
             <listApp>
                <app loc="0">
-                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[ἀγαθῇ
-                     τύχῃ]</rdg>
+                   <rdg source="bib:НЭПХ">[ἀγαθῇ
+                     τύχῃ]</rdg>
                </app>
                <app loc="3">
                   <rdg>ΝΠ <note>in ligatura</note></rdg>

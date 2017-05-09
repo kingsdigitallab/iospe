@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Список победителей на спортивных состязаниях</title><title xml:lang="en">Agonistic inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -61,7 +60,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0001" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0001" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">I-II в. н.э.</seg>
                         <seg xml:lang="en">I - II century C.E.</seg>
                      </origDate>
@@ -111,7 +110,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Соломоник 1963 --><ptr target="bib:b0880"/>, <citedRange>172</citedRange></bibl>
-               <bibl><!-- НЭПХ I --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>20</citedRange></bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>20</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -127,11 +126,11 @@
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΝΩ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/> <space extent="unknown" unit="character"/> 
                                                    <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="line"/> <w><supplied reason="lost" cert="low">πεντ</supplied><unclear>ά</unclear>θλους</w> 
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="line"/> <w><supplied reason="lost" cert="low">πεντ</supplied><unclear>ά</unclear>θλους</w> 
                                                       <gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="line"/> <w><supplied reason="lost">ἐνίκησεν</supplied></w> 
-                                                   <w><supplied reason="lost">ἀ</supplied><unclear>κ</unclear>οντίῳ</w>, 
-                                                   <w>δ<supplied reason="lost">ρόμῳ</supplied></w> <gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="line"/> <w><supplied reason="lost">ἐνίκησεν</supplied></w> 
+                                                   <w><supplied reason="lost">ἀ</supplied><unclear>κ</unclear>οντίῳ</w>, 
+                                                   <w>δ<supplied reason="lost">ρόμῳ</supplied></w> <gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="4"/><gap reason="lost" extent="unknown" unit="line"/><orig>Ω</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
@@ -139,14 +138,14 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <rdg>[ἀγώ]νω[ν ?] <note>edd.</note></rdg>
+                  <rdg>[ἀγώ]νω[ν ?] <note>edd.</note></rdg>
                </app>
                <app loc="2">
-                  <rdg>ἄ̣θλους <note>edd.</note></rdg>
-                  <rdg>[πεντ]άθλους ?</rdg>
+                  <rdg>ἄ̣θλους <note>edd.</note></rdg>
+                  <rdg>[πεντ]άθλους ?</rdg>
                </app>
                <app loc="4">
-                  <rdg>[- - - ἐνίκησε - - - - - - -]ῳ [- - -] <note>edd.</note></rdg>
+                  <rdg>[- - - ἐνίκησε - - - - - - -]ῳ [- - -] <note>edd.</note></rdg>
                </app>
             </listApp>
          </div>

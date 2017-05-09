@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Фрагмент декрета (?)</title><title xml:lang="en">Decree (?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -61,7 +60,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
@@ -113,7 +112,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>718</citedRange></bibl>
-               <bibl><!-- НЭПХ II --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> <citedRange>117</citedRange></bibl>
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ2"/> <citedRange>117</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -125,19 +124,19 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>μετοχάν</w> <w>τε</w> <w>πάντων</w></supplied> 
-                                          <w><unclear>τ</unclear>ῶν</w> <supplied reason="lost"><w>ἐν</w> <w>τᾷ</w> <w>πόλει</w>, <w>ὧν</w> <w>καὶ</w></supplied>
-               		<lb n="2"/><supplied reason="lost"><placeName type="ethnic">Χερσονασείταις</placeName> <w>μέτεστι</w>· <w>τὸ</w></supplied> 
-                                          <w><unclear>δ</unclear>ὲ</w> <w>ψ<unclear>ά</unclear><supplied reason="lost">φισμα</supplied></w> 
-                                          <w><supplied reason="lost">τοῦτο</supplied></w> <w><supplied reason="lost">ἀναγρα</supplied>
-               		<lb n="3" break="no"/><supplied reason="lost">φᾶμεν</supplied></w> <supplied reason="lost"><w>λευκολίθου</w> <w>στάλᾳ</w></supplied><gap reason="lost" extent="unknown" unit="line"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>μετοχάν</w> <w>τε</w> <w>πάντων</w></supplied> 
+                                          <w><unclear>τ</unclear>ῶν</w> <supplied reason="lost"><w>ἐν</w> <w>τᾷ</w> <w>πόλει</w>, <w>ὧν</w> <w>καὶ</w></supplied>
+               		<lb n="2"/><supplied reason="lost"><placeName type="ethnic">Χερσονασείταις</placeName> <w>μέτεστι</w>· <w>τὸ</w></supplied> 
+                                          <w><unclear>δ</unclear>ὲ</w> <w>ψ<unclear>ά</unclear><supplied reason="lost">φισμα</supplied></w> 
+                                          <w><supplied reason="lost">τοῦτο</supplied></w> <w><supplied reason="lost">ἀναγρα</supplied>
+               		<lb n="3" break="no"/><supplied reason="lost">φᾶμεν</supplied></w> <supplied reason="lost"><w>λευκολίθου</w> <w>στάλᾳ</w></supplied><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="3a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app>
-                  <rdg source="bib:IOSPE2">[ἡ δεῖνα] / [---]ίων[ος] / [γυνὰ δ]ὲ Ψ[άφωνος]</rdg>
+                  <rdg source="bib:IOSPE2">[ἡ δεῖνα] / [---]ίων[ος] / [γυνὰ δ]ὲ Ψ[άφωνος]</rdg>
                </app>
             </listApp>
          </div>

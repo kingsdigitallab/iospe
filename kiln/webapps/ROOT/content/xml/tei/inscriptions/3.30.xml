@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Фрагмент декрета</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -61,7 +60,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
@@ -113,7 +112,7 @@
                <bibl><!-- Латышев 1892 --><ptr target="bib:b0125"/>, 33, № <citedRange>19</citedRange>
                (= <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 159</citedRange></bibl>
                <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>613</citedRange></bibl>)</bibl>
-               <bibl><!-- НЭПХ II --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>115</citedRange></bibl>
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ"/> <citedRange>115</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -124,16 +123,16 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="0"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>δόμεν</w> <w>δὲ</w> <w>αὐτῶι</w> <w>προξενίας</w> 
-               		                   <w>πολειτείαν</w></supplied>,
-               		<lb n="1"/><w><supplied reason="lost">ἔσπλο</supplied><unclear>υ</unclear>ν</w> <w>τε</w> <w>κ<supplied reason="lost">αὶ</supplied></w> 
-                                          <supplied reason="lost"><w>ἔκπλουν</w> <w>ἐν</w> <w>εἰράναι</w> <w>καὶ</w> <w>πολέμωι</w> <w>ἀσυλεὶ</w></supplied>
-               		<lb n="2"/><w><supplied reason="lost">ἀσπο</supplied>νδεὶ</w> <w>α<unclear>ὐ</unclear><supplied reason="lost">τῶι</supplied></w> 
-                                          <supplied reason="lost"><w>τε</w> <w>καὶ</w> <w>ἐκγόνοις</w> <w>καὶ</w> <w>χράμασι</w> <w>αὐτοῦ</w></supplied>,
-               		<lb n="3"/><w><supplied reason="lost">μετο</supplied><unclear>χ</unclear>άν</w> <w>τ<unclear>ε</unclear></w> 
-                                          <supplied reason="lost"><w>πάντων</w> <w>τῶν</w> <w>ἐν</w> <w>τᾷ</w> <w>πόλει</w> <w>ὧν</w> <w>καὶ</w></supplied> 
+               		<lb n="0"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>δόμεν</w> <w>δὲ</w> <w>αὐτῶι</w> <w>προξενίας</w> 
+               		                   <w>πολειτείαν</w></supplied>,
+               		<lb n="1"/><w><supplied reason="lost">ἔσπλο</supplied><unclear>υ</unclear>ν</w> <w>τε</w> <w>κ<supplied reason="lost">αὶ</supplied></w> 
+                                          <supplied reason="lost"><w>ἔκπλουν</w> <w>ἐν</w> <w>εἰράναι</w> <w>καὶ</w> <w>πολέμωι</w> <w>ἀσυλεὶ</w></supplied>
+               		<lb n="2"/><w><supplied reason="lost">ἀσπο</supplied>νδεὶ</w> <w>α<unclear>ὐ</unclear><supplied reason="lost">τῶι</supplied></w> 
+                                          <supplied reason="lost"><w>τε</w> <w>καὶ</w> <w>ἐκγόνοις</w> <w>καὶ</w> <w>χράμασι</w> <w>αὐτοῦ</w></supplied>,
+               		<lb n="3"/><w><supplied reason="lost">μετο</supplied><unclear>χ</unclear>άν</w> <w>τ<unclear>ε</unclear></w> 
+                                          <supplied reason="lost"><w>πάντων</w> <w>τῶν</w> <w>ἐν</w> <w>τᾷ</w> <w>πόλει</w> <w>ὧν</w> <w>καὶ</w></supplied> 
                                           <placeName type="ethnic"><supplied reason="lost">Χερσο</supplied>
-               		<lb n="4" break="no"/><supplied reason="lost">νασείταις</supplied></placeName> <w><supplied reason="lost">μέτεστιν</supplied></w>
+               		<lb n="4" break="no"/><supplied reason="lost">νασείταις</supplied></placeName> <w><supplied reason="lost">μέτεστιν</supplied></w>
                		<lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>

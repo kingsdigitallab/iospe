@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Список пожертвований (?) с указанием дат</title><title xml:lang="en">List of donations (?)</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -49,7 +48,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0189" notAfter="0300" evidence="&#x423;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x438;&#x435;_&#x43D;&#x430;&#x434;&#x43F;&#x438;&#x441;&#x438;">
+                     <origDate notBefore="0189" notAfter="0300" evidence="Указание_надписи">
                         <seg xml:lang="ru">не ранее 189 г. н.э.</seg>
                         <seg xml:lang="en">not before 189 C.E.</seg>
                      </origDate>
@@ -179,7 +178,7 @@
                (= <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 160</citedRange></bibl>)</bibl>
                <bibl><!-- Латышев 1905 --><ptr target="bib:b0145"/>, 114, № <citedRange>32</citedRange></bibl>
                <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>584</citedRange></bibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>21</citedRange></bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>21</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -192,29 +191,29 @@
             <div type="textpart" subtype="fragment" n="1-3">
                <ab>
                          <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="undefined">ἐν</supplied></w>
-                                          <w><unclear>τ</unclear><supplied reason="undefined" evidence="previouseditor">ῷ</supplied></w> 
-                                          <gap reason="lost" quantity="3" unit="character"/> <w><supplied reason="lost">ἔτει</supplied></w>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> 
-                                          <w>τῷ</w> <num value="189">ρ<g ref="#stop"/> πθ</num> <g ref="#stop"/> <w>ἔτει</w>
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>ἐν</w> <w>τῷ</w></supplied> 
-                                             <num value="195">ρ<g ref="#stop"/> Ϙε</num> <g ref="#stop"/> <w>ἔτει</w>
-               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> 
-                                          <w><supplied reason="lost">τ</supplied>ῷ</w> <g ref="#stop"/> <num value="198">ρ<g ref="#stop"/> Ϙη</num> <g ref="#stop"/> <w>ἔτει</w>
-               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> <w>τῷ</w> 
-                                             <g ref="#stop"/> <num value="214">σ<g ref="#stop"/> ι<g ref="#stop"/> δ</num> <g ref="#stop"/> <w>ἔτει</w>
+                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="undefined">ἐν</supplied></w>
+                                          <w><unclear>τ</unclear><supplied reason="undefined" evidence="previouseditor">ῷ</supplied></w> 
+                                          <gap reason="lost" quantity="3" unit="character"/> <w><supplied reason="lost">ἔτει</supplied></w>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> 
+                                          <w>τῷ</w> <num value="189">ρ<g ref="#stop"/> πθ</num> <g ref="#stop"/> <w>ἔτει</w>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>ἐν</w> <w>τῷ</w></supplied> 
+                                             <num value="195">ρ<g ref="#stop"/> Ϙε</num> <g ref="#stop"/> <w>ἔτει</w>
+               		<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> 
+                                          <w><supplied reason="lost">τ</supplied>ῷ</w> <g ref="#stop"/> <num value="198">ρ<g ref="#stop"/> Ϙη</num> <g ref="#stop"/> <w>ἔτει</w>
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐν</supplied></w> <w>τῷ</w> 
+                                             <g ref="#stop"/> <num value="214">σ<g ref="#stop"/> ι<g ref="#stop"/> δ</num> <g ref="#stop"/> <w>ἔτει</w>
                		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/> <w>φι<supplied reason="lost">λοτειμη</supplied>
-               		<lb n="7" break="no"/><supplied reason="lost">σάμενος</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="7" break="no"/><supplied reason="lost">σάμενος</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="7a"/><gap reason="lost" extent="unknown" unit="line"/>
                </ab>
             </div>
             <div type="textpart" subtype="fragment" n="4">
                <ab>
                          <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>ἐν</w> <w>τῷ</w></supplied> 
-                                          <num value="4"><gap reason="lost" quantity="2" unit="character"/>δ</num> <g ref="#stop"/> <w>ἔ<supplied reason="lost">τει</supplied></w>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w>ἐν</w> <w>τῷ</w></supplied> 
+                                          <num value="4"><gap reason="lost" quantity="2" unit="character"/>δ</num> <g ref="#stop"/> <w>ἔ<supplied reason="lost">τει</supplied></w>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <w><unclear>φ</unclear>ιλοτει
-               		<lb n="3" break="no"/><supplied reason="lost">μησάμενος</supplied></w> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΕΝ</orig>
+               		<lb n="3" break="no"/><supplied reason="lost">μησάμενος</supplied></w> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΕΝ</orig>
                		<lb n="3a"/><gap reason="lost" extent="unknown" unit="line"/>
                </ab>
             </div>
@@ -242,7 +241,7 @@
                      <note>ΤΕ in ligatura</note>
                   </app>
                   <app loc="3">
-                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Τ</rdg>
+                     <rdg source="bib:НЭПХ">Τ</rdg>
                   </app>
                </listApp>
             </div>

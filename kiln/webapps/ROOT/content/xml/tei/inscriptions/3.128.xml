@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Посвящение алтаря</title><title xml:lang="en">Dedication of altar</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -68,7 +66,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0151" notAfter="0233" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F; &#x43E;&#x431;&#x449;&#x438;&#x439;_&#x43E;&#x431;&#x43B;&#x438;&#x43A;" precision="low">
+                     <origDate notBefore="0151" notAfter="0233" evidence="палеография общий_облик" precision="low">
                         <seg xml:lang="ru">2-я пол. II – нач. III в. н.э.</seg>
                         <seg xml:lang="en">2nd half of II - early III century C.E.</seg>
                      </origDate>
@@ -123,14 +121,14 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>I 18</citedRange></bibl>
+               <bibl><!--НЭПХ--><ptr target="bib:НЭПХ"/> <citedRange>I 18</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--Граков, Виноградов 1970--><ptr target="bib:b0458"/>, 132, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> <citedRange>13</citedRange></bibl>
-               <bibl><!--НЭПХ II--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> с. 94, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> <citedRange>148</citedRange></bibl>
+               <bibl><!--НЭПХ II--><ptr target="bib:НЭПХ2"/> с. 94, <seg xml:lang="ru">прим.</seg><seg xml:lang="en">approx.</seg> <citedRange>148</citedRange></bibl>
                <bibl><!--АСХ--><ptr target="bib:b0523"/> 169, № <citedRange>542</citedRange></bibl>
                <bibl><!--Соломоник 1990--><ptr target="bib:b0506"/>, 60, № <citedRange>51</citedRange></bibl>
             </listBibl>
@@ -145,7 +143,7 @@
             <listApp>
                <app loc="1">
                   <rdg>[ε]<unclear>ὐ</unclear>χ̣αριστ[ήριον] <note>scripsi</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[Ἀρ]χ̣ίστρ[ατος ?] <note>falso</note></rdg>
+                  <rdg source="bib:НЭПХ">[Ἀρ]χ̣ίστρ[ατος ?] <note>falso</note></rdg>
                   <rdg source="bib:b0458">[εὐχ]αριστ<unclear>ή</unclear>[ριον] <note>correxerunt</note></rdg>
                </app>
             </listApp>

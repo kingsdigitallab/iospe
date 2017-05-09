@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -61,7 +60,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
@@ -121,18 +120,18 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">μετοχ</supplied>άν</w> 
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">μετοχ</supplied>άν</w> 
                                           <space extent="unknown" unit="character"/>
-               		<lb n="2"/><supplied reason="lost"><w>τε</w> <w>πάντων</w> <w>ὧν</w> <w>καὶ</w> <w>τοῖς</w></supplied> 
-                                          <placeName type="ethnic"><supplied reason="lost">Χερσονασείτ</supplied><unclear>α</unclear>ις</placeName> <w>μέ
-               		<lb n="3" break="no"/><supplied reason="lost">τεστι</supplied></w>· <supplied reason="lost"><w>τὸ</w> <w>δὲ</w> <w>ψάφισμα</w> <w>τοῦτο</w></supplied> 
-                                          <w><supplied reason="lost">ἀναγραφᾶμε</supplied><unclear>ν</unclear></w> <g ref="#stop"/> <w>λευ
-               		<lb n="4" break="no"/><supplied reason="lost">κολίθου</supplied></w> <supplied reason="lost"><w>στάλαι</w> <w>καὶ</w> <w>θέμεν</w> <w>ἐν</w> <w>τῷ</w></supplied> 
-                                          <w><supplied reason="lost">ἐπισαμοτ</supplied>άτῳ</w> <space extent="unknown" unit="character"/>
-               		<lb n="5"/><supplied reason="lost"><w>τᾶς</w> <w>πόλιος</w> <w>τόπῳ</w>· <w>ταῦτ’</w> <w>ἔδοξε</w></supplied> 
-                                          <w><supplied reason="lost">βουλ</supplied>ᾶι</w> <g ref="#stop"/> <w>δάμωι</w>,
-               		<lb n="6"/><supplied reason="lost"><w>βασιλευούσας</w> <persName type="divine" key="parthenos"><name>Παρθένου</name></persName>, <w>ἔτεος</w></supplied>
-                                             <num><gap reason="lost" quantity="3" unit="character"/></num> <supplied reason="lost"><w>ἱερέως</w> <w>δὲ</w></supplied> 
+               		<lb n="2"/><supplied reason="lost"><w>τε</w> <w>πάντων</w> <w>ὧν</w> <w>καὶ</w> <w>τοῖς</w></supplied> 
+                                          <placeName type="ethnic"><supplied reason="lost">Χερσονασείτ</supplied><unclear>α</unclear>ις</placeName> <w>μέ
+               		<lb n="3" break="no"/><supplied reason="lost">τεστι</supplied></w>· <supplied reason="lost"><w>τὸ</w> <w>δὲ</w> <w>ψάφισμα</w> <w>τοῦτο</w></supplied> 
+                                          <w><supplied reason="lost">ἀναγραφᾶμε</supplied><unclear>ν</unclear></w> <g ref="#stop"/> <w>λευ
+               		<lb n="4" break="no"/><supplied reason="lost">κολίθου</supplied></w> <supplied reason="lost"><w>στάλαι</w> <w>καὶ</w> <w>θέμεν</w> <w>ἐν</w> <w>τῷ</w></supplied> 
+                                          <w><supplied reason="lost">ἐπισαμοτ</supplied>άτῳ</w> <space extent="unknown" unit="character"/>
+               		<lb n="5"/><supplied reason="lost"><w>τᾶς</w> <w>πόλιος</w> <w>τόπῳ</w>· <w>ταῦτ’</w> <w>ἔδοξε</w></supplied> 
+                                          <w><supplied reason="lost">βουλ</supplied>ᾶι</w> <g ref="#stop"/> <w>δάμωι</w>,
+               		<lb n="6"/><supplied reason="lost"><w>βασιλευούσας</w> <persName type="divine" key="parthenos"><name>Παρθένου</name></persName>, <w>ἔτεος</w></supplied>
+                                             <num><gap reason="lost" quantity="3" unit="character"/></num> <supplied reason="lost"><w>ἱερέως</w> <w>δὲ</w></supplied> 
                                              <persName type="attested"><name><seg part="I">Στεφα
                		<lb n="7" break="no"/><supplied reason="lost">ν</supplied></seg></name></persName><gap reason="lost" extent="unknown" unit="character"/><orig>ΩΣ<unclear>Υ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="7a"/><gap reason="lost" extent="unknown" unit="line"/>
@@ -142,7 +141,7 @@
             <listApp>
                <app loc="6-7">
                   <note>scripsi</note>
-                  <rdg source="bib:IOSPE2">[βασιλευούσας Παρθένου, ἱερέως δὲ] Στεφά/[νου τοῦ - - - ἔτεος - - - μηνὸς - - -]</rdg>
+                  <rdg source="bib:IOSPE2">[βασιλευούσας Παρθένου, ἱερέως δὲ] Στεφά/[νου τοῦ - - - ἔτεος - - - μηνὸς - - -]</rdg>
                </app>
             </listApp>
          </div>

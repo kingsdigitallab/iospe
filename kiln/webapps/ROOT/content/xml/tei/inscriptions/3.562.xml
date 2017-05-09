@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Incertum</title><title xml:lang="en">Incertum</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -66,7 +64,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0168" notAfter="0300" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0168" notAfter="0300" evidence="палеография">
                         <seg xml:lang="ru">кон. II – III в. н.э.</seg>
                         <seg xml:lang="en">late II - III century C.E.</seg>
                      </origDate>
@@ -115,7 +113,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Латышев 1918 --><ptr target="bib:b0156"/>, 14, № <citedRange>5</citedRange></bibl>
-               <bibl><!-- НЭПХ I --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>79</citedRange></bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>79</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -139,10 +137,10 @@
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                   <note source="bib:&#x41D;&#x42D;&#x41F;&#x425;">om.</note>
+                   <note source="bib:НЭПХ">om.</note>
                </app>
                <app loc="2">
-                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>ΗΝΕ in ligatura</note>; συγγ<supplied reason="omitted">ε</supplied>νές ? ;
+                   <rdg source="bib:НЭПХ"><note>ΗΝΕ in ligatura</note>; συγγ<supplied reason="omitted">ε</supplied>νές ? ;
                      не исключаю συγγήνεσ[θαι] = συγγίνεσ[θαι].</rdg>
                </app>
                <app loc="3">
@@ -152,11 +150,11 @@
                   <note>ΝΤ in ligatura.</note>
                </app>
                <app loc="5">
-                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>в начале стк. ΑΧ in ligatura</note>, [μ]αχούμενος ? ; не исключаю ΑΛ
+                   <rdg source="bib:НЭПХ"><note>в начале стк. ΑΧ in ligatura</note>, [μ]αχούμενος ? ; не исключаю ΑΛ
                      in ligatura и [κ]αλούμενος̣; ΜΕ in ligatura.</rdg>
                </app>
                <app loc="6">
-                   <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>слева направо верх окружности, следы двух верхних горизонталей;</note> :
+                   <rdg source="bib:НЭПХ"><note>слева направо верх окружности, следы двух верхних горизонталей;</note> :
                         <unclear>ὀπτο</unclear>́[ς] ? </rdg>
                </app>
             </listApp>

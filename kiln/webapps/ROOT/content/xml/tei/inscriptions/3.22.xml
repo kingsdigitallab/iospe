@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет в честь гражданина Гераклеи Диа[- - -]</title><title xml:lang="en">Decree honouring Dia[- - -] of Herakleia</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -71,7 +69,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0129" notAfter="0130" evidence="&#x423;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x438;&#x435;_&#x43D;&#x430;&#x434;&#x43F;&#x438;&#x441;&#x438;">
+                     <origDate notBefore="0129" notAfter="0130" evidence="Указание_надписи">
                         <seg xml:lang="ru">129/130 г. н.э.</seg>
                         <seg xml:lang="en">129/130 C.E.</seg>
                      </origDate>
@@ -152,8 +150,8 @@
                              <w>τᾶ<choice><corr>ν</corr><sic>Ι</sic></choice></w> <w>ποτὶ</w> <w>τᾶι</w> 
                              <placeName>Ταυρικᾶ<unclear>ι</unclear></placeName>
               <lb n="3"/><supplied reason="lost"><w>εἶπαν</w>· <w>ἐπειδὴ</w></supplied> 
-                             <persName type="attested" ref="#person1171"><name nymRef="&#x394;&#x3B9;&#x3B1;&#x2014;"><supplied reason="lost"><seg part="I">Δια</seg></supplied><gap reason="lost" extent="unknown" unit="character"/></name> 
-                             <persName type="attested" ref="#person1172"><name nymRef="&#x394;&#x3B7;&#x3BC;&#x3AE;&#x3C4;&#x3C1;&#x3B9;&#x3BF;&#x3C2;"><supplied reason="lost">Δ</supplied>ημητρίου</name></persName>  
+                             <persName type="attested" ref="#person1171"><name nymRef="Δια—"><supplied reason="lost"><seg part="I">Δια</seg></supplied><gap reason="lost" extent="unknown" unit="character"/></name> 
+                             <persName type="attested" ref="#person1172"><name nymRef="Δημήτριος"><supplied reason="lost">Δ</supplied>ημητρίου</name></persName>  
                              <placeName type="ethnic">Ἁρακλεώτας</placeName></persName>
               <lb n="4"/><supplied reason="lost"><w>ἀνὴρ</w></supplied> 
                               <gap reason="lost" extent="unknown" unit="character"/> 
@@ -182,9 +180,9 @@
                              <supplied reason="lost"><w>τᾷ</w> <w>βουλᾷ</w> <w>καὶ</w></supplied> 
                              <w><supplied reason="lost">τ</supplied>ῷ</w> <w>δάμῳ</w> <w>ἐπαινέσαι</w> <w>μὲν</w> 
                              <w>ἐπὶ</w> <w>τούτοις</w> 
-                             <persName type="attested" ref="#person1171"><name nymRef="&#x394;&#x3B9;&#x3B1;&#x2014;"><seg part="I">Δια</seg></name>
+                             <persName type="attested" ref="#person1171"><name nymRef="Δια—"><seg part="I">Δια</seg></name>
                <lb n="11" break="no"/><gap reason="lost" extent="unknown" unit="character"/> 
-                             <persName type="attested" ref="#person1172"><name nymRef="&#x394;&#x3B7;&#x3BC;&#x3AE;&#x3C4;&#x3C1;&#x3B9;&#x3BF;&#x3C2;"><supplied reason="lost">Δημη</supplied>τρίου</name></persName> 
+                             <persName type="attested" ref="#person1172"><name nymRef="Δημήτριος"><supplied reason="lost">Δημη</supplied>τρίου</name></persName> 
                              <placeName type="ethnic">Ἁρακλεώταν</placeName></persName>, <w>δόμεν</w> <w>δὲ</w> <w>αὐτῷ</w> 
                              <w>προξ<supplied reason="lost">ε</supplied>
                <lb n="12" break="no"/><supplied reason="lost">νίας</supplied></w> 
@@ -209,89 +207,89 @@
                             <w>ἔδοξε</w> <w>βουλᾶι</w> <w>δάμωι</w>, <w>βασιλευ
                <lb n="18" break="no"/>ούσας</w> <persName type="divine" key="parthenos"><name>Παρθένου</name></persName>, 
                              <w>ἔτεος</w> <num value="154">ρνδ</num>, <w>ἱερέως</w> <w>δὲ</w> 
-                <persName type="attested" ref="#person1173"><name nymRef="&#x3A7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3AF;&#x3C9;&#x3BD;">Χρηστίωνος</name> 
-                             <w>τοῦ</w> <persName type="attested" ref="#person1174"><name nymRef="&#x392;&#x3BF;&#x390;&#x3C3;&#x3BA;&#x3BF;&#x3C2;">Βο
+                <persName type="attested" ref="#person1173"><name nymRef="Χρηστίων">Χρηστίωνος</name> 
+                             <w>τοῦ</w> <persName type="attested" ref="#person1174"><name nymRef="Βοΐσκος">Βο
                <lb n="19" break="no"/>ΐσκου</name></persName></persName>, <w>μανὸς</w>  
                           <w>Ἁρακλείου</w> 
                           <num value="8">η</num>, <w>γραμματεύοντος</w> 
-                          <persName type="attested" ref="#person1175"><name nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστωνο<supplied reason="lost">ς</supplied></name>
-               <lb n="20"/><persName type="attested" ref="#person1176"><name nymRef="&#x1F08;&#x3C4;&#x3C4;&#x3AF;&#x3BD;&#x3B1;&#x3C2;">Ἀττίνου</name></persName></persName>· <w>ἐσφραγίσαντο</w> 
+                          <persName type="attested" ref="#person1175"><name nymRef="Ἀρίστων">Ἀρίστωνο<supplied reason="lost">ς</supplied></name>
+               <lb n="20"/><persName type="attested" ref="#person1176"><name nymRef="Ἀττίνας">Ἀττίνου</name></persName></persName>· <w>ἐσφραγίσαντο</w> 
                            <num value="1">α</num> <w>στίχωι</w>· <w>θεὰ</w> <w>βασίλισσα</w>
                <lb n="21"/><persName type="divine" key="parthenos"><name>Παρθένος</name></persName>, 
-                            <persName type="attested" ref="#person1050"><name type="praenomen" nymRef="&#x3A4;&#x3AF;&#x3C4;&#x3BF;&#x3C2;"><expan><abbr><surplus>Τ</surplus></abbr><ex>ίτος</ex></expan></name>
-                              <name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλάουιος</name> <name type="cognomen" nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστων</name> <w>υἱὸς</w> 
-                              <persName type="attested" ref="#person1049"><name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλαουίου</name> 
-                               <name type="cognomen" nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρί
+                            <persName type="attested" ref="#person1050"><name type="praenomen" nymRef="Τίτος"><expan><abbr><surplus>Τ</surplus></abbr><ex>ίτος</ex></expan></name>
+                              <name type="gentilicium" nymRef="Φλάουιος">Φλάουιος</name> <name type="cognomen" nymRef="Ἀρίστων">Ἀρίστων</name> <w>υἱὸς</w> 
+                              <persName type="attested" ref="#person1049"><name type="gentilicium" nymRef="Φλάουιος">Φλαουίου</name> 
+                               <name type="cognomen" nymRef="Ἀρίστων">Ἀρί
                <lb n="22" break="no"/>στωνος</name> <w>τοῦ</w> 
-                              <persName type="attested" ref="#person1051"><name nymRef="&#x1F08;&#x3B3;&#x3AD;&#x3C0;&#x3BF;&#x3BB;&#x3B9;&#x3C2;">Ἁγεπόλεως</name></persName></persName></persName> <w>πρῶτος</w> 
+                              <persName type="attested" ref="#person1051"><name nymRef="Ἀγέπολις">Ἁγεπόλεως</name></persName></persName></persName> <w>πρῶτος</w> 
                                 <w>ἄρχων</w>, 
-                                <persName type="attested" ref="#person1177"><name nymRef="&#x396;&#x1FC6;&#x3B8;&#x3BF;&#x3C2;">Ζῆθος</name>
-               <lb n="23"/><persName type="attested" ref="#person1178"><name nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστωνος</name></persName></persName>, 
-                              <persName type="attested" ref="#person1054"><name type="praenomen" nymRef="&#x3A4;&#x3AF;&#x3C4;&#x3BF;&#x3C2;"><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name>
-                              <name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλάουιος</name> <name type="cognomen" nymRef="&#x3A0;&#x3C5;&#x3B8;&#x3CC;&#x3B4;&#x3BF;&#x3C4;&#x3BF;&#x3C2;">Πυθόδοτος</name> <w>υἱὸς</w> 
-                              <persName type="attested" ref="#person1048"><name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλαουί
+                                <persName type="attested" ref="#person1177"><name nymRef="Ζῆθος">Ζῆθος</name>
+               <lb n="23"/><persName type="attested" ref="#person1178"><name nymRef="Ἀρίστων">Ἀρίστωνος</name></persName></persName>, 
+                              <persName type="attested" ref="#person1054"><name type="praenomen" nymRef="Τίτος"><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name>
+                              <name type="gentilicium" nymRef="Φλάουιος">Φλάουιος</name> <name type="cognomen" nymRef="Πυθόδοτος">Πυθόδοτος</name> <w>υἱὸς</w> 
+                              <persName type="attested" ref="#person1048"><name type="gentilicium" nymRef="Φλάουιος">Φλαουί
                <lb n="24" break="no"/>ου</name> 
-                                <name type="cognomen" nymRef="&#x1F08;&#x3B3;&#x3AD;&#x3C0;&#x3BF;&#x3BB;&#x3B9;&#x3C2;">Ἁγεπόλεως</name></persName></persName>, 
-                                <persName type="attested" ref="#person1179"><name nymRef="&#x395;&#x1F50;&#x3C1;&#x3CD;&#x3B4;&#x3B1;&#x3BC;&#x3BF;&#x3C2;">Εὐρύδαμος</name> 
-                                <persName type="attested" ref="#person1180"><name nymRef="&#x394;&#x3B9;&#x3BF;&#x3C3;&#x3BA;&#x3BF;&#x3C5;&#x3C1;&#x3AF;&#x3B4;&#x3B7;&#x3C2;">Διοσκουρίδου</name></persName></persName>, 
-                                <persName type="attested" ref="#person1048"><name type="praenomen" nymRef="&#x3A4;&#x3AF;&#x3C4;&#x3BF;&#x3C2;"><expan><abbr>Τ</abbr><ex>ίτου</ex></expan></name> 
-                                <name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλάουιος</name>
-               <lb n="25"/><name type="cognomen" nymRef="&#x1F08;&#x3B3;&#x3AD;&#x3C0;&#x3BF;&#x3BB;&#x3B9;&#x3C2;">Ἁγέπολις</name> <w>υἱὸς</w> 
-                           <persName type="attested" ref="#person1049"><name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλαουίου</name> 
-                                    <name type="cognomen" nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστωνος</name></persName></persName>, 
-                           <persName type="attested" ref="#person1181"><name type="praenomen" nymRef="&#x3A4;&#x3AF;&#x3C4;&#x3BF;&#x3C2;"><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name>
-                               <name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλάουιος</name> 
-                           <name type="cognomen" nymRef="&#x3A0;&#x3B1;&#x3C1;&#x3B8;&#x3B5;&#x3BD;&#x3BF;&#x3BA;&#x3BB;&#x1FC6;&#x3C2;">Παρθε
+                                <name type="cognomen" nymRef="Ἀγέπολις">Ἁγεπόλεως</name></persName></persName>, 
+                                <persName type="attested" ref="#person1179"><name nymRef="Εὐρύδαμος">Εὐρύδαμος</name> 
+                                <persName type="attested" ref="#person1180"><name nymRef="Διοσκουρίδης">Διοσκουρίδου</name></persName></persName>, 
+                                <persName type="attested" ref="#person1048"><name type="praenomen" nymRef="Τίτος"><expan><abbr>Τ</abbr><ex>ίτου</ex></expan></name> 
+                                <name type="gentilicium" nymRef="Φλάουιος">Φλάουιος</name>
+               <lb n="25"/><name type="cognomen" nymRef="Ἀγέπολις">Ἁγέπολις</name> <w>υἱὸς</w> 
+                           <persName type="attested" ref="#person1049"><name type="gentilicium" nymRef="Φλάουιος">Φλαουίου</name> 
+                                    <name type="cognomen" nymRef="Ἀρίστων">Ἀρίστωνος</name></persName></persName>, 
+                           <persName type="attested" ref="#person1181"><name type="praenomen" nymRef="Τίτος"><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name>
+                               <name type="gentilicium" nymRef="Φλάουιος">Φλάουιος</name> 
+                           <name type="cognomen" nymRef="Παρθενοκλῆς">Παρθε
                <lb n="26" break="no"/>νοκλῆς</name> 
-                             <w>υἱὸς</w> <persName type="attested" ref="#person1182"><name type="gentilicium" nymRef="&#x3A6;&#x3BB;&#x3AC;&#x3BF;&#x3C5;&#x3B9;&#x3BF;&#x3C2;">Φλαουίου</name> 
-                             <name type="cognomen" nymRef="&#x39D;&#x3AC;&#x3C3;&#x3C9;&#x3BD;">Νάσωνος</name></persName></persName> <orig>ΟΧΟΡΙΟΣ</orig>· <num value="2">β</num> 
-                             <w>στίχωι</w>· <persName type="attested" ref="#person1055"><name nymRef="&#x1F08;&#x3B8;&#x3AE;&#x3BD;&#x3B1;&#x3B9;&#x3BF;&#x3C2;">Ἀ
+                             <w>υἱὸς</w> <persName type="attested" ref="#person1182"><name type="gentilicium" nymRef="Φλάουιος">Φλαουίου</name> 
+                             <name type="cognomen" nymRef="Νάσων">Νάσωνος</name></persName></persName> <orig>ΟΧΟΡΙΟΣ</orig>· <num value="2">β</num> 
+                             <w>στίχωι</w>· <persName type="attested" ref="#person1055"><name nymRef="Ἀθήναιος">Ἀ
                <lb n="27" break="no"/>θήναιος</name> 
-                              <persName type="attested" ref="#person1056"><name nymRef="&#x394;&#x3B9;&#x3BF;&#x3B3;&#x3AD;&#x3BD;&#x3B7;&#x3C2;">Διογένους</name></persName></persName>, 
-                          <persName type="attested" ref="#person1183"><name nymRef="&#x1F19;&#x3C1;&#x3BC;&#x3BF;&#x3BA;&#x3BB;&#x1FC6;&#x3C2;">Ἑρμοκλῆς</name> 
-                              <persName type="attested" ref="#person1184"><name nymRef="&#x1F08;&#x3C0;&#x3BF;&#x3BB;&#x3BB;&#x3CE;&#x3BD;&#x3B9;&#x3BF;&#x3C2;">Ἀπολλωνίου</name></persName></persName>, 
-                          <persName type="attested" ref="#person1185"><name nymRef="&#x3A6;&#x3B9;&#x3BB;&#x3CC;&#x3BC;&#x3BF;&#x3C5;&#x3C3;&#x3BF;&#x3C2;">Φιλόμου
+                              <persName type="attested" ref="#person1056"><name nymRef="Διογένης">Διογένους</name></persName></persName>, 
+                          <persName type="attested" ref="#person1183"><name nymRef="Ἑρμοκλῆς">Ἑρμοκλῆς</name> 
+                              <persName type="attested" ref="#person1184"><name nymRef="Ἀπολλώνιος">Ἀπολλωνίου</name></persName></persName>, 
+                          <persName type="attested" ref="#person1185"><name nymRef="Φιλόμουσος">Φιλόμου
                <lb n="28" break="no"/>σος</name>
-                              <persName type="attested" ref="#person1186"><name nymRef="&#x1F08;&#x3C0;&#x3BF;&#x3BB;&#x3BB;&#x3C9;&#x3BD;&#x3AF;&#x3B4;&#x3B7;&#x3C2;">Ἀπολλωνίδου</name></persName></persName>, 
-                          <persName type="attested" ref="#person1187"><name nymRef="&#x394;&#x3B7;&#x3BC;&#x3BF;&#x3BA;&#x3C1;&#x3AC;&#x3C4;&#x3B7;&#x3C2;">Δημοκράτης</name> 
-                          <persName type="attested" ref="#person1174"><name nymRef="&#x392;&#x3BF;&#x390;&#x3C3;&#x3BA;&#x3BF;&#x3C2;">Βοΐσκου</name></persName></persName>, 
-                         <persName type="attested" ref="#person1188"><name nymRef="&#x1F29;&#x3C1;&#x3CC;&#x3BE;&#x3B5;&#x3BD;&#x3BF;&#x3C2;">Ἡρόξενος</name>
-               <lb n="29"/><persName type="attested" ref="#person1174"><name nymRef="&#x392;&#x3BF;&#x390;&#x3C3;&#x3BA;&#x3BF;&#x3C2;">Βοΐσκου</name></persName></persName>, 
-                           <persName type="attested" ref="#person1189"><name nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστων</name> 
-                           <persName type="attested" ref="#person1190"><name nymRef="&#x1F08;&#x3BD;&#x3C4;&#x3AF;&#x3BB;&#x3BF;&#x3C7;&#x3BF;&#x3C2;">Ἀντιλόχου</name></persName></persName>, 
-                           <persName type="attested" ref="#person1191"><name nymRef="&#x3A0;&#x3BF;&#x3BD;&#x3C4;&#x3B9;&#x3BA;&#x3CC;&#x3C2;">Ποντικὸς</name> 
-                           <persName type="attested" ref="#person1192"><name nymRef="&#x1F39;&#x3BB;&#x3B1;&#x3C1;&#x3BF;&#x3C2;">Ἱλάρου</name></persName></persName>, 
-                           <persName type="attested" ref="#person1193"><name nymRef="&#x396;&#x1FC6;&#x3B8;&#x3BF;&#x3C2;">Ζῆθος</name>
-               <lb n="30"/><persName type="attested" ref="#person1194"><name nymRef="&#x3A0;&#x3C5;&#x3B8;&#x3CC;&#x3B4;&#x3BF;&#x3C4;&#x3BF;&#x3C2;"><unclear>Πυ</unclear>θοδότου</name></persName></persName>· 
+                              <persName type="attested" ref="#person1186"><name nymRef="Ἀπολλωνίδης">Ἀπολλωνίδου</name></persName></persName>, 
+                          <persName type="attested" ref="#person1187"><name nymRef="Δημοκράτης">Δημοκράτης</name> 
+                          <persName type="attested" ref="#person1174"><name nymRef="Βοΐσκος">Βοΐσκου</name></persName></persName>, 
+                         <persName type="attested" ref="#person1188"><name nymRef="Ἡρόξενος">Ἡρόξενος</name>
+               <lb n="29"/><persName type="attested" ref="#person1174"><name nymRef="Βοΐσκος">Βοΐσκου</name></persName></persName>, 
+                           <persName type="attested" ref="#person1189"><name nymRef="Ἀρίστων">Ἀρίστων</name> 
+                           <persName type="attested" ref="#person1190"><name nymRef="Ἀντίλοχος">Ἀντιλόχου</name></persName></persName>, 
+                           <persName type="attested" ref="#person1191"><name nymRef="Ποντικός">Ποντικὸς</name> 
+                           <persName type="attested" ref="#person1192"><name nymRef="Ἱλαρος">Ἱλάρου</name></persName></persName>, 
+                           <persName type="attested" ref="#person1193"><name nymRef="Ζῆθος">Ζῆθος</name>
+               <lb n="30"/><persName type="attested" ref="#person1194"><name nymRef="Πυθόδοτος"><unclear>Πυ</unclear>θοδότου</name></persName></persName>· 
                            <num value="3">γ</num> <w>στίχωι</w>· 
-                           <persName type="attested" ref="#person1057"><name nymRef="&#x398;&#x3B5;&#x3B1;&#x3B3;&#x3AD;&#x3BD;&#x3B7;&#x3C2;">Θεαγένης</name> 
-                           <persName type="attested" ref="#person1056"><name nymRef="&#x394;&#x3B9;&#x3BF;&#x3B3;&#x3AD;&#x3BD;&#x3B7;&#x3C2;">Διογένους</name></persName></persName> 
-                           <w>ἄρχων</w>, <persName type="attested" ref="#person1195"><name nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίσ
+                           <persName type="attested" ref="#person1057"><name nymRef="Θεαγένης">Θεαγένης</name> 
+                           <persName type="attested" ref="#person1056"><name nymRef="Διογένης">Διογένους</name></persName></persName> 
+                           <w>ἄρχων</w>, <persName type="attested" ref="#person1195"><name nymRef="Ἀρίστων">Ἀρίσ
                <lb n="31" break="no"/>των</name> 
-                          <persName type="attested" ref="#person1196"><name nymRef="&#x1F08;&#x3C0;&#x3BF;&#x3BB;&#x3BB;&#x3C9;&#x3BD;&#x3AF;&#x3B4;&#x3B7;&#x3C2;">Ἀπολλωνίδου</name></persName></persName> 
+                          <persName type="attested" ref="#person1196"><name nymRef="Ἀπολλωνίδης">Ἀπολλωνίδου</name></persName></persName> 
                           <w>ἄρχων</w>, 
-                          <persName type="attested" ref="#person1197"><name nymRef="&#x1F2D;&#x3C1;&#x3B1;&#x3B9;&#x3BF;&#x3C2;">Ἥραιος</name> 
-                          <persName type="attested" ref="#person1198"><name nymRef="&#x3A7;&#x3B7;&#x3BC;&#x3B1;&#x3C4;&#x1FD6;&#x3BD;&#x3BF;&#x3C2;">Χηματίνου</name></persName></persName> 
-                          <w>ἄρχων</w>, <persName type="attested" ref="#person1199"><name nymRef="&#x3A0;&#x3B1;&#x3C4;&#x3AD;&#x3C1;&#x3C9;&#x3BD;">Πα
+                          <persName type="attested" ref="#person1197"><name nymRef="Ἥραιος">Ἥραιος</name> 
+                          <persName type="attested" ref="#person1198"><name nymRef="Χηματῖνος">Χηματίνου</name></persName></persName> 
+                          <w>ἄρχων</w>, <persName type="attested" ref="#person1199"><name nymRef="Πατέρων">Πα
                <lb n="32" break="no"/>τέ<supplied reason="lost">ρ</supplied>ων</name> 
-                       <persName type="attested" ref="#person1200"><name nymRef="&#x1F08;&#x3C3;&#x3BA;&#x3BB;&#x3B7;&#x3C0;&#x3B9;&#x3AC;&#x3B4;&#x3B7;&#x3C2;">Ἀσκληπιάδου</name></persName></persName> 
+                       <persName type="attested" ref="#person1200"><name nymRef="Ἀσκληπιάδης">Ἀσκληπιάδου</name></persName></persName> 
                        <w>ἄρχων</w>, 
-                       <persName type="attested" ref="#person1201"><name nymRef="&#x396;&#x1FC6;&#x3B8;&#x3BF;&#x3C2;">Ζῆθ<surplus>υ</surplus>ος</name> 
-                       <persName type="attested" ref="#person1202"><name nymRef="&#x1F08;&#x3C0;&#x3BF;&#x3BB;&#x3BB;&#x3CE;&#x3BD;&#x3B9;&#x3BF;&#x3C2;">Ἀπολλωνίου</name></persName></persName> <w>νό
+                       <persName type="attested" ref="#person1201"><name nymRef="Ζῆθος">Ζῆθ<surplus>υ</surplus>ος</name> 
+                       <persName type="attested" ref="#person1202"><name nymRef="Ἀπολλώνιος">Ἀπολλωνίου</name></persName></persName> <w>νό
                <lb n="33" break="no"/>μων</w> <w>φύλαξ</w>, 
-                          <persName type="attested" ref="#person1203"><name nymRef="&#x3A0;&#x3C5;&#x3B8;&#x3CC;&#x3B4;&#x3BF;&#x3C1;&#x3BF;&#x3C2;">Πυθόδορος</name> 
-                          <persName type="attested" ref="#person1204"><name nymRef="&#x3A7;&#x3C1;&#x3B7;&#x3C3;&#x3C4;&#x3AF;&#x3C9;&#x3BD;">Χρηστίωνος</name></persName> 
+                          <persName type="attested" ref="#person1203"><name nymRef="Πυθόδορος">Πυθόδορος</name> 
+                          <persName type="attested" ref="#person1204"><name nymRef="Χρηστίων">Χρηστίωνος</name></persName> 
                           </persName> <w>νόμων</w> <w>φύλαξ</w>, 
-                          <persName type="attested" ref="#person1205"><name nymRef="&#x394;&#x3B1;&#x3BC;&#x3BF;&#x3BA;&#x3BB;&#x1FC6;&#x3C2;">Δα
+                          <persName type="attested" ref="#person1205"><name nymRef="Δαμοκλῆς">Δα
                <lb n="34" break="no"/>μοκλῆς</name>
-                             <persName type="attested" ref="#person1206"><name nymRef="&#x39B;&#x3B1;&#x3B3;&#x3BF;&#x3C1;&#x1FD6;&#x3BD;&#x3BF;&#x3C2;">Λαγορείνου</name></persName></persName> 
-                             <w>νόμων</w> <w>φύλαξ</w>, <persName type="attested" ref="#person1207"><name nymRef="&#x39C;&#x3B7;&#x3C4;&#x3C1;&#x3CC;&#x3B4;&#x3C9;&#x3C1;&#x3BF;&#x3C2;">Μητρόδωρος</name> 
-                             <persName type="attested" ref="#person1180"><name nymRef="&#x394;&#x3B9;&#x3BF;&#x3C3;&#x3BA;&#x3BF;&#x3C5;&#x3C1;&#x3AF;&#x3B4;&#x3B7;&#x3C2;">Διοσκου
+                             <persName type="attested" ref="#person1206"><name nymRef="Λαγορῖνος">Λαγορείνου</name></persName></persName> 
+                             <w>νόμων</w> <w>φύλαξ</w>, <persName type="attested" ref="#person1207"><name nymRef="Μητρόδωρος">Μητρόδωρος</name> 
+                             <persName type="attested" ref="#person1180"><name nymRef="Διοσκουρίδης">Διοσκου
                <lb n="35" break="no"/>ρίδου</name></persName></persName> <w>πρόδικος</w> <w>καὶ</w> 
                              <w>ὁ</w> <w>γραμματεὺς</w> <w>τῆς</w> 
                              <w>βουλ<choice><corr>ῆς</corr><sic>ΙΧ</sic></choice></w> 
-                             <persName type="attested" ref="#person1175"><name nymRef="&#x1F08;&#x3C1;&#x3AF;&#x3C3;&#x3C4;&#x3C9;&#x3BD;">Ἀρίστων</name> 
-                             <persName type="attested" ref="#person1176"><name nymRef="&#x1F08;&#x3C4;&#x3C4;&#x3AF;&#x3BD;&#x3B1;&#x3C2;">Ἀτ
+                             <persName type="attested" ref="#person1175"><name nymRef="Ἀρίστων">Ἀρίστων</name> 
+                             <persName type="attested" ref="#person1176"><name nymRef="Ἀττίνας">Ἀτ
                <lb n="36" break="no"/>τίνου</name></persName></persName>.
             </ab>
          </div>

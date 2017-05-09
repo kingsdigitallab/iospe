@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -61,7 +60,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0167" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0101" notAfter="0167" evidence="Палеография">
                         <seg xml:lang="ru">1-я пол. - сер. II в. н.э.</seg>
                         <seg xml:lang="en">1st half - mid-II century C.E.</seg>
                      </origDate>
@@ -108,7 +107,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- НЭПХ II --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> <citedRange>6</citedRange></bibl>
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ2"/> <citedRange>6</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -121,36 +120,36 @@
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Σ</unclear>Α</orig>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">αν</w> <w>τᾶς</w> 
-                                          <w>π<supplied reason="lost">όλεος</supplied></w><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>ἀνθ’</w> 
-                                          <w>ὧν</w> <w>τὸν</w> <w>ἄνδρα</w> <w>ταῖς</w></supplied>
-               		<lb n="3"/><w><supplied reason="lost">καθη</supplied><unclear>κ</unclear>ούσαις</w> <w>τειμα<supplied reason="lost">ῖς</supplied></w> 
-                                          <supplied reason="lost"><w>ἀμείψασθαι</w> <w>ἐψαφισάμεθα</w> <w>καθᾶκον</w></supplied> <w><supplied reason="lost">ἔμ
-               		<lb n="4" break="no"/>με</supplied><unclear>ν</unclear></w>· <space extent="unknown" unit="character"/> <w>δι’</w> <w>ἃ</w> <w>δεδόχθαι</w> 
-                                          <w>τᾷ</w> <supplied reason="lost"><w>βουλᾷ</w> <w>καὶ</w> <w>τῷ</w> <w>δάμῳ</w> <w>ἐπαινέσαι</w> <w>μὲν</w> <w>ἐπὶ</w></supplied>
-               		<lb n="5"/><w>τούτοις</w> <w>πρότερον</w> <w>τὸ<unclear>ν</unclear></w> <w><supplied reason="lost">ἄνδρα</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
-               		<lb n="6"/><w>δόμεν</w> <w>δὲ</w> <w>αὐτῷ</w> <w>προξ<supplied reason="lost">ενίας</supplied></w> 
-                                          <supplied reason="lost"><w>πολιτείαν</w>, <w>εἴσπλουν</w> <w>τε</w> <w>καὶ</w> <w>ἔκπλουν</w></supplied>
-               		<lb n="7"/><w>ἐν</w> <w>εἰράνᾳ</w> <w>καὶ</w> <w>πολ<supplied reason="lost">έμῳ</supplied></w> 
-                                          <supplied reason="lost"><w>ἀσυλεὶ</w>, <w>ἀσπονδεὶ</w> <w>αὐτῷ</w> <w>τε</w> <w>καὶ</w> <w>ἐκγόνοις</w></supplied>
-               		<lb n="8"/><w>καὶ</w> <w>χράμασ<unclear>ιν</unclear></w> <supplied reason="lost"><w>αὐτοῦ</w>, <w>μετοχάν</w> <w>τε</w> <w>πάντων</w> <w>τῶν</w> 
-                                          <w>ἐν</w> <w>τᾶι</w> <w>πόλει</w> <w>ὧν</w></supplied>
-               		<lb n="9"/><supplied reason="lost"><w>καὶ</w> <placeName type="ethnic">Χερσονασείταις</placeName> 
-               		                   <w>μέτεστι</w></supplied><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">αν</w> <w>τᾶς</w> 
+                                          <w>π<supplied reason="lost">όλεος</supplied></w><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"><w>ἀνθ’</w> 
+                                          <w>ὧν</w> <w>τὸν</w> <w>ἄνδρα</w> <w>ταῖς</w></supplied>
+               		<lb n="3"/><w><supplied reason="lost">καθη</supplied><unclear>κ</unclear>ούσαις</w> <w>τειμα<supplied reason="lost">ῖς</supplied></w> 
+                                          <supplied reason="lost"><w>ἀμείψασθαι</w> <w>ἐψαφισάμεθα</w> <w>καθᾶκον</w></supplied> <w><supplied reason="lost">ἔμ
+               		<lb n="4" break="no"/>με</supplied><unclear>ν</unclear></w>· <space extent="unknown" unit="character"/> <w>δι’</w> <w>ἃ</w> <w>δεδόχθαι</w> 
+                                          <w>τᾷ</w> <supplied reason="lost"><w>βουλᾷ</w> <w>καὶ</w> <w>τῷ</w> <w>δάμῳ</w> <w>ἐπαινέσαι</w> <w>μὲν</w> <w>ἐπὶ</w></supplied>
+               		<lb n="5"/><w>τούτοις</w> <w>πρότερον</w> <w>τὸ<unclear>ν</unclear></w> <w><supplied reason="lost">ἄνδρα</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="6"/><w>δόμεν</w> <w>δὲ</w> <w>αὐτῷ</w> <w>προξ<supplied reason="lost">ενίας</supplied></w> 
+                                          <supplied reason="lost"><w>πολιτείαν</w>, <w>εἴσπλουν</w> <w>τε</w> <w>καὶ</w> <w>ἔκπλουν</w></supplied>
+               		<lb n="7"/><w>ἐν</w> <w>εἰράνᾳ</w> <w>καὶ</w> <w>πολ<supplied reason="lost">έμῳ</supplied></w> 
+                                          <supplied reason="lost"><w>ἀσυλεὶ</w>, <w>ἀσπονδεὶ</w> <w>αὐτῷ</w> <w>τε</w> <w>καὶ</w> <w>ἐκγόνοις</w></supplied>
+               		<lb n="8"/><w>καὶ</w> <w>χράμασ<unclear>ιν</unclear></w> <supplied reason="lost"><w>αὐτοῦ</w>, <w>μετοχάν</w> <w>τε</w> <w>πάντων</w> <w>τῶν</w> 
+                                          <w>ἐν</w> <w>τᾶι</w> <w>πόλει</w> <w>ὧν</w></supplied>
+               		<lb n="9"/><supplied reason="lost"><w>καὶ</w> <placeName type="ethnic">Χερσονασείταις</placeName> 
+               		                   <w>μέτεστι</w></supplied><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="9a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="2">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2"><note>in.:</note> [τὰν σωτηρί]αν̣ <note>e. g.</note></rdg>
+                  <rdg source="bib:НЭПХ2"><note>in.:</note> [τὰν σωτηρί]αν̣ <note>e. g.</note></rdg>
                </app>
                <app loc="2-4">
                   <note>2, fin. - 4, in.: supplevi</note>
-                  <rdg><note>cf. n° ipe362:</note> πασσυδὶ ταῖς πρεπούσαις ἀμοιβαῖς ἀμείψασθαι καθᾶκον ἐψαφισάμεθα</rdg>
+                  <rdg><note>cf. n° ipe362:</note> πασσυδὶ ταῖς πρεπούσαις ἀμοιβαῖς ἀμείψασθαι καθᾶκον ἐψαφισάμεθα</rdg>
                </app>
                <app loc="3">
-                  <rdg source="bib:b0830">[καθη]κ̣ούσαις τειμα[ῖς]</rdg>
+                  <rdg source="bib:b0830">[καθη]κ̣ούσαις τειμα[ῖς]</rdg>
                </app>
                <app loc="5">
                   <note>ΠΡ in ligatura</note>
@@ -177,7 +176,7 @@
          </div>
          <div type="commentary" xml:lang="ru">
             <p>НЭПХ II 6 (объединение с № neph116).</p>
-            <p>3: [καθη]κ̣ούσαις τειμα[ῖς] - Pečírka в соответствии с фотографией</p>
+            <p>3: [καθη]κ̣ούσαις τειμα[ῖς] - Pečírka в соответствии с фотографией</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>

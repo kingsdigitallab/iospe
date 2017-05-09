@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надпись, упоминающая Требониана Галла</title>
@@ -64,7 +63,7 @@
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0251" notAfter="0253" evidence="&#x41F;&#x440;&#x43E;&#x441;&#x43E;&#x43F;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0251" notAfter="0253" evidence="Просопография">
                         <seg xml:lang="ru">251-253 гг. н.э.</seg>
                         <seg xml:lang="en">251-253 C.E.</seg>
                      </origDate>
@@ -114,7 +113,7 @@
                <bibl><!-- Латышев 1892 --><ptr target="bib:b0125"/>, <citedRange>32, № 14</citedRange></bibl>
                <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 151</citedRange></bibl>
                <bibl><!-- IOSPE I2 --><ptr target="IOSPE2"/> <citedRange>590</citedRange></bibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>II 123</citedRange></bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>II 123</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -126,32 +125,32 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><persName type="emperor"><supplied reason="lost"><w>Αὐτοκράτορα</w>
-               		   <w>Καίσαρα</w></supplied> 
+               		<lb n="1"/><persName type="emperor"><supplied reason="lost"><w>Αὐτοκράτορα</w>
+               		   <w>Καίσαρα</w></supplied> 
                <name>
                   <supplied reason="lost">Τ</supplied><supplied reason="undefined" evidence="previouseditor">ρεβ</supplied>ωνιαν<supplied reason="lost">ὸν</supplied>
                </name>
-               		   <supplied reason="lost"><name>Γάλλον</name></supplied>
+               		   <supplied reason="lost"><name>Γάλλον</name></supplied>
                		<lb n="2"/><supplied reason="lost"><w>Εὐσεβῆ</w> <w>Εὐτυχῆ</w></supplied> 
                <w><supplied reason="lost">Σεβαστὸ</supplied>ν</w></persName> <w>καὶ</w> 
-               <persName type="emperor"><w>Αὐτο<supplied reason="lost">κράτορα</supplied></w>
-                                          <lb n="3"/><supplied reason="lost"><w>Καίσαρα</w></supplied> 
+               <persName type="emperor"><w>Αὐτο<supplied reason="lost">κράτορα</supplied></w>
+                                          <lb n="3"/><supplied reason="lost"><w>Καίσαρα</w></supplied> 
                <gap reason="lost" extent="unknown" unit="character"/> 
-               <name><supplied reason="lost">Γάλ</supplied>λον</name></persName> <orig><unclear>Β</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+               <name><supplied reason="lost">Γάλ</supplied>λον</name></persName> <orig><unclear>Β</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="4"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">rest.</rdg>
+                  <rdg source="bib:НЭПХ">rest.</rdg>
                </app>
                <app loc="2-3">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[Σεβαστὸν - - -]ν καὶ Αὐτο[κράτορα / 
-                     Καίσαρα - - - - Ἀφίνιον Γάλ]λον Β̣[ελδουμνιανὸν]</rdg>
+                  <rdg source="bib:НЭПХ">[Σεβαστὸν - - -]ν καὶ Αὐτο[κράτορα / 
+                     Καίσαρα - - - - Ἀφίνιον Γάλ]λον Β̣[ελδουμνιανὸν]</rdg>
                </app>
                <app loc="4-5">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[Βολουσιανὸν Σεβαστὸν - - - / βουλὴ καὶ δῆμος]</rdg>
+                  <rdg source="bib:НЭПХ">[Βολουσιανὸν Σεβαστὸν - - - / βουλὴ καὶ δῆμος]</rdg>
                </app>
             </listApp>
          </div>

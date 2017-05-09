@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет со списком «приложивших печати»</title><title xml:lang="en">Decree with a list of "those who sapplied their seals"</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -69,7 +67,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0150" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F; &#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x43F;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0101" notAfter="0150" evidence="палеография просопография">
                         <seg xml:lang="ru">1-я пол. II в. н.э.</seg>
                         <seg xml:lang="en">1st half of II century C.E.</seg>
                      </origDate>
@@ -125,7 +123,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!-- Тахтай 1947 --><ptr target="bib:b0824"/>, <citedRange>59</citedRange></bibl>
-               <bibl><!-- НЭПХ II --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> <citedRange>112</citedRange></bibl>
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ2"/> <citedRange>112</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -202,24 +200,24 @@
          <div type="apparatus">
             <listApp>
                <app loc="2">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2">[Δημοκράτης Βοΐσ]κου <note>ed. pr.</note></rdg>
+                  <rdg source="bib:НЭПХ2">[Δημοκράτης Βοΐσ]κου <note>ed. pr.</note></rdg>
                </app>
                <app loc="3">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2">[- - - ῾Ερμοκλ]ῆς <note>ed. pr.</note></rdg>
+                  <rdg source="bib:НЭПХ2">[- - - ῾Ερμοκλ]ῆς <note>ed. pr.</note></rdg>
                </app>
                <app loc="4">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2"><note>in.:</note> {υἱὸς}</rdg>
+                  <rdg source="bib:НЭПХ2"><note>in.:</note> {υἱὸς}</rdg>
                   <rdg source="bib:b0825">[Ἁγεπό]λ̣ιος υἱὸς <note>per errorem</note></rdg>
                </app>
                <app loc="5">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2"><note>fin.:</note> Ἀπολλω[νίδου - - -] <note>ed. pr.</note></rdg>
+                  <rdg source="bib:НЭПХ2"><note>fin.:</note> Ἀπολλω[νίδου - - -] <note>ed. pr.</note></rdg>
                </app>
                <app loc="6">
                   <rdg><note>in.:</note> [Θεαγένης] <note>ed. pr</note>.</rdg>
                   <rdg><note>fin.:</note> Διο[γένης Διογένους ?] <note>ed. pr.</note></rdg>
                </app>
                <app loc="7">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2"><note>in.:</note> [Μάρ]κελλος</rdg>
+                  <rdg source="bib:НЭПХ2"><note>in.:</note> [Μάρ]κελλος</rdg>
                  <rdg>[Σ]κέλλος <note>ed. pr.</note></rdg>
                  </app>
                <app loc="8">
@@ -237,11 +235,11 @@
                   <rdg><note>in.:</note> [υἱὸ]ς Φιλομούσου <note>ed. pr.</note></rdg>
                   <rdg><note>возможно,</note> [- - - - - - Βοΐσκο]ς Φιλομούσου (?)<note>(cf. comment.)</note></rdg>
                   <rdg><note>fin.:</note> Ἡροι[δα (?) - - -] <note>ed. pr. (sic)</note></rdg> 
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2">Ἡροΐ[δας]</rdg>
+                  <rdg source="bib:НЭПХ2">Ἡροΐ[δας]</rdg>
                </app>
                <app loc="13">
                   <rdg><note>fin.:</note> Φλαουίου [Π]α[ρθενοκλέους?] <note>ed. pr.</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2">Φλαουίου [Ν]ά[σωνος]</rdg>
+                  <rdg source="bib:НЭПХ2">Φλαουίου [Ν]ά[σωνος]</rdg>
                </app>
             </listApp>
          </div>

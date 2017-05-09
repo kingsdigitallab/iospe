@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет в честь посла (или стратега?) Митридата Евпатора</title><title xml:lang="en">Decree honouring a man in the service of Mithridates Eupator</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -72,7 +70,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0120" notAfter="-0063" evidence="&#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x43F;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
+                     <origDate notBefore="-0120" notAfter="-0063" evidence="просопография" precision="low">
                         <seg xml:lang="ru">ca. 120 – 63 гг. до н.э.</seg>
                         <seg xml:lang="en">ca. 120 - 63 B.C.E.</seg>
                      </origDate>
@@ -138,7 +136,7 @@
             <!-- Комментарии -->
             <listBibl>
                <bibl><!-- Латышев 1895 --><ptr target="bib:b0130"/>, 77, ad № <citedRange>3</citedRange></bibl>
-               <bibl><!-- НЭПХ II--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> <citedRange>110</citedRange></bibl>
+               <bibl><!-- НЭПХ II--><ptr target="bib:НЭПХ2"/> <citedRange>110</citedRange></bibl>
                <bibl><!-- Avram 2002 --><ptr target="bib:b0805"/>, <citedRange>69</citedRange>
                (= <bibl><!-- BullEp 2004 --><ptr target="bib:BE"/> <citedRange>2004, 230</citedRange> (Ph. Gauthier</bibl>)</bibl>
                <bibl><!-- SEG --><ptr target="bib:SEG"/> <citedRange>52, 735</citedRange>)</bibl>
@@ -154,11 +152,11 @@
                	<lb n="2"/><gap reason="lost" unit="character" quantity="11" precision="low"/><w part="F">εῖος</w> <space unit="character" quantity="1"/> 
                                  <w>εἶπ<supplied reason="lost">αν</supplied></w>· <supplied reason="lost"><w>ἐπειδὴ</w></supplied>
                	<lb n="3"/><persName type="attested" ref="#person1034"><gap reason="lost" quantity="6" unit="character"/> 
-               	                 <persName type="attested" ref="#person1035"><name nymRef="&#x39A;&#x3B5;&#x3C6;&#x3B1;&#x3BB;&#x1FB6;&#x3C2;"><supplied reason="lost" cert="low">Κε</supplied><supplied reason="undefined" evidence="previouseditor">φ<unclear>α</unclear></supplied>λ<unclear>ᾶ</unclear></name> 
+               	                 <persName type="attested" ref="#person1035"><name nymRef="Κεφαλᾶς"><supplied reason="lost" cert="low">Κε</supplied><supplied reason="undefined" evidence="previouseditor">φ<unclear>α</unclear></supplied>λ<unclear>ᾶ</unclear></name> 
                	                 <placeName type="ethnic"><name>Ἀμι<supplied reason="lost">σηνὸς</supplied></name></placeName></persName></persName><gap reason="lost" quantity="4" precision="low" unit="character"/> 
                  <lb n="4"/><gap reason="lost" quantity="6" unit="character"/> <w><supplied reason="lost">ἀποσταλε</supplied><unclear>ίς</unclear></w> 
                                  <w>ὑπὸ</w> <persName type="ruler" key="mithridates"><w>βα<supplied reason="lost">σιλέος</supplied></w> 
-                                    <name nymRef="&#x39C;&#x3B9;&#x3B8;&#x3C1;&#x3B1;&#x3B4;&#x3AC;&#x3C4;&#x3B7;&#x3C2;"><supplied reason="lost">Μι
+                                    <name nymRef="Μιθραδάτης"><supplied reason="lost">Μι
                	<lb n="5" break="no"/>θραδάτα</supplied></name> <w><supplied reason="lost">Εὐ</supplied><supplied reason="undefined" evidence="previouseditor">π</supplied>άτορος</w></persName> <w>εἰς</w> <supplied reason="lost"><w>τὰν</w> <w>πόλιν</w>
                	<lb n="6"/><w>ἁμῶν</w> <w>ἐν</w> <w>πᾶσιν</w></supplied> <w>εὔνουν</w> <w>ἑ<supplied reason="lost">αυτὸν</supplied></w> <supplied reason="lost"><w>πα
                	<lb n="7" break="no"/>ρέχεται</w> <w>καὶ</w></supplied> <w><supplied reason="undefined" evidence="previouseditor">πάν</supplied>τα</w> 
@@ -197,8 +195,8 @@
                </app>
                <app loc="5">
                   <rdg source="bib:IOSPE2">[ὁ δ. - - -]λάδα Μη[. . . . . .πρεσ]|[βευτάς]</rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[Κε]φαλ<unclear>ᾶ</unclear> Ἀμι[σηνὸς πρεσ]|[βευτάς] <note>corr.</note></rdg> 
-                  <rdg source="bib:b0805">[---]φαλ<unclear>ᾶ</unclear> Ἀμι[σηνὸς στρα]|[ταγός] <note>(cf. SEG 47, 1125: 4-5)</note></rdg>
+                  <rdg source="bib:НЭПХ">[Κε]φαλ<unclear>ᾶ</unclear> Ἀμι[σηνὸς πρεσ]|[βευτάς] <note>corr.</note></rdg> 
+                  <rdg source="bib:b0805">[---]φαλ<unclear>ᾶ</unclear> Ἀμι[σηνὸς στρα]|[ταγός] <note>(cf. SEG 47, 1125: 4-5)</note></rdg>
                </app>
                <app loc="7-8">
                   <rdg source="bib:IOSPE2">τὰ τ[ᾶς πρεσβείας] | [ἄριστα κατα]σκευάζ[ει]</rdg> 

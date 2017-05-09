@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -64,7 +63,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0101" notAfter="0200" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0101" notAfter="0200" evidence="Палеография">
                         <seg xml:lang="ru">II в. н.э.</seg>
                         <seg xml:lang="en">II century C.E.</seg>
                      </origDate>
@@ -112,7 +111,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- НЭПХ I --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>5</citedRange></bibl>
+               <bibl><!-- НЭПХ I --><ptr target="bib:НЭПХ"/> <citedRange>5</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -123,80 +122,80 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><w><supplied reason="lost">ἀγαθᾶι</supplied></w> <w><supplied reason="lost">τύ</supplied>χαι</w>
-               		<lb n="2"/><w><supplied reason="lost">πρόεδροι</supplied></w> <placeName><supplied reason="lost">Χερ</supplied>σονασσειτᾶν</placeName> 
-                                          <w>τ<unclear>ᾶ</unclear>ν</w>
-               		<lb n="3"/><supplied reason="lost"><w>ποτὶ</w> <w>τᾶι</w> <placeName>Ταυρικᾶι</placeName></supplied> <w><supplied reason="lost">εἶπ</supplied>αν</w>· 
-                                          <w>ἐπειδὴ</w> <persName type="attested"><name>Νοουέλ
-               		<lb n="4" break="no"/><supplied reason="lost">λιος</supplied></name><gap reason="lost" extent="unknown" unit="character"/><name><seg part="F">νος</seg></name></persName>, <w>νεανίας</w> <w>εὐγενὴς</w>
-               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">διά</supplied><unclear>σ</unclear>αμός</w> 
-                                          <w>τε</w> <w>καὶ</w> <w>ἐν</w> <w>τᾶ<supplied reason="lost">ι</supplied></w>
-               		<lb n="6"/><supplied reason="lost" cert="low"><w>πόλει</w> <w>ἁμῶν</w></supplied><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>α</unclear>τα</w> <w>λαμπρότατα</w>
-               		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/> <w><unclear>δ</unclear>ιὰ</w> <w>τὰν</w> <w>ἐπιείκειαν</w> <w>τοῦ</w>
-               		<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">νων</w> <w>ἐπιδαμήσας</w>
-               		<lb n="9"/><supplied reason="lost"><w>παρ’</w> <w>ἁμὲς</w></supplied><gap reason="lost" quantity="3" unit="character"/><w><supplied reason="lost">εὐγ</supplied>νώμονα</w> <w>καὶ</w> <w>φιλά
-               		<lb n="10" break="no"/><supplied reason="lost" cert="low">νθρωπον</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐπι</supplied>δαμίαν</w> <w>ἐποά<choice><corr>σ</corr><sic>ι</sic></choice>ατο</w>
-               		<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ως</w> <w>περὶ</w> <w>πατρίδα</w>
-               		<lb n="12"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">άμενος</w> <w>καὶ</w> <w>περὶ</w>
-               		<lb n="13"/><w><supplied reason="lost">τὰν</supplied></w> <placeName><supplied reason="lost">Χερσονασσειτᾶ</supplied>ν</placeName> 
-                                             <w>πόλιν</w> <w>ἄοκνον</w>
-               		<lb n="14"/><w><supplied reason="lost">ἑαυτὸν</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐ</supplied><unclear>ν</unclear></w> <w>πᾶσιν</w> <w>τοῖς</w> <w>διαφέ
-               		<lb n="15" break="no"/><supplied reason="lost">ρουσι</supplied></w> <supplied reason="lost"><w>τῇ</w> <w>πόλει</w></supplied><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">παρέσ</supplied><unclear>χ</unclear>ετο</w>, 
-                                             <w>ἔναγχος</w> <w>δὲ</w>
-               		<lb n="16"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΤΑ</orig> <w>γνασίου</w> <w>ἐπὶ</w>
-               		<lb n="17"/><gap reason="lost" extent="unknown" unit="character"/> <w><unclear>κ</unclear>αὶ</w> <w>περὶ</w> <w>τροφῶν</w>
-               		<lb n="18"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐ</supplied><unclear>σ</unclear>πούδασεν</w> <w>οἰκεί
+               		<lb n="1"/><w><supplied reason="lost">ἀγαθᾶι</supplied></w> <w><supplied reason="lost">τύ</supplied>χαι</w>
+               		<lb n="2"/><w><supplied reason="lost">πρόεδροι</supplied></w> <placeName><supplied reason="lost">Χερ</supplied>σονασσειτᾶν</placeName> 
+                                          <w>τ<unclear>ᾶ</unclear>ν</w>
+               		<lb n="3"/><supplied reason="lost"><w>ποτὶ</w> <w>τᾶι</w> <placeName>Ταυρικᾶι</placeName></supplied> <w><supplied reason="lost">εἶπ</supplied>αν</w>· 
+                                          <w>ἐπειδὴ</w> <persName type="attested"><name>Νοουέλ
+               		<lb n="4" break="no"/><supplied reason="lost">λιος</supplied></name><gap reason="lost" extent="unknown" unit="character"/><name><seg part="F">νος</seg></name></persName>, <w>νεανίας</w> <w>εὐγενὴς</w>
+               		<lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">διά</supplied><unclear>σ</unclear>αμός</w> 
+                                          <w>τε</w> <w>καὶ</w> <w>ἐν</w> <w>τᾶ<supplied reason="lost">ι</supplied></w>
+               		<lb n="6"/><supplied reason="lost" cert="low"><w>πόλει</w> <w>ἁμῶν</w></supplied><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>α</unclear>τα</w> <w>λαμπρότατα</w>
+               		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/> <w><unclear>δ</unclear>ιὰ</w> <w>τὰν</w> <w>ἐπιείκειαν</w> <w>τοῦ</w>
+               		<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">νων</w> <w>ἐπιδαμήσας</w>
+               		<lb n="9"/><supplied reason="lost"><w>παρ’</w> <w>ἁμὲς</w></supplied><gap reason="lost" quantity="3" unit="character"/><w><supplied reason="lost">εὐγ</supplied>νώμονα</w> <w>καὶ</w> <w>φιλά
+               		<lb n="10" break="no"/><supplied reason="lost" cert="low">νθρωπον</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐπι</supplied>δαμίαν</w> <w>ἐποά<choice><corr>σ</corr><sic>ι</sic></choice>ατο</w>
+               		<lb n="11"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ως</w> <w>περὶ</w> <w>πατρίδα</w>
+               		<lb n="12"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">άμενος</w> <w>καὶ</w> <w>περὶ</w>
+               		<lb n="13"/><w><supplied reason="lost">τὰν</supplied></w> <placeName><supplied reason="lost">Χερσονασσειτᾶ</supplied>ν</placeName> 
+                                             <w>πόλιν</w> <w>ἄοκνον</w>
+               		<lb n="14"/><w><supplied reason="lost">ἑαυτὸν</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐ</supplied><unclear>ν</unclear></w> <w>πᾶσιν</w> <w>τοῖς</w> <w>διαφέ
+               		<lb n="15" break="no"/><supplied reason="lost">ρουσι</supplied></w> <supplied reason="lost"><w>τῇ</w> <w>πόλει</w></supplied><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">παρέσ</supplied><unclear>χ</unclear>ετο</w>, 
+                                             <w>ἔναγχος</w> <w>δὲ</w>
+               		<lb n="16"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΤΑ</orig> <w>γνασίου</w> <w>ἐπὶ</w>
+               		<lb n="17"/><gap reason="lost" extent="unknown" unit="character"/> <w><unclear>κ</unclear>αὶ</w> <w>περὶ</w> <w>τροφῶν</w>
+               		<lb n="18"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐ</supplied><unclear>σ</unclear>πούδασεν</w> <w>οἰκεί
                		<lb n="19" break="no"/><supplied reason="lost">ως</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F">κε</w> 
-                                             <w>ἀναλώμασιν</w> <w>εἰς</w>
-               		<lb n="20"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w> <w>τοῦ</w> <w>σείτου</w> <w>χρασά
-               		<lb n="21" break="no"/><supplied reason="lost">μενος</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>τ</unclear>ον</w> <w>ἀποκαταστάσας</w>
-               		<lb n="22"/><gap reason="lost" extent="unknown" unit="character"/> <w>πόλει</w> <w>ἐπιτήδειον</w>
-               		<lb n="23"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ὐπ</supplied>ηρεσίαν</w> <w>ὡς</w> <w>κε</w> <w>τὰν</w>
-               		<lb n="24"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost" cert="low">συ</supplied>ναισθήσει</w> <w>γενόμε
+                                             <w>ἀναλώμασιν</w> <w>εἰς</w>
+               		<lb n="20"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ν</w> <w>τοῦ</w> <w>σείτου</w> <w>χρασά
+               		<lb n="21" break="no"/><supplied reason="lost">μενος</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>τ</unclear>ον</w> <w>ἀποκαταστάσας</w>
+               		<lb n="22"/><gap reason="lost" extent="unknown" unit="character"/> <w>πόλει</w> <w>ἐπιτήδειον</w>
+               		<lb n="23"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ὐπ</supplied>ηρεσίαν</w> <w>ὡς</w> <w>κε</w> <w>τὰν</w>
+               		<lb n="24"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost" cert="low">συ</supplied>ναισθήσει</w> <w>γενόμε
                		<lb n="25" break="no"/><supplied reason="lost">νος</supplied></w><gap reason="lost" extent="unknown" unit="character"/><w part="F">ας</w> 
-                                             <w>τοῦ</w> <w>ἀνδρὸς</w>
-               		<lb n="26"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ν</unclear>ην</w> <w>τὸν</w> <w>ἄνδρα</w>
-               		<lb n="27"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">τᾶ</supplied><unclear>ς</unclear></w> 
-                                             <w>βουλᾶς</w> <w>καὶ</w> <w>τοῦ</w>
-               		<lb n="28"/><w><supplied reason="lost">δάμου</supplied></w><gap reason="lost" extent="unknown" unit="character"/> 
-                                             <w><unclear>α</unclear>ὐτὸν</w> <w>νομίσαι</w> <w>τᾶς</w>
-               		<lb n="29"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">πολ</supplied>ιτήας</w> <w>καὶ</w> <w>πάσας</w>
-               		<lb n="30"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἀμ</supplied>οιβᾶς</w> <w>τᾶς</w> <w>τοῖς</w> 
+                                             <w>τοῦ</w> <w>ἀνδρὸς</w>
+               		<lb n="26"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ν</unclear>ην</w> <w>τὸν</w> <w>ἄνδρα</w>
+               		<lb n="27"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">τᾶ</supplied><unclear>ς</unclear></w> 
+                                             <w>βουλᾶς</w> <w>καὶ</w> <w>τοῦ</w>
+               		<lb n="28"/><w><supplied reason="lost">δάμου</supplied></w><gap reason="lost" extent="unknown" unit="character"/> 
+                                             <w><unclear>α</unclear>ὐτὸν</w> <w>νομίσαι</w> <w>τᾶς</w>
+               		<lb n="29"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">πολ</supplied>ιτήας</w> <w>καὶ</w> <w>πάσας</w>
+               		<lb n="30"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἀμ</supplied>οιβᾶς</w> <w>τᾶς</w> <w>τοῖς</w> 
                                              <gap reason="illegible" quantity="3" unit="character"/>
-               		<lb n="31"/><gap reason="lost" extent="unknown" unit="character"/> <w>τῶν</w> <w>εὐ</w> <w>πεπον<supplied reason="lost">η</supplied>
-               		<lb n="32" break="no"/><supplied reason="lost">κότων</supplied></w><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="6" unit="character"/>
+               		<lb n="31"/><gap reason="lost" extent="unknown" unit="character"/> <w>τῶν</w> <w>εὐ</w> <w>πεπον<supplied reason="lost">η</supplied>
+               		<lb n="32" break="no"/><supplied reason="lost">κότων</supplied></w><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="6" unit="character"/>
                		<lb n="32a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="3-4">
-                  <rdg>Νοουέλ/[λιος] <note>scripsi</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Νοουμ[ή/νιος] <note>Жебелев ap.</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Νοουέν[ιος] <note>corr.</note></rdg>
+                  <rdg>Νοουέλ/[λιος] <note>scripsi</note></rdg>
+                  <rdg source="bib:НЭПХ">Νοουμ[ή/νιος] <note>Жебелев ap.</note></rdg>
+                  <rdg source="bib:НЭПХ">Νοουέν[ιος] <note>corr.</note></rdg>
                </app>
                <app loc="5">
-                  <rdg>[διά]σ̣αμός <note>scripsi</note></rdg>
-                  <rdg>[ἔνδ]αμος <note>edd.</note></rdg>
+                  <rdg>[διά]σ̣αμός <note>scripsi</note></rdg>
+                  <rdg>[ἔνδ]αμος <note>edd.</note></rdg>
                </app>
                <app loc="6">
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;"><note>in.:</note> [πόλει ἁμῶν? - - -] τὰ λαμπρότατα <note>Жебелев ap.</note></rdg>
+                  <rdg source="bib:НЭПХ"><note>in.:</note> [πόλει ἁμῶν? - - -] τὰ λαμπρότατα <note>Жебелев ap.</note></rdg>
                   <rdg>[- - -]α̣τα <note>scripsi</note></rdg>
-                  <rdg>[- - - πράγμ]α̣τα</rdg>
+                  <rdg>[- - - πράγμ]α̣τα</rdg>
                </app>
                <app loc="7">
-                  <rdg>δ̣ιὰ <note>scripsi</note></rdg>
+                  <rdg>δ̣ιὰ <note>scripsi</note></rdg>
                   <rdg>τὰ <note>Жебелев (архив)</note></rdg>
                   </app>
                <app loc="8">
-                  <rdg source="bib:PHI"><note>in.:</note> [βίου?]</rdg>
+                  <rdg source="bib:PHI"><note>in.:</note> [βίου?]</rdg>
                </app>
                <app loc="9">
-                  <rdg source="bib:PHI"><note>in.:</note> [παρ’ ἁμὲς]</rdg>
+                  <rdg source="bib:PHI"><note>in.:</note> [παρ’ ἁμὲς]</rdg>
                </app>
                <app loc="9-10">
-                  <rdg>φιλά/[νθρωπον?] <note>scripsi</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">φιλά/[γαθον?] <note>Жебелев ap.</note></rdg>
+                  <rdg>φιλά/[νθρωπον?] <note>scripsi</note></rdg>
+                  <rdg source="bib:НЭПХ">φιλά/[γαθον?] <note>Жебелев ap.</note></rdg>
                </app>
                <app loc="10">
                   <rdg>ΕΠΟΑΙΑΤΟ <note>lapis</note></rdg>
@@ -208,22 +207,22 @@
                   <rdg>[πά]ν̣τα (?)</rdg>
                </app>
                <app loc="17">
-                  <rdg>κ̣αὶ <note>scripsi</note></rdg>
+                  <rdg>κ̣αὶ <note>scripsi</note></rdg>
                   <rdg>αι <note>edd.</note></rdg>
                </app>
                <app loc="24">
                   <rdg><note>in.:</note> [ταχίσταν (?)] <note>scripserim</note></rdg>
-                  <rdg><note>med.:</note> [(?) συ]ναισθήσει <note>proposui</note></rdg>
-                  <rdg>[- - -] αἰσθήσει <note>Жебелев (архив)</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - -]ν̣ αἰσθήσει</rdg>
+                  <rdg><note>med.:</note> [(?) συ]ναισθήσει <note>proposui</note></rdg>
+                  <rdg>[- - -] αἰσθήσει <note>Жебелев (архив)</note></rdg>
+                  <rdg source="bib:НЭПХ">[- - -]ν̣ αἰσθήσει</rdg>
                </app>
                <app loc="30">
-                  <rdg><note>in.: vel</note> [ἀμ]οιβὰς τὰς</rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">τοῖς - - - Υ</rdg>
+                  <rdg><note>in.: vel</note> [ἀμ]οιβὰς τὰς</rdg>
+                  <rdg source="bib:НЭПХ">τοῖς - - - Υ</rdg>
                </app>
                <app loc="32">
                   <note>fin.: vestigia</note> 
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">[- - -]ΥΟΥΣΣΠ (?)</rdg>
+                  <rdg source="bib:НЭПХ">[- - -]ΥΟΥΣΣΠ (?)</rdg>
                </app>
             </listApp>
          </div>

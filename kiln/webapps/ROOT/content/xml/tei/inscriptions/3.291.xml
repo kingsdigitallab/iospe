@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Вставка к надгробию</title><title xml:lang="en">Epitaph of unknown</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -66,7 +64,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0300" notAfter="-0201" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
+                     <origDate notBefore="-0300" notAfter="-0201" evidence="палеография" precision="low">
                         <seg xml:lang="ru">III в. до н.э.</seg>
                         <seg xml:lang="en">III century B.C.E.</seg>
                      </origDate>
@@ -120,7 +118,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--НЭПХ I--><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/>
+               <bibl><!--НЭПХ I--><ptr target="bib:НЭПХ"/>
                   <citedRange>37</citedRange></bibl>
             </listBibl>
          </div>
@@ -137,8 +135,8 @@
             <div type="textpart" subtype="inscription" n="2">
                <ab>
                   <lb n="1"/><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
-                  <lb n="2"/><persName type="attested" ref="#person638"><name nymRef="&#x1F08;&#x3C0;&#x3BF;&#x3BB;&#x3BB;&#x2014;"><seg part="I"><unclear>Ἀ</unclear>πολλ</seg></name><supplied reason="lost" extent="unknown" unit="character"/>
-                  <lb n="3"/><persName type="attested" ref="#person639"><name nymRef="&#x1F29;&#x3C1;&#x3BF;&#x3B3;&#x3B5;&#x2014;"><seg part="I">Ἡρογ<unclear>ε</unclear></seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="2"/><persName type="attested" ref="#person638"><name nymRef="Ἀπολλ—"><seg part="I"><unclear>Ἀ</unclear>πολλ</seg></name><supplied reason="lost" extent="unknown" unit="character"/>
+                  <lb n="3"/><persName type="attested" ref="#person639"><name nymRef="Ἡρογε—"><seg part="I">Ἡρογ<unclear>ε</unclear></seg></name></persName></persName><gap reason="lost" extent="unknown" unit="character"/>
                   <lb n="4"/><w>γυ<supplied reason="lost">νά</supplied></w>
                </ab>
             </div>
@@ -147,7 +145,7 @@
             <div type="textpart" n="1">
                <listApp>
                   <app loc="2">
-                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">ΛΙΑ <note>в нач. стк. виден след наклонной
+                     <rdg source="bib:НЭПХ">ΛΙΑ <note>в нач. стк. виден след наклонной
                         гасты.</note></rdg>
                   </app>
                </listApp>
@@ -155,13 +153,13 @@
             <div type="textpart" n="2">
                <listApp>
                   <app loc="1">
-                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Ἱ̣κ̣[άνα e.g.]</rdg>
+                     <rdg source="bib:НЭПХ">Ἱ̣κ̣[άνα e.g.]</rdg>
                   </app>
                   <app loc="2">
-                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Ἀπολλ̣[ωνίου e.g.]</rdg>
+                     <rdg source="bib:НЭПХ">Ἀπολλ̣[ωνίου e.g.]</rdg>
                   </app>
                   <app loc="3">
-                     <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">Ἡρογ[είτου]</rdg>
+                     <rdg source="bib:НЭПХ">Ἡρογ[είτου]</rdg>
                   </app>
                </listApp>
             </div>

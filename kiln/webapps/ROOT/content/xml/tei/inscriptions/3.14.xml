@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет в честь Корнелия Пудента</title><title xml:lang="en">Decree honouring Cornelius Poudes</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -67,7 +66,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0033" notAfter="0076" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="-0033" notAfter="0076" evidence="Палеография">
                         <seg xml:lang="ru">кон. I в. до н.э. – 3-я четв. I в. н.э.</seg>
                         <seg xml:lang="en">late I century B.C.E. - third quarter of I century C.E.</seg>
                      </origDate>
@@ -130,55 +129,55 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΟΥΠΟ</orig><gap reason="illegible" quantity="6" unit="character"/> <w><unclear>π</unclear>όλις</w> <w part="I">συ</w><gap reason="illegible" quantity="1" unit="character"/>
-               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ε</unclear>ν</w> <w>ὠφελίμους</w> <w>τε</w> <w>ταῖς</w>
-               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐπ</supplied>ανγέλλεται</w> <w>δὲ</w> <w>καὶ</w> 
-                                             <w>τοῦ</w> <w>λοι
-               		<lb n="4" break="no"/><supplied reason="lost">ποῦ</supplied></w> <w><supplied reason="lost" cert="low">χρήσιμος</supplied></w> 
-                                          <w><supplied reason="lost">ἔσε</supplied>σθ<choice><corr>α</corr><sic>Λ</sic></choice>ι</w> <w>μηδὲν</w> <w>παραλείπων</w> <w>προ
-               		<lb n="5" break="no"/><supplied reason="lost">θυμίας</supplied></w> <w><supplied reason="lost">κατὰ</supplied></w> 
-                                          <w><supplied reason="lost">δύναμι</supplied><supplied reason="undefined" evidence="previouseditor">ν</supplied></w> <w>ἑατοῦ</w> 
-                                          <w>εἰς</w> <w>ὅ</w> <w>τι</w> <w>συνοίσει</w> <placeName type="ethnic">Χερσο
-               		<lb n="6" break="no"/><supplied reason="lost">νασιταις</supplied></placeName>· <supplied reason="lost"><w>ὅπως</w> <w>οὖν</w></supplied> 
-                                          <w><supplied reason="lost">φαινώ</supplied><unclear>μ</unclear>εθα</w> <w>προτρεπόμενοι</w> <w>πλεί
-               		<lb n="7" break="no"/><supplied reason="lost">ους</supplied></w> <supplied reason="lost"><w>περὶ</w> <w>τὰν</w> <w>πόλιν</w></supplied> 
-                                             <w><supplied reason="lost">ἀγα</supplied>θοὺς</w> <w>εἶμεν</w> <w>ἄνδρας</w>, <w>δεδό
-               		<lb n="8" break="no"/><supplied reason="lost">χθαι</supplied></w> <supplied reason="lost"><w>τᾶι</w> <w>βουλᾶι</w> <w>καὶ</w></supplied> 
-                                             <w>τῶι</w> <w>δάμωι</w>· <w>ἐπ<choice><corr>α</corr><sic>Λ</sic></choice>ινέσ<choice><corr>α</corr><sic>Λ</sic></choice>ι</w> 
-                                                <w>μὲ<unclear>ν</unclear></w>
-               		<lb n="9"/><supplied reason="lost"><w>ἐπὶ</w> <w>τούτοις</w></supplied> <gap reason="lost" extent="unknown" unit="character"/> 
-                                             <persName type="attested"><name type="gentilicium"><supplied reason="lost">Κο</supplied><supplied reason="undefined" evidence="previouseditor">ρ</supplied>νήλιον</name> 
-                                                <name type="cognomen">Πούδητα</name></persName>, <w>δεδόσ
-               		<lb n="10" break="no"/><supplied reason="lost">θαι</supplied></w> <supplied reason="lost"><w>δὲ</w> <w>αὐτῶι</w></supplied> 
-                                          <supplied reason="lost" cert="low"><w>πολιτείαν</w></supplied>, <w><supplied reason="lost">προ</supplied>ξενίαν</w>, <w>εἴσπλουν</w> <w>καὶ</w>
-               		<lb n="11"/><supplied reason="lost"><w>ἔκπλουν</w> <w>ἀσυλεὶ</w> <w>ἀσπονδεὶ</w></supplied> <w>ἔν</w> <w>τε</w> 
-                                             <w>εἰράναι</w> <w>καὶ</w> <w>πο<supplied reason="lost">λέ</supplied>
-               		<lb n="12" break="no"/><supplied reason="lost">μωι</supplied></w> <supplied reason="lost"><w>αὐτῶι</w> <w>καὶ</w> <w>ἐκγόνοις</w> <w>καὶ</w></supplied> 
-                                                <w><supplied reason="lost">χρ</supplied><unclear>ή</unclear>μασιν</w>· <w>ὅπως</w> <w>δὲ</w> <gap reason="lost" quantity="3" unit="character"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>ΟΥΠΟ</orig><gap reason="illegible" quantity="6" unit="character"/> <w><unclear>π</unclear>όλις</w> <w part="I">συ</w><gap reason="illegible" quantity="1" unit="character"/>
+               		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ε</unclear>ν</w> <w>ὠφελίμους</w> <w>τε</w> <w>ταῖς</w>
+               		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐπ</supplied>ανγέλλεται</w> <w>δὲ</w> <w>καὶ</w> 
+                                             <w>τοῦ</w> <w>λοι
+               		<lb n="4" break="no"/><supplied reason="lost">ποῦ</supplied></w> <w><supplied reason="lost" cert="low">χρήσιμος</supplied></w> 
+                                          <w><supplied reason="lost">ἔσε</supplied>σθ<choice><corr>α</corr><sic>Λ</sic></choice>ι</w> <w>μηδὲν</w> <w>παραλείπων</w> <w>προ
+               		<lb n="5" break="no"/><supplied reason="lost">θυμίας</supplied></w> <w><supplied reason="lost">κατὰ</supplied></w> 
+                                          <w><supplied reason="lost">δύναμι</supplied><supplied reason="undefined" evidence="previouseditor">ν</supplied></w> <w>ἑατοῦ</w> 
+                                          <w>εἰς</w> <w>ὅ</w> <w>τι</w> <w>συνοίσει</w> <placeName type="ethnic">Χερσο
+               		<lb n="6" break="no"/><supplied reason="lost">νασιταις</supplied></placeName>· <supplied reason="lost"><w>ὅπως</w> <w>οὖν</w></supplied> 
+                                          <w><supplied reason="lost">φαινώ</supplied><unclear>μ</unclear>εθα</w> <w>προτρεπόμενοι</w> <w>πλεί
+               		<lb n="7" break="no"/><supplied reason="lost">ους</supplied></w> <supplied reason="lost"><w>περὶ</w> <w>τὰν</w> <w>πόλιν</w></supplied> 
+                                             <w><supplied reason="lost">ἀγα</supplied>θοὺς</w> <w>εἶμεν</w> <w>ἄνδρας</w>, <w>δεδό
+               		<lb n="8" break="no"/><supplied reason="lost">χθαι</supplied></w> <supplied reason="lost"><w>τᾶι</w> <w>βουλᾶι</w> <w>καὶ</w></supplied> 
+                                             <w>τῶι</w> <w>δάμωι</w>· <w>ἐπ<choice><corr>α</corr><sic>Λ</sic></choice>ινέσ<choice><corr>α</corr><sic>Λ</sic></choice>ι</w> 
+                                                <w>μὲ<unclear>ν</unclear></w>
+               		<lb n="9"/><supplied reason="lost"><w>ἐπὶ</w> <w>τούτοις</w></supplied> <gap reason="lost" extent="unknown" unit="character"/> 
+                                             <persName type="attested"><name type="gentilicium"><supplied reason="lost">Κο</supplied><supplied reason="undefined" evidence="previouseditor">ρ</supplied>νήλιον</name> 
+                                                <name type="cognomen">Πούδητα</name></persName>, <w>δεδόσ
+               		<lb n="10" break="no"/><supplied reason="lost">θαι</supplied></w> <supplied reason="lost"><w>δὲ</w> <w>αὐτῶι</w></supplied> 
+                                          <supplied reason="lost" cert="low"><w>πολιτείαν</w></supplied>, <w><supplied reason="lost">προ</supplied>ξενίαν</w>, <w>εἴσπλουν</w> <w>καὶ</w>
+               		<lb n="11"/><supplied reason="lost"><w>ἔκπλουν</w> <w>ἀσυλεὶ</w> <w>ἀσπονδεὶ</w></supplied> <w>ἔν</w> <w>τε</w> 
+                                             <w>εἰράναι</w> <w>καὶ</w> <w>πο<supplied reason="lost">λέ</supplied>
+               		<lb n="12" break="no"/><supplied reason="lost">μωι</supplied></w> <supplied reason="lost"><w>αὐτῶι</w> <w>καὶ</w> <w>ἐκγόνοις</w> <w>καὶ</w></supplied> 
+                                                <w><supplied reason="lost">χρ</supplied><unclear>ή</unclear>μασιν</w>· <w>ὅπως</w> <w>δὲ</w> <gap reason="lost" quantity="3" unit="character"/>
                		<lb n="12a"/><space quantity="1" unit="cm" cert="low"/>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <rdg>[- - -]ε τοῦ πο[. . .] ἁ πόλις συ[ν] <note>edd.</note></rdg>
+                  <rdg>[- - -]ε τοῦ πο[. . .] ἁ πόλις συ[ν] <note>edd.</note></rdg>
                </app>
                <app loc="4">
                   <rdg><note>in.:</note> ΣΘΛΙ <note>lapis</note></rdg>
                </app>
                <app loc="5-6">
-                  <rdg>Χερσο|[νάσωι] <note>edd.</note></rdg>
+                  <rdg>Χερσο|[νάσωι] <note>edd.</note></rdg>
                </app>
                <app loc="6-7">
-                  <rdg>πλεί|[ους εἰς τὸ καλοὺς κἀγα]θοὺς <note>edd.</note></rdg>
+                  <rdg>πλεί|[ους εἰς τὸ καλοὺς κἀγα]θοὺς <note>edd.</note></rdg>
                </app>
                <app loc="8">
                   <rdg>ΕΠΛΙΝΕΣΛΙ <note>lap.</note></rdg>
                </app>
                <app loc="10">
-                  <rdg source="bib:b0136">[πολιτείαν ?]</rdg>
-                  <rdg source="bib:IOSPE2">[πολιτείαν] <note>(cf. ibid., p. 314: «hoc supplementum ideo dubium nobis videtur, quod in aliis 
-                     Chersonesitarum decretis de proxenia donanda πολιτεία postponitur προξενίᾳ, non anteponitur)</note></rdg>
+                  <rdg source="bib:b0136">[πολιτείαν ?]</rdg>
+                  <rdg source="bib:IOSPE2">[πολιτείαν] <note>(cf. ibid., p. 314: «hoc supplementum ideo dubium nobis videtur, quod in aliis 
+                     Chersonesitarum decretis de proxenia donanda πολιτεία postponitur προξενίᾳ, non anteponitur)</note></rdg>
                </app>
             </listApp>
          </div>

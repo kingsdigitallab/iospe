@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надпись, упоминающая рыбный рынок</title><title xml:lang="en">Building inscription relating to fish market</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -64,7 +63,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0068" notAfter="0150" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0068" notAfter="0150" evidence="Палеография">
                         <seg xml:lang="ru">кон. I – 1-я пол. II в. н.э.</seg>
                         <seg xml:lang="en">late 1st - 1st half of II century C.E.</seg>
                      </origDate>
@@ -115,7 +114,7 @@
             <listBibl>
                <bibl><!-- Семенов-Зусер 1947 --><ptr target="bib:b0877"/>, <citedRange>35</citedRange></bibl>
                <bibl><!-- Семенов-Зусер 1947a --><ptr target="bib:b0878"/>, <citedRange>237</citedRange></bibl>
-               <bibl><!-- НЭПХ II --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;2"/> <citedRange>129</citedRange>
+               <bibl><!-- НЭПХ II --><ptr target="bib:НЭПХ2"/> <citedRange>129</citedRange>
                (= <bibl><!-- BullЕp. --><ptr target="bib:BE"/> <citedRange>1974, 380</citedRange></bibl>)</bibl>
             </listBibl>
          </div>
@@ -131,28 +130,28 @@
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               		<lb n="1"/><w><supplied reason="lost">ἀγ</supplied>αθῆι</w> <w>τύχηι</w>
+               		<lb n="1"/><w><supplied reason="lost">ἀγ</supplied>αθῆι</w> <w>τύχηι</w>
                		<lb n="2"/><persName type="attested"><gap reason="lost" extent="unknown" unit="character"/><name><seg part="F">νης</seg></name> 
-                                                <persName type="attested"><name>Διογένους</name></persName></persName>
-               		<lb n="3"/><w><supplied reason="lost">ἀγορα</supplied>νομήσας</w> <w>ἐκ</w> <w>τῶν</w>
-               		<lb n="4"/><w><supplied reason="lost">ἰδίων</supplied></w> <w><supplied reason="lost">τ</supplied>ὴν</w> <w>ὀψόπολιν</w>
-               		<lb n="5"/><w><supplied reason="lost" cert="low">ἐπιμελη</supplied>τεύοντος</w> <persName type="attested"><name><seg part="I">Διο</seg></name>
+                                                <persName type="attested"><name>Διογένους</name></persName></persName>
+               		<lb n="3"/><w><supplied reason="lost">ἀγορα</supplied>νομήσας</w> <w>ἐκ</w> <w>τῶν</w>
+               		<lb n="4"/><w><supplied reason="lost">ἰδίων</supplied></w> <w><supplied reason="lost">τ</supplied>ὴν</w> <w>ὀψόπολιν</w>
+               		<lb n="5"/><w><supplied reason="lost" cert="low">ἐπιμελη</supplied>τεύοντος</w> <persName type="attested"><name><seg part="I">Διο</seg></name>
                		<lb n="6" break="no"/><gap reason="lost" extent="unknown" unit="character"/> 
-                                                <persName type="attested"><name><supplied reason="lost">Φ</supplied>ιλαδέλφου</name></persName></persName>
+                                                <persName type="attested"><name><supplied reason="lost">Φ</supplied>ιλαδέλφου</name></persName></persName>
             </ab>
          </div>
          <div type="apparatus">
             <listApp>
                <app loc="1">
-                  <rdg>[Θεαγέ]νης <note>ed. pr.</note></rdg>
+                  <rdg>[Θεαγέ]νης <note>ed. pr.</note></rdg>
                </app>
                <app loc="4">
-                  <rdg>ὀψόπολιν = ὀψόπωλιν</rdg>
+                  <rdg>ὀψόπολιν = ὀψόπωλιν</rdg>
                </app>
                <app loc="5">
-                  <rdg>[ἐπιμελη?]τεύοντος <note>scripsi</note></rdg>
-                  <rdg>[ἱερα]τεύοντος <note>ed. pr.</note></rdg>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;2">[ἐπόει ἱερα]τεύοντος vel [νέαν ἱερα]τεύοντος</rdg>
+                  <rdg>[ἐπιμελη?]τεύοντος <note>scripsi</note></rdg>
+                  <rdg>[ἱερα]τεύοντος <note>ed. pr.</note></rdg>
+                  <rdg source="bib:НЭПХ2">[ἐπόει ἱερα]τεύοντος vel [νέαν ἱερα]τεύοντος</rdg>
                </app>
             </listApp>
          </div>

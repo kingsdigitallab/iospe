@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надгробие супругов (?)</title><title xml:lang="en">Epitaph of a couple</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -66,7 +64,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0201" notAfter="0300" evidence="&#x43F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;" precision="low">
+                     <origDate notBefore="0201" notAfter="0300" evidence="палеография" precision="low">
                         <seg xml:lang="ru">III в. н.э.</seg>
                         <seg xml:lang="en">III century C.E.</seg>
                      </origDate>
@@ -119,7 +117,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:&#x41D;&#x42D;&#x41F;&#x425;"/> <citedRange>91</citedRange></bibl>
+               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>91</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -133,8 +131,8 @@
                <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>κεῖ</unclear></w>
                <lb n="2"/><w><supplied reason="lost" cert="low">ται</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
-               <gap reason="illegible" quantity="1" unit="character"/><persName type="attested" ref="#person811"><name nymRef="&#x2014;&#x3B9;&#x3BB;&#x3AF;&#x3B1;"><seg part="F">ιλία</seg></name> 
-                                 <name nymRef="&#x395;&#x1F50;&#x2014;"><seg part="I">Εὐ</seg></name></persName>
+               <gap reason="illegible" quantity="1" unit="character"/><persName type="attested" ref="#person811"><name nymRef="—ιλία"><seg part="F">ιλία</seg></name> 
+                                 <name nymRef="Εὐ—"><seg part="I">Εὐ</seg></name></persName>
                <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">με</supplied>τ’</w> <w>αὐτοῦ</w>
                <lb n="4"/><w><supplied reason="lost" cert="low">ζήσασα</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                <lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
@@ -149,7 +147,7 @@
                </app>
                <app loc="3-4">
                   <note>cf. Studia Pontica III 81: τεκνώσασα μετ’ αὐτοῦ</note>
-                  <rdg source="bib:&#x41D;&#x42D;&#x41F;&#x425;">ταὐτοῦ</rdg>
+                  <rdg source="bib:НЭПХ">ταὐτοῦ</rdg>
                </app>
             </listApp>
          </div>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет</title><title xml:lang="en">Decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -63,7 +62,7 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="0134" notAfter="0167" precision="medium" evidence="&#x41F;&#x430;&#x43B;&#x435;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F; &#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x43F;&#x43E;&#x433;&#x440;&#x430;&#x444;&#x438;&#x44F;">
+                     <origDate notBefore="0134" notAfter="0167" precision="medium" evidence="Палеография просопография">
                         <seg xml:lang="ru">ок. сер. II в. н.э.</seg>
                         <seg xml:lang="en">ca. mid-II century C.E.</seg>
                      </origDate>
@@ -124,29 +123,29 @@
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                		<lb n="1"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/></name> 
-                                          <name><supplied reason="lost">Χρηστ</supplied>ίωνος</name></persName>,
-               		<lb n="2"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/></name> <w>υἱὸς</w> 
-                                          <persName type="attested"><name type="gentilicium"><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name> <g ref="#stop"/> 
-                                          <name type="cognomen">Ἀγεπόλεως</name></persName></persName>,
+                                          <name><supplied reason="lost">Χρηστ</supplied>ίωνος</name></persName>,
+               		<lb n="2"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/></name> <w>υἱὸς</w> 
+                                          <persName type="attested"><name type="gentilicium"><expan><abbr>Φλ</abbr><ex>αουίου</ex></expan></name> <g ref="#stop"/> 
+                                          <name type="cognomen">Ἀγεπόλεως</name></persName></persName>,
                		<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> 
-                                          <persName type="attested"><name><supplied reason="lost">Δημοκ</supplied>ράτης</name> 
-                                             <persName type="attested"><name>Βοΐσκου</name></persName></persName>, 
+                                          <persName type="attested"><name><supplied reason="lost">Δημοκ</supplied>ράτης</name> 
+                                             <persName type="attested"><name>Βοΐσκου</name></persName></persName>, 
                                           <g ref="#stop"/> <persName type="attested"><name type="praenomen"><expan><abbr>Τ</abbr><ex>ίτος</ex></expan></name> <g ref="#stop"/>
                		<lb n="4"/><name type="gentilicium"><supplied reason="lost">Φλαύιος</supplied></name> 
-                                          <name type="cognomen"><gap reason="lost" extent="unknown" unit="character"/></name> <w><supplied reason="lost">υἱὸς</supplied></w> 
-                                          <persName type="attested"><name type="gentilicium"><supplied reason="lost">Φλαουίου</supplied></name> 
-                                          <name type="cognomen"><supplied reason="lost">Εὐρυδά</supplied>μου</name></persName></persName>, 
-                                          <persName type="attested"><name>Ἀπολλώνιος</name>
+                                          <name type="cognomen"><gap reason="lost" extent="unknown" unit="character"/></name> <w><supplied reason="lost">υἱὸς</supplied></w> 
+                                          <persName type="attested"><name type="gentilicium"><supplied reason="lost">Φλαουίου</supplied></name> 
+                                          <name type="cognomen"><supplied reason="lost">Εὐρυδά</supplied>μου</name></persName></persName>, 
+                                          <persName type="attested"><name>Ἀπολλώνιος</name>
                		<lb n="5"/><name><gap reason="lost" extent="unknown" unit="character"/></name> 
-                                          <name><supplied reason="lost">Μη</supplied><unclear>τ</unclear>ρόδωρος</name> 
-                                          <persName type="attested"><name>Ἡροΐδου</name></persName></persName>,
-               		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name><supplied reason="lost">Κρί</supplied>σπος</name></persName>, 
-                                          <persName type="attested"><name>Αἴλιος</name> <name><seg part="I">Μα</seg></name>
+                                          <name><supplied reason="lost">Μη</supplied><unclear>τ</unclear>ρόδωρος</name> 
+                                          <persName type="attested"><name>Ἡροΐδου</name></persName></persName>,
+               		<lb n="6"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name><supplied reason="lost">Κρί</supplied>σπος</name></persName>, 
+                                          <persName type="attested"><name>Αἴλιος</name> <name><seg part="I">Μα</seg></name>
                		<lb n="7" break="no"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><seg part="F">ωνος</seg></name></persName></persName>, 
-                                          <persName type="attested"><name type="gentilicium">Οὔλπιος</name>
+                                          <persName type="attested"><name type="gentilicium">Οὔλπιος</name>
                		<lb n="8"/><name type="cognomen"><gap reason="lost" extent="unknown" unit="character"/></name> 
-                                          <persName type="attested"><name><supplied reason="lost">Ἀρίσ</supplied>τωνος</name></persName></persName> 
-                                          <g ref="#stop"/> <num value="3">γ</num> <g ref="#stop"/> <persName type="attested"><name>Ἡροΐ
+                                          <persName type="attested"><name><supplied reason="lost">Ἀρίσ</supplied>τωνος</name></persName></persName> 
+                                          <g ref="#stop"/> <num value="3">γ</num> <g ref="#stop"/> <persName type="attested"><name>Ἡροΐ
                		<lb n="9" break="no"/><supplied reason="lost">δας</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="9a"/><gap reason="lost" extent="unknown" unit="line"/>
             </ab>
@@ -154,10 +153,10 @@
          <div type="apparatus">
             <listApp>
                <app loc="2">
-                  <rdg source="bib:IOSPE2">[Τ. Φλ. Πυθόδοτος ?]</rdg>
+                  <rdg source="bib:IOSPE2">[Τ. Φλ. Πυθόδοτος ?]</rdg>
                </app>
                <app loc="4">
-                  <rdg>[υἱὸς Φλαουίου] <note>supplevi</note></rdg>
+                  <rdg>[υἱὸς Φλαουίου] <note>supplevi</note></rdg>
                </app>
                <app loc="5">
                   <note>ΗΡ in ligatura</note>
