@@ -112,7 +112,11 @@
       </xsl:choose>
     </tei:ref>
   </xsl:template>
-
+  
+  <xsl:template match="tei:bibl[@xml:id='SEG']" mode="parse-name-year">
+    <tei:name>SEG</tei:name>
+  </xsl:template>
+  
   <xsl:template match="tei:bibl[@xml:id='IOSPE']" mode="parse-name-year">
     <tei:name>IOSPE</tei:name>
   </xsl:template>
