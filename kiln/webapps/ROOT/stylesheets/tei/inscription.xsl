@@ -1803,6 +1803,9 @@
             <xsl:text> (Solomonik 1973)</xsl:text>
           </xsl:if>
         </xsl:when>
+        <xsl:when test="not(matches(@xml:id,'^b\d{1,5}$'))">
+          <xsl:value-of select="@xml:id"/>
+        </xsl:when>
         <xsl:when test="descendant::tei:title[@type = 'abbreviated']">
           <xsl:apply-templates select="descendant::tei:title[@type = 'abbreviated']"/>
         </xsl:when>
