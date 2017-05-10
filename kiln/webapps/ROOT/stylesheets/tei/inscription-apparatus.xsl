@@ -124,7 +124,7 @@
   </xsl:template>-->
 
   <xsl:template match="tei:bibl[@xml:id='IOSPE2']" mode="parse-name-year">
-    <tei:name>IOSPE I<kiln:sup>2</kiln:sup></tei:name>
+    <tei:name>IOSPE I<kiln:sup>88</kiln:sup></tei:name>
   </xsl:template>
   
 
