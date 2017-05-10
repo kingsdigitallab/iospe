@@ -113,9 +113,9 @@
     </tei:ref>
   </xsl:template>
 
-  <xsl:template match="tei:bibl[not(matches(@xml:id,'^bib:b\d{1,5}$'))]">
+  <xsl:template match="tei:bibl[not(matches(@xml:id,'^b\d{1,5}$'))]">
     <tei:name>
-      <xsl:value-of select="substring-after(@xml:id,':')"/>
+      <xsl:value-of select="@xml:id"/>
     </tei:name>
   </xsl:template>
   
