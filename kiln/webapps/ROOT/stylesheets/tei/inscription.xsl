@@ -1782,9 +1782,6 @@
     <xsl:for-each
       select="//bib//tei:biblStruct[@xml:id = $target] | //bib//tei:bibl[@xml:id = $target]">
       <xsl:choose>
-        <xsl:when test="@xml:id = 'SEG'">
-          <xsl:text>SEG</xsl:text>
-        </xsl:when>
         <xsl:when test="@xml:id = 'IOSPE'">
           <xsl:text>IOSPE</xsl:text>
         </xsl:when>
@@ -1805,9 +1802,6 @@
           <xsl:if test="$lang = 'en'">  
             <xsl:text> (Solomonik 1973)</xsl:text>
           </xsl:if>
-        </xsl:when>
-        <xsl:when test="not(matches(@xml:id,'b\d'))">
-          <xsl:value-of select="@xml:id"/>
         </xsl:when>
         <xsl:when test="descendant::tei:title[@type = 'abbreviated']">
           <xsl:apply-templates select="descendant::tei:title[@type = 'abbreviated']"/>
