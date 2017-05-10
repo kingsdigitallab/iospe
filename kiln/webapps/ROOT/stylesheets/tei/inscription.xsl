@@ -1788,7 +1788,7 @@
         <xsl:when test="@xml:id = 'IOSPE2'">
           <xsl:text>IOSPE I</xsl:text>
           <xsl:element name="sup">
-            <xsl:text>2</xsl:text>
+            <xsl:text>88</xsl:text>
           </xsl:element>
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ'">
