@@ -113,15 +113,9 @@
     </tei:ref>
   </xsl:template>
 
-  <xsl:template match="tei:bibl[not(matches(@xml:id,'^b\d{1,5}$'))]">
-    <tei:name>
-      <xsl:value-of select="@xml:id"/>
-    </tei:name>
-  </xsl:template>
-  
-<!--  <xsl:template match="tei:bibl[@xml:id='IOSPE']" mode="parse-name-year">
+  <xsl:template match="tei:bibl[@xml:id='IOSPE']" mode="parse-name-year">
     <tei:name>IOSPE</tei:name>
-  </xsl:template>-->
+  </xsl:template>
 
   <xsl:template match="tei:bibl[@xml:id='IOSPE2']" mode="parse-name-year">
     <tei:name>IOSPE I<kiln:sup>2</kiln:sup></tei:name>
