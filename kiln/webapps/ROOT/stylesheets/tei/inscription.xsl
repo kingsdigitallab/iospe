@@ -1782,6 +1782,9 @@
     <xsl:for-each
       select="//bib//tei:biblStruct[@xml:id = $target] | //bib//tei:bibl[@xml:id = $target]">
       <xsl:choose>
+        <xsl:when test="@xml:id = 'SEG'">
+          <xsl:text>SEG</xsl:text>
+        </xsl:when>
         <xsl:when test="@xml:id = 'IOSPE'">
           <xsl:text>IOSPE</xsl:text>
         </xsl:when>
