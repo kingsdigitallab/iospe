@@ -209,6 +209,14 @@
 
     <xsl:variable name="id">
       <xsl:choose>
+        <xsl:when test="starts-with(str[@name = 'tei-id'], '1.')">
+          <xsl:text>I&#xa0;</xsl:text>
+          <xsl:value-of select="substring-after(str[@name = 'tei-id'], '.')"/>
+        </xsl:when>
+        <xsl:when test="starts-with(str[@name = 'tei-id'], '3.')">
+          <xsl:text>III&#xa0;</xsl:text>
+          <xsl:value-of select="substring-after(str[@name = 'tei-id'], '.')"/>
+        </xsl:when>
         <xsl:when test="starts-with(str[@name = 'tei-id'], '5.')">
           <xsl:text>V&#xa0;</xsl:text>
           <xsl:value-of select="substring-after(str[@name = 'tei-id'], '.')"/>
