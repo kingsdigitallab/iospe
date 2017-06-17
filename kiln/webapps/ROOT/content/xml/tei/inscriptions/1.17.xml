@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Посвящение египетским богам</title><title xml:lang="en">Dedicatory inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Посвящение египетским богам</title><title xml:lang="en">Dedication to Egyptian gods</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.48</idno>
@@ -33,10 +33,10 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon12">Постамент.</objectType>
                            <objectType xml:lang="en">Base.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор серый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Marble, gray.</material>
                            <p xml:lang="ru">Левая часть отбита. Лицевой фас обработан аккуратно и заглажен без полировки, верхний и нижний фасы 
                               также обработаны аккуратно, на них заметны следы троянки. Оборотный фас обработан грубо.</p>
-                           <p xml:lang="en">The left side is broken off. The front is well worked and planed, but not polished; the top and bottom are well worked 
+                           <p xml:lang="en">The left side is broken off. The front is well worked and smoothed, but not polished; the top and bottom are well worked 
                               with the use of tooth chisel. The back is roughly picked.</p>
                            <dimensions>
                               <height unit="cm">9,5</height>
@@ -49,7 +49,7 @@
                         <layout>
                            <seg xml:lang="ru">Лицевая сторона. Оббито слева.
                               Размеры полей: Правое 0,7; верхнее 1,5; нижнее 5,2.</seg>
-                           <seg xml:lang="en">On the front. Broken off on the lesft. Margins: right 0,7; top 1,5; bottom 5,2.</seg>
+                           <seg xml:lang="en">On the front. Broken off on the left. Margins: right 0,7; top 1,5; bottom 5,2.</seg>
                            <dimensions>
                               <height unit="cm">2,8</height>
                               <width unit="cm">22,8</width>
@@ -63,8 +63,9 @@
                            Альфа с ломаной гастой; косые штрихи каппы укорочены; омикрон круглый, немного уменьшен; пи с несколько укороченной правой гастой; 
                            ипсилон с отогнутыми наружу верхними штрихами.
                            Омикрон 1,0. Среднее расстояние между строк: 0,3.</seg>
-                        <seg xml:lang="en">Neatly cut letters follow ruled lines; small serifs. Alpha with broken crossbar;  
-                           kappa with short diagonals; Average distance between lines: 0,3cm.</seg>
+                        <seg xml:lang="en">Neatly cut letters following ruled lines; small serifs. Alpha with broken crossbar;  
+                           kappa with short diagonals, round omicron, slightly smaller than other letters; pi with short right hasta; ypsilon with outward curving diagonals; 
+                           Average distance between lines: 0,3cm.</seg>
                         <height unit="cm">1,1-1,2</height>
                      </handNote>
                   </handDesc>
@@ -90,8 +91,9 @@
                      </seg>
                      <seg xml:lang="en">
                         <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
-                        <rs type="circumstances"/>
-                        <rs type="context"/>
+                        <rs type="circumstances">Found in Akkerman in 1891 by F.I. Knauer, professor of the University of Kiev. The monument was in the possession of a local resident,
+                        Grigory Antonov, according to whom the stone had been discovered in the digging of a pit on his property near the fortress, to the southeast of it. </rs>
+                        <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
@@ -162,7 +164,7 @@
             <p>[- - -], сын Кратина, Сарапису, Исиде [- - -], богам, почитаемым в общем храме, благодарственное приношение.</p>
          </div>
          <div type="translation" xml:lang="en">
-            <p/>
+            <p>[- - -], son of Kratinos, to Sarapis, Isis [- - -], the gods sharing a temple, a thanks offering.</p>
          </div>
          <div type="commentary" xml:lang="ru">
             <p>Камень передан в Императорскую археологическую комиссию в 1891 г., а оттуда в Московский исторический музей (ГИМ) в 1892 г.</p>
@@ -175,7 +177,13 @@
                Самые ранние его свидетельства в этом регионе (в Истрии и Херсонесе) относятся к ΙΙΙ в. до н.э. См. подробно с литературой Иванчик, Самойлова 2007.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p/>
+            <p>The stone was passed on to the Imperial Archaeological Commission in 1891, and from there to the State Historical Museum in Moscow, in 1892.</p>
+            <p>At the start of line 1, we expect the personal name of the dedicant, and at the start of the second - the name of Anubis or Harpokrates, worshipped together with 
+            Sarapis and Isis. Such restoration had been proposed by V.V. Latyshev, but he refrained from filling the lacuna, allowing for either possibility and even for  
+            both names together (which I consider impossible). Bricault opts for Anubis, even if with a question mark, and this seems the most likely. An attempt of Sonni to downdate the 
+            inscription to the Roman period is unconvincing (cf. Latyshev 1893).</p>
+            <p>The inscrtiption testifies to the spead of the cult of Egyptian gods in the Northern Black Sea area in the hellenistic period. The earliest testimonies for the region 
+            (in Histria and Chersonesos) date to the III century C.E. See for more detail, Ivantchik, Samoylova 2007.</p>
          </div>
       </body>
    </text>
