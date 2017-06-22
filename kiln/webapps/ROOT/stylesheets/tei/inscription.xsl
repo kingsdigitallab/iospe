@@ -303,7 +303,7 @@
 
         <!-- Description and condition (if exists) -->
         <xsl:if
-          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang = $lang]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $lang) and (normalize-space(text())!='')]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
