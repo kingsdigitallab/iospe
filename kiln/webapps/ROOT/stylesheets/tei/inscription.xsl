@@ -1359,7 +1359,7 @@
         <!-- Commentary -->
         <!-- PC  31 OCT 2017:  put in the 'if' condition as temporary measure to hide from display editor's 
           commentary section for those vol 3 files for which the bibliography says 'Ineditum' -->
-        <xsl:if test="not(contains(//tei:body/tei:div[@type='bibliography'][1]/tei:listBibl/tei:bibl[1], 'Ineditum'))">
+        <xsl:if test="not(contains(//tei:body/tei:div[@type='bibliography'][1]/tei:listBibl[1]/tei:bibl[1], 'Ineditum'))">
           <xsl:choose>
           <xsl:when
             test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
