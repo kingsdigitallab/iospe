@@ -1794,7 +1794,7 @@
         <xsl:when test="@xml:id = 'НЭПХ'">
           <xsl:text>НЭПХ I</xsl:text> 
         <xsl:if test="$lang = 'en'">  
-            <xsl:text> (Solomonik 1963)</xsl:text>
+            <xsl:text> (Solomonik 1964)</xsl:text>
         </xsl:if>
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ2'">

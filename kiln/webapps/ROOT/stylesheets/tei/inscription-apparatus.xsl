@@ -121,6 +121,13 @@
     <tei:name>IOSPE I<kiln:sup>2</kiln:sup></tei:name>
   </xsl:template>
   
+  <xsl:template match="tei:bibl[@xml:id]">
+    <xsl:analyze-string select="." regex="(^[A-Z])">
+      <xsl:matching-substring>
+        <xsl:value-of select="."/>
+      </xsl:matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
 
   <xsl:template match="kiln:*">
     <xsl:element name="{local-name()}">
