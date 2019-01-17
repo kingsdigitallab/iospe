@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
-         <titleStmt><title xml:lang="ru">Фрагмент почетного декрета</title><title xml:lang="en">Honorific decree</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <titleStmt><title xml:lang="ru">Фрагмент почетного декрета</title>
+            <title xml:lang="en">Honorific decree</title>
+            <editor xml:id="ip" role="translator">
+               <persName xml:lang="ru">Ирина<forename/>
+                  <surname>Полинская</surname></persName>
+               <persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName>
+            </editor></titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
             <idno type="AI2015">10.5</idno>
@@ -36,14 +42,16 @@
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор белый.</material>
                            <material xml:lang="en">White marble.</material>
                            <p xml:lang="ru">Лицевой фас тщательно обработан, поле надписи отполировано и окружено рельефной рамкой с полировкой. Левый и нижний
-                              фасы обработаны суммарно с помощью троянки, оборотный грубыми сколами, остальные оббиты. Размеры: Высота 15,6; ширина 13,6; толщина 5,7. 
-                              Орнаментация: Снизу рамка плоская, слева сложно профилирована и состоит из плоского поля, отделенного глубокой бороздой от валика, 
+                              фасы обработаны суммарно с помощью троянки, оборотный грубыми сколами, остальные оббиты. Снизу рамка плоская, слева сложно профилирована и состоит из плоского поля, отделенного глубокой бороздой от валика, 
                               плавно переходящего в плоскую поверхность, который переходит к полю надписи посредством ребра, образующего прямой угол. 
-                              Дополнительные размеры: Ширина рамки слева 5,8, снизу – 4,3. Глубина поля надписи по отношению к рамке 0,8.</p>
-                           <p></p>
-                           <p></p>
+                              Ширина рамки слева 5,8, снизу – 4,3. Глубина поля надписи по отношению к рамке 0,8.</p>
                            <p xml:lang="en">The front is carefully worked, the epigraphic field is polished and framed by a polished relief border. The left and bottom
                               sides are summarily treated with tooth chisel, the back is roughly picked, the other faces are broken off.</p>
+                           <dimensions>
+                              <width unit="cm">13,6</width>
+                              <height unit="cm">15,6</height>
+                              <depth unit="cm">5,7</depth>
+                           </dimensions>
                         </support>
                      </supportDesc>
                      <layoutDesc>
@@ -98,7 +106,7 @@
                      <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
-                     <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
+                     <seg xml:lang="ru">А. И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
                      <seg xml:lang="en">A. I. Ivantchik, <date when="2006-08">August 2006</date>.</seg>
                   </provenance>
                </history>
