@@ -38,7 +38,7 @@
                            <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
                            <objectType xml:lang="en">Stele.</objectType>
                            <material xml:lang="ru" ref="material-search.xml#m1">Мрамор серый.</material>
-                           <material xml:lang="en">Marble.</material>
+                           <material xml:lang="en">Grey marble.</material>
                            <p xml:lang="ru">Лицевая поверхность отполирована. Боковые фасы
                               обработаны суммарно, оборотный грубыми сколами. Верхняя часть стелы
                               отбита. Мраморная стела была вставлена в известняковую базу, также
@@ -127,6 +127,7 @@
      </xi:include>
       
       <revisionDesc>
+         <change when="2018-01-28" who="LE">clean up</change>
          <change when="2016-09-26" who="SS">encoded metadata</change>
          <change when="2016-09-21" who="SS">encoded text</change>
          <change when="2016-09-13" who="AGi">programmatically created XML from Word docs</change>
@@ -146,7 +147,7 @@
             <!-- Издания -->
             <listBibl>
                <bibl n="L1"><!-- Беккер 1848 --><ptr target="bib:b0889"/>, <citedRange>416-469</citedRange>
-               (= <bibl><!-- Беккер 1849 --><ptr target="bib:b0890"/></bibl>)</bibl>
+               (cf. <bibl><!-- Беккер 1849 --><ptr target="bib:b0890"/></bibl>)</bibl>
                <bibl n="1.1"><!-- Mercklin 1853 --><ptr target="bib:b0891"/>, <citedRange>161-166</citedRange></bibl>
                <bibl n="1.1.1"><!-- Henzen 1854 --><ptr target="bib:b0892"/>, <citedRange>67-70</citedRange></bibl>
                <bibl n="1.1.2"><!-- Henzen 1856 --><ptr target="bib:b0893"/>, <citedRange>273-274, n° 6429</citedRange></bibl>
@@ -213,10 +214,11 @@
                		<lb n="11"/><w>per</w> <w>errorem</w> <w><unclear>au</unclear>t</w> <w>licentiam</w> 
                                                       <w>usurpata</w> <w>sunt</w>, <w>prae
                		<lb n="12" break="no"/>scriptione</w> <w><unclear>t</unclear>emporis</w> <w>confirmentur</w>, <w>tamen</w>, <space quantity="1" unit="character"/>
-               		<lb n="13"/><w>quoniam</w> <persName type="emperor"><w>divi</w> <name type="cognomen">Antonini</name></persName> 
+               		<lb n="13"/><w>quoniam</w> <persName type="emperor" key="marcus-aurelius"><w>divi</w> 
+               		   <name type="cognomen">Antonini</name></persName> 
                                                    <w>parentis</w> <w>nostri</w> <w>litte<space quantity="1" unit="character"/>
                		<lb n="14" break="no"/>ras</w>, <w>sed</w> <w>et</w> <w>fratrum</w> <w>imperatorum</w> <w>cogitamus</w>, <w>item</w>
-               		<lb n="15"/><persName type="attested"><name type="gentilicium">Antonii</name> <name type="cognomen">Hiberi</name></persName> 
+               		<lb n="15"/><persName type="attested"><name>Antonii</name> <name>Hiberi</name></persName> 
                                                       <w>gravissimi</w> <w>praesidis</w>, <w>quod</w> <w>attinet</w>
                		<lb n="16"/><w>ad</w> <w>ipsos</w> <placeName type="ethnic">Tyranos</placeName> <w>quique</w> <w>ab</w> 
                                                       <w>iis</w> <w>secundum</w> <w>leges</w> <space quantity="1" unit="character"/>
@@ -256,13 +258,13 @@
                		<lb n="39"/>δωρίαν</w> <w>τῇ</w> <w>μεγάλῃ</w> <w>αὐτῶν</w> <w>τύχῃ</w> <w>εὐχαριστή
                		<lb n="40" break="no"/>σητε</w>. <w>ἐρρῶσθαι</w> <w>ὑμᾶς</w> <w>καὶ</w> <w>εὐτυχεῖν</w> <w>πολ
                		<lb n="41" break="no"/>λοῖς</w> <w>ἔτεσιν</w> <w>εὔχομαι</w>. <space quantity="3" unit="character"/> <w>ἀπεδόθη</w> <w>πρὸ</w>
-               		<lb n="42"/><g ref="#stop"/> <num value="13">ιγ</num> <g ref="#stop"/> <w>καλανδῶν</w> <w>Μαρτίων</w>, 
-                                                   <w>Ληνεῶνος</w> <g ref="#stop"/> <num value="8">η</num> <g ref="#stop"/>
+               		<lb n="42"/><g ref="#stop"/> <num value="13">ιγ</num> <g ref="#stop"/> <w>καλανδῶν</w> <rs type="month" ref="mar"><w>Μαρτίων</w></rs>,
+                     <rs type="month" ref="lenaion"><w>Ληνεῶνος</w></rs> <g ref="#stop"/> <num value="8">η</num> <g ref="#stop"/>
                		<lb n="43"/><w>ἀνεστάθη</w> <w>ἐπὶ</w> <g ref="#stop"/> <persName type="consul"><name>Μουκιανοῦ</name></persName> 
                                                       <w>καὶ</w> <persName type="consul"><name>Φαβιανοῦ</name></persName>
-               		<lb n="44"/><w>ὑπάτων</w> <g ref="#stop"/> <w>ἐν</w> <w>τῷ</w> <g ref="#leaf"/> <num value="145">εμρ</num> <g ref="#leaf"/> 
+               		<lb n="44"/><w>ὑπάτων</w> <g ref="#stop"/> <w>ἐν</w> <w>τῷ</w> <g ref="#leaf"/> <date><num value="145">εμρ</num></date> <g ref="#leaf"/> 
                                                       <space quantity="1" unit="character"/> <w>ἔτει</w>, <g ref="#leaf"/> <space quantity="6" unit="character"/>
-               		<lb n="45"/><w>ἀρχῆς</w> <g ref="#stop"/> <persName type="attested"><name type="praenomen"><expan><abbr>Π</abbr><ex>οπλίου</ex></expan></name> 
+               		<lb n="45"/><w>ἀρχῆς</w> <g ref="#stop"/> <persName type="consul"><name type="praenomen"><expan><abbr>Π</abbr><ex>οπλίου</ex></expan></name> 
                                                    <g ref="#stop"/> <name type="gentilicium">Αἰλίου</name> <name type="cognomen">Καλπουρνίου</name></persName>. 
                                                    <space quantity="10" unit="character"/>
                       </ab>
@@ -271,7 +273,7 @@
          <div type="apparatus">
             <listApp>
                <app loc="1-7">
-                  <rdg source="bib:CIL"><note>Mommsen (CIL) restituit</note></rdg>
+                  <rdg source="bib:CIL"><note>Mommsen restituit</note></rdg>
                </app>
                <app loc="1-6">
                   <rdg source="bib:b0889">[Imperatoriam privi|le]gii auc[toritatem, epistula de jure
