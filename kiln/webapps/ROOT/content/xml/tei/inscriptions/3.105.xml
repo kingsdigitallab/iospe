@@ -167,12 +167,18 @@
       <body>
          <div type="bibliography">
             <!-- Издания -->
-            <listBibl>
-               <bibl><!-- Латышев 1915 --><ptr target="bib:b0154"/>, <citedRange>32, № 3</citedRange> (фрагмент 2)</bibl>
-               <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>399</citedRange></bibl>
-               <bibl><!-- НЭПХ --><ptr target="bib:НЭПХ"/> <citedRange>14</citedRange> (фрагменты 1 и 2)</bibl>
-            </listBibl>
-         </div>
+            <div type="bibliography" subtype="fragment" n="2">
+               <listBibl>
+                  <bibl><!-- Латышев 1915, 32, № 3 (фрагмент 2) --><ptr target="bib:b0154"/>, <citedRange>32, № 3</citedRange>
+                     (= <bibl><!-- (IOSPE I2 399) --><ptr target="IOSPE2"/> <citedRange>399</citedRange></bibl>)
+                  </bibl>
+               </listBibl>
+            </div>
+            <div type="bibliography" subtype="fragment" n="1 2">
+               <listBibl>
+                  <bibl><!--НЭПХ I 14 (фрагменты 1 и 2)--><ptr target="НЭПХ"/> <citedRange>14</citedRange></bibl>
+               </listBibl>
+            </div></div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
