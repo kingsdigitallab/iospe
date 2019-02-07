@@ -63,9 +63,11 @@
                         <seg xml:lang="ru">Херсонес.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0018" notAfter="0015" evidence="просопография">
+                     <origDate notBefore="-0018" notAfter="0014" precision="low" evidence="Просопографу">
                         <seg xml:lang="ru">между 18/17 до н.э. и 14/15 г. н.э.</seg>
                         <seg xml:lang="en">between 18/17 B.C.E. and 14/15 C.E.</seg>
+                        <certainty locus="value" match="../@notBefore" assertedValue="-0017"/>
+                        <certainty locus="value" match="../@notAfter" assertedValue="0015"/>
                      </origDate>
                   </origin>
                </history>
@@ -172,7 +174,7 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- Юргевич 1881a --><ptr target="bib:b0513"/>, 220, № <citedRange>1</citedRange></bibl>
+               <bibl><!-- Юргевич 1881a --><ptr target="bib:b0513"/>, <citedRange>220, №1</citedRange></bibl>
                <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>186</citedRange></bibl>
                <bibl><!-- IOSPE2 --><ptr target="bib:IOSPE2"/> <citedRange>354</citedRange></bibl>
                <bibl><!-- Виноградов 1992 --><ptr target="bib:b0757"/>, <citedRange>131</citedRange></bibl>
@@ -187,7 +189,7 @@
                <bibl><!-- Гайдукевич 1949 --><ptr target="bib:b0456"/>, <citedRange>322</citedRange> 
                (cf. <bibl type="comparison"><!-- Gajdukevič 1971 --><ptr target="bib:b0300"/>, <citedRange>335</citedRange></bibl>)</bibl>
                <bibl><!-- Кадеев 1979 --><ptr target="bib:b0471"/>, <citedRange>59</citedRange></bibl>
-               <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, 26, № <citedRange>14</citedRange></bibl>
+               <bibl><!-- Соломоник 1990 --><ptr target="bib:b0506"/>, <citedRange>26, №14</citedRange></bibl>
                <bibl><!-- Зубарь 1987 --><ptr target="bib:b0466"/>, <citedRange>128</citedRange></bibl>
                <bibl><!-- Зубарь 1994 --><ptr target="bib:b0077"/>, <citedRange>18</citedRange></bibl>
                <bibl><!-- Makarov 2007 --><ptr target="bib:b0434"/>, <citedRange>880</citedRange></bibl>
@@ -203,7 +205,7 @@
                                        <w><supplied reason="lost">τᾶν</supplied></w> <w><supplied reason="lost">ποτὶ</supplied></w> <w><supplied reason="lost">τᾶι</supplied></w> 
                                        <placeName><supplied reason="lost">Ταυρικᾶι</supplied></placeName> <w><supplied reason="lost">πρόεδροι</supplied></w>
                                        <w><supplied reason="lost">εἶ</supplied>
-                     <lb n="2" break="no"/>παν</w> <w>ἐπειδ<unclear>ὴ</unclear></w> 
+                     <lb n="2" break="no"/>παν</w> <w>ἐπειδ<unclear>ὴ</unclear></w>
                                     <persName type="attested" ref="#person1036"><name nymRef="Ἀμινίας"><unclear>Ἀ</unclear>μ<unclear>ιν</unclear><supplied reason="lost" cert="low">ίας</supplied></name></persName> 
                                     <w><supplied cert="low" reason="lost">πρεσβευτὰς</supplied></w> <supplied reason="lost"><w>τᾶς</w></supplied> 
                                     <w><supplied reason="lost">μεγί</supplied>
@@ -215,7 +217,7 @@
                      <lb n="5"/><w><supplied reason="lost">π</supplied><unclear>ε</unclear>πιστευμένος</w> <w part="I">προ</w> 
                                  <gap reason="lost" extent="unknown" unit="character"/>
                      <lb n="6"/><gap reason="lost" unit="character" quantity="2"/><w><supplied reason="lost">τὰ</supplied>ν</w> 
-                                 <w>ἐπιδαμ<unclear>ία</unclear><supplied reason="lost">ν</supplied></w> <w><unclear>τ</unclear>ᾶς</w> 
+                                <w>ἐπιδαμ<unclear>ία</unclear><supplied reason="lost">ν</supplied></w> <w><unclear>τ</unclear>ᾶς</w> 
                                  <gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                      <lb n="7"/><gap reason="lost" quantity="4" precision="low" unit="character"/> <w><supplied reason="lost">π</supplied>ρὸς</w> <w>πάντων</w> 
                                  <orig>ΑΓ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" unit="character" extent="unknown"/>
@@ -295,9 +297,7 @@
                      <rdg>καὶ δ̣[ᾶμος ὁ Χερσονασιτᾶν - - -]</rdg>
                   </app>
                   <app loc="9">
-                     <note>vestigia</note>
-                     <note>om. edd.</note>
-                  </app>
+                     <note>vestigia; om. edd.</note></app>
                </listApp>
             </div>
             <div type="textpart" n="2">

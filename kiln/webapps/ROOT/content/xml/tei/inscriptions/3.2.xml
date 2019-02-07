@@ -12,20 +12,22 @@
          </titleStmt>
          <publicationStmt>
             <authority>King's College London</authority>
-            <idno type="IM2015">30.289</idno><idno type="filename">3.2</idno>
+            <idno type="IM2015">30.289</idno>
+            <idno type="filename">3.2</idno>
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country></country>
-                  <altIdentifier xml:lang="ru">
-                     <repository>НЗХТ</repository>
-                     <idno>3593</idno>
-                  </altIdentifier>
-                  <altIdentifier xml:lang="en">
-                     <repository></repository>
-                     <idno></idno>
-                  </altIdentifier>
-               </msIdentifier>
+                  <msIdentifier>
+                     <country/><region>Crimea</region>
+                     <altIdentifier xml:lang="ru">
+                        <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                        <idno>3593</idno>
+                     </altIdentifier>
+                     <altIdentifier xml:lang="en">
+                        <repository>National Preserve of Tauric Chersonesos</repository>
+                        <idno>3593</idno>
+                     </altIdentifier>
+                  </msIdentifier>
                <msContents>
                   <summary corresp="document-search.xml#doc15">
                      <seg xml:lang="ru">Декрет.</seg>
@@ -53,8 +55,8 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
-                           <seg xml:lang="en"></seg>
+                           <seg xml:lang="ru">Лицевой фас.</seg>
+                           <seg xml:lang="en">On the front.</seg>
                         </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -74,7 +76,7 @@
                         <seg xml:lang="ru">Херсонес Таврический.</seg>
                         <seg xml:lang="en">Chersonesos.</seg>
                      </origPlace>
-                     <origDate notBefore="-0033" notAfter="0050" evidence="Палеография исторический_контекст">
+                     <origDate notBefore="-0033" notAfter="0050" precision="low" evidence="Палеография исторический_контекст">
                         <seg xml:lang="ru">последняя треть I в. до н.э. - середина I в. н.э.</seg>
                         <seg xml:lang="en">last third of I century B.C.E. - middle of I century C.E.</seg>
                      </origDate>
@@ -124,11 +126,12 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!-- Латышев 1892 --><ptr target="bib:b0125"/>, 14, № <citedRange>2</citedRange></bibl>
-               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 68</citedRange> (=<bibl><ptr target="bib:IGR"/> <citedRange>I 864</citedRange></bibl>)</bibl>
+               <bibl><!-- Латышев 1892 --><ptr target="bib:b0125"/>, <citedRange>14, № 2</citedRange></bibl>
+               <bibl><!-- IOSPE --><ptr target="bib:IOSPE"/> <citedRange>IV 68</citedRange> 
+                  (=<bibl><ptr target="bib:IGR"/> <citedRange>I 864</citedRange></bibl>)</bibl>
                <bibl><!-- IOSPE I2 --><ptr target="bib:IOSPE2"/> <citedRange>355</citedRange> et corrigendum p. <citedRange>594</citedRange>
                   (= <bibl><ptr target="bib:ISE"/><citedRange>III 149</citedRange></bibl>
-               cf. <bibl type="comparison"><ptr target="bib:SEG"/> <citedRange>50, 690</citedRange>)</bibl></bibl>
+                  cf. <bibl type="comparison"><ptr target="bib:SEG"/> <citedRange>50, 690</citedRange></bibl>)</bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -214,8 +217,8 @@
                   <lb n="23"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="καταρτισμός">κ<supplied reason="lost">α</supplied>τ<supplied 
                      reason="lost">α</supplied>ρτισμὸ<supplied reason="lost">ν</supplied></w> <w lemma="καί">καὶ</w> <w lemma="τεῖχος">τειχέων</w> <w 
                         lemma="ἐπισκευή">ἐπισκευ<supplied reason="lost">άν</supplied></w><g ref="#stop"/> <w lemma="ἔτι">ἔτι</w> <w lemma="δέ">δὲ</w> <w 
-                           lemma="πόλεμος">πο<supplied reason="lost">λέ
-              	<lb n="24" break="no"/>μου</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> <w 
+                           lemma="πόλεμος">πο<supplied reason="lost">λέ</supplied>
+              	<lb n="24" break="no"/> <supplied reason="lost" cert="low">μου</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> <w 
               	   lemma="παραχειμασία"><supplied reason="lost">παραχ</supplied><unclear>ει</unclear>μασίαν</w> <w lemma="ποιέω">ποιασάμενος<!-- right lemma? --></w> 
                <w lemma="σῖτος">σίτωι</w> <w lemma="τε">τε</w> <w lemma="θλίβω">θλειβομ<supplied reason="lost">ένων</supplied></w>
               	<lb n="25"/> <supplied reason="lost"><w lemma="ὁ">τῶν</w> <w lemma="πολίτης">πολιτᾶν</w></supplied> <gap reason="lost" extent="unknown" unit="character"/> 
@@ -242,15 +245,15 @@
                <w lemma="μέχρι">μ<supplied reason="lost">έχρι</supplied></w>
              	<lb n="29"/><gap reason="lost" extent="unknown" unit="character"/>
                <supplied reason="lost"><w lemma="ὁ">τοῦ</w></supplied> <w lemma="μέγας"><supplied 
-             	   reason="lost">μ</supplied>εγίστου</w> <persName type="divine"><w>Αὐτοκράτορος</w></persName>
+             	   reason="lost">μ</supplied>εγίστου</w> <w>Αὐτοκράτορος</w>
                <w lemma="ὁ">καὶ</w> <w lemma="ὁ">τᾶς</w> <w 
              	      lemma="σύγκλητος">συνκλ<supplied reason="lost">ή</supplied>το<supplied reason="lost">υ</supplied></w>
                <gap reason="lost" quantity="3" unit="character"/>
                	<lb n="30"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="παρά">παρὰ</w> <w lemma="ὁ">τοῦ</w> <w lemma="δῆμος">δήμου</w> <w lemma="ὁ">τοῦ</w> 
-               <placeName type="ethnic">Ῥωμαίων</placeName> <w lemma="καί">καὶ</w> <w lemma="ὁ">ταῖς</w> <w lemma="ἴδιος">ἰδί<supplied reason="lost">αις</supplied></w>
+               <w lemma="Ῥωμαῖος">Ῥωμαίων</w> <w lemma="καί">καὶ</w> <w lemma="ὁ">ταῖς</w> <w lemma="ἴδιος">ἰδί<supplied reason="lost">αις</supplied></w>
                	<lb n="31"/><supplied reason="lost"><w lemma="δαπάνη">δαπάναις</w> <w lemma="πορεύω">πορευθεὶς</w> <w lemma="εἰς">εἰς</w> <placeName>Ῥώμαν</placeName> 
                	   <w>ἀνεκτάσατο</w> <w lemma="ὁ">τὰν</w></supplied> <w lemma="πάτριος">πάτριον</w> 
-               <placeName type="ethnic">Χ<supplied reason="lost">ε</supplied>ρσονασίταις</placeName> <w lemma="ἐλευθερία">ἐλευθερία<supplied reason="lost">ν</supplied></w>
+               <placeName>Χ<supplied reason="lost">ε</supplied>ρσονασίταις</placeName> <w lemma="ἐλευθερία">ἐλευθερία<supplied reason="lost">ν</supplied></w>
                	<lb n="32"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ιν</w> <w lemma="ὑπό">ὑπὸ</w> <w lemma="ὁ">τῶν</w> 
                <w lemma="νεωτερίζω">νεω<supplied reason="lost">τ</supplied>εριξάντων</w> <w lemma="τύραννος">τύραννον</w> <orig>α</orig><gap reason="lost" quantity="2" unit="character"/>
               	<lb n="33"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ὁ"><supplied reason="lost">τᾶ</supplied>ς</w> <w lemma="πόλις">πόλιος</w> 
@@ -264,7 +267,7 @@
                   <lb n="36"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>ι</unclear></orig> <w lemma="φυσικός">φυσικὰν</w> <w lemma="συμπαθία">συμπαθίαν</w> 
                <w lemma="ἀναγκάζω">ἀνανκάσ<unclear>θ</unclear><supplied reason="lost">η</supplied></w> <gap reason="lost" quantity="5" unit="character" precision="low"/>
                	<lb n="37"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w lemma="ὁ">τὰ</w> <w lemma="ὁ">τᾶι</w> <w lemma="πόλις">πόλει</w></supplied> 
-               <w lemma="συμφέρω"><supplied reason="lost">συ</supplied>μφέροντα</w><g ref="#stop"/> <w lemma="ὅπως">ὅπως</w> <w type="lemma">οὖν</w> <w lemma="καί">καὶ</w> 
+               <w lemma="συμφέρω"><supplied reason="lost">συ</supplied>μφέροντα</w>· <w lemma="ὅπως">ὅπως</w> <w type="lemma">οὖν</w> <w lemma="καί">καὶ</w> 
                <w lemma="ὁ">ὁ</w> <w lemma="δῆμος">δᾶμο<supplied reason="lost">ς</supplied></w> <supplied reason="lost"><w type="φαίνω">φαίνηται</w></supplied>
                	<lb n="38"/><supplied reason="lost"><w lemma="ὁ">τοῖς</w> <w lemma="εὐεργέταις">εὐεργέταις</w> <w lemma="ἄξιος">ἄξίας</w> <w lemma="χάρις">χάριτας</w></supplied>
                <supplied reason="lost"><w lemma="ἀποδιδούς">ἀποδιδούς</w></supplied>, <w lemma="δοκέω"><supplied reason="lost">δε</supplied>δόχθαι</w> <w lemma="ὁ">τᾶι</w> 
@@ -294,65 +297,64 @@
             <listApp>
                <app loc="4">
                   <note>scripsi;</note> 
-                  <rdg source="bib:IOSPE2">Υ̣ΣΥ[....]ΕΝΛΣΚΙΝΔΥ;</rdg> 
+                  <rdg source="bib:IOSPE2">Υ̣ΣΥ[....]ΕΝΛΣΚΙΝΔΥ</rdg> 
                   <rdg source="bib:ISE">[ὑπομ]ένας (sic) κίνδυ[νον].</rdg>
                </app>
                <app loc="5">
-                  <rdg source="bib:ISE">ἐπιστάντος;</rdg>
+                  <rdg source="bib:ISE">ἐπιστάντος</rdg>
                   <rdg source="bib:IOSPE">ΙΙΠΙΞΙΑΝΤΟΣ.</rdg></app>
                <app loc="9">
                   <note>supplevi;</note> 
                   <rdg source="bib:IOSPE2">[οὐδε]μίαν.</rdg>
                </app>
                <app loc="10">
-                  <note>in.:</note>
-                  <rdg source="bib:ISE">[ἀνακομισ]θεὶς;</rdg> 
+                  <rdg source="bib:ISE"><note>in.:</note>[ἀνακομισ]θεὶς</rdg> 
                   <rdg source="bib:IOSPE2">ΗΘΕΙ.</rdg>
                </app>
                <app loc="11">
                   <note>scripsi;</note> 
-                  <rdg source="bib:IOSPE2">[εἰ]πεῖν [- - -]ΛΠΑΙ[. . εὐ]νομ[ώ]τατ[ον];</rdg> 
+                  <rdg source="bib:IOSPE2">[εἰ]πεῖν [- - -]ΛΠΑΙ[. . εὐ]νομ[ώ]τατ[ον]</rdg> 
                   <rdg source="bib:ISE">[ἀ]νομ[ώ]τατ[ον].</rdg>
                </app>
                <app loc="12"><rdg source="bib:ISE">[ἀντ]ιλαβέσθα[ι].</rdg></app>
                <app loc="13">
-                  <rdg source="bib:IOSPE2">[- - - τὰν κατάστασιν τ]ῶν [πραγμ]άτων;</rdg>
-                  <note>[περί] - supplevi.</note>
+                  <rdg source="bib:IOSPE2">[- - - τὰν κατάστασιν τ]ῶν [πραγμ]άτων</rdg>
+                  <rdg>[περί] <note>supplevi.</note></rdg>
                </app>
                <app loc="15/16"><rdg source="bib:IOSPE">[αἱρε/θεὶς ἁγεμών?]</rdg></app>
                <app loc="18">
-                  <note>fin.:</note>
-                  <rdg source="bib:ISE">διέ[τήρε][σεν].</rdg></app>
+                  <rdg source="bib:ISE"><note>fin.:</note>διέ[τήρεσεν]</rdg></app>
                <app loc="19">
-                  <note>in.:</note><rdg source="bib:IOSPE">τᾶς ἐμφυλί?]ου.</rdg></app>
+                  <rdg source="bib:IOSPE"><note>in.:</note> τᾶς ἐμφυλί?]ου.</rdg></app>
                <app loc="20">
-                  <note>[κατ]οικ̣οῦντας - scripsi;</note>
+                  <rdg>[κατ]οικ̣οῦντας <note>scripsi</note></rdg>
                   <rdg source="bib:IOSPE">[ἀνα]κοι[ν]οῦντας.</rdg></app>
                <app loc="21">
-                  <note>in.:</note>
-                  <rdg source="bib:IOSPE">[ὑπὸ τῶν πολιτᾶν? ἐπιμελητάς πασᾶν τᾶν κ]οινᾶν (cf. <note source="bib:IOSPE2" type="comparison">p. 594</note>);</rdg> 
+                  <rdg source="bib:IOSPE"><note>in.:</note>[ὑπὸ τῶν πολιτᾶν? ἐπιμελητάς πασᾶν τᾶν κ]οινᾶν 
+                     (cf. <note source="bib:IOSPE2" type="comparison">p. 594</note>)
+                  </rdg> 
                   <rdg source="bib:ISE">[διοκητής - - - τᾶν κ]οινᾶν.</rdg></app>
-               <app loc="22"><note>fin.:</note> 
-                  <note>[κατ]ασκευ[άσας?] supplevi;</note> 
+               <app loc="22"> 
+                  <rdg><note>fin.:</note> [κατ]ασκευ[άσας?] <note>supplevi</note></rdg>
                   <rdg source="bib:IOSPE">[κατ]ασκευ[ὰν ..].</rdg>
                </app>
-               <app loc="23/24"><rdg source="bib:IOSPE2">ἔτι δὲ πο[λέ/μου ἐπιστάντος τᾶι πόλει? τῶν ἐπιτηδείων? δοκ]ιμασίαν.</rdg></app>
+               <app loc="23/24">
+                  <rdg source="bib:IOSPE2">ἔτι δὲ πο[λέ/μου ἐπιστάντος τᾶι πόλει? τῶν ἐπιτηδείων? δοκ]ιμασίαν.</rdg></app>
                <app loc="24"><rdg source="bib:ISE">[παραχει]μασίαν;</rdg> 
                   <note>Ε̣Ι̣ΜΑΣΙΑΝ - эстампаж К.К. Косцюшко-Валюжинича.</note><!-- another edition? not in bibl — is this saying IM read it from KKKV's squeeze? -->
                </app>
                <app loc="24/25"><rdg source="bib:ISE">θλειβόμενος / [- - -].</rdg></app>
-               <app loc="28"><note>in.:</note> 
-                  <note>μ[έχρι] - supplevi.</note></app>
+               <app loc="28"> 
+                  <rdg><note>in.:</note>μ[έχρι] <note>supplevi.</note></rdg></app>
                <app loc="29"><rdg source="bib:ISE">[ἀρχιερέως μ]εγίστου.</rdg></app>
                <app loc="32">
                   <rdg source="bib:IOSPE">[ἰδὼν δὲ τὰν πόλιν κακῶς πάσχουσαν? πάλ]ιν ὑπὸ τῶν νεω[τ]εριξάντων, τύραννον ἀ[να/καλεσάντων]</rdg>
                   <rdg source="bib:ISE"><note>fin.:</note> ἀ[πο/δεχθέντα].</rdg>
                </app>
-               <app loc="36"><note>in.:</note><rdg source="bib:IOSPE">[- - - κα]ὶ.</rdg></app>
+               <app loc="36"><rdg source="bib:IOSPE"><note>in.:</note>[- - - κα]ὶ.</rdg></app>
                <app loc="38/39"><rdg source="bib:IOSPE">στ[εφανῶ/σαι ἐπὶ τοῖς προγεγραμμένοις τὸν δεῖνα - - -ν]ος.</rdg></app>
                <app loc="41">
-                  <note>in.:</note>
-                  <rdg source="bib:IOSPE">[ἐν τῶι ἐπισαμοτάτωι τᾶς πόλιος τόπωι?].</rdg></app>
+                  <rdg source="bib:IOSPE"><note>in.:</note>[ἐν τῶι ἐπισαμοτάτωι τᾶς πόλιος τόπωι?].</rdg></app>
                <app loc="41/42">
                   <rdg source="bib:IOSPE2">τ’ ἀ[ναστάσε/ος τᾶς ἰκόνος καὶ τᾶς ἀναγορεύσεος τοῦ στεφάνου - - - τᾶς] φύσεο[ς - - -];</rdg> 
                </app>
