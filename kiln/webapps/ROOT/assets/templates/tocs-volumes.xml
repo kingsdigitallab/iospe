@@ -61,7 +61,7 @@
                             <xsl:with-param name="values" select="('1.12', '1.13', '1.14')"/>
                         </xsl:call-template>
                         <dt>
-                            &#x2014; <i18n:text>Public inscriptions of uncertain type</i18n:text> (Varia)
+                            &#x2014; <i18n:text>Public inscriptions of uncertain type</i18n:text>. Varia
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.15', '1.16')"/>
@@ -70,7 +70,13 @@
                             <i18n:text>Dedicatory and other inscriptions with religious content</i18n:text><br /> &#x2014; <i18n:text>Dedications of private individuals</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('1.17', '1.18', '1.19', '1.20', '1.21', '1.22')"/>
+                            <xsl:with-param name="values" select="('1.17', '1.18', '1.19', '1.20')"/>
+                        </xsl:call-template>
+                        <dt>
+                            &#x2014; <i18n:text>Dedications</i18n:text>. Varia
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('1.21', '1.22')"/>
                         </xsl:call-template>
                         <dt>
                             <i18n:text>Building inscriptions</i18n:text><br /> &#x2014; <i18n:text>Building inscriptions of rulers and officials</i18n:text>

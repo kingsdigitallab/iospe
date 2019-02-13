@@ -130,6 +130,7 @@
      </xi:include>
       
       <revisionDesc>
+         <change when="2019-01-12" who="LE">biblio clean up</change>
          <change when="2015-11-18" who="CB">Added missing biblio tags</change>
          <change when="2015-11-06" who="CB">Added origDate</change>
          <change when="2015-10-19" who="CB">Bibliography</change>
@@ -156,25 +157,25 @@
             <!-- Издания -->
             <listBibl>
                <bibl><!--Виноградов, Зайцев 2003--><ptr target="bib:b0455"/>
-               (= <bibl><!--SEG 53--><ptr target="SEG"/> <citedRange>53, 775</citedRange> </bibl>)</bibl>
-               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/>, 52, № <citedRange>17</citedRange></bibl>
+               (= <bibl><!--SEG 53--><ptr target="bib:SEG"/> <citedRange>53, 775</citedRange> </bibl>)</bibl>
+               <bibl><!--Зайцев 2003--><ptr target="bib:b0464"/>, <citedRange>52, № 17</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
                <bibl><!--Сидоренко 2005--><ptr target="bib:b0496"/>
-               (= <bibl><!--SEG  56-->, <ptr target="SEG"/> <citedRange>56, 889</citedRange></bibl>)</bibl>
+               (= <bibl><!--SEG  56-->, <ptr target="bib:SEG"/> <citedRange>56, 889</citedRange></bibl>)</bibl>
                <bibl><!--Müller 2010--><ptr target="bib:b0435"/>, <citedRange>400, № 23</citedRange></bibl>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               	<lb n="1"/><lg met="elegiac"><l met="hexameter"><persName type="attested"><name>Λαΐνε<unclear>ο</unclear>ν</name></persName> 
+               	<lb n="1"/><lg met="elegiac"><l met="hexameter"><w>Λαΐνε<unclear>ο</unclear>ν</w> 
                	                    <w>τόδε</w> <w>σ<unclear>ῆ</unclear>μα</w> 
                                     <w>μεγαυχ<supplied reason="lost">ήτοι</supplied><unclear>ο</unclear></w>  <w>ἔ<supplied reason="lost">στησεν</supplied></w></l>
                	<lb n="2"/><l met="pentamerer"><persName type="attested" ref="#person1023"><name nymRef="Ἀργότας"><supplied reason="lost">Ἀ</supplied>ργότ<unclear>ο</unclear>υ</name></persName> <w>ὁ</w> 
-                                    <placeName>Σκυθίης</placeName> <w>κοί<unclear>ρα</unclear>νος</w> 
+                                    <placeName type="ethnic">Σκυθίης</placeName> <w>κοί<unclear>ρα</unclear>νος</w> 
                                     <w>ἱππ<unclear>ο</unclear>β<unclear>ό</unclear><supplied reason="lost">του</supplied></w>·</l></lg>
                	<lb n="3"/><lg met="elegiac"><l met="hexameter"><w><supplied reason="lost">αἰ</supplied><unclear>ζη</unclear>οῖς</w> <w>δὲ</w> 
                	                 <w>λιπόντ<unclear>α</unclear></w> <w>ποθὴν</w> 
@@ -188,7 +189,7 @@
                                  <placeName type="ethnic"><name>Μαιω<supplied reason="lost">τῶν</supplied></name></placeName> 
                                  <w><supplied reason="lost">τ’</supplied></w> <gap reason="lost" extent="unknown" unit="character"/><w part="M"><unclear>ΟΠ</unclear><gap reason="illegible" quantity="3" unit="character"/><gap reason="lost" quantity="1" unit="character"/></w> 
                                  <w>δά<supplied reason="lost" cert="low">μασεν </supplied></w></l></lg>
-               	<lb n="7"/><lg met="elegiac"><l met="hexameter"><w><unclear>υ</unclear>ἱ<unclear>εῖ</unclear>ς</w> <w><unclear>δ᾽</unclear></w> <w><supplied reason="lost">ἑξήκο</supplied><unclear>ντα</unclear></w> 
+               	<lb n="7"/><lg met="elegiac"><l met="hexameter"><w><unclear>υ</unclear>ἱ<unclear>εῖ</unclear>ς</w> <w><unclear>δ</unclear>'</w> <w><supplied reason="lost">ἑξήκο</supplied><unclear>ντα</unclear></w> 
                                     <w><unclear>κό</unclear><supplied reason="lost">ρ</supplied><unclear>α</unclear>ς</w> <w>ἴσ<unclear>α</unclear>ς</w> 
                                        <w><unclear>τ</unclear>ε</w><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/></l>
                	<lb n="8"/><l met="pentameter"><w part="I"><unclear>θ</unclear><supplied reason="lost">ρ</supplied><unclear>ε</unclear>ψ<gap reason="lost" extent="unknown" unit="character"/></w> <w><supplied reason="lost">πι</supplied>νυτοῦ</w> <w>παιδὸς</w> <w part="I">ΙΔ<gap reason="lost" extent="unknown" unit="character"/></w></l>
@@ -199,21 +200,23 @@
             <listApp>
                <app>
                   <note>Восстановления, не отраженные в критическом аппарате, принадлежат edd. pr. в
-                     работе В(иноградов), З(айцев) 2003. Незначительные расхождения с editio
-                     princeps не отмечены.</note>
+                     работе Виноградов, Зайцев 2003. Незначительные расхождения с editio
+                     princeps не отмечены.</note><!-- when this app will disappear ; on the website will go away, because this app has no loc -->
                </app>
                <app loc="2">
                   <note>на камне после [Ἀ]ργότ<unclear>ο</unclear>υ кружок-разделитель</note>
                </app>
                <app loc="3">
                   <rdg source="bib:b0455">[αἰ]<unclear>ζη</unclear>οῖς δὲ λιπόντα ποθὴν προσ[ήκοντα]
-                        <unclear>ἄ</unclear>γ<unclear>ευ</unclear>ς <note>конец стк. составляет
+                        <unclear>ἄ</unclear>γ<unclear>ευ</unclear>ς</rdg> 
+                     <rdg><note>конец стк. составляет
                         фрагмент, на котором видна Σ и нижняя часть двух букв; не исключено, однако,
                         что фрагмент мог располагаться чуть ниже и относиться к концу стк. 4</note></rdg>
                </app>
                <app loc="4">
                   <rdg source="bib:b0455">[εἵ]νεκεν Ἑλλάνων στέργε φιλο[φροσύνης] <note>со
-                        ссылкой на Hdt. 5.92: φιλοφροσύνης τοῦ πατρός; я не исключаю, что обломок с
+                        ссылкой на Hdt. 5.92: φιλοφροσύνης τοῦ πατρός</note></rdg>
+                       <rdg><note>я не исключаю, что обломок с
                         буквой Σ и следами двух букв перед ней, который edd. pr. помещают в конец
                         стк. 3, мог относиться к концу стк. 4, в этом случае следует читать
                         φιλο[φροσύνη]<unclear>ς</unclear>.</note></rdg>
@@ -229,9 +232,10 @@
                   <rdg source="bib:b0455"><unclear>Θρ</unclear>αικῶν Μαιω[τῶν τ’ Ἄρει] <unclear>ὄπιν κί</unclear>δα[σεν]</rdg>
                </app>
                <app loc="7">
-                  <rdg source="bib:b0455">[ἔφυσεν] <note>однако в конце стк. после Ε виден след
+                  <rdg source="bib:b0455">[ἔφυσεν]</rdg> 
+                  <rdg><note>однако в конце стк. после Ε виден след
                         наклонной гасты (Χ или Υ)</note> 
-                  <note>e.g.: <unclear>τ</unclear>’ ε<unclear>ὐ</unclear>[ζώνους]</note></rdg>
+                  <note>e.g.:</note> <unclear>τ</unclear>’ ε<unclear>ὐ</unclear>[ζώνους]</rdg>
                </app>
                <app loc="8">
                   <rdg><note>в начале стк. вероятно</note>
