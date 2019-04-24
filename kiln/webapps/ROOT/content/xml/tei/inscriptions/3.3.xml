@@ -32,7 +32,7 @@
                            <material xml:lang="en">Marble.</material>
                            <p xml:lang="ru">Верхняя часть стелы, украшенной фронтоном с изображением
                               венка. Обломана со всех сторон.</p>
-                           <p xml:lang="en">Broken off on all sides.</p>
+                           <p xml:lang="en">Broken off on all sides.</p> <!-- add translation -->
                            <dimensions>
                               <height unit="cm">19,0</height>
                               <width unit="cm">18,0</width>
@@ -73,7 +73,7 @@
                      <seg xml:lang="ru">
                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь
                            (Херсонес).</placeName>
-                        <rs type="circumstances">Найдена 1904 г. Раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="circumstances">Найдена в 1904 г. Раскопки К.К. Косцюшко-Валюжинича.</rs>
                         <rs type="context">На главной улице, в стене постройки
                            византийского времени. </rs>
                      </seg>
@@ -99,6 +99,7 @@
      </xi:include>
       
       <revisionDesc>
+         <change when="2019-04-24" who="LE">Clean up with Makarov</change>
          <change when="2015-11-05" who="CB">Added origDate</change>
          <change when="2015-10-27" who="CB">correcting app crit</change>
          <change when="2015-10-13" who="CB">Bibliography</change>
@@ -125,10 +126,11 @@
          <div type="bibliography">
             <!-- Издания -->
             <listBibl>
-               <bibl><!--Латышев 1905--><ptr target="bib:b0145"/>, 100, № <citedRange>8</citedRange></bibl>
-               <bibl><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>345</citedRange></bibl>
-               <bibl><!--Виноградов 1990--><ptr target="bib:b0454"/>, <citedRange>63</citedRange>
-               (= <bibl><!--SEG 42--><ptr target="bib:SEG"/> <citedRange>42, 692</citedRange></bibl>)</bibl>
+               <bibl n="1"><!--Латышев 1905--><ptr target="bib:b0145"/>, <citedRange>100, № 8</citedRange></bibl>
+               <bibl n="2"><!--IOSPE I2--><ptr target="bib:IOSPE2"/> <citedRange>345</citedRange></bibl>
+               <bibl n="3"><!--Виноградов Ю.Г. 1990 51-64--><ptr target="bib:b1031"/>, <citedRange>51-64</citedRange>
+               (<bibl><!--SEG 42--><ptr target="bib:SEG"/> <citedRange>42, 692</citedRange></bibl>)</bibl>
+               <bibl n="3.1"><!--Vinogradov 1997b, 491--><ptr target="bib:b1030"/> <citedRange>491</citedRange></bibl>
             </listBibl>
          </div>
          <div type="bibliography" subtype="commentaries">
@@ -159,8 +161,9 @@
          </div>
          <div type="apparatus">
             <listApp>
+               <app loc="E"><note>Vinogradov 1990</note></app> <!-- this E is a working title; Makarov wants to highlight the publication where everyone can see the rest of the apparatus -->
                <app loc="2">
-                  <rdg source="bib:b0145 bib:IOSPE2">[ ὁ δεῖνα Ε]ὐθίου</rdg>
+                  <rdg source="bib:b0145 bib:IOSPE2">[ὁ δεῖνα Ε]ὐθίου</rdg>
                </app>
                <app loc="3">
                   <rdg source="bib:b0454">[ἀνὴρ καλὸς καὶ ἀγαθ]ὸ[ς]</rdg>
@@ -187,7 +190,17 @@
             and supplies from his own means [the needs] of those citizens who come to him, [both] publ[ic and private] - - -</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p>3-6. Дополнения Виноградова с некоторыми изменениями.</p>
+            <p>Дополнения, специально не отмеченные в критическом аппарате даны по изданию Виноградов 1990.</p>
+            <p>2. Чтение патронимика [Ε]ὐθίου в IOSPE сомнительно; ср. LGPN IV, s.v. Εὔθιος; Avram, PPE, № 2574-2575.</p>
+            <p>Эта надпись наряду ольвийскими документами - проксенией, данной херсонеситу [---],
+               сыну Пираллиона (IOlb 3А-Б + 12 + 107, нач. IV в. до н.э.; ср. Виноградов 1989, 139),
+               декретом в честь херсонеситов Аполлония, сына Евфронея, и его сыновей Ап[---],
+               Аполлония и Евфронея (ISE II 132; cf. IOlb 28 и 29, сер. III в. до н.э.) и декретом в честь Дионисия, сына Тагона 
+               (IOlb 20, кон. III в. до н.э.) являются основными эпиграфическими свидетельствами о ранних херсонесско-ольвийских контактах. 
+               Относительно различных исторических реконструкций отношений Ольвии и 
+               Херсонеса в классическое и раннеэллинистическое время см.: Леви 1953, 181; 
+               Карышковский 1965; Щеглов 1978, 120; Виноградов 1978, 64; Ščeglov 1987, 245; 
+               Виноградов 1989, 170; Виноградов, Щеглов 1990, 323; Рогов 1999, 135.</p>
          </div>
          <div type="commentary" xml:lang="en">
             <p/>
