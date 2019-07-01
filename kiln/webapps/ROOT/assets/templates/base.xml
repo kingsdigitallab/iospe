@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <kiln:root xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:xi="http://www.w3.org/2001/XInclude"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
-  <!-- Imports the default variables. -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/defaults.xsl"/>
+    <!-- Imports the default variables. -->
+    <xsl:import href="cocoon://_internal/template/xsl/stylesheets/defaults.xsl"/>
 
-  <!-- Imports the menu stylesheet -->
-  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/menu/menu.xsl"/>
+    <!-- Imports the menu stylesheet -->
+    <xsl:import href="cocoon://_internal/template/xsl/stylesheets/menu/menu.xsl"/>
 
-  <kiln:block name="html">
+    <kiln:block name="html">
     <html class="no-js">
       <kiln:block name="head">
         <head>
@@ -22,19 +22,19 @@
           </title>
           <kiln:block name="css">
             <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/normalize.css"
-              rel="stylesheet" type="text/css"/>
+                rel="stylesheet" type="text/css"/>
             <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/foundation.min.css"
-              rel="stylesheet" type="text/css"/>
+                rel="stylesheet" type="text/css"/>
             <link href="{$kiln:assets-path}/scripts/vendor/font-awesome/css/font-awesome.min.css"
-              rel="stylesheet" type="text/css"/>
+                rel="stylesheet" type="text/css"/>
 
             <link href="{$kiln:assets-path}/styles/base.css" rel="stylesheet" type="text/css"/>
             <link href="{$kiln:assets-path}/styles/site.css" rel="stylesheet" type="text/css"/>
           </kiln:block>
           <kiln:block name="js">
             <script src="{$kiln:assets-path}/scripts/vendor/modernizr/modernizr.js">&#160;</script>
-            
-            
+
+
           </kiln:block>
           <kiln:block name="head-extra"/>
           <style type="text/css">
@@ -143,18 +143,18 @@
                      jQuery or Zepto. -->
                 <script src="{$kiln:assets-path}/scripts/vendor/jquery/dist/jquery.js">&#160;</script>
                 <script
-                  src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js"
-                  >&#160;</script>
+                    src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js"
+                    >&#160;</script>
                 <script
-                  src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.dropdown.js"
-                  >&#160;</script>
+                    src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.dropdown.js"
+                    >&#160;</script>
                 <script
-                  src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.topbar.js"
-                  >&#160;</script>
+                    src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.topbar.js"
+                    >&#160;</script>
 
                 <kiln:block name="mainjs">
                   <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
-                    data-main="{$kiln:assets-path}/scripts/base">&#160;</script>
+                      data-main="{$kiln:assets-path}/scripts/base">&#160;</script>
                 </kiln:block>
 
                 <script>$(document).foundation();</script>
@@ -177,6 +177,7 @@
             <!-- 12 (no columns) -->
           </div>
           <!-- row -->
+          <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
         </body>
       </kiln:block>
     </html>
