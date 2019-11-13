@@ -595,6 +595,7 @@
 
       <!-- Index / Letter -->
       <!-- NAMES ONLY: Attested -->
+      
       <map:match pattern="names/*-*.html">
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/names/{1}-{2}.html"/>
@@ -615,25 +616,25 @@
       </map:match>
 
       <map:match pattern="names/*.html">
-        <map:aggregate element="aggregation" label="content">
-          <map:part src="cocoon://_internal/menu/main.xml?url=indices/names/{1}.html"/>
-          <map:part src="cocoon:/getLetters/anthroponymic"/>
-          <map:part src="cocoon:/getIndex/anthroponymic/{1}"/>
-        </map:aggregate>
-        <!-- DEBUG -->
-        <!--<map:serialize type="xml"/>-->
-        <!-- END DEBUG -->
-        <map:transform src="cocoon://_internal/template/indices.xsl">
-          <map:parameter name="url" value="indices/names/{1}.html"/>
-          <map:parameter name="ancient-lang" value="all"/>
-          <map:parameter name="index" value="anthroponymic"/>
-          <map:parameter name="lang" value="en"/>
-          <map:parameter name="current" value="{1}"/>
-        </map:transform>
-        <map:transform type="i18n">
-          <map:parameter name="locale" value="en"/>
-        </map:transform>
-        <map:serialize type="xhtml"/>
+            <map:aggregate element="aggregation" label="content">
+              <map:part src="cocoon://_internal/menu/main.xml?url=indices/names/{1}.html"/>
+              <map:part src="cocoon:/getLetters/anthroponymic"/>
+              <map:part src="cocoon:/getIndex/anthroponymic/{1}"/>
+            </map:aggregate>
+            <!-- DEBUG -->
+            <!--<map:serialize type="xml"/>-->
+            <!-- END DEBUG -->
+            <map:transform src="cocoon://_internal/template/indices.xsl">
+              <map:parameter name="url" value="indices/names/{1}.html"/>
+              <map:parameter name="ancient-lang" value="all"/>
+              <map:parameter name="index" value="anthroponymic"/>
+              <map:parameter name="lang" value="en"/>
+              <map:parameter name="current" value="{1}"/>
+            </map:transform>
+            <map:transform type="i18n">
+              <map:parameter name="locale" value="en"/>
+            </map:transform>
+            <map:serialize type="xhtml"/>
       </map:match>
 
       <!-- Index / Language - Letter -->
