@@ -582,7 +582,7 @@
               <xsl:call-template name="do_epigraphic_field">
                 <xsl:with-param name="fullN" select="@n"/>
               </xsl:call-template>
-              <xsl:call-template name="do_textpart">
+            <xsl:call-template name="do_textpart">
                 <xsl:with-param name="fullN" select="@n"/>
               </xsl:call-template>
             </xsl:for-each>
@@ -1604,12 +1604,12 @@
       style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
       <!-- Full size popup -->
       <a class="x87" target="_blank"
-        href="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;CVT=jpeg">
+        href="https://loris.kdl.kcl.ac.uk/iospe2/webroot/images/inscriptions/{@url}.jp2/full/full/0/default.jpg">
         <!-- PC JULY 2015: found this commented out line below; OK to delete? -->
         <!-- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -->
         <span>&#160;</span>
         <!-- Thumbnail image -->
-        <img src="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;WID=100&amp;HEI=100&amp;CVT=jpeg">
+        <img src="https://loris.kdl.kcl.ac.uk/iospe2/webroot/images/inscriptions/{@url}.jp2/full/100,100/0/default.jpg">
           <!-- @alt info -->
           <xsl:if test="string(tei:desc[@xml:lang = $lang])">
             <xsl:attribute name="alt">
