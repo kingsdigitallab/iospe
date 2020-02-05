@@ -21,6 +21,9 @@
             <xsl:when test="starts-with($url, '1')">
                 I. <i18n:text>Inscriptions of Tyras and vicinity</i18n:text>
             </xsl:when>
+            <xsl:when test="starts-with($url, '2.1.1')">
+                II.I.I <i18n:text>Graffiti and Dipinti of Borysthenes/Berezan: Collection of the State Hermitage Museum</i18n:text>
+            </xsl:when>
             <xsl:when test="starts-with($url, '3')">
                 III. <i18n:text>Inscriptions of Chersonesos and vicinity</i18n:text>
             </xsl:when>
