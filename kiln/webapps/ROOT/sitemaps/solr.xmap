@@ -108,12 +108,12 @@
           <map:parameter name="file-path" value="{2}"/>
         </map:transform>
         <!-- DEBUG ONLY -->
-        <!--<map:serialize type="xml"/>-->
+        <map:serialize type="xml"/>
         <!-- END DEBUG -->
-        <map:transform type="solr">
+        <!--<map:transform type="solr">
           <map:parameter name="url" value="{global:solr-server}" />
         </map:transform>
-        <map:serialize type="xml" />
+        <map:serialize type="xml" />-->
       </map:match>
 
       <!-- Preprocessing of material before indexing. -->
