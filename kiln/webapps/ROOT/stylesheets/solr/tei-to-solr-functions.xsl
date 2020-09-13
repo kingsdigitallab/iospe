@@ -281,9 +281,94 @@
     <xsl:value-of select="normalize-space(replace($value, '\(\?\)', ''))"/>
   </xsl:function>
 
+
+  <xsl:function as="xs:dateTime" name="local:sortable-date">
+    <!-- To facilitate a Solr sort, create a date value that conforms to format, eg. 1995-12-31T23:59:59Z -->
+    <xsl:param name="notBefore"/>
+    
+    <xsl:variable name="eraValue">
+      <xsl:analyze-string regex="(-?)(\d{{4}})(-\d{{2}})?(-\d{{2}})?" select="$notBefore">
+        <xsl:matching-substring>
+          <!-- doesn't matter if no value for regex-group(1) -->
+          <xsl:value-of select="regex-group(1)"/>
+        </xsl:matching-substring>
+      </xsl:analyze-string>
+    </xsl:variable>
+    <xsl:variable name="yearValue">
+      <xsl:choose>
+        <xsl:when test="$eraValue = '-'">
+          <xsl:value-of select="substring($notBefore, 2, 4)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="substring($notBefore, 1, 4)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <!-- Usually there won't be a month value, but some inscriptions have them so we need to test for them -->
+    <xsl:variable name="monthValue">
+      <xsl:choose>
+        <xsl:when test="($eraValue != '-') and contains($notBefore, '-')">
+          <xsl:variable name="first_tokenized" select="tokenize($notBefore, '-')"/>
+          <xsl:value-of select="$first_tokenized[2]"/>
+        </xsl:when>
+        <xsl:when test="($eraValue = '-')">
+          <xsl:variable name="str2process" select="substring-after($notBefore, $eraValue)"/>
+          <xsl:choose>
+            <xsl:when test="contains($str2process, '-')">
+              <xsl:variable name="second_tokenized" select="tokenize($str2process, '-')"/>
+              <xsl:value-of select="$second_tokenized[2]"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="'01'"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="'01'"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <!-- Usually there won't be a day value, but some inscriptions have them so we need to test for them. -->
+    <xsl:variable name="dayValue">
+      <xsl:choose>
+        <xsl:when test="($eraValue != '-') and contains($notBefore, '-')">
+          <!-- might be cases where there is only yyyy-mm, so test for them -->
+          <xsl:choose>
+            <xsl:when test="string-length($notBefore) &gt;7">
+              <xsl:variable name="foo_tokenized" select="tokenize($notBefore, '-')"/>
+              <xsl:value-of select="$foo_tokenized[3]"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="'01'"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:when test="($eraValue = '-')">
+          <xsl:variable name="str2process" select="substring-after($notBefore, $eraValue)"/>
+          <xsl:choose>
+            <xsl:when test="(contains($str2process, '-')) and (string-length($str2process) &gt;7)">
+              <xsl:variable name="bar_tokenized" select="tokenize($str2process, '-')"/>
+              <xsl:value-of select="$bar_tokenized[3]"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="'01'"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="'01'"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    
+    <xsl:value-of
+      select="concat($eraValue, $yearValue, '-', $monthValue, '-', $dayValue, 'T23:59:59Z')"/>
+  </xsl:function>
+  
+
   <xsl:function as="xs:integer" name="local:get-year-from-date">
     <xsl:param name="date"/>
-
+    
     <xsl:variable name="year">
       <xsl:analyze-string regex="(-?)(\d{{4}})(-\d{{2}})?(-\d{{2}})?" select="$date">
         <xsl:matching-substring>
@@ -295,7 +380,7 @@
         </xsl:fallback>
       </xsl:analyze-string>
     </xsl:variable>
-
+    
     <xsl:value-of select="$year"/>
   </xsl:function>
 

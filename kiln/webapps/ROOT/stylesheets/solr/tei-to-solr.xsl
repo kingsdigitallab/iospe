@@ -473,6 +473,11 @@
         <field name="date-notAfter">
           <xsl:value-of select="$notAfter"/>
         </field>
+        
+        <field name="date-sortable">
+          <xsl:value-of select="local:sortable-date($notBefore/text())"/>
+        </field>
+        
       </doc>
     </xsl:if>
   </xsl:template>
