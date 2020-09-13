@@ -23,7 +23,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/bynum-{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
@@ -41,7 +41,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/bynum.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
@@ -63,7 +63,7 @@
           <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/date/{1}-{2}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sortable%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -84,7 +84,7 @@
           <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sortable%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -105,7 +105,7 @@
           <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/date/{1}-{2}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sortable%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs-date.xsl">
@@ -126,7 +126,7 @@
           <map:part src="cocoon:/getLetters/date"/>
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-notBefore%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-notBefore%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <!-- TESTING -->
@@ -150,7 +150,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-{2}:*&amp;sort=sortable-id%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-{2}:*&amp;sort=sortable-id%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs.xsl">
@@ -168,7 +168,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
           <map:part element="toc"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq-en{1}-en:*&amp;sort=sortable-id%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq-en{1}-en:*&amp;sort=sortable-id%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/tocs.xsl">
@@ -558,7 +558,7 @@
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/person/{1}-{2}.html"/>
           <map:part src="../content/xml/tei/alists/{1}.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:names&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:names&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-{1}.xsl">
@@ -578,7 +578,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/{1}.html"/>
           <map:part src="../content/xml/tei/alists/{1}.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:names&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:names&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-{1}.xsl">
@@ -644,7 +644,7 @@
           <map:part src="cocoon://_internal/menu/main.{4}.xml?url=indices/{1}/{2}/{3}-{4}.html"/>
           <map:part src="cocoon:/getLetters-{2}/{1}"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -665,7 +665,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}/{2}/{3}.html"/>
           <map:part src="cocoon:/getLetters-{2}/{1}"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <!-- TESTING -->
@@ -691,7 +691,7 @@
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/months-{1}.html"/>
           <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=9999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-months.xsl">
           <map:parameter name="url" value="indices/months-{1}.html"/>
@@ -709,7 +709,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/months.html"/>
           <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=9999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-months.xsl">
           <map:parameter name="url" value="indices/months.html"/>
@@ -728,7 +728,7 @@
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/places-{1}.html"/>
           <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=9999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-places.xsl">
           <map:parameter name="url" value="indices/places-{1}.html"/>
@@ -746,7 +746,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/places.html"/>
           <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=9999"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-places.xsl">
           <map:parameter name="url" value="indices/places.html"/>
@@ -766,7 +766,7 @@
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/findspot-{1}.html"/>
           <map:part src="../content/xml/tei/alists/findspot.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-{1}:*&amp;sort=findspot-{1}%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-{1}:*&amp;sort=findspot-{1}%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -785,7 +785,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/findspot.html"/>
           <map:part src="../content/xml/tei/alists/findspot.xml" element="AL"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <!-- TESTING -->
@@ -807,7 +807,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/abbr-{1}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-abbr.xsl">
@@ -825,7 +825,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/abbr.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices-abbr.xsl">
@@ -846,7 +846,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-type-{2}.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -864,7 +864,7 @@
         <map:aggregate element="aggregation" label="content">
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}-type.html"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -886,7 +886,7 @@
           <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
           <map:part src="../content/xml/tei/alists/symbols.xml" element="AL_symbols"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -905,7 +905,7 @@
           <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
           <map:part src="../content/xml/tei/alists/symbols.xml" element="AL_symbols"/>
           <map:part element="index"
-            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=9999"
           />
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/indices.xsl">
@@ -1016,7 +1016,7 @@
 
           <map:when test="—">
             <map:generate
-              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter-emdash:&quot;yes&quot;&amp;sort={1}-sort%20asc&amp;rows=999"
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter-emdash:&quot;yes&quot;&amp;sort={1}-sort%20asc&amp;rows=9999"
             />
           </map:when>
 
@@ -1028,7 +1028,7 @@
 
           <map:otherwise>
             <map:generate
-              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:&quot;{2}&quot;&amp;sort={1}-sort%20asc&amp;rows=999"
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:&quot;{2}&quot;&amp;sort={1}-sort%20asc&amp;rows=9999"
             />
           </map:otherwise>
 
