@@ -34,7 +34,7 @@
     <xsl:template name="generateVolumeToc">
         <dl class="tocs">
             <xsl:for-each select="//doc">
-                <xsl:sort select="int[@name = 'sortable-id']" order="ascending"/>
+                <xsl:sort select="str[@name = 'sortable-id']" order="ascending"/>
                 <dt>
                     <a href="/{str[@name='tei-id']}{$kiln:url-lang-suffix}.html">
                         <xsl:value-of select="str[@name = 'tei-id']"/>
