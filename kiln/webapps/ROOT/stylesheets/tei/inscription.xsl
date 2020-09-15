@@ -154,29 +154,58 @@
     <xsl:param name="printCorpus" select="false()"/>
     <xsl:param name="txt" select="false()"/>
 
-    <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
-      <xsl:matching-substring>
+    <xsl:choose>
+      <xsl:when test="starts-with($num, '2')">
+        <xsl:variable name="num_tokenized" select="tokenize($num, '\.')"/>
         <xsl:if test="$printCorpus">
-          <xsl:number value="regex-group(1)" format="I"/>
+              <xsl:number value="$num_tokenized[1]" format="I"/>
+          <xsl:text>.</xsl:text>
+          <xsl:number value="$num_tokenized[2]" format="I"/>
+          <xsl:text>.</xsl:text>
+          <xsl:number value="$num_tokenized[3]" format="I"/>
           <xsl:text>&#160;</xsl:text>
-        </xsl:if>
-        <xsl:choose>
-          <xsl:when test="$txt">
-            <xsl:number format="1"
-              value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-            <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <strong>
-              <xsl:number format="1"
-                value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-              <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-            </strong>
-          </xsl:otherwise>
-        </xsl:choose>
+            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="$txt">
+                <xsl:number format="1"
+                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <strong>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                </strong>
+              </xsl:otherwise>
+            </xsl:choose>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
+          <xsl:matching-substring>
+            <xsl:if test="$printCorpus">
+              <xsl:number value="regex-group(1)" format="I"/>
+              <xsl:text>&#160;</xsl:text>
+            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="$txt">
+                <xsl:number format="1"
+                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <strong>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                </strong>
+              </xsl:otherwise>
+            </xsl:choose>
 
-      </xsl:matching-substring>
-    </xsl:analyze-string>
+          </xsl:matching-substring>
+        </xsl:analyze-string>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="*" mode="copyEpidoc">
@@ -303,7 +332,7 @@
 
         <!-- Description and condition (if exists) -->
         <xsl:if
-          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $lang) and (normalize-space(text()[1])!='')]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $lang) and (normalize-space(text()[1]) != '')]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -626,12 +655,18 @@
     <div xsl:exclude-result-prefixes="tei" class="large-12 columns">
       <p>
         <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
-          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/><xsl:text> </xsl:text>
-        </a><xsl:choose>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='1'">© 2017 <i18n:text>Askold Ivantchik (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='3'">© 2017 <i18n:text>Igor Makarov (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='5'">© 2015 <i18n:text>Andrey Vinogradov (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
-        </xsl:choose><br />
+          <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
+          <xsl:text> </xsl:text>
+        </a>
+        <xsl:choose>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '1'">© 2017 <i18n:text>Askold
+              Ivantchik (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
+              Makarov (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '5'">© 2015 <i18n:text>Andrey
+              Vinogradov (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
+        </xsl:choose>
+        <br/>
         <i18n:text>You may download this</i18n:text>
         <xsl:text>&#160;</xsl:text>
         <a href="{$filename}">
@@ -1359,48 +1394,49 @@
         <!-- Commentary -->
         <!-- PC  31 OCT 2017:  put in the 'if' condition as temporary measure to hide from display editor's 
           commentary section for those vol 3 files for which the bibliography says 'Ineditum' -->
-        <xsl:if test="not(contains(//tei:body/tei:div[@type='bibliography'][1]/tei:listBibl[1]/tei:bibl[1], 'Ineditum'))">
+        <xsl:if
+          test="not(contains(//tei:body/tei:div[@type = 'bibliography'][1]/tei:listBibl[1]/tei:bibl[1], 'Ineditum'))">
           <xsl:choose>
-          <xsl:when
-            test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
-            <div class="row">
-              <div class="large-2 columns">
-                <h2>
-                  <em>
-                    <i18n:text>Commentary</i18n:text>
-                  </em>
-                </h2>
+            <xsl:when
+              test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
+              <div class="row">
+                <div class="large-2 columns">
+                  <h2>
+                    <em>
+                      <i18n:text>Commentary</i18n:text>
+                    </em>
+                  </h2>
 
+                </div>
+                <div class="large-10 columns details">
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"/>
+                  <xsl:text>&#160;</xsl:text>
+                </div>
               </div>
-              <div class="large-10 columns details">
-                <xsl:apply-templates mode="multipara"
-                  select="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"/>
-                <xsl:text>&#160;</xsl:text>
-              </div>
-            </div>
-          </xsl:when>
-          <xsl:when
-            test="not($fullN) and //tei:div[@type = 'commentary'][@xml:lang = $lang]//tei:p/text()">
-            <div class="row">
-              <div class="large-2 columns">
-                <h2>
-                  <em>
-                    <i18n:text>Commentary</i18n:text>
-                  </em>
-                </h2>
+            </xsl:when>
+            <xsl:when
+              test="not($fullN) and //tei:div[@type = 'commentary'][@xml:lang = $lang]//tei:p/text()">
+              <div class="row">
+                <div class="large-2 columns">
+                  <h2>
+                    <em>
+                      <i18n:text>Commentary</i18n:text>
+                    </em>
+                  </h2>
 
+                </div>
+                <div class="large-10 columns details">
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type = 'commentary'][@xml:lang = $lang]"/>
+                  <xsl:text>&#160;</xsl:text>
+                </div>
               </div>
-              <div class="large-10 columns details">
-                <xsl:apply-templates mode="multipara"
-                  select="//tei:div[@type = 'commentary'][@xml:lang = $lang]"/>
-                <xsl:text>&#160;</xsl:text>
-              </div>
-            </div>
-          </xsl:when>
-          <xsl:otherwise>
-            <!-- do nothing -->
-          </xsl:otherwise>
-        </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- do nothing -->
+            </xsl:otherwise>
+          </xsl:choose>
         </xsl:if>
 
 
@@ -1792,14 +1828,14 @@
           </xsl:element>
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ'">
-          <xsl:text>НЭПХ I</xsl:text> 
-        <xsl:if test="$lang = 'en'">  
+          <xsl:text>НЭПХ I</xsl:text>
+          <xsl:if test="$lang = 'en'">
             <xsl:text> (Solomonik 1964)</xsl:text>
-        </xsl:if>
+          </xsl:if>
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ2'">
           <xsl:text>НЭПХ II</xsl:text>
-          <xsl:if test="$lang = 'en'">  
+          <xsl:if test="$lang = 'en'">
             <xsl:text> (Solomonik 1973)</xsl:text>
           </xsl:if>
         </xsl:when>
