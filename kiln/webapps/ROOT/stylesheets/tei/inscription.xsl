@@ -177,7 +177,7 @@
                 value="number(translate($num_tokenized[4], 'abcdefghijklmnopqrstuvwxyz', ''))"/>
               <xsl:value-of select="translate($num_tokenized[4], '0123456789', '')"/>
             </strong>
-          </xsl:otherwise>
+          </xsl:otherwise>:
         </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
