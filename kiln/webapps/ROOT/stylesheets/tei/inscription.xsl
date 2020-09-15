@@ -158,27 +158,27 @@
       <xsl:when test="starts-with($num, '2')">
         <xsl:variable name="num_tokenized" select="tokenize($num, '\.')"/>
         <xsl:if test="$printCorpus">
-              <xsl:number value="$num_tokenized[1]" format="I"/>
+          <xsl:number value="number($num_tokenized[1])" format="I"/>
           <xsl:text>.</xsl:text>
-          <xsl:number value="$num_tokenized[2]" format="I"/>
+          <xsl:number value="number($num_tokenized[2])" format="I"/>
           <xsl:text>.</xsl:text>
-          <xsl:number value="$num_tokenized[3]" format="I"/>
+          <xsl:number value="number($num_tokenized[3])" format="I"/>
           <xsl:text>&#160;</xsl:text>
-            </xsl:if>
-            <xsl:choose>
-              <xsl:when test="$txt">
-                <xsl:number format="1"
-                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-              </xsl:when>
-              <xsl:otherwise>
-                <strong>
-                  <xsl:number format="1"
-                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-                </strong>
-              </xsl:otherwise>
-            </xsl:choose>
+        </xsl:if>
+        <xsl:choose>
+          <xsl:when test="$txt">
+            <xsl:number format="1"
+              value="number(translate($num_tokenized[4], 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+            <xsl:value-of select="translate($num_tokenized[4], '0123456789', '')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <strong>
+              <xsl:number format="1"
+                value="number(translate($num_tokenized[4], 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+              <xsl:value-of select="translate($num_tokenized[4], '0123456789', '')"/>
+            </strong>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
       <xsl:otherwise>
         <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
@@ -611,7 +611,7 @@
               <xsl:call-template name="do_epigraphic_field">
                 <xsl:with-param name="fullN" select="@n"/>
               </xsl:call-template>
-            <xsl:call-template name="do_textpart">
+              <xsl:call-template name="do_textpart">
                 <xsl:with-param name="fullN" select="@n"/>
               </xsl:call-template>
             </xsl:for-each>
@@ -1645,7 +1645,8 @@
         <!-- https://iospe-stg.cch.kcl.ac.uk/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&WID=100&HEI=100&CVT=jpeg -->
         <span>&#160;</span>
         <!-- Thumbnail image -->
-        <img src="https://loris.kdl.kcl.ac.uk/iospe2/webroot/images/inscriptions/{@url}.jp2/full/100,100/0/default.jpg">
+        <img
+          src="https://loris.kdl.kcl.ac.uk/iospe2/webroot/images/inscriptions/{@url}.jp2/full/100,100/0/default.jpg">
           <!-- @alt info -->
           <xsl:if test="string(tei:desc[@xml:lang = $lang])">
             <xsl:attribute name="alt">
