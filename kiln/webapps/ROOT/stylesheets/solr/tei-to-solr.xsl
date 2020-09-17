@@ -389,6 +389,7 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>
+        
         <xsl:variable name="notAfter">
           <xsl:choose>
             <xsl:when test="@value">
@@ -396,6 +397,32 @@
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="@notAfter"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        
+        <xsl:variable name="adjusted_notBefore">
+          <xsl:choose>
+            <xsl:when test="contains($notBefore, '-')">
+              <!-- is a BCE value -->
+              <xsl:value-of select="number(substring($notBefore, 1, 5))"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- is a CE value -->
+              <xsl:value-of select="number(substring($notBefore, 1, 4))"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:variable>
+        
+        <xsl:variable name="adjusted_notAfter">
+          <xsl:choose>
+            <xsl:when test="contains($notAfter, '-')">
+              <!-- is a BCE value -->
+              <xsl:value-of select="number(substring($notAfter, 1, 5))"/>
+            </xsl:when>
+            <xsl:otherwise>
+              <!-- is a CE value -->
+              <xsl:value-of select="number(substring($notAfter, 1, 4))"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:variable>
@@ -416,32 +443,6 @@
             <field name="date-type-ru">RU: dated</field>
           </xsl:when>
           <xsl:otherwise>
-            <xsl:variable name="adjusted_notBefore">
-              <xsl:choose>
-                <xsl:when test="contains($notBefore, '-')">
-                  <!-- is a BCE value -->
-                  <xsl:value-of select="number(substring($notBefore, 1, 5))"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <!-- is a CE value -->
-                  <xsl:value-of select="number(substring($notBefore, 1, 4))"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:variable>
-
-            <xsl:variable name="adjusted_notAfter">
-              <xsl:choose>
-                <xsl:when test="contains($notAfter, '-')">
-                  <!-- is a BCE value -->
-                  <xsl:value-of select="number(substring($notAfter, 1, 5))"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <!-- is a CE value -->
-                  <xsl:value-of select="number(substring($notAfter, 1, 4))"/>
-                </xsl:otherwise>
-              </xsl:choose>
-            </xsl:variable>
-
 
             <xsl:for-each
               select="
@@ -473,6 +474,15 @@
         <field name="date-notAfter">
           <xsl:value-of select="$notAfter"/>
         </field>
+        
+        <field name="date-notBefore-yearOnly">
+          <xsl:value-of select="$adjusted_notBefore"/>
+        </field>
+        
+        <field name="date-notAfter-yearOnly">
+          <xsl:value-of select="$adjusted_notAfter"/>
+        </field>
+        
         
         <field name="date-sortable">
           <xsl:value-of select="local:sortable-date($notBefore/text())"/>
