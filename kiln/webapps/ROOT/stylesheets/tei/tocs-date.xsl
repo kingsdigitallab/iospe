@@ -3,6 +3,7 @@
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+  <xsl:import href="inscription.xsl"/>
   <xsl:param name="toc"/>
   <xsl:param name="date-type"/><!-- value will be that of {1} in indices/date/{1}.html -->
 
@@ -99,9 +100,9 @@
       <xsl:for-each-group
         select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
                                   and not(str[@name='file'] = preceding-sibling::doc/str[@name='file']) ]"
-        group-by="str[@name='date-notBefore']">
-        <xsl:for-each-group select="current-group()" group-by="str[@name='date-notAfter']">
-          <xsl:sort select="str[@name='date-notAfter']"/>
+        group-by="str[@name='date-notBefore-yearOnly']">
+        <xsl:for-each-group select="current-group()" group-by="str[@name='date-notAfter-yearOnly']">
+          <xsl:sort select="str[@name='date-notAfter-yearOnly']"/>
           <xsl:if test="not(str[@name='tei-id'] = '')">
             <dt>
               <xsl:choose>
@@ -118,18 +119,12 @@
             </dt>
             <xsl:for-each select="current-group()">
               <xsl:sort select="str[@name='sortable-id']"/>
-
+              
               <xsl:variable name="formatted-tei-id">
-                <xsl:analyze-string select="str[@name='tei-id']" regex="\d\.\d{{1,3}}">
-                  <xsl:matching-substring>
-                    <xsl:number value="concat('0', substring-before(., '.'))" format="I"/>
-                    <xsl:text>&#xa0;</xsl:text>
-                    <xsl:number value="concat('0', substring-after(., '.'))" format="1"/>
-                  </xsl:matching-substring>
-                  <xsl:non-matching-substring>
-                    <xsl:value-of select="."/>
-                  </xsl:non-matching-substring>
-                </xsl:analyze-string>
+                <xsl:call-template name="formatInscrNum">
+                  <xsl:with-param name="num" select="str[@name='tei-id']"/>
+                  <xsl:with-param name="printCorpus" select="true()"/>
+                </xsl:call-template>
               </xsl:variable>
 
 
