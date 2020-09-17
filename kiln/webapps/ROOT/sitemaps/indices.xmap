@@ -130,9 +130,9 @@
           />
         </map:aggregate>
         <!-- TESTING -->
-        <map:serialize type="xml"/>
+        <!--<map:serialize type="xml"/>-->
         <!-- END TESTING -->
-        <!--<map:transform src="cocoon://_internal/template/tocs-date.xsl">
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
           <map:parameter name="url" value="indices/date/{1}.html"/>
           <map:parameter name="lang" value="en"/>
           <map:parameter name="toc" value="date"/>
@@ -141,7 +141,7 @@
         <map:transform type="i18n">
           <map:parameter name="locale" value="en"/>
         </map:transform>
-        <map:serialize type="xhtml"/>-->
+        <map:serialize type="xhtml"/>
       </map:match>
 
       <!-- TOC, SIMPLE -->
