@@ -99,9 +99,9 @@
       <xsl:for-each-group
         select="//doc[not(str[@name='date-en'] = preceding-sibling::doc/str[@name='date-en'])
                                   and not(str[@name='file'] = preceding-sibling::doc/str[@name='file']) ]"
-        group-by="int[@name='date-notBefore']">
-        <xsl:for-each-group select="current-group()" group-by="int[@name='date-notAfter']">
-          <xsl:sort select="int[@name='date-notAfter']"/>
+        group-by="str[@name='date-notBefore']">
+        <xsl:for-each-group select="current-group()" group-by="str[@name='date-notAfter']">
+          <xsl:sort select="str[@name='date-notAfter']"/>
           <xsl:if test="not(str[@name='tei-id'] = '')">
             <dt>
               <xsl:choose>
@@ -117,7 +117,7 @@
               </xsl:choose>
             </dt>
             <xsl:for-each select="current-group()">
-              <xsl:sort select="int[@name='sortable-id']"/>
+              <xsl:sort select="str[@name='sortable-id']"/>
 
               <xsl:variable name="formatted-tei-id">
                 <xsl:analyze-string select="str[@name='tei-id']" regex="\d\.\d{{1,3}}">
