@@ -659,6 +659,7 @@
           <xsl:text> </xsl:text>
         </a>
         <xsl:choose>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 1, 3) = '201'">© 2020 <i18n:text>Irene Polinskaya</i18n:text></xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '1'">© 2017 <i18n:text>Askold
               Ivantchik (edition), Irene Polinskaya (translation)</i18n:text></xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
