@@ -3,7 +3,7 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="ru"/>
-                <title xml:lang="en"/>
+                <title xml:lang="en">Ownership(?) inscription</title>
             </titleStmt>
             <publicationStmt>
                 <authority>King's College London</authority>
@@ -22,23 +22,18 @@
                             <idno>Б.86.209</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <msContents>
-                        <summary corresp="filename.xml#id">
-                            <seg xml:lang="ru"/>
-                            <seg xml:lang="en"/>
-                        </summary>
-                    </msContents>
+                    
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
                                     <objectType xml:lang="ru" ref="#">Фрагмент.</objectType>
-                                    <objectType xml:lang="en">Fragment of.</objectType>
+                                    <objectType xml:lang="en">Fragment of foot.</objectType>
                                     
                                     <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
                                     <material xml:lang="en">Clay.</material>
                                     <p xml:lang="ru"/>
-                                    <p xml:lang="en"/>
+                                    <p xml:lang="en">BG kylix, Attica, early V century B.C.E.</p>
                                     <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -69,7 +64,7 @@
                             <seg xml:lang="en">Borysthenes.</seg>
                             <origDate notBefore="0001" notAfter="0001" evidence="Палеография орфография">
                                 <seg xml:lang="ru"/>
-                                <seg xml:lang="en"> <!--Ca. xx year, or yy century B.C.E.--> </seg>
+                                <seg xml:lang="en">early V century B.C.E.</seg>
                             </origDate>
                         </origin>
                         <provenance type="found">
@@ -77,12 +72,12 @@
                                
                                 <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань.</placeName>
                                 <rs type="circumstances">Найден в 1986 г., раскопки Я.В. Доманского.</rs>
-                                <rs type="context"/>
+                                <rs type="context">Северно-западный участок, раскоп Б, ниже уровня дома VI.</rs>
                             </seg>
                             <seg xml:lang="en">
                                 <placeName type="ancientFindspot">Berezan.</placeName>
                                 <rs type="circumstances">Found in 1986, excavations of Ya.V. Domansky.</rs>
-                                <rs type="context"/>
+                                <rs type="context">Northwestern sector, Area Б, below the level of House VI.</rs>
                             </seg>
                         </provenance>
                         <provenance type="observed">
@@ -94,6 +89,78 @@
                             <seg xml:lang="en">August 2016.</seg>
                         </provenance>
                     </history>
+                    <msPart n="1">
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <msContents>
+                            <summary corresp="filename.xml#id">
+                                <seg xml:lang="ru" n="1"></seg>
+                                <seg xml:lang="en" n="1">Unclassified mark (commercial?)</seg>
+                            </summary>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <seg xml:lang="ru"/>
+                                        <seg xml:lang="en">Floor centre, interior.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="1">
+                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs> 
+                                    </seg>
+                                    <seg xml:lang="en">Graffito.</seg>
+                                    <height unit="cm">5</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="1" precision="low" evidence="палеография">
+                                    <seg xml:lang="ru"></seg>
+                                    <seg xml:lang="en">575-550 B.C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
+                    <msPart n="2">
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <msContents>
+                            <summary corresp="filename.xml#id">
+                                <seg xml:lang="ru" n="2"></seg>
+                                <seg xml:lang="en" n="2">Unclassified mark (Trademark?</seg>
+                            </summary>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <seg xml:lang="ru"></seg>
+                                        <seg xml:lang="en">Base, underside.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="2">
+                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
+                                    <seg xml:lang="en">Graffito.</seg>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="2"  precision="low" evidence="палеография">
+                                    <seg xml:lang="ru"></seg>
+                                    <seg xml:lang="en">575-550 B.C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -140,26 +207,55 @@
                 
             </div>
             <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-                        <lb n="1"/><!--Greek text here  -->
-            </ab>
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/>
+                   <lb n="2"/>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/>
+                  <lb n="2"/>
+               </ab>
+            </div>
          </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note><!-- copy and paster from Word --></note></app>
+                    <app><note><!-- copy and paste from Word --></note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="ru">
-                <p/>
+                <div type="textpart" n="1">
+                    <p></p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
             <div type="translation" xml:lang="en">
-                <p/>
+                <div type="textpart" n="1">
+                    <p></p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
             <div type="commentary" xml:lang="ru">
-                <p/>
+                <div type="textpart" n="1">
+                    <p> </p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
             <div type="commentary" xml:lang="en">
-                <p/>
+                <div type="textpart" n="1">
+                    <p></p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
         </body>
     </text>
