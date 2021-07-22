@@ -22,23 +22,18 @@
                             <idno>Б.77.139</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    <msContents>
-                        <summary corresp="filename.xml#id">
-                            <seg xml:lang="ru"/>
-                            <seg xml:lang="en">Ownership(?) inscription.</seg>
-                        </summary>
-                    </msContents>
+                    
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <objectType xml:lang="ru" ref="#">Фрагмент.</objectType>
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon52"></objectType>
                                     <objectType xml:lang="en">Fragment of ring foot.</objectType>
                                     
                                     <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
                                     <material xml:lang="en">Clay.</material>
                                     <p xml:lang="ru"/>
-                                    <p xml:lang="en">Attica, stemmed dish, close to Agora XII, no. 974, 525-500 B.C.E.</p>
+                                    <p xml:lang="en">Attica, stemmed dish, 525-500 B.C.E. (close to Agora XII, no. 974).</p>
                                     <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm">3.6</width>
@@ -47,34 +42,23 @@
                                     </dimensions>
                                 </support>
                             </supportDesc>
-                            <layoutDesc>
-                                <layout>
-                                    <seg xml:lang="ru"/>
-                                    <seg xml:lang="en">Foot, on resting surface and underside. Originally inscribed on...</seg>
-                                </layout>
-                            </layoutDesc>
+                            
                         </objectDesc>
-                        <handDesc>
-                            <handNote>
-                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
-                                <seg xml:lang="en">Graffito.</seg>
-                                <height unit="cm">0.4-1.0</height>
-                            </handNote>
-                        </handDesc>
+                        
                     </physDesc>
                     <history>
                         <origin>
                             <origPlace ref="origPlace.xml#p066"/>
                             <seg xml:lang="ru">Борисфен.</seg>
                             <seg xml:lang="en">Borysthenes.</seg>
-                            <origDate notBefore="0001" notAfter="0001" evidence="Палеография орфография">
+                            <origDate notBefore="0001" notAfter="0001" evidence="Палеография context">
                                 <seg xml:lang="ru"/>
-                                <seg xml:lang="en">525-500 B.C.E.</seg>
+                                <seg xml:lang="en">early V century B.C.E.</seg>
                             </origDate>
                         </origin>
                         <provenance type="found">
                             <seg xml:lang="ru">
-                               
+                                
                                 <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань.</placeName>
                                 <rs type="circumstances">Найден в 1977 г., раскопки Л.В. Копейкиной.</rs>
                                 <rs type="context">Участок Б, квадрат 13, западная часть, сев. половина, сероглинистый слой, 0.65-0.90.</rs>
@@ -94,6 +78,78 @@
                             <seg xml:lang="en">August 2016.</seg>
                         </provenance>
                     </history>
+                    <msPart n="1">
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <msContents>
+                            <summary corresp="filename.xml#id">
+                                <seg xml:lang="ru" n="1"></seg>
+                                <seg xml:lang="en" n="1">Ownership(?) inscription.</seg>
+                            </summary>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <seg xml:lang="ru"/>
+                                        <seg xml:lang="en">Foot, underside, on resting surface.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="1">
+                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs> 
+                                    </seg>
+                                    <seg xml:lang="en">Graffito.</seg>
+                                    <height unit="cm">0.4-1.0</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="1" precision="low" evidence="палеография">
+                                    <seg xml:lang="ru"></seg>
+                                    <seg xml:lang="en">525-500 B.C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
+                    <msPart n="2">
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <msContents>
+                            <summary corresp="filename.xml#id">
+                                <seg xml:lang="ru" n="2"></seg>
+                                <seg xml:lang="en" n="2">Incertum</seg>
+                            </summary>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <seg xml:lang="ru"></seg>
+                                        <seg xml:lang="en">Base, underside, centre.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="2">
+                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
+                                    <seg xml:lang="en">Graffito.</seg>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="2"  precision="low" evidence="палеография">
+                                    <seg xml:lang="ru"></seg>
+                                    <seg xml:lang="en">525-500 B.C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -140,26 +196,55 @@
                 
             </div>
             <div type="edition" xml:lang="grc" xml:space="preserve">
-            <ab>
-                        <lb n="1"/><!--Greek text here  -->
-            </ab>
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/>
+                   <lb n="2"/>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/>
+                  <lb n="2"/>
+               </ab>
+            </div>
          </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note><!-- copy and paster from Word --></note></app>
+                    <app><note><!-- copy and paste from Word --></note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="ru">
-                <p/>
+                <div type="textpart" n="1">
+                    <p></p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
             <div type="translation" xml:lang="en">
-                <p/>
+                <div type="textpart" n="1">
+                    <p></p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
             <div type="commentary" xml:lang="ru">
-                <p/>
+                <div type="textpart" n="1">
+                    <p> </p>
+                </div>
+                <div type="textpart" n="2">
+                    <p></p>
+                </div>
             </div>
             <div type="commentary" xml:lang="en">
-                <p/>
+                <div type="textpart" n="1">
+                    <p>[Ἡ]ραγόρης</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>?. Ν</p>
+                </div>
             </div>
         </body>
     </text>
