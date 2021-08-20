@@ -259,7 +259,8 @@
 
   <!-- Unit: INSCRIPTION (Tables of Content) -->
   <xsl:template match="tei:TEI[descendant::tei:div[@type = 'edition']]" mode="inscription">
-
+    <xsl:variable name="PE_num"
+      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']"/>
     <xsl:variable name="idno"
       select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
@@ -276,6 +277,11 @@
           mode="identifier_fields">
           <xsl:with-param name="idno" select="$idno"/>
           <xsl:with-param name="dt" select="'inscription'"/>
+        </xsl:apply-templates>
+        <xsl:apply-templates
+          select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']]"
+          mode="identifier_fields">
+          <xsl:with-param name="PE_num" select="$PE_num"/>
         </xsl:apply-templates>
         <xsl:apply-templates
           select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]"
