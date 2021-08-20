@@ -98,7 +98,9 @@
 
   <xsl:template name="inscription-title">
     <!-- inscription number -->
-    <xsl:choose>
+    <!-- PC: commented out this inscription number code Aug 2021 after discussion with IP about shifting 
+         emphasis away from vol numbers and more towards using PE numbers -->
+    <!--<xsl:choose>
       <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], 'PE')">
         <xsl:value-of select="//tei:publicationStmt/tei:idno[@type = 'filename']"/>
       </xsl:when>
@@ -110,7 +112,7 @@
         </xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:text>. </xsl:text>
+    <xsl:text>. </xsl:text>-->
 
     <!-- origin -->
     <xsl:apply-templates
