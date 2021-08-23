@@ -259,8 +259,6 @@
 
   <!-- Unit: INSCRIPTION (Tables of Content) -->
   <xsl:template match="tei:TEI[descendant::tei:div[@type = 'edition']]" mode="inscription">
-    <xsl:variable name="PE_num"
-      select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']"/>
     <xsl:variable name="idno"
       select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']"/>
     <xsl:if test="not($idno = '')">
@@ -269,11 +267,6 @@
 
         <field name="dt">
           <xsl:value-of select="'inscription'"/>
-        </field>
-        
-        <!-- PC 23 Aug 2021 normally this would be in tei-to-solr-common but that hasn't worked so testing having it directly here -->
-        <field name="pe-number">
-          <xsl:value-of select="$PE_num"/>
         </field>
 
         <!-- get metadata by using templates that are in tei-to-solr-common.xsl -->
