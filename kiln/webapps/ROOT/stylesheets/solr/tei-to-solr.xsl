@@ -268,6 +268,10 @@
         <field name="dt">
           <xsl:value-of select="'inscription'"/>
         </field>
+        
+        <field name="pe-number">
+          <xsl:value-of select="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']"/>
+        </field>
 
         <!-- get metadata by using templates that are in tei-to-solr-common.xsl -->
         <xsl:apply-templates
