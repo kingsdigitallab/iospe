@@ -60,14 +60,14 @@
     </field>
   </xsl:template>
   
-  <xsl:template
+  <!--<xsl:template
     match="/aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']]"
     mode="identifier_fields">
     <xsl:param name="PE_num" select="none"/>  
     <field name="pe-number">
       <xsl:value-of select="$PE_num/text()"/>
     </field>
-  </xsl:template>
+  </xsl:template>-->
 
 
   <xsl:template match="tei:titleStmt/tei:title[@xml:lang][not(@n = 1)]" mode="title_fields">

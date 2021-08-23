@@ -270,6 +270,11 @@
         <field name="dt">
           <xsl:value-of select="'inscription'"/>
         </field>
+        
+        <!-- PC 23 Aug 2021 normally this would be in tei-to-solr-common but that hasn't worked so testing having it directly here -->
+        <field name="pe-number">
+          <xsl:value-of select="$PE_num"/>
+        </field>
 
         <!-- get metadata by using templates that are in tei-to-solr-common.xsl -->
         <xsl:apply-templates
@@ -278,11 +283,7 @@
           <xsl:with-param name="idno" select="$idno"/>
           <xsl:with-param name="dt" select="'inscription'"/>
         </xsl:apply-templates>
-        <xsl:apply-templates
-          select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']]"
-          mode="identifier_fields">
-          <xsl:with-param name="PE_num" select="$PE_num"/>
-        </xsl:apply-templates>
+        
         <xsl:apply-templates
           select="ancestor::aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]"
           mode="title_fields"/>
