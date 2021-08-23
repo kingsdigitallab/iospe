@@ -63,11 +63,11 @@
             <xsl:variable name="number" select="string(current())"/>
             <xsl:variable name="PE_num">
                 <xsl:choose>
-                    <xsl:when test="starts-with(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number]), 'PE')">
-                        <xsl:value-of select="substring-after(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number]), 'PE')"/>
+                    <xsl:when test="starts-with(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number']), 'PE')">
+                        <xsl:value-of select="substring-after(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number']), 'PE')"/>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:value-of select="normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number])"/>
+                        <xsl:value-of select="normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number'])"/>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:variable>
