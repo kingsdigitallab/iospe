@@ -64,7 +64,7 @@
     match="/aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'PE']]"
     mode="identifier_fields">
     <xsl:param name="PE_num" select="none"/>  
-    <field name="PE-number">
+    <field name="pe-number">
       <xsl:value-of select="$PE_num/text()"/>
     </field>
   </xsl:template>
