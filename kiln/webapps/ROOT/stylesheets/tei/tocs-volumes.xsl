@@ -12,7 +12,7 @@
     <xsl:param name="toc"/>
     <xsl:param name="url"/>
     <xsl:param name="lang"/>
-
+        
     <xsl:template match="/"/>
 
     <!-- set title -->
@@ -61,8 +61,18 @@
         <xsl:param name="values"/>
         <xsl:for-each select="$values">
             <xsl:variable name="number" select="string(current())"/>
+            <xsl:variable name="PE_num">
+                <xsl:choose>
+                    <xsl:when test="starts-with(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number]), 'PE')">
+                        <xsl:value-of select="substring-after(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number]), 'PE')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='pe-number])"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
             <dd>
-               <a href="/{$number}{$kiln:url-lang-suffix}.html">
+               <a href="/{$PE_num}{$kiln:url-lang-suffix}.html">
                 <xsl:call-template name="formatInscrNum">
                     <xsl:with-param name="num" select="$number"/>
                     <xsl:with-param name="printCorpus" select="true()"/>
