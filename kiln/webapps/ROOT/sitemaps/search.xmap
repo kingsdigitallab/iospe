@@ -26,20 +26,20 @@
         </map:select>
       </map:match>
 
-      <map:match pattern="index-ru.html">
+      <map:match pattern="index-*.html">
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
-            <map:redirect-to uri="ru/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}"/>
+            <map:redirect-to uri="{1}/-500/1800/?fq=text:{url-encode:{raw-request-param:query}}"/>
           </map:when>
           <map:otherwise>
-            <map:redirect-to uri="ru/-500/1800/"/>
+            <map:redirect-to uri="{1}/-500/1800/"/>
           </map:otherwise>
         </map:select>
       </map:match>
 
       <!-- THIS IS THE TEMPLATE HANDLING THE NAVBAR SEARCH BOX INPUT -->
-      <map:match pattern="(en|ru)/$" type="regexp">
+      <map:match pattern="(en|ru|uk)/$" type="regexp">
         <map:select type="request-parameter">
           <map:parameter name="parameter-name" value="top-bar-search-dummy"/>
           <map:when test="1">
@@ -54,16 +54,16 @@
       <map:match pattern="*/*/*/">
         <map:select type="parameter">
           <map:parameter name="parameter-selector-test" value="{1}"/>
-          <map:when test="ru">
+          <map:when test="en">
             <map:aggregate element="aggregation" label="content">
-              <map:part src="cocoon://_internal/menu/main.{1}.xml?url=search/{1}/{2}/{3}/"/>
+              <map:part src="cocoon://_internal/menu/main.xml?url=search/{1}/{2}/{3}/"/>
               <map:part src="cocoon://internal/metadata/files.xml"/>
               <map:part src="cocoon:/{2}/{3}/facet_query.{1}.xml"/>
             </map:aggregate>
           </map:when>
           <map:otherwise>
             <map:aggregate element="aggregation" label="content">
-              <map:part src="cocoon://_internal/menu/main.xml?url=search/{1}/{2}/{3}/"/>
+              <map:part src="cocoon://_internal/menu/main.{1}.xml?url=search/{1}/{2}/{3}/"/>
               <map:part src="cocoon://internal/metadata/files.xml"/>
               <map:part src="cocoon:/{2}/{3}/facet_query.{1}.xml"/>
             </map:aggregate>
