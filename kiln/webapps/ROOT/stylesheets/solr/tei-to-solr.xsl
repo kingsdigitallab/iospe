@@ -165,6 +165,36 @@
               </xsl:otherwise>
             </xsl:choose>
           </field>
+          <field name="bibl-short-uk">
+            <xsl:choose>
+              <xsl:when test="descendant::tei:author">
+                <xsl:value-of
+                  select="descendant::tei:author[1]//tei:surname[@xml:lang = 'uk' or not(@xml:lang)]"/>
+                <xsl:if test="descendant::tei:author[2]">
+                  <xsl:text>, </xsl:text>
+                  <xsl:value-of
+                    select="descendant::tei:author[2]//tei:surname[@xml:lang = 'uk' or not(@xml:lang)]"
+                  />
+                </xsl:if>
+                <xsl:if test="count(descendant::tei:author[1]) > 2">
+                  <xsl:text>, CHANGE ME TO UKRAINIAN.</xsl:text>
+                </xsl:if>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@xml:id"/>
+              </xsl:otherwise>
+            </xsl:choose>
+            
+            <xsl:text> </xsl:text>
+            <xsl:choose>
+              <xsl:when test="descendant::tei:imprint/tei:date">
+                <xsl:value-of select="descendant::tei:imprint/tei:date"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="descendant::tei:date"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </field>
           <field name="bibl-title">
             <xsl:text>(FIXME) </xsl:text>
             <xsl:for-each select="descendant::tei:title">
@@ -179,13 +209,25 @@
         <!-- the two fields below are used to determine the ordering of items in the concordance display -->
         <xsl:for-each select="//tei:listBibl[@type = 'corpora']/tei:bibl[@xml:id = $target]">
           <field name="bibl-abbrev-en">
-            <xsl:value-of select="tei:title[@type = 'abbreviated' and not(@xml:lang = 'ru')]"/>
+            <xsl:value-of select="tei:title[@type = 'abbreviated' and not(@xml:lang = 'ru' or @xml:lang = 'uk' )]"/>
           </field>
           <field name="bibl-abbrev-ru">
             <xsl:choose>
               <!-- if we do have a Russian version, grab that -->
               <xsl:when test="tei:title[@type = 'abbreviated' and @xml:lang = 'ru']">
                 <xsl:value-of select="tei:title[@type = 'abbreviated' and @xml:lang = 'ru']"/>
+              </xsl:when>
+              <!-- otherwise just grab an English value -->
+              <xsl:otherwise>
+                <xsl:value-of select="tei:title[@type = 'abbreviated'][1]"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </field>
+          <field name="bibl-abbrev-uk">
+            <xsl:choose>
+              <!-- if we do have a Ukrainian version, grab that -->
+              <xsl:when test="tei:title[@type = 'abbreviated' and @xml:lang = 'uk']">
+                <xsl:value-of select="tei:title[@type = 'abbreviated' and @xml:lang = 'uk']"/>
               </xsl:when>
               <!-- otherwise just grab an English value -->
               <xsl:otherwise>
@@ -252,6 +294,9 @@
         </field>
         <field name="findspot-ru">
           <xsl:value-of select="normalize-space(tei:seg[@xml:lang = 'ru']/tei:placeName[1])"/>
+        </field>
+        <field name="findspot-uk">
+          <xsl:value-of select="normalize-space(tei:seg[@xml:lang = 'uk']/tei:placeName[1])"/>
         </field>
       </doc>
     </xsl:if>
@@ -437,6 +482,9 @@
         <field name="date-ru">
           <xsl:value-of select="tei:seg[@xml:lang = 'ru']"/>
         </field>
+        <field name="date-uk">
+          <xsl:value-of select="tei:seg[@xml:lang = 'uk']"/>
+        </field>
         <xsl:if test="descendant::tei:origDate[@cert = 'low']">
           <field name="cert">low</field>
         </xsl:if>
@@ -445,6 +493,7 @@
           <xsl:when test="not(@precision) and not(following-sibling::precision)">
             <field name="date-type">dated</field>
             <field name="date-type-ru">RU: dated</field>
+            <field name="date-type-uk">UK: dated</field>
           </xsl:when>
           <xsl:otherwise>
 
@@ -465,6 +514,17 @@
                 [number(substring($adjusted_notAfter, 1, 4)) >= number(@min)]">
 
               <field name="date-type-ru">
+                <xsl:value-of select="@url"/>
+              </field>
+            </xsl:for-each>
+            
+            <xsl:for-each
+              select="
+              //alist/list[@xml:lang = 'uk']/century
+              [number(@max) >= $adjusted_notBefore]
+              [number(substring($adjusted_notAfter, 1, 4)) >= number(@min)]">
+              
+              <field name="date-type-uk">
                 <xsl:value-of select="@url"/>
               </field>
             </xsl:for-each>
@@ -1335,6 +1395,12 @@
             <xsl:value-of select="."/>
             <xsl:if test="$is-surname">
               <xsl:text> (родовое)</xsl:text>
+            </xsl:if>
+          </field>
+          <field name="anthroponymic-uk">
+            <xsl:value-of select="."/>
+            <xsl:if test="$is-surname">
+              <xsl:text> (CHANGE ME TO UKRAINIAN)</xsl:text>
             </xsl:if>
           </field>
 
