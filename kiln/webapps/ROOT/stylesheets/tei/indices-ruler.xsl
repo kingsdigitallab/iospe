@@ -165,12 +165,11 @@
 
 
   <xsl:template match="
-      tei:idno[@type = ('wp',
-      'wp-ru')]" mode="prosopography-link">
+      tei:idno[@type = ('wp', 'wp-ru', 'wp-uk')]" mode="prosopography-link">
 
     <xsl:choose>
       <xsl:when
-        test="($lang = 'ru' and self::node()[@type = 'wp-ru']) or ($lang = 'en' and self::node()[@type = 'wp'])">
+        test="($lang = 'ru' and self::node()[@type = 'wp-ru']) or ($lang = 'uk' and self::node()[@type = 'wp-uk']) or ($lang = 'en' and self::node()[@type = 'wp'])">
         <sup>
           <a>
             <xsl:attribute name="href" select="text()"/>
