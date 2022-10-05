@@ -530,5 +530,174 @@
     </xsl:variable>
 
 
+    <!-- Ukrainian version table of contents for the Introduction -->
+    <xsl:variable name="introTOC-uk">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="collapse-container">
+                    <p>
+                        <a href="#" class="toggler">CHANGE TO UKRAINIAN <span class="fa fa-caret-right"/></a>
+                    </p>
+                    <div class="expanded hidden-content">
+                        <ul>
+                            <li>
+                                <a href="introduction-ru.html#I-">CHANGE TO UKRAINIAN</a>
+                                <ul>
+                                    <li>
+                                        <a href="introduction-ru.html#I-1-">CHANGE TO UKRAINIAN</a>
+                                        <ul>
+                                            <li>
+                                                <a href="introduction-ru.html#I-1-A-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#I-1-B-">CHANGE TO UKRAINIAN</a>
+                                                
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#I-1-C-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#I-2-">CHANGE TO UKRAINIAN</a>
+                                        <ul>
+                                            <li>
+                                                <a href="introduction-ru.html#I-2-A-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#I-2-B-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#I-2-C-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#I-2-D-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="introduction-ru.html#II-">CHANGE TO UKRAINIAN</a>
+                                <ul>
+                                    <li>
+                                        <a href="introduction-ru.html#II-1-">CHANGE TO UKRAINIAN</a>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#II-2-">CHANGE TO UKRAINIAN</a>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#II-3-">CHANGE TO UKRAINIAN</a>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#II-4-">CHANGE TO UKRAINIAN</a>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#II-5-">CHANGE TO UKRAINIAN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="introduction-ru.html#III-">CHANGE TO UKRAINIAN</a>
+                            </li>
+                            <li>
+                                <a href="introduction-ru.html#IV-">CHANGE TO UKRAINIAN</a>
+                                <ul>
+                                    <li>
+                                        <a href="introduction-ru.html#IV-1-">CHANGE TO UKRAINIAN</a>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#IV-2-">CHANGE TO UKRAINIAN</a>
+                                        <ul>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-2-A-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                                
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-2-B-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-2-C-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#IV-3-">CHANGE TO UKRAINIAN</a>
+                                        <ul>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-3-A-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-3-B-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-3-C-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-3-E-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-3-F-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="introduction-ru.html#IV-4-">CHANGE TO UKRAINIAN</a>
+                                        <ul>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-4-A-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-4-B-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-4-C-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-4-D-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-4-E-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-4-F-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="introduction-ru.html#IV-5-">CHANGE TO UKRAINIAN</a>
+                                        <ul>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-5-A-">CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                            <li>
+                                                <a href="introduction-ru.html#IV-5-B-"
+                                                    >CHANGE TO UKRAINIAN</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </xsl:variable>
+    
+    
+
 
 </xsl:stylesheet>
