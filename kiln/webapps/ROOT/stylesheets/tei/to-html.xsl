@@ -11,12 +11,17 @@
   <xsl:import href="../tei/introTOC.xsl"/>
 
   <xsl:template match="tei:divGen[contains(@type, 'intro-toc')]">
-    <xsl:sequence select="
-      if (contains(@type, 'ru'))
-      then
-      $introTOC-ru
-      else
-      $introTOC-en"/>
+    <xsl:choose>
+      <xsl:when test="contains(@type, 'ru')">
+        <xsl:sequence select="$introTOC-ru"/>
+      </xsl:when>
+      <xsl:when test="contains(@type, 'uk')">
+        <xsl:sequence select="$introTOC-uk"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:sequence select="$introTOC-en"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
 
