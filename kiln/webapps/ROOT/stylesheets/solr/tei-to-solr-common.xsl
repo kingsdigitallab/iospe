@@ -153,6 +153,9 @@
         <field name="document-type-ru">
           <xsl:value-of select="local:replace-spaces(tei:term)"/>
         </field>
+        <field name="document-type-uk">
+          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+        </field>
 
         <xsl:for-each select="tei:gloss">
           <field name="document-type-{@xml:lang}">
@@ -173,13 +176,16 @@
     <field name="origin-ru">
       <xsl:apply-templates select="tei:seg[@xml:lang = 'ru']" mode="origin"/>
     </field>
+    <field name="origin-uk">
+      <xsl:apply-templates select="tei:seg[@xml:lang = 'uk']" mode="origin"/>
+    </field>
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
       <field name="origin-ref">
         <xsl:value-of select="$ref"/>
       </field>
       <xsl:for-each
-        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru', 'uk')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
@@ -199,13 +205,16 @@
     <field name="origin-ru">
       <xsl:apply-templates select="tei:seg[@xml:lang = 'ru']" mode="origin"/>
     </field>
+    <field name="origin-uk">
+      <xsl:apply-templates select="tei:seg[@xml:lang = 'uk']" mode="origin"/>
+    </field>
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
       <field name="origin-ref">
         <xsl:value-of select="$ref"/>
       </field>
       <xsl:for-each
-        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru', 'uk')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
@@ -329,6 +338,9 @@
     <field name="persnames-ru">
       <xsl:value-of select="local:replace-spaces('Божественные, религиозные или мифические личности и персонажи')"/>
     </field>
+    <field name="persnames-uk">
+      <xsl:value-of select="local:replace-spaces('CHANGE TO UKRAINIAN')"/>
+    </field>
     <field name="persnames-en">
       <xsl:value-of select="local:replace-spaces('divine, religious, or mythic figures')"/>
     </field>
@@ -343,6 +355,9 @@
     <field name="persnames-ru">
       <xsl:value-of select="local:replace-spaces('Правители')"/>
     </field>
+    <field name="persnames-uk">
+      <xsl:value-of select="local:replace-spaces('CHANGE TO UKRAINIAN')"/>
+    </field>
     <field name="persnames-en">
       <xsl:value-of select="local:replace-spaces('rulers')"/>
     </field>
@@ -356,6 +371,9 @@
     </field>
     <field name="persnames-ru">
       <xsl:value-of select="local:replace-spaces('Идентифицированные лица')"/>
+    </field>
+    <field name="persnames-uk">
+      <xsl:value-of select="local:replace-spaces('CHANGE TO UKRAINIAN')"/>
     </field>
     <field name="persnames-en">
       <xsl:value-of select="local:replace-spaces('attested persons')"/>
