@@ -154,6 +154,7 @@
                     <th>
                       <xsl:choose>
                         <xsl:when test="$lang = 'ru'">Русский</xsl:when>
+                        <xsl:when test="$lang = 'UK'">CHANGE TO UKRAINIAN</xsl:when>
                         <xsl:otherwise>English</xsl:otherwise>
                       </xsl:choose>
                     </th>
@@ -311,7 +312,7 @@
       </xsl:if>
       <th id="{$myXMLid}">
         <xsl:choose>
-          <xsl:when test="$lang = 'ru'">
+          <xsl:when test="($lang = 'ru' or $lang = 'uk')">
             <a href="../record/{$myXMLid}-{$lang}.html" i18n:attr="title"
               title="Permanent link for this person" name="{$myXMLid}">
               <span style="font-size: smaller;">
@@ -330,7 +331,7 @@
             </a>
           </xsl:otherwise>
         </xsl:choose>
-        <xsl:for-each select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:persName[@xml:lang != 'en'][@xml:lang != 'ru']">
+        <xsl:for-each select="/aggregation/persons//tei:person[@xml:id =$myXMLid]/tei:persName[@xml:lang != 'en'][@xml:lang != 'ru'][@xml:lang != 'uk']">
           <xsl:value-of select="."/>
         </xsl:for-each>
         <xsl:text> </xsl:text>
