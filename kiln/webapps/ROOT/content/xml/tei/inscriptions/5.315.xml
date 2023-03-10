@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Елены и Тамгана</title><title xml:lang="en">Epitaph of Helen and Tamgan</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.315</idno><idno type="PE">PE5000315</idno>
+            <idno type="AYV2012-number">byz278</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Феодосийский музей древностей</repository>
+                     <idno>А–31 Л–311</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Feodosia Museum of Antiquities</repository>
+                     <idno>А–31 Л–311</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon22">Колонна.</objectType>
+                           <objectType xml:lang="en">Column.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконесский мрамор.</material>
+                            <material xml:lang="en">Proconnesian marble.</material>
+                           <p xml:lang="ru">Обломана сверху, поверхность выветрена.</p>
+                           <p xml:lang="en">Broken at the top, the surface is weathered.</p>
+                           <dimensions>
+                              <height>149,0</height>
+                              <dim type="diameter" precision="low">ca. 45,0</dim>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной; титла.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with slanting crossbar; titla.</seg>
+                        <height unit="cm">1,5–4,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Воспор.</seg>
+                        <seg xml:lang="en">Bosporus.</seg>
+                     </origPlace>
+                     <origDate notBefore="0819" notAfter="0819" evidence="указание_надписи">
+                        <seg xml:lang="ru">819 г.</seg>
+                        <seg xml:lang="en">819 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#feodosia">Феодосия.</placeName>
+                        <rs type="circumstances">1799 г., обследования П.И. Сумарокова.</rs>
+                        <rs type="context">Главная мечеть, галерея.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Feodosia.</placeName>
+                        <rs type="circumstances">1799, survey of P.I. Sumarokov.</rs>
+                        <rs type="context">Main mosque, gallery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Феодосия.</seg>
+                     <seg xml:lang="en">Feodosia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-09" who="CB">Andrey's corrections</change>
+          <change when="2012-07-23" who="NG">Greek lemmata inserted</change>
+          <change when="2012-10-06" who="NG">corrected Greek lemmata</change>
+          <change when="2012-10-06" who="AL">small corrections in Russian text</change>
+         <change when="2012-09-26" who="AG">small correction in comments</change>
+         <change when="2012-08-21" who="AG">several lines translated, apparatus tagged, name of Tamgan in the inscription restored, tags corrected</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">correction in Greek text tagging</change>
+          <change when="2012-06-25" who="AL">small corrections in metadata, bibliography and Greek text-tagging</change>
+          <change when="2012-05-16" who="AFS">corrected metadata and text</change>
+          <change when="2012-04-17" who="AL">original date tagging corrected</change>
+          <change when="2012-03-20" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!-- Waxel 1803--><ptr target="bib:b0378"/>, 11, № <citedRange>22</citedRange></bibl>
+                <bibl n="1.1"><!-- Сlarke 1815--><ptr target="bib:b0278"/>, <citedRange>45</citedRange>7</bibl>
+               <bibl n="1.2"><!-- CIG  --><ptr target="bib:Kirchhof"/>, <citedRange>IV.9286</citedRange></bibl>
+                <bibl n="2"><!-- Мурзакевич 1837--><ptr target="bib:b0178"/>, 672–673, № <citedRange>3</citedRange></bibl>
+                <bibl n="3"><!-- Кеппен 1837--><ptr target="bib:b0085"/>, <citedRange>70–7, </citedRange>2</bibl>
+               <bibl n="4"><!-- Сборник 75--><ptr target="bib:b0132"/>, 82–84, № <citedRange>75</citedRange></bibl>
+                <bibl n="5"><!-- Виноградов 2008 --><ptr target="bib:b0055"/></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἐνθάδε">Ἐνθάδε</w> <w lemma="κατάκειμαι">κατάκη
+               <lb n="2" break="no"/>τε</w> <w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="3"/><persName type="attested" ref="#person358"><name nymRef="Ἑλένη">Ἑλένη</name></persName> <w lemma="μοναχός">μοναχή</w>. <w lemma="τελειόω"> Ἐτε
+               <lb n="4" break="no"/>λιώθη</w> <date><w lemma="μήν">μηνὴ</w> <rs type="month" ref="mai"><w lemma="Μάϊος">Μαΐου</w></rs>
+               <lb n="5"/><num value="11">ια</num>, <w lemma="ἡμέρα">ἡμέρᾳ</w> <num value="4">δ</num>, <w lemma="ὥρα">ὥρᾳ</w> <num value="1">α</num></date>.
+               <lb n="6"/><w lemma="τελειόω">Ἐτελειώθη</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w>
+               <lb n="7"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> <persName type="attested" ref="#person359"><name nymRef="Ταμγαν">Ταμγαν</name></persName> <date><w lemma="μήν">μηνὴ</w>
+               <lb n="8"/><rs type="month" ref="mai"><w lemma="Μάϊος">Μαΐου</w></rs> <num value="13">ιγ</num>, <w lemma="ἡμέρα">ἡμέρᾳ</w> <w lemma="παρασκευή">παρασ<lb n="9" break="no"/>κευῇ</w>, <w lemma="ὥρα">ὥρᾳ</w> <num value="5">ς</num>, <w lemma="ἀπό">ἀπὸ</w> <persName type="divine" key="adam"><name nymRef="Ἀδὰμ">Ἀδὰμ</name></persName>
+               <lb n="9"/><w lemma="ἔτος">ἔτους</w> <num value="6327">ςτκζ</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="7"><rdg source="bib:b0378 bib:b0278 bib:Kirchhof">Ταγμαν</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Здесь лежит раба Божья монахиня Елена; скончалась 11 мая, в среду, в 1-ом часу. Скончался раб Божий Тамган 13 мая, в пятницу, в 5-ом часу, 
+               в год от Адама 6327.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies a servant of God, Helen, a nun; she died on the 11th of May, Wednesday, in the 1st hour. Died: a servant of God, Tamgan, on the 13th of May,
+            Friday, in the 5th hour, in the year 6327 since Adam.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись была впервые отмечена Л. Вакселем в 1797–1798 гг. и П.П. Сумароковым в 1799 г., как стоящая в преддверии феодосийской 
+               мечети (Сумароков 1800, 62). Мечеть была разобрана в 1833 г., а надпись поступила в музей (Тункина 2002,  214, прим. 133). Раннюю историю 
+               изучения надписи и ее старые рисунки см. в: Тункина 2011, 34–35 (илл. 44–48), 99–100.</p>
+                <p> Сомнения в происхождении надписи из Феодосии вызывают два обстоятельства. Во-первых, ее первоиздатель, Ваксель, прямо говорит, 
+                   что колонна перевезена из Анатолии — впрочем, к такого рода сведениям надо относится осторожно: вспомним, как знаменитую херсонскую 
+                   надпись Зинона Э.М. Кузинери якобы видел в подвале фессалоникской мечети (см. Латышев 1896, 7–15, № 7). Во-вторых, по свидетельству Епифания Монаха, 
+                   бывшего в Феодосии между 815 и 820 гг., в городе «нет ни следа человеческого» (Виноградов 2005с), что совпадает и с оценками археологов 
+                   (Петрова 2000, 133). Подр. см. Виноградов 2008.</p>
+                <p> 1–2. Относительно формулы см.<ref type="introduction"> IV.3.F.d</ref>.  </p>
+                <p> 3. Имя Елена в византийской эпиграфике Северного Причерноморья более не встречается. Неясно, монахиней какого монастыря была Елена.</p>
+                <p> 3–7. Относительно формулы см. <ref type="introduction">IV.3.F.f</ref>.</p>
+                <p> 4–5. 11 мая, действительно, приходилось на среду в указанном ниже (8–9-е строки) 819 г. (о соотношении годов от сотворения мира и от Р.Х. 
+                   в средневизантийское время см. комм. к <ref type="introduction">IV. 4. D</ref>)</p>
+                <!--<p> 7. Относительно имени Тамган см. прил. 1.</p>-->
+            <p>8–9. Надпись датирована довольно редким обозначением «от Адама», характерным для боспорской традиции конца VIII — начала Х 
+                  веков (см. <ref type="introduction">IV.4.C</ref>). Такое обозначение крайне редко и не встречается в других местах раньше конца XII века 
+                  (Stylianou 1960, 98,2 a 2). Близка она к <ref type="inscription">V 316</ref><!--byz282--> и по формуле, и по палеографии, за исключением альфы с наклонной перекладиной. 
+                   Поскольку же, как было указано выше, столь качественное надгробие не могло быть выполнено в Феодосии 810-х годов, то встает вопрос: 
+                   а не было ли оно привезено не из Малой Азии, а из Керчи? Мы знаем, что колонны храма св. Иоанна Предтечи происходят из ранневизантийской 
+                   базилики (см. комм. к <ref type="inscription">V 316</ref><!--byz282-->), и на две из них нанесены эпитафии. Поэтому колонна из Феодосии, также из проконесского мрамора и того же диаметра, 
+                   очевидно, происходит из этой базилики и затем, при строительстве храм св. Иоанна Предтечи, была встроена не в него, а в какую-ту другую постройку 
+                   (или оставлена просто стоять), в турецкое же время взята оттуда и перевезена в Феодосию. Подр. см. Виноградов 2008.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Among the first to mention the inscription were Leon Waxel in 1797-1798 and P.P. Sumarokov in 1799: they observed it at the entrance of the Theodosian mosque
+              (Sumarokov 1800, 62). The mosque had been dismantled in 1833, and the inscription was taken to a museum (Tunkina 2002, 214, n. 133). 
+              For the early history of study and old drawings of the inscription, see Tunkina 2011, 34–35 (figs. 44–48), 99–100.</p>
+            <p>Two circumstances make us doubt the origin of this monument in Theodosia. Firstly, Waxel unambiguously states that it had come from Anatolia, 
+               although such statements should be approached with caution: we may recall E.M. Cousinerie's assertion that he had allegedly seen the famous
+               inscription of Zeno from Cherson in the basement of a mosque in Thessaloniki (see Latyshev 1896, № 7). Secondly, according to Epiphanios the Monk 
+               who visited Theodosia some time between 815 and 820 C.E., there was "not a human trace" in the city (Vinogradov 2005с), which observation is fully
+               supported by archaeologists (Petrova 2000, 133). For more details, see Vinogradov 2008.</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction"> IV.3.F.d</ref>.  </p>
+            <p> 3. The name Helen is not otherwise attested in the epigraphy of the Northern Black Sea region. It is unclear to which nunnery this Helen belonged.</p>
+            <p> 3–7. On the formula, see Introduction <ref type="introduction">IV.3.F.f</ref>.</p>
+            <p> 4–5. May 11 indeed fell on a Wednesday of the year 819 (indicated below in lines 8-9) (on the correspondance of years "since Creation" and 
+               "since the Birth of Christ" in the Middle Byzantine period, see Introduction <ref type="introduction">IV. 4. D</ref>).</p>
+            <!--<p> 7. On the name Tamgan, see Appendix 1.</p>-->
+            <p>8–9. The inscription is dated by a rare formula "since Adam" (characteristic of the Bosporan tradition of the late VIII - early Xth centuries
+               (see Introduction <ref type="introduction">IV.4.C</ref>). This is a very rare dating formula, which elsewhere is not attested before the end 
+               of the XIIth century (Stylianou 1960, 98,2 a 2). It is close to <ref type="inscription">V 316</ref><!--byz282--> both in formula and in palaeography,
+               with the exception of alpha with slanting crossbar. Since, as has been noted above, such a high-quality tombstone could not have been produced
+               at Theodosia in the 810s, we might ask: could it have originated not in Asia Minor, but in Kerch? We know that columns of the Church of John the Precursor
+               come from an Early Byzantine basilica (see commentary to  <ref type="inscription">V 316</ref><!--byz282-->), and two of them bear epitaphs.
+               A column found in Theodosia, made from Proconnesian marble and of the same diameter, apparently comes from the same basilica, but at the time  
+               of the construction of the Church of John the Precursor it must have been built into another structure, or simply left to stand, while during the Ottoman
+               period it could have been transported to Theodosia. For more details, see Vinogradov 2008.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

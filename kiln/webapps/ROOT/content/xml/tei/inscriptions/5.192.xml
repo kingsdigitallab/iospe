@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt><title xml:lang="ru">Надгробие Феклы</title><title xml:lang="en">Epitaph of Thekla</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+            <publicationStmt><authority>King's College London</authority>
+                <idno type="filename">5.192</idno><idno type="PE">PE5000192</idno>
+                <idno type="AYV2012-number">byz181a</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country/>
+                        <altIdentifier xml:lang="ru">
+                            <repository>Центральный музей Тавриды</repository>
+                            <idno>14629</idno>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Central Museum of Tavrida</repository>
+                            <idno>14629</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><summary>
+                        <seg xml:lang="ru">Надгробная надпись.</seg>
+                        <seg xml:lang="en">Epitaph.</seg>
+                    </summary></msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru">Неизвестна.</objectType>
+                                    <objectType xml:lang="en">Unknown.</objectType>
+                                    <material xml:lang="ru">Неизвестен.</material>
+                                    <material xml:lang="en">Unknown.</material>
+                                    <p xml:lang="ru">Неизвестно.</p>
+                                    <p xml:lang="en">Unknown.</p>
+                                    <dimensions>
+                                        <height>?</height>
+                                        <width>50,0</width>
+                                        <depth>?</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout ana="f1">
+                                    <seg xml:lang="ru">Неизвестно.</seg>
+                                    <seg xml:lang="en">Unknown.</seg>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <seg xml:lang="ru">Лапидарный, слегка наклонный. Буквы чуть вытянуты по вертикали, полукружия чуть заостренные. 
+                                    Альфа с петлей, лямбда удлинена вверх налево.</seg>
+                                <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro">Lapidary</rs>, slightly leaning to the R. Letters are slightly elongated, loops are pointy. 
+                                    Alpha with a loop, the right stroke
+                                of lambda protrudes upwards and left.</seg>
+                                <height unit="cm">0,8–1,5.</height>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <origPlace ref="origPlace.xml#p020">
+                            <seg xml:lang="ru">Феодоро.</seg>
+                            <seg xml:lang="en">Theodoro.</seg>
+                        </origPlace>
+                        <origDate notBefore="0801" notAfter="1100" precision="low" evidence="палеография формула">
+                            <seg xml:lang="ru">IХ–XI вв.</seg>
+                            <seg xml:lang="en">IХ–XIth centuries C.E.</seg>
+                        </origDate>
+                    </origin>
+                    <provenance type="observed" subtype="autopsy">
+                        <seg xml:lang="ru">Non vidi.</seg>
+                        <seg xml:lang="en">Non vidi.</seg>
+                    </provenance>
+                    <provenance type="found">
+                        <seg xml:lang="ru">
+                            <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                            <rs type="circumstances">1984 г., раскопки В.А. Сидоренко.</rs>
+                            <rs type="context">Базилика у водохранилища, между средней и южной апсидами, на плоском постаменте, во вторичном использовании.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                            <placeName type="ancientFindspot">Mangup.</placeName> 
+                            <rs type="circumstances">1984, excavations of V.A. Sidorenko.</rs>
+                            <rs type="context">Basilica by the water reservoir; between the middle and south apse, on a flat pedestal; in secondary use.</rs>
+                        </seg>
+                    </provenance>
+                    <provenance type="observed">
+                        <seg xml:lang="ru">Симферополь, Крым.</seg>
+                        <seg xml:lang="en">Simferopol, Crimea.</seg>
+                    </provenance>
+                </history>
+            </msDesc>
+            </sourceDesc>
+        </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+            <change when="2015-04-08" who="CB">Andrey's corrections</change>
+            <change when="2013-06-10" who="AG">data updated</change>
+            <change when="2013-04-03" who="AG">created from Word doc, marked up</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.192-1">
+                <desc xml:lang="en">Drawing</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.192-2">
+                <desc xml:lang="en">Squeeze</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.192-3">
+                <desc xml:lang="en">Drawing</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            
+            <div type="bibliography">
+                <listBibl>
+                    <bibl n="L1"><!--Sidorenko 2010--><ptr target="bib:b0407"/>, № <citedRange>17</citedRange></bibl>
+                </listBibl>
+            </div>
+            
+        <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                <lb n="1"/><g ref="#stauros"/> <w lemma="τελευτάω">Ἐτελεύτησεν</w> <w lemma="ὁ">ἡ</w>
+                <lb n="2"/><w lemma="δοῦλος">δούλη</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> <persName type="attested"><name nymRef="Θέκλα">Θέ
+                <lb n="3" break="no"/>κλα</name></persName>, <w lemma="σύμβιος">σύμβηος</w> <w lemma="ὁ">τοῦ</w> <w lemma="δοῦλος"><supplied reason="lost">δού</supplied>
+                <lb n="4" break="no"/>λου</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> <gap reason="illegible" extent="3" unit="character"/> <w lemma="εἰς">εἰς</w>
+                <lb n="5"/><w lemma="ὁ">τὰ</w> <date><num><gap reason="illegible" extent="1" unit="character"/></num>, <w lemma="ἡμέρα">ἡμέρᾳ</w> <gap reason="illegible" extent="unknown" unit="character"/></date>.
+            </ab>
+        </div>
+            
+            <div type="apparatus">
+                <!-- Критич. аппарат -->
+                <listApp><app loc="1-5"><rdg source="bib:b0407">+ Ἐτελει(ώ)της <note>(sic!)</note> ἐν Κ(υ)ρ(ίῳ) δοῦλος τοῦ [Θ(εο)ῦ …]</rdg></app></listApp>
+            </div>
+            
+            <div type="translation" xml:lang="ru">
+                <p>Скончалась раба Божья Фекла, супруга раба Божьего …, .-го …, в …</p>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>Died: a servant of God, Thekla, the wife of a servant of God.., in.., at...</p>
+            </div>
+            
+            <div type="commentary" xml:lang="ru">
+                <!-- Комментарий -->
+               
+                    <p>1–2. Относительно формулы см. <ref type="introduction">IV.3.F.f</ref>. Она не встречается в датированных надписях Крыма после сер. XI в.</p>
+                    <p>2. Популярное христианское имя Фекла в Крыму более не встречается.</p>
+                   <p> 4–5. В конце надписи стояло указание на день месяца и день недели. </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+               
+                <p>1-2. On the formula, see Introduction <ref type="introduction">IV.3.F.f</ref>. It occurs in dated inscriptions of Crimea after the mid-XIth century C.E.</p>
+                <p>2. A popular Christian name Thekla is not otherwise attested in Crimea.</p>
+                <p>4-5. At the end of the inscription we should expect a reference to the day of the month and day of the week.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

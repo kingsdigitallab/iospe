@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt><title xml:lang="ru">Надгробие Савхатиса</title><title xml:lang="en">Epitaph of  Sauchatis</title><editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+            <publicationStmt><authority>King's College London</authority>
+                <idno type="filename">5.198</idno><idno type="PE">PE5000198</idno>
+                <idno type="AYV2012-number">byz186a</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country/>
+                        <altIdentifier xml:lang="ru">
+                            <repository>Бахчисарайский историко-культурный заповедник</repository>
+                            <idno/>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><summary corresp="document-search.xml#doc2">
+                        <seg xml:lang="ru">Надгробная надпись.</seg>
+                        <seg xml:lang="en">Epitaph.</seg>
+                    </summary></msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                                    <objectType xml:lang="en">Stele.</objectType>
+                                    <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                                    <material xml:lang="en">Limestone.</material>
+                                    <p xml:lang="ru">Обломана со всех сторон, кроме правой, и сзади, сколы по поверхности, заляпана известкой.</p>
+                                    <p xml:lang="en">Broken on all sides, except the right and back. Chipped on the surface, stained with whitewash.</p>
+                                    <dimensions>
+                                        <height>25,0</height>
+                                        <width>27,0</width>
+                                        <depth>11,0</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <!-- Местоположение -->
+                                <layout ana="f1">
+                                    <seg xml:lang="ru">На лицевой стороне.</seg>
+                                    <seg xml:lang="en">Within the inset field.</seg>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Буквы разной высоты.</seg>
+                                <seg xml:lang="en">Lapidary. Letters of varying heights.</seg>
+                                <height unit="cm">1,0-2,5.</height>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <origPlace ref="origPlace.xml#p021">
+                            <seg xml:lang="ru">Мариамполь <certainty locus="value" match=".." cert="low"/>.</seg>
+                            <seg xml:lang="en">Mariampol <certainty locus="value" match=".." cert="low"/>.</seg>
+                        </origPlace>
+                        <origDate notBefore="1291" notAfter="1291" evidence="указание_надписи">
+                            <seg xml:lang="ru">1291 г.</seg>
+                            <seg xml:lang="en">1291 C.E.</seg>
+                        </origDate>
+                    </origin>
+                            <provenance type="observed" subtype="autopsy">
+                                <seg xml:lang="ru"><date when="2012-07">Июль 2012</date>.</seg>
+                                <seg xml:lang="en"><date when="2012-07">July 2012</date>.</seg>
+                            </provenance>
+                    <provenance type="found">
+                        <seg xml:lang="ru">
+                            <placeName type="ancientFindspot" ref="findspot.xml#maryam-dere">Марьям-Дере.</placeName> 
+                            <rs type="circumstances">2010 г., раскопки А.М. Ибрагимовой.</rs>
+                            <rs type="context">Марьям-Дере, Кырк-Ер (Салачик), дюрбе хана Хаджи-Герая, у восточной стены.</rs>
+                        </seg>
+                            <seg type="found" xml:lang="en">
+                                <placeName type="ancientFindspot">Maryam-Dere.</placeName> 
+                                <rs type="circumstances">2010, excavations of A.M. Ibragimova.</rs>
+                                <rs type="context">Maryam-Dere, Kyrk-Yer (Salachik), Dürbe (mausoleum) of Khan Haci-Giray, by the east wall.</rs></seg>
+                            </provenance>
+                            <provenance type="observed">
+                                <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                                <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                            </provenance>
+                </history>
+            </msDesc>
+            </sourceDesc>
+        </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+            <change when="2015-04-08" who="CB">Andrey's corrections</change>
+            <change when="2013-10-24" who="TW">Added image code</change>
+            <change when="2012-10-01" who="AG">manually created from a template</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.198">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="bibliography">
+                <p/>
+            </div>
+            <div type="apparatus">
+                <p/>
+            </div>
+            <div type="translation" xml:lang="ru">
+                <p>Почил раб Божий Савхатий 5 октября 6800 года, в [...] часу.</p>
+            </div>
+            <div type="translation" xml:lang="en">
+               <p>Fell asleep: a servant of God, Sauchatis, in the month of October, on the 5th, in the year 6800, in the [..] hour.</p> 
+            </div>
+            <div type="commentary" xml:lang="ru">
+                <p>Камень найден в засыпи 2 пол. XVI в., в слое ниже того, где найден <ref type="inscription">V 197</ref><!--byz186-->. 
+                    По предположению В.И. Баранова, который и обратил наше внимание на данную надпись, она могла быть 
+                    принесена из Мариамполя. В пользу этого говорит и сходство ее форм (зубчатый край, плетенка) с 
+                    <ref type="inscription">V 197</ref><!--byz186--> оттуда.</p>
+                    <p>1. Пропуск артикля перед θ(εο)ῦ объясняется желанием резчика уложиться в пределы строки.</p>
+                    <p> <!--Относительно имени см. прил. 2.-->
+                </p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>The stone was found in the earth fill of the 2nd half of the XVIth century, in a layer below that in which <ref type="inscription">V 197</ref><!--byz186--> 
+                    was found.  According to V.I. Baranov who had brought the monument to my attention, it might have been transported from Mariampol. Similar elements of design (zigzag and weave
+                    patterns) are found on <ref type="inscription">V 197</ref><!--byz186--> from the same area.</p>
+                <p>1. The omission of an article before θ(εο)ῦ can be explained by the desire of the stone-cutter to fit in within the length of one line.</p>
+                <p><!--2.  --><!--On the name, see Appendix 2.--></p>
+            </div>
+            <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                <lb n="1"/><w lemma="κοιμάω">Ἐκοιμήθη</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w>
+                <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+                <lb n="2"/><persName type="attested" ref="#person249"><name nymRef="Σαυχάτις">Σαυχάτις</name></persName> <date><w lemma="μήν">μηνὶ</w>
+               <lb n="3"/><w lemma="Ὀκτώβριος">Ὀκτωβρίου</w> <num value="5">ε</num>,
+               <lb n="4"/><w lemma="ἔτος">ἔτους</w> <num value="6800">ςω</num>, <w lemma="ὥρα">ὥρᾳ</w></date>
+                <lb n="5"/><gap reason="lost" quantity="2" unit="character"/><gap reason="illegible" quantity="3" unit="character"/>.
+            </ab>
+        </div>
+        </body>
+    </text>
+</TEI>

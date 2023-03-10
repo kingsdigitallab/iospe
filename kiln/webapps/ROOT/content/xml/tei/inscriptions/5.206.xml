@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Софии, Ании и Симона</title><title xml:lang="en">Epitaph of Sophia, Ania and Simon</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.206</idno><idno type="PE">PE5000206</idno>
+            <idno type="AYV2012-number">byz194</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon16 #mon20">Скальная стена.</objectType>
+                           <objectType xml:lang="en">Rock wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Сохранилась целиком, перекрыта современными надписями.</p>
+                           <p xml:lang="en">Fully preserved, covered by modern graffiti.</p>
+                           <dimensions>
+                              <height>15,0</height>
+                              <width>32,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы вытянутые, заостренные. 
+                           Альфа с (местами заостренной) петлей, мю расширенное.</seg>
+                        <seg xml:lang="en">Graffito; slightly elongated and pointy letters. Alpha with a loop (sometimes pointy), wide mu.</seg>
+                        <height unit="cm">1,5–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p024">
+                        <seg xml:lang="ru">Тепе-Кермен.</seg>
+                        <seg xml:lang="en">Tepe-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="low" evidence="архитектурный_контекст">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2001-09">Сентябрь 2001</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2009-09"> сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2001-09">September 2001</date>, <date when="2005-09">September 2005</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#tepe-kermen">Тепе-Кермен.</placeName>
+                        <rs type="circumstances">1913 г., обследование Н.А. Боровко.</rs>
+                        <rs type="context">«Храм с ризницей», апсида, северо-восточная стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Tepe-Kermen.</placeName>
+                        <rs type="circumstances">1913, survey of N.A. Borovko.</rs>
+                        <rs type="context">"Church with sacristy", apse, north-eastern wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-03" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-25" who="AG">metadata corrected, several lines translated, apparatus tagged</change>
+          <change when="2012-06-19" who="AL">editor tag inserted, bibliography tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.206">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!-- Виноградов 2002 --><ptr target="bib:b0041"/>, <citedRange>56</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="4"> <rdg source="bib:b0041">Ἄννα</rdg></app> 
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>О упокоении: София. О упокоении: Ания. О Симоне.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For the resting of Sophia. For the resting of Ania. For Simon.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1–2. Уникально расположение букв зигзагом.</p>
+                <p> Относительно формулы см. <ref type="introduction">IV.3.F.a</ref>.</p>
+                <p> Хорошо известное христианское имя София в Крыму более не встречается. Имя Ания из других источников неизвестно; возможно, это 
+                   местный вариант имени Анна.  Имя Симон (ср. <ref type="inscription">V 62</ref><!--byz062-->) — вариант имени Симеон, известного по <ref type="inscription">V 110</ref><!--byz106--> 
+                   и <ref type="inscription">V 124</ref><!--byz216-->.  </p>
+                <p> Судя по расположению надписи в алтаре, София, Ания и Симон являлись ктиторами храма, так что надпись может рассматриваться 
+                   одновременно и как посвятительная, — возможно, что именно им соответствуют три погребения в полу храма. Не исключено, что три части 
+                   надписи выполнены не одновременно. Относительно датировки храма см. комм. к <ref type="inscription">V 203</ref><!--byz191-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The position of letters in zigzag pattern is unique.</p>
+            <p>On the formula, see Introduction <ref type="introduction">IV.3.F.a</ref>.  </p>
+            
+            <p>A well known Christian name Sophia is not otherwise known in Crimea. The name Ania is not known from other sources; it might be a local variant of the 
+               name Anna. The name Simon (here Symon) (cf. <ref type="inscription">V 62</ref><!--byz062-->) is a variant of Simeonos, known from <ref type="inscription">V 110</ref><!--byz106--> 
+               and <ref type="inscription">V 124</ref><!--byz216-->.</p>
+            <p>If the position of the inscription in the altar area is indicative, then Sophia, Ania and Simon might have been ktitores, and the inscription
+               could be identified as dedicatory. It is also possible that three burials in the floor of the church belong to these individuals.
+               We cannot exclude the possibility that the three parts of the inscription were carved at different times. On the date of the church, see commentary 
+               to <ref type="inscription">V 203</ref><!--byz191-->.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ὑπέρ"><expan><abbr>Ὑπ</abbr><ex>ὲρ</ex></expan></w>
+               <lb n="2"/><w lemma="ἀνάπαυσις"><expan><abbr>ἀναπαύσ</abbr><ex>εως</ex></expan></w>
+               <lb n="3"/><persName type="attested" ref="#person261"><name nymRef="Σοφία">Σοφία</name></persName>.
+               <lb n="4"/><w lemma="ὑπέρ"><expan><abbr>Ὑ</abbr><ex>πὲρ</ex></expan></w> <w lemma="ἀνάπαυσις">ἀναπαύ<lb n="5" break="no"/>σεως</w> <persName type="attested" ref="#person262"><name nymRef="Ἀνία">Ἀνία</name></persName>.
+               <lb n="6"/><w lemma="ὑπέρ"><expan><abbr>Ὑπ</abbr><ex>ὲρ</ex></expan></w> <persName type="attested" ref="#person263"><name nymRef="Σίμων">Σύμον</name></persName>.
+           </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие неизвестного</title><title xml:lang="en">Epitaph of an unknown</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.253</idno><idno type="PE">PE5000253</idno>
+            <idno type="AYV2012-number">byz240</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Музей "Судакская крепость"</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Museum "Sudak Fortress"</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Простой известковый дикарь.</material>
+                           <material xml:lang="en">Plain "Dikar" limestone.</material>
+                           <p xml:lang="ru">Стела с полукруглым верхом; на лицевой стороне рельефная рамка и изображение циркульного креста. 
+                              Стесана слева, обломана снизу.</p>
+                           <p xml:lang="en">Stele with rounded top; on the front: a deeply recessed field following the contours of the stele; 
+                              in the centre of the recess - compass cross (a circle intersected by four arcs, forming a cross). Cut on the left, broken at the bottom.</p>
+                           <dimensions>
+                              <height>16,0</height>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки, под розеткой.</seg>
+                           <seg xml:lang="en">In the recessed field, below the compass cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with slanting crossbar.</seg>
+                        <height unit="cm">4,0–4,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                        <seg xml:lang="en">Sougdaia.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1001" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">IX–XI вв.</seg>
+                        <seg xml:lang="en">IX–XIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>, <date when="2009-09">сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sudak">Судак.</placeName>
+                        <rs type="circumstances">1872 г., обследования Н.Н. Мурзакевича.</rs>
+                        <rs type="context">Крепость, между башнями 1388 и 1394 гг., стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">1872, survey of N.N. Murzakevich.</rs>
+                        <rs type="context">Fortress, between towers of 1388 and 1394, wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Судак, Крым.</seg>
+                     <seg xml:lang="en">Sudak, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-13" who="AG">one line translated</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-09" who="AG">small corrections in metadata and bibliography, several lines translated</change>
+          <change when="2012-06-21" who="AFS">corrections in metadata</change>
+          <change when="2012-03-27" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.253">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Мурзакевич 1872--><ptr target="bib:b0180"/>,  <citedRange>318</citedRange></bibl>
+               <bibl n="1.1"><!-- Сборник --><ptr target="bib:b0132"/>, 81–82, № <citedRange>73</citedRange></bibl>
+               <bibl n="1.2"><!-- Латышев 1913--><ptr target="bib:b0153"/>,  107–108, № <citedRange>1</citedRange></bibl>
+               <bibl n="2"><!-- Виноградов, Джанов 2004--><ptr target="bib:b0052"/>,  413–414, № <citedRange>7</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>О блаженной памяти и упо<supplied reason="lost">коении такого-то</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For the blessed memory and rest of...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1–5. Относительно формулы см. <ref type="introduction">IV.3.F.a</ref>.  </p>
+            <p> 5. Как верно отметил Латышев, отбитыми оказались имя и, возможно, дата кончины.</p>
+                <p>Terminus ante quem для нашего камня — кон. XIV в., когда строится стена, в которую он был вделан. Альфа с наклонной перекладиной заставляет 
+                   отнести его с осторожностью ко времени после IX в. (вопреки нашей предыдущей датировке, не учитывавшей данного обстоятельства).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p> 1–5. On the formula, see Introduction <ref type="introduction">IV.3.F.a</ref>.  </p>
+            <p>5. Latyshev rightly observed that the name, and possibly the date of death, had chipped off.</p>
+            <p>Terminus ante quem for our monument is the end of the XIVth century, the construction date for the wall into which it was built.
+            Alpha with slanting crossbar suggests a date after the IXth century (contrary to the date proposed in my original publication, where 
+            this lettershape had not been taken into consideration).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/><w lemma="ὑπέρ">Ὑπὲρ</w> <w lemma="μακάριος">μα<lb n="2" break="no"/>καρήας</w> <w lemma="μνήμη">μ<lb n="3" break="no"/>νήμις</w> <w lemma="καί">καὶ</w>
+               <lb n="4"/><w lemma="ἀνάπαυσις">ἀνα<unclear>π</unclear><supplied reason="lost">αύσε</supplied><lb n="5" break="no"/><supplied reason="lost">ως</supplied></w> <supplied reason="lost"><w lemma="ὁ">τοῦ</w> <w lemma="δεῖνα">δεῖνος</w></supplied>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

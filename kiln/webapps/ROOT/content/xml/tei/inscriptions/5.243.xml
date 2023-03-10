@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Никиты</title><title xml:lang="en">Epitaph of Niketas</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.243</idno><idno type="PE">PE5000243</idno>
+            <idno type="AYV2012-number">byz229</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный Эрмитаж</repository>
+                     <idno>ω1219</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Hermitage</repository>
+                     <idno>ω1219</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Разбита при находке на 15 частей; при обнаружении в ЛОИА АН СССР Ю.П. Калашником две (?) части оказались утрачены; 
+                              при реставрации 1970–1971 гг. недостающие части были дополнены, а сама надпись вмонтирована в гипс.</p>
+                           <p xml:lang="en">At the time of discovery, broke into 15 fragments; when Yu. P. Kalashnikov located the fragments at the Leningrad
+                              Branch of the Institute of Archaeology, the USSR Academy of Sciences, two were missing; during the restoration works of 1970-1971, 
+                              the missing parts were supplemented, and the inscription was fixed in gypsum.</p>
+                           <dimensions>
+                              <height>43,0</height>
+                              <width>27,0</width>
+                              <depth>2,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы немного вытянутые по вертикали, с заостренными окружностями. 
+                           Альфа с петлей, бета с нижним подчеркиванием, хи с укороченным правым нижним концом, пси крестоообразное. Лигатуры ню-эта, омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary; letters are slightly elongated, with pointy loops. Alpha with a loop, beta with bottom underline, chi with a short lower right diagonal, cross-shaped psi. Ligatures: nu-eta, omicron-upsilon.</seg>
+                        <height unit="cm">1,25.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p036">
+                        <seg xml:lang="ru">Партенит.</seg>
+                        <seg xml:lang="en">Partenit.</seg>
+                     </origPlace>
+                     <origDate notBefore="0906" notAfter="0906" evidence="указание_надписи">
+                        <seg xml:lang="ru">906 г.</seg>
+                        <seg xml:lang="en">906 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-02">Февраль 2004</date>.</seg>
+                     <seg xml:lang="en"><date when="2004-02">February 2004</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#partenit">Партенит.</placeName>
+                        <rs type="circumstances">1884 г., случайная находка.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Partenit.</placeName>
+                        <rs type="circumstances">1884, chance find.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                     <seg xml:lang="en">Saint Petersburg, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2013-07-23" who="NG">Greek lemmata inserted</change>
+          <change when="2013-05-02" who="NG">corrected Greek lemmata</change>
+          <change when="2013-03-06" who="NG">corrected Greek lemmata</change>
+          <change when="2013-02-20" who="NG">corrected Greek lemata</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-06" who="AG">several lines translated, bibliography and apparatus tagged, tags in the greek text corrected</change>
+         <change when="2012-07-05" who="AFS">marking up Greek text,added metadata.</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.243">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1886--><ptr target="bib:b0123"/></bibl>
+               <bibl n="1.1"><!--Сборник--><ptr target="bib:b0132"/>, 74–77, № <citedRange>69</citedRange>, табл. VIII</bibl>
+            </listBibl>
+         </div><div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἐκ">Ἐξ</w> <w lemma="ἐνάντιος">ἐναντίας</w> <w lemma="ὁράω">βλέψον</w>, <w lemma="ἄνθρωπος">ἄν<lb n="2" break="no"/>θροπε</w>, 
+               <w lemma="καί">καὶ</w> <w lemma="ὁράω">ἴδε</w> <w lemma="τάφος">τάφον</w>, <w lemma="ὅς">ὅν</w> 
+               <w lemma="μέλλω">μέλ<supplied reason="lost">λεις</supplied></w>
+               <lb n="3"/><w lemma="μετά">μετ'</w> <w lemma="ὀλίγος">ὀλοίγον</w> <w lemma="καί">καὶ</w> <w lemma="αὐτός">αὐτὸς</w> <w lemma="οἰκέω">ὐκῆν</w>. 
+               <w lemma="ἐν">Ἐ<supplied reason="lost">ν</supplied></w>
+               <lb n="4"/><w lemma="οὗτος">τούτο</w> <w lemma="τελειόω">ἐτελιώθι</w> <w lemma="ὁ">το͂</w> <w lemma="βίος">βίῳ</w>, 
+               <w lemma="χράομαι">ἐχρίσ<supplied reason="lost">ατο</supplied></w>
+               <lb n="5"/><w lemma="ὁ">ὡ</w> <w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>. 
+               <w lemma="πτωχεύω">Πτωχεύσας</w> <w lemma="ὁ"><supplied reason="lost">τῷ</supplied></w>
+               <lb n="6"/><w lemma="πνεῦμα"><expan><abbr>πν</abbr><ex>εύματ</ex><abbr>ι</abbr></expan></w>
+               <w lemma="πρός">πρὸς</w> <w lemma="ὁ">τὴν</w> 
+               <w lemma="πρᾶξις">πράξιν</w> <w lemma="ἔχω">ἔσχες</w> <w lemma="καί">καὶ</w>
+               <w lemma="ὁ">τ<supplied reason="lost">ὴν</supplied></w>
+               <lb n="7"/><w lemma="ἐπίβασις">ἐπίβασιν</w>, <w lemma="οὐράνιος">οὐράνιος</w>
+               <w lemma="ἄνθρωπος">ἄνθρωπος</w>, 
+               <w lemma="ἐπίγειος">ἐπίγιο<supplied reason="lost">ς</supplied></w> <w lemma="ἄγγελος">ἄγγ<lb n="8" break="no"/>ελος</w>. 
+               <w lemma="ὁ">Ὡ</w> <w lemma="ἐν">ἐν</w> 
+               <w lemma="ὅσιος">ὡσίῳ</w> <w lemma="ὁ">τῖ</w> <w lemma="μνήμη">μνήμῃ</w> <w lemma="ὁ">ὁ</w> 
+               <w lemma="θεόφορος"><unclear>θ</unclear><supplied reason="lost">εο</supplied><lb n="9" break="no"/>φόρος</w> 
+               <w lemma="πατήρ"><expan><abbr>π</abbr><ex>ατ</ex><abbr>ὴρ</abbr></expan></w> <w lemma="ἐγώ">ἡμο͂ν</w> 
+               <w lemma="ἀββᾶς">ἀβᾶς</w> 
+               <persName type="attested" ref="#person307"><name nymRef=" Νικήτας">Νικίτ<supplied reason="lost">ας</supplied></name></persName>,
+               <w lemma="ὁ">ὁ</w> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+               <lb n="10"/><w lemma="ἡγούμενος">ἱγούμενος</w> <w lemma="ὁ">τῆς</w> <w lemma="μονή">μονῖς</w> <w lemma="ὁ">τοὺς</w> <w lemma="ἅγιος">ἁγίους</w>
+               <lb n="11"/><w lemma="ἀπόστολος">ἀποστόλους</w>, <w lemma="ἐκ">ἐκ</w> <w lemma="νεαρός">νεαρᾶς</w> <w lemma="ἡλικία">ἡλικίας</w> 
+               <w lemma="ἀνατίθημι">ἀ<lb n="12" break="no"/>νατεθὶς</w> <w lemma="ὁ">τῷ</w> 
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>ε</ex><abbr>ῷ</abbr></expan></w></roleName></persName>, <w lemma="παιδεύω">πεδευθὶς</w> <w lemma="ἐν">ἐν</w> <w lemma="ὁ">τῷ</w>
+               <lb n="13"/><w lemma="μονήρης">μονήρι</w> <w lemma="βίος">βίο</w>, <w lemma="πονέω">πονέσας</w> <w lemma="καί">καὶ</w> <w lemma="μαθητεύω">μαθιτεύσας</w>
+               <lb n="14"/><w lemma="καί">καὶ</w> <w lemma="καλός">καλο͂ς</w> <w lemma="διαπρέπω">διαπρέψας</w>, <w lemma="γνωρίζω">ἐγνωρίσθη</w>
+               <lb n="15"/><w lemma="ὁ">τοῖς</w> <w lemma="πᾶς">πᾶσιν</w> <w lemma="φιλόξενος">φιλόξενος</w> <w lemma="εἰμί">ὢν</w> <w lemma="καί">και</w> 
+               <w lemma="φιλόπτωχος">φιλό<lb n="16" break="no"/>πτοχος</w>, <w lemma="μᾶλλον">μᾶλον</w> <w lemma="δέ">δὲ</w> <w lemma="καί">καὶ</w> 
+               <w lemma="φιλόχριστος"><expan><abbr>φιλό</abbr><abbr><unclear>χ</unclear></abbr><ex>ριστο</ex><abbr>ς</abbr></expan></w> 
+               <w lemma="φαίνω">φα<lb n="17" break="no"/>νίς</w>. <w lemma="παρατίθημι">Ἐπαρ<supplied reason="lost">έ</supplied>θετο</w> 
+               <w lemma="ὁ">τὼ</w> <w lemma="πνεῦμα">πνεῦμα</w> <w lemma="αὐτός">αὐ<unclear>τ</unclear><supplied reason="lost">οῦ</supplied></w> 
+               <w lemma="εἰς">εἰς</w>
+               <lb n="18"/><w lemma="χείρ">χεῖρας</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> <w lemma="ζήω">ζο͂ντος</w> 
+               <w lemma="εἰμί">ὢν</w> <w lemma="ἔτος">ἐτο͂ν</w> <num value="53">νγ</num>.<w lemma="τελειόω"> Ἐτε<lb n="19" break="no"/>λιώθει</w> 
+               <date><w lemma="μήν">μηνὶ</w> <rs type="month" ref="dec"><w lemma="Δεκέμβριος">δεκεμβρίῳ</w></rs> <num value="14">ιδ</num>, 
+                  <w lemma="ἡμέρα">ἱμέ<lb n="20" break="no"/>ρᾳ</w> <w lemma="κυριακή">κυριακῖ</w>, <w lemma="ὥρα"><expan><abbr>ὥρ</abbr><ex>ᾳ</ex></expan></w> 
+                  <num value="1">α</num>, <w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w> <num value="10">ι</num>, <w lemma="ἀπό">ἀπὸ</w>  
+                  <persName type="divine" key="adam"><name nymRef="Ἀδὰμ">Ἀδὰ<unclear>μ</unclear></name></persName> <w lemma="ἔτος">ἔτους</w> 
+                  <num value="6415">ςυ<lb n="21" break="no"/>ιε</num></date>. <w lemma="εὔχομαι">Εὔχου</w>, 
+               <w lemma="πατήρ"><expan><abbr>π</abbr><ex>άτε</ex><abbr>ρ</abbr></expan></w>, <w lemma="ὁ">τὼ</w> <w lemma="πεδίον">πεδίον</w> 
+               <w lemma="σύ">σου</w> <persName type="attested" ref="#person308"><name nymRef="Νικόλαος"><expan><abbr>Νηκόλ</abbr><ex>αον</ex></expan></name></persName> 
+               <w lemma="μοναχός"><expan><abbr>μο</abbr><ex>να</ex><abbr>χ</abbr><ex>ὸν</ex></expan></w> <w lemma="καί">καὶ</w> 
+               <w lemma="πρεσβύτερος"><expan><abbr>πρε</abbr><ex>σβύτερον</ex></expan></w>
+               <lb n="22"/><w lemma="ἀπό">ἀπὸ</w> <placeName key="bosporos">Βοσπόρου</placeName>, <w lemma="ἵνα">ἵνα</w> <w lemma="ὁ">ὁ</w> 
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εὸ</ex><abbr>ς</abbr></expan></w></roleName></persName>  <w lemma="ἐλεέω">ἐλείσ<supplied reason="lost">ῃ</supplied></w> 
+               <w lemma="ἐγώ">μ<supplied reason="lost">ε</supplied></w>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="3"> <rdg source="bib:b0123 bib:b0132">ἐ[πεὶ]</rdg></app> 
+               <app loc="4"><rdg source="bib:b0123 bib:b0132">ἐχρίσ[θη</rdg></app>
+               <app loc="7-8"> <rdg source="bib:b0123 bib:b0132">ἐπίγειον τ]έλος</rdg></app>
+               <app loc="9"> <lem>ὁ κ(αὶ)</lem><rdg source="bib:b0123 bib:b0132"><note>om.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Взгляни перед собой, человек, и увидь гроб, в котором немного спустя будешь и сам обитать. 
+               Скончался в этой жизни, закончил ее раб Божий. Обнищав духом, к <supplied reason="lost">обетованной — </supplied> вещи 
+               получил ты доступ, небесный человек, земной <supplied reason="lost">анг</supplied>ел. Преподобной памяти богоносный отец наш авва Никита, 
+               настоятель монастыря святых апостолов, с юного возраста посвященный Богу, воспитанный в уединенной жизни, потрудившись, поучившись 
+               и славно отличившись, всем стал известен, будучи гостелюбивым и явившись нищелюбивым, а вернее христолюбивым. Предал он дух свой в 
+               руки Бога Живого 53 лет от роду. Скончался он 14 декабря, в воскресенье, в 1-м часу, в 10-й индикт, в 6415 году от Адама. 
+               Молись, отче, о чаде твоем Николае, монахе и пресвитере из Воспора, чтобы Бог помиловал меня.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Look in front of you, o man, and see the tomb, which, after a short while, you yourself will inhabit. He died in this life, he used it up, 
+            a servant of God. Having assumed humility of spirit, he gained access to the [promised - A.V.] object, a heavenly man, an earthly angel. Of saintly 
+            memory, God-bearing, our father, abbas Niketas, and prior of the monastery of the Holy Apostles, dedicated to God from the young age, raised in mostastic
+            life, having laboured and learned, and turned out well, he became known to all as hospitable and loving poor people, or rather as loving Christ. He placed his 
+            spirit into the hands of the Living God being 53 years of age. He died on the 14th of December, Sunday, in the first hour in the 10th indiction, the year 6415 
+            since Adam. Pray, o father, on behalf of your child Nicholas, monk and presbyter from Bosporos, so that God may have pity on me.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Эпитафия игумена Никиты — самый пространный надгробный текст в византийском Северном Причерноморье. Она написана в энкомиастическом 
+               стиле и состоит из квази-поэтического пролога (1–3-я строки), энкомия усопшему (3–18-я строки), датировки кончины (18–20-я строки) и финального 
+               прошения (20–21-я строки). При этом язык надписи изобилует ошибками, прежде всего в управлении падежами.</p>
+                <p> 1–3. В прологе использованы элементы метрического членения текста: если считать, что автор ставит ударение в слове ἴδε на первый слог, как это 
+                   было обычно в Византии, то мы получим два предложения: Ἐξ ἐναντίας βλέψον, ἄνθροπε, καὶ ἴδε τάφον и ὅν μέλ[λεις] μετ᾿ ὀλοίγον καὶ αὐτὸς ὐκῆν, 
+                   составленных из ямбов, причем второе похоже на додекасиллаб. Выражение τάφον οἰκεῖν известно уже с Еврипида (Helena, 962), однако под влиянием 
+                   Пс 48, 12 у христианских авторов оно имеет негативное значение (удел грешников), так что и в нашей надписи оно может иметь такой же оттенок.</p>
+                <p> 3–5. Чтение ἐχρίσατο (т.е. ἐχρήσατο) было предложено нам в частной беседе Д.Е. Афиногеновым: оно связано с формулой ἐχρήσατο τῷ βίῳ (IG IV 628, 
+                   Аргос; в египетском варианте ἐχρήσατο τέλει τοῦ βίου (Lefebvre 1907, № 1907, № 382, 606, 621, 626, 659)), означающей «окончил жизнь». 
+                   В нашем случае автор эпитафии ради риторической возвышенности не слишком удачно соединил ее с формулой ἐτελειώθη. </p>
+                <p> 5–8. Выражение πρὸς τὴν πράξιν ἔσχες καὶ τ[ὴν] ἐπίβασιν может не только обозначать достижение Царства Небесного, которое обещано «нищим духом» 
+                   (Мф 5, 3), но и являться аллюзией на  Gregorius Nazanzenus.  Orationes 4 (PG 35, 652), 20 (PG 35, 1080). Выражение «небесный человек, земной ангел» 
+                   автор эпитафии Николай мог заимствовать из начала энкомия свт. Андрея Критского его вероятному патрону, свт. Николаю Мирликийскому (BHG 1362). </p>
+            <p> 8–11. Из других источников игумен Никита неизвестен. Относительно Партенитского монастыря см. комм. к <ref type="inscription">V 241</ref><!--byz226-->. 
+               Просторечную форму μονὴ τοὺς 
+               ἁγίους ἀποστόλους ср. с μονὴ τὸν ἅγιον Κάρπον καὶ Πάπυλον в Patria Constantinopolitana III, 82. Требуемое длиной строки добавление ὁ κ(αὶ) ср. с <ref type="inscription">V 340</ref><!--byz316-->.</p>
+                <p> 11–14. Здесь содержится топос монашеских житий: посвящение с детства Богу, воспитание в монашеской жизни, аскетические подвиги (см. Pratsch 2005).</p>
+                <p> 14–17. Судя по словам «гостеприимен и нищелюбив», при монастыре Никита, возможно, устроил ксенодохий и птохотрофий (Сорочан 2005, 1175). Уподобление любви к нищим любви ко Христу восходит к Мф 25, 35–40.  </p>
+                <p> 17–18. Отметим неграмотную форму ἐπαρέθετο с двойным приращением. Выражение πνεῦμα παρατίθημι встречается, в разных вариантах, в риторических 
+                   надписях CIG IV, № 8721 (Константинополь, 1118–1133 гг.) и Feissel 1983, № 60 (Верия).</p>
+            <p> 18–21. Повторение слова “скончался” в датировке ср. в <ref type="inscription">V 240</ref><!--byz227--> из соседнего Панаира. О соотношении годов от сотворения мира и от Р.Х. в средневизантийское время см. <ref type="introduction">IV. 4. D</ref>. 14 декабря 906 г. 
+               действительно приходилось на воскресенье. Датировка «от Адама» типична для средневизантийского времени: для Боспора ср. <ref type="inscription">V 307</ref><!--byz301--> (692–693 гг.), <ref type="inscription">V 316</ref><!--byz282--> (770 г.), а 
+               также <ref type="inscription">V 315</ref><!--byz278--> (819 г.) и <ref type="inscription">V 317</ref><!--byz333--> (884 г.; см. Виноградов 2008). </p>
+                <p> 21–22. Вероятно, появление боспорской датировки здесь связано с личностью автора эпитафии — монаха Николая из Воспора. Не ясно, имеется ли в 
+                   виду происхождение Николая с Воспора или его отъезд в Воспор после ученичества у игумена Никиты. О связи с Боспором свидетельствует и 
+                   неизвестный в других местах тип надгробия (тонкая мраморная плитка), и палеография, очень близкая к <ref type="inscription">V 336</ref><!--byz320--> (912 г.). 
+                   Молитву Николая в конце надписи ср. с <ref type="inscription">V 108</ref><!--byz026-->; Николай, похоже, относится к Никите как к святому и просит у него небесного 
+                   заступничества. Схожее сокращение имени Николай см. в I.Eph, № 4244; IG XIV, № 2573, 21.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p> The epitaph of hegumen Niketas (here Nikitas) is the longest funerary inscription in the Northern Black Sea region of the Byzantine period. It is written in 
+               an encomiastic style and consists of quasi-poetic prooemium (lines 1-3), encomium for the deceased (lines 3-18), date of death (lines 18-20) and a final
+               invocation (lines 20-21). Its language is not grammatically correct, in particular with respect to the use of cases.</p>
+            <p> 1–3. The proem uses elements of metrical division: if we assume that the author stresses the first syllable in the word ἴδε, 
+               as was normal in Byzantium, then we would have two sentences: Ἐξ ἐναντίας βλέψον, ἄνθροπε, καὶ ἴδε τάφον and ὅν μέλ[λεις] μετ᾿ ὀλοίγον καὶ αὐτὸς ὐκῆν, 
+               consisting of iamboi, of which the second looks like a dodekasyllabic verse. The expression τάφον οἰκεῖν is known already in Euripides
+               (Helena, 962), but in Christian authors, under the influence of Ps. 48.12, it has come to have negative connotations (a sinner's lot), 
+               so that in our text it might be used in the same sense.</p>
+            <p> 3–5. In a private conversation, D.E. Afinogenov suggested to me that we might read ἐχρίσατο (i.e. ἐχρήσατο) here: it would be in connection with the 
+               formula ἐχρήσατο τῷ βίῳ (IG IV 628, Argos; an Egyptian variant is ἐχρήσατο τέλει τοῦ βίου (Lefebvre 1907, № 1907, № 382, 606, 621, 626, 659)), 
+               in the sense "completed one's life." In our case, the author of the epitaph, for the sake of rhetorical effect, somewhat unsuccessfully paired that expression
+               with the formula ἐτελειώθη. </p>
+            <p> 5–8. The expression πρὸς τὴν πράξιν ἔσχες καὶ τ[ὴν] ἐπίβασιν might refer not only to the attainment of Heavenly Kingdom, which is usually promissed to
+               those "poor in spirit" (Мatth. 5.3), but might also be an allusion to Gregorius Nazanzenus, Orationes 4 (PG 35, 652), 20 (PG 35, 1080). 
+               The author of the epitaph, Nicholas, could have borrowed the expression "a heavenly man, an earthly angel" from the opening of an encomium written
+               by St. Andrew of Crete for his probable patron, St. Nicholas of Myra in Lycia (BHG 1362). </p>
+            <p> 8–11. Hegumen Niketas is not otherwise known. On the monastery at Partenit, see commentary to  <ref type="inscription">V 241</ref><!--byz226-->. 
+               For the colloquial μονὴ τοὺς ἁγίους ἀποστόλους compare μονὴ τὸν ἅγιον Κάρπον καὶ Πάπυλον in Patria Constantinopolitana III, 82. 
+               For ὁ κ(αὶ), necessistated by the length of the line, compare <ref type="inscription">V 340</ref><!--byz316-->.</p>
+            <p> 11–14. Here we have a topos typical for monastic Lives: consecration from early age, being brought up at a monastery, 
+               feats of ascetism (see Pratsch 2005).</p>
+            <p> 14–17. The words "hospitable and loving poverty" suggest that Niketas may have set up a hospice and an alms house at the monastery (Sorochan 2005, 1175). 
+               Assimilation of love for the poor to the love of Christ goes back to the Gospel of Matthew 25.35–40.</p>
+            <p> 17–18. We should note an ungrammatical ἐπαρέθετο, with double augmentation. Variants of πνεῦμα παρατίθημι occur in rhetorical inscriptions 
+                CIG IV, № 8721 (Constantinople, 1118–1133 c.E.) and Feissel 1983, № 60 (Veroia).</p>
+            <p> 18–21. For repetition of the word "died" in the dating formula, compare <ref type="inscription">V 240</ref><!--byz227--> from nearby Panair. 
+               On the correspondence of dates 'since Creation' and 'since the Birth of Christ' in the Middle Byzantine period, see Introduction <ref type="introduction">IV. 4. D</ref>. 
+                December 14, 906 indeed fell on a Sunday.  The dating formula 'since Adam' is typical for the Middle Byzantine period: in Bosporus, cf. <ref type="inscription">V 307</ref><!--byz301--> 
+               (692–693 C.E.), <ref type="inscription">V 316</ref><!--byz282--> (770 C.E.), as well as <ref type="inscription">V 315</ref><!--byz278--> (819 C.E.) and
+               <ref type="inscription">V 317</ref><!--byz333--> (884 C.E.; see Vinogradov 2008). </p>
+            <p> 21–22. The use of the Bosporan dating formula is probably related to the epitaph's author - monk Nicholas: either because of his origin
+               in Bosporus or his departure to Bosporus after his schooling at the side of hegumen Niketas. A connection with Bosporus is also corroborated
+               by the type of tombstone (a thin marble panel), unknown elsewhere and palaeography, very similar to <ref type="inscription">V 336</ref><!--byz320--> (912 C.E.). 
+               Compare the prayer of Nicholas with <ref type="inscription">V 108</ref><!--byz026-->; Nicholas apparently treats Niketas as a saint
+               and entreats him for assistance in obtaining divine mercy. A similiar abbreviation of the name Nicholas is in I.Eph, № 4244; IG XIV, № 2573, 21.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

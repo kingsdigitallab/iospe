@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- search sitemap. -->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <map:views>
+    <map:view from-label="content" name="content">
+      <map:serialize type="xml"/>
+    </map:view>
+
+    <map:view from-label="tei" name="tei">
+      <map:serialize type="xml"/>
+    </map:view>
+  </map:views>
+
+  <map:pipelines>
+    <map:pipeline>
+      <!-- Publications -->
+      <!-- TOCS -->
+
+      <!-- bynum -->
+      <map:match pattern="bynum-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/bynum-{1}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
+          <map:parameter name="url" value="indices/bynum-{1}.html"/>
+          <map:parameter name="lang" value="{1}"/>
+          <map:parameter name="toc" value="bynum"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="bynum.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/bynum.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs-bynum.xsl">
+          <map:parameter name="url" value="indices/bynum.html"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="bynum"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- TOC, SUBTYPE -->
+      <!-- date -->
+      <map:match pattern="date/(\w+-B?CE)-(\w+)\.html" type="regexp">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/date/{1}-{2}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
+          <map:parameter name="url" value="indices/date/{1}-{2}.html"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="toc" value="date"/>
+          <map:parameter name="date-type" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="date/(\w+-B?CE)\.html" type="regexp">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
+          <map:parameter name="url" value="indices/date/{1}.html"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="date"/>
+          <map:parameter name="date-type" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="date/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/date/{1}-{2}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
+          <map:parameter name="url" value="indices/date/{1}-{2}.html"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="toc" value="date"/>
+          <map:parameter name="date-type" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="date/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/date/{1}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:date&amp;fq=date-type:{1}&amp;sort=date-notBefore%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-date.xsl">
+          <map:parameter name="url" value="indices/date/{1}.html"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="date"/>
+          <map:parameter name="date-type" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- TOC, SIMPLE -->
+      <!-- category, object -->
+      <map:match type="regexp" pattern="(category|object)-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-{2}:*&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="url" value="indices/{1}-{2}.html"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="toc" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match type="regexp" pattern="(category|object).html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq-en{1}-en:*&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tocs.xsl">
+          <map:parameter name="url" value="indices/{1}.html"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Indices -->
+      <map:match pattern="index.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/index.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <!-- Determine first available letters -->
+
+          <map:part element="anthroponymic" src="cocoon:/getFirstLetter/anthroponymic"/>
+          <map:part element="words-grc" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="words-lat" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="fragments-grc" src="cocoon:/getFirstLetter-grc/fragments"/>
+          <map:part element="fragments-lat" src="cocoon:/getFirstLetter-lat/fragments"/>
+
+          <map:part element="places" src="cocoon:/isAvailable/places"/>
+          <map:part element="person" src="cocoon:/getFirstLetter/names"/>
+          <map:part element="divine" src="cocoon:/isAvailable/names/persName-type:divine"/>
+          <map:part element="ruler" src="cocoon:/isAvailable/names/persName-type:ruler"/>
+          <map:part element="months" src="cocoon:/isAvailable/months"/>
+          <map:part element="symbols" src="cocoon:/isAvailable/symbols"/>
+          <map:part element="ligatures" src="cocoon:/isAvailable/ligature"/>
+          <map:part element="numerals" src="cocoon:/isAvailable/numerals"/>
+          <map:part element="abbr" src="cocoon:/isAvailable/abbr"/>
+          <map:part element="death" src="cocoon:/isAvailable/death"/>
+          <map:part element="findspot" src="cocoon:/isAvailable/findspot"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-home.xsl">
+          <map:parameter name="url" value="indices/index.html"/>
+          <map:parameter name="index" value="home"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+      </map:match>
+
+      <map:match pattern="index-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/index-{1}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <!-- Determine first available letters -->
+          <map:part element="anthroponymic" src="cocoon:/getFirstLetter/anthroponymic"/>
+          <map:part element="words-grc" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="words-lat" src="cocoon:/getFirstLetter-grc/words"/>
+          <map:part element="fragments-grc" src="cocoon:/getFirstLetter-grc/fragments"/>
+          <map:part element="fragments-lat" src="cocoon:/getFirstLetter-lat/fragments"/>
+
+          <map:part element="places" src="cocoon:/isAvailable/places"/>
+          <map:part element="person" src="cocoon:/getFirstLetter/names"/>
+          <map:part element="divine" src="cocoon:/isAvailable/names/persName-type:divine"/>
+          <map:part element="ruler" src="cocoon:/isAvailable/names/persName-type:ruler"/>
+          <map:part element="months" src="cocoon:/isAvailable/months"/>
+          <map:part element="symbols" src="cocoon:/isAvailable/symbols"/>
+          <map:part element="ligatures" src="cocoon:/isAvailable/ligature"/>
+          <map:part element="numerals" src="cocoon:/isAvailable/numerals"/>
+          <map:part element="abbr" src="cocoon:/isAvailable/abbr"/>
+          <map:part element="death" src="cocoon:/isAvailable/death"/>
+          <map:part element="findspot" src="cocoon:/isAvailable/findspot"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-home.xsl">
+          <map:parameter name="url" value="indices/index-{1}.html"/>
+          <map:parameter name="index" value="home"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Index names using asset list -->
+          
+      <!-- Attested persons, sorted by name, one highlighted, Russian version -->
+      <map:match pattern="person/letters/*_*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/letters/{1}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
+          <map:part src="cocoon:/getLetters-grc/attPerson"/>
+          <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/letters/{1}_{2}-{3}.html#{2}"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="{3}"/>
+          <map:parameter name="hl" value="{2}"/>
+          <map:parameter name="current-letter" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{3}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- Attested persons, sorted by name, one highlighted, English version -->
+      <map:match pattern="person/letters/*_*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/letters/{1}_{2}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
+          <map:part src="cocoon:/getLetters-grc/attPerson"/>
+          <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/letters/{1}_{2}.html#{2}"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="hl" value="{2}"/>
+          <map:parameter name="current-letter" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Attested persons, sorted by name, no highlighting, Russian version -->
+      <map:match pattern="person/letters/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part
+            src="cocoon://_internal/menu/main.{2}.xml?url=indices/person/letters/{1}-{2}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
+          <map:part src="cocoon:/getLetters-grc/attPerson"/>
+          <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/letters/{1}-{2}.html"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="current-letter" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Attested persons, sorted by name, no highlighting, English version -->
+      <map:match pattern="person/letters/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/letters/{1}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="firstletters" src="../content/xml/tei/alists/firstletters.xml"/>
+          <map:part src="cocoon:/getLetters-grc/attPerson"/>
+          <map:part element="data" src="cocoon:/getData/attPerson/{1}"/>
+          <map:part element="index" src="cocoon://_internal/solr/query/q=dt:names&amp;sort=names-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,sortable-id,file,line,divloc,sup,cert"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/letters/{1}.html"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="current-letter" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Attested persons, sorted by date, one highlighted, Russian version -->
+      <map:match pattern="person/dates/*_*_*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part
+            src="cocoon://_internal/menu/main.{4}.xml?url=indices/person/dates/{1}_{2}_{3}-{4}.html"/>
+          <map:part element="persdates" src="cocoon:/getData/attPerson/persdates"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/dates/{1}_{2}_{3}-{4}.html#{3}"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="date"/>
+          <map:parameter name="lang" value="{4}"/>
+          <map:parameter name="hl" value="{3}"/>
+          <map:parameter name="current-date" value="{1}-{2}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{4}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- Attested persons, sorted by date, no highlighting, Russian version -->
+      <map:match pattern="person/dates/*_*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part
+            src="cocoon://_internal/menu/main.{3}.xml?url=indices/person/dates/{1}_{2}-{3}.html"/>
+          <map:part element="persdates" src="cocoon:/getData/attPerson/persdates"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/dates/{1}_{2}-{3}.html"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="date"/>
+          <map:parameter name="lang" value="{3}"/>
+          <map:parameter name="current-date" value="{1}-{2}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{3}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- Attested persons, sorted by date, one highlighted, English version -->
+      <map:match pattern="person/dates/*_*_*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/dates/{1}_{2}_{3}.html#{3}"/>
+          <map:part element="persdates" src="cocoon:/getData/attPerson/persdates"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/dates/{1}_{2}_{3}.html#{3}"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="date"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="hl" value="{3}"/>
+          <map:parameter name="current-date" value="{1}-{2}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Attested persons, sorted by date, no highlighting, English version -->
+      <map:match pattern="person/dates/*_*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/dates/{1}_{2}.html"/>
+          <map:part element="persdates" src="cocoon:/getData/attPerson/persdates"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person.xsl">
+          <map:parameter name="url" value="indices/person/dates/{1}_{2}.html"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="date"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="current-date" value="{1}-{2}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Attested persons, regular page for single person record, Russian version -->
+      <map:match pattern="person/record/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/record/{1}-{2}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person-record.xsl">
+          <map:parameter name="context" value="{request:serverName}"/>
+          <map:parameter name="url" value="indices/person/record/{1}-{2}.html"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="id" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Attested persons, regular page for single person record, English version -->
+      <map:match pattern="person/record/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="../content/xml/tei/alists/centuries.xml"/>
+          <map:part src="cocoon:/getLetters/date"/>
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/record/{1}.html"/>
+          <map:part element="persons" src="../content/xml/tei/alists/attestedperson.xml"/>
+          <map:part element="index" src="cocoon:/getIndex/names/4dates"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices-person-record.xsl">
+          <map:parameter name="context" value="{request:serverName}"/>
+          <map:parameter name="url" value="indices/person/record/{1}.html"/>
+          <map:parameter name="index" value="persons"/>
+          <map:parameter name="sort" value="letters"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="id" value="{1}"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Divine, Ruler -->
+      <map:match pattern="person/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/person/{1}-{2}.html"/>
+          <map:part src="../content/xml/tei/alists/{1}.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:names&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-{1}.xsl">
+          <map:parameter name="url" value="indices/person/{1}-{2}.html"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="{2}"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="person/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/person/{1}.html"/>
+          <map:part src="../content/xml/tei/alists/{1}.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:names&amp;fq=names:*%20AND%20persName-type:{1}&amp;sort=names-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-{1}.xsl">
+          <map:parameter name="url" value="indices/person/{1}.html"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="use-request-parameters" value="true"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Index / Letter -->
+      <!-- NAMES ONLY: Attested -->
+      <map:match pattern="names/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/names/{1}-{2}.html"/>
+          <map:part src="cocoon:/getLetters/anthroponymic"/>
+          <map:part src="cocoon:/getIndex/anthroponymic/{1}"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/names/{1}-{2}.html"/>
+          <map:parameter name="index" value="anthroponymic"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="current" value="{1}"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="names/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/names/{1}.html"/>
+          <map:part src="cocoon:/getLetters/anthroponymic"/>
+          <map:part src="cocoon:/getIndex/anthroponymic/{1}"/>
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/names/{1}.html"/>
+          <map:parameter name="ancient-lang" value="all"/>
+          <map:parameter name="index" value="anthroponymic"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="current" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Index / Language - Letter -->
+      <!-- Words, Fragments -->
+      <map:match pattern="*/*/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{4}.xml?url=indices/{1}/{2}/{3}-{4}.html"/>
+          <map:part src="cocoon:/getLetters-{2}/{1}"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/{1}/{2}/{3}-{4}.html"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="ancient-lang" value="{2}"/>
+          <map:parameter name="current" value="{3}"/>
+          <map:parameter name="lang" value="{4}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{4}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="*/*/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}/{2}/{3}.html"/>
+          <map:part src="cocoon:/getLetters-{2}/{1}"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:{3}%20AND%20lang:{2}&amp;sort={1}-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/{1}/{2}/{3}.html"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="ancient-lang" value="{2}"/>
+          <map:parameter name="current" value="{3}"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Other indices using ALs -->
+      <!-- Months -->
+      <map:match pattern="months-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/months-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=999"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-months.xsl">
+          <map:parameter name="url" value="indices/months-{1}.html"/>
+          <map:parameter name="index" value="months"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="months.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/months.html"/>
+          <map:part src="../content/xml/tei/alists/months.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:months&amp;fq=months:*&amp;rows=999"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-months.xsl">
+          <map:parameter name="url" value="indices/months.html"/>
+          <map:parameter name="index" value="months"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Places -->
+      <map:match pattern="places-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/places-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=999"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-places.xsl">
+          <map:parameter name="url" value="indices/places-{1}.html"/>
+          <map:parameter name="index" value="places"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="places.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/places.html"/>
+          <map:part src="../content/xml/tei/alists/mentionedplace.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:places&amp;places:*&amp;rows=999"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-places.xsl">
+          <map:parameter name="url" value="indices/places.html"/>
+          <map:parameter name="index" value="places"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Single indices that differ in english/russian -->
+      <!-- Findspot -->
+      <map:match pattern="findspot-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/findspot-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/findspot.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-{1}:*&amp;sort=findspot-{1}%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/findspot-{1}.html"/>
+          <map:parameter name="index" value="findspot-ref"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="findspot.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/findspot.html"/>
+          <map:part src="../content/xml/tei/alists/findspot.xml" element="AL"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:findspot&amp;fq=findspot-en:*&amp;sort=findspot-en%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/findspot.html"/>
+          <map:parameter name="index" value="findspot-ref"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Abbreviations -->
+      <map:match pattern="abbr-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=indices/abbr-{1}.html"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-abbr.xsl">
+          <map:parameter name="url" value="indices/abbr-{1}.html"/>
+          <map:parameter name="index" value="abbr"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="abbr.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/abbr.html"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:abbr&amp;fq=abbr:*&amp;sort=abbr-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices-abbr.xsl">
+          <map:parameter name="url" value="indices/abbr.html"/>
+          <map:parameter name="index" value="abbr"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+
+      <!-- Special case of single indices for monument-type or document-type -->
+
+      <map:match pattern="*-type-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-type-{2}.html"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/{1}-type-{2}.html"/>
+          <map:parameter name="index" value="{1}-type"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="*-type.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}-type.html"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq={1}-type:*&amp;sort=sortable-id%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/{1}-type.html"/>
+          <map:parameter name="index" value="{1}-type"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Single indices (must be at the end because of URL) -->
+      <!-- Index -->
+      <!-- Symbols, Ligatures, Numerals, Deaths -->
+      <map:match pattern="*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=indices/{1}-{2}.html"/>
+          <map:part src="../content/xml/tei/alists/symbols.xml" element="AL_symbols"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/{1}-{2}.html"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=indices/{1}.html"/>
+          <map:part src="../content/xml/tei/alists/symbols.xml" element="AL_symbols"/>
+          <map:part element="index"
+            src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/indices.xsl">
+          <map:parameter name="url" value="indices/{1}.html"/>
+          <map:parameter name="index" value="{1}"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+    </map:pipeline>
+
+    <!-- Preprocessing -->
+    <map:pipeline internal-only="true">
+      <!-- general check to test whether index is available (can be removed when all indices are available) -->
+      <map:match pattern="isAvailable/*">
+        <map:generate src="cocoon://_internal/solr/query/q=dt:{1}&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+
+      <map:match pattern="isAvailable/*/*">
+        <map:generate src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={2}&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+
+      <map:match pattern="getData/*/*">
+        <map:select type="parameter">
+          <map:parameter name="parameter-selector-test" value="{2}"/>
+
+          <map:when test="—">
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter:%E2%80%94&amp;sort=names-sort%20asc&amp;rows=9999"
+            />
+          </map:when>
+          <map:when test="persdates">
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;rows=9999&amp;fl=id,date-era"
+            />
+          </map:when>
+
+          <map:otherwise>
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter:&quot;{2}&quot;&amp;sort=names-sort%20asc&amp;rows=9999"
+            />
+          </map:otherwise>
+        </map:select>
+        <map:serialize/>
+      </map:match>
+
+      <!-- get first available letter: index query-->
+      <map:match pattern="getFirstLetter/*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+      <map:match pattern="getFirstLetter-*/*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=dt:{2}&amp;fq=lang:{1}%20AND%20first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+      <map:match pattern="getFirstLetter/*/*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={2}&amp;first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+      <map:match pattern="getFirstLetter-*/*/*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=dt:{2}&amp;fq={3}&amp;lang:{1}%20AND%20first-letter:*&amp;sort=first-letter%20asc&amp;rows=1"/>
+        <map:serialize/>
+      </map:match>
+      
+      <!-- generate list of available letter: index query -->
+      <map:match pattern="getLetters/*">
+        <map:generate
+          src="cocoon://_internal/solr/query/q=dt:{1}&amp;sort=first-letter%20asc&amp;rows=9999"/>
+        <map:transform src="../stylesheets/getLetters.xsl">
+          <map:parameter name="type" value="{1}"/>
+        </map:transform>
+        <map:serialize/>
+      </map:match>
+
+      <map:match pattern="getLetters-*/*">
+        <map:select type="parameter">
+          <map:parameter name="parameter-selector-test" value="{2}"/>
+          <map:when test="attPerson">
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{2}&amp;sort=first-letter%20asc&amp;rows=9999"
+            />
+          </map:when>
+          <map:otherwise>
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{2}&amp;fq=lang:{1}&amp;sort=first-letter%20asc&amp;rows=9999"
+            />
+          </map:otherwise>
+        </map:select>
+        <map:transform src="../stylesheets/getLetters.xsl">
+          <map:parameter name="type" value="{2}"/>
+        </map:transform>
+        <map:serialize/>
+      </map:match>
+
+      <map:match pattern="getIndex/*/*">
+
+        <map:select type="parameter">
+          <map:parameter name="parameter-selector-test" value="{2}"/>
+
+          <map:when test="—">
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq=first-letter-emdash:&quot;yes&quot;&amp;sort={1}-sort%20asc&amp;rows=999"
+            />
+          </map:when>
+
+          <map:when test="4dates">
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*&amp;sort={1}-sort%20asc&amp;rows=9999&amp;fl=persName-ref,tei-id,file,line,divloc,sup,cert"
+            />
+          </map:when>
+
+          <map:otherwise>
+            <map:generate
+              src="cocoon://_internal/solr/query/q=dt:{1}&amp;fq={1}:*%20AND%20first-letter:&quot;{2}&quot;&amp;sort={1}-sort%20asc&amp;rows=999"
+            />
+          </map:otherwise>
+
+        </map:select>
+        <map:serialize/>
+      </map:match>
+    </map:pipeline>
+  </map:pipelines>
+</map:sitemap>

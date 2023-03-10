@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение неизвестного</title><title xml:lang="en">Invocation of an unknown</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.55</idno><idno type="PE">PE5000055</idno>
+            <idno type="AYV2012-number">byz055</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>105/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>105/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon17 #mon18">Архитектурная деталь (косяк окна ?).</objectType>
+                           <objectType xml:lang="en">Architectural detail (a window jamb?).</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Слева вынут угол (шир. 2, глуб. 2). Разбита на 2 части; обломана справа и снизу.</p>
+                           <p xml:lang="en">A cut-out (W 2, D 2) on the left hand side. Broken into two parts; broken off on the right and bottom.</p>
+                           <dimensions>
+                              <height>34,0</height>
+                              <width>11,5</width>
+                              <depth>35,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внизу.</seg>
+                           <seg xml:lang="en">Below.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы минускульные. Лигатура мю-эта.</seg>
+                        <seg xml:lang="en">Lapidary. Minuscule letters. Ligature: mu-eta.</seg>
+                        <height unit="cm">0,5–2,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="1101" notAfter="1300" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">XII–XIII вв.</seg>
+                        <seg xml:lang="en">XII–XIIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-20" who="CB">Andrey's corrections</change>
+         <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-17" who="AG">several lines translated</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-17" who="AG"> small corrections</change>
+         <change when="2012-01-11" who="AG"> updated</change>
+         <change when="2011-12-05" who="AG"> tags in the Greek text added, minor corrections</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+         </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.55">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+           </div>
+         <div type="apparatus" n="1">
+            <!-- <listApp>
+               <app>4: Orig.:  4:</note> <orig >Κ-ΑΚΥ</orig></app></listApp> --> <!--to be checked-->
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Господи, согрешил я, но эти злодеяния да не прогневают Тебя.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Lord, I have sinned, but may these misdeeds not draw your anger.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Данное графитто, видимо, представляет исповедальное обращение к Богу с просьбой о помиловании (ср. <ref type="inscription">V 62</ref><!--byz062-->, надпись 14).
+               Формула находит отдаленную параллель в IСUR III, 1467 и может восходить к Пс 40, 5.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>This graffito apparently represents a confessional appeal to God for mercy (cf. <ref type="inscription">V 62</ref><!--byz062-->, inscription 14). The formula might have a distant parallel in
+               IСUR III, 1467, and might have its origin in Psalm 40 verse 5.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
+               <lb n="2"/><w lemma="ἁμαρτάνω">ἵμαρτ<unclear>ο</unclear><supplied reason="lost">ν</supplied></w>,
+               <lb n="3"/><w lemma="ὁ">τὰ</w> <w lemma="δέ">δὲ</w> <w lemma="κακός">κ
+               <lb n="4" break="no"/>ακ<choice><corr>ὰ</corr><sic>υ</sic></choice></w> <w lemma="μή">μὴ</w> <w lemma="παροργίζω"><unclear>π</unclear><supplied reason="lost">α</supplied>
+               <lb n="5" break="no"/>ροργυ<supplied reason="lost">ῇ</supplied>
+               <lb n="6"/>σε</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение Кириака, Георгия, Евтолмия и Р-</title><title xml:lang="en">Invocation of Kyriakos, George, Eutolmios and R-</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.345</idno><idno type="PE">PE5000345</idno>
+            <idno type="AYV2012-number">byz332</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный музей изобразительных искусств им. Пушкина</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Pushkin Museum of Fine Arts</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Плита с тупоугольным завершением. Выщербины по поверхности.</p>
+                           <p xml:lang="en">Panel with a triangular top. The surface is chipped.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы слегка наклонные. Ро удлиненное, ипсилон Y-образный. Лигатура омикрон-ню.</seg>
+                        <seg xml:lang="en">Lapidary; letters are slightly leaning. Elongated rho, Y-shaped upsilon. Ligature: omicron-nu.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p057">
+                        <seg xml:lang="ru">Неизвестно.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                     </origPlace>
+                      <origDate notBefore="0901" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">Х в.</seg>
+                        <seg xml:lang="en">Хth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Москва, Россия.</seg>
+                     <seg xml:lang="en">Moscow, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+   <change when="2015-09-16" who="CB">Correction to person tag</change>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-09" who="CB">Andrey's corrections</change>
+         <change when="2012-09-12" who="AG">heading and repository added, tag corrected</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+         <change when="2012-02-29" who="AG">corrections, several lines translated, tags tidied</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.345">
+            <desc xml:lang="en">Photograph of face</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Господи, спаси раба Твоего Кириака, его весь <supplied reason="lost">дом (?)</supplied>
+               и Георги<supplied reason="lost">я, Ев</supplied>толм<supplied reason="lost">ия и</supplied>
+               Р[…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Lord, save your servant Kyriakos, his entire [household (?)], and George, Eutolmios, and R[...].</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись любезно указана нам А.А. Агафоновым, ему же принадлежит и публикуемое фото, которое является единственным источником наших
+               знаний о надписи. В фондах ГМИИ надпись отыскать не удалось. Учитывая источники пополнения коллекции ГМИИ, можно предположить, что
+               памятник столь скромного облика не был куплен за рубежом (ни самим музеем, ни частным коллекционером), а попал в коллекцию из раскопок в
+               Северном Причерноморье.</p>
+            <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.E.c</ref>.</p>
+            <p> 2–3. Относительно имени Кириак см. комм. к <ref type="inscription">V 72</ref><!--byz072-->.</p>
+                <p> 3. Выражение ὅλος οἶκος встречается в IG XIV 2462 (Марсель).</p>
+                <p>4–5. Имя Евтолмий, довольно редкое, встречается в ранневизантйиское время: см. PLRE I 316; кроме того, так звали автора ранневизантийских
+                   эпиграмм (Anthologia Palatina VI, 86; VII, 608, 611; IX, 587) и автора «Жития и мученичества свв. Галактиона и Епистимы» (BHG 665). 
+                   В Х в. оно могло быть скорее монашеским.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>A.A. Agafonov kindly brought this monument to my attention. He also took the photograph published here, which is our only source of information
+               about the inscription. I was not able to find the monument at the Pushkin Museum of Fine Arts. It stands to reason that such a modest monument
+            would not have been purchased abroad (either by the museum, or by a private individual), and so probably came to the museum from the region of the Northern
+            Black Sea.</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.E.c</ref>.</p>
+            <p> 2–3. On the name Kyriakos (here Kyreakos), see commentary to <ref type="inscription">V 72</ref><!--byz072--></p>
+            <p>The expression ὅλος οἶκος is known from IG XIV 2462 (Marseille).</p>
+            <p>4-5. The name Eutolmios, quite rare, is known in the Early Byzantine period: see PLRE I 316; in addition, this was the name of an author of
+               Early Byzantines epigrams (Anthologia Palatina VI, 86; VII, 608, 611; IX, 587) and of the author of the "Lives and Martyrdom of Saints Galaktion and Episteme
+"               (BHG 665). In the Xth century, it most likely would have belonged to a monk.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
+               <w lemma="σώζω">σο͂σον</w> <note>?</note> <w lemma="ὁ">τὸν</w>
+               <lb n="2"/><w lemma="δοῦλος"><supplied reason="lost">δ</supplied>οῦλόν</w> <w lemma="σύ">σου</w>
+               <persName type="attested" ref="#person429"><name nymRef="Κυριακός">Κυρηα
+              <lb n="3" break="no"/><supplied reason="lost">κ</supplied>όν</name></persName>,
+               <w lemma="αὐτός">αὐτο<supplied reason="lost">ῦ</supplied></w> <w lemma="ὅλος">ὥλον</w>
+               <w lemma="οἶκος"><supplied reason="lost" cert="low">οἶκον</supplied></w>
+               <lb n="4"/><w lemma="καί"><supplied reason="lost">κὲ</supplied></w>
+               <persName type="attested" ref="#person430"><name nymRef="Γεώργιος">Γεόργη<supplied reason="lost">ον</supplied></name></persName>,
+               <persName type="attested" ref="#person431"><name nymRef=" Εὐτόλμιος"><supplied reason="lost">Εὐ</supplied>τόλμ
+               <lb n="5" break="no"/><supplied reason="lost">ιον</supplied></name></persName>
+               <w lemma="καί"><supplied reason="lost">κὲ</supplied></w>
+               <persName type="attested" ref="#person432"><name><seg part="I">Ῥ</seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

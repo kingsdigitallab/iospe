@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Иоанна</title><title xml:lang="en">Epitaph of John</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.122</idno><idno type="PE">PE5000122</idno>
+            <idno type="AYV2012-number">byz118</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Плотный мшанковый известняк.</material>
+                           <material xml:lang="en">Cоmpact bryozoan limestone.</material>
+                           <p xml:lang="ru">Стела в виде храмика с двускатной крышей; на лицевой стороне изображение крестов в двойном круге на фронтоне и на 
+                              боковых сторонах и с орнаментальным  пояском под фронтоном; на задней стороне следы крепления. Расколота на 2 части, выщербины по поверхности.</p>
+                           <p xml:lang="en">Stele carved in the shape of a church with saddleback roof. On the pedimental front and on the side surfaces is a double circle rosette 
+                              with crosses in the centre, and there is an ornamental band carved below the pediment. Broken in two pieces, with multiple indentations on the front.</p>
+                           <dimensions>
+                              <height>35,5</height>
+                              <width>18,0</width>
+                              <depth>13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под розеткой.</seg>
+                           <seg xml:lang="en">Below the rosette.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, bouletée. Альфа с петлей; каппа с удлиненной вертикалью, 
+                           мю и ипсилон прогнутые, хи с апексами на верхних концах.</seg>
+                        <seg xml:lang="en">Lapidary, bouletée. Alpha with a loop; kappa with elongated vertical, mu with a sagging crossloop, bowl-shaped upsilon without 
+                           a vertical, chi with serifs at the tops of the diagonals. </seg>
+                        <height unit="cm">0,6–2,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p008">
+                        <seg xml:lang="ru">Хребет Басман.</seg>
+                        <seg xml:lang="en">Basman ridge.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1100" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X–XI вв.</seg>
+                        <seg xml:lang="en">X–XIth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#basmanridge">Хребет Басман</placeName>
+                        <rs type="circumstances">1962 г., обследование О.И. Домбровского.</rs>
+                        <rs type="context">Карстовые полости, пещера № 5, в завале камней из разрушенного храма.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Basman Ridge.</placeName>
+                        <rs type="circumstances">1962, survey of O.I. Dombrovsky.</rs>
+                        <rs type="context">Karst hollows, cave 5, rubble fill from the ruined church.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Крым.</seg>
+                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-17" who="AG">small correction</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-24" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-06" who="AG">corrected, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.122-1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="byz118.2">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Соломоник 1986--><ptr target="bib:b0210"/>, 214–215, fig. <citedRange>6–8</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="3"><rdg source="bib:b0210">πρ(εσβύτερος) resp. πρ(ωτοπαπᾶς)</rdg></app>
+               <app loc="4-5"><rdg source="bib:b0210">Χερσαικείας</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий <supplied reason="lost">Ио</supplied>анн, пресвитер Херсакии.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God [Io]annes, presbyter of Chersakeia.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Данный памятник выделяется из общего ряда стандартных надгробий как по своей форме, так и по содержанию надписи. Камень имитирует храм с 
+               двускатной кровлей и украшен вписанными в круг крестами в своей верхней части, отделенной от надписи декоративным пояском. Такое подражание 
+               церковному зданию известно в византийских надгробиях Горного Крыма: ближайшая аналогия — пропавшее надгробие из храма Спаса на г. Бойка в виде 
+               миниатюрной модели храма с двускатной крышей и пятигранной апсидой: на фронтоне модели вырезан процветший крест с двумя маленькими 
+               равноконечными крестами в кружках по бокам фронтона, ниже вырезана надпись на греческом языке (Домбровский 1968, 90). Такая форма объясняется, 
+               возможно, саном погребенного, который был, как следует из надписи, пресвитером.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p> 3. Имя покойного (причем именно Иоанн) в генитиве вместо номинатива встречается в <ref type="inscription">V 66</ref><!--byz066-->. Относительно сокращения «пр(есвитер)» в 
+               поздневизантийском Крыму ср. <ref type="inscription">V 160</ref><!--byz153-->, <ref type="inscription">V 201</ref><!--byz189--> и <ref type="inscription">V 218</ref><!--byz206-->. 
+               Вариант «протопоп», предложенный Соломоник, ни разу не засвидетельствован в Северном 
+               Причерноморье; ср., напротив, <ref type="inscription">V 218</ref><!--byz206-->.1. Обозначение места пресвитерства не уникально, оно встречается в <ref type="inscription">V 201</ref><!--byz189--> 
+               и <ref type="inscription">V 218</ref><!--byz206-->, а также в 
+                   Ὀρλάνδος, Βρανούσσης 1973, № 95 и Mitford 1950, 139, № 11; по всей видимости, оно означает принадлежность погребенного к клиру Херсонской 
+                   епархии.  </p>
+                <p> 4–5. Большой интерес представляет название местности Херсакия (то, что Соломоник приняла за йоту в конце 4-й строки, — случайная черта на 
+                   обломе). Первоиздательница совершенно справедливо сопоставила его с упоминанием херсаков в “Житии апостола Андрея”, написанном 
+                   Епифанием Монахом вскоре после 815–820 гг. (см. Виноградов 2005c, 39–47) Там это слово употребляется автором, посетившим Крым, как 
+                   обозначение жителей Херсона. Имя это, несомненно, местного происхождения (в некоторых рукописях “Жития” оно заменено поэтому на 
+                   традиционное “херсониты”), что доказывает и <ref type="inscription">V 15</ref><!--byz014-->. Соломоник предположила, что Херсакией могла называться обширная область вокруг Херсона, 
+                   хотя нельзя исключить и возможности погребения Иоанна вдали от места его служения (например, на родине) в местно почитаемом храме в 
+                   Басманской пещере. Кроме того, такое уточнение могло служить для противопоставления Готской епархии, занимавшей большую часть 
+                   Горного Крыма.</p>
+                <p>Шрифт надписи обнаруживает черты средневизантийского унциала (прогнутое мю), и может датироваться временем начиная с IX в. Однако мы 
+                   встречаем и следы позднего употребления такого шрифта (ср. <ref type="inscription">V 108</ref><!--byz026-->, XIV в.). С другой стороны, формула ἐκοιμήθη не встречается в Крыму 
+                   раньше 1065 г. (<ref type="inscription">V 319</ref><!--byz287-->) Поэтому мы склонны относить данную надпись к X–XI вв. 
+                   Археологический материал из пещеры 5 датируется VIII–Х 
+                   вв. (Иванов, Дублянский, Домбровский 1963, 28–30).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The monument stands out among other standard tombstones both in terms of its shape, and in terms of its inscribed content. The stone imitates a church with 
+               a saddleback roof and is decorated at the top with a rosette bearing crosses. The top half is separated from the inscribed lower half by an
+               ornamental band. Such imitation of church architecture is known among the Byzantine tombstones of Mountainous Crimea. The closest analogy is the now missing tombstone
+               from the Church of the Saviour on Mt. Boyka, which represented a miniature model of church with saddleback roof and pentagonal apse: the pediment bore a carved
+               foliate cross and two small equilateral crosses within rosettes on either side. A Greek inscription was carved below the cross (Dombrovsky 1968, 90). 
+               The shape of the monument could perhaps be explained by the clerical status of the deceased who, according to the inscription, was a presbyter.</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+              
+            <p> 3. The name of the deceased, and specifically John, in the genitive instead of the nominative, occurs in <ref type="inscription">V 66</ref><!--byz066-->. 
+               On the abbreviation "pr(esbyter)" in the Late Byzantine Crimea, see <ref type="inscription">V 160</ref><!--byz153-->, <ref type="inscription">V 201</ref><!--byz189--> 
+               and <ref type="inscription">V 218</ref><!--byz206-->. An alternative, protopresbyter, suggested by Solomonik, is not attested in the Northern Black Sea region;
+               cf., on the contrary, <ref type="inscription">V 218</ref><!--byz206-->.1. Indication of the place of presbytery is not unique, it is attested in 
+               <ref type="inscription">V 201</ref><!--byz189--> and <ref type="inscription">V 218</ref><!--byz206-->, as well as in  Ὀρλάνδος, Βρανούσσης 1973, no. 95 and Mitford 1950, 139, no. 11; 
+               it most likely indicated that the deceased was a cleric from the Cherson archbishopric. </p>
+            <p>4-5. Of great interest is the name of the location - Chersakeia (what Solomonik identified as a final iota in line 4 is nothing more than an accidental
+               scratch at the break). The first editor correctly correlated the place name with the mention of Chersakoi in the Vita of Apostle Andrew, written by
+               Epiphanios the Monk shortly after 815–820 C.E. (see Vinogradov 2005c, 39–47). In the Vita, the term is used by the author who had 
+               visited Crimea, with reference to the residents of Cherson. This name is no doubt of local origin (for this reason, in some manuscripts of the Vita, it is replaced 
+               with the more traditional Chersonites), which is also supported by <ref type="inscription">V 15</ref><!--byz014-->. Solomonik hypothesized that Chersakeia may have 
+               been the name of the larger region surrounding Cherson, but we cannot exclude the possibility that John was buried away from his place of clerical service (e.g., 
+               in his native area) in a locally revered church in the Basman cave. In addition, the clarification could have helped to distinguish it from the Eparchy of Gotthia, which 
+               occupied the greater part of the Mountainous Crimea. </p>
+            <p>The script shows features of the Middle Byzantine uncial (bowl-shaped mu), and can be dated as early as the IXth century, but we have attestations
+               of such script later as well (cf. <ref type="inscription">V 108</ref><!--byz026-->, XIVth century). At the same time, the formula ἐκοιμήθη does not occur 
+               in Crimea before 1065 C.E. (<ref type="inscription">V 319</ref><!--byz287-->). For this reason, I am inclined to date this inscription to the X–XIth centuries.  
+               The archaeological finds from Cave 5 date to the VIII-IXth centuries (Ivanov, Dublyansky, Dombrovsky 1963, 28–30).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω"><expan><abbr>Ἐκυμή</abbr><ex>θη</ex></expan></w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δ<supplied reason="lost">οῦ</supplied><lb n="2" break="no"/>λως</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="3"/><persName type="attested" ref="#person154"><name nymRef="Ἰωάννης"><supplied reason="lost">Ἰο</supplied><unclear>ά</unclear>νου</name> <w lemma="πρεσβύτερος"><expan><abbr>πρ</abbr><ex>εσβύτερος</ex></expan></w>
+               <lb n="4"/><w lemma="ὁ"><supplied reason="lost">τ</supplied>ῆς</w>
+                  <placeName key="chersakeia">Χερσα<lb n="5" break="no"/>κείας</placeName></persName> <g ref="#stauros"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

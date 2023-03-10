@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Цулы-бега</title><title xml:lang="en">Building inscription of Tzoula-beg</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.172</idno><idno type="PE">PE5000172</idno>
+            <idno type="AYV2012-number">byz165</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4285</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4285</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка; лицевая сторона была позднее (?) покрыта тонким слоем белой штукатурки. 
+                              Лицевая сторона немного выветрилась.</p>
+                           <p xml:lang="en">Inset square panel surrounded by raised border; uneven outer edges of the border. The entire front was whitewashed, possibly
+                              at some later stage (?) and bears weathering marks.</p>
+                           <dimensions>
+                              <height>48,0</height>
+                              <width>44,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри и на нижнем поле рамки.</seg>
+                           <seg xml:lang="en">Within inset area and on the lower border.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной, бета с заостренным верхним полукружием, 
+                           тета суженная, ипсилон V-образный; сокращение, надстрочные знаки.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with slanting crossbar, beta with a pointy upper loop, narrow theta,
+                           V-shaped upsilon; abbreviations, superscript marks.</seg>
+                        <height unit="cm">2,0–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="0994" notAfter="0995" evidence="указание_надписи">
+                        <seg xml:lang="ru">994–995 гг.</seg>
+                        <seg xml:lang="en">994–995 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>, <date when="2008-09"> сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>, <date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">9 сентября 1901 г., обследования М.И. Скубетова.</rs>
+                        <rs type="context">Табана-Дере, главная линия обороны, северо-восточный участок, башня, юго-западный пилон, юго-западная стена, с наружной стороны, на высоте 385 см от уровня земли.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">9 September 1901, survey of M.I. Skubetov.</rs>
+                        <rs type="context">Tabana-Dere, main line of defence, northeast sector, tower, southwest pylon, exterior of the southwest wall, 385cm above ground.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-01" who="AG">small correction</change>
+         <change when="2012-07-26" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-01" who="AG">several lines translated, editor added, tags corrected, bibliography and apparatus tagged</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+          <change when="2012-04-10" who="AG">metadata corrected</change>
+         <change when="2012-03-13" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.172">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1902b--><ptr target="bib:b0143"/>,  <citedRange>31–33</citedRange></bibl>
+               <bibl n="2"><!--Белый, Соломоник 1984--><ptr target="bib:b0023"/></bibl>
+               <bibl n="3"><!--Виноградов 2009а--><ptr target="bib:b0049"/></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="κτίζω">Ἐκτίσθη</w>
+               <lb n="2"/><w lemma="ὁ">ὁ</w> <w lemma="τεῖχος">τῦχος</w> <w lemma="οὗτος"><expan><abbr>τ</abbr><ex>οῦ</ex><abbr>τος</abbr></expan></w>
+               <lb n="3"/><w lemma="ὑπό">ὑπὸ</w> <w lemma="ἡμέρα">ἡμερο͂ν</w>
+               <lb n="4"/><w lemma="τοποτηρητής">τοποτηριτοῦ</w>
+               <lb n="5"/><persName type="attested" ref="#person220"><name nymRef="Τζουλα-βήγης">Τζουλα-βήγη</name></persName>,
+               <lb n="6"/><w lemma="υἱός"><expan><abbr>υ</abbr><ex>ἱο</ex><abbr>ῦ</abbr></expan></w> <persName type="attested" ref="#person221"><name nymRef="Πολέτας">Πολέτα</name></persName>·
+               <lb n="7"/><date><w lemma="ἔτος">ἔτος</w> <num value="6503">ςφγ</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="2"> <rdg source="bib:b0143">τὸ</rdg></app>
+               <app loc="4"><rdg source="bib:b0143">ὑποτηρητοῦ</rdg></app>
+               <app loc="5"><rdg source="bib:b0143">Τζουλα …</rdg></app>
+               <app loc="6"><rdg source="bib:b0143">τ(ο)ῦ …</rdg></app>
+               <app loc="7"><rdg source="bib:b0023">αφγ´</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Построена эта стена во дни местоблюстителя Цулы-бега, сына Полета, в 6503 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>This wall was built in the days of topoterites Tzoula-beg, son of Poletas, in the year 6503.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Латышев издавал надпись по копии Скубетова, который допустил некоторые ошибки: во 2-й строке не 
+               увидел надстрочного знаков над тау и сигмы внутри омикрона, в 4-й строке тау принял за йоту, а в 5-й строке 
+                гамму — за тау. В результате последних двух ошибок строителем стены считался ипотирит 
+                Цула-бей, а не топотирит Цула-бег. Все эти ошибки были исправлены заново открывшими и 
+                переиздавшими надпись Белым и Соломоник (в их статье см. всю историю изучения надписи).</p>
+                <p> 1. Формула строительных надписей с глаголом ἐκτίσθη засвидетельстована в 
+                    средневизантийский период (RECAM 98 (894 г.)).</p>
+            <p> 2. Простонародную форму τοῦτος ср. с <ref type="inscription">V 219</ref><!--byz207-->.</p>
+                <p> 4. Топотирит для Х века — «лейтенант» командира фемы или тагмы, но на протяжении XI 
+                    века, к 1100 году, он превращается в начальника крепости (ODB, 2095–2096) — в нашем случае 
+                    возможны оба значения: первое больше походит к словам «во дни» (уникальная формула ὑπὸ 
+                    ἡμερο͂ν находит себе единственную параллель в надписи из Лак 1364 г. (<ref type="inscription">V 144</ref><!--byz139-->), где она 
+                    применена, вероятно, также к наместнику (на сей раз ханскому) — Кутлук-Темиру), второе — к 
+                    локальному (судя по отсутствию в надписи имен императора или стратига фемы) характеру 
+                    строительства. Рядом с должностью топотирита в надписи нет уточнения, заместителем какого 
+                    стратига был Цула-бег, однако последнее, со всей очевидностью, подразумевается: на Мангупе 
+                    в 994–995 гг. не мог действовать топотирит иного стратига, кроме стратига Херсона. Таким 
+                    образом, очевидно, что в конце Х в. на Мангупе находился византийский военный гарнизон. 
+                    Стена, упомянутая в надписи, была построена, по всей вероятности, именно в связи с 
+                    установкой гарнизона и активизацией византийского присутствия в Горном Крыму.</p>
+                <p> 5. Существенную проблему представляет собой имя строителя. Логичней всего видеть в 
+                    последней части -βήγη тюркский термин «бег». Этому чтению вроде бы противоречит то, что 
+                    произносить такое слово византийцы должны были как «виг», и, в отличие от терминов πεχ и 
+                    μπεκ, вариант βήγη не засвидетельствован у Моравчика (Moravcsik 1958, 250). Однако на 
+                    передачу тюркского бега в форме βήγη указывает анализ титула болгарских ханов Омуртага и 
+                    Маламира κανα συβήγι: по предположению некоторых исследователей, вторая его часть 
+                    означает sü-begi «властелин армии» (см. Beševliev 1963, № 251). Такой же вариант мы встречаем и 
+                    в одной из херсонских надписей IX–X вв.: ...]υβήγις (<ref type="inscription">V 103</ref><!--byz103-->). Неясным остается лишь, следует
+                     ли восстанавливать имя нашего строителя в номинативе как Τζουλα-βήγη или как Τζουλα-βήγης. 
+                     Относительно истории рода Цул и отождествления Цулы данной надписи см. Виноградов 2009а.
+                     Однако если "p" в имени Полетас соответствует тюркскому "b"
+                     (как в πεχ для bek), то форма Полетас может воспроизводить какое-то тюркское имя типа
+                     Болды, Болтой, Булат, Булатай, Булташ, Булут и т. п.
+                     7. Самая важная и, как оказалась, роковая ошибка была</p>
+                <p> 6. Патронимик мангупского строителя Πολέτας, в свою очередь, довольно загадочен. Он не 
+                    тюркский, ибо в тюркских языках отсутствует звук п. С другой стороны, единственный 
+                    греческий пример этого имени достаточно поздний: он известен на Корфу в 1391 году, и, кроме 
+                    того, это имя родовое — Феодорис Полетас (PLP, № 23472), т.е. это могло быть имя негреческого 
+                    происхождения, ставшее с течением времени, как и многие другие, в том числе и Цула, 
+                    родовым.</p>
+                <p> 7. Самая важная и, как оказалась, роковая ошибка была допущена Скубетовым (чертежником, 
+                    не знавшем греческого языка) в 7-й строке: первую букву в обозначении года он принял за 
+                    альфу, и поэтому надпись была отнесена к 1503 г. — эту датировку сохранили и Белый с 
+                    Соломоник. Такой датировке противоречат сразу несколько обстоятельств. Во-первых, 
+                    датировка от Рождества Христова встречается в Крыму до XVIII в. лишь однажды: в надписи 
+                    1412 (?) г. из генуэзского Судака (<ref type="inscription">V 258</ref><!--byz245-->). Во-вторых, палеография надписи, характеризующаяся 
+                    отсутствием в формах букв каких-либо усложнений, обязательных для крымских надписей 
+                    XIV–XV вв. В-третьих, термин топотирит в XVI в. известен лишь как обозначение патриаршего 
+                    или митрополичьего местоблюстителя, который никак не мог быть строителем мангупской стены. 
+                    В-четвертых, все представители рода Цул засвидетельствованы в Крыму лишь в конце X — 
+                    начале XI вв. Наконец, при более тщательном рассмотрении на камне хорошо видна S-образная 
+                    стигма (она видна и на фотографии в Белый, Соломоник 1984, рис. 2) с наклонной чертой 
+                    слева, характерной как раз для надписей IX–X вв. Таким образом, данная надпись, без всякого 
+                    сомнения, относится к 6503 г. от сотворения мира , т.е. к 1 сентября 994 — 31 августа 995 г. по 
+                    Р.Х. (о соотношении годов от сотворения мира и от Р.Х. в средневизантийское время 
+                    см. <ref type="introduction">IV. 4. D</ref>)</p>
+                <p> Несмотря на явные следы знакомства резчика с книжной культурой (ср., например, 
+                    сокращение υ(ἱο)ῦ (см. Avi-Yonah 1940, 107)) уровень надписи не очень высок: строки неровные. 
+                    Кроме того, резчик не уложился в предназначенное для надписи пространство и вынужден был 
+                    завершать ее на нижнем поле рамке. Буквы шире, проще и менее манерны, чем в надписях 
+                    начала столетия (например, нет беты с нижним штрихом). С другой стороны, и здесь 
+                    присутствуют черты, характерные для крымских надписей Х в., например, заострение 
+                    верхнего полукружия беты или несомкнутая форма каппы.    </p>
+                <p> Датировка надписи концом Х в., в принципе, не обязательно означает то, что нынешняя стена 
+                    в Табана-Дере должна относиться именно к этому времени: камень мог бы попасть сюда и из 
+                    другой, разобранной стены. В таком случае, однако, удивительно, что строители, решившие 
+                    установить на видном месте (ориентированном на зрителя, поднимающегося вверх вдоль стены)
+                    старую надпись, не потрудились создать свою собственную. Может быть, в передатировке 
+                    нуждается и сама стена (Герцен 1990)? Как кажется, решающим аргументом в пользу 
+                    последнего является проведенный в свое время Л.В. Фирсовым радиокарбонный анализ балки 
+                    из кладки стены, который показал, что дерево было срублено в 865–925 годах 
+                    (Фирсов 1976, 170). Кора вполне могла сохраниться до 
+                    994–995 гг., но никак — до начала XVI в.</p>
+                <p> Новая датировка камня не может не поднять заново вопроса о соотношении несущей его 
+                    стены и комплекса пещерного монастыря, в который та упирается своим северо-восточным 
+                    концом. Сам монастырь датируется достаточно надежно, так как обе его надписи имеют дату: 
+                    в северной пещере верхнего яруса это 1220–1221 гг. (<ref type="inscription">V 196</ref><!--byz185-->), а в храме — 1224–1225 (<ref type="inscription">V 174</ref><!--byz167-->). 
+                    При прежней дате стены — 1503 г., было непонятно, почему стена упирается в одну из келий 
+                    верхнего яруса, и зачем около монастыря в ней был устроен незащищенный проход. Теперь же, 
+                    при изменившейся хронологической последовательности памятников, эти вопросы проясняются: 
+                    и монастырь, и проход были устроены уже через двести с лишним лет после постройки стены, 
+                    когда она, по всей видимости, уже утратила оборонительную функцию (вероятно, в результате 
+                    падения Византийской империи в 1204 г., либо в результате внутренних причин, например, 
+                    варварских набегов).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev's edition is based on the transcription made by Skubetov, who had made several mistakes: in line 2 he did not see 
+               either a superscript mark over tau or a sigma inside omicron; in line 4 he mistook tau for iota, and in line 5
+               he mistook a gamma for tau. Because of these mistakes, the builder was thought to have been a hypoterites Tzoula-bey rather than
+               a topoterites Tzoula-beg. Bely and Solomonik who had rediscovered the inscription corrected all these mistakes (see their publication for
+               the history of studies). </p>
+            <p>1. Building formula with the verb ἐκτίσθη is attested in the Middle Byzantine period (RECAM 98 (894 C.E.)).</p>
+            <p>2. For the colloquial form τοῦτος we may compare <ref type="inscription">V 219</ref><!--byz207-->.</p>
+            <p>4. In the Xth century, a topoterites was a lieutenant for the commander of the thema or of the tagma, but over the course of the XIth century, by 1100, 
+               the title comes to signify commandant of a fortress (ODB, 2095–2096) — in our case both meanings are possible. The former makes better sense with the
+               expression "in the days of" (unique formula ὑπὸ ἡμερο͂ν has one parallel in the inscription from Laki, 1364 C.E. (<ref type="inscription">V 144</ref><!--byz139-->)), 
+               where it refers to a Khan's representative - Kutluk-Temir. The second possibility, in turn, fits well with the local nature of the construction project
+               (judging by the absence of either an emperor's name or that of the thema's strategos). There is no specification as to the regional association of the topoterites
+               Tzoula-beg who served in the capacity of deputy strategos, but this must have been implied since in 994–995 at Mangup only a topoterites of Cherson's strategos
+               could have been in charge. Thus we may conclude that at the end of the Xth century a Byzantine military garrison had a base at Mangup. The wall, mentioned in the text,
+               was apparently built in connection with the introduction of the garrison and signifies active Byzantine presence in Mountainous Crimea.</p>
+            <p>5. The name of the builder represents a considerable problem. The most logical interpretation of the last part -βήγη is to see in it the Turkic term "Beg."
+               This word, however, would have been pronounced by Byzantines as "vig," and in contrast to the terms πεχ and μπεκ, the variant βήγη is not attested in
+               Moravcsik (1958, 250). At the same time, the possibility of conveying the Turkic term Beg as βήγη is bolstered by the analysis of the title of Bulgarian khans 
+               Omurtag and Malamir who were called κανα συβήγι: some scholars interpret the second term as sü-begi «Lord of the army» (see Beševliev 1963, № 251). 
+               We also encounter the same term in one inscription from Cherson dated to the IX–Xth centuries: ...]υβήγις (<ref type="inscription">V 103</ref><!--byz103-->). 
+               What is unclear is whether we should be restoring the nominative of the name of our builder as Τζουλα-βήγη or as Τζουλα-βήγης. On the history of the clan of Tzoula 
+               and its identification with the Tzoula of our inscription, see Vinogradov 2009a. One other possibility is the "p" of Poletas corresponds to 
+               the Turcic  "b" (as in πεχ for bek), in which case Poletas might be an approximation of some such Turcic name as Boldy, Boltoy, Bulat, Bulatay, Bultash or alike.</p>
+               
+            <p>6. The patronymic of our builder from Mangup is also puzzling: Πολέτας. It is not Turkic because there is no sound "p" in Turkic languages. At the same time,
+               the only Greek example of this name is quite late: it is known on Corfu in 1391 C.E. as a family name — Theodoris Poletas (PLP, № 23472). Thus, it might
+               have been a name of non-Greek origin which later became a family name, as did many others, including Tzoula. </p>
+            <p>7. The gravest, and as it turns out, fatal mistake was commited by Skubetov (who was a draftsman, without any knowledge of Greek) in line 7:
+               he represented the first letter in the year as alpha, and for this reason the inscription was dated to 1503. This late date was accepted both by Bely
+               and Solomonik, however, several considerations demonstrate that such dating is impossible. Firstly, dating by anno domini is known in Crimea prior to the XVIIIth 
+               century only once: in the inscription from the Genoese Sudak, 1412 (?) C.E. (<ref type="inscription">V 258</ref><!--byz245-->). Secondly, palaeographic 
+               characteristics are telling: letter shapes show no complex features typical of Crimean inscriptions of the XIV-XVth centuries. Thirdly, the term 'topoterites' 
+               is attested in the XVIth century only as a clerical position appointed by mitropolites, and such a functionary could not have been the builder of the Mangup wall.
+               Fourthly, all representatives of the Tzoula family are attested in Crimea only at the end of the Xth - beginning of the XIth centuries. Finally, a closer inspection of 
+               the stone shows an S-shaped stigma (it is also visible on the photos published by Bely and Solomonik 1984, fig. 2) with a slanting stroke on the left, typical of
+               inscriptions dated to the IX-Xth centuries. Therefore, there can be no doubt that our inscription is dated to year 6503 since Creation, that is, to the period between the 1st of September
+                994 and 31st of August 995 C.E. (on the correspondence of years since Creation and since the Birth of Christ, see Introduction <ref type="introduction">IV. 4. D</ref>).</p>
+            <p>Despite indications that the letter-cutter was familiar with literary culture (cf., e.g., the abbreviation υ(ἱο)ῦ (see Avi-Yonah 1940, 107)), the quality of cutting 
+               is not very high: the lines are quite uneven. In addition, the cutter misjudged the amount of available space and could not fit the text inside the inset area, crossing
+               over onto the border. The letters are wider, simpler and less ornate than in the inscriptions from the turn of the century (e.g., there is no beta with decorative 
+               horizontal stroke at the bottom). Other features, such as the pointy top loop of beta and kappa with free-standing vertical, which are typical of Crimean inscriptions
+               of the Xth century, are also present in our text.</p>
+            <p>The Xth-century date of our inscription does not necessarily mean that the present wall at Tabana-Dere had been built at that time: the stone could have been taken from
+               an earlier dismantled wall and re-used. If this were the case, however, it would be surprising that the later builders would have taken so much care to display an old
+               inscription in a very prominent place (facing anyone ascending along the wall), while neglecting an opportunity to set up their own commemoration. Perhaps the wall itself
+               should also be redated (Gertsen 1990)? A decisive argument in favour of the latter suggestion would seem to be the radiocarbon dating of a wooden beam from the wall, 
+               conducted by L.V. Firsov (1976, 170): it showed that the tree used for the beam had been cut down in 865–925 C.E. The bark could have survived
+               till 994–995 C.E., but not until the early XVIth century.</p>
+            <p>The new date of the inscription raises questions both about the date of the wall into which it was incorporated and the date of the entire complex of the cave monastery, since
+               the wall's northeast end leans against it: in the top level of the cave, the date is 1220–1221 C.E. (<ref type="inscription">V 196</ref><!--byz185-->), and in the church - 
+              1224–1225 (<ref type="inscription">V 174</ref><!--byz167-->). With the original assigned date of 1503, it was incomprehensible that the wall should run up against a hermit's cell
+               in the top level of the cave, and also that there should have been an unprotected passage made in the wall next to the monastery. With the chronology corrected, it becomes clear
+               that both the monastery and the passageway were constructed 200 years after the construction of the wall, at the time when the latter might have already lost its defensive function 
+                (either as a result of the fall of the Byzantine empire in 1204 C.E., or due to internal causes, for example, raids of barbarians).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

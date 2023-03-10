@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надписи на плите </title><title xml:lang="en">Inscriptions on a panel</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.201</idno><idno type="PE">PE5000201</idno>
+            <idno type="AYV2012-number">byz189</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне 2 наверху прочерченные линии и рисунки-граффити в нижней части. Обгорела,
+                              обломан правый нижний угол, сколы по поверхности.</p>
+                           <p xml:lang="en">On the front at the top - two lines are incised, graffiti drawings at the bottom. Damaged by fire, bottom right corner is missing; chipped
+                           on the surface.</p>
+                           <dimensions>
+                              <height>31,0</height>
+                              <width>59,0</width>
+                              <depth>7,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p023">
+                        <seg xml:lang="ru">Сюреньская крепость.</seg>
+                        <seg xml:lang="en">Syuren fortress.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#syurenfortress">Сюреньская крепость.</placeName>
+                        <rs type="circumstances">1978 г., раскопки Ю.Н. Воронина.</rs>
+                        <rs type="context">Раскоп 3, заклад ворот.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Syuren fortress.</placeName>
+                        <rs type="circumstances">1978, excavations of Yu.N. Voronin.</rs>
+                        <rs type="context">Trench 3, gates, filled in with later masonry.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Крым.</seg>
+                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="1">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="1">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Наверху посередине.</seg>
+                              <seg xml:lang="en">At the top in the middle.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>. Альфа, дельта и лямбда с удлиненной вверх правой гастой, 
+                              мю с Y-образной серединой. Сокращения.</seg>
+                           <seg xml:lang="en">Graffito. Alpha, delta and lambda with projecting right hasta, mu with Y-shaped middle. Abbreviations.</seg>
+                           <height unit="cm">0,7–3,5.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1301" notAfter="1500" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="2">Инвокативная надпись.</seg>
+                        <seg xml:lang="en" n="2">Invocative inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Слева.</seg>
+                              <seg xml:lang="en">On the left.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="2">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>, буквы минускульные.</seg>
+                           <seg xml:lang="en">Graffito, minuscule letters.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1301" notAfter="1500" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="3">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="3">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="3">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="3">
+                              <seg xml:lang="ru">Под надписью 2.</seg>
+                              <seg xml:lang="en">Below Text 2.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="3">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы минускульные.</seg>
+                           <seg xml:lang="en">Graffito, minuscule letters.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="3" notBefore="1301" notAfter="1500" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="4">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="4">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="4">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="4">
+                              <seg xml:lang="ru">Справа от надписи 1.</seg>
+                              <seg xml:lang="en">To the right of Text 1.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы минускульные.</seg>
+                           <seg xml:lang="en">Graffito, minuscule letters.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="4" notBefore="1301" notAfter="1500" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-01" who="CB">Textparts</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-09-24" who="AG">inserted key</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-02" who="AG">2 lines translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-18" who="AG">corrections, several lines translated</change>
+          <change when="2012-12-06" who="AL">text tagging corrected, original date tagged, editor tag inserted</change>
+          <change when="2012-03-26" who="AFS">tagged Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.201-1" n="1">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl/>
+            </listBibl>
+            <listBibl n="2">
+               <bibl/>
+            </listBibl>
+            <listBibl n="3">
+               <bibl/>
+            </listBibl>
+            <listBibl n="4">
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Климент, пресвитер Турлы, раб Христов.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Господи, помоги, рабу Твоему Кириллу.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>… Фео<supplied reason="lost">до</supplied>ра …</p>
+            </div>
+            <div type="textpart" n="4">
+               <p>К.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Klemes, presbyter of Tourla, servant of Christ.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Lord, help your servant Cyril.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>...Theo<supplied reason="lost">do</supplied>re...</p>
+            </div>
+            <div type="textpart" n="4">
+               <p>K.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Надпись является, вероятней всего, памятной. Имя Климент в надписях Северного Причерноморья более не встречается, однако оно было хорошо
+                  известно в Херсонесе. Относительно указания на место пресвитерства см. комм. <ref type="inscription">V 122</ref><!--byz118-->. Поздневизантийское слово τούρλα (искаж. от τροῦλλα)
+                  обозначает «купол» (см. Millet 1895, № 2, 3; Трапезунд, 1486 и 1547 гг.) и сохранилось в новогреческом в значении «куполообразный холм».
+                  Вероятней всего, в нашей надписи это название местности, причем несклоняемое. В Крыму известен скальный уступ Турла-Кая на хребте Кызыл-Кая над
+                  Ялтой, однако там нет никаких археологических остатков. Поэтому возможно, что Турла данной надписи — греческое название Сюреньской крепости, 
+                  происходящее от формы холма или от купольного свода башни.   </p>
+            </div>
+            <div type="textpart" n="2.">
+               <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.E.a</ref>.</p>
+                <p> 2–3. Имя Кирилл в надписях Северного Причерноморья более не встречается, однако оно было известно в Херсонесе.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p> Имя Феодор встречается в поздневизантийском Горном Крыму также в <ref type="inscription">V 153</ref><!--byz147-->.  </p>
+            </div>
+            <div type="textpart" n="4">
+               <p> Надпись принадлежит той же руке, что и надпись 1, — вероятно, это ее неудавшееся начало.  </p>
+            </div>
+         </div>
+         
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>The inscription was most likely commemorative. The name Klemes (Clemens) is not otherwise attested in inscriptions from the Northern Black Sea region, but it was well known
+                  in Cherson. Regarding the reference to a place where Klemes served as presbyter, see commentary to <ref type="inscription">V 122</ref><!--byz118-->. 
+                  The Late Byzantine word τούρλα (corruption of τροῦλλα) means "dome" (see Millet 1895, № 2, 3; Trabzon, 1486 и 1547 C.E.) and survives in Modern Greek
+                  in the sense of "dome-shaped hill." In our case, it is probably a toponym, indeclinable in form. In Crimea, we know of a rocky crag Turla-Kaya on the ridge of 
+                  Kyzyl-Kaya above Yalta, however, no archaeological remains are known from that site. It is possible, therefore, that the Tourla of our inscription is the 
+                  Greek name of the Suyren fortress, taken from the shape of a hill or from the domed ceiling of a tower.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.E.a</ref>.</p>
+               <p>The name Cyril (here Kyrellos) is not otherwise attested in inscriptions from the Northern Black Sea region, but it was well known
+                  in Cherson from other sources.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>The name Theodore (Theodoros) is also attested in Late Byzantine Mountainous Crimea in <ref type="inscription">V 153</ref><!--byz147-->.</p>
+            </div>
+            <div type="textpart" n="4">
+               <p>This text is by the same hand as Text 1 and might have been an abandoned attempt at inscribing that text.</p>
+            </div>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <persName type="attested" ref="#person253"><name nymRef="Κλήμης"><expan><abbr>Κλήμ</abbr><ex>ης</ex></expan></name></persName>
+                  <w lemma="πρεσβύτερος"><expan><abbr>πρ</abbr><ex>εσ</ex><abbr>β</abbr><ex>ύτερος</ex></expan></w>
+                  <w lemma="ὁ">τοῦ</w> <placeName key="tourla">Τούρλα</placeName>, <w lemma="δοῦλος">δοῦλος</w> <persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, <w lemma="βοηθέω">βοήθη</w> <w lemma="ὁ">τὸν</w>
+                  <lb n="2"/><w lemma="δοῦλος"><supplied reason="lost">δοῦ</supplied>λόν</w> <w lemma="σύ">σου</w> <persName type="attested" ref="#person254"><name nymRef="Κύριλλος">Κύρη<lb n="3" break="no"/>λλον</name></persName>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="3">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <gap reason="illegible" quantity="3" unit="character"/>
+                  <persName type="attested" ref="#person255"><name nymRef="Θεόδωρος">Θεώ<lb n="2" break="no"/><supplied reason="lost">δω</supplied>ρον</name></persName>
+                  <gap reason="illegible" quantity="3" unit="character"/> <orig>ΤΟΚ</orig>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="4">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <orig>Κ</orig>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

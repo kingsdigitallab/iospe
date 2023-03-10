@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Иоанна Полгоса</title><title xml:lang="en">Epitaph of John Polgos</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.66</idno><idno type="PE">PE5000066</idno>
+            <idno type="AYV2012-number">byz066</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>3625</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3625</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Стесан сверху.</p>
+                           <p xml:lang="en">Cut along the top.</p>
+                           <dimensions>
+                              <height>22.0</height>
+                              <width>44.0</width>
+                              <depth>21.0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; bouletée. Альфа с ломаной перекладиной, эпсилон 
+                           лунарный и ромбовидный, мю с не доходящей до низа средней частью.</seg>
+                        <seg xml:lang="en">Lapidary; bouletée. Alpha with broken crossbar, lunate and diamond-shaped epsilon, 
+                           the middle of mu does not reach the writing line.</seg>
+                        <height unit="cm">1,3–3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0915" notAfter="0915" evidence="указание_надписи">
+                        <seg xml:lang="ru">915 г.</seg>
+                        <seg xml:lang="en">915 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1907 г., обследования М.И. Скубетова.</rs>
+                        <rs type="context">Девичья гора, «храм в храме», поздний «малый» храм, одна из гробниц, кладка стены, во вторичном использовании.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1907, survey of M.I. Skubetov.</rs>
+                        <rs type="context">"Maiden" barrow, "church in church", late "minor" church, one of burial chambers, masonry of the wall, reused.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-03-24" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-04-17" who="NG">Greek lemmata corrected</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">1 line translated, corrections</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-25" who="AFS">bibliography updated</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-20" who="AG">apparatus marked up</change>
+         <change when="2012-02-20" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-10" who="AG">corrections, updating</change>
+         <change when="2011-12-05" who="AG">minor corrections, tags added to the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.66">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фоготрафия лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1908--><ptr target="bib:b0149"/>, 29–30, № <citedRange>23</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character" cert="low"/>
+               <supplied reason="lost"><w lemma="κοιμάω">Κεκοίμηται</w> <w lemma="ὁ">ὁ</w>
+                  <w lemma="ἐν">ἐν</w></supplied>
+               <lb n="2"/><w lemma="μακάριος">μακαρήᾳ</w> <w lemma="ὁ">τῇ</w> <w lemma="μνήμη">μνήμι</w>
+               <w lemma="καί">κὲ</w> <w lemma="δοῦλος">δοῦλο<unclear>ς</unclear></w>
+               <lb n="3"/><w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>Θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person68"><name nymRef="Ἰωάννης"><supplied reason="lost">Ἰω</supplied><unclear>ά</unclear>νου</name>
+                  <name nymRef="Πόλγος" type="surname">Πόλγος</name></persName>. <w lemma="κοιμάω">Κεκ<unclear>ί</unclear>μη<lb n="4" break="no"/>τε</w> <w lemma="δέ">δὲ</w> <date><w lemma="μήν">μηνὴ</w>
+                        <rs type="month" ref="iul"><w lemma="Ἰούλιος">Ἠουλήου</w></rs> <num value="29">κθ</num>,
+               <lb n="5"/><w lemma="ἔτος">ἔτος</w> <num value="6423">ςυκγ</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"><rdg source="bib:b0149">Ἐνθάδε κατάκειται</rdg></app>
+               <app loc="3"><rdg source="bib:b0149">Κανουπόλιος (?)</rdg></app>
+               <app loc="5"><rdg source="bib:b0149">ἔτο(υ)ς</rdg></app>
+            </listApp> 
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">… Почил иже во</supplied> блаженной памяти и раб Божий <supplied reason="lost">Ио</supplied>анн Полгос. Почил же 29 июля, год 6423.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[Fell asleep, who is in] blessed memory and a servant of God, John Polgos. He fell asleep on 29th of July, year 6423.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Строки надписи вырезаны между глубоких линеек. В 2–4-й строках высота букв — 1,3–1,7 см., тогда как в 5-й строке — 2,2–3,5 см. Латышевым 
+               неправильно дана разбивка 3-й и 4-й строк.</p>
+                <p> 1–3. Реконструкция Латышева с Ἐνθάδε κατάκειται подтверждается лишь одной аналогией, чуть ли не единственной за пределами Северного 
+                   Причерноморья, — Beševliev 1964, № 249 (Одессос, 544 г.), однако же намного более ранней, чем наше надгробие. Мы предпочитаем восстанавливать в 
+                   начале надписи такой же глагол, какой стоит и при повторении упоминания о кончине (3–4-я строки), а также по аналогии с <ref type="inscription">V 68</ref><!--byz068--> (ср. <ref type="inscription">V 227</ref><!--byz215-->). 
+                   Относительно формулы см. <ref type="introduction">IV.3.F.c</ref>.</p>
+                <p> 3. Восстановление Латышевым уникального имени Кануполий неверно, т.к. перед именем Полгос стоит разделитель в виде двоеточия. Пример имени 
+                   усопшего (причем именно Иоанн) в генетиве вместо номинатива см. в <ref type="inscription">V 122</ref><!--byz118--> (Хребет Басман, X–XI вв.). Возможно, 
+                   что имя в генетиве появилось под влиянием 
+                   предшествующего θεοῦ (ср. <ref type="inscription">V 62</ref><!--byz062-->). Четко читающееся на камне фамильное имя Полгос ниоткуда более не известно.</p>
+                <p> 5. Формулу датировки по году в номинативе нет необходимости исправлять, подобно Латышеву: она известна для средневизантийского времени по 
+                   SEG 36.770 (776–777 гг.), МАМА IV 38 (937–938 гг.), Jerphanion 1936, № 186 (1060–1061 гг.), Thierry 1963, № аdd. 100 (Х в.). О переводе
+                      года от сотворения мира в год от Р.Х. в Х в. см. комм. к <ref type="inscription">V 11</ref><!--byz010--> — учитывая сентябрьский год в <ref type="inscription">V 11</ref><!--byz010-->, 
+                   следует предполагать его и в данной надписи.</p>
+                <p>Надпись была вторично использована в кладке гробницы внутри второго, позднего «храма в храме» (XII–XIII вв.): Айналов (1905, 120–121) 
+                   говорит, что гробницы были лишь в нартексе позднего храма, и принадлежали, судя по кладке, второму храму. Однако дата данного надгробия делает 
+                   последнее предположение в отношении него невозможным: оно принадлежало, скорее всего, одному из погребенных в первом, раннем «храме в храме» 
+                   (ок. VI в.; см. Сорочан 2005, 819–820).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The text is carved between deeply cut horizontal lines. In lines 2-4, letter height is 1.3-1.7cm, while in line 5, it is 2.2-3.5cm. Latyshev represented 
+            the break between lines 3 and 4 incorrectly.</p>
+            <p>1-3. Latyshev's proposed restoration Ἐνθάδε κατάκειται is confirmed only by one example, which appears to be one of its kind outside the Northern Black Sea
+               region - Beševliev 1964, № 249 (Odessos, 544 C.E.), and it is also much earlier than our tombstone. It seems more logical to restore the same verb at the 
+               beginning of the text as we find repeated in lines 3-4, and also by analogy with <ref type="inscription">V 68</ref><!--byz068--> 
+               (cf. <ref type="inscription">V 227</ref><!--byz215-->). On the formula, see Introduction <ref type="introduction">IV.3.F.c</ref>.</p>
+            <p>3. Latyshev restores a unique name Κανουπόλιος, which cannot be right, since there is a word divider in the form of colon before the name Polgos.
+               An example of the name of a deceased (in fact, also John) in genitive instead of nominative is found in <ref type="inscription">V 122</ref><!--byz118-->
+               (Basman, X–XIth century C.E.). It is possible that the genitive form of the name is due to the influence of the preceding θεοῦ. Surname Polgos, which is clear
+               on the stone, is otherwise unattested. On the correspondence between years "since Creation" and years Anno Domini in the Xth century, see commentary to
+               <ref type="inscription">V 11</ref><!--byz010--> - assuming the September start of the year in <ref type="inscription">V 11</ref><!--byz010-->, we 
+            can assume it here as well.</p>
+            <p>5. It is not necessary, as Latyshev does, to change the nominative form of the word 'year': such form is attested for the Middle Byzantine period: 
+               SEG 36.770 (776–777 C.E.), МАМА IV 38 (937–938 C.E.), Jerphanion 1936, № 186 (1060–1061 C.E), Thierry 1963, № аdd. 100 (Хth century).</p>
+             <p>The inscription was reused in the masonry of the second, later 'church in church' (XII–XIIIth century C.E.): Aynalov (1905, 120–121) reports that
+                tombs were found only in the narthex of the later church, and belonged, judging by the style of masonry, to the second church. The date of the inscription, however,
+                makes such a hypothesis impossible: the tombstone most likely belonged to a person buried in the first, that is, earlier, "church in church" (ca. VIth century; 
+                see Sorochan 2005, 819–820).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

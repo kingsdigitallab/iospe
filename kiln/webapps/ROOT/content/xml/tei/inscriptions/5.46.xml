@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение Михаила</title><title xml:lang="en">Invocation of Michael</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.46</idno><idno type="PE">PE5000046</idno>
+            <idno type="AYV2012-number">byz046</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный музей истории религии</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>The State Museum of the History of Religion</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Инкерманский известняк.</material>
+                           <material xml:lang="en">Inkerman limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рамка с геометрическим орнаментом, большой крест на голгофе с раздваивающимися концами
+                              посередине и два такие же маленькие по сторонам от верхнего рукава. По лицевой поверхности выбоины.</p>
+                           <p xml:lang="en">On the front is an anathyrosis along the top and right edge; there is incised framing line on the left, decorated with an incised
+                              geometric ornament; in the centre of the panel is a roughly chiseled image of a cross with forking ends, on Golgotha; on either
+                           side of the top arm of the cross are two small versions of the same type of cross, faintly incised.</p>
+                           <dimensions>
+                              <height>28,0</height>
+                              <width>33,0</width>
+                              <depth>12,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В левом нижнем углу между рукавами креста.</seg>
+                           <seg xml:lang="en">In the bottom left corner between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы угловатые и неровные. Альфа с петлей,
+                           дельта с удлиненной перекладиной, йота с диерезой. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary. Letters are angular and uneven. Alpha with a loop; delta with extended horizontal; iota with diaeresis.
+                        Ligature: omicron-upsilon.</seg>
+                        <height unit="cm">1,7–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1100" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">Х–XI вв.</seg>
+                        <seg xml:lang="en">Х–XIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-11">Ноябрь 2004</date>.</seg>
+                     <seg xml:lang="en"> <date when="2004-11">November 2004</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1896 г., обследования М.Н. Скубетова.</rs>
+                        <rs type="context">Северный берег, в кладке монастырской ограды.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1896, survey of M.N. Skubetov.</rs>
+                        <rs type="context">Northern shore, in the masonry of the monastery fence.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Санкт-Петребург, Россия.</seg>
+                     <seg xml:lang="en">Saint Petersburg, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+        <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+          <change when="2012-10-01" who="AL">small corrections</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">1 line translated</change>
+         <change when="2012-05-15" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG">editor added, several lines translated, some corrections in metadata</change>
+         <change when="2012-04-11" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-16" who="AG">updated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.46">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1908 --><ptr target="bib:b0149"/>,  32, № <citedRange>27</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
+               <w lemma="βοηθέω">βοήθ<lb n="2" break="no"/>η</w> <w lemma="ὁ">τὸν</w>
+               <w lemma="δοῦλος"><expan><abbr>δοῦ<lb n="3" break="no"/>λό</abbr><ex>ν</ex></expan></w> <w lemma="σύ">σου</w>
+               <persName type="attested" ref="#person36"><name nymRef="Μιχαήλ">Μι<lb n="4" break="no"/>χαήλη</name></persName>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="3-4"><rdg source="bib:b0149">Μιχαήλει</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Господи, помоги рабу Твоему Михаилу.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>O Lord, help your servant Michael.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+                <p>Буквы надписи скорее процарапаны, чем вырезаны, формы их угловатые. Не ясно до конца, одновременна ли надпись центральному кресту или
+                   выполнена позже, например, вместе с двумя малыми крестами. Поэтому непонятно, надо ли рассматривать эту надпись как посвятительную или как
+                   граффито на уже существующем памятнике.  </p>
+            <p>Сам крест с раздваивающимися концами, также не очень высокого уровня, находит параллели в <ref type="inscription">V 41</ref><!--byz040--> и <ref type="inscription">V 72</ref><!--byz072-->; геометрическая рамка схожа с <ref type="inscription">V 37</ref><!--byz036-->.  </p>
+                <p>1–3. Относительно формулы см. <ref type="introduction">IV.3.E.a</ref>.</p>
+                <p>3–4. Имя Μιχαήλ в византийское время склонялось также по модели Μιχάηλος или Μιχαήλιος (см., например,  Sozomenus.  Hist. eccl. 2, 3, 8), откуда
+                   типичная для Византии форма аккузатива Μιχαήλιν с выпадением омикрона. Выпадение конечного ню в δοῦλον и Μιχαήλην объясняется, вероятно,
+                   процессом, характерным для перехода к новогреческому: такое объяснение кажется более вероятным, чем предположение Латышева о сбивке в
+                   падежах, типичной, впрочем, для византийских надписей с данной формулой (см. <ref type="introduction">IV.3.E.a</ref>).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The letters of the inscription appear scratched into the stone rather than carved: their shapes are angular. It is not absolutely clear whether the
+            inscription is contemporary with the carving of the cross or made later, e.g., at the same time with the two small crosses. For this reason, it is not clear
+            whether we should classify this inscription as dedicatory or as a graffito on a pre-existing monument.</p>
+             <p>The cross with forking ends, also sloppily executed, finds parallels in <ref type="inscription">V 41</ref><!--byz040--> and <ref type="inscription">V 72</ref><!--byz072-->; the geometrically-patterned frame is similar to that on <ref type="inscription">V 37</ref><!--byz036-->.</p>
+            <p>1-3. On the formula, see <ref type="introduction">IV.3.E.a</ref>.</p>
+            <p>3-4. The name Μιχαήλ, in the Byzantine period, was also declined according to the noun forms Μιχάηλος or Μιχαήλιος (see, e.g.,Sozomenus.  Hist. eccl. 2, 3, 8),
+               from where we get the typically Byzantine form of accusative Μιχαήλιν, with the omicron dropping out. The omission of the final nu in
+               δοῦλον and Μιχαήλην can probably be explained by the process of transition to Modern Greek. Such an explanation seems more probable than the one offered by Latyshev, who
+               suspected a confusion of noun cases, which is indeed common in Byzantine inscriptions using this formula (see <ref type="introduction">IV.3.E.a</ref>).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

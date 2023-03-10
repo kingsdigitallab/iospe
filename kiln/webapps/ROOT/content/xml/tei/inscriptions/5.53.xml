@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение –сакия</title><title xml:lang="en">Invocation of –sakios</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.53</idno><idno type="PE">PE5000053</idno>
+            <idno type="AYV2012-number">byz053</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34853</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34853</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon15">Колонка.</objectType>
+                           <objectType xml:lang="en">Colonnette.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконесский мрамор.</material>
+                           <material xml:lang="en">Proconnesian marble.</material>
+                           <p xml:lang="ru">Обломана сверху и снизу.</p>
+                           <p xml:lang="en">Broken off on the top and bottom.</p>
+                           <dimensions>
+                              <height>16,0</height>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Вдоль ствола колонки.</seg>
+                           <seg xml:lang="en">Along the column's shaft.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной, дельта и лямбда
+                           с удлиненной вправо вверх левой гастой, сигма вытянутая по вертикали, ипсилон V-образный. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with slanting crossbar; delta and lambda with projecting left hastae; elongated sigma; V-shaped
+                        upsilon. Ligature: omicron-upsilon.</seg>
+                        <height unit="cm">1,0–2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1100" precision="low" evidence="палеография надстрочное_ню">
+                        <seg xml:lang="ru">IX–XI вв.</seg>
+                        <seg xml:lang="en">IX–XIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1895 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Южный склон.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1895, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Southern slope.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2013-10-24" who="TW">Added pic code</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-17" who="AG">several lines translated</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-17" who="AG"> small corrections</change>
+         <change when="2012-01-11" who="AG"> updated</change>
+         <change when="2011-12-01" who="AG"> tags in the Greek text added, minor corrections</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.53">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1899a --><ptr target="bib:b0136"/>, 50, № <citedRange>48</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"><rdg source="bib:b0136">βοήθησο]ν</rdg></app>
+               <app loc="2"> <rdg source="bib:b0136">...]κίου</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+               <p><supplied reason="lost">Господи, спас</supplied>и (?) раба Твоего …сакия.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+               <p>[Lord, save] your servant [...]sakios.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Археологический контекст находки см. в Косцюшко-Валюжинич 1897a, 91, рис. 233.</p>
+                <p> По своей форме памятник не находит аналогий. Судя по направлению надписи, она выполнена уже после того, как колонка перестала выполнять
+                   свою первоначальную функцию и стала, вероятно, вставкой в стену. Однако, как точно функционировал памятник, сказать затруднительно.</p>
+                <p> 1. Глагол в формуле восстанавливается гипотетически. О смешении падежей см. <ref type="introduction">IV.3.E.a</ref>; не исключено, что имя в
+                   генетиве во 2-й строке было и патронимиком.</p>
+                <p>2. Имя дедиканта могло звучать как Исакий или Арсакий.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>On the archaeological context of the find see Kostsyushko-Valyuzhinich 1897a, 91, drawing 233.</p>
+            <p>The shape of the monument has no analogies. The direction of writing suggests that the inscription was carved after the colonnette ceased to serve its
+            original purpose and was probably reused in masonry. At the same time, it is difficult to be sure about the exact function of the monument.</p>
+            <p>1. The verb in this formula is restored hypothetically. On the mixing of noun cases see <ref type="introduction">IV.3.E.a</ref>; we cannot exclude the possibility that the name
+            in the genitive in the second line was a patronymic.</p>
+            <p>2. The name of the dedicator may have been either Isakios or Arsakios.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><supplied reason="lost">Κύριε</supplied></w></roleName></persName>,
+                  <w lemma="σώζω"><supplied reason="lost">σῶσο</supplied>ν</w> <note>e.g.</note> <w lemma="ὁ">τῷ</w> <w lemma="δοῦλος">δοῦλόν</w>
+                  <w lemma="σύ">σ<supplied reason="lost">ο</supplied>υ</w>
+                  <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested" ref="#person42"><name nymRef="—σακιος"><seg part="F"><unclear>σα</unclear>κίου</seg></name></persName>.
+               </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

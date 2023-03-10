@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие <certainty cert="low" locus="value" match=".."/> Симеония</title><title xml:lang="en">Epitaph <certainty cert="low" locus="value" match=".."/> of Simeonis</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.110</idno><idno type="PE">PE5000110</idno>
+            <idno type="AYV2012-number">byz106</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная <certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                     <seg xml:lang="en">Funerary <certainty cert="low" locus="value" match=".."/> inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon23">Капитель.</objectType>
+                           <objectType xml:lang="en">Capital.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Мягкий известняк.</material>
+                           <material xml:lang="en">Soft limestone.</material>
+                           <p xml:lang="ru">Капитель с выкружкой и полочкой с орнаментом в виде кружков с точкой посередине. Сохранился один фрагмент, обломанный со 
+                              всех сторон.</p>
+                           <p xml:lang="en">Capital with apothesis and fillet, the latter decorated with dotted circles. One fragment, broken on all sides, survives.</p>
+                           <dimensions>
+                              <height>20,0</height>
+                              <width>29,0</width>
+                              <depth>15,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На выкружке.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the apothesis.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, лямбда курсивная. Лигатура омикрон-ипсилон, 
+                           выступающая за нижний край строки, надстрочная сигма.</seg>
+                        <seg xml:lang="en">Lapidary. Cursive lambda. Ligature (omicron-upsilon), extending below the writing line, superscript sigma.</seg>
+                        <height unit="cm">0,7–1,6.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p006">
+                        <seg xml:lang="ru">Урочище Ай-Димитрий.</seg>
+                        <seg xml:lang="en">Ay-Dimitry.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1500" precision="low" evidence="архитектурный_контекст">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#ay-dimitry">Ай-Димитрий, Урочище.</placeName>
+                        <rs type="circumstances">До 1890 г., обследования А.К. Романюка.</rs>
+                        <rs type="context">Хутор Ревелиоти, у храма и кладбища.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Ay-Dimitry, Tract.</placeName>
+                        <rs type="circumstances">Before 1890, survey of A.K. Romanyuk.</rs>
+                        <rs type="context">Revelioti farmstead, near the church and cemetery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-10-10" who="AL">small corrections in Russian text</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">small correction</change>
+         <change when="2012-05-24" who="AG">small corrections</change>
+         <change when="2012-05-01" who="AG">several lines translated</change>
+         <change when="2012-04-23" who="AG">some small corrections, editor added, bibliography updated, apparatus corrected</change>
+         <change when="2012-02-28" who="AG">checked, bibliography and apparatus tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.110">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Романюк 1890--><ptr target="bib:b0198"/>, 122, № 2, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>2</citedRange></bibl>
+               <bibl n="1.1"><!--Сборник--><ptr target="bib:b0132"/>, 70–71, № <citedRange>65</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+             <ab>
+                <lb n="1"/><supplied reason="lost" cert="low"><w lemma="κοιμάω">Ἐκοιμήθη</w></supplied>
+                <supplied reason="lost"><w lemma="ὁ">ὁ</w></supplied><w lemma="δοῦλος"> δοῦλος</w>
+                <w lemma="ὁ">τοῦ</w> <supplied reason="lost"><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName></supplied>
+                <persName type="attested" ref="#person137"><name nymRef="Σιμεώνις">Σιμεόνης</name></persName>
+                <lb n="2"/><date><supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied>
+                   <gap reason="lost" extent="unknown" unit="character"/> <num value="19">θι</num></date>
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="1"><rdg source="bib:b0132">Ἐνθάδε κατάκειται</rdg> <rdg source="bib:b0198"><note>om.</note></rdg></app>
+               <app loc="1"><lem>[θ(εο)ῦ]</lem> <rdg source="bib:b0198"><note>om.</note></rdg></app> 
+                <app loc="1"><rdg source="bib:b0198">Σιμεονήου</rdg> <rdg source="bib:b0132">Συμεών</rdg> </app> 
+                <app loc="2"> <rdg><note>om. alii</note></rdg></app>  
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Симеон, 19-го …</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[Fell asleep, a] servant of God, Simeonis, on the 19th...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надписи на архитектурных деталях в Горном Крыму, в отличие от Херсонеса, встречаются довольно редко. Из надписей на капителях нам известна 
+               разве что капитель типа “плетеной корзины” из-под Мангупа (<ref type="inscription">V 173</ref><!--byz166-->). Наша капитель происходит, по всей видимости, 
+               из разрушенной церкви св. Димитрия в урочище Ай-Димитрий (в двух часах ходьбы от деревни
+               Маркур (совр. Поляна). Следуя единственному источнику, рисунку Романюка, по форме букв надпись следует отнести 
+               к средне- или поздневизантийскому периоду, однако опубликованная им же плита с крестом (рис. 3) явно указывает на поздневизантийскую эпоху.</p>
+                <p> К сожалению, неполная сохранность текста сильно затрудняет атрибуцию памятника: он может быть как посвящением с именем донатора 
+                   (что кажется вероятным, учитывая архитектурный характер памятника), так и, что вероятнее, надгробием (на что может указывать дата в конце текста).  </p>
+                <p> 1. Несмотря на пропуск слова “Божий” ясно восстанавливается типичное словосочетание “раб Божий” (выражение «раб Твой» кажется менее 
+                   вероятным из-за следующего за этим номинатива) и, скорее всего, дата надписи. Имя Симеон употреблено в форме Σιμεόνης (ср. SEG 32.1474), а 
+                   не Σ(υ)με(ών), как считал Латышев, потому что наличие в конце эты и сигмы трудно объяснить другим образом, тем более что далее следует vacat (εἰς [τά], 
+                   может следовать только за называнием месяца).  </p>
+                <p>2. Восстановление формул Κύριε, βοήθει или ἐκοιμήθη кажется маловероятным, как из-за того, что имя находится в 1-й строке, так и, для первого 
+                   варианта, из-за того, что оно стоит в именительном падеже. Кроме того, над йотой ясно видно титло, что указывает на ее числовое значение.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Inscriptions on architectural members occur rather rarely in Mountainous Crimea, compared to Cherson. Of inscriptions made on capitals, we
+               know only one on a "basketweave" capital from the vicinity of Mangup (<ref type="inscription">V 173</ref><!--byz166-->). Our capital originates apparently
+               from a ruined church of St. Demetrios (2 hours by foot from the village of Marqur (modern Polyana). Our only record of it is the drawing made by Romanyuk, and relying on that we can say that the
+            lettershapes point to the Middle or Late Byzantine period, however, a panel with a cross also published by him (fig. 3) definitively points to the Late Byzantine
+            period. </p>
+            <p>Unfortunately, the fragmentary state of the text complicates its classification: it might be a dedication made by donator (which would fit well with its placement on
+               an architectural member), but it could also, as is perhaps more likely, be an epitaph (the date at the end of the text is indicative).
+            </p>
+            <p>1. Despite the missing word "of God" we can restore the typical phrase "servant of God" (the expression "your servant" seems less likely due to the following
+               nominative case), and probably the date. The name Simeonis is used in the form Σιμεόνης (cf. SEG 32.1474) rather than Σ(υ)με(ών), as Latyshev had thought, 
+               because otherwise it would be difficult to explain the presence of the eta and sigma at the end, especially since what follows is vacat (εἰς [τά] can only occur after
+            the name of the month).</p>
+            <p>2. Reconstruction either of the formula Κύριε, βοήθει or ἐκοιμήθη is unlikely, both because the name appears in line 1, and because the first formula would
+               require a person's name to appear in dative. In addition, an abbreviating overline is clear above iota, indicating its numerical value. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

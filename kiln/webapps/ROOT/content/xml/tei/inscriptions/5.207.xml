@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надпись Феодора <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Commemoration of Theodore <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.207</idno><idno type="PE">PE5000207</idno>
+            <idno type="AYV2012-number">byz195</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon16 #mon20">Скальная стена.</objectType>
+                           <objectType xml:lang="en">Rock wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Сохранилась целиком.</p>
+                           <p xml:lang="en">Fully preserved.</p>
+                           <dimensions>
+                              <height>27,0</height>
+                              <width>21,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы удлиненные, заостренные на концах и 
+                           маньеризованные.</seg>
+                        <seg xml:lang="en">Lapidary; elongated, ornate, pointy letters.</seg>
+                        <height unit="cm">27,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p024">
+                        <seg xml:lang="ru">Тепе-Кермен.</seg>
+                        <seg xml:lang="en">Tepe-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1400" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">Х–XIV вв.</seg>
+                        <seg xml:lang="en">Х–XIVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2001-09">Сентябрь 2001</date>.</seg>
+                     <seg xml:lang="en"><date when="2001-09">September 2001</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#tepe-kermen">Тепе-Кермен.</placeName>
+                        <rs type="circumstances">1832–1833 гг., обследования Ф. Дюбуа де Монпере.</rs>
+                        <rs type="context">«Храм с баптистерием», восточная стена, над крещальней.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Tepe-Kermen.</placeName>
+                        <rs type="circumstances">1832-1833, survey of F. Dubois de Montpéreux.</rs>
+                        <rs type="context">"Church with baptistery", eastern wall, above the baptisterium.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-03" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-25" who="AG">metadata corrected, several lines translated, tags corrected, apparatus tagged</change>
+          <change when="2012-06-19" who="AL">editor tag inserted, bibliography tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.207">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Сборник --><ptr target="bib:b0132"/>, 61, № <citedRange>52</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="1"><rdg source="bib:b0132">θεός ?</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Феодор (?).</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Theodore (?).</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Относительно находки надписи см. Dubois de Montpéreux 1843, 314 (см. также Караулов 1872, 70).</p>
+                <p>С одной стороны, сокращение тета-эпсилон характерно как раз для ранневизантийского периода: в Beševliev, 1964, №204 (IV–V вв.)
+                   ΘΕ vacat Θεόδωρος (ср. также <ref type="inscription">V 310</ref><!--byz304-->). Такое же сокращение присутствует на капители колонны из базилики 1935 г.
+                   в Херсонесе, где 
+                   обозначает, по-видимому, имя Феодор или Феодора. С другой, шрифт надписи стоит ближе к средне- и поздневизантийской эпохе, а сложной 
+                   формы завитушки на концах букв находят параллель лишь в <ref type="inscription">V 209</ref><!--byz197--> (1381–1382 гг.?). 
+                   Данную надпись следует рассматривать, вероятно, как памятную.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>For circumstances of discovery, see Dubois de Montpéreux 1843, 314 (see also Karaulov 1872, 70).</p>
+            <p>On the one hand, an abbreviation theta-epsilon is typical of Early Byzantine period: in Beševliev, 1964, №204 (IV–Vth century) ΘΕ vacat Θεόδωρος
+               (see also <ref type="inscription">V 310</ref><!--byz304-->). The same abbreviation is found on the capital of a column from "Basilica of 1935" in Chersonesos
+               where it apparently signified the name Theodore or Theodora. On the other hand, the script overall is closer to Middle or Late Byzantine style, 
+               while elaborate flourishes at the ends of letter strokes are paralleled only in <ref type="inscription">V 209</ref><!--byz197--> (1381-1382 C.E.).
+            The inscription should probably be considered commemorative.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person264"><name nymRef="Θεόδωρος"><expan><abbr>Θε</abbr><ex cert="low">όδωρος</ex></expan></name></persName>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

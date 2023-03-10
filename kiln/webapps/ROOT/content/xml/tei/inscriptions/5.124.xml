@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Архонтисы, Костаса, Маврикия, Симеония и Ирины</title><title xml:lang="en">Epitaph of Archontissa, Kostas, Maurikios, and others</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.124</idno><idno type="PE">PE5000124</idno>
+            <idno type="AYV2012-number">byz216</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение 3 крестов в верхней части, рельефная плетенка в середине и филенка с тупоконечным 
+                              завершением внизу, на боковых сторонах плетенка, на тыльной стороне «коса». Обломана сверху и снизу.</p>
+                           <p xml:lang="en">On the front are three relief crosses in the top half, a relief diamond ornament in the centre, and an inset panel with
+                              obtuse triangular top in the bottom half; the sides of the stele are decorated with a diamond pattern; on the back - interlace ornament. 
+                              Broken on the top and bottom.</p> 
+                           <dimensions>
+                              <height>45,0</height>
+                              <width>24,0</width>
+                              <depth>14,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри филенки.</seg>
+                           <seg xml:lang="en">Within inset panel.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы маньеризованные. Дельта с приподнятой и удлиненной перекладиной, 
+                           мю с Y-образной серединой, тау апицированное. Лигатура омикрон-ипсилон, надстрочные знаки, сокращение, нерегулярная диакритика.</seg>
+                        <seg xml:lang="en">Lapidary style; ornate letters. Delta with extended horizontal raised to mid-letterheight; mu with Y-shaped middle, tau with serifs. Ligature
+                        omicron-upsilon, superscript signs, abbreviations, irregular diacritics.</seg>
+                        <height unit="cm">1,0–1,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Kermenchik <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate notBefore="1387" notAfter="1387" evidence="указание_надписи">
+                        <seg xml:lang="ru">1387 г.</seg>
+                        <seg xml:lang="en">1387 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Крым.</seg>
+                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+         <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-07" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-02" who="AG">several lines translated, some corrections in metadata, tags in the Greek text corrected</change>
+          <change when="2012-04-24" who="AL">inserted editor tag, translated several lines</change>
+          <change when="2012-04-05" who="AL">original date tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+       <surface>
+          <graphic url="5.124-1">
+             <desc xml:lang="en">Photograph of face</desc>
+             <desc xml:lang="ru"/>
+          </graphic>
+          <graphic url="5.124-2">
+             <desc xml:lang="en">Photograph of face</desc>
+             <desc xml:lang="ru"/>
+          </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω">Ἐκοιμήθησαν</w> <w lemma="ὁ">τοῦ</w>
+               <lb n="2"/><persName type="attested" ref="#person276"><name nymRef="Γεώργιος"><expan><abbr>Γεωρ</abbr><ex>γίου</ex></expan></name></persName>
+               <w lemma="ὁ">τὰ</w> <w lemma="πεδίον">πεδία</w>· <w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δού<lb n="3" break="no"/>λι</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person277"><name nymRef="Ἀρχόντισσα">Ἀρχοτίσα</name></persName>
+               <lb n="4"/><w lemma="καί">καὶ</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="5"/><persName type="attested" ref="#person278"><name nymRef="Κόστας">Κόστας</name></persName> <w lemma="καί">καὶ</w>
+               <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος"><expan><abbr>δοῦλο</abbr><ex>ς</ex></expan></w>
+               <lb n="6"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person279"><name nymRef=" Μαυρίκιος">Μαυρίκις</name></persName>
+               <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+               <lb n="7"/><w lemma="ὁ">ὁ</w> <w lemma="δοῦλος"><expan><abbr>δοῦ</abbr><ex>λος</ex></expan></w>
+               <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person280"><name nymRef="Σιμεώνις">Συμε<lb n="8" break="no"/>όνις</name></persName> <w lemma="καί">καὶ</w> <w lemma="ὁ">ὑ</w>
+               <w lemma="δοῦλος"><expan><abbr>δούλ</abbr><ex>η</ex></expan></w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="9"/><persName type="attested" ref="#person281"><name nymRef="Εἰρήνη Υ̓ρύνυ">Υρύνυ</name></persName>
+               <w lemma="ἐν">ἐν</w> <date><w lemma="μήν"><expan><abbr>μιν</abbr><ex>ὴ</ex></expan></w>
+                  <rs type="month" ref="aug"><w lemma="Αὔγουστος">Αὐγού<lb n="10" break="no"/>στου</w></rs> <num value="3">γ</num>, <w lemma="ἡμέρα">ἡμέρᾳ</w> <num value="6">ς</num>, <w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔτος">ἔ<lb n="11" break="no"/>τους</w> <num value="6895">ςωϞε</num></date>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почили дети Георгия: раба Божья Архотиса, раб Божий Костас, раб Божий Маврикий, раб Божий Симеоний и раба Божья Ирина, 
+               3 августа, в 6-й день, в 6895 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep, children of George: a servant of God, Archontissa, a servant of God, Kostas, a servant of God, Maurikios, a servant of God, Simeonis,
+            and a servant of God, Irene, on the 3rd of August, in the 6th indiction, in the year 6895.</p>
+                     </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Происхождение надписи неизвестно, однако, судя по формулам ἐν μηνὶ и ἐπὶ ἔτους, надпись происходит из Высокого (Керменчика). В пользу этого 
+               говорят и форма основания креста, похожая близкой по времени (1382 г.) <ref type="inscription">V 129</ref><!--byz124-->, и написание букв между линеек, 
+               как в <ref type="inscription">V 131</ref><!--byz126-->, также близком по 
+               времени.</p>
+                <p>1–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. Неожиданное выделение имени отца умерших связано, вероятно, с его высоким 
+                   социальным статусом или с тем, что он и поставил надгробие.</p>
+            <p>3. Имя Архотиса (вероятней всего, искаженное Архонтисса; см. комм. к <ref type="inscription">V 20</ref><!--byz020-->) из других источников неизвестно — 
+               существует христианское имя Архонтий.</p>
+            <p>5. Об имени Константин см. комм. к <ref type="inscription">V 32</ref><!--byz032-->.</p>
+            <p>6. Имя Маврикий (император) встречается в <ref type="inscription">V 330</ref><!--byz309-->.</p>
+            <p>7–8. Об имени Симеоний см. комм. к <ref type="inscription">V 206</ref><!--byz194-->.</p>
+            <p>9. Имя Ирина встречается также в <ref type="inscription">V 200</ref><!--byz188-->.</p>
+                <p>9–10. 3 августа 1387 года было субботой — поэтому «6-й день» надписи должен обозначать именно этот день недели, а не пятницу: 
+                   относительно счета дней недели в Горном Крыму с понедельника см. комм. к <ref type="inscription">V 167</ref><!--byz160-->.</p>
+                <p> Данный памятник — семейное надгробие, вероятно, жертв пожара, эпидемии или насилия.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The origin of the inscription is unknown, but judging by the formulae ἐν μηνὶ and ἐπὶ ἔτους it is likely from Vysokoe (Kermenchik). This supposition is further
+               corroborated by the similarity of the base of the cross to that of <ref type="inscription">V 129</ref><!--byz124--> dated to 1382 C.E., as well the arrangement 
+               of text between drawn lines as in <ref type="inscription">V 131</ref><!--byz126-->, also close in date.</p>
+            <p>1-3. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>. The unusual foregrounding of the father's name is either due to his high social
+            status, or to the fact that he was the one to erect the tombstone.</p>
+            <p>3. The name Archotisa (apparently, a corruption of Archontissa; see commentary to <ref type="inscription">V 20</ref><!--byz020-->) is otherwise unknown - 
+            although we know of a Christian name Archontios.</p>
+            <p>5. On the name Konstantinos, see commentary to <ref type="inscription">V 32</ref><!--byz032-->.</p>
+            <p>6. The name Maurikios (here Maurikis) is attested in <ref type="inscription">V 330</ref><!--byz309--> (emperor).</p>
+            <p>7-8. On the name Simeonis, see commentary to <ref type="inscription">V 206</ref><!--byz194-->.</p>
+            <p>9. The name Irene (here spelled Yryny) is known from <ref type="inscription">V 200</ref><!--byz188-->.</p>
+            <p>9-10. August 3rd, 1387 was Saturday, so "the sixth say" of the inscription should mean that day and not Friday: on the count of week days in the Mountainous Crimea,
+               which started with Monday, see commentary to <ref type="inscription">V 167</ref><!--byz160-->.</p>
+            <p>This monument is a tombstone of family members who may have been victims of a fire, epidemic, or violence.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

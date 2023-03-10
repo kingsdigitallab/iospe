@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Фрагмент надписи</title><title xml:lang="en">Fragment of inscription</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.120</idno><idno type="PE">PE5000120</idno>
+            <idno type="AYV2012-number">byz116</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>АБ–4868/4897</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno>АБ–4868/4897</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon17">Архитектурная деталь.</objectType>
+                           <objectType xml:lang="en">Architectural member.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломана со всех сторон, включая тыльную; обгорела.</p>
+                           <p xml:lang="en">Broken on all sides, including the back; traces of burning.</p>
+                           <dimensions>
+                              <height>8,0</height>
+                              <width>5,5</width>
+                              <depth>7,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, буквы апицированы; вырезаны между линеек. 
+                           Тета ромбовидная, йота с диерезой.</seg>
+                        <seg xml:lang="en">Lapidary style, letters with serifs; a horizontal line is carved between the two preserved rows of letters. Diamond-shaped theta, iota with diaeresis.</seg>
+                        <height unit="cm">1,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p007">
+                        <seg xml:lang="ru">Бакла.</seg>
+                        <seg xml:lang="en">Bakla.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="0950" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">1 пол. Х в.</seg>
+                        <seg xml:lang="en">1st half of Хth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#bakla">Бакла.</placeName>
+                        <rs type="circumstances">2004 г., раскопки В.Ю. Юрочкина, А.Ю. Виноградова и Н.Е. Гайдукова.</rs>
+                        <rs type="context">Посад, храм 2003 г., южная стена, снаружи, слой пожара.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Bakla.</placeName>
+                        <rs type="circumstances">2004, excavations of V.Yu. Yurochkin, A.Yu. Vinogradov and N.E. Gaydukov.</rs>
+                        <rs type="context">Posad, Church of 2003, south wall, outside, fire destruction layer.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-24" who="AG">small corrections, editor added</change>
+         <change when="2012-03-06" who="AG">corrected, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.120">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Переводу не поддается.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Preserved letters do not provide sufficient material for translation.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> По шрифту и оформлению (линейки между строк) надпись очень близка <ref type="inscription">V 66</ref><!--byz066--> (915 г.) 
+               и <ref type="inscription">V 87</ref><!--byz087--> из Херсонеса. Камень найден в слое пожара, 
+               terminus ante quem для которого — слой засыпи цокольного ряда кладки храма с высокогорлыми плоскоручными кувшинами 2 пол. IX-ХI вв. 
+               (Юрочкин, Виноградов, Гайдуков, Неневоля, Пичка, Уженцев 2004). Вероятно, что данный камень относится к профилированной арке из того же слоя 
+               пожара.</p>
+                <p>Функцию надписи установить затруднительно. Если это надгробие, то можно с осторожностью предположить в сохранившихся буквах 
+                   формулу Ἐτ[ελειώ]θι.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The lettershapes of this inscription and the presence of an incised horizontal line resemble the style of <ref type="inscription">V 66</ref><!--byz066--> 
+               (915 C.E.) and of <ref type="inscription">V 87</ref><!--byz087--> from Cherson.  The stone was found in the burned layer whose terminus ante quem is 
+               determined by the date of the infill that had covered the socle layer of the church's masonry where the tall-neck pitchers with flat handles of 
+               the 2nd half of the IX-XIth centuries (Yurochkin, Vinogradov et al. 2004) were found. It is possible that this stone belongs to the arch with mouldings from the same burned layer.</p>
+            <p>It is difficult to establish the function of the inscription. If it was an epitaph, then we could cautiously suggest the formula Ἐτ[ελειώ]θι.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΕΤ</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>Θ</orig><gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

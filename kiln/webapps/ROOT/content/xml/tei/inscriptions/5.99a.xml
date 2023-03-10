@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надпись на космите темплона</title><title xml:lang="en">Inscription on templon architrave</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.99a</idno><idno type="PE">PE5000347</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4226</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4226</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1 document-search.xml#doc5 document-search.xml#doc12">
+                     <seg xml:lang="ru">Incerta (посвятительная, строительная или литургическая надпись).</seg>
+                     <seg xml:lang="en">Uncertain (dedicatory, building or liturgical inscription).</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon??">Космит темплона.</objectType>
+                           <objectType xml:lang="en">Templon architrave.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Космит темплона с рельефным орнаментом из двойных кругов и пальметок на нижней стороне. Обломан слева.</p>
+                           <p xml:lang="en">Templon architrave, bearing relief ornament of palmettes enclosed within double circles. Broken on the left.</p>
+                           <dimensions>
+                              <height>14,0</height>
+                              <width>14,0</width>
+                              <depth>15,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                          <seg xml:lang="ru">Лицевой фас.</seg>
+                          <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>.Альфа с петлей, мю прогнутая.</seg>
+                        <seg xml:lang="en">Lapidary style. Alpha with a loop, mu with sagging cross-loop.</seg>
+                        <height unit="cm">1,2-1,7.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX-Xth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2014-06">Июнь 2014</date>.</seg>
+                     <seg xml:lang="en"><date when="2014-06">June 2014</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">Раскопки К. К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">Excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2014-08-13" who="GB">Created from AV's word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.99a">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p>ined.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ιγμα</w>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <note>Не предлагается.</note>
+         </div>
+         <div type="translation" xml:lang="en">
+            <note>Not feasible.</note>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Сохранился конец надписи, которая, судя по месту своего размещения (космит темплона,
+               т. е. архитрав алтарной преграды, средневизантийского времени), могла иметь строительный
+               или посвятительный характер (ср. <ref type="inscription">V 28</ref><!--byz028-->, <ref type="inscription">V 33</ref><!--byz033-->) или быть литургической формулой. - ιγμα – это,
+               несомненно, остаток какого-то существительного среднего рода в именительном или винительном
+               падеже, однако аналогий ему в христианской эпиграфике найти не удалось.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The end of the inscription is preserved. Judging by its placement, on a templon architrave (that is, architrave of an altar screen, of the Middle 
+               Byzantine period), the inscription may have been building, dedicatory (cf. <ref type="inscription">V 28</ref><!--byz028-->, <ref type="inscription">V 33</ref><!--byz033-->) 
+               or liturgical in character. - ιγμα is certainly the ending of a neuter
+               noun in the nominative or accusative case, but I have not been able to find a parallel for some such noun in Christian epigraphy.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

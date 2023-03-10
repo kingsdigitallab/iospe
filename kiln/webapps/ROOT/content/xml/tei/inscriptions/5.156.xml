@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Граффито на стене</title><title xml:lang="en">Graffito on a wall</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.156</idno><idno type="PE">PE5000156</idno>
+            <idno type="AYV2012-number">byz151</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Выщербины по поверхности.</p>
+                           <p xml:lang="en">The surface is chipped.</p>
+                           <dimensions>
+                              <height>3,0</height>
+                              <width>18,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы слегка вытянуты по вертикали, маньеризованные.</seg>
+                        <seg xml:lang="en">Lapidary; letters are slightly elongated and ornate.</seg>
+                        <height unit="cm">3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита.</seg>
+                        <seg xml:lang="en">Kalamita.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1500" precision="low" evidence="архитектурно-археологический_контекст">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2002-09">Сентябрь 2002</date>.</seg>
+                     <seg xml:lang="en"><date when="2002-09">September 2002</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#inkerman">Инкерман.</placeName>
+                        <rs type="circumstances">До 1997 г.</rs>
+                        <rs type="context">Загайтанская скала, восточная часть, «церковь № 5», пом. 2, южная стена, у дверного проема.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">Before 1997.</rs>
+                        <rs type="context">Zagaytanslakya Rock, eastern part, "Church 5", room 2, south wall, near doorway.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-26" who="AG">several corrections, 1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-03-13" who="AG">corrections in metadata, tags in the Greek text corrected</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+           <graphic url="5.156">
+              <desc xml:lang="en">Photograph of face</desc>
+              <desc xml:lang="ru"/>
+           </graphic>
+           <!-- <graphic url="5.156-1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>
+            <graphic url="5.156-2">
+                 <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                 <desc xml:lang="ru"></desc>
+             </graphic>-->
+           <!-- photographs of something else; what? -->
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Бог…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>God...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Пещера, которую Могаричев (1997, 19, рис. 68) называет церковью № 5, не
+                обладает никакими необходимыми признаками культового помещения. По форме креста
+                Могаричев датирует надпись XI–XIV вв. На самом деле, все культовые здания не только на
+               Загайтанской скале, но и во всей Инкерманской долине не древнее XIII в. (см. Виноградов,
+               Гайдуков, Желтов 2005, 78–79).</p>
+                <p> Смысл надписи неясен.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The cave, which Mogarichev (1997, 19, fig. 68) identifies as Church 5, bears no characteristics of a cult building. The shape of the cross
+               suggests to Mogarichev a date in the XIth-XIVth centuries, but in fact all cult buildings not only at the Zagaytanskaya Rock, but also in the entire
+               Inkerman Valley are not earlier than the XIIIth century (see Vinogradov, Gaydukov, Zheltov 2005, 78–79).</p>
+            <p>The meaning of the inscription is unclear.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>Θ</abbr><ex>εὸ</ex><abbr>ς</abbr></expan></w></roleName></persName>
+               <orig>Κ</orig> <space unit="character"/> <orig>ΜΣ</orig>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

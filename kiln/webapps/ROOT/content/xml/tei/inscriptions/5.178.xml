@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись неизвестного</title><title xml:lang="en">Building inscription of an unknown</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.178</idno><idno type="PE">PE5000178</idno>
+            <idno type="AYV2012-number">byz171</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Unknown/Ukraine/Unknown</country>
+                  <altIdentifier xml:lang="ru" n="1">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="1">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="ru" n="2">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>35131</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="2">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35131</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="ru" n="3">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="3">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконесский мрамор.</material>
+                           <material xml:lang="en">Proconessian marble.</material>
+                           <p xml:lang="ru">Орнаментированный бортик с 2 выкружками справа и аканфовым карнизом внизу. Разбита на 3 части, обломана со всех сторон, 
+                              кроме правой.</p>
+                           <p xml:lang="en">Ornamental relief border with two semicircles on the right and acanthus-frieze cornice below. Broken into three parts, damaged on all sides
+                              except the right.</p>
+                           <dimensions>
+                              <height>23,0</height>
+                              <width>39,0</width>
+                              <depth>13,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="3">
+                           <seg xml:lang="ru">Над аканфовым карнизом.</seg>
+                           <seg xml:lang="en">Over the acanthus-frieze cornice.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы маньеризованные, рельефные, вырезаны между 
+                           рельефных линеек. Ню И-образное. Лигатуры, сокращения.</seg>
+                        <seg xml:lang="en">Lapidary; ornate relief letters; the line of text is set between two framing lines in relief above and below. 
+                           И-shaped nu. Ligatures, abbreviations.</seg>
+                        <height unit="cm">5,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1403" notAfter="1403" evidence="указание_надписи">
+                        <seg xml:lang="ru">1403 г.</seg>
+                        <seg xml:lang="en">1403 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy" n="1">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="observed" subtype="autopsy" n="2">
+                     <seg xml:lang="ru">Сентябрь 2008.</seg>
+                     <seg xml:lang="en">September 2008.</seg>
+                  </provenance>
+                  <provenance type="observed" subtype="autopsy" n="3">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found" n="1">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">1916 г., обследования М.И. Скубетова.</rs>
+                        <rs type="context">Дворец.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1916, survey of M.I. Skubetov.</rs>
+                        <rs type="context">Palace.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="found" n="2">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1913 г., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Дворец.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1916, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Palace.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="found" n="3">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Мангуп.</placeName>
+                        <rs type="circumstances">1913 г., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Дворец.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1916, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Palace.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed" n="1">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+                  <provenance type="observed" n="2">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+                     <provenance type="observed" n="3">
+                        <seg xml:lang="ru">Неизвестно.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                     </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-03-13" who="AG">corrected Greek lemmata</change>
+          <change when="2012-10-30" who="AL">small corrections in Russian text</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-11" who="AG">editor added</change>
+         <change when="2012-06-08" who="AG">small corrections, several lines translated, tags corrected, greek text tagged</change>
+          <change when="2012-04-17" who="AL">translated a line, bibliography tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.178">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1918b--><ptr target="bib:b0156"/>, 19–20, № <citedRange>2</citedRange></bibl>
+               <bibl n="2"><!-- Малицкий 1933--><ptr target="bib:b0163"/>, <citedRange>25–26</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1-2"><rdg source="bib:b0156">ἱμ[έρᾳ ...]</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… 1 <supplied reason="lost">ап</supplied>реля, в <supplied reason="lost">воскресенье</supplied>,
+               в шесть тысяч девятьсот 11-м году, в 11-й индикт.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... 1st of April, Sunday, in the year six thousand nine hundred and 11, in the 11th indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по эстампажу А.И. Маркевича.</p>
+                <p> От текста сохранилась лишь подробная датировка. Латышев не вычислил день недели — это 
+                    было воскресенье. 1 апреля — память св. Марии Египетской: в 1403 г. на этот день приходилось 
+                    пятое воскресенье Великого поста, посвященное той же святой, — возможно, именно из-за 
+                    этого редкого совпадения и был выбран день освящения постройки. Написание года при 
+                    помощи слов находит параллель в другой феодоритской надписи — <ref type="inscription">V 243</ref><!--byz229--> (1425 г., Партенит).</p>
+                <p>Надпись, судя по материалу и тщательной обработке, — строительная (единственное близкое 
+                   по шрифту (но более простое по оформлению) надгробие <ref type="inscription">V 189</ref><!--byz179--> датируется на полвека позже), 
+                    но кто и что построил в 1403 г., сказать невозможно. Следует отметить лишь 3 момента. 
+                    Во-первых, до дворца 1425 г. на этом месте существовала какая-то постройка. Во-вторых, эта 
+                    надпись принадлежит к новой традиции феодоритской эпиграфики XV в., которая 
+                    характеризуется рельефным шрифтом-вязью, выполненным между рельефных линеек. Более 
+                    того, данная надпись является древнейшей в этой традиции. Наконец, в отличие от большинства 
+                    представителей этой группы, она выполнена на мраморе, что находит параллель в чуть более 
+                    раннем <ref type="inscription">V 177</ref><!--byz170-->. Таким образом, где-то на рубеже XIV и XV вв. в мангупской традиции, в т.ч. и 
+                    эпиграфической, произошел коренной перелом, связанный, вероятно, с приходом на смену 
+                    сотникам (ср.<ref type="inscription">V 176</ref><!--byz169-->, <ref type="inscription">V 177</ref><!--byz170-->) новой княжеской династии. 
+                   Поскольку дата <ref type="inscription">V 177</ref><!--byz170--> — 1391–1401 гг., то 
+                    этот перелом должен был произойти в течение десятилетия перед первым строительным 
+                    предприятием новой династии.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev's edition was based on an estampage made by A. I. Markevich.</p>
+            <p>All that remains of the text is a detailed date. Latyshev failed to calculate the date of the week - it was Sunday. April 1st is the memory day for St. Mary
+               of Egypt: in 1403, it fell on the fifth Sunday of the Great Fast (Lent), which was also dedicated to the same saint. Perhaps because of this rare coincidence, 
+               the date was chosen for the consecration of the building. The spelling of the year date is attested in another Theodorite inscription — 
+               <ref type="inscription">V 243</ref><!--byz229--> (1425 C.E., Partenit).</p>
+            <p>As far as we can tell from the material and the careful dressing of the stone, the inscription should be classified as a building inscription (the only example
+               that is close in script (but more simple in design) is a tombstone - <ref type="inscription">V 189</ref><!--byz179--> - dated to half a century later), but
+               it is impossible to tell what exactly was built and who built it in 1403. We should point out three details, however. 
+               Firstly, there had been an earlier structure on the spot before a palace was built in 1425. Secondly, this inscription belongs to a new tradition 
+               of Theodorite epigraphy of the XVth century, characterized by relief ornate script carved between relief lines. Moreover, this inscription 
+               is the oldest in this tradition. Finally, in contrast to the majority of other examples in this group, this one is made on marble, which is paralleled by
+               the earlier <ref type="inscription">V 177</ref><!--byz170-->. Thus, somewhere at the turn of the XIVth and XVth centuries, a significant cultural change had 
+               taken place, also affecting the epigraphic tradition. The change was probably related to the disappearance of centurions (cf. <ref type="inscription">V 176</ref><!--byz169-->, 
+               <ref type="inscription">V 177</ref><!--byz170-->) and the rise of a new princely dynasty. Since the date of <ref type="inscription">V 177</ref><!--byz170--> is
+            1391-1401, we could surmise that the change took place a decade before the first building project of the new dynasty.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+               <lb n="0"/><gap reason="lost" quantity="1" unit="line"/>
+               <lb n="1"/><w lemma="ἐν">ἐν</w> <w lemma="μήν">μην<unclear>ὶ</unclear></w>
+                  <rs type="month" ref="apr"><w lemma="Ἀπρίλιος"><supplied reason="lost">ἀπ</supplied>ριλείῳ</w></rs>
+                  <num value="1">α</num>, <w lemma="ἡμέρα">ἱμ<lb n="2" break="no"/><supplied reason="lost">έρᾳ</supplied></w>
+                  <w lemma="κυριακή"><supplied reason="lost"><expan><abbr>κυρ</abbr><ex>ιακῇ</ex></expan></supplied></w>,
+                  <w lemma="ἔτος"><supplied reason="lost">ἔ</supplied><unclear>τους</unclear></w>
+                  <w lemma="χιλιοστός"><expan><ex>χιλιοστ</ex><abbr>οῦ</abbr></expan></w>
+                  <w lemma="ἐννιακοσιοστός"><expan><ex>ἑννακοσιαστ</ex><abbr>οῦ</abbr></expan></w> <num value="11">ια</num>, 
+                  <w lemma="ἰνδικτιών"><expan><ex>ἰνδικτιῶνος</ex></expan></w> <num value="11">ια</num>.
+               </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kiln:root xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Imports inscription stylesheet . -->
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/inscription.xsl"/>
+
+  <kiln:parent>
+    <xi:include href="base.xml"/>
+  </kiln:parent>
+
+  <kiln:child>
+
+    <kiln:block name="css">
+      <kiln:super/>
+      <link href="{$kiln:assets-path}/scripts/vendor/highlightjs/styles/tomorrow.css"
+        rel="stylesheet" type="text/css"/>
+    </kiln:block>
+
+    <kiln:block name="title">
+      <kiln:super/>
+
+      <xsl:call-template name="inscription-title"/>
+    </kiln:block>
+
+
+    <kiln:block name="page-heading">
+      <kiln:super/>
+      <xsl:call-template name="inscription-title"/>
+
+    </kiln:block>
+
+    <kiln:block name="content">
+      <div class="row">
+        <div class="large-12 columns inscription">
+          <!-- navigation -->
+          <xsl:call-template name="inscriptionnav"/>
+
+          <xsl:apply-templates select="//inscription/tei:TEI//tei:body"/>
+
+          <!-- anything else -->
+          <!-- <xsl:apply-templates select="//inscription/tei:TEI" /> -->
+          <!-- navigation -->
+          <xsl:call-template name="inscriptionnav"/>
+        </div>
+      </div>
+    </kiln:block>
+
+    <kiln:block name="mainjs">
+      <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+        data-main="{$kiln:assets-path}/scripts/inscription">&#160;</script>
+    </kiln:block>
+  </kiln:child>
+
+</kiln:root>

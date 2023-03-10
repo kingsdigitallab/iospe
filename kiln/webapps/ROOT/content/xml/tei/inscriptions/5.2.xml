@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись воеводы Стефана</title><title xml:lang="en">Building inscription of voyevoda Stephanos</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.2</idno><idno type="PE">PE5000002</idno>
+            <idno type="AYV2012-number">byz002</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>City of Kherson</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Херсонский краеведческий музей</repository>
+                     <idno>а-9633</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Kherson Regional Studies Museum</repository>
+                     <idno>а-9633</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мрамор.</material>
+                           <material xml:lang="en">White marble.</material>
+                           <p xml:lang="ru">Прямоугольная с расширением кверху стела с насечками на левом ребре. На лицевой стороне изображение процветшего 
+                              креста с капельками и заострениями на концах и двух розеток, а также рельефная рамка (шир. 11.0–12.5) по краю. 
+                              Выщерблины по поверхности рельефа.</p>
+                           <p xml:lang="en">Rectangular slab widening at the top, with grooves cut at equal intervals on the left rib. The front carries an inset field surrounded 
+                              by relief border (W. 11.0-12.5) and divided into two registers. The upper register, whose surface is damaged, contains relief foliate cross with "teardrops"
+                              and two relief rosettes, and the lower is inscribed with letters cut in relief.</p>
+                           <dimensions>
+                              <height>111,0</height>
+                              <width>51,0</width>
+                              <depth>18,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p001">
+                        <seg xml:lang="ru">Белгород.</seg>
+                        <seg xml:lang="en">Belgorod.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#belgorod-dnestrovsky">Белгород-Днестровский.</placeName>
+                        <rs type="circumstances">1840-е гг., обследования Н.Н. Мурзакевича.</rs>
+                        <rs type="context">Крепость, средняя стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Belgorod-Dnestrovsky.</placeName>
+                        <rs type="circumstances">1840s, survey of N.N. Murzakevich.</rs>
+                        <rs type="context">Fortress, cross-wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Город Херсон.</seg>
+                     <seg xml:lang="en">City of Kherson.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier><altIdentifier><idno/></altIdentifier></msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc1">
+                        <seg xml:lang="ru">Строительная надпись.</seg>
+                        <seg xml:lang="en">Building inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc><objectDesc><layoutDesc>
+                     <layout ana="f1">
+                        <seg xml:lang="ru">Внутри каймы; верхнее и нижнее поле рамки.</seg>
+                        <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the upper and lower border.</seg>
+                     </layout>
+                  </layoutDesc>
+                  </objectDesc>   
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы выпуклые, вытянутые, маньеризованные. 
+                              Надстрочные буквы, многочисленные лигатуры, сокращения.</seg>
+                           <seg xml:lang="en">Lapidary; elongated, ornate relief letters, some of them superscript. Multiple ligatures, abbreviations.</seg>
+                           <height unit="cm">3,5.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="1439" notAfter="1439" evidence="эпиграфический_контекст">
+                           <seg xml:lang="ru">1439 г.</seg>
+                           <seg xml:lang="en">1439 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><altIdentifier><idno/></altIdentifier></msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4">
+                        <seg xml:lang="ru">Демонстративная надпись.</seg>
+                        <seg xml:lang="en">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc><objectDesc><layoutDesc>
+                     <layout ana="f1">
+                        <seg xml:lang="ru">Внутри рамки, в углах между рукавами креста.</seg>
+                        <seg xml:lang="en">In the upper register, in corners between the arms of the cross.</seg>
+                     </layout>
+                  </layoutDesc></objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <height unit="cm">4,0–4,5.</height>
+                        </handNote>
+                     </handDesc></physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="1439" notAfter="1439" evidence="эпиграфический_контекст">
+                           <seg xml:lang="ru">1439 г.</seg>
+                           <seg xml:lang="en">1439 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="3">
+                  <msIdentifier><altIdentifier><idno/></altIdentifier></msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc1">
+                        <seg xml:lang="ru">Строительная надпись.</seg>
+                        <seg xml:lang="en">Building inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc><objectDesc><layoutDesc>
+                     <layout ana="f1">
+                        <seg xml:lang="ru">Внутри рамки, под рельефом.</seg>
+                        <seg xml:lang="en">In the lower register.</seg>
+                     </layout>
+                  </layoutDesc></objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <height unit="cm">3,5.</height>
+                        </handNote>
+                     </handDesc></physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="1439" notAfter="1439" evidence="эпиграфический_контекст">
+                           <seg xml:lang="ru">1439 г.</seg>
+                           <seg xml:lang="en">1439 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-16" who="CB">Andrey's corrections</change>
+          <change when="2012-11-27" who="AL">English toponyms in commentary inserted</change>
+         <change when="2012-08-16" who="AG">Greek lemmata corrected</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">some corrections in metadata</change>
+         <change when="2012-06-29" who="AG">apparatus corrected after Vinogradov</change>
+         <change when="2012-05-09" who="AG">small correction</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG">several lines translated, apparatus corrected and updated, editor added</change>
+         <change when="2012-03-21" who="AG">corrections in apparatus</change>
+         <change when="2012-03-07" who="AG">bibliography and apparatus tags corrected</change>
+         <change when="2012-02-20" who="AG">bibliography tags corrected</change>
+         <change when="2012-01-23" who="AG">several lines translated</change>
+         <change when="2011-12-14" who="AG">tagging, update</change>
+         <change when="2011-12-13" who="AG">corrections, tagging (partly)</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.2-3" n="1">
+            <desc xml:lang="en">Photograph of face</desc>
+            <desc xml:lang="ru">Фотография лицевой части</desc>
+         </graphic>
+         <graphic url="5.2-4" n="1">
+            <desc xml:lang="en">Photograph of text</desc>
+            <desc xml:lang="ru">Фотография лицевой части</desc>
+         </graphic>
+         <graphic url="5.2-4" n="3">
+            <desc xml:lang="en">Photograph of text</desc>
+            <desc xml:lang="ru">Фотография лицевой части</desc>
+         </graphic>
+         <graphic url="5.2-5" n="1">
+            <desc xml:lang="en">Photograph of upper surface</desc>
+            <desc xml:lang="ru">Фотография лицевой части</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!-- Мурзакевич, 1850 --><ptr target="bib:b0176"/>, <citedRange>481–483</citedRange></bibl>
+               <bibl n="1.1"><!-- Уваров 1856 --><ptr target="bib:b0424"/>, <citedRange>180</citedRange></bibl>
+               <bibl n="2"><!-- Кочубинский, 1889 --><ptr target="bib:b0105"/>, 527–538, № <citedRange>2</citedRange></bibl>
+               <bibl n="2.1"><!--Сборник--><ptr target="bib:b0132"/>, 3–5, № <citedRange>3</citedRange></bibl>
+               <bibl n="2.2"><!--Bogdan 1908--><ptr target="bib:b0273"/>, <citedRange>316</citedRange></bibl>
+               <bibl n="2.3"><!--Pipidi 1998--><ptr target="bib:b0347"/>, <citedRange>81</citedRange></bibl>
+               <bibl n="3"><!-- Красножон 2014 --><ptr target="bib:b0425"/>, <citedRange>180–191</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl n="2">
+               <bibl n="L1"><!-- Мурзакевич, 1850 --><ptr target="bib:b0176"/>, <citedRange>481–483</citedRange></bibl>
+               <bibl n="1.1"><!-- Уваров 1856 --><ptr target="bib:b0424"/>, <citedRange>180</citedRange></bibl>
+               <bibl n="2"><!-- Кочубинский, 1889 --><ptr target="bib:b0105"/>, 527–538, № <citedRange>2</citedRange></bibl>
+               <bibl n="2.1"><!--Сборник--><ptr target="bib:b0132"/>, 3–5, № <citedRange>3</citedRange></bibl>
+               <bibl n="2.2"><!--Bogdan 1908--><ptr target="bib:b0273"/>, <citedRange>316</citedRange></bibl>
+               <bibl n="2.3"><!--Pipidi 1998--><ptr target="bib:b0347"/>, <citedRange>81</citedRange></bibl>
+               <bibl n="3"><!-- Красножон 2014 --><ptr target="bib:b0425"/>, <citedRange>180–191</citedRange></bibl>
+            </listBibl>
+            
+            <listBibl n="3">
+               <bibl n="L1"><!-- Мурзакевич, 1850 --><ptr target="bib:b0176"/>, <citedRange>481–483</citedRange></bibl>
+               <bibl n="1.1"><!-- Уваров 1856 --><ptr target="bib:b0424"/>, <citedRange>180</citedRange></bibl>
+               <bibl n="2"><!-- Кочубинский, 1889 --><ptr target="bib:b0105"/>, 527–538, № <citedRange>2</citedRange></bibl>
+               <bibl n="2.1"><!--Сборник--><ptr target="bib:b0132"/>, 3–5, № <citedRange>3</citedRange></bibl>
+               <bibl n="2.2"><!--Bogdan 1908--><ptr target="bib:b0273"/>, <citedRange>316</citedRange></bibl>
+               <bibl n="2.3"><!--Pipidi 1998--><ptr target="bib:b0347"/>, <citedRange>81</citedRange></bibl>
+               <bibl n="3"><!-- Красножон 2014 --><ptr target="bib:b0425"/>, <citedRange>180–191</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="δέησις">Δέυσις</w> <w lemma="ὁ">τοῦ</w>
+                  <w lemma="δοῦλος"><expan><ex>δού</ex><abbr>λου</abbr></expan></w> <w lemma="ὁ">τοῦ</w>
+                  <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+                  <persName type="attested" ref="#person2"><name nymRef="Θεόδωρος"><expan><abbr>Θε</abbr><ex>ο</ex><abbr>δώρου</abbr></expan></name></persName>
+                  <w lemma="καί"><expan><abbr>κα</abbr><ex>ὶ</ex></expan></w>
+                  <lb n="2"/><persName type="attested" ref="#person3"><name nymRef="Στέφανος"><expan><abbr>Στεφάν</abbr><ex>ου</ex></expan></name></persName>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name> <name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><abbr>ς</abbr></expan></name></persName>
+                  <lb n="2"/><w lemma="νικάω">νικᾷ</w>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="3">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <w lemma="γίγνομαι">Γέγονεν</w> <w lemma="ὁ">τὸ</w>
+                  <w lemma="πάρειμι">παρὸν</w> <w lemma="κάστρον">κάστρον</w>
+                  <lb n="2"/><w lemma="ἐπί">ἐπὶ</w> <persName type="ruler" key="stephen2"><w lemma="ὁ">τοῦ</w>
+                     <w lemma="εὐσεβής">εὐσεβεστάτου</w> <w lemma="αὐθέντης">αὐφέν
+                  <lb n="3" break="no"/>τος</w> 
+                     <w lemma="ἐγώ"><choice><orig>ὑμῶν</orig><reg>ἡμῶν</reg></choice></w>
+                     <name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννου</ex></expan></name>
+                     <name nymRef="Στέφανος">Στεφάνου</name> <w lemma="βοβώδας">βοβώδα</w></persName>
+                  <lb n="4"/><w lemma="καί">καὶ</w> <w lemma="ζούπανος">ζουπάνου</w>, <w lemma="ἅμα">ἅμα</w>
+                  <w lemma="τε">τε</w> <note>?</note> <w lemma="πρῶτος"><expan><abbr>πρότη</abbr><ex>ς</ex></expan></w>
+                  <w lemma="κεφαλή">καιφαλῆς</w> <w lemma="ὁ">τοῦ</w> <placeName>Ἀσπρωκάστρου</placeName>
+                  <lb n="5"/><date><w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔτος">ἔτους</w> <num value="6948">ςϠμη</num>,
+                     <w lemma="ἰνδικτιών"><expan><abbr/><ex>ἰνδικτιῶνος</ex></expan></w></date> <num value="3">γ</num>. 
+                  <g ref="#stauros"/> <w lemma="διασώζω">Διάσο
+                  <lb n="6" break="no"/>σον</w> <w lemma="ἀπό">ἀπὸ</w>
+                  <w lemma="κῆλον">κήλον</w>
+                  <w lemma="ὁ">τοῦ</w> <w lemma="δοῦλος">δούλου</w> <w lemma="σύ">σου</w>,
+                  <w lemma="θεοτόκος"><expan><abbr>θ</abbr><ex>εοτό</ex><abbr>κε</abbr></expan></w> <g ref="#stauros"/>
+                  <lb n="7"/><date><rs type="month" ref="nou"><w lemma="Νοέμβριος"><expan><abbr>Νο</abbr><ex>εμ</ex><abbr>βρή</abbr><ex>ου</ex></expan></w></rs>
+                  <num value="10">ι</num></date>.
+               </ab>
+            </div>
+         </div>
+         <div type="apparatus" n="1">
+            <listApp>
+               <app loc="1"><rdg source="bib:b0176">Θεοδώρου ...</rdg><rdg source="bib:b0105">Θεδώρκα</rdg></app>
+               <app loc="2"><rdg source="bib:b0176">Στέ ... φαν</rdg></app>
+            </listApp> 
+         </div>
+         <div type="apparatus" n="3">
+            <listApp>
+               <app loc="1"><rdg source="bib:b0176">γέγονεν</rdg><note> et alii</note>
+                  <rdg source="bib:b0229">ιογενον</rdg>
+                  <rdg source="bib:b0417">γεγωνε (ε)ν <note>(sic!)</note></rdg></app>
+               <app loc="2"><rdg source="bib:b0229">οπιτоυου</rdg></app>
+               <app loc="2-3"><rdg source="bib:b0176">αὐφεντόσου</rdg></app>
+               <app loc="3"><rdg source="bib:b0417">ὑμῶ(ν)</rdg>
+                  <rdg source="bib:b0229">υμρω</rdg>
+                  <rdg source="bib:b0105 bib:b0132 bib:b0273">ὑπάτου</rdg></app>
+               <app loc="4"><rdg source="bib:b0229">κανδιά</rdg></app>
+               <app loc="4"><rdg source="bib:b0417">ζουπανоυ μεγας προ της και φ(ι)λος του Aσπρωκαστρου <note>(sic!)</note></rdg>
+                  <rdg source="bib:b0176">διὰ τοῦ μαγίστρο(υ) τῆς ἀφεντίας καὶ τοῦ κάστρου</rdg><note> et alii</note></app>
+               <app loc="5"><rdg source="bib:b0417">ἐπὶ ἔτους</rdg>
+                  <rdg source="bib:b0229 bib:b0105 bib:b0132 bib:b0273">ἐπιστάτου</rdg>
+                  <rdg source="bib:b0176"><note>om.</note></rdg>
+               </app>
+               <app loc="5"><lem>͵ςϠμη´</lem><rdg source="bib:b0176"><note>om.</note></rdg></app>
+               <app loc="5"><rdg source="bib:b0417">(ἰνδικτιῶνος) γ´</rdg>
+                  <rdg source="bib:b0105 bib:b0132 bib:b0273">ἔτ(ους)</rdg></app>
+               <app loc="6"><rdg source="bib:b0176">ἀπὸ κυνδ(ύ)νον</rdg><note> et alii</note>
+                  <rdg source="bib:b0417">αποκληιον <note>(sic!)</note></rdg></app>
+               <app loc="6"><rdg source="bib:b0417">τоυς δουλ[ους] σου <note>(sic!)</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Моление раба Божьего Феодора и Стефана.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Иисус Христос побеждает.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Сооружена настоящая крепость при благочестивейшем господаре нашем Иоанне Стефане, 
+                    воеводе и жупане, а также первом голове Аспрокастро, в 6948 году, в 3-й индикт. 
+                    Спаси от стрел раба Твоего, Богородице. 10 ноября.</p>
+            </div>
+
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Supplication of the servants of God, Theodore and Stephanos.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Jesus Christ is victorious.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>The present fortress was constructed in the time of our most pious Authentes, Ioannos Stephanos, Voyevoda and Župan,
+                  and of the first Head of Asprokastro, in the year 6948, in the 3rd indiction. Mother of God, safeguard your servant from arrows. 
+                  10th November.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>По сообщению Латышева, камень был увезен в музей ООИД. Как обнаружил А. В. Красножон камень, вместе с другими, был вывезен во время 
+                  II мировой войны в Румынию, а оттуда возвращен почему-то в Херсон. Издание Красножона выполнено без диакритики.</p>
+               <p> Об археологическом контексте см. комм. к <ref type="inscription">V 1</ref><!--byz001-->.  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Относительно формулы см. <ref type="introduction">IV.3.C.e.</ref></p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Об истории изучения надписи см. Красножон 2013.</p>
+               <p> 1. Строительные надписи с формулой γέγονε известны в Византии, однако в основном в ранневизантийской Сирии. 
+                  Ср., однако, родственную формулу с ἐγένετο (см. комм. к <ref type="inscription">V 11</ref><!--byz010-->).</p>
+                <p> 2–3. Формула βοιβόδας καὶ αὐθέντης известна также по надписи 1407–1408 гг. из Болгарии (Beševliev 1964, № 79).  </p>
+               <p> 4. О молдавском господаре Стефане II (1433—1435, 1436—1447) см. Красножон 2013. Наше чтение «первый голова» вполне 
+                  вписывается в концепцию Красножона о Белгороде как временной резиденции Стефана II.</p>
+                <p> 5. Год Кочубинский и Латышев прочитали верно, но не заметили 
+                   следующий за ним «3-й индикт», который действительно приходился 
+                на 6948 год от сотворения мира.</p>
+               <p>6. Слово κῆλος может обозначать не только стрелу, но и внезапную гибель (LSJ, s.v.).</p>
+               <p> Об историческом и археологическом контексте см. Бруяко, Сапожников 2000, Красножон 2012, Красножон 2013.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>According to Latyshev, the stone was taken to the Odessa Society of History and Antiquities. A.V. Krasnozhon discovered that during WWII, 
+                  this monument, as well as several others from Belgorod-Dnestrovsky, had been taken to Romania, but later returned,
+               although surprisingly not to Belgorod, but to the City of Kherson. Krasnozhon's edition leaves out the diacritics.</p>
+               <p>For the archaeological context, see commentary to <ref type="inscription">V 1</ref><!--byz001-->.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>On the formula, see <ref type="introduction">IV.3.C.e</ref>.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>On the history of the study of the text, see Krasnozhon 2013.</p>
+               <p>1. Building inscriptions with the formula γέγονε are known in Byzantium, but mostly in Early Byzantine Syria. A related formula (with ἐγένετο) is also attested
+               (see commentary to <ref type="inscription">V 11</ref><!--byz010-->). </p>
+               <p>2-3. The formula βοιβόδας καὶ αὐθέντης is known from an inscription dated to 1407-1408 C.E. in Bulgaria (Beševliev 1964, no. 79).</p>
+               <p>4. On the Moldavian authentes Stephanos II (1433—1435, 1436—1447), see Krasnozhon 2013. Our reading "the first Head" fits rather well with 
+                  Krasnozhon's hypothesis of Belgorod as a temporary residence of Stephanos II.</p>
+                <p>5. Kochubinsky and Latyshev read the year correctly, but failed to notice the "3rd indiction" that followed. 
+                The latter indeed corresponds to the year 6948 since Creation. </p>
+               <p>The word κῆλος can designate not only an arrow, but also a sudden death (LSJ, s.v.).</p>
+               <p>For historical and archaeological context, see Bruyako, Sapozhnikov 2000; Krasnozhon 2012, Krasnozhon 2013.</p>
+            </div>
+         </div>
+       </body>
+   </text>
+</TEI>

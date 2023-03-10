@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Посвящение неизвестного</title><title xml:lang="en">Dedication of an unknown</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.334</idno><idno type="PE">PE5000334</idno>
+            <idno type="AYV2012-number">byz311</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc5">
+                     <seg xml:lang="ru">Посвятительная надпись.</seg>
+                     <seg xml:lang="en">Dedication.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мрамор.</material>
+                           <material xml:lang="en">White marble.</material>
+                           <p xml:lang="ru">Обломана слева.</p>
+                           <p xml:lang="en">Broken off on the left.</p>
+                           <dimensions>
+                              <height>37,0</height>
+                              <width>27,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В верхней части плиты.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the upper part of the panel.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Мю с Т-образной серединой; омикрон и ро угловатые. 
+                           Знаки сокращения.</seg>
+                        <seg xml:lang="en">Lapidary. Mu with T-shaped middle, angular omicron and rho. Abbreviation marks.</seg>
+                        <height unit="cm">2,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p049">
+                        <seg xml:lang="ru">Таматарха <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Tamatarcha <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                      <origDate notBefore="1201" notAfter="1500" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#taman">Тамань <certainty cert="low" locus="value" match=".."/>.</placeName>
+                        <rs type="circumstances">Неизвестны, до 1941 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Taman <certainty cert="low" locus="value" match=".."/>.</placeName>
+                        <rs type="circumstances">Unknown, before 1941</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-09-05" who="AG">several lines translated, several corrections</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata, tagged bibliography</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-23" who="AFS">corrections in metada,tagging greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.334">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!-- Розанова 1947 --><ptr target="bib:b0195"/>, 173–174, № <citedRange>1</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Матери Господа.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>To the Mother of the Lord.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> До 1941 г. камень хранился на колокольне Покровской церкви в Тамани. 
+                Единственный источник сведений о надписи — публикация Розановой. Плита использована, по ее 
+                мнению, вторично; от старой надписи остались следы пси и каппы.  </p>
+                <p> Розанова датирует надпись IV в. по шрифту, который близок, на ее взгляд, к II–III вв., однако 
+                    совершенно очевидно, что лигатура μ(ητ)ρὶ и мю с Т-образной серединой делает такую 
+                    датировку невозможной, а маньеризованные формы букв (большие апексы у каппы и тау, 
+                    угловатое ро) заставляют отнести надпись к поздневизантийскому времени.</p>
+                <p> Судя по формуле, это посвящение Богородице, но точную функцию его установить 
+                    невозможно. Обозначение Богородицы как «матери Господа» для византийской эпиграфики 
+                    практически уникально.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Prior to 1941, the monument was stored at the belltower of the Pokrov Church at Taman. Rozanova's publication is our only source of information about
+            the monument. The panel, according to Rozanova, was in secondary use; two letters, psi and kappa, survived from the original inscription.</p>
+            <p>Rozanova dated the inscription to the IVth century on the basis of script, which in her opinion was similar to that of the II-IIIrd centuries, however,
+               it is quite clear that the ligature μ(ητ)ρὶ and mu with T-shaped middle militate against such a date; rather, ornate lettershapes (large serifs for kappa
+               and tau, angular rho) suggest a Late Byzantine date.</p>
+            <p>The formula seems to suggest that we have a dedication to the Mother of God, but the exact function of the inscription is impossible to determine.
+            The descrition of the Mother of God as "Mother of the Lord" is essentially unique in Byzantine epigraphy.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ὁ">Τῇ</w>
+               <w lemma="μήτηρ"><expan><abbr>μ</abbr><ex>ητ</ex><abbr>ρὶ</abbr></expan></w> <w lemma="ὁ">τοῦ</w>
+               <w lemma="κύριος"><expan><abbr>κ</abbr><ex>υρίο</ex><abbr>υ</abbr></expan></w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

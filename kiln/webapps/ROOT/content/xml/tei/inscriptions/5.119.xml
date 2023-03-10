@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Граффито</title><title xml:lang="en">Graffito</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.119</idno><idno type="PE">PE5000119</idno>
+            <idno type="AYV2012-number">byz115</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение коня с лентой на шее. Обломан.</p>
+                           <p xml:lang="en">On the front is an image of a horse with stripes on its neck, perhaps representing a cord. Broken.</p>
+                           <dimensions>
+                              <height>28,0</height>
+                              <width>90,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Над изображением коня.</seg>
+                           <seg xml:lang="en">Over the image of a horse.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>. Альфа с петлей, тау апицированное.</seg>
+                        <seg xml:lang="en">Graffito. Alpha with a loop, tau with serifs.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p007">
+                        <seg xml:lang="ru">Бакла.</seg>
+                        <seg xml:lang="en">Bakla.</seg>
+                     </origPlace>
+                     <origDate notBefore="0701" notAfter="0900" precision="low" evidence="археологический_контекст">
+                        <seg xml:lang="ru">VIII–IX вв.</seg>
+                        <seg xml:lang="en">VIII–IXth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#bakla">Бакла.</placeName>
+                        <rs type="circumstances">1984 г., обследования И.А. Баранова.</rs>
+                        <rs type="context">Подножье городища, склеп, стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Bakla.</placeName>
+                        <rs type="circumstances">1984, survey of I.A. Baranov.</rs>
+                        <rs type="context">Foot of the settlement, burial vault, wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Крым.</seg>
+                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-28" who="AG">several lines translated, tags corrected</change>
+         <change when="2012-04-24" who="AG">small corrections, two lines translated, editor added</change>
+         <change when="2012-03-06" who="AG">corrected, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.119">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><gap reason="ellipsis"/>[...]отахи.. Ман<gap reason="ellipsis"/></p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[...]otakhi[...] Man[...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Строки находятся на большом расстоянии друг от друга; немногие сохранившиеся греческие буквы принадлежат, по всей вероятности, негреческим 
+               именам погребенных в склепе. Возможно, это тюркские имена, так как в погребении найден блок с прорезной тюркской тамгой. 
+               Неясно, почему Баранов (1990, 129, рис. 50.) считает эту надпись посвятительной. Параллели изображению коня Баранов видит на кирпичах 
+               Саркела и блоках Маяцкого городища.</p>
+                <p>Относительно археологического контекста подр. см. Баранов 1990, 129.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Lines of text are widely spaced. A few Greek letters that are preserved apparently belong to the non-Greek names of those
+               buried in the burial vault. They might be Turkic names because a block with a carved Turkic tamga was also found in the burial.
+               It is unclear why Baranov (1990, 129, fig. 50) considers this inscription dedicatory. Baranov finds parallels for horse images on bricks from
+               Sarkel and stone blocks from Mayatskoye settlement.</p>
+            <p>For the archaelogical context, see Baranov 1990, 129.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ο</unclear>ΤΑΧΙ</orig> <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><persName type="attested" ref="#person141"><name nymRef="Μαν—"><seg part="I">Μα<unclear>ν</unclear></seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

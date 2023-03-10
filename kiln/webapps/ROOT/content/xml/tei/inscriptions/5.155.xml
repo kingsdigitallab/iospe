@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Граффито на стене</title><title xml:lang="en">Graffito on a wall</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.155</idno><idno type="PE">PE5000155</idno>
+            <idno type="AYV2012-number">byz150</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>126/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>126/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc8">
+                     <seg xml:lang="ru">Памятная надпись.</seg>
+                     <seg xml:lang="en">Commemoration.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне множество граффити, в т.ч. три изображения кораблей. Сохранился целиком.</p>
+                           <p xml:lang="en">On the front - multiple graffiti, including images of ships. Fully preserved.</p>
+                           <dimensions>
+                              <height>32,0</height>
+                              <width>76,0</width>
+                              <depth>15,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под изображением корабля № 1.</seg>
+                           <seg xml:lang="en">Below the image of ship 1.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы различной высоты. Альфа с петлей, мю минускульное. Лигатура омикрон-ню.</seg>
+                        <seg xml:lang="en">Graffito; letters of unequal height. Alpha with a loop, minuscule mu. Ligature omicron-nu.</seg>
+                        <height unit="cm">2,2–4,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита.</seg>
+                        <seg xml:lang="en">Kalamita.</seg>
+                     </origPlace>
+                     <origDate notBefore="1401" notAfter="1500" precision="low" evidence="палеография археологический_контекст">
+                        <seg xml:lang="ru">XV в.</seg>
+                        <seg xml:lang="en">XVth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">Сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#inkerman">Инкерман.</placeName>
+                        <rs type="circumstances">1968 г., реставрационные работы.</rs>
+                        <rs type="context">Крепость Каламита, Башня V, внутренний панцирь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">1968, restoration works.</rs>
+                        <rs type="context">Kalamita fortress, Tower V, internal face.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+         <change when="2012-08-29" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-26" who="AG">small correction</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">1 lines translated, small correction</change>
+         <change when="2012-05-31" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-03-13" who="AG">corrections in metadata</change>
+         <change when="2012-03-06" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>29 июля, в 85-й день.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>29th of July, on the 85th day.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись выполнена после находящегося выше граффито с изображением корабля, так как она 
+                перерезает его весла.</p>
+                <p> Комбинация омега-каппа-тета-мю не может принадлежать никакому греческому слову. 
+                    Поэтому единственной возможностью остается вычленить в ней цифру 29. Учитывая, что перед 
+                    ней читается имя месяца, следует считать ее обозначением дня месяца. Под 85-м днем 
+                    имеется в виду, конечно, не день года, а, учитывая изображение корабля над надписью, 
+                    скорее, день окончания плавания. Судя по длительности этого плавания, корабль приплыл из 
+                    Средиземного моря, вероятно, из Италии. Простонародная форма μέρα известна с XII в. 
+                    (Trapp, s.v.).</p>
+                <p>Романчук и Быков (1981, 143–146, рис. 2, 6) считают, что эта часть башни 
+                    была сооружена в XV в. (см. также Мыц 2009, 183).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription cuts across the oars of a ship graffito, suggesting it was made at a later date.</p>
+            <p>The sequence omega-kappa-theta-mu cannot represent any Greek word. The only possible way to interpret it is to extract the number 29 from it.
+               Since the name of the month can be read before it, 29 would refer to the day of the month. The eighty fifth day is of course not a day of the year, but 
+               must be the last day of a sailing trip. Judging by the duration of the journey, the ship must have travelled from the Mediterranean, perhaps from 
+               Italy. A colloquial form μέρα is known from the XIIth century (Trapp, s.v.).</p>
+            <p> Romanchuk and Bykov (1981, 143–146, fig. 2, 6) believe that this part of the Tower was built in the XVth century (see also Myts 2009, 183).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/> <rs type="month" ref="iul"><w lemma="Ἰούλιος">Ἠουλήῳ</w></rs> <num value="29">κθ</num> <w lemma="ἡμέρα">μέρᾳ</w>
+               <num value="85">πε</num>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Димитрии</title><title xml:lang="en">Epitaph of Demetria</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.168</idno><idno type="PE">PE5000168</idno>
+            <idno type="AYV2012-number">byz161</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне фигурная арочка. Обломана сверху, поверхность выветрена.</p>
+                           <p xml:lang="en">On the front - small profiled arch. Broken on the top; the surface is weathered.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри арочки.</seg>
+                           <seg xml:lang="en">Within the arch.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы помещены между линеек.</seg>
+                        <seg xml:lang="en">Lapidary; rows of letters are cut between incised lines.</seg>
+                        <height unit="cm">2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p018">
+                        <seg xml:lang="ru">Шуры.</seg>
+                        <seg xml:lang="en">Shury.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="low" evidence="археологический_контекст">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">Non vidi</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">Non vidi</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kudrino">Кудрино.</placeName>
+                        <rs type="circumstances">1915–1916 гг., обследования М.И. Скубетова.</rs>
+                        <rs type="context">Урочище Ай-Костанди, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kudrino.</placeName>
+                        <rs type="circumstances">1915-1916, survey of M.I. Skubetov.</rs>
+                        <rs type="context">Ay-Kostandi Tract, cemetery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-26" who="AG">two lines translated, small correction</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-03" who="AG">apparatus updated after Vinogradov</change>
+         <change when="2012-06-01" who="AG">several lines translated, editor added, apparatus updated</change>
+         <change when="2012-03-19" who="AG">corrections in metadata, bibliography and apparatus marked up, tags in the Greek text corrected</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918а--><ptr target="bib:b0156"/>, 34–35, № <citedRange>2</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="1-2"><rdg source="bib:b0156">Ἐκοιμήθη ἡ δούλη</rdg><note>om.</note></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Почила раба</supplied> Божья <supplied reason="lost">Д</supplied>имитрия 19 ноября.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, <supplied reason="lost">D</supplied>emetria, on the 19th of November.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по эстампажу и рисунку Скубетова. Таблицы не вышли из печати.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+                <p> 3. Имя Димитрия, женский эквивалент имени Димитрий, известно по Gibson 1978, № 21;  SEG 6.545; Feissel 1983, № 30, 70, 178; Bandy 1970, № 63.</p>
+                <p> 3–4. Надгробия с указанием лишь числа месяца, без года, в Шурах более не известны.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev's edition is based on the estampage and drawing of Skubetov. The tables were never published.</p>
+            <p>1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.  </p>
+            <p>3. The name Demetria (here Dimitria) is a feminine equivalent of the name Demetrios, attested in Gibson 1978, № 21;  SEG 6.545; Feissel 1983, № 30, 70, 178; 
+               Bandy 1970, № 63.</p>
+             <p>3-4. Epitaphs that indicate only the day of the month, but not the year of death are not otherwise known at Shury.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω"><supplied reason="lost">Ἐκοιμήθη</supplied></w>
+               <lb n="2"/><supplied reason="lost"><w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w></supplied> <w lemma="ὁ"><supplied reason="lost">τ</supplied>οῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός">θεοῦ</w></roleName></persName>
+               <lb n="3"/><persName type="attested" ref="#person217"><name nymRef="Δημητρία"><supplied reason="lost">Δ</supplied>ιμιτρία</name></persName> <date><w lemma="μήν">μηνὶ</w>
+                  <rs type="month" ref="nou"><w lemma="Νοέμβριος">Νοεβρή<supplied reason="lost">ῳ</supplied></w></rs>
+               <lb n="4"/><w lemma="εἰμί">ἠς</w> <w lemma="ὁ">τὰ</w> <num value="19">ιθ</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

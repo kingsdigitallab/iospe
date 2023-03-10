@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие неизвестного</title><title xml:lang="en">Epitaph of an unknown</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.199</idno><idno type="PE">PE5000199</idno>
+            <idno type="AYV2012-number">byz187</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Со следами извести на тыльной стороне. Обломана сверху (?), сколы по ребрам.</p>
+                           <p xml:lang="en">With traces of whitewash on the back. Broken on the top (?), chipped on the edges.</p>
+                           <dimensions>
+                              <height>13,0</height>
+                              <width>8,0</width>
+                              <depth>4,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Сигма минускульная.</seg>
+                        <seg xml:lang="en">Lapidary. Minuscule sigma.</seg>
+                        <height unit="cm">1,6–4,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p022">
+                        <seg xml:lang="ru">Сандык-Кая.</seg>
+                        <seg xml:lang="en">Sandyk-Kaya.</seg>
+                     </origPlace>
+                     <origDate notBefore="1429" notAfter="1430" evidence="указание_надписи">
+                        <seg xml:lang="ru">1429–1430 гг.</seg>
+                        <seg xml:lang="en">1429–1430 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#polyana">Поляна.</placeName>
+                        <rs type="circumstances">1967 г., обследования М.Я. Чорефа.</rs>
+                        <rs type="context">Крепость Сандык-Кая, рядом с храмом.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Polyana.</placeName>
+                        <rs type="circumstances">1967, survey of M.Ya. Choref.</rs>
+                        <rs type="context">Fortress Sandyk-Kaya, near the church.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-18" who="AG">several lines translated, small corrections</change>
+          <change when="2012-12-06" who="AL">editor tag inserted</change>
+          <change when="2012-03-26" who="AFS">tagged Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.199">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… 25-го … в 6938 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>...25th... in the year 6938.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Чореф определил в надписи только цифру года — 6938. Некоторые ошибки допущены им при копировании конца и реконструкции начала 2-й строки.</p>
+                <p> Судя по облику памятника и типу датировки, перед нами типичное горнокрымское надгробие.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Choref read only the year date in the text. He also made several mistakes in copying the end and reconstructing the beginning of line 2.</p>
+            <p>The physical shape of the monument and the type of dating suggest that it is a tombstone typical for Mountainous Crimea.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/> <gap reason="lost" quantity="1" unit="line"/>
+               <lb n="2"/><w lemma="εἰμί"><supplied reason="lost">ἠ</supplied>ς</w> <w lemma="ὁ">τ<supplied reason="lost">ὰ</supplied></w>
+               <lb n="3"/><date><num value="25">κε</num>, <w lemma="ἔτος">ἔτους</w>
+               <lb n="4"/><num value="6938">ςϠλη</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

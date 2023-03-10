@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие <certainty cert="low" locus="value" match=".."/> неизвестного</title><title xml:lang="en">Epitaph <certainty cert="low" locus="value" match=".."/> of an unknown</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.255</idno><idno type="PE">PE5000255</idno>
+            <idno type="AYV2012-number">byz242</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Музей "Судакская крепость"</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Museum "Sudak Fortress"</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка (выс. 1,5, шир. 4). Обломана сверху и справа.</p>
+                           <p xml:lang="en">Inset panel; raised border is 1.5cm high and 4cm wide. Broken off on the top and right.</p>
+                           <dimensions>
+                              <height>16,0</height>
+                              <width>11,0</width>
+                              <depth>4,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                         <seg xml:lang="en">Sougdaia.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>, <date when="2009-09">сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sudak">Судак.</placeName>
+                        <rs type="circumstances">1998 г., раскопки И.А. Баранова.</rs>
+                        <rs type="context">Крепость, квартал № I.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">1998, excavations of I.A. Baranov.</rs>
+                        <rs type="context">Fortress, Block I.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Судак, Крым.</seg>
+                     <seg xml:lang="en">Sudak, Crimea.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="1">Надгробная <certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                        <seg xml:lang="en" n="1">Funerary <certainty cert="low" locus="value" match=".."/> inscription.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Внутри рамки.</seg>
+                              <seg xml:lang="en">Within inset field.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной. 
+                              Лигатура эта-ню-эта.</seg>
+                           <seg xml:lang="en">Lapidary. Alpha with broken crossbar. Ligature eta-nu-eta.</seg>
+                           <height unit="cm">2,0.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="0701" notAfter="1000" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">VIII–X вв.</seg>
+                           <seg xml:lang="en">VIIIth-Xth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="2">Демонстративная надпись.</seg>
+                        <seg xml:lang="en" n="2">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">На углах рамки.</seg>
+                              <seg xml:lang="en">On the corner of the raised border.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">См. эпиграфическое поле 1.</seg>
+                           <seg xml:lang="en">See field 1.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="0701" notAfter="1000" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">VIII–X вв.</seg>
+                           <seg xml:lang="en">VIII–Xth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-28" who="CB">Minor change to textparts</change>
+         <change when="2015-05-01" who="CB">Textparts</change>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-14" who="AG">several lines translated</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-06-21" who="AFS">corrections in metadata</change>
+          <change when="2012-03-27" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.255" n="1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!-- Виноградов, Джанов 2004--><ptr target="bib:b0052"/>,  417–418, № <citedRange>10</citedRange></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!-- Виноградов, Джанов 2004--><ptr target="bib:b0052"/>,  417–418, № <citedRange>10</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>… 1-го …, в этой …</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Альфа, омега.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>... on the 1st..., in this...</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Alpha, omega.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Судя по небольшой толщине плитки, она предназначалась для вставки в стену.</p>
+                <p> 1–3. Основной текст надписи заканчивается, по-видимому, развернутой датировкой, характерной, прежде всего, для надгробных памятников. 
+                   Буквы ΗΝ в 2-й строке и ΙΟΥ Α в 3-й строке дают возможность с большой долей уверенности предположить здесь указание на месяц, 
+                   название которого, к сожалению, утрачено, что не позволяет восстановить длину строки (от 6 букв с “маем” до 11 с “февралем” 
+                   или “сентябрем”).</p>
+                <p>4. Буквы ΚΗΝΗ в последней строке — часть финальной клаузулы: здесь напрашивается реконструкция слова ἐκείνῃ “этой” в контексте типа “в этой 
+                   обители”.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> Из знаков на рамке сохранилась только альфа в левом нижнем углу — резонно предполагать, что с правой стороны находилась омега. Относительно 
+                  этой формулы см. <ref type="introduction">IV.3.C.b</ref>.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>The panel is quite thin suggesting that it was meant to be set into a wall. </p>
+               <p>1-3. The main text apparently ends with an extensive dating formula, which is characteristic first and foremost of funerary monuments.
+                  Letters ΗΝ in line 2 and ΙΟΥ in line 3 strongly suggest that we have a reference to a month, but its name is lost, preventing us from reconstructing
+                  the length of the line (from 6 letters in May to 11 letters in February or September).</p>
+               <p>4. Letters ΚΗΝΗ in the last line of text are part of a concluding formula, and ἐκείνῃ suggests itself, e.g., in such phrase as "in this monastery."</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>On the left bottom corner of the raised border we can discern an alpha. It is reasonable to suppose that it was matched by an omega on the 
+                  right side of the panel. On the formula, see Introduction <ref type="introduction">IV.3.C.b</ref>.</p>
+               <p>               
+               </p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="μήν"><unclear>μ</unclear>
+                     <lb n="2" break="no"/>η<unclear>ν</unclear><supplied reason="lost">ὶ</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="3" break="no"/><w part="F">ίου</w> <num value="1">α</num> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><w lemma="ἐν">ἐν</w></supplied> <w lemma="ἐκεῖνος"><supplied reason="lost">ἐ</supplied>
+                     <lb n="4" break="no"/>κήνῃ</w> <w lemma="ὁ"><supplied reason="lost">τῇ</supplied></w>
+                  <gap reason="lost" extent="unknown" unit="character"/>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="ἄλφα">Α</w> <supplied reason="lost"><w lemma="ὠμέγα">Ω</w></supplied>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

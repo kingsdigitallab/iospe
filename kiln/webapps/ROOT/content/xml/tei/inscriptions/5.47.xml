@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение Н–</title><title xml:lang="en">Invocation of N–</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.47</idno><idno type="PE">PE5000047</idno>
+            <idno type="AYV2012-number">byz047</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34912</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34912</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon2">Плитка.</objectType>
+                           <objectType xml:lang="en">Small panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мелкозернистый мрамор.</material>
+                           <material xml:lang="en">White fine-grained marble.</material>
+                           <p xml:lang="ru">Разбита на две части, обломана со всех сторон, поверхность потерта.</p>
+                           <p xml:lang="en">Split into two pieces, broken off on all sides; the surface is worn.</p>
+                           <dimensions>
+                              <height>7,5</height>
+                              <width>18,0</width>
+                              <depth>1,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>, буквы наклонены вправо.
+                           Альфа с наклонной перекладиной, бета с увеличенным нижним полукружием и нижним штрихом,
+                           дельта с удлиненной влево вверх правой диагональю, кси с нижним подчеркиванием, ипсилон У-образный; сокращения.</seg>
+                        <seg xml:lang="en">Graffito. Letters are leaning to the right. Alpha with slanting crossbar; beta with larger bottom loop and underscoring;
+                           delta with the right diagonal extended left and upwards; ksi with bottom underline; У-shaped upsilon. Abbreviations.</seg>
+                        <height unit="cm">0,5–1,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX–Xth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1901 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Храм № 13 («Западная базилика»), северный храмик («храмик В»), стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1901, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Church 13 ("Western basilica"), northern chapel ("Chapel B"), wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2013-10-24" who="TW">Added image codes</change>
+          <change when="2013-08-19" who="NG"> minor correction in Greek lemmata</change>
+          <change when="2013-02-20" who="NG"> minor correction in Greek lemmata</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+          <change when="2012-10-01" who="AL">small corrections</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">1 line translated</change>
+         <change when="2012-05-22" who="AG">bibliography and apparatus corrected</change>
+         <change when="2012-05-17" who="AG">tags corrected</change>
+         <change when="2012-05-15" who="AG">several lines translated</change>
+         <change when="2012-04-18" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-16" who="AG">tagging</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.47-1">
+                <desc xml:lang="en">Drawing of face 1 (from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.47-2">
+                <desc xml:lang="en">Photograph of face 1 (from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1902b --><ptr target="bib:b0143"/>,  28–29, № <citedRange>12</citedRange></bibl>
+             </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/>  <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, <w lemma="βοηθέω">βοήθη</w> <w lemma="ὁ">τοῦ</w> <w lemma="δοῦλος">δούλου</w> <w lemma="σύ">σου</w> <persName type="attested" ref="#person37"><name><seg part="I">Ν</seg><gap reason="lost" extent="unknown" unit="character"/></name></persName>
+               <lb n="2"/><w lemma="ἁμαρτωλός">ἁμαρτολὸν</w> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <w lemma="ἀνάξιος">ἀ<supplied reason="lost">νά</supplied>ξηον</w> <w lemma="δοῦλος">δοῦλον</w>
+               <lb n="3"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>Θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>, <w lemma="ἀμήν">ἀμή<supplied reason="lost">ν</supplied></w>. <supplied reason="lost"><g ref="#stauros"/></supplied> <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, <w lemma="βοηθέω"><expan><abbr>βοήθ</abbr><ex>ει</ex></expan></w>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1-2"><rdg source="bib:b0143"><supplied reason="lost">τὸν</supplied> ἁμαρτωλὸν</rdg></app>
+               <app loc="3"><lem>+</lem><rdg source="bib:b0143"><note>om.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Господи, помоги рабу Твоему Н<gap reason="ellipsis"/>, грешному и н<supplied reason="lost">едо</supplied>стойному рабу Божьему, аминь. Господи, помоги.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>O Lord, help your servant N[...], a sinful and un<supplied reason="lost">worthy</supplied> servant of God, amen. O Lord, help.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>1, 3. Относительно формулы см. <ref type="introduction">IV.3.E.a</ref>. Данная надпись представляет собой уникальное и самостоятельное развитие этой формулы. При этом автору
+               явно не мешает то, что эпитет «раб» повторяется дважды, один раз с определением «Твой», другой — с «Божий», а затем он еще раз повторяет слова
+               «Господи, помоги». Между последними и «аминь» мы склонны восстанавливать крест, подобно кресту перед началом первой аналогичной формулы.
+               Вариант «Господи, помоги рабу Божьему» встречается в Grégoire 1929, № 347 (Траллы, VIII–IX вв.), Jerphanion 1936, № 117 (Зелве, Х в.). Формула «помоги
+               недостойному рабу» известна в Jerphanion 1936, № 45.</p>
+            <p>По шрифту надпись близка <ref type="inscription">V 98</ref><!--byz098--> и <ref type="inscription">V 245</ref><!--byz232-->.</p>
+                <p>К сожалению, скупые указания первоиздателя на археологический контекст не позволяют сказать, была ли данная плитка вставлена в стену часовни.
+                   Датировка «храмика В» колеблется от VI в. (Бернацки, Кленина, Рыжов 2004, 42–43) до IX (Сорочан 2005, 839–840); гибнет он где-то в X–XI вв.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1, 3. On the formula, see Introduction <ref type="introduction">IV.3.E.a</ref>. This inscription represents a unique and independent development of the formula. The author is not troubled
+               by the repetition of the word "servant," once with the modifier "Your" and the second time with the modifier "of God." He then also repeats the
+               phrase "O Lord, help." In the space between this final phrase and the preceding "amen," I am inclined to restore a cross, by analogy with the start
+               of the same phrase at the beginning of the inscription. A variant, "O Lord, help your servant" is attested in Grégoire 1929, no. 347 (Tralles, VIII–IXth centuries),
+               and Jerphanion 1936, no. 117 (Zelve, Xth century). The formula "help the unworthy servant" is known from Jerphanion 1936, no. 45.</p>
+             <p>The script of this inscription resembles that of <ref type="inscription">V 98</ref><!--byz098--> and <ref type="inscription">V 245</ref><!--byz232-->.</p>
+             <p>Sadly, the first editor provides only very spare references to the archaeological context of this find, so that it is not possible to say whether
+                it could have been built into the wall of a chapel. The dates assigned to "Chapel B" range from the VIth (Beiernacki, Klenina, Ryzhov 2004, 42–43) to
+                the IXth century (Sorochan 2005, 839–840); it is destroyed in the X-XIth century. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

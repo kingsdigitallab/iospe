@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Фотины</title><title xml:lang="en">Epitaph of Photeine</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.229</idno><idno type="PE">PE5000229</idno>
+            <idno type="AYV2012-number">byz218</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray State Historical and Cultural Preserve</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение процветшего креста и розеток, рамка (высота 0,5) и фриз, на тыльной стороне 
+                              трапециевидный выступ. Обломана снизу.</p>
+                           <p xml:lang="en">On the front - foliate cross and rosettes, border (H. 0.5cm) and frieze; on the back side - trapezoid ledge. 
+                           Broken on the bottom.</p>
+                           <dimensions>
+                              <height>55,0</height>
+                              <width>28,0</width>
+                              <depth>12,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within inset field in the lower half of the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Мю с ипсилон-образной серединой. Лигатуры.</seg>
+                        <seg xml:lang="en">Lapidary. Mu with Y-shaped middle. Ligatures.</seg>
+                        <height unit="cm">2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p054">
+                        <seg xml:lang="ru">Неизвестно (Горный Крым?).</seg>
+                        <seg xml:lang="en">Unknown (Mountainous Crimea?).</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="low" evidence="палеография декорация">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-29" who="AG">tag in the Greek text corrected</change>
+          <change when="2012-06-19" who="AL">small correction</change>
+         <change when="2012-05-02" who="AG">several lines translated, some corrections in metadata, tags corrected</change>
+          <change when="2012-04-24" who="AL">inserted editor tag, translated several lines</change>
+          <change when="2012-04-05" who="AL">original date tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.229">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω">Ἐκιμ<supplied reason="lost">ήθ</supplied>η</w> <w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person283"><name nymRef="Φωτεινή"><unclear>Φ</unclear>ωτιν<unclear>ή</unclear></name>, <w lemma="θυγάτηρ">θ<lb n="3" break="no"/>ηγάτηρ</w> <w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person284"><name nymRef="Βόρτι">Βόρτι</name></persName></persName>,
+               <lb n="4"/><date><w lemma="μήν">μ<unclear>η</unclear>νὶ</w> <rs type="month" ref="mai"><w lemma="Μάϊος">Μαΐ<unclear>ο</unclear><unclear>υ</unclear></w></rs> <num value="1"><gap reason="lost" quantity="1" unit="character"/><unclear>α</unclear></num>,
+               <lb n="5"/><w lemma="ἡμέρα">ἡ<supplied reason="lost" cert="low">μέρᾳ</supplied></w> <num><gap reason="lost" quantity="1" unit="character"/></num><supplied reason="lost">,</supplied> 
+                   <w lemma="ἔτος"><supplied reason="lost">ἔτους</supplied></w> <num value="6"><supplied reason="lost">ς</supplied><gap reason="lost" quantity="3" unit="character"/></num></date>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья Фотина, дочь Ворти, <gap reason="lost" quantity="1" unit="character"/> 1 мая, <supplied reason="lost">в .-й</supplied> д<supplied reason="lost">ень, в 6</supplied><gap reason="lost" quantity="3" unit="character"/> <supplied reason="lost">году</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Photeine, daughter of Borti, on the <gap reason="lost" quantity="1" unit="character"/> 1 of May, ... d<supplied reason="lost">ay ..., in the year 6</supplied><gap reason="lost" quantity="3" unit="character"/>.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+                 <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. </p>
+            <p> 2. Имя Фотина в Крыму встречается только в мужском варианте Фотин (<ref type="inscription">V 159</ref><!--byz148-->).</p>
+                <p><!-- 3. Относительно имени Ворти <!-\-см. прил. 2.-\->--></p>
+                <p> 5. После числа месяца шел день недели.</p>
+                <p> Изображение процветшего креста в надписях Горного Крыма уникально — поэтому определить происхождение надписи не представляется 
+                   возможным. Скорее всего, оно происходит с одного из сельских кладбищ.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>. </p>
+            <p> 2. The name Photeine (here Photine) is attested in Crimea only in masculine form - Photinos <ref type="inscription">V 159</ref><!--byz148-->.</p>
+            <p><!-- 3. On the name Borti, <!-\-see Appendix 2.-\->--></p>
+            <p> 5. The date of the month was followed by the day of the week.</p>
+            <p> Foliate cross is unique among inscriptions of Mountainous Crimea, making it impossible to determine the origin of this monument. 
+               Most likely, it comes from one of rural cemeteries.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

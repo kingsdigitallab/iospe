@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись <certainty cert="low" locus="value" match=".."/> неизвестного</title><title xml:lang="en">Building inscription <certainty cert="low" locus="value" match=".."/> of an unknown</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.107</idno><idno type="PE">PE5000107</idno>
+            <idno type="AYV2012-number">byz017</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34952</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34952</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Лицевая сторона заглажена; на ней остатки круглой филенки, покрытой светло-коричневой краской; 
+                              внутри филенки крест с расширяющимися концами; на рукаве креста узор. Оббита со всех сторон; в настоящее время 
+                              утрачены концы обеих строк (по две буквы в каждой).</p>
+                           <p xml:lang="en">The front is smoothed over. It shows traces of a fielded panel, round in shape, painted light brown. Inside the fielded
+                              panel is a relief cross with flaring arms; the arm of the cross is decorated with patterns. Broken off on all sides. 
+                              At present, the ends of both lines of text are lost (two letters in each line).</p>
+                           <dimensions>
+                              <height>13,0</height>
+                              <width>15,0</width>
+                              <depth>5,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p004">
+                        <seg xml:lang="ru">Георгиевский монастырь на м. Феолент.</seg>
+                        <seg xml:lang="en">St. George Monastery, cape Feolent.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1500" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#feolent">Феолент, Мыс.</placeName>
+                        <rs type="circumstances">1896 г., обследования М.И. Скубетова.</rs>
+                        <rs type="context">«Часовня 1896 г.».</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Feolent, Cape.</placeName>
+                        <rs type="circumstances">1896, survey of M.I. Skubetov.</rs>
+                        <rs type="context">Chapel of 1896.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">Внутри рамки.</seg>
+                              <seg xml:lang="en">Within the frame.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы маньеризованы, вертикальные гасты изогнуты. 
+                              Альфа с наклонной перекладиной.</seg>
+                           <seg xml:lang="en">Lapidary. Letters are ornate, vertical hastae have a slight s-shaped curve. Alpha with slanting crossbar.</seg> 
+                           <height unit="cm">2,0.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">На левом поле рамки.</seg>
+                              <seg xml:lang="en">In the lefthand corner of the frame.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                        <handDesc>
+                           <handNote>
+                              <seg xml:lang="ru">См. эпиграфическое поле 1.</seg>
+                              <seg xml:lang="en">See field 1.</seg>
+                           <height unit="cm">1,5.</height>
+                        </handNote>
+                        </handDesc>
+                  </physDesc>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-28" who="CB">Added handDesc to textparts</change>
+         <change when="2015-04-30" who="CB">Textparts</change>
+         <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
+         <change when="2012-08-21" who="AFS">small corrections in greek text</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">1 line translated, small correction</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG, AFS">several lines translated, bibliography corrected, editor added</change>
+         <change when="2012-04-05" who="AG">bibliography updated</change>
+         <change when="2012-03-20" who="AG">small corrections in metadata, bibliography tagged</change>
+         <change when="2012-01-23" who="AG">corrections, date corrected, tagged, 1 line translated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.107" n="1">
+            <desc xml:lang="en">Photograph of face (from ??)</desc>
+            <desc xml:lang="ru">Фотография лицевой части</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+      <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1902a--><ptr target="bib:b0142"/>, 68, № <citedRange>14</citedRange> (№ 1)</bibl>
+               <bibl n="2"><!--Виноградов 2011a--><ptr target="bib:b0386"/>, 230–232, № <citedRange>8.1</citedRange>, <citedRange>7.2</citedRange></bibl>
+            </listBibl>
+      </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p><gap reason="ellipsis"/> и <gap reason="ellipsis"/> храм <gap reason="ellipsis"/></p>
+            </div>
+            <div type="textpart" n="2">
+               <p>в] .-й индикт.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>... and... church...</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>[in] the ... indiction.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>По-видимому, перед нами надпись о строительстве храма, вероятней всего, самой «часовни 1896 г.», датирующейся, 
+		судя по находкам, поздневизантийским временем (Косцюшко-Валюжинич 1900, 33, № 3). В помещении III рядом с храмом 
+		Скубетов при раскопках 1896 г. обнаружил похожий памятник — крест с расширяющимися концами в круге (Косцюшко-Валюжинич 1898, 198).</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> Латышев не заметил букв на левом бортике, которые, по всей видимости, содержали дату строительной надписи.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>It would appear to be an inscription about the construction of a church, quite likely the very "chapel of the 1896", 
+                  dated, on the basis of archaeological finds, to the Late Byzantine period (Kostsyushko-Valyuzhinich 1900, 33, № 3). In the enclosure III, near the church,
+                  Skubetov excavated a similar monument in 1896 - a cross with flaring arms, within a circle (Kostsyushko-Valyuzhinich 1898, 198).</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Latyshev did not notice letters inscribed on the left narrow border. They probably contained the date of the building inscription.</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="fragment" n="1">
+               <ab>
+                  <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ς</w> <w lemma="καί">καὶ</w> <gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ι</w> <w lemma="ὁ">ὁ</w> <w lemma="ναός">ναὸς</w> <gap reason="lost" extent="unknown" unit="character"/>
+               </ab>
+            </div>
+            <div type="textpart" subtype="fragment" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="ἐν"><supplied reason="lost">ἐν</supplied></w> <date><w lemma="ἰνδικτιών"><expan><abbr>ἰν<lb n="2" break="no"/><unclear>δ</unclear></abbr><ex>ικτιῶνι</ex></expan></w> <num><gap reason="lost" quantity="2" unit="character"/></num></date>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

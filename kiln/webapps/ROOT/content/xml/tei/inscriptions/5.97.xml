@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Литургическая надпись</title><title xml:lang="en">Liturgical inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.97</idno><idno type="PE">PE5000097</idno>
+            <idno type="AYV2012-number">byz097</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4229</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4229</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc12">
+                     <seg xml:lang="ru">Литургическая надпись.</seg>
+                     <seg xml:lang="en">Liturgical inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon2">Плитка.</objectType>
+                           <objectType xml:lang="en">Small panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение креста. Обломана справа и снизу.</p>
+                           <p xml:lang="en">On the front is a carving of a cross with serif ends. Broken on the right and bottom.</p>
+                           <dimensions>
+                              <height>13,5</height>
+                              <width>8,0</width>
+                              <depth>0,8</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри креста.</seg>
+                           <seg xml:lang="en">Within the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы сильно апицированы. Омега с полукруглым низом и вертикальной 
+                           центральной гастой.</seg>
+                        <seg xml:lang="en">Lapidary style; highly accentuated serifs. Bowl-shaped omega.</seg>
+                        <height unit="cm">1,0–1,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X в.</seg>
+                        <seg xml:lang="en"> Xth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09">September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1897 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Храм № 19, северо-восточный угол.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1897, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Church 19, northeast corner.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">some corrections, apparatus tagged</change>
+         <change when="2012-05-24" who="AG">several lines translated, some corrections, apparatus tagged</change>
+          <change when="2012-05-01" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-01-17" who="AG">bibliography tagged</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2012-01-03" who="AG">small corrections</change>
+         <change when="2012-01-03" who="AG">updating</change>
+         <change when="2011-12-07" who="AG">small corrections, partly tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.97">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+        <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1899a--><ptr target="bib:b0136"/>, 50, № <citedRange>47</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="2-3"><rdg source="bib:b0136">φῶ[ς?</rdg></app>
+               <app loc="4-10"><rdg source="bib:b0136"><note>om.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Господь — Просв<supplied reason="lost">ещение мое и Спаситель мой</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Lord is my illumination and my saviour.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Размеры фрагмента восстановлены предположительно, по высоте букв. По форме омеги надпись похожа на <ref type="inscription">V 89</ref><!--byz089-->, 
+               а по типу носителя — на <ref type="inscription">V 67</ref><!--byz067-->.
+               Поэтому мы склоны относить ее также к Х в. Относительно датировки храма № 19 см. комм. к <ref type="inscription">V 104</ref><!--byz104-->.</p>
+                <p> Реконструируемая формула заимствована из Пс 26, 1 и имеет широкое распространение в богослужении, в том числе в виде прокимена. Здесь
+                   ее реконструкция в виде креста предполагает симметричное расположение формулы с тау в центре, от которой сохранились следы апексов. В
+                   ранневизантийское время она употреблялась в чинах крещения и освящения воды. Это соответствовало бы обычной трактовке северо-восточного
+                   пастофория «храма с ковчегом» как баптистерия. Но, с другой стороны, по любезно сообщенному нам замечанию свящ. М. Желтова, не исключена и
+                   трактовка пастофория как мартирия, а Пс 26, 1 известен в Крыму и в заупокойном контексте (<ref type="inscription">V 303</ref><!--byz297-->).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The size of the fragment is restored hypothetically, on the basis of letter height. The shape of omega is similar to that in <ref type="inscription">V 89</ref><!--byz089-->, 
+               while the type of the monument resembles <ref type="inscription">V 67</ref><!--byz067-->. For these reasons, I am inclined to date the inscription to the Xth century.
+               On the date of Church 19, see commentary to <ref type="inscription">V 104</ref><!--byz104-->.</p>
+            <p>The formula that can be reconstructed here comes from Ps. 26, verse 1, and is widely used in liturgy, including as a prokeimenon. Its reconstruction here presupposes
+               crosswise arrangement with tau in the centre, and traces of tau's serifs are actually preserved. In the Early Byzantine period, the formula was used in baptism ceremony
+               and in sanctification of water. Such an interpretation of our text would fit the conventional identification of the northeast pastophorium of the 
+               "Church with the reliquary" as baptisterium well. At the same time, we should also consider the possibility (kindly suggested to us by the reverend M. Zheltov) that the pastophorium 
+               in question could have been a martyrium; indeed, Ps. 26:1 is attested in Crimea in funerary context (<ref type="inscription">V 303</ref><!--byz297-->).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύριο</ex><abbr>ς</abbr></expan></w></roleName></persName>
+               <lb n="2"/><join target="#fot1 #fot2 #fot3" result="w"/><w xml:id="fot1">φ
+               <lb n="3"/>ω</w>
+               <lb n="4"/><w lemma="καί"><supplied reason="lost"><expan><ex>καὶ</ex></expan></supplied></w> <w lemma="σωτήρ"><supplied reason="lost">σω</supplied><w xml:id="fot2"><unclear>τ</unclear></w><supplied reason="lost">ήρ</supplied></w> <w lemma="ἐγώ"><supplied reason="lost">μου</supplied></w>
+               <lb n="5"/><w xml:id="fot3"><supplied reason="lost">ισ</supplied>
+               <lb n="6"/><supplied reason="lost">μ</supplied>
+               <lb n="7"/><supplied reason="lost">ό</supplied>
+               <lb n="8"/><supplied reason="lost">ς </supplied></w>
+               <lb n="9"/><w lemma="ἐγώ"><supplied reason="lost">μ</supplied>
+               <lb n="10"/><supplied reason="lost">ου</supplied></w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

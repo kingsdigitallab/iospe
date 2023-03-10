@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Алексея</title><title xml:lang="en">Building inscription of Alexios</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.180</idno><idno type="PE">PE5000180</idno>
+            <idno type="AYV2012-number">byz214</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>A-Д–1</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray State Historical and Cultural Preserve</repository>
+                     <idno>A-Д–1</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мрамор.</material>
+                           <material xml:lang="en">White marble.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение 3 щитов в прямоугольниках с 2 гербами и монограммой. Стесана справа.</p>
+                           <p xml:lang="en">On the front - three relief shields inside rectangular cartouches, the central one contains a monogram, and the side
+                           ones - coats of arms. Cut on the right.</p>
+                           <dimensions>
+                              <height>44,0</height>
+                              <width>133,0</width>
+                              <depth>19,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Между и под прямоугольниками.</seg>
+                           <seg xml:lang="en">Between and below rectangular cartouches.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы рельефные, удлиненные и маньеризованные. 
+                           Альфа и лямбда со штрихом 
+                           наверху, бета с несомкнутыми угловатыми полукружиями, мю с Y-образной средней частью.</seg>
+                        <seg xml:lang="en">Lapidary; elongated, ornate relief letters. Alpha and lambda with capping horizontal bar pointing left, 
+                           beta with vertically spaced angular loops, mu with Y-shaped middle.</seg>
+                        <height unit="cm">5,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро или Каламита.</seg>
+                        <seg xml:lang="en">Theodoro or Kalamita.</seg>
+                     </origPlace>
+                     <origDate notBefore="1427" notAfter="1427" evidence="указание_надписи">
+                        <seg xml:lang="ru">1427 г.</seg>
+                        <seg xml:lang="en">1427 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">1803–1805 гг.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">1803-1805.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2013-02-20" who="ΝG">corrected Greek lemata</change>
+         <change when="2012-09-24" who="AG">ikey added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-07" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-29" who="AG">Greek text taggs corrected, apparaus updated</change>
+          <change when="2012-06-19" who="AL">Greek text tagging corrected</change>
+          <change when="2012-06-06" who="AL">bibliography partly tagged, text tagging corrected</change>
+         <change when="2012-05-01" who="AG"> several lines translated, tags corrected, bibliography and apparatus tagged</change>
+          <change when="2012-04-24" who="AL">inserted editor tag, translated several lines</change>
+          <change when="2012-04-05" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.180">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Cумароков 1805--><ptr target="bib:b0221"/>, 127, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>20</citedRange></bibl>
+               <bibl n="2"><!-- Raoul-Rochette 1822 --><ptr target="bib:b0349"/>,  № 8. pl. <citedRange>IX</citedRange></bibl>
+               <bibl n="3"><!-- Кеппен 1837--><ptr target="bib:b0085"/>, 94–95, <citedRange>217–225</citedRange></bibl>
+               <bibl n="4"><!-- Dubois de Montpéreux 1843--><ptr target="bib:b0287"/>,  258 (Atlas, 4 ser., pl. XXVIb, fig. <citedRange>1</citedRange>)</bibl>
+               <bibl n="2.1"><ptr target="bib:Kirchhof"/> IV, <citedRange>8742</citedRange></bibl>
+               <bibl n="4"><!-- Сборник --><ptr target="bib:b0132"/>, 50-53, <citedRange> № 45</citedRange></bibl>
+               <bibl n="4.1"><!-- Малицкий 1933--><ptr target="bib:b0163"/>, <citedRange>26–29</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κτίζω">Ἐκτήσθη</w> <w lemma="ὁ">ὁ</w> <w lemma="ναός">ναὸς</w> <w lemma="οὗτος">οὗτος</w>
+               <w lemma="σύν">σὺν</w> <w lemma="ὁ">το͂</w> <w lemma="εὐλογέω">εὐλογημένο</w> <w lemma="κάστρον">κάστρῳ</w>,
+               <lb n="2"/><w lemma="ὁ">ὃ</w> <w lemma="νῦν">νῦν</w> <w lemma="ὁράω">ὁρᾶται</w>,
+               <w lemma="ὑπό">ὑπὸ</w> <w lemma="ἡμέρα">ἡμερῶν</w> <w lemma="κύριος">κυροῦ</w>
+               <persName type="ruler" key="alexios1Th"><name nymRef="Ἀλέξιος">Ἀλεξίου</name>,
+                  <w lemma="αὐθέντης">αὐθέντ<lb n="3" break="no"/>ου</w> <w lemma="πόλις">πόλεως</w>
+                  <placeName key="theodoro">Θεοδώρους</placeName> <w lemma="καί">καὶ</w>
+                  <w lemma="παραθαλάσσιος">παραθαλασίας</w></persName> <w lemma="καί">καὶ</w>
+               <w lemma="κτίτωρ">κτή<lb n="4" break="no"/>τωρ</w> <w lemma="ὁ">τῶν</w> <w lemma="ἅγιος">ἁγίων</w>
+               <w lemma="ἔνδοξος">ἐνδόξων</w> <w lemma="θεόστεπτος">θεοστέπτων</w> <w lemma="μέγας">μεγά<lb n="5" break="no"/>λων</w> <w lemma="βασιλεύς">βασιλέων</w> <w lemma="καί">καὶ</w>
+               <w lemma="ἰσαποστόλος">εἰσαποστόλων</w>
+               <persName type="ruler" key="constantinus1"><persName type="divine" key="stconstantine"><name nymRef="Κωνσταντῖνος">Κωνσταντίνου</name></persName></persName>
+               <w lemma="καί">καὶ</w>
+               <persName type="ruler" key="helena"><persName type="divine" key="sthelen"><name nymRef="Ἑλένη">Ἑλένης</name></persName></persName>
+               <date><w lemma="μήν">μηνὶ</w>
+                  <rs type="month" ref="oct"><w lemma="Ὀκτώβριος">Ὀκτοβρ<unclear>ί</unclear><supplied reason="lost">ῳ</supplied></w></rs> 
+                <lb n="6"/><num atLeast="11" atMost="31"><gap reason="lost" quantity="2" unit="character"/></num>,
+                  <w lemma="ἰνδικτιών">ἰνδηκτηο͂νος</w> <w lemma="ἕκτος">ἕκτης</w>, <w lemma="ἔτος">ἔτους</w>
+                  <num value="6936">ςϠλς</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="2"><rdg source="bib:Kirchhof">ἡμε(τέ)ρ[ου</rdg></app>
+                <app loc="3"><rdg source="bib:Kirchhof">Θεοδώρου</rdg></app>
+                <app loc="3-4"><rdg source="bib:Kirchhof bib:b0132 bib:b0163">κτήτορ(ος)</rdg> </app>
+                <app loc="5"> <rdg source="bib:b0132 bib:b0163">Ὀκτοβρ(ίῳ)</rdg></app>
+                <app loc="6"><rdg source="bib:b0287 bib:b0349">Ϡςςλ´</rdg> <rdg source="bib:Kirchhof">....</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Построен этот храм с благословенной крепостью, которая ныне видима, во дни господина Алексея, 
+               господаря города Феодоро и поморья и ктитора <supplied reason="lost">храма</supplied> святых славных, боговенчанных, великих
+               царей, равноапостольных Константина и Елены, <gap reason="lost" quantity="2" unit="character"/>-го октября, в шестой индикт, в 6936 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>This church was built together with the blessed fortress, which can be now seen, in the days of Lord Alexios, Authentes of the city of 
+               Theodoro and the coastline, and a ktitor of the holy glorious, god-crowned great kings, isapostolic Constantine and Helen, [..] of October, in the 6th indiction,
+            in the year 6936.</p> 
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Место находки надписи точно неизвестно. Разные исследователи относили ее то к Инкерману, то к Мангупу (подр. см. Латышев 1896, 50–53, № 45, а также 
+               Бертье-Делагард 1886, 190–191; Koeppen 1823, 78; Кеппен 1828, 132–133; Бертье-Делагард 1918, 2–7; Малицкий 1933, 26). В 1820–30-х гг. она 
+               находилась в Саблах, имении Бороздина. Кирхгоф вообще относил камень к Боспору и считал Алексея надписи Алексеем Комнином 
+               Трапезундским (нач. XIII в.).  </p>
+                <p> Инкерманское происхождение камня не исключено, так как оттуда (из кладки стены второго строительного периода) также происходит 
+                   фрагмент плиты с монограммой Алексея и фрагмент феодоритской надписи (<ref type="inscription">V 148</ref><!--byz142-->). С другой стороны, 
+                   упоминаемый в надписи наземный храм в Инкермане неизвестен.</p>
+            <p>В пользу Мангупа могут говорить сходство данной надписи с <ref type="inscription">V 179</ref><!--byz172--> и упоминание храма свв. Константина и Елены 
+               на Мангупе у М. Броневского. В последнее время преобладает гипотеза (см. Герцен, Науменко 2009; Мыц 2009, 138–140) о происхождении камня из 
+                   октогонального храма на мысе Тешкли-Бурун Мангупского городища: в ее пользу можно привести также совпадение размеров паза на нижнем 
+                   тыльном краю камня и проема двери за заплечиками входного проема.</p>
+            <p>1–3. Относительно формулы и времени постройки крепости см. комм. к <ref type="inscription">V 179</ref><!--byz172--> — аналогичной надписи господаря Алексея с Мангупа. 
+               Ударение в названии Феодоро реконструируется по <ref type="inscription">V 241</ref><!--byz226-->.</p>
+                <p>4–5. Построенный Алексеем храм, очевидно, был посвящен свв. Константину и Елене и локализуется на Мангупе или в Каламите (см. выше). 
+                   Относительно сбивки в падежах при слове «ктитор» ср. <ref type="inscription">V 176</ref><!--byz169-->. Эпитет «боговенчанный» применительно к императорам (правда, живым) 
+                   известен в византийской эпиграфике (наиболее близкий к нам пример — императрица Феодора Трапезундская из константинопольской 
+                   надписи 1390–1400 гг. (Schreiner 1971b, 221, № 19)).</p>
+                <p>Подробный исторический анализ см. в Мыц 2009, 134–140.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The exact findspot is unknown. Researchers attributed it either to Inkerman or to Mangup (see in more detail in Latyshev 1896, 50–53, № 45, as well as 
+               Bertye-Delagard 1886, 190–191; Koeppen 1837, 78; Koeppen 1828, 132–133; Bertye-Delagard 1918, 2–7; Malitsky 1933, 26). In 1820s-30s, it was kept at Sably,
+               an estate of Borozdin. Kirchhoff attributed the monument to Bosporus and considered the Alexios of the inscription to be Alexios Komnenos of Trebizond (early XIIIth century).</p>
+            <p>We cannot definitively exclude the possibility of the monument's origin at Inkerman, since we know of two other monuments that originate from the masonry 
+               of the second building period there: a fragment of a panel with Alexios' monogram, and fragmentary Theodorite inscription (<ref type="inscription">V 148</ref><!--byz142-->).
+               At the same time, an overground church mentioned in our text is not attested at Inkerman.</p>
+            <p>In favour of attribution to Mangup, we can point out the similarity of our inscription with <ref type="inscription">V 179</ref><!--byz172--> and 
+               a mention of the church of St. Constantine and Helen by Marcin Broniowski. The currently dominant theory (see Gertsen, Naumenko 2009; Myts 2009, 138-140) attributes
+               the stone to an octagonal church at cape Teshkli-Burun of the Mangup citadel: this localization is corroborated by the matching size of the slot
+               on the back bottom of the stone and by the maximal width of the doorway.</p>
+            <p> 1–3. On the formula and the date of construction, see commentary to  <ref type="inscription">V 179</ref><!--byz172--> - analogous inscription of
+               Sir Alexios from Mangup. The accent in the word "Theodoro" is reconstructed from <ref type="inscription">V 241</ref><!--byz226-->.</p>
+            <p> 4–5. The church built by Alexios was apparently dedicated to St. Constantine and Helen and was located either at Mangup or Kalamita (see above).
+               On the wrong use of cases with the word "ktitor," compare <ref type="inscription">V 176</ref><!--byz169-->. The epithet "God-crowned" in reference to emperors 
+               (although, those living) is known in Byzantine epigraphy (the closest parallel is a reference to empress Theodora of Trebizond from an inscription at Constantinople, dated
+               to 1390-1400 C.E. (Schreiner 1971b, 221, № 19)).</p>
+            <p>For detailed historical analysis, see Myts 2009, 134-140.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Георгия</title><title xml:lang="en">Epitaph of George</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.240</idno><idno type="PE">PE5000240</idno>
+            <idno type="AYV2012-number">byz227</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Алуштинский филиал Центрального музея Тавриды</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Alushta Branch of the Central Museum of Tavrida</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Стесана сверху и справа, выщерблины по поверхности; скол на правом верхнем углу появился после находки.</p>
+                           <p xml:lang="en">Cut at the top and right; surface is chipped; the top right corner was damaged after the discovery.</p>
+                           <dimensions>
+                              <height>35,0</height>
+                              <width>35,0</width>
+                              <depth>15,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">По центру лицевой поверхности</seg>
+                           <seg xml:lang="en">centre of the front surface.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; bouletée, буквы неравной высоты, немного вытянутые и 
+                           заостренные. Альфа с петлей; каппа с удлиненной вертикалью. Лигатуры омикрон-ню-эпсилон, омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary; bouletée, letters of uneven height, slightly elongated and pointy. Alpha with a loop; kappa with extended vertical.
+                        Ligature omicron-nu-epsilon, omicron-upsilon.</seg>
+                        <height unit="cm">0.8–2.8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p037">
+                        <seg xml:lang="ru">Панаир.</seg>
+                        <seg xml:lang="en">Panayir.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X в.</seg>
+                        <seg xml:lang="en">Xth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#ayu-dag">Аю-Даг, Гора.</placeName>
+                        <rs type="circumstances">1996 г., раскопки С.Б. Адаксиной.</rs>
+                        <rs type="context">Бухта Панаир, монастырь, пом. 6, погр. 8, западная стенка, вверх ногами.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Ayu-Dag, Mount.</placeName>
+                        <rs type="circumstances">1996, excavations of S.B. Adaksina.</rs>
+                        <rs type="context">Panayir Bay, monastery, Room 6, Grave 8, western wall, upside down.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Алушта, Крым.</seg>
+                     <seg xml:lang="en">Alushta, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-10" who="AG">findplace corrected</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-06" who="AG">marking up Greek text,added metadata.</change>
+         <change when="2012-07-05" who="AFS">marking up Greek text,added metadata.</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.240">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Скончался</supplied> раб Божий Георгий, который был старше всех. И поэтому молю я Благоутробного Бога, чтобы Он 
+               меня помиловал в день суда, аминь. Скончался раб Божий Гео<supplied reason="lost">ргий</supplied>. Скончался 28 ф<supplied reason="lost">ев</supplied>раля.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Died: a servant of God, George, the oldest of all. And so I entreat the merciful God to spare me on the day of Judgement, amen. 
+               Died: a servant of God, George. Died on the 28th of February.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> В работе Адаксиной (2001, 16, рис. 74) надпись дана в прорисовке и в переводе М.М. Дандамаевой (по согласованию с последней данный 
+               перевод нами не учитывается и не рассматривается как публикация).</p>
+                <p> 1–2, 10, 12. Относительно формулы см. <ref type="introduction">IV.3.F.f</ref>. Там же см. о ее вероятном боспорском происхождении.  </p>
+            <p> 3–4, 11. Относительно имени Георгий см. комм. к <ref type="inscription">V 64</ref><!--byz064-->. Уточнение «старше всех» указывают на старейшего 
+               члена какой-то 
+               общины, возможно, монашеской. </p>
+                <p> 5–9. Мотивировка просьбы «и потому» связана, вероятно, с мыслью о том, что и самые долговечные умирают и предстанут перед судом Божьим. 
+                   Относительно просьбы о милости в день суда ср. Помяловский 1883, № 30. </p>
+            <p>10, 12. Повторение слова “скончался” в датировке: ср. в <ref type="inscription">V 243</ref><!--byz229--> из соседнего Партенита; 
+               троекратное повторение, впрочем, 
+               уникально и может быть связано с невысоким уровнем мастерства составителя эпитафии. Фонетическую форму названия месяца ср. с <ref type="inscription">V 134</ref><!--byz129-->.3, того же времени.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Adaksina (2001, 16, fig. 74) published the drawing and translation of M.M. Dandamaeva (in consultation with the latter, we have agreed that her 
+            translation will not be considered by us as an edition).</p>
+            <p> 1–2, 10, 12.  On the formula, see Introduction <ref type="introduction">IV.3.F.f</ref>. See also on its probable Bosporan origin.</p>
+            <p> 3–4, 11. On the name George, see commentary to <ref type="inscription">V 64</ref><!--byz064-->. The epithet "the oldest of all" points to the eldest
+            member of some congregation, probably monastic.</p>
+            <p>5-9. The motivation for the request "and so" probably follows the idea that even the most long-living eventually die and have to appear before
+               Divine judgement. On the plea for mercy on the Day of Judgement, see Pomyalovsky 1883, № 30.</p>
+            <p>10, 12. The repetition of the word "died" in the dating formula: cf. <ref type="inscription">V 243</ref><!--byz229--> from nearby Partenit;
+               a triple repetition is however unique and might be reflective of a low professional expertise of the epitaph's author. The phonetic form of the month
+               is comparable with <ref type="inscription">V 134</ref><!--byz129-->.3 (of the same time period).</p>    
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="τελειόω"><supplied reason="lost">Ἐτελειώθη</supplied></w> <w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w>
+               <lb n="2"/><w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός">θ<supplied reason="lost">εοῦ</supplied></w></roleName></persName>
+               <lb n="3"/><persName type="attested" ref="#person303"><name nymRef="Γεώργιος"><expan><abbr>Γεόργ</abbr><ex>η</ex><abbr>ος</abbr></expan></name></persName>, <w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="παλαιός"><supplied reason="lost">πα</supplied><lb n="4" break="no"/>λ<unclear>ε</unclear><supplied reason="lost">ό</supplied>τερος</w> <w lemma="πᾶς"><expan><supplied reason="lost"><abbr>π</abbr></supplied><abbr>άντω</abbr><ex>ν</ex></expan></w>.
+               <lb n="5"/><w lemma="καί">Κὲ</w> <w lemma="διά">δ<supplied reason="lost">ι</supplied>ὰ</w> <w lemma="οὗτος">τοῦ<supplied reason="lost">τ</supplied>ο</w> <w lemma="παρακαλέω">παρακ
+                  <lb n="6" break="no"/>αλο͂</w> <w lemma="ὁ"><supplied reason="lost">τὸ</supplied>ν</w> <persName type="divine" key="theos"><roleName><w lemma="θεός">θεὸν</w></roleName></persName> <w lemma="ὁ">τὸν</w> <w lemma="εὔσπλαγχνος">ε<supplied reason="lost">ὔ</supplied><lb n="7" break="no"/><supplied reason="lost">σπ</supplied>λαγχνον</w>, <w lemma="ὅπως">ὅπος</w> <w lemma="ἐγώ">με</w>
+               <lb n="8"/><w lemma="ἐλεέω">ἐλεήσῃ</w> <w lemma="ἐν">ἐν</w> <w lemma="ὁ">τῇ</w> <w lemma="ἡμέρα">ἡμ<supplied reason="lost">έ</supplied><lb n="9" break="no"/>ρᾳ</w> <w lemma="ὁ">τῆς</w> <w lemma="κρίσις">κρήσεος</w>, <w lemma="ἀμήν">ἀμ<supplied reason="lost">ήν</supplied></w>.
+               <lb n="10"/><g ref="#stauros"/> <w lemma="τελειόω"><supplied reason="lost">Ἐ</supplied>τεληόθη</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος"><supplied reason="lost">δοῦ</supplied><lb n="11" break="no"/>λος</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός">θεοῦ</w></roleName></persName> <persName type="attested"><name nymRef="Γεώργιος">Γεώ<supplied reason="lost">ργιος</supplied></name></persName>.
+               <lb n="12"/><w lemma="τελειόω">Ἐτελειώθη</w> <date><w lemma="μήν">μηνὴ</w> <rs type="month" ref="feb"><w lemma="Φεβρουάριος">Φ<supplied reason="lost">εβ</supplied><lb n="13" break="no"/>ροαρήο</w></rs> <num value="28">κη</num></date>. <g ref="#stauros"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись неизвестного и Савватия</title><title xml:lang="en">Building inscription of unknown and Sabbatios</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.17</idno><idno type="PE">PE5000017</idno>
+            <idno type="AYV2012-number">byz016</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>214/37068</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>214/37068</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Расслоилась, разбита на мелкие части, сохранилось 28 кусочков, объединяющихся в 8 фрагментов, 2 из которых читаются.</p>
+                           <p xml:lang="en">Flaked and broken into small pieces, of which 28 survive, and some can be joined into 8 fragments, two of them yielding
+                              legible sequences.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы вытянуты по вертикали (особенно в верхней части надписи).
+                           Альфа с наклонной поперечиной и с петлей; дельта с приподнятой и удлиненной поперечиной; мю с приподнятой серединой,
+                           ипсилон с «усиками» на верхних концах и без них. Лигатура альфа-ню-эта, сокращение, нерегулярная диакритика.</seg>
+                        <seg xml:lang="en">Lapidary. Letters are elongated, especially in the top part of the inscription. Some alphas with a slanting crossbar, and some with
+                           a loop; delta with extended horizontal raised to mid-letterheight; mu with short central hastae; upsilon with and without 
+                           tails at the tops of strokes. Ligature: alpha-nu-eta; abbreviation; irregular diacritics.</seg>
+                        <height unit="cm">3–5,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="1168" notAfter="1198" evidence="палеография указание_надписи">
+                        <seg xml:lang="ru">1167–1198 гг.</seg>
+                        <seg xml:lang="en">1167–1198 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2009-09">Сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"> <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                         <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1983 г., раскопки С.Г. Рыжова.</rs>
+                        <rs type="context">Северный район, IX квартал, пом. 10, каменная засыпь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1983, excavations of S.G. Ryzhov.</rs>
+                        <rs type="context">North sector, Block IX, Room 10, stone fill.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+             <msPart n="1">
+                 <msIdentifier><idno/>
+                 </msIdentifier>
+                 <physDesc>
+                     <objectDesc>
+                         <supportDesc>
+                             <support>
+                                 <dimensions>
+                                     <height>33,5</height>
+                                     <width>20,5</width>
+                                     <depth>6,0</depth>
+                                 </dimensions>
+                             </support>
+                         </supportDesc>
+                     </objectDesc></physDesc>   
+             </msPart>
+                <msPart n="2">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>9,5</height>
+                                        <width>5,0</width>
+                                        <depth>5,0</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+                <msPart n="3">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>3,0</height>
+                                        <width>5,5</width>
+                                        <depth>1,5</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+                <msPart n="4">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>14,0</height>
+                                        <width>14,5</width>
+                                        <depth>4,0</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+                <msPart n="5">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>7,0</height>
+                                        <width>6,0</width>
+                                        <depth>3,0</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+                <msPart n="6">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>6,0</height>
+                                        <width>7,0</width>
+                                        <depth>3,5</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+                <msPart n="7">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>6,5</height>
+                                        <width>5,5</width>
+                                        <depth>3,0</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+                <msPart n="8">
+                    <msIdentifier><idno/>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <dimensions>
+                                        <height>4,5</height>
+                                        <width>4,5</width>
+                                        <depth>1,2</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc></physDesc>   
+                </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2015-05-22" who="CB">Changes to xml involving multiple textparts</change>
+          <change when="2015-04-24" who="CB">Textparts</change>
+          <change when="2013-04-12" who="NG">minnor correction in Greek lemmata</change>
+          <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
+          <change when="2012-10-01" who="AL">corrected Russian metadata</change>
+         <change when="2012-08-16" who="AG">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">1 line translated</change>
+         <change when="2012-05-15" who="AG">tags corrected</change>
+         <change when="2012-04-24" who="AG">several lines translated</change>
+         <change when="2012-04-17" who="AG">1 line translated, date corrected, editor added</change>
+         <change when="2012-04-05" who="AG">bibliography updated</change>
+         <change when="2012-03-20" who="AG">corrections in metadata, bibliography marked up</change>
+         <change when="2012-01-23" who="AG">corrections, 1 line translated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.17-1">
+            <desc xml:lang="en">Photograph of fragments (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="5.17-1a">
+            <desc xml:lang="en">Photograph of fragments (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="5.17-1b">
+            <desc xml:lang="en">Photograph of fragments (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="5.17-2">
+            <desc xml:lang="en">Photograph of fragment 2 (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="5.17-3">
+            <desc xml:lang="en">Photograph of parts of fragment 3 (from ??)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="1"><!--Виноградов, 2011a--><ptr target="bib:b0386"/>, 227–229, № <citedRange>6</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="διά"><unclear>Δ</unclear>ηὰ</w>
+               <w lemma="βοήθεια"><supplied reason="lost" cert="low">βοηθείας</supplied></w>
+               <w lemma="ὁ">τ<supplied reason="lost">οῦ</supplied></w>
+               <lb n="2"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>κ</abbr><ex>υρίο</ex><abbr>υ</abbr></expan></w></roleName></persName>
+               <w lemma="ἐγώ">ἡμῶν</w>
+               <persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησο</ex><abbr><unclear>ῦ</unclear></abbr></expan></name>
+                  <name nymRef="Χριστός"><supplied reason="lost"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></supplied></name></persName>
+               <lb n="3"/><w lemma="ἀνεγείρω">ἀνη<unclear>γ</unclear>έρθη</w> <supplied reason="lost"><w lemma="ὁ">ὁ</w>
+                  <w lemma="ναός">ναὸς</w></supplied>
+               <lb n="4"/><w lemma="ὁ">ὁ</w>
+               <persName type="divine" key="maria"><w lemma="θεοτόκος"><expan><abbr><unclear>θ</unclear></abbr><ex>εοτό</ex><supplied reason="lost"><abbr>κ</abbr><ex>ο</ex></supplied><abbr>ῦ</abbr></expan></w></persName> <w lemma="διά">δι<supplied reason="lost">ὰ</supplied></w> <w lemma="κόπος">κ<supplied reason="lost">όπου</supplied></w>
+               <lb n="5"/><persName type="attested" ref="#person17"><name nymRef="Γ—ς">Γ<gap reason="lost" quantity="3" unit="character"/>ου</name></persName>, <w lemma="υἱός">υἱο<supplied reason="lost">ῦ</supplied></w> <gap reason="lost" quantity="3" unit="character"/>
+               <lb n="6"/><gap reason="lost" quantity="3" unit="character"/> <w lemma="καί">καὶ</w> <persName type="attested" ref="#person18"><name nymRef="Σαββάτιος">Σαμ<unclear>β</unclear><supplied reason="lost">ατίου</supplied></name></persName>
+               <lb n="7"/><gap reason="lost" quantity="3" unit="character"/> <date><w lemma="ἰνδικτιών"><expan><abbr>ἠ<supplied reason="lost">ν</supplied>δ</abbr><ex>ικτιῶνος</ex></expan></w> <num value="2">β</num></date> <g ref="#stauros"/>
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>При <supplied reason="lost">помощи</supplied> Господа нашего Иисуса <supplied reason="lost">Христа</supplied>
+               воздвигнут <supplied reason="lost">храм</supplied> Бого<supplied reason="lost">родиц</supplied>ы трудами Г…, сын<supplied reason="lost">а …</supplied>, и Савв<supplied reason="lost">атия …,</supplied> во 2-ой и<supplied reason="lost">н</supplied>дикт.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>With the [help (?)] of Our Lord, Jesus Christ, a <supplied reason="lost">church</supplied> of the Mother of the Lord was built, through the efforts of G[...],
+               the son of [...] and Sabba<supplied reason="lost">tios</supplied>, in the 2nd indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+                <p>Сохранилось еще 10 фрагментов с отдельными гастами.  </p>
+            <p>2. Формулу ср. с <ref type="inscription">V 16</ref><!--byz015-->.</p>
+                <p>3. Строительная формула ἀνηγέρθη в Северном Причерноморье больше не встречается, однако весьма распространена
+                   в византийской эпиграфике (не менее 26 случаев, согласно PHI7 Database).</p>
+            <p>7. Относительно имени Савватий и диссимиляции в нем см. комм. к <ref type="inscription">V 282</ref><!--byz270-->.</p>
+            <p>По шрифту памятник близок к надгробию Петрония (<ref type="inscription">V 68</ref><!--byz068-->) и поэтому относится, скорее всего, так же к концу XII в.
+                   2-й индикт в это время выпадал на 1167–1168, 1182–1183 и 1197–1198 гг. Скорее всего, речь в надписи идет о храмике
+                   около церкви № 22 («Северной базилики») в том же квартале IX (см. Романчук 2000, 236).  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Ten more fragments survive where individual letter strokes can be discerned.</p>
+            <p>2. Compare with the formula in <ref type="inscription">V 16</ref><!--byz015-->.</p>
+              <p> 3. The building formula ἀνηγέρθη occurs nowhere else in the Northern Black Sea area, but is widely used in Byzantine epigraphy elsewhere
+               (no fewer than 26 examples, according to PHI7 Database).</p>
+            <p>7. On the name Sabbatios (here Sambatios), and the phonetic dissimilation here, see commentary to <ref type="inscription">V 282</ref><!--byz270-->.
+               The script is similar to that of the tombstone of Petronios (<ref type="inscription">V 68</ref><!--byz068-->) and therefore also most likely dates to the end of the XIIth C.E.
+                  The 2nd indiction in this period fell in the years 1167-1168, 1182–1183 and 1197–1198. The inscriptions most likely refers to the small
+            Church 22 ("Northern basilica") in the same Block IX (see Romanchuk 2000, 236).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

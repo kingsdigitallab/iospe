@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Ирины и Иоанна <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Epitaph of Eirene and John <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.200</idno><idno type="PE">PE5000200</idno>
+            <idno type="AYV2012-number">byz188</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне филенка (гл. 0,5) с рельефным изображением креста. Поверхность сильно повреждена.</p>
+                           <p xml:lang="en">Inset panel (Depth 0.5) with relief cross. The surface is badly weathered.</p>
+                           <dimensions>
+                              <height>23,0</height>
+                              <width>26,0</width>
+                              <depth>?</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p023">
+                        <seg xml:lang="ru">Сюреньская крепость.</seg>
+                        <seg xml:lang="en">Syuren fortress.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-09">Сентябрь 2004</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2008-09"> сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2004-09">September 2004</date>, <date when="2006-09">September 2006</date>, <date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#syurenfortress">Сюреньская крепость.</placeName>
+                        <rs type="circumstances">До 1896 г., обследование Ю.А. Кулаковского.</rs>
+                        <rs type="context">Стена, северное прясло, внутренний панцырь, справа от потерны.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Syuren fortress.</placeName>
+                        <rs type="circumstances">Before 1896, survey of Yu.A. Kulakovsky.</rs>
+                        <rs type="context">Wall, north curtain wall, inner face, to the right of the postern.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
+                        <seg xml:lang="en" n="1">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                              <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>.</seg>
+                           <seg xml:lang="en">Lapidary.</seg>
+                           <height unit="cm">1,0.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1392" notAfter="1491" evidence="указание_надписи">
+                           <seg xml:lang="ru">1392–1491 гг.</seg>
+                           <seg xml:lang="en">1392–1491 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="2">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Справа от креста.</seg>
+                              <seg xml:lang="en">To the right of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="2">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы вытянутые по вертикали. 
+                              Эта И-образная, мю с Y-образной средней частью. Лигатура омикрон-ипсилон.</seg>
+                           <seg xml:lang="en">Lapidary; elongated letters. И-shaped eta, mu with Y-shaped middle. Ligature: omicron-upsilon.</seg>
+                           <height unit="cm">3,0.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1392" notAfter="1491" evidence="указание_надписи">
+                           <seg xml:lang="ru">1392–1491 гг.</seg>
+                           <seg xml:lang="en">1392–1491 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-28" who="CB">Corrected msParts</change>
+         <change when="2015-05-01" who="CB">Textparts</change>
+         <change when="2015-05-01" who="CB">Textparts</change>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-03-13" who="NG">inserted Greek lemma</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-02" who="AG">1 line translated, character corrected.</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-18" who="AG">several lines translated, corrections, tagged</change>
+          <change when="2012-12-06" who="AL">1st part of greek text tagged, 2nd part of text corrected, bibliography tagged, editor tag inserted</change>
+          <change when="2012-03-26" who="AFS">tagged Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.200" n="2">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 126–127, № <citedRange>50а</citedRange></bibl>
+            </listBibl>
+            <listBibl n="2">
+                <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 127, № <citedRange>50а</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="2">
+             <listApp>
+               <app loc="2-7"><rdg source="bib:b0132">Ε(ἰρήνη ?) ... ἔτο]υς</rdg></app> 
+                  <app loc="7"> <rdg source="bib:b0132">ς...´</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Иисус Христос побеждает.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Почила <supplied reason="lost">раба</supplied> Божья Ирина (?) … жених Иоанн. По<supplied reason="lost">чила</supplied>, прожив .. лет,  
+                  .. апр<supplied reason="lost">еля</supplied> 69<gap reason="lost" extent="2" unit="character"/> года.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Jesus Christ is victorious.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep: <supplied reason="lost">a servant</supplied> of God, Eirene (?)... groom John. Fell <supplied reason="lost">asleep</supplied>, 
+                  having lived... years, ... of April, 69[..] year.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Надпись издана Латышевым по эстампажу Кулаковского.  </p>
+                <p>Относительно формулы см. <ref type="introduction">IV.3.C.e</ref>.  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+               <p> 2. Имя Ирина дано в необычном сокращении; в Крыму оно встречается также в <ref type="inscription">V 124</ref><!--byz216-->.</p>
+               <p> 3. Относительно имени Иоанн см. комм. к <ref type="inscription">V 108</ref><!--byz026-->.</p>
+                <p> 3–5. Данная формула для византийских надгробий нам не известна.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Latyshev published the inscription relying on an estampage made by Kulakovsky.</p>
+               <p>On the formula, see Introduction <ref type="introduction">IV.3.C.e</ref>.  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.  </p>
+               <p> 2. The particular abbreviation of the name Eirene is usual; in Crimea, this name is also attested in <ref type="inscription">V 124</ref><!--byz216-->.</p>
+               <p> 3. On the name John, see commentary to <ref type="inscription">V 108</ref><!--byz026-->.</p>
+               <p> 3-5. I am not aware of this formula being otherwise used on Byzantine tombstones.</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name> 
+                   <name nymRef="Χριστός"><supplied reason="lost"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><abbr>ς</abbr></expan></supplied></name></persName>
+                  <lb n="2"/><w lemma="νικάω">νικ<supplied reason="lost">ᾷ</supplied></w>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω">Ἐκοιμήθη</w> <w lemma="ὁ">ἡ</w>
+                  <lb n="2"/><w lemma="δοῦλος"><supplied reason="lost">δούλη</supplied></w> <w lemma="ὁ">τοῦ</w> 
+                   <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+                   <persName type="attested" ref="#person251"><name nymRef="Εἰρήνη"><expan><abbr>Ε</abbr><ex>ἰ</ex><abbr>ρ</abbr><ex>ή</ex><abbr>ν</abbr><ex cert="low">η</ex></expan></name></persName>
+                  <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="μνηστήρ">μ<supplied reason="lost">ν</supplied><unclear>υσ</unclear>τὴρ</w> <persName type="attested" ref="#person252"><name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννης</ex></expan></name></persName>.
+                  <lb n="4"/><w lemma="κοιμάω">Ἐκ<supplied reason="lost">οιμήθη</supplied></w> <w lemma="βιόω"><unclear>βε</unclear>βιομέ<lb n="5" break="no"/><supplied reason="lost">νη</supplied></w> <w lemma="ἔτος"><supplied reason="lost">ἔτη</supplied></w> <gap reason="lost" quantity="2" unit="character"/>, <date><w lemma="μήν">μηνὶ</w>
+                  <lb n="6"/><rs type="month" ref="apr"><w lemma="Ἀπρίλιος">Ἀ<unclear>π</unclear>ρ<supplied reason="lost">ιλίῳ</supplied></w></rs> <w lemma="εἰς">εἰς</w> <w lemma="ὁ">τὰ</w>
+                  <lb n="7"/><gap reason="lost" quantity="2" unit="character"/>, <w lemma="ἔτος"><supplied reason="lost">ἔτο</supplied>υς</w> <num value="69">ςϠ<gap reason="lost" quantity="2" unit="character"/></num> </date>
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

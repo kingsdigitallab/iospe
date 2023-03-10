@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надпись на каменном кружке</title><title xml:lang="en">Inscribed small stone circle</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.100</idno><idno type="PE">PE</idno>
+            <idno type="AYV2012-number">byz100</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon26">Кружок.</objectType>
+                           <objectType xml:lang="en">Small circle.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Просверленный известковый кружок с крестом на лицевой стороне и звездчатым орнаментом в виде извивающихся линий на 
+                              тыльной. Обломан наполовину.</p>
+                           <p xml:lang="en">Circular drilled limestone panel, with a cross on the front and star ornament of wavy lines on the back. About 
+                              half is missing.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, эпсилон лунарный, дзета З-образная (?).</seg>
+                        <seg xml:lang="en">Lapidary. Lunate epsilon, З-shaped zeta (?).</seg>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="1261" notAfter="1262" evidence="указание_надписи" precision="high">
+                        <seg xml:lang="ru">1261–1262 гг.</seg>
+                        <seg xml:lang="en">1261–1262 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">До 1872 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">Before 1872.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+      
+      <revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-01" who="AG">several lines translated</change>
+         <change when="2012-04-23" who="AG">several lines translated, bibliography corrected, apparatus marked up, editor added</change>
+          <change when="2012-04-17" who="AL">corrected original date</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-03" who="AG">updating</change>
+         <change when="2011-12-07" who="AG">small corrections, tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+       <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, <citedRange>21</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"> <rdg source="bib:b0132">ΨΞ</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">В 6</supplied>770 <supplied reason="lost">году</supplied>…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p><supplied reason="lost">In the year 6</supplied>770 (?).</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Камень был в Москве на политехнической выставке в 1872 г. Надпись издана Латышевым по копии Н.П. Кондакова.  </p>
+                <p> 1. Сочетание пси-кси может принадлежать только цифре, а именно числу года: 6760 год от сотворения мира соответствует 1261–1262 гг. по Р.Х. 
+                   (ср. <ref type="inscription">V 48</ref><!--byz048-->).</p>
+                <p>2. Если в копии Кондакова содержатся некоторые ошибки, то можно предположить, что во 2-й строке стояло слово συνετός или ξυνετός.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The monument was exhibited at the Polytechnic Show in Moscow in 1872. Latyshev published the inscription on the basis of a transcription made by N.P. Kondakov.</p>
+            <p>1. The combination of psi-ksi makes sense only as a number, namely, as a year: 6760 since the creation, corresponding to 1261-1262 C.E. (cf. <ref type="inscription">V 48</ref><!--byz048-->).</p> 
+            <p>2. If Kondakov's transcription contained mistakes, then we could speculate that in line 2 there might have been a word συνετός or ξυνετός.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><date><supplied reason="lost"><w lemma="ἔτος">ἔτους</w></supplied> <num value="6770"><supplied reason="lost" precision="low">ς</supplied>ψξ</num></date> 
+               <lb n="2"/><orig>ΖΥΝΗΤΟΕ</orig>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

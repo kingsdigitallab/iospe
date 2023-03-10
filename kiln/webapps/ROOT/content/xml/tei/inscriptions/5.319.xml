@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Феодоты</title><title xml:lang="en">Epitaph of Theodote</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.319</idno><idno type="PE">PE5000319</idno>
+            <idno type="AYV2012-number">byz287</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный Эрмитаж</repository>
+                     <idno>ω 1291</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Hermitage</repository>
+                     <idno>ω 1291</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon2">Плитка.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">White marble.</material>
+                           <p xml:lang="ru">Лицевая сторона отшлифована. Левая часть обломана, сколы по краям.</p>
+                           <p xml:lang="en">Front is polished. Left side is broken off, chipped along the edges.</p>
+                           <dimensions>
+                              <height>11,0</height>
+                              <width>21,5</width>
+                              <depth>2,6</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы апицированы, вытянуты по вертикали. Эпсилон, тета и омикрон миндалевидные,
+                           мю и ню с приподнятой  серединой. Лигатуры тау-омикрон-ипсилон, тау-эта, эта-ню, тау-омега, эта-мю; надстрочные знаки, знаки сокращения, нерегулярные 
+                           придыхания.</seg>
+                        <seg xml:lang="en">Lapidary. Letters are decorated with serifs and elongated. Almond-shaped epsilon, theta and omicron, mu and nu have short central hastae. 
+                        Ligatures: tau-omicron-upsilon, tau-eta, eta-nu, tau-omega, eta-mu; superscript diacritics, abbreviation marks, irregular aspiration.</seg> 
+                        <height unit="cm">2,15.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Воспор.</seg>
+                        <seg xml:lang="en">Bosporus.</seg>
+                     </origPlace>
+                     <origDate notBefore="1065" notAfter="1065" evidence="указание_надписи">
+                        <seg xml:lang="ru">1065 г.</seg>
+                        <seg xml:lang="en">1065 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-11">Ноябрь 2004</date>.</seg>
+                     <seg xml:lang="en"><date when="2004-11">November 2004</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kerch">Керчь.</placeName>
+                        <rs type="circumstances">До 1931 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">Before 1931.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                     <seg xml:lang="en">Saint Petersburg, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-09" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-28" who="AG">some corrections, apparatus tagged, 1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-07-10" who="AL">small corrections in metadata</change>
+          <change when="2012-06-25" who="AL">small corrections in metadata</change>
+          <change when="2012-05-21" who="AFS">corrected metadata and tagging in greek text</change>
+          <change when="2012-04-17" who="AL">original date tagging corrected</change>
+         <change when="2012-03-13" who="AL">text tagged, original date tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.319">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Залесская 1988--><ptr target="bib:b0410"/>, 207, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>10</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><supplied reason="lost"><g ref="#stauros"/><w lemma="κοιμάω">Ἐκοιμήθη</w>
+                  <w lemma="ὁ">ἡ</w></supplied> <w lemma="δοῦλος">δούλη</w> <w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person370"><name nymRef="Θεοδότη">Θεοδότη</name></persName>
+               <date><w lemma="μήν"><expan><abbr>μην</abbr><ex>ὸς</ex></expan></w>
+                  <rs type="month" ref="oct"><w lemma="Ὀκτώβριος">Ὀκτω<lb n="2" break="no"/><supplied reason="lost">βρίου</supplied></w></rs>
+                  <w lemma="εἰς"><supplied reason="lost">εἰς</supplied></w>
+                  <w lemma="ὁ"><supplied reason="lost">τὰ</supplied></w> <num value="26">κς</num>,
+                  <w lemma="ἡμέρα"><expan><abbr>ἡμ</abbr><ex>έρα</ex><abbr>ς</abbr></expan></w>
+                  <num value="4">δ</num>, <w lemma="ἰνδικτιών"><expan><abbr>ἰν</abbr><ex>δικτιῶνος</ex></expan></w>
+                  <num value="4">δ</num>, <w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ου</ex><abbr>ς</abbr></expan></w> 
+                  <num value="1654">ςφοδ</num></date> <g ref="#stauros"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="2"><rdg source="bib:b0410">[εἰς τὴν] κς´, ἡμέρᾳ</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья Феодота 26-го октября, в среду, в 4-й индикт, в 6574 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Theodote, on the 26th of October, Wednesday, in the 4th indiction, in the year 6574.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись поступила в 1931 г. из Керчи в ГАИМК, а в 1985 г. передана в ГЭ.  Плитка, по-видимому, предназначалась для вставки в стену рядом с 
+               погребением Феодоты. Такого рода надгробные плитки известны в Северном Причерноморье как раз в X–XI вв. (ср. <ref type="inscription">V 336</ref><!--byz320-->).</p>
+                <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. Имя Феодота встречается в двух боспорских надписях I в. по Р.Х., 
+                   однако его отсутствие в 
+                   ранневизантийской эпиграфике региона свидетельствует скорее в пользу нового появления этого имени под христианским влиянием: известно 
+                   девять святых с этим именем (см. Delehaye 1902, 1093).</p>
+                <p> 1–2. 26 октября 1065 г., действительно, приходилось на среду.  </p>
+                <p> 2. Обозначение числа месяца при помощи εἰς τὴν менее вероятно, ибо не встречается в Северном Причерноморье достоверно ни разу 
+                   (ср. <ref type="inscription">V 226</ref><!--byz213-->), в отличиe от хорошо засвидетельствованного здесь εἰς τά (<ref type="inscription">V 133</ref><!--byz128-->,
+                   <ref type="inscription">V 164</ref><!--byz157-->, 
+                   <ref type="inscription">V 167</ref><!--byz160-->, <ref type="inscription">V 168</ref><!--byz161-->, <ref type="inscription">V 197</ref><!--byz186-->, 
+                   <ref type="inscription">V 200</ref><!--byz188-->, <ref type="inscription">V 213</ref><!--byz201-->
+                   <ref type="inscription">V 215</ref><!--byz203-->).</p>
+            <p> Отметим, что, несмотря на временную близость с <ref type="inscription">V 340</ref><!--byz316--> (1078 г., Таманский полуостров), 
+               данная надпись значительно отличается от последней по палеографии.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>In 1931, the monument had arrived from Kerch to the State Academy for History of Material Culture, and in 1985 it was transferred
+               to the State Hermitage. The panel was probably meant to be set in a wall near the burial of Theodote. Such funerary plaques are known in the 
+               Northern Black Sea region in the X-XIth centuries (cf. <ref type="inscription">V 336</ref><!--byz320-->).</p>
+            <p> 1.On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>. The name Theodote is known from two Bosporan inscriptions of the 
+            I century C.E., however, its absence from Early Byzantine epigraphy of the region suggests its reappearance under Christian influence: 9 saints
+            of this name are known (see Delehaye 1902, 1093). </p>
+            <p>1-2. October 26, 1065 was indeed Wednesday.</p>
+            <p>2. It is unlikely that the date of the month would be indicated by εἰς τὴν because there are no such examples in the Northern Black Sea region
+               (cf. <ref type="inscription">V 226</ref><!--byz213-->), in contast to well attested εἰς τά (<ref type="inscription">V 164</ref><!--byz157-->, 
+               <ref type="inscription">V 167</ref><!--byz160-->, <ref type="inscription">V 168</ref><!--byz161-->, <ref type="inscription">V 197</ref><!--byz186-->, 
+               <ref type="inscription">V 201</ref><!--byz189-->, <ref type="inscription">V 215</ref><!--byz203-->).</p>
+            <p>Despite chronological proximity to  <ref type="inscription">V 340</ref><!--byz316--> (1078 C.E., Taman peninsula), our inscription is quite
+            different in palaeographic features.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- search sitemap. -->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+  <map:views>
+    <map:view from-label="content" name="content">
+      <map:serialize type="xml"/>
+    </map:view>
+
+    <map:view from-label="tei" name="tei">
+      <map:serialize type="xml"/>
+    </map:view>
+  </map:views>
+
+  <map:pipelines>
+    <map:pipeline>
+      <!-- Publications -->
+      <map:match pattern="index-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=conc/index-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances.xsl">
+          <map:parameter name="url" value="conc/index-{1}.html"/>
+          <map:parameter name="concordance" value="publications"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="index.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=conc/index.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances.xsl">
+          <map:parameter name="url" value="conc/index.html"/>
+          <map:parameter name="concordance" value="publications"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- Publications / publication -->
+      <map:match pattern="publications/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url=conc/publications/{1}-{2}.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{url-encode:{1}}&amp;sort=pub-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/concordances-publication.xsl">
+          <map:parameter name="url" value="conc/publications/{1}-{2}.html"/>
+          <map:parameter name="concordance" value="publication"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="publications/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=conc/publications/{1}.html"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part element="concordance"
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=bibl-target:{url-encode:{1}}&amp;sort=pub-sort%20asc&amp;rows=999"
+          />
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/concordances-publication.xsl">
+          <map:parameter name="url" value="conc/publications/{1}.html"/>
+          <map:parameter name="concordance" value="publication"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+    </map:pipeline>
+  </map:pipelines>
+</map:sitemap>

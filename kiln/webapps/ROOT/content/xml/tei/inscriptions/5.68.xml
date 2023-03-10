@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Петрония</title><title xml:lang="en">Epitaph of Petronios</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.68</idno><idno type="PE">PE5000068</idno>
+            <idno type="AYV2012-number">byz068</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>5572</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>5572</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon21">Свод аркосолия.</objectType>
+                           <objectType xml:lang="en">Arch of arcosolium.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Состоит из 3 блоков. Буквы повреждены, у второго блока сколот левый нижний угол, третий блок разбит на 3 части.</p>
+                           <p xml:lang="en">The arch consists of three blocks. The bottom left corner of the middle block is chipped off. The third block is broken into
+                           three parts.</p>
+                           <dimensions>
+                              <height>11,0</height>
+                              <width>100,0</width>
+                              <depth>31,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклоненной влево перекладиной, 
+                           бета с несомкнутыми полукружиями, мю с Y-образной серединой. Лигатуры, сокращения.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with left-slanting crossbar, beta with vertically spaced loops, mu with Y-shaped middle. Ligatures, abbreviations.</seg>
+                        <height unit="cm">3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="1183" notAfter="1183" evidence="указание_надписи">
+                        <seg xml:lang="ru">1183 г.</seg>
+                        <seg xml:lang="en">1183 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1889–1891 гг., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Владимирский собор, перед западным фасадом.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1889-1891, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">St. Vladimir Cathedral, in front of the western facade.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-24" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-02-25" who="NG">minor correction in Greek lemmata</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">name corrected</change>
+         <change when="2012-07-02" who="AG">apparatus upd</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-30" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-16" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-10" who="AG">updating, tags in the Greek text corrected</change>
+         <change when="2011-12-05" who="AG">minor corrections, tags added to the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.68">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1892a--><ptr target="bib:b0125"/>, 37–38, № <citedRange>32</citedRange></bibl>
+               <bibl n="2"><!--Латышев 1895a--><ptr target="bib:b0130"/>, 80, № <citedRange>32</citedRange></bibl>
+               <bibl n="2.1"><!--Сборник>--><ptr target="bib:b0132"/>, 33–34, № <citedRange>27</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"><lem>Πέτρος</lem><rdg source="bib:b0125"><note>om.</note></rdg></app>
+               <app loc="2"><rdg source="bib:b0125">ὁ καὶ (?) εὐεργέτ]ης [τῆς ἁγία]ς ἐκ[λησίας ... <note>Papadopoulo-Kerameus apud </note></rdg>
+                  <rdg source="bib:b0130">[...]ωτης</rdg></app>
+                  <app loc="2"><rdg source="bib:b0125 bib:b0130 bib:b0132">τ(ὴν)</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Упокоился иже во блаженной памяти и раб Божий Петроний, иеромонах и клирик, благодетель и не<supplied reason="lost">достойн</supplied>ый наследник (?) 
+               ктитора, 10-го ноября, во 2-й индикт, в 6692 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep, who is in blessed memory and a servant of God, Petronios, hieromonk and cleric, benefactor and unworthy heir  (?) of the ktitor, 
+               10th November, in the 2nd indiction, in the year 6692.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> При первоиздании надписи Латышев воспользовался советами А.И. Пападопуло-Керамевса, который предложил восстановление начала 2-й строки: и 
+               если первая часть этой реконструкции подтвердилась еще при обследовании Латышевым самого камня, то вторая не выглядит, на наш взгляд, 
+               убедительной. При переиздании после автопсии Латышев исправил также чтение имени усопшего: Петроний вместо Петр.</p>
+                <p> Очевидно, свод происходит из аркосолия, в котором находилась гробница Петрония. Иеромонах Петроний являлся, скорее всего, клириком того 
+                   храма (и, соответственно, монастыря), где он и был погребен. Если верно наше восстановление первой половины 2-й строки, то Петроний был и 
+                   благодетелем храма, и даже наследником ее основателя, т.е. правопреемником ктитора. О храмовых ктиторах и их наследниках прямо говорят 
+                   надписи Feissel, Philippidis-Braat 1985, № 67 (1322–1323 гг.) и Stylianou 1960, 120, № 18 (Кипр, 1520 г.).</p>
+                <p> Косцюшко-Валюжинич сообщил Латышеву, что обломки надписи «найдены с западной стороны Херсонисской площади, впереди нового собора. 
+                   Тут же открыт совершенно разрушенный храмик с мозаичным полом, построенный над глубокими древними цистернами». 
+                   Под это описание подходит лишь храм № 26 с аркосолиями, расчищенный в 1861 г. и не имеющий четкой датировки (Айналов 1905, 67), 
+                   но если наше предположение о Петронии как наследнике ктитора верно, то этот храм был построен в 1 пол. – сер. XII в.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>In preparing the editio princeps, Latyshev followed the advice of A.I.Papadopoulo-Kerameus, who proposed the restoration of the beginning of line 2:
+               while the first half of that reconstruction was confirmed during Latyshev's examination of the monument, the second half seems less convincing.
+               Following the autopsy of the monument, Latyshev republished the inscription, correcting, in addition, the name of the deceased: from Peter to Petronios.</p>
+            
+            <p>The arch probably originates from an arcosolium, which housed the tomb of Petronios. Hieromonk Petronios must have been a cleric of that church (and hence of 
+               that monastery), where he was subsequently buried. If our restoration of the first half of line 2 is correct, then Petronios was also a benefactor of the 
+               church, and an heir of the church's founder, that is, the rightful heir of the ktitor. Church ktitors and their heirs are mentioned in a number of 
+               known inscriptions: Feissel, Philippidis-Braat 1985, № 67 (1322–1323 C.E.) and Stylianou 1960, 120, № 18 (Cyprus, 1520 C.E.).</p>
+            <p>Kostsyushko-Valyuzhinich informed Latyshev that the fragments of the inscription "had been found on the west side of Chersonessos' square, in front of the new 
+               cathedral. We also found here a completely ruined small church with mosaic floor, built over deep ancient cisterns." Only Church 26, with arcosolia, fits this 
+               description; it was cleared in 1861 and cannot be dated with any precision (Aynalov 1905, 67), but if our hypothesis about Petronius being an heir to the church's
+               ktitor is correct, then the building would date to the 1st half - middle of the XIIth century.</p>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+              
+               <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω">Κεκίμη<surplus>η</surplus>τε</w> <w lemma="ὁ">ὁ</w> <w lemma="ἐν">ἐν</w> <w lemma="μακάριος"><expan><abbr>μακαρ</abbr><ex>ίᾳ</ex></expan></w> 
+               <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ῇ</ex></expan></w> <w lemma="μνήμη">μνήμῃ</w> <w lemma="καί">καὶ</w> <w lemma="δοῦλος"><expan><abbr>δοῦ</abbr><ex>λος</ex></expan></w> 
+               <w lemma="ὁ"><expan><abbr>τ</abbr><ex>οῦ</ex></expan></w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>Θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+               <persName type="attested" ref="#person70"><name nymRef="Πετρώνιος">Πετρόνιος</name></persName> <w lemma="ἱερομόναχος"><expan><abbr>ἱερο</abbr><ex>μόνα</ex><abbr>χος</abbr></expan></w> <w lemma="καί">καὶ</w> <w lemma="κληρικός">κληρικός</w>,
+               <lb n="2"/><w lemma="ὁ">ὁ</w> <w lemma="καί">καὶ</w> <w lemma="εὐεργέτης">εὐεργέτης</w> <w lemma="καί">κ<unclear>α</unclear><supplied reason="lost">ὶ</supplied></w> 
+               <w lemma="ἀνάξιος">ἀν<supplied reason="lost">άξι</supplied>ος</w> 
+               <w lemma="κληρονόμος"><expan cert="low"><abbr>κ<unclear>λε</unclear><supplied reason="lost">ιρ</supplied>ων</abbr><ex>όμος</ex></expan></w>
+               <w lemma="ὁ">τοῦ</w> <w lemma="κτίτωρ">κτήτωρος</w>, <date><w lemma="μήν"><expan><abbr>μη</abbr><ex>νὶ</ex></expan></w>
+                  <rs type="month" ref="nou"><w lemma="Νοέμβριος">Νοεβρίῳ</w></rs> <w lemma="εἰς">εἰς</w> <w lemma="ὁ"><expan><abbr>τ</abbr><ex>ὰ</ex></expan></w> 
+               <num value="10">ι</num>, <w lemma="ἰνδικτιών"><expan><abbr>ἠνδ</abbr><ex>ικτιῶνος</ex></expan></w> <num value="2">β</num>, <w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w> <num value="6692">ςχϞβ</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

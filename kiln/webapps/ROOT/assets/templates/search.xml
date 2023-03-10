@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kiln:root xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- Imports stylesheet to convert Solr results into HTML. -->
+  <xsl:import href="cocoon://_internal/template/xsl/stylesheets/solr/results-to-html.xsl"/>
+
+  <kiln:parent>
+    <xi:include href="base.xml"/>
+  </kiln:parent>
+
+  <kiln:child>
+
+    <kiln:block name="css">
+      <kiln:super/>
+      <link href="{$kiln:assets-path}/scripts/vendor/jquery-ui/themes/base/all.css"
+        rel="stylesheet" type="text/css"/>
+    </kiln:block>
+
+    <kiln:block name="title">
+      <kiln:super/>
+      <i18n:text>Search</i18n:text>
+    </kiln:block>
+
+    <kiln:block name="page-heading">
+      <kiln:super/>
+      <i18n:text>Search</i18n:text>
+    </kiln:block>
+
+    <kiln:block name="menu-languages">
+      <xsl:call-template name="searchMenuLanguages"/>
+    </kiln:block>
+
+    <kiln:block name="content">
+      <div class="row">
+        <div class="large-4 columns">
+
+          <xsl:call-template name="search_form"/>
+
+          <!-- List available facets. -->
+          <xsl:apply-templates
+            select="/aggregation/response/lst[@name='facet_counts']/lst[@name='facet_fields']"
+            mode="search-results"/>
+        </div>
+        <div class="large-8 columns">
+          <!-- List of currently applied facets. -->
+          <div class="panel">
+            <xsl:if test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']/str[not(substring-before(text(), ':') = ('not-before', 'not-after'))]) > 0">
+              <div class="right">
+                <a href="../../">
+                  <i class="fa fa-times">
+                    <xsl:text> </xsl:text>
+                  </i>
+                  <xsl:text> </xsl:text>
+                  <i18n:text>Reset</i18n:text>
+                </a>
+              </div>
+            </xsl:if>
+            <h3>
+              <i18n:text>Selected searches</i18n:text>
+            </h3>
+
+            <ul class="inline-list">
+              <xsl:choose>
+                <xsl:when
+                  test="count(/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']/str[not(substring-before(text(), ':') = ('not-before', 'not-after'))]) = 0">
+                  <li class="muted">
+                    <i18n:text>No filters</i18n:text>
+                  </li>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:apply-templates mode="search-results"
+                    select="/aggregation/response/lst[@name='responseHeader']/lst[@name='params']/*[@name='fq']"
+                  />
+                </xsl:otherwise>
+              </xsl:choose>
+            </ul>
+          </div>
+          <xsl:apply-templates select="/aggregation/response/result" mode="search-results"/>
+        </div>
+      </div>
+    </kiln:block>
+
+
+    <kiln:block name="mainjs">
+      <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+        data-main="{$kiln:assets-path}/scripts/search">&#160;</script>
+    </kiln:block>
+  </kiln:child>
+
+</kiln:root>

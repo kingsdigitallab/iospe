@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Чупана и Алексия</title><title xml:lang="en">Epitaph of Tzoupanis and Alexis</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.144</idno><idno type="PE">PE5000144</idno>
+            <idno type="AYV2012-number">byz139</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>АЖ I–2343</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno>АЖ I–2343</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Наверху лучковая арка и акротерии; на лицевой стороне рельефное изображение креста в орнаментальной рамке и 
+                              орнаментального круга. В настоящее время обломана сверху.</p>
+                           <p xml:lang="en">The top is shaped as on ogee arch with acroteria. On the front  - relief cross within ornamental frame, and an ornamental circle.</p>
+                           <dimensions>
+                              <height>152,0</height>
+                              <width>35,0</width>
+                              <depth>29,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы вытянуты по вертикали. Альфа с наклонной вправо 
+                           перекладиной, вертикальной правой гастой и верхним штрихом, пи с удлиненной перекладиной. Лигатура омикрон-ипсилон, надстрочные знаки.</seg>
+                        <seg xml:lang="en">Lapidary. Elongated letters. Alpha with right-slanting crossbar, vertical right hasta, and capping horizontal bar pointing left; 
+                           pi with extended horizontal. Ligature: omicron-upsilon. Superscript marks.</seg>
+                        <height unit="cm">1,5–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки.</seg>
+                        <seg xml:lang="en">Laki.</seg>
+                     </origPlace>
+                     <origDate notBefore="1364" notAfter="1364" evidence="указание_надписи">
+                        <seg xml:lang="ru">1364 г.</seg>
+                        <seg xml:lang="en">1364 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#laki">Лаки.</placeName>
+                        <rs type="circumstances">Лето 1898 г., обследования А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Лес, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Laki.</placeName>
+                        <rs type="circumstances">Summer of 1898, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Forest, cemetery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2013-01-09" who="AG">translation of the inscription supplied by a patronymic</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-30" who="AG">small corrections, tags corrected, editor added</change>
+         <change when="2012-04-30" who="AG">corrections in metadata, several lines translated</change>
+         <change when="2012-03-12" who="AG">some corrections in metadata, bibliography and apparatus tagged, tags in the Greek text corrected</change>
+         <change when="2012-03-06" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.144">
+                 <desc xml:lang="en">Photograph of monument</desc>
+                  <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.144-1">
+                <desc xml:lang="en">Photograph of text</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+       </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1898a--><ptr target="bib:b0134"/>, 235–238, 252, № <citedRange>64г</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="σφάζω"><expan><abbr>Ἐσφά</abbr><ex>γ</ex><abbr>η</abbr></expan></w> <w lemma="ὁ">ὁ</w> 
+               <w lemma="ἐν">ἐν</w> <w lemma="μακάριος"><expan><abbr>μακαρίο</abbr><ex>ι</ex><abbr>ς</abbr></expan></w> <w lemma="καί">καὶ</w> 
+               <w lemma="δοῦλος"><expan><abbr>δοῦ</abbr><ex>λος</ex></expan></w>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+               <persName type="attested" ref="#person192"><name nymRef="Τζουπάνις">Τζουπάνις</name> <w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person193"><name nymRef="Ιανακ—">Ἰα
+                  <lb n="3" break="no"/>νάκου</name></persName></persName> <w lemma="καί">καὶ</w> <w lemma="ὁ">τοῦ</w> <w lemma="υἱός">ἱοῦ</w> <w lemma="αὐτός">αὐτοῦ</w>
+               <lb n="4"/><persName type="attested" ref="#person194"><name nymRef="Ἀλέξις">Ἀλέξις</name></persName> <w lemma="ὑπό">ὑπὸ</w> <w lemma="ἡμέρα"> ἡμερῶν</w>
+               <persName type="ruler" key="temir"><name nymRef="Τεμίρης">Τεμ<supplied reason="lost">ί</supplied>ρη</name></persName>
+               <lb n="5"/><w lemma="ἐν">ἐν</w> <date><w lemma="μήν"><expan><abbr>μη</abbr><ex>νὶ</ex></expan></w> <rs type="month" ref="iun"><w lemma="Ἰούνιος">Ἰουνίου</w></rs> <w lemma="εἰς"><unclear>ὐ</unclear><supplied reason="lost">ς</supplied></w><w lemma="ὁ"><supplied reason="lost">τ</supplied>ὰ</w> <num value="28">κη</num>,
+               <lb n="6"/><w lemma="ἔτος">ἔτους</w> <num value="6872">ςωοβ</num></date>
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="5"><rdg source="bib:b0134">ἡμ(έρᾳ)</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Зарезан иже во блаженных и раб Божий Чупан, сын Янака, и его сын Алексий во дни Тем<supplied reason="lost">и</supplied>ра, 28 июня 6872 года.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Slaughtered, in the blessed ones, and a servant of God, Tzoupanis, son of Ianakos, and his son Alexis, in the days of Temires, on the 28th of June, in the year 6872.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по фотографии Бертье-Делагарда. Старая фотография хранится в 
+                ФА ИИМК (О.1077.11; О.1529.85).  </p>
+                <p> 1–2. Формула “зарезан” известна также по недатированной (вероятно, поствизантийской) 
+                    надписи из деревни Кудрино (бывш. Шуры; Латышев 1910, 4–5, 
+                   № 12, рис. 12). Ср. формулу ἐδόθη ὑπὸ τοῦ ξίφους в надписи 1301 г. из Малой Азии (Bees 1922, № 77). Формула “иже во блаженной памяти и раб Божий” 
+                   с пропуском слова “память” встречается в <ref type="inscription">V 224</ref><!--byz211-->.  </p>
+                <p> 2–3. <!--Относительно имени Чупан см. прил. 2.--></p>
+                <p> 3. Имя Янак может быть тюркским <!--(см. прил. 2)--> или искаженным греческим Иоанникий.</p>
+            <p>4. Относительно имени Алексей см. комм. к <ref type="inscription">V 167</ref><!--byz160-->; сбивка в падежах типична для Горного Крыма (ср. <ref type="inscription">V 135</ref><!--byz130-->, 
+               <ref type="inscription">V 136</ref><!--byz131-->). Формулу ὑπὸ ἡμερῶν ср. в  <ref type="inscription">V 172</ref><!--byz165-->, <ref type="inscription">V 179</ref><!--byz172--> 
+               и <ref type="inscription">V 180</ref><!--byz214-->. За Темиром надписи Латышев предлагал видеть Кутлук-Темира, ханского наместника в Крыму. Упоминание о нем, по мнению Латышева, 
+                   введено для того, чтобы подчеркнуть смерть Чупана и Алексея от рук татар (см. также Мыц 2009, 38–39).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev used a photograph made by Bertye-Delagard in preparing the publication of this inscription. That photograph is preserved at the Photo Archive, 
+               Institute for History of Material Culture, Russian Academy of Sciences (О.1077.11; О.1529.85).</p>
+            <p>1-2. The formula "slaughtered" is also known from an undated (probably post-Byzantine) inscription from the village Kudrino (former Shury; Latyshev 
+               1910, 4–5, № 12, fig. 12). We may compare the formula ἐδόθη ὑπὸ τοῦ ξίφους in the inscription of 1301 C.E. from Asia Minor (Bees 1922, № 77).
+               The formula "in the blessed memory, and a servant of God" (with the omission of the word "memory") is attested in <ref type="inscription">V 224</ref><!--byz211-->.</p>
+             <!--<p>2-3. On the name Tzoupanis, see Appendix 2.</p>-->
+             <p>3. The name Ianakos could be Turkic <!--(see Appendix 2)--> or a corruption of the Greek Ioannikios.</p>
+            <p>4. On the name Alexis, see commentary to <ref type="inscription">V 167</ref><!--byz160-->; conflation of grammatical cases is common for Mountainous Crimea (cf.
+               <ref type="inscription">V 135</ref><!--byz130-->, <ref type="inscription">V 136</ref><!--byz131-->).  For the formula ὑπὸ ἡμερῶν, see <ref type="inscription">V 172</ref><!--byz165-->, 
+               <ref type="inscription">V 179</ref><!--byz172--> and <ref type="inscription">V 180</ref><!--byz214-->. Latyshev thought that Temires of this inscription was
+               Kutluk-Temir, the khan's governor for Crimea. According to Latyshev, his mention was meant to underscore that Tzoupanis and Alexis had met their deaths at the 
+               hands of Tatars (see also Myts 2009, 38–39).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<!-- Project main sitemap. -->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+  <map:views>
+    <map:view from-label="content" name="content">
+      <map:serialize type="xml"/>
+    </map:view>
+
+    <map:view from-label="tei" name="tei">
+      <map:serialize type="xml"/>
+    </map:view>
+  </map:views>
+
+  <map:pipelines>
+    <!-- Mount sub-sitemaps. -->
+    <map:pipeline id="local-mount">
+      <!-- Mount a sitemap for any admin URLs, such as editorial
+           processes like Schematron validation. -->
+      <map:match pattern="admin/**">
+        <map:mount check-reload="yes" src="admin.xmap" uri-prefix="admin/"/>
+      </map:match>
+      <!-- Mount a sitemap for (potentially) project-specific internal
+           pipelines. -->
+      <map:match pattern="internal/**">
+        <map:mount check-reload="yes" src="internal.xmap" uri-prefix="internal/"/>
+      </map:match>
+    </map:pipeline>
+
+    <map:pipeline id="local-images">
+      <map:match id="local-images-gif" pattern="images/**.gif">
+        <map:read mime-type="image/gif" src="../content/images/{1}.gif"/>
+      </map:match>
+
+      <map:match id="local-images-jpeg" pattern="images/**.jpg">
+        <map:read mime-type="image/jpeg" src="../content/images/{1}.jpg"/>
+      </map:match>
+
+      <map:match id="local-images-png" pattern="images/**.png">
+        <map:read mime-type="image/png" src="../content/images/{1}.png"/>
+      </map:match>
+    </map:pipeline>
+
+
+    <!-- Mount Search sub-sitemaps.  -->
+    <map:pipeline type="noncaching">
+      <map:match pattern="search/**">
+        <map:mount check-reload="yes" src="search.xmap" uri-prefix="search/"/>
+      </map:match>
+    </map:pipeline>
+    
+    
+ 
+    <map:pipeline>
+      <!-- volumes -->     
+      <!-- English: lists of inscriptions in each volume -->
+      <map:match pattern="1/toc.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=1/toc.html"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:1&amp;fl=tei-id,sortable-id,file,origin-ref,origin-en,origDate-en,inscription-title-en,inscription-has-date&amp;rows=999"/>
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-volumes.xsl">
+          <map:parameter name="url" value="1/toc.html"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="volumes"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="3/toc.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=3/toc.html"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:3&amp;fl=tei-id,sortable-id,file,origin-ref,origin-en,origDate-en,inscription-title-en,inscription-has-date&amp;rows=999"/>
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-volumes.xsl">
+          <map:parameter name="url" value="3/toc.html"/>
+          <map:parameter name="lang" value="en"/>
+          <map:parameter name="toc" value="volumes"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="5/toc.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=5/toc.html"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:5&amp;fl=tei-id,sortable-id,file,origin-ref,origin-en,origDate-en,inscription-title-en,inscription-has-date&amp;rows=999"/>
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-locations.xsl">
+          <map:parameter name="url" value="5/toc.html"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <!-- Russian: lists of inscriptions in each volume -->
+      <map:match pattern="1/toc-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.ru.xml?url=1/toc-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:1&amp;fl=tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-volumes.xsl">
+          <map:parameter name="url" value="1/toc-{1}.html"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="3/toc-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.ru.xml?url=3/toc-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:3&amp;fl=tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-volumes.xsl">
+          <map:parameter name="url" value="3/toc-{1}.html"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+      
+      <map:match pattern="5/toc-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.ru.xml?url=5/toc-{1}.html"/>
+          <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+          <map:part element="toc"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:5&amp;fl=tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
+        </map:aggregate>
+        <!-- TESTING -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END TESTING -->
+        <map:transform src="cocoon://_internal/template/tocs-locations.xsl">
+          <map:parameter name="url" value="5/toc-{1}.html"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+    </map:pipeline> 
+    
+    
+    
+    <map:pipeline>
+      <!-- Indices, volume description pages, concordances -->
+      <!-- Concordances -->
+      <map:match pattern="conc/**">
+        <map:mount check-reload="yes" src="concordances.xmap" uri-prefix="conc/"/>
+      </map:match>
+      
+      <!-- Pages that give info about a particular volume, with links to the Introduction, etc. -->
+      <map:match pattern="corpora/**">
+        <map:mount check-reload="yes" src="corpora.xmap" uri-prefix="corpora/"/>
+      </map:match>
+
+      <!-- Indices -->
+      <map:match pattern="indices/**">
+        <map:mount check-reload="yes" src="indices.xmap" uri-prefix="indices/"/>
+      </map:match>
+    </map:pipeline>   
+    
+    
+    
+    <map:pipeline>
+      <!-- Inscriptions -->
+      <map:match pattern="inscriptions/**">
+        <map:mount check-reload="yes" src="inscriptions.xmap" uri-prefix="inscriptions/"/>
+      </map:match>
+    </map:pipeline>   
+    
+    
+    
+    <map:pipeline>
+      <!-- Authority lists -->
+      <map:match pattern="alists/**">
+        <map:mount check-reload="yes" src="alists.xmap" uri-prefix="alists/"/>
+      </map:match>
+    </map:pipeline>   
+    
+    
+
+    <!-- Main display pipeline. -->
+    <map:pipeline>
+      <map:match pattern="">
+        <!-- Redirect request to the root path to the index page. -->
+        <map:redirect-to uri="/index.html"/>
+      </map:match>
+
+      <!-- Main -->
+      <map:match pattern="index.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=index.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/index.xml" label="tei"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="url" value="index.html"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="index-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{1}.xml?url=index-{1}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/index.xml" label="tei"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="url" value="index-{1}.html"/>
+          <map:parameter name="lang" value="{1}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{1}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- individual inscriptions -->
+
+      <map:match pattern="*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{2}.xml?url={1}-{2}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part src="../content/xml/tei/alists/surnames.xml" element="surnames"/>
+          <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
+          <map:part element="order"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fl=tei-id&amp;sort=sortable-id+asc&amp;start=0&amp;rows=1000"/>
+          <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
+          <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
+          <!-- verse -->
+          <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
+          <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
+          <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"
+          />
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/inscription.xsl">
+          <map:parameter name="url" value="{1}-{2}.html"/>
+          <map:parameter name="lang" value="{2}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{2}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url={1}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
+          <map:part src="../content/xml/tei/alists/surnames.xml" element="surnames"/>
+          <map:part src="../content/xml/tei/alists/criteria.xml" element="crit"/>
+          <map:part element="order"
+            src="cocoon://_internal/solr/query/q=dt:inscription&amp;fl=tei-id&amp;sort=sortable-id+asc&amp;start=0&amp;rows=1000"/>
+          <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
+          <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
+          <!-- verse -->
+          <map:part src="cocoon:/views/diplomatic/{1}.xml/off" element="v_di"/>
+          <map:part src="cocoon:/v_epidoc/{1}.xml" element="v_ep"/>
+          <map:part src="../content/xml/tei/inscriptions/{1}.xml" element="inscription" label="tei"
+          />
+        </map:aggregate>
+        <!-- DEBUG -->
+        <!--<map:serialize type="xml"/>-->
+        <!-- END DEBUG -->
+        <map:transform src="cocoon://_internal/template/inscription.xsl">
+          <map:parameter name="url" value="{1}.html"/>
+          <xml:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="*.xml">
+        <map:generate src="../content/xml/tei/inscriptions/{1}.xml"/>
+        <map:transform type="xinclude"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <!-- documentation -->
+      <map:match pattern="doc/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url=doc/{1}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/doc/{1}.xml" label="tei"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="url" value="doc/{1}.html"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <!-- all other content files -->
+
+      <map:match pattern="*/*-*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.{3}.xml?url={1}/{2}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/{1}/{2}.xml" label="tei"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="url" value="{1}/{2}-{3}.html"/>
+          <map:parameter name="lang" value="{3}"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="{3}"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+      <map:match pattern="*/*.html">
+        <map:aggregate element="aggregation" label="content">
+          <map:part src="cocoon://_internal/menu/main.xml?url={1}/{2}.html"/>
+          <map:part src="cocoon://internal/metadata/files.xml"/>
+          <map:part src="../content/xml/tei/{1}/{2}.xml" label="tei"/>
+        </map:aggregate>
+        <map:transform src="cocoon://_internal/template/tei.xsl">
+          <map:parameter name="url" value="{1}/{2}.html"/>
+          <map:parameter name="lang" value="en"/>
+        </map:transform>
+        <map:transform type="i18n">
+          <map:parameter name="locale" value="en"/>
+        </map:transform>
+        <map:serialize type="xhtml"/>
+      </map:match>
+
+    </map:pipeline>
+
+    <map:pipeline internal-only="true">
+      <map:match pattern="views/*/*/*">
+        <map:generate src="cocoon:/stripNameDate/{2}"/>
+        <map:transform src="../stylesheets/example-p5-xslt/start-edition.xsl">
+          <map:parameter name="edition-type" value="{1}"/>
+          <map:parameter name="leiden-style" value="iospe"/>
+          <map:parameter name="external-app-style" value="iospe"/>
+          <map:parameter name="internal-app-style" value="iospe"/>
+          <map:parameter name="verse-lines" value="{3}"/>
+        </map:transform>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <map:match pattern="stripNameDate/*">
+        <map:generate src="../content/xml/tei/inscriptions/{1}"/>
+        <map:transform type="xinclude"/>
+        <map:transform src="../stylesheets/epidoc-views/stripNameDate.xsl"/>
+        <map:serialize type="xml"/>
+      </map:match>
+
+      <map:match pattern="v_epidoc/*">
+        <map:generate src="../content/xml/tei/inscriptions/{1}"/>
+        <map:transform src="../stylesheets/epidoc-views/epidoc.xsl"/>
+        <map:serialize type="text"/>
+      </map:match>
+
+    </map:pipeline>
+
+    <!-- Kiln as backend pipeline. -->
+    <map:pipeline>
+      <!-- TEI content provided as HTML with internal metadata. -->
+      <map:match id="local-tei-backend-xml" pattern="text/*.xml">
+        <map:generate src="cocoon://internal/tei/preprocess/{1}.xml" label="tei"/>
+        <map:transform src="cocoon://_internal/template/backend_tei.xsl"/>
+        <map:serialize type="xml_nodecl"/>
+      </map:match>
+    </map:pipeline>
+
+    <!-- Error handling, making use of the templating system for
+         errors that fit within the site's design. If this throws any
+         errors, handling will fall back to the default plain error
+         handling in config.xmap. -->
+    <map:handle-errors>
+      <map:generate type="exception"/>
+      <map:select type="exception">
+        <map:when test="not-found">
+          <map:transform src="../stylesheets/error/add-not-found-messages.xsl">
+            <map:parameter name="URIstring" value="{request:requestURI}"/>
+          </map:transform>
+          <map:transform src="cocoon://_internal/template/error.xsl">
+            <map:parameter name="debug" value="{global:debug}"/>
+            <map:parameter name="URIstring" value="{request:requestURI}"/>
+          </map:transform>
+        </map:when>
+      </map:select>
+      <map:serialize/>
+    </map:handle-errors>
+  </map:pipelines>
+</map:sitemap>

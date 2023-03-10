@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Солтык-раиса <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Epitaph of Soltyk-rais <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.143</idno><idno type="PE">PE5000143</idno>
+            <idno type="AYV2012-number">byz138</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение орнаментированного креста в арочке и нишки в виде арочки под ним. Поверхность выветрена.</p>
+                           <p xml:lang="en">On the front - ornamented cross in an arch, and an arched niche below the cross. The surface is weathered.</p>
+                           <dimensions>
+                              <height>118,0</height>
+                              <width>37,0</width>
+                              <depth>28,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В нишке.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>In the niche.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                        <height unit="cm">2,3.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки.</seg>
+                        <seg xml:lang="en">Laki.</seg>
+                     </origPlace>
+                     <origDate notBefore="1362" notAfter="1362" evidence="указание_надписи">
+                        <seg xml:lang="ru">1362 г.</seg>
+                        <seg xml:lang="en">1362 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#laki">Лаки.</placeName>
+                        <rs type="circumstances">1915–1916 гг., обследования М.И. Скубетова.</rs>
+                        <rs type="context">К западу от храма Св. Троицы, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Laki.</placeName>
+                        <rs type="circumstances">1915-1916, survey of M.I. Skubetov.</rs>
+                        <rs type="context">To the west of Holy Trinity church, necropolis.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+         <change when="2012-09-24" who="AG">key added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-30" who="AG">corrections, editor added</change>
+         <change when="2012-04-30" who="AG">several lines translated</change>
+         <change when="2012-03-12" who="AG">some corrections in metadata, bibliography and apparatus tagged, tags in the Greek text corrected</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918а--><ptr target="bib:b0156"/>, 35–37, № <citedRange>5</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="3-4"><rdg source="bib:b0156">... ἱερ(εὺς) ...</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Солтык-раис (?) священным сном (?), сын Чимукти, камарец, 15 сентября 6870 года, в 15-й индикт.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Soltyk-rais (?), in holy sleep (?), son of Tsimoukti, from Kamara, on the 15th of September, 
+               in the year 6870, in the 15th indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по фотографии и эстампажу Скубетова. Парная к ней стела, по 
+                сообщению Скубетова, не читаема.  </p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+                <p> 2–4.<!-- Относительно имен см. прил. 2.--> Ввиду отсутствия фотографии или рисунка 
+                    восстановление 3-й и 4-й строк предположительное.</p>
+                <p> 5. Латышев предположил, что погребенный происходил из селения Камара (совр. Оборонное) в Юго-западном 
+                    Крыму.  </p>
+            <p> 6. Датировка по индикту встречается в Лаках также в <ref type="inscription">V 142</ref><!--byz137-->.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev relied on the photograph and estampage made by Skubetov. Another, twin stele, according to Skubetov, was illegible.</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>2-4.<!-- On the names, see Appendix 2.--> In the absence of either a photo or a drawing, the restoration of lines 3 and 4 is hypothetical.</p>
+             <p>5. Latyshev suggested that the deceased was from the village Qamara (modern Oboronnoye) in Southeast Crimea.</p>
+            <p>6. Dating by indiction is known at Laki from another inscription: <ref type="inscription">V 142</ref><!--byz137--></p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκοιμί<supplied reason="lost">θη</supplied></w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος">δοῦ<supplied reason="lost">λος</supplied></w>
+               <lb n="2"/><w lemma="ὁ"><supplied reason="lost">τ</supplied>οῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+               <persName type="attested" ref="#person189"><name nymRef="Σολτὴκ-ῥαΐζης">Σολτὴκ<lb n="3" break="no"/>ῥα<supplied reason="lost">ΐζ</supplied>η<supplied reason="lost" cert="low">ς</supplied></name></persName> <w lemma="ἱερός">ἱερ<supplied reason="lost">ῷ</supplied></w> <w lemma="ὁ">τῇ</w> <w lemma="ὕπνιον">ὑ <lb n="4" break="no"/>πνί<supplied reason="lost">ῳ</supplied></w>, <w lemma="ὁ">τ<supplied reason="lost">οῦ</supplied></w> <persName type="attested" ref="#person190"><name nymRef="Τσιμουκτι">Τσιμουκτι</name>
+               <lb n="5"/><placeName type="ethnic" key="kamara">Καμαρεύς</placeName></persName>, <w lemma="ἐν">ἐν</w> <date><w lemma="μήν"><expan><abbr>μ</abbr><ex>ηνὶ</ex></expan></w>
+               <lb n="6"/><rs type="month" ref="sep"><w lemma="Σεπτέμβριος">Σεπτε<supplied reason="lost">μβρίῳ</supplied></w></rs> <num value="15">ιε</num>, <w lemma="ἔτος">ἔτι</w>
+               <lb n="7"/><num value="6870">ςωο</num>, <w lemma="ἰνδικτιών"><expan><ex>ἰνδικτιῶνος</ex></expan></w> <num value="15">ιε</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

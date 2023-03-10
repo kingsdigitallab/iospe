@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Николая <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Epitaph of Nicholas <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.67</idno><idno type="PE">PE5000067</idno>
+            <idno type="AYV2012-number">byz067</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4047</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4047</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мелкозернистый мрамор.</material>
+                           <material xml:lang="en">White fine-grained marble.</material>
+                           <p xml:lang="ru">Плита с полукруглым верхом; на лицевой стороне изображение креста с тремя каплями на концах рукавов. 
+                              Обломана справа и снизу.</p>
+                           <p xml:lang="en">Panel with rounded top; on the front is an incised cross, its left arm ending in two and bottom arm in three teardrops. 
+                           Broken off on the right and bottom.</p>
+                           <dimensions>
+                              <height>27,5</height>
+                              <width>17,0</width>
+                              <depth>4,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1903 г., случайная находка.</rs>
+                        <rs type="context">Рядом с храмом № 15 («базилика в базилике»), каменный завал.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1903, chance find.</rs>
+                        <rs type="context">Near Church 15 ("basilica in basilica"), rubble fill.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru">Демонстративная надпись.</seg>
+                        <seg xml:lang="en">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1">
+                              <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                              <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы маньеризованные. 
+                              Альфа с ломаной перекладиной и с петлей, каппа несомкнутая, ро вытянуто по вертикали, ипсилон с диерезой.</seg>
+                           <seg xml:lang="en">Lapidary; ornate letters. Alpha with broken crossbar and with a loop, kappa’s diagonals do not touch its vertical,
+                              rho with elongated vertical, upsilon with diaeresis.</seg>
+                           <height unit="cm">1,3.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="0901" notAfter="1000" precision="low" evidence="форма_креста шрифт">
+                           <seg xml:lang="ru">X в.</seg>
+                           <seg xml:lang="en">Xth century C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru">Надгробная надпись.</seg>
+                        <seg xml:lang="en">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1">
+                              <seg xml:lang="ru">По сторонам от нижнего рукава креста.</seg>
+                              <seg xml:lang="en">On either side of the bottom arm of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">См. эпиграфическое поле 1.</seg>
+                           <seg xml:lang="en">See field 1.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="0901" notAfter="1000" precision="low" evidence="форма_креста шрифт">
+                           <seg xml:lang="ru">X в.</seg>
+                           <seg xml:lang="en">Xth century C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-28" who="CB">Minor changes to textparts.</change>
+         <change when="2015-04-24" who="CB">Textparts</change>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-03-24" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">corrections, several lines translated, tags corrected</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-25" who="AFS">bibliography updated</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-17" who="AG">small corrections</change>
+         <change when="2012-01-10" who="AG">tagging</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.67" n="1">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!-- Латышев 1905--><ptr target="bib:b0145"/>, 109–110, № <citedRange>21</citedRange></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!-- Латышев 1905--><ptr target="bib:b0145"/>, 109–110, № <citedRange>21</citedRange></bibl>
+                <bibl n="2"><!--Латышев 1908--><ptr target="bib:b0149"/>, <citedRange>41</citedRange></bibl>
+             </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name> 
+                     <name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><abbr>ς</abbr></expan></name></persName>
+                  <lb n="2"/><w lemma="νικάω">νικᾷ</w>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω"><expan><abbr>Ἐκοιμήθ</abbr><ex>η</ex></expan></w> <supplied reason="lost"><w lemma="ὁ">ὁ</w> 
+                     <w lemma="ἐν">ἐν</w></supplied> <w lemma="μακάριος"><supplied reason="lost">μα</supplied>-<lb n="2" break="no"/>καρήᾳ</w> <w lemma="ὁ">τῖ</w> 
+                  <supplied reason="lost"><w lemma="μνήμη">μνήμῃ</w> <w lemma="καί">καὶ</w></supplied>
+                  <lb n="3"/><w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w> 
+                  <persName type="divine" key="theos"><roleName><w lemma="θεός"><supplied reason="lost"><expan><abbr>Θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></supplied></w></roleName></persName>
+                  <lb n="4"/><persName type="attested" ref="#person69"><name nymRef="Νικόλαος"><supplied reason="lost">Νικό</supplied><unclear>λ</unclear><supplied reason="lost" cert="low">α</supplied><unclear>ο</unclear>ς</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
+               </ab>
+            </div>
+         </div>
+         <div type="apparatus" n="2">
+            <listApp>
+               <app loc="2"><rdg source="bib:b0145">Καρηάτι[ος]</rdg></app>
+               <app loc="4"><rdg source="bib:b0145 bib:b0149"><note>om.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Иисус Христос побеждает.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Почил <supplied reason="lost">иже во бла</supplied>женной <supplied reason="lost">памяти и</supplied> раб <supplied reason="lost">Божий Нико</supplied>л<supplied reason="lost">ай (?) …</supplied></p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Jesus Christ is victorious.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep, [who is in bl]essed memory, and a servant of God, Nicholas.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> О находке см. Косцюшко-Валюжинич 1905, 109. По форме креста этот памятник сближается с <ref type="inscription">V 89</ref><!--byz089-->.</p>
+                <p>О формуле см. <ref type="introduction">IV.3.C.e</ref>.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1–3. О формуле см. <ref type="introduction">IV.3.F.c</ref>. В editio princeps Латышев, не учтя первоначальных размеров камня, ошибочно восстановил 
+                  имя Καρηάτι[ος], каковой промах затем сам же и исправил.  </p>
+                <p> 4. В последней строке Латышев предполагал имя усопшего, но не восстанавливал его. На наш взгляд, наиболее подходящим по количеству и 
+                   облику сохранившихся букв вариантом является широко распространенное имя Νικόλαος (см. комм. к <ref type="inscription">V 48</ref><!--byz048-->), 
+                   причем сигма вынесена над строкой, подобно сокращению в С. 1.  В конце надписи стояла, вероятно, датировка.</p>
+                <p> С точки зрения палеографии надпись представляет собой уникальный пример перехода от альфы с ломаной перекладиной к альфе с петлей, 
+                   происходивший в Херсоне в Х в.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>On circumstances of discovery, see Kostsyushko-Valyuzhinich 1905, 109. The shape of the cross is similar to that of <ref type="inscription">V 89</ref><!--byz089-->. </p>
+               <p>On the formula, see Introduction <ref type="introduction">IV.3.C.e</ref>.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>1-3. On the formula, see Introduction <ref type="introduction">IV.3.F.c</ref>. In the editio princeps, Latyshev had incorrectly restored the name Καρηάτι[ος]
+               because he did not take into consideration the size of the monument, but he later corrected his mistake.</p>
+                <p>4-5. In the last line, Latyshev speculated that the deceased's name may have been written, but he did not include it in his restoration. A widely attested
+                   common name Νικόλαος (see commentary to <ref type="inscription">V 48</ref><!--byz048-->) could, in our opinion, fit the number and shapes of the surviving 
+                   letters most comfortably, especially since the sigma is set above the line of text in a way similar to Line 1. The inscription most likely ended with a 
+                date.</p>
+                <p>Palaeographic features of this inscription represent a unique case where we observe a process of transition from alpha with broken crossbar to alpha with a loop,
+                   which was under way in Cherson in the Xth century.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

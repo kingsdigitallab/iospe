@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Иоанна</title><title xml:lang="en">Epitaph of John</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.188</idno><idno type="PE">PE5000188</idno>
+            <idno type="AYV2012-number">byz178</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon23">Капитель.</objectType>
+                           <objectType xml:lang="en">Capital.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Четырехгранная капитель со следами красной краски. Сохранилась целиком.</p>
+                           <p xml:lang="en">Quadrangular capital with traces of red paint. Fully preserved.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>, густая красная краска.</seg>
+                        <seg xml:lang="en">Dipinto, thick red paint.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="low" evidence="археологический_контекст">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">1912 г., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Базилика, южная апсида, алтарная преграда, колонка.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1912, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Basilica, south apse, altar partition, colonnette.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+          <change when="2013-03-06" who="NG">minor corrections in Greek lemmata</change>
+          <change when="2012-10-30" who="AL">small corrections in Russian text</change>
+         <change when="2012-09-26" who="AG">coment updated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-14" who="AG">several lines translated, some corrections</change>
+          <change when="2012-06-12" who="AL">bibliography and original date tagged, editor tag inserted</change>
+          <change when="2012-03-19" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Лепер 1913--><ptr target="bib:b0160"/>,  <citedRange>149</citedRange></bibl>
+               <bibl n="1.1"><!-- Бармина 2009--><ptr target="bib:b0016"/>,  <citedRange>413</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Иоанн скончался.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Io(annes) died.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Надпись издана без изображения. Не исключено, что погребальная надпись на капители колонки 
+                алтарной преграды относится к поздневизантийскому ктитору храма, похороненному, возможно, 
+                где-то рядом.</p>
+            <p>Относительно формулы см. <ref type="introduction">IV.3.F.f</ref>, об имени Иоанн — комм. к <ref type="inscription">V 108</ref><!--byz026-->, о мене фиты и 
+               теты — <ref type="introduction">IV.5.A</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription was published without an image. It is not impossible that this epitaph on the capital crowning a colonnette of the altar partition
+            refers to the Late Byzantine ktitor of the church, who might have been buried somewhere in the vicinity.</p>
+            <p>On the formula, see Introduction <ref type="introduction">IV.3.F.f</ref>; on the name John - see commentary to <ref type="inscription">V 108</ref><!--byz026-->;
+               on the interchange of phi and theta, see Introduction <ref type="introduction">IV.5.A</ref>.</p>
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person229"><name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννης</ex></expan></name></persName> 
+               <w lemma="τελειόω">ἐτελιότη</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

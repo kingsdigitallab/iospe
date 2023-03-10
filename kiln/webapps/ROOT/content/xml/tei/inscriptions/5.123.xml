@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Афанасия</title><title xml:lang="en">Epitaph of Athanas</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.123</idno><idno type="PE">PE5000123</idno>
+            <idno type="AYV2012-number">byz119</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Стела с полукруглым верхом, плетенкой по краю, орнаментированным крестом в круге, орнаментальным пояском и прямоугольным 
+                              углублением (37х13 см) под ним. Обломана сверху, сколы по поверхности.</p>
+                           <p xml:lang="en">Stele with rounded top, crossweave design along the edges, ornamental cross in a circle, ornamental band across and a 
+                              rectangular inset panel (37х13 cm) below. Broken on the top; the surface is chipped.</p>
+                           <dimensions>
+                              <height>136,5</height>
+                              <width>46,0</width>
+                              <depth>16,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углублении.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>Within the inset area.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                        <height unit="cm">1,2–1,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate notBefore="1399" notAfter="1400" evidence="указание_надписи">
+                        <seg xml:lang="ru">1399–1400 гг.</seg>
+                        <seg xml:lang="en">1399–1400 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#vysokoe">Высокое.</placeName>
+                        <rs type="circumstances">До 1915–1916 гг., обследования Г.Л. Чукурова.</rs>
+                        <rs type="context">Юхары-Керменчик, дом, очаг.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">Before 1915-1916, survey of G.L. Chukurov.</rs>
+                        <rs type="context">Yukhary-Kermenchik, house, fireplace.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-28" who="AG">several lines translated, small corrections</change>
+         <change when="2012-04-24" who="AG">editor added, several lines translated, some corrections in metadata</change>
+         <change when="2012-03-06" who="AG">corrected, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918а--><ptr target="bib:b0156"/>, 39, № <citedRange>8</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="κοιμάω"><expan><abbr>Ἐκημύθ</abbr><ex>η</ex></expan></w>
+               <w lemma="ὁ">ὡ</w> <w lemma="δοῦλος">δωῦλος</w> <w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="2"/><w lemma="τε">τ<supplied reason="lost">ε</supplied></w>
+               <w lemma="καί"><supplied reason="lost"><expan><ex cert="low">καὶ</ex></expan></supplied></w>
+               <w lemma="παπᾶς"><supplied reason="lost">πα</supplied>πᾶς</w>
+               <persName type="attested" ref="#person155"><name nymRef="Ἀθανάς"><expan><abbr>Ἀθανὰ</abbr><ex>ς</ex></expan></name></persName> <orig>ΤΩ<unclear>Θ</unclear>Ι</orig>
+               <lb n="3"/><w lemma="ἀποτίθημι"><app type="alternative"><lem>ἀπέ<choice><sic>τ</sic><corr>θ</corr></choice>εντω</lem></app></w>
+               <space quantity="3" unit="character"/> <date><w lemma="ἐπί">ἐπὴ</w>
+               <lb n="4"/><w lemma="ἔτος">ἔτους</w><num value="6908"> ςϠη</num></date>
+               <!--3: ΑΠΕΤΕΝΤΩ-->. 
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="2"> <rdg source="bib:b0156">π[α]πᾶς Ἀθανα[σιος</rdg></app>               
+               <app loc="3"><rdg source="bib:b0156">ἀπέ[αν]εν (?)</rdg></app>
+               <app loc="3"><rdg source="bib:b0156">ΕΠΗ</rdg> </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий <supplied reason="lost">и по</supplied>п Афанас … положили <supplied reason="lost">его</supplied> в 6908 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God and priest Athanas... They laid him to rest in the year 6908.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+             <p> Таблицы к статье Латышева остались неизданными, а сам камень пропал. Поэтому восстановление надписи чрезвычайно предположительное.</p>
+             <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+             <p> 2. В лакуне после тау в начале 2-й строки, по указанию Латышева, остается место для 2 или 3 букв, которые могли составлять, например, отчество или 
+                прозвище покойного. Имя Афанасий встречается в Крыму еще в <ref type="inscription">V 259</ref><!--byz246-->.</p>
+             <p> 3. Формула «положили» уникальна в христианской эпиграфике: ближайшая параллель — ἀπέθετ̣ο̣ ὑπὲρ μνήμ(η)ς αὐτο̣[ῦ] в SEG 37.1428 
+                (Апамея, 534 г.). Формула «положен» встречается в TAM III 623 (Термесс в Писидии).</p>
+             <p>3–4. Датировочная формула ἐπὶ ἔτους характерна именно для керменчикских надписей (см. подр. <ref type="introduction">III.1.C.b</ref>).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Because plates for Latyshev's article had not been published, and the stone disappeared, our reconstruction of this inscription remains rather tentative.</p>
+            <p>1.  On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>2. According to Latyshev, in a lacuna, after tau at the start of line 2, there was space for 2 or 3 letters, which could be interpreted as a patronymic or nickname of the deceased.
+               The name Athanasios is known in Crimea in <ref type="inscription">V 259</ref><!--byz246-->. </p>
+            <p>3. The formula "they laid him" is unique in Christian epigraphy: the closest parallel is ἀπέθετ̣ο̣ ὑπὲρ μνήμ(η)ς αὐτο̣[ῦ] in SEG 37.1428 (Apamea, 534 C.E.).
+            The formula "he was laid" is attested: TAM III 623 (Termessos in Pisidia).</p>
+            <p>3-4. The dating formula ἐπὶ ἔτους is characteristic of inscriptions from Kermenchik (for more detail, see Introduction <ref type="introduction">III.1.C.b</ref>).</p>
+            
+               
+         </div>
+      </body>
+   </text>
+</TEI>

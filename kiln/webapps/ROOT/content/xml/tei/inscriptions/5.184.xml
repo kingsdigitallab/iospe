@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение –ивеи и –ата</title><title xml:lang="en">Invocation of -yvaea and -ata</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.184</idno><idno type="PE">PE5000184</idno>
+            <idno type="AYV2012-number">byz175</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>35124</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>35124</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Со сложнопрофилированным карнизом с 3 полочками. Стесана слева, обломана справа и снизу, сколот правый верхний угол.</p>
+                           <p xml:lang="en">Panel with elabotate cornice. Cut on the left, broken on the right and bottom, missing top right corner.</p>
+                           <dimensions>
+                              <height>30,0</height>
+                              <width>36,0</width>
+                              <depth>17,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под карнизом.</seg>
+                           <seg xml:lang="en">Under the cornice.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы вытянутые по вертикали, вырезаны между линеек. 
+                           Альфа с наклоненной влево перекладиной, бета с нижним штрихом, эпсилон и сигма (кроме одного случая в С. 2) прямоугольные. 
+                           Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary; elongated letters cut between guiding lines. Alpha with slanting (to the left) crossbar, beta with bottom underline, rectangular epsilon
+                        and sigma (except in line 2). Ligature omicron-upsilon.</seg>
+                        <height unit="cm">4,0–4,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1000" notAfter="1101" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X–XI вв.</seg>
+                        <seg xml:lang="en">X–XI  centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">Сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">1913–1914 гг., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Дворец.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1913-1914, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Palace.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-13" who="AG">several lines translated, apparatus tagged, tags corrected</change>
+          <change when="2012-06-12" who="AL">text tagged, bibliography and original date tagged, editor tag inserted</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.184">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918b --><ptr target="bib:b0157"/>,  17–21, № <citedRange>3</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="1"><lem> Ὦ</lem><rdg source="bib:b0157"><note>om.</note></rdg>  <rdg source="bib:b0157">μ[άρτυς (?)</rdg></app> 
+               <app loc="2"> <rdg source="bib:b0157">...]εον</rdg>  <rdg source="bib:b0157">προσκυνοῦμεν</rdg></app>
+               <app loc="3"><rdg source="bib:b0157">... βίῳ ἐκοιμ[ήθη</rdg></app>
+               <app loc="4"><rdg source="bib:b0157">Μοοζήτου (?)</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">О с</supplied>лавный Та<supplied reason="lost">йнодавче (?), Б</supplied>ога Тебя приз<supplied reason="lost">ываем (или: призывают) …</supplied>ивея, младенец ком<supplied reason="lost">ита такого-то и (?) …</supplied>ат, сын Мунзи…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[O Giver of my[steries (?), God, we] call upon you, [...]yvaea, child of comes [... and...]at, son of Mounze...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись была встроена в стену дворца 1425 г. (Лепер 1914, 297–300). Судя по карнизу, камень 
+               был архитектурной деталью. Форма беты с нижним подчеркиванием заставляет отнести его к X–XI вв.</p>
+                <p> Суть надписи заключается в обращении, вероятно, к Богу знатных феодоритов, один из 
+                   которых носил титул комита (ср. <ref type="inscription">V 151</ref><!--byz145--> и <ref type="inscription">V 227</ref><!--byz215-->). 
+                   Несколько странным кажется помещение на 
+                    первое место девочки-младенца, однако возможно, что данная надпись воздвигнута как 
+                    прошение о ее исцелении или благодарение за него.</p>
+                <p>4. Имя Мунци <!--см. прил. 2-->может быть сопоставлено с топонимом (?) 
+                    Μουνζούρη (в генетиве) из MAMA I 260.  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription was built into a wall of the palace of 1425 (Loeper 1914, 297–300). Judging by the cornice, the stone was an architectural member. 
+               The shape of beta with bottom underline dates it to the X-XIth century.</p>
+            <p>The gist of the inscription is an appeal, apparently to God, by noble Theodorites, one of whom had a title of comes (cf. <ref type="inscription">V 151</ref><!--byz145--> and
+               <ref type="inscription">V 227</ref><!--byz215-->). It is somewhat strange that the name of a female infant is found at the beginning of the text, 
+               unless the inscription was set up as a supplication or thanksgiving for her recovery from illness.</p>
+            <p>4. The name Mounze can be compared with a toponym (?) Μουνζούρη (in the genitive) in MAMA I 260.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ὦ"><supplied reason="lost">Ὦ</supplied></w>
+               <w lemma="ἔνδοξος"><supplied reason="lost">ἔ</supplied>νδοξε</w> 
+                <w lemma="μυστοδότης">μ<unclear>υ</unclear><supplied reason="lost">στοδότα <note>e.g.</note></supplied></w>,
+               <lb n="2"/><w lemma="ὁ"><supplied reason="lost">τὸν</supplied></w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><supplied reason="lost">θ</supplied>εόν</w></roleName></persName> 
+                <w lemma="σύ">σε</w> <w lemma="προσκαλέω"><app type="alternative"><lem>προσκ<supplied reason="lost">αλοῦμεν</supplied></lem>
+                   <rdg>προσκ<supplied reason="lost">αλοῦσιν</supplied></rdg></app></w>
+               <lb n="3"/><gap reason="lost" extent="uncertain" unit="character"/><persName type="attested" ref="#person225"><name nymRef="—υβαια"><seg part="F"><unclear>υ</unclear>βαηα</seg></name></persName>, 
+                <w lemma="νήπιος">νύπιος</w> <w part="I" lemma="κόμης">κώμ<supplied reason="lost">ητος</supplied></w> 
+                <persName type="attested" ref="#person502"><name><w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
+                   <w lemma="δεῖνα"><supplied reason="lost">δεῖνος,</supplied></w></name></persName>
+                <w lemma="καί"><supplied reason="lost" cert="low">καὶ</supplied></w> 
+               <lb n="4"/><gap reason="lost" extent="uncertain" unit="character"/><persName type="attested" ref="#person226"><name nymRef="—ατ"><seg part="F"><unclear>α</unclear>τ</seg></name></persName>,
+               <w lemma="υἱός">υἱὸς</w> <persName type="attested" ref="#person227"><name>Μούνζη</name></persName> <w lemma="ὁ">τοῦ</w> 
+               <gap reason="lost" extent="uncertain" unit="character"/>
+               <lb n="5"/><gap reason="lost" extent="uncertain" unit="character"/><orig>Τ</orig><gap reason="lost" extent="uncertain" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

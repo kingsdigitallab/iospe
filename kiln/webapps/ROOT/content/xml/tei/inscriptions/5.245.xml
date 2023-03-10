@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись неизвестного</title><title xml:lang="en">Building inscription of an unknown</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.245</idno><idno type="PE">PE5000245</idno>
+            <idno type="AYV2012-number">byz232</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Музей "Судакская крепость"</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Museum "Sudak Fortress"</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m7 #m6">Темпера на штукатурке.</material>
+                            <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Роспись на квадре стены с живописной рамкой. Обломана со всех сторон кроме правой; сколы на верхней и лицевой сторонах.</p>
+                           <p xml:lang="en">Painting on a wall block with a decorated frame. Broken on all sides, except the right; chipped on the top and front.</p>
+                           <dimensions>
+                              <height>17,0</height>
+                              <width>12,0</width>
+                              <depth>17,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within the frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>; буквы вытянутые по вертикали, маньеризованные. Лигатуры.
+                           Стиль надписи:  между строк двойная желтая линия.</seg>
+                        <seg xml:lang="en">Dipinto; elongated ornate letters. Ligatures. Style of inscription: a double yellow line is inserted between lines of text.</seg>
+                        <height unit="cm">4,0
+                      .</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                         <seg xml:lang="en">Sougdaia.</seg>
+                     </origPlace>
+                     <origDate notBefore="1401" notAfter="1500" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">XV в.</seg>
+                        <seg xml:lang="en">XVth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>, <date when="2009-09"> сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sudak">Судак.</placeName>
+                        <rs type="circumstances">1993 г., раскопки И.А. Баранова и В.В. Майко.</rs>
+                        <rs type="context">Монастырь на склоне горы Перчем.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">1993, excavations of I.A. Baranov and V.V. Mayko.</rs>
+                        <rs type="context">Monastery on the Mount Perchem slope.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Судак, Крым.</seg>
+                     <seg xml:lang="en">Sudak, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2013-04-12" who="NG">Greek lemmata corrected</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-13" who="AG">Eng. institution added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-09" who="AG">several lines translated, small corrections in metadata, bibliography tagged, tags in the Greek text corrected</change>
+          <change when="2012-06-20" who="AFS">added metadata and tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.245">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов, Джанов 2004--><ptr target="bib:b0052"/>,  402–405, № <citedRange>1</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" quantity="1" unit="line"/>
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>
+               <supplied reason="lost"><w lemma="ἀνεγείρω">ἀνηγέρθη</w> <note>e.g.</note></supplied>
+               <w lemma="ἀπό"><supplied reason="lost">ἀπ᾿</supplied></w>
+               <w lemma="ἔδαφος"><unclear>ἐ</unclear><unclear>δ</unclear>ά<supplied reason="lost">φ</supplied>
+                  <lb n="3" break="no"/><supplied reason="lost">ους</supplied></w> <supplied reason="lost"><w lemma="ὁ">ὁ</w> <w lemma="ναός">ναὸς</w>
+               <w lemma="ὁ">τοῦ</w> <w lemma="ἅγιος">ἁγίου</w>
+               <w lemma="μεγαλομάρτυς">μεγαλομάρτυρος</w> <w lemma="καί">καὶ</w></supplied>
+               <w lemma="ἀνάργυρος"><supplied reason="lost">ἀναρ</supplied>γύρου</w>
+               <lb n="4"/><supplied reason="lost"><persName type="divine" key="stpanteleimon"><name nymRef="Παντελεήμων">Παντελεήμονος</name></persName>
+               <note>e.g.</note> <w lemma="διά">διὰ</w> <w lemma="κόπος">κόπου</w> <w lemma="ὁ">τοῦ</w>
+                  <w lemma="δεῖνα">δεινὸς</w> <note>e.g.</note></supplied>
+               <gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">… воздвигнут от</supplied> осно<supplied reason="lost">ваний храм святого великомученика и
+               бесср</supplied>ебенника <supplied reason="lost">Пантелеимона (?) трудами такого-то (?) …</supplied></p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[...erected from the] foundations, <supplied reason="lost">the church of the saint martyr and anar</supplied>gyros [Panteleimon, by the efforts of...]</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Строительные надписи в росписях характерны как для поздневизантийского времени вообще, так и для Крыма (например, <ref type="inscription">V 219</ref><!--byz207-->, <ref type="inscription">V 239</ref><!--byz225-->) и для Судака в
+               частности (см. <ref type="inscription">V 246</ref><!--byz233-->). Их характер (выделение строк сложными линиями) позволяет отнести к таковым и наш памятник, тем более что многострочная надпись
+               такого типа не характерна для подписей к фигурам на росписях. Сохранился лишь фрагмент надписи, однако ее сохранная правая сторона показывает, что
+               граница эпиграфического поля проходила по правому ребру блока, у которого росписью покрыта была и правая грань, т.е. надпись помещалась слева от какого-то
+               проема, скорее всего, входного. В этой связи важно отметить, что наш фрагмент был найден рядом с входом в храм.</p>
+                <p>На камне видны следы двух строк, причем верхняя обломана на половине высоты. Строки разделены двойной желтой линией, и судя по ее характеру, снизу
+                   помещалась еще буквы. К такому же выводу приводит нас и восстановление текста.</p>
+             <p>Ясно читаются 4 буквы: ΓΥΡȣ, причем почти точно это конец какого-то слова, совпадающий здесь с краем строки (в надписях краской возможность компоновать
+                текст всегда выше, чем в высеченных в камне). Обратный словарь греческого языка (Kretschmer, Locker 1944, 478) дает для такого окончания лишь два варианта:
+                слова, сложные с γῦρος, и слова, сложные с ἄργυρος. Изо всех них в контексте надписи о строительстве и посвящении храма подходящим кажется лишь эпитет
+                ἀνάργυρος «бессребренник», применяемый обычной к святым-врачам, бесплатно лечившим всех нуждающихся.  </p>
+                <p>Для византийской традиции чрезвычайно характерно почитание святых бессребренников по двое (напр., три пары Косм и Дамианов), так что святому врачу
+                   даже добавляют спутника для образования пары (напр., св. Кир (врач) и Иоанн (воин)). Пожалуй, что единственный из всех них в одиночку почитается только
+                   вмч. Пантелеимон: его спутник пресвитер Ермолай добавляется к нему в основном в молитвах и в программах росписей, но культ отдельного почитания
+                   великомученика был чрезвычайно распространен по всей империи: только в Константинополе начитывается 9 его храмов — и ни одного Пантелеимона и
+                   Ермолая (Janin 1969, 386–388). Если, действительно, в надписи стояло слово “бессребренник”, то, скорее всего, оно означало того, кому данный храм
+                   (и монастырь) был посвящен.</p>
+                <p> Нельзя, конечно, исключать и другие возможности прочтения этих букв: напр., как часть родового имени Аргир, хорошо известного с Х в., однако к первому
+                   варианту нас склоняет и возможное прочтение первой строки, от которой остались нижние части трех букв: ΕΔΑ. С большой долей осторожности, учитывая
+                   вероятное значение следующей строки, мы предлагаем читать здесь terminus technicus ἀπ᾿ ἐδάφους, описывающий строительство (или возобновление) храма от
+                   самого низа. Поскольку археологические раскопки не выявили предыдущей фазы существования храма, то мы склонны считать, что в настоящей надписи речь
+                   идет о строительстве храма (а вероятно, и всего монастыря), в честь великомученика и бессребренника Пантелеимона в XV в. Немногие сохранившиеся буквы
+                   близки по шрифту к другим крымским монументальным надписям в росписях, особенно к <ref type="inscription">V 246</ref><!--byz233-->.</p>
+                <p> Об археологическом контексте см. Виноградов, Джанов 2004.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Building inscriptions on frescoes are typical of the Late Byzantine period in general, and of Crimea (e.g., <ref type="inscription">V 219</ref><!--byz207-->, 
+               <ref type="inscription">V 239</ref><!--byz225-->) and Sudak in particular (see <ref type="inscription">V 246</ref><!--byz233-->). 
+               Their characteristic use of ruled guiding lines allows us to classify our inscription in this category, especially because multi-line inscription of this
+               type is not common for image-related inscriptions on frescoes. Only a fragment of the inscription has survived, however, its preserved right half
+               shows that the border of the epigraphic field coincided with the right edge of the block, whose right side also bore a fresco, i.e., the text
+               was placed left of some aperture, probably a doorway. It should be noted in this context that the monument was found near the entrance to the church.</p>
+            <p>The monument shows traces of two lines of text, of which the top one misses the upper half. Lines of text are divided by a double yellow line, 
+               and judging by its character, there were letters below line 2 also. The same conclusion is reached when we attempt to restore the text.</p>
+            <p>Four letters are legible: ΓΥΡȣ, and it is almost certainly the end of a word, coinciding with the end of a line (in painted inscriptions, in contrast to those 
+               carved in stone, there is always a greater opportunity for fitting words into lines neatly). Reverse lexicon of Greek language (Kretschmer, Locker 1944, 478) 
+               indicates only two possibilities for such an ending: compounds with γῦρος or with ἄργυρος. Out of those, in the context of building inscription and dedication 
+               of a church, the most likely one is the epithet ἀνάργυρος «silver-less», that is penniless, usually applied to saints-doctors who treated the ailing for free.</p>
+            <p>In Byzantine tradition, veneration of penniless saints typically focuses on two at a time (e.g., three pairs of Kosmas and Damianos), and it is often the case
+               that a doctor-saint is given a companion (e.g., St. Kyros (doctor) and and John (warrior)). Only the Great Martyr Panteleimon is venerated as a solitary figure:
+               his companion, presbyter Yermolay, is usually added in prayers and in visual programmes of frescoes, but in cult Panteleimon usually figured on his own, and it
+               was widely attested throughout the empire: in Constantinople alone, we know of 9 churches, but none of them are for a pair of Panteleimon and Yermolay (Janin 1969, 386–388). 
+               If the word we are trying to restore was indeed "penniless," then it would have most likely referred to the dedicatee of a church (and monastery).</p>
+            <p>We cannot entirely exclude the possibility of other restorations, however, e.g., as part of a surname Argyros, attested from the Xth century onwards, but the traces
+               of letters in line 1 (ΕΔΑ), of which bottom parts survive, suggest a possibility (however tentative) of restoring here a terminus technicus ἀπ᾿ ἐδάφους,
+               referring to construction (or renovation) of a church "from the foundation." Since archaeological excavations did not reveal an earlier phase of the church's 
+               existence, I am inclined to think that our inscription refers to the construction of a church (and possibly, a monastery) dedicated to the Great Martyr, penniless
+               Panteleimon in the XVth century. The few surviving letters are similar in script to other monumental inscriptions on frescoes in Crimea, especially <ref type="inscription">V 246</ref><!--byz233-->.</p>
+            <p>On the archaeological context, see Vinogradov and Dzhanov 2004.</p>
+            <p/>
+         </div>
+      </body>
+   </text>
+</TEI>

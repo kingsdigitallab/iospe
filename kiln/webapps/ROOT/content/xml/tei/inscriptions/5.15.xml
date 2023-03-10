@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt><title xml:lang="ru">Строительная надпись херсаков</title><title xml:lang="en">Building inscription of Chersakoi</title><editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+            <publicationStmt><authority>King's College London</authority>
+                <idno type="filename">5.15</idno><idno type="PE">PE5000015</idno>
+                <idno type="AYV2012-number">byz014</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country/>
+                        <altIdentifier xml:lang="ru">
+                            <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                            <idno>81/36504</idno>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>National Preserve of Tauric Chersonesos</repository>
+                            <idno>81/36504</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <summary corresp="document-search.xml#doc1">
+                            <seg xml:lang="ru">Инвокативная, демонстративная, строительная надпись.</seg>
+                            <seg xml:lang="en">Invocative, demonstrative, building inscription.</seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon6">Блок.</objectType>
+                                    <objectType xml:lang="en">Block.</objectType>
+                                    <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                                    <material xml:lang="en">Limestone.</material>
+                                    <p xml:lang="ru">На лицевой стороне - рельефная орнаментальная рамка с рельефным изображением креста с апицированными концами. 
+                                        Крест и буквы покрыты охрой. Лицевая сторона выветрена.</p>
+                                    <p xml:lang="en">On the front - rectangular inset panel bearing relief Latin cross with arms ending in serifs. The cross and the letters 
+                                        are painted with ochre. The front surface is weathered.</p>
+                                    <dimensions><height>42,0</height><width>37,0</width><depth>23,0</depth></dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <origPlace ref="origPlace.xml#p003">
+                            <seg xml:lang="ru">Херсон.</seg>
+                            <seg xml:lang="en">Cherson.</seg>
+                        </origPlace>
+                        <origDate notBefore="0701" notAfter="0833" precision="low" evidence="палеография формула лексика">
+                            <seg xml:lang="ru">VIII – 1-я треть IX вв.</seg>
+                            <seg xml:lang="en">VIII – 1st third of IXth century C.E.</seg>
+                        </origDate>
+                     </origin>
+                    <provenance type="observed" subtype="autopsy">
+                           <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>.</seg>
+                        <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>.</seg>
+                    </provenance>
+                    <provenance type="found">
+                        <seg xml:lang="ru">
+                            <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                            <rs type="circumstances">Неизвестны.</rs>
+                            <rs type="context">Неизвестен.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                            <placeName type="ancientFindspot">Unknown.</placeName>
+                            <rs type="circumstances">Unknown.</rs>
+                            <rs type="context">Unknown.</rs>
+                        </seg>
+                    </provenance>
+                    <provenance type="observed">
+                        <seg xml:lang="ru">Севастополь, Крым.</seg>
+                        <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                    </provenance>   
+                </history>
+                    <msPart n="1">
+                        <msIdentifier><altIdentifier><idno/></altIdentifier></msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                   <layout ana="f1" n="1">
+                                       <seg xml:lang="ru">В левом верхнем углу.</seg>
+                                       <seg xml:lang="en">In the top left corner.</seg>
+                                   </layout>
+                               </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="1">
+                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной и наклонной перекладиной, 
+                                        эпсилон лунарный, сигма лунарная и прямоугольная, ипсилон прогнутый.</seg>
+                                    <seg xml:lang="en">Lapidary. Alpha both with broken and slanting crossbar; lunate epsilon; lunate and rectangular sigma; bowl-shaped
+                                        upsilon.</seg>
+                                    <height unit="cm">1,5–2,3.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                    </msPart>
+                    <msPart n="2">
+                        <msIdentifier><altIdentifier><idno/></altIdentifier></msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout ana="f1" n="2">
+                                        <seg xml:lang="ru">В правом верхнем углу.</seg>
+                                        <seg xml:lang="en">In the top right corner.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="2">
+                                    <seg xml:lang="ru">Как в Надписи 1.</seg>
+                                    <seg xml:lang="en">The same as Text 1.</seg>
+                                    <height unit="cm">1,5–2,3.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                    </msPart>
+                    <msPart n="3">
+                        <msIdentifier><altIdentifier><idno/></altIdentifier></msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout ana="f1" n="3">
+                                        <seg xml:lang="ru">В левом нижнем углу.</seg>
+                                        <seg xml:lang="en">In the bottom left corner.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="3">
+                                    <seg xml:lang="ru">Как в Надписи 1.</seg>
+                                    <seg xml:lang="en">The same as Text 1.</seg>
+                                    <height unit="cm">1,5–2,3.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+            <change when="2015-05-22" who="CB">Corrections to msParts</change>
+            <change when="2015-04-27" who="GB">Fixed msParts</change>
+            <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
+            <change when="2012-08-16" who="AG">Greek lemma added</change>
+            <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+            <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+            <change when="2012-07-19" who="GB">lemmatized Greek</change>
+            <change when="2012-07-11" who="AG">1 line translated, small correction</change>
+            <change when="2012-05-09" who="AG">several lines translated, small corrections</change>
+            <change when="2012-04-17" who="AG">several lines translated</change>
+            <change when="2012-04-17" who="AG, AFS">editor added, translated a line</change>
+            <change when="2012-04-05" who="AG">bibliography updated</change>
+            <change when="2012-02-20" who="AG">bibliography tags tidied</change>
+            <change when="2012-02-20" who="AG">bibliography tagging</change>
+            <change when="2012-01-23" who="AG">some corrections</change>
+            <change when="2011-12-21" who="AG">updated, tags correction</change>
+            <change when="2011-12-13" who="AG">corrections, tagging</change>
+            <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.15" n="1">
+                <desc xml:lang="en">Photograph of face (Vinogradov 20??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (Виноградов 20??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl n="L1"><!--Виноградов 2011a--><ptr target="bib:b0386"/>, 224–227, № <citedRange>5</citedRange></bibl>
+                </listBibl>
+            </div>
+            
+        <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+                 <ab>
+                     <lb n="1"/><w lemma="ὦ">῏Ο</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>ε</ex><abbr>έ</abbr></expan></w></roleName></persName>, 
+                     <lb n="2"/><w lemma="βοηθέω"><unclear>βο</unclear>ή<unclear>θη</unclear></w>.
+                 </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+                 <ab>
+                     <lb n="1"/><persName type="divine" key="iesous"><supplied reason="lost"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name></supplied>
+                         <name nymRef="Χριστός"><expan><abbr><unclear>Χ</unclear></abbr><ex>ριστὸ</ex><abbr><supplied reason="lost">ς</supplied></abbr></expan></name></persName>
+                     <lb n="2"/><w lemma="νικάω"><unclear>νικ</unclear>ᾷ</w>.
+                 </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="3">
+                 <ab>
+                     <lb n="1"/><g ref="#stauros"/> <w lemma="ἀνατίθημι"><unclear>Ἀνέθη</unclear><lb n="2" break="no"/>σα<unclear>ν</unclear></w> <w lemma="ὁ"><unclear>οἱ</unclear></w>
+                     <placeName type="ethnic" key="cherson"><w lemma="Χερσάκες">Χ<lb n="3" break="no"/>ερσ<unclear>άκε</unclear>ς</w></placeName>
+                     <lb n="4"/><w lemma="οὗτος">το<unclear>ῦ</unclear>το</w>.
+                 </ab>
+            </div>
+        </div>
+            
+            <div type="translation" xml:lang="ru">
+                <div type="textpart" n="1">
+                    <p>О Боже, помоги.</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>[Иисус] Христос побеждает.</p>
+                </div>
+                <div type="textpart" n="3">
+                    <p>Посвятили херсаки это.</p>
+                </div>
+            </div>
+            <div type="translation" xml:lang="en">
+                <div type="textpart" n="1">
+                    <p>O God, help.</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p><supplied reason="lost">Jesus</supplied> Christ is victoroius.</p>
+                </div>
+                <div type="textpart" n="3">
+                    <p>Chersakes dedicated this.</p>
+                </div>
+            </div>
+            
+            <div type="commentary" xml:lang="ru">
+                <div type="textpart" n="1">
+                    <p>Сочетание ломаной и наклонной (петли) перекладин у альфы и полукруглого ипсилона встречается
+                        в Херсоне только в X в. (<ref type="inscription">V 67</ref><!--byz067-->). В пользу такой датировки говорит и формула надписи 2 (см. <ref type="introduction">IV.3.C.e.</ref>).</p> 
+                    <p>Инвокация «Боже, помоги» встречается в христианских надписях 13 раз, согласно PHI7 Database.</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>Относительно формулы см. <ref type="introduction">IV.3.C.e.</ref></p>
+                </div>
+                <div type="textpart" n="3">
+                    <p>1–2. Такая строительная формула довольно распространена, в т.ч. и с неправильной, 
+                        как и здесь, формой глагола (см. Studia Pontica 13; Еленопонт), хотя в нашем случае не 
+                        исключен и вариант ἀνέστησαν. </p>
+                    <p>2–3. В данной надписи, равно как и в <ref type="inscription">V 122</ref><!--byz118-->, жители Херсона названы херсаками (см. комм. к <ref type="inscription">V 122</ref><!--byz118-->). </p>
+                    <p>Характерна формула посвящения постройки от лица горожан: это согласуется с письменными
+                        свидетельствами о самоуправлении Херсона (Сорочан 2005). Но наиболее вероятна ее 
+                        постановка в эпоху до создания фемы. К какой постройке относится данная надпись, сказать
+                        невозможно, т.к. неизвестно место ее находки.</p>
+                </div>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <div type="textpart" n="1">
+                    <p>The side-by-side use of two types of alpha (with broken crossbar and with slanting crossbar), as well as the use of semicircular epsilon occur 
+                        in Cherson only in the Xth century (<ref type="inscription">V 67</ref><!--byz067-->). This dating is supported by the formula used in Text 2
+                        (see <ref type="introduction">IV.3.C.e.</ref>).</p>
+                    <p>The invocation "O God, help" is attested in Christian inscriptions thirteen times, according to PHI7 Database.</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>Concerning the formula, see <ref type="introduction">IV.3.C.e.</ref></p>
+                </div>
+                <div type="textpart" n="3">
+                    <p>1-2. This type of building formula is widely attested, including, as here, the incorrect use of the verbal form (see Studia Pontica 13; Helenopontus),
+                        although in our case we cannot exclude a variant - ἀνέστησαν.</p>
+                    <p>2-3. In this inscription, as well as in <ref type="inscription">V 122</ref><!--byz118-->, the residents of Cherson are called Chersakes/Chersakoi 
+                        (see commentary to <ref type="inscription">V 122</ref><!--byz118-->).</p>
+                    <p>The fact that the building inscription is made in the name of the town residents fits well with the textual evidence on the self-governance
+                        of Cherson (Sorochan 2005). The most plausible date for the setting up of this inscription is before the creation of the thema. Unfortunately, 
+                    because its find spot is unknown, it is impossible to tell to which structure the inscription was referring.</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Исидора и Феодора <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Epitaph of Isidoros and Theodore <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.87</idno><idno type="PE">PE5000087</idno>
+            <idno type="AYV2012-number">byz087</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34930</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34930</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломана со всех сторон, кроме нижней, буквы сильно выветрены.</p>
+                           <p xml:lang="en">Broken on all sides, except the bottom. Letters are weathered.</p>
+                           <dimensions>
+                              <height>12,5</height>
+                              <width>8,0</width>
+                              <depth>9,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы написаны между линеек, с легким наклоном вправо. 
+                           Альфа с петлей, дельта с удлиненной и апицированной перекладиной, эпсилон и сигма лунарные, йота с диерезой, ипсилон У-образный.</seg>
+                        <seg xml:lang="en">Lapidary. Letters are slightly leaning to the right and written between the drawn lines. Alpha with a loop, delta with 
+                           an extended horizontal, accentuated with serifs, lunate epsilon and sigma, iota with diaeresis, У-shaped upsilon.</seg>
+                        <height unit="cm">0,8–1,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X в.</seg>
+                        <seg xml:lang="en">Xth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09">September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1907 г.</rs>
+                        <rs type="context">Некрополь у Карантинной бухты, насыпь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1907</rs>
+                        <rs type="context">Necropolis by the Quarantine Bay, soil heap.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-23" who="AG">several lines translated, tags corrected</change>
+          <change when="2012-05-01" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-16" who="AG">apparatus tagged</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2012-01-09" who="AG">updating, correction of some tags in the Greek text</change>
+         <change when="2011-12-07" who="AG">corrections, tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.87">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1908--><ptr target="bib:b0149"/>, 31, № <citedRange>26</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="2"><rdg source="bib:b0149">δοῦλ[ος</rdg></app>
+               <app loc="3-6"><rdg source="bib:b0149"><note>om.</note></rdg></app>
+               <app loc="4"> <rdg source="bib:b0149">...]ποῦσα</rdg></app>
+               <app loc="5"><rdg source="bib:b0149">Θεόδ[ωρος</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Почили</supplied> рабы <supplied reason="lost">Б</supplied>ожьи Иси<supplied reason="lost">дор</supplied>, сын Са<supplied reason="lost">вватия (?)</supplied>, и Феод<supplied reason="lost">ор (?)</supplied>, .. м<supplied reason="lost">ая</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: servants of God, Isidoros, son of Sa[bbatios or: Sabas], and Theod[ore (?)]... of May.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Латышев восстанавливал лишь выражение «раб Божий» в 2-й и 3-й строках и имя Феодор в 5-й строке. </p>
+                <p> 1–2. Относительно восстанавливаемой формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+                <p> 3–4. Христианские имена Исидор и Савва в эпиграфике Северного Причерноморья более не встречаются; относительно имени Савватий, смотри комм. к
+                   <ref type="inscription">V 282</ref>.</p>
+                <p> 6. При восстановлении имени месяца май следует предпочесть марту из-за большей краткости, позволяющей уложиться в пределы реконструируемой 
+                   строки. </p>
+            <p> По использованию линеек между строк надпись похожа на <ref type="inscription">V 66</ref><!--byz066-->, а по шрифту — на <ref type="inscription">V 243</ref><!--byz229-->.</p>
+                <p> Надпись обнаружена в разбитом виде в насыпи некрополя, из которого она, возможно, происходит.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev only reconstructed the expression "servant of God" in lines 2 and 3, and the name Theodore in line 5.</p>
+            <p>1-2. On the restorable formula, see <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>3-4. Christian names Isidoros and Sabas are not otherwise attested in epigraphic monuments of the Black Sea region; on the name Sabbatios, see 
+               commentary to <ref type="inscription">V 282</ref>.</p>
+            <p>6. In reconstructing a month, we should prefer May to March due to the shorter length of the former, which allows to fit it into the 
+            available space of the line as we reconstruct it.</p>
+            <p>In the use of incised lines between lines of text, this inscription is similar to <ref type="inscription">V 66</ref><!--byz066-->, while its script is
+               similar to <ref type="inscription">V 243</ref><!--byz229-->.</p>
+            <p>The monument was found in a broken state, in the fill of a necropolis, whence it probably originates.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω"><supplied reason="lost">Ἐκοιμήθησαν</supplied></w>
+               <lb n="2"/><w lemma="ὁ"><supplied reason="lost">ο</supplied>ἱ</w> <w lemma="δοῦλος">δοῦλ<supplied reason="lost">οι</supplied></w>
+               <w lemma="ὁ"><supplied reason="lost">τοῦ</supplied></w>
+               <lb n="3"/><persName type="divine" key="theos"><roleName><w lemma="θεός"><supplied reason="lost">Θ</supplied>εοῦ</w></roleName></persName> 
+               <persName type="attested" ref="#person106"><name nymRef="Ἰσίδωρος">Ἰ<unclear>σ</unclear>ί<supplied reason="lost">δωρος</supplied></name>
+               <lb n="4"/><w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person107"><name nymRef="Σαββάτιος">Σα<supplied reason="lost" cert="low">ββατίου</supplied></name></persName></persName> 
+               <lb n="5"/><w lemma="καί"><supplied reason="lost"><expan><abbr/><ex>καὶ</ex></expan></supplied></w> 
+               <persName type="attested" ref="#person108"><name nymRef="Θεόδωρος">Θεόδ<supplied reason="lost" cert="low">ωρος</supplied></name></persName>
+               <lb n="6"/><date><w lemma="μήν"><supplied reason="lost">μ</supplied>ινὴ</w>
+                  <rs type="month" ref="mai"><w lemma="Μάϊος"><unclear>μ</unclear><supplied reason="lost">αίου</supplied></w></rs>
+                  <num><gap reason="lost" quantity="2" unit="character"/></num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>
