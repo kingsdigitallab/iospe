@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись неизвестного</title><title xml:lang="en">Building inscription of an unknown</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.174</idno><idno type="PE">PE5000174</idno>
+            <idno type="AYV2012-number">byz167</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Закопчена.</p>
+                           <p xml:lang="en">Covered with soot.</p>
+                           <dimensions>
+                              <height>26,0</height>
+                              <width>60,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с наклонной перекладиной, ипсилон У-образный.</seg>
+                        <seg xml:lang="en">Lapidary style. Alpha with slanting crossbar; upsilon Y-shaped.</seg>
+                        <height unit="cm">1,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1224" notAfter="1225" evidence="указание_надписи">
+                        <seg xml:lang="ru">1224–1225 гг.</seg>
+                        <seg xml:lang="en">1224–1225 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-09">Сентябрь 2004</date>.</seg>
+                     <seg xml:lang="en"><date when="2004-09">September 2004</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">1913 г., обследования Р.Х. Лепера и М.И. Скубетова.</rs>
+                        <rs type="context">Табана-Дере, монастырь, храм, южная стена, над аркосолием, по центру.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1913, survey of R.Ch. Loeper and M.I. Skubetov.</rs>
+                        <rs type="context">Tabana-Dere, monastery, church, southern wall, over arcosolium, in the centre.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2012-10-16" who="AL">small corrections in Russian text</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-01" who="AG">several lines translated, editor added, bibliography tagged, tags in the text corrected</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+         <change when="2012-03-13" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.174">
+            <desc xml:lang="en">Sketch of face and text (from...?)</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов 2011a--><ptr target="bib:b0386"/>, 240–242, № <citedRange>13</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>В 6733 году. Строится ныне … господином <supplied reason="lost">таким-то, …</supplied> все…ейшим иеромонахом и …</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>In the year 6733. ... is being built [by...] the most [...] hieromonk and...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Латышев оставил надпись без прочтения (Латышев 1897, 154, № 49а; Латышев 1918a, 21, № 6). 
+                Надпись в настоящее время закопчена, поэтому читается плохо — приходится обращаться к 
+                прорисовке Ю.Н. Воронина (Могаричев 1997, 313, рис. 265).</p>
+                <p>Поскольку строительная надпись помещена над аркосолием с гробницей, то не исключено, что храм специально создавался как погребальный. 
+                   С другой стороны, комплекс пещер вокруг весьма походит на монастырский. Поскольку строителем назван иеромонах, то возможно, он же и был 
+                   основателем монастыря.</p>
+            <p>1. Дата надписи хорошо согласуется с <ref type="inscription">V 196</ref><!--byz185--> (1220–1221 гг.) из того же комплекса. При сравнении с последней 
+               возникает вопрос о связи необычной постановки года в начале текста с тем, что резчик в начале ограничился упоминанием года, как в 
+               параллельной надписи, и лишь затем нанес пространный текст.</p>
+            <p>2. Других надписей с глаголом γίνεσθαι в презенсе нам не известно; относительно формул с γέγονε и ἐγένετο см. комм. к <ref type="inscription">V 1</ref><!--byz001-->.3 и 
+               <ref type="inscription">V 11</ref><!--byz010-->.</p>
+                <p>3. Начало строки может содержать остаток имени святого на -κος или Богородицы (Θεοτόκου), которым и мог быть посвящен храм.   </p>
+                <p>По своему архитектурно-литургическому устройству храм монастыря в Табана-дере относится к XIII в. (см. Виноградов, Гайдуков, Желтов 2005, 75).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev did not offer a reading (Latyshev 1897, 154, no. 49a; Latyshev 1918a, 21, no. 6). At present, the inscription is covered with soot and
+            difficult to read - one must rely on the facsimile drawing of Yu.N. Voronin (Mogarichev 1997, 313, рис. 265.).</p>
+            <p>Because the building inscription is placed over an arcosolium containing a tomb, it is possible that the church was intended to serve as a funerary chapel.
+            The cave complex surrounding the church does, however, look very much like a monastery. Since the builder was a hieromonk, it is likely that he would have
+            also been the founder of this monastery.</p>
+            <p>1. The date of the inscription fits well with another one from the same complex: <ref type="inscription">V 196</ref><!--byz185--> (1220-1221 C.E.).
+            A comparison with the latter brings up an interesting question: why the cutter made an unusual choice to put the year date at the beginning 
+            (similarly to the other inscription) and then to inscribe the rest of the lengthy text.</p>
+            <p>2. I am not aware of other inscriptions where the verb γίνεσθαι is used in the Present tense; on the formulae γέγονε and ἐγένετο, see commentary to
+               <ref type="inscription">V 1</ref><!--byz001-->.3 and <ref type="inscription">V 11</ref><!--byz010-->.</p>
+            <p>3. The beginning of the line contains either a saint's name ending in -κος or that of the Mother of God (Θεοτόκου), to whom the church might have been sacred.</p>
+            <p>Judging by its architectural and liturgical design, the church of the monastery complex at Taban-dere dates to the XIIIth century (see Vinogradov, Gaydukov, Zheltov 2005, 75).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><date><w lemma="ἔτος">Ἔτους</w> <num value="6733">ςψλγ</num> </date>.
+               <lb n="2"/><g ref="#stauros"/> <w lemma="γίγνομαι">Γύνεται</w> <w lemma="νῦν">νῦν</w> <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="3" break="no"/><w part="F">κου</w> <w lemma="παρά">πα<supplied reason="lost">ρὰ</supplied></w> <w lemma="κύριος"><unclear>κ</unclear>υροῦ</w> 
+               <persName type="attested" ref="#person500"><name><gap reason="lost" extent="unknown" unit="character"/><orig>Ε</orig><gap reason="lost" extent="unknown" unit="character"/><orig>Υ</orig></name></persName>
+               <lb n="4"/><orig>ΟΥΟ</orig> <w lemma="πᾶς">πα<supplied reason="lost">ν</supplied><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τά</supplied></w>
+               <w lemma="τις">του</w> <w lemma="ἱερομόναχος">ἱερο<supplied reason="lost">μ</supplied>ο<unclear>νά</unclear>χου</w> 
+               <w lemma="καί"><unclear>κ</unclear>αὶ</w> <orig>ΠΕ</orig>
+               <lb n="5"/><orig>ΟΣ</orig> <w lemma="ὁ">τοῦ</w> <gap reason="lost" extent="unknown" unit="character"/> 
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

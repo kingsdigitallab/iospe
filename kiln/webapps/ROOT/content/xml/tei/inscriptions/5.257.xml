@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Граффито Иоанна</title><title xml:lang="en">Graffito of John</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.257</idno><idno type="PE">PE5000257</idno>
+            <idno type="AYV2012-number">byz244</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc8">
+                     <seg xml:lang="ru">Памятная надпись.</seg>
+                     <seg xml:lang="en">Commemoration.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m6">Штукатурка.</material>
+                           <material xml:lang="en">Plaster.</material>
+                           <p xml:lang="ru">Сохранилась целиком.</p>
+                           <p xml:lang="en">Fully preserved.</p>
+                           <dimensions>
+                              <height>6,0</height>
+                              <width>5,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>.</seg>
+                        <seg xml:lang="en">Graffito.</seg>
+                        <height unit="cm">2,0–3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                        <seg xml:lang="en">Sougdaia.</seg>
+                     </origPlace>
+                     <origDate notBefore="1373" evidence="архитектурный_контекст">
+                        <seg xml:lang="ru">после 1373 г.</seg>
+                        <seg xml:lang="en">after 1373 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>, <date when="2009-09"> сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sudak">Судак.</placeName>
+                        <rs type="circumstances">1988 г., обследования А.В. Джанова.</rs>
+                        <rs type="context">Крепость, «храм с аркадой», входная сень, южная стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">1988, survey of A.V. Dzhanov.</rs>
+                        <rs type="context">Fortress, 'church with arcade,' porch, south wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-09" who="CB">Andrey's corrections</change>
+         <change when="2012-08-14" who="AG">orig date corrected</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-09" who="AG">corrections</change>
+         <change when="2012-05-02" who="AG">corrections, several lines translated</change>
+          <change when="2012-03-27" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Виноградов, Джанов 2004--><ptr target="bib:b0052"/>,  416–417, № <citedRange>9</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Иоанн.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>John.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Подр. см. Виноградов, Джанов 2004.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>For detailed discussion, see Vinogradov, Dzhanov 2004.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person317"><name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννης</ex></expan></name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

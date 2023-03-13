@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt><title xml:lang="ru">Надпись Михаила и Василия (?)</title><title xml:lang="en">Inscription of Michael and Basileios (?)</title><editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+            <publicationStmt><authority>King's College London</authority>
+                <idno type="filename">5.231</idno><idno type="PE">PE5000231</idno>
+                <idno type="AYV2012-number">byz335</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country/>
+                        <altIdentifier xml:lang="ru">
+                            <repository>Неизвестен</repository>
+                            <idno/>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Unknown</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents><summary>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                    </summary></msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru">Неизвестна.</objectType>
+                                    <objectType xml:lang="en">Unknown.</objectType>
+                                    <material xml:lang="ru">Неизвестен.</material>
+                                    <material xml:lang="en">Unknown.</material>
+                                    <p xml:lang="ru">Обломана.</p>
+                                    <p xml:lang="en">Damaged.</p>
+                                    <dimensions/>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <seg xml:lang="ru">Неизвестен.</seg>
+                                    <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>Unknown.</seg>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <seg xml:lang="ru">Буквы частично минускульные.</seg>
+                                <seg xml:lang="en">Letters are partially minuscule.</seg>
+                                <height unit="cm"/>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <origPlace ref="origPlace.xml#p056">
+                            <seg xml:lang="ru">Артек.</seg>
+                            <seg xml:lang="en">Artek.</seg>
+                        </origPlace>
+                        <origDate notBefore="1091" notAfter="1192" cert="low" evidence="указание_надписи">
+                            <seg xml:lang="ru">1091–1192 гг. (?).</seg>
+                            <seg xml:lang="en">1091–1192 C.E. (?).</seg>
+                        </origDate>
+                    </origin>
+                            <provenance type="observed" subtype="autopsy">
+                                <seg xml:lang="ru">Non vidi.</seg>
+                                <seg xml:lang="en">Non vidi.</seg>
+                            </provenance>
+
+                            <provenance type="found">
+                                <seg xml:lang="ru">
+                                    <placeName type="ancientFindspot" ref="findspot.xml#artek">Артек.</placeName>
+                                    <rs type="circumstances">1828–1829 гг.</rs>
+                                    <rs type="context">Неизвестен.</rs>
+                                </seg>
+                                <seg xml:lang="en">
+                                    <placeName type="ancientFindspot">Artek.</placeName>
+                                    <rs type="circumstances">1828–1829</rs>
+                                    <rs type="context">Unknown.</rs>
+                                </seg>
+                            </provenance>
+                            <provenance type="observed">
+                                <seg xml:lang="ru">Non vidi.</seg>
+                                <seg xml:lang="en">Non vidi.</seg>
+                            </provenance>
+                </history>
+            </msDesc>
+            </sourceDesc>
+        </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+            <change when="2015-04-08" who="CB">Andrey's corrections</change>
+            <change when="2013-11-07" who="TW">Added image code</change>
+            <change when="2013-08-22" who="GB">Linked to original place, and general tidied</change>
+            <change when="2013-04-29" who="AG">Greek text marked up</change>
+            <change when="2013-04-26" who="AG">created from the Word document, marked up</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.231">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+
+            <div type="bibliography">
+                <p/>
+            </div>
+
+        <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                <lb n="1"/><persName type="attested" ref="#person439"><name nymRef="Μιχαήλ"><expan><supplied reason="lost"><abbr>Μ</abbr></supplied><abbr>ιχ</abbr><ex cert="low">αὴλ</ex></expan></name></persName>
+                <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                <persName type="attested" ref="#person440"><name nymRef="Βασίλειος">Βασσ<supplied reason="lost">ι</supplied>λ<gap reason="lost" extent="unknown" unit="character"/></name></persName>
+                <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
+                <lb n="2"/><w lemma="μνημονεύω"><supplied reason="lost">μ</supplied>νηστήθι</w> <note>?</note>
+                <w lemma="ὁ"><expan><abbr>τῆ</abbr><ex>ς</ex></expan></w>
+                <gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+                <lb n="3"/><w lemma="ἀδελφότης"><supplied reason="lost">ἀ</supplied>δ<supplied reason="lost">ε</supplied>λφότιτος</w>
+                <w lemma="ἐπί">ἐπὶ</w> <gap reason="lost" extent="unknown" unit="character"/>
+                <lb n="4"/><gap reason="lost" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/>
+                <w lemma="δοῦλος">δούλο</w> <note>?</note>·
+                <date><w lemma="ἔτος"><expan><abbr>ἔτ</abbr><ex>ους</ex></expan></w>
+                    <num atLeast="6600" atMost="6699"><supplied reason="lost">ς</supplied>χ<gap reason="lost" quantity="2" unit="character"/></num></date>.
+            </ab>
+        </div>
+
+            <div type="apparatus">
+                <p/>
+            </div>
+
+            <div type="commentary" xml:lang="en">
+                <p>All information about the inscription comes from the manuscript of P. Koeppen (Archive of the Russian Academy of Sciences, St. Petersburg Branch
+                    f. 30, op. 1, d. 343, ch. 1, l. 96; kindly pointed out to me by I.V. Tunkina). According to Koeppen, the inscription was found on the estate 
+                    of colonel Potyomkin. At the top of the inscribed field four letters chi look ornamental. The inscription is restored rather tentatively.</p>
+                <p>1-4. Judging by the palaeography and the date, the inscription should be compared with <ref type="inscription">V 173</ref><!--byz166--> (Mangup, 1179 C.E.). 
+                    Between the abbreviated word "year" and the chi, there should be a sigma. The restoration "fraternity" allows us to speculate that the inscription might have originated at some monastery in the area of Artek
+                    (cf. <ref type="inscription">V 240</ref><!--byz227--> from nearby Panair). At the same time, we cannot rule out the possibility that the inscription is post-Byzantine.</p>
+            </div>
+            <div type="translation" xml:lang="ru">
+                <p>Михаил (?) и Васил... Господи, помяни (?) … братию … рабу. В 66.. году.</p>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>Michael (?) and Basil... Lord, remember (?)... the fraternity... for the servant. In the year 66...</p>
+            </div>
+
+            <div type="commentary" xml:lang="ru">
+                <p> Все сведения о надписи содержатся в рукописи П. Кёппена (СПФ АРАН. Ф. 30. Оп. 1. Д. 343. Ч. 1. Л. 96; любезно сообщено И.В. Тункиной). Согласно
+                    ему, надпись найдена в имении полковника Потемкина. На верхнем поле помещено изображение четырех букв хи, которые выглядят
+                    как орнамент. Надпись восстанавливается предположительно.</p>
+                <p>1–4. По палеографии и датировке надпись следует сравнить с <ref type="inscription">V 173</ref><!--byz166--> (Мангуп, 1179 г.). Между сокращением слова «год» и хи
+                    должна была стоять стигма. Судя по восстанавливаемому слову «братия» надпись относилась к какому-то монастырю в районе Артека (ср. <ref type="inscription">V 240</ref><!--byz227--> с соседнего Панаира).
+                   Впрочем, точной уверенности, в том, что надпись не поствизантийского времени, нет.</p>
+            </div>
+
+        </body>
+    </text>
+</TEI>

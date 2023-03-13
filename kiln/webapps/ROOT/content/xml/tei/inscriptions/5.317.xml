@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Феодора</title><title xml:lang="en">Epitaph of Theodore</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.317</idno><idno type="PE">PE5000317</idno>
+            <idno type="AYV2012-number">byz333</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia (?)</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный Эрмитаж (?)</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>State Hermitage (?)</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Серый (проконесский ?) мрамор.</material>
+                           <material xml:lang="en">Gray (Proconessian ?) marble.</material>
+                           <p xml:lang="ru">Обломан левый верхний угол и правая сторона.</p>
+                           <p xml:lang="en">Top left corner and the right side are missing.</p>
+                           <dimensions>
+                              <height>28,0</height>
+                              <width>25,0</width>
+                              <depth>5,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, эпсилон, тета, 
+                           омикрон и сигма миндалевидные, каппа сильно маньеризованная. Лигатура ню-тау, омикрон-ню; знаки сокращения.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a loop, almond-shaped epsilon, theta, omicron and sigma, extremely ornate kappa. Ligature:
+                        nu-tau, omicron-nu; abbreviation marks.</seg>
+                        <height unit="cm">1,35.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Воспор <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Bosporus <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate notBefore="0884" notAfter="0884" evidence="указание_надписи">
+                        <seg xml:lang="ru">884 г.</seg>
+                        <seg xml:lang="en">884 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Санкт-Петербург, Россия<certainty locus="value" match=".." cert="low"/>.</seg>
+                     <seg xml:lang="en">St. Petersburg, Russia<certainty locus="value" match=".." cert="low"/>.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-09" who="CB">Andrey's corrections</change>
+          <change when="2013-02-25" who="NG">corrections of Greek lemmata</change>
+         <change when="2012-09-12" who="AG">certainty tag added, heading corrected</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+         <change when="2012-02-29" who="AG">tags tidied, the Greek textand apparatus tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.317">
+            <desc xml:lang="en">Sketch and transcription of face</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="ἐνθάδε"><supplied reason="lost">Ἐνθά</supplied>δε</w> <w lemma="κατάκειμαι">κατάκητε</w>
+               <lb n="2"/><supplied reason="lost"><w lemma="ὁ">ὁ</w></supplied>
+               <w lemma="δοῦλος"><supplied reason="lost">δοῦ</supplied><unclear>λ</unclear>ος</w>
+               <w lemma="ὁ">τοῦ</w> <del rend="erasure"><gap reason="lost" extent="unknown" unit="character"/></del> 
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+               <persName type="attested" ref="#person433"><name nymRef="Θεόδωρος">Θε<lb n="3" break="no"/><supplied reason="lost">όδω</supplied>ρος</name></persName> <w lemma="ὁ">τὸ</w>
+               <w lemma="ἐπίκλην">ἐπήκλην</w>
+               <lb n="4"/><gap reason="lost" unit="character" quantity="2"/><w part="F">θυ</w>. <w lemma="ἅπας">Ἅπαντος</w> <w lemma="ὁ">τοῦ</w>
+               <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> 
+               <w lemma="εἰμί"><expan><abbr>ἦ</abbr><ex cert="low">ν</ex></expan></w>
+               <w lemma="βίος">βίο<lb n="5" break="no"/>υ</w> 
+               <date dur="P87Y"><w lemma="ὀγδοήκοντα"><expan><abbr><choice><corr>ὀ</corr><sic>Η</sic></choice>γδοήκ</abbr><ex>ον</ex><abbr>τα</abbr></expan></w>
+                  <w lemma="καί">καὶ</w> <num value="7">ζ</num></date>, <w lemma="ὅς">οὗ</w>
+               <lb n="6"/><w lemma="ἀναιρέω">ἀνερ<choice><corr>εθ</corr><sic>ΘΡ</sic></choice>ῇ</w>
+               <w lemma="ὑπό">ὑπὸ</w> <w lemma="ὁ">το͂ν</w> <w lemma="πατήρ"><expan><abbr>πα<lb n="7" break="no"/>τ</abbr><ex>έ</ex><abbr>ρον</abbr></expan></w>, 
+               <w lemma="ἄριστος"><expan><abbr>ἄρ<supplied reason="lost">ι</supplied>στ</abbr><ex>α</ex></expan></w> <w lemma="ἔτος">ἔτη</w>. <w lemma="τελειόω">Ἐτελη<lb n="8" break="no"/>ώθη</w> <date><w lemma="μήν"><expan><abbr>μη</abbr><ex>νὶ</ex></expan></w> <rs type="month" ref="apr"><w lemma="Ἀπρίλιος">Ἀπρηλήῳ</w></rs>
+               <lb n="9"/><num value="13">ιγ</num>, <w lemma="ἀπό">ἀπὸ</w> <persName type="divine" key="adam"><name nymRef="Ἀδὰμ">Ἀδὰμ</name></persName>
+                  <w lemma="ἔτος">ἔ<lb n="10" break="no"/>τους</w> <num value="6392">ςτϞβ</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="4"><rdg>Θύα παντὸς <note>Latyshev</note></rdg></app>
+                <app loc="4"><rdg>κ(αὶ) βίο[υ ? <note>Latyshev</note></rdg></app> 
+                <app loc="5-6"><rdg><supplied reason="omitted">ὸ</supplied>γδο[ήκον]τα ? ΚΑΤΖΟΥ ΑΝΕΡΘΡΗ <note>Latyshev</note></rdg></app>
+                <app loc="6-7"><rdg>τὸν πατρο͂να .... <note>Latyshev</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Здесь лежит раб Божий Феодор по прозвищу ..фи. Всей его жизни было восемьдесят семь, пока он не был взят отцами, прекрасных лет. Скончался 
+               13 апреля, в 6392 году от Адама.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Here lies a servant of God, Theodore, nicknamed ...phy. Of his life, in total, there were eighty seven wonderful years, until he was taken 
+               by the fathers. He died on April 13th, in the 6392nd year since Adam.
+          </p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Рисунок камня с чтением и некоторыми сведениями о нем находится в бумагах В.В. Латышева (ПФА РАН. Ф. 110. Оп. 1. Д. 98. Л. 354). 
+               Камень был списан им в 1883 году в Эрмитаже; обнаружить его там нам не удалось. Неясно, что удержало Латышева от его публикации: то, что в 1883 году 
+               он еще не издавал всех надписей из Южной России, то, что надпись была не оттуда, или то, что осталась непрочитанной часть текста. 
+               Наше восстановлении середины надписи гипотетично, так как сделано не по оригиналу, а по копии Латышева.</p>
+                <p> Судя по расположению текста, правого нижнего угла у камня не было изначально — вероятно, для надгробия было использовано мраморное spolium.  </p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.d</ref>.  </p>
+            <p> 4. Прозвище Феодора было похоже на Мамси из <ref type="inscription">V 45</ref><!--byz045-->.</p>
+            <p> 4–7. Риторический пассаж эпитафии напоминает <ref type="inscription">V 243</ref><!--byz229--> (см. также ниже).</p>
+                <p> 7–8. Относительно формулы см. <ref type="introduction">IV.3.F.f</ref>.</p>
+                <p>9. О датировке «от Адама» см. <ref type="introduction">IV. 4. D</ref>; о соотношении годов от сотворения мира и от Р.Х. в 
+                   средневизантийское время см. <ref type="introduction">IV. 4. D</ref>. Она заставляет думать, что камень происходит именно из Северного Причерноморья 
+                   (см. комм. к <ref type="inscription">V 315</ref><!--byz278--> и Виноградов 2008). По палеографии надпись очень близка <ref type="inscription">V 243</ref><!--byz229--> (906 г.) и <ref type="inscription">V 336</ref><!--byz320--> (912 г.?). Учитывая их боспорское 
+                   происхождение (см. комм. к <ref type="inscription">V 336</ref><!--byz320-->), можно предположить, что, если данное надгробие, действительно, северопричерноморское, то оно с 
+                   Боспора. В пользу северопричерноморского происхождения памятника говорит и дата обращения к нему Латышева — 1883 год, т.е. именно 
+                   тогда, когда ученый начал заниматься по поручению ИРАО эпиграфикой Северного Причерноморья и совершил поездку в Крым.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>A drawing of the monument, together with a reading and some information about it, is preserved among the papers of V.V. Latyshev
+               (The Archive of The Academy of Sciences of Russia, St. Petersburg Branch, f. 110, op. 1, d. 98, l. 354). Latyshev transcribed it
+               at the Hermitage in 1883; I could not find any trace of it there. It is unclear why Latyshev did not publish the monument: perhaps in 1883, 
+               he was not yet aiming at publishing all inscriptions from the South of Russia; or perhaps the inscription was not from that region, finally, 
+               it might be because he did not succeed in reading all of it. My restoration of the middle of the text is hypothetical, based as it is on Latyshev's
+               transcription rather the study of the monument de visu.</p>
+            <p>Judging by the arrangement of text, it is likely that the right bottom corner had already been lost by that time -
+               it is possible that the tombstone was made from a marble spolium. </p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.d</ref>.  </p>
+            <p> 4. The nickname of Theodore may have been something similar to Mamsy, as in <ref type="inscription">V 45</ref><!--byz045-->.</p>
+            <p> 4–7. The rhetorical flare resembles that of <ref type="inscription">V 243</ref><!--byz229--> (see also below).</p>
+            <p> 7–8. On the formula, see Introduction  <ref type="introduction">IV.3.F.f</ref>.</p>
+            <p>9. On the dating "since Adam," see Introduction  <ref type="introduction">IV. 4. D</ref>; on the correspondence of year "since Creation" and 
+               "since the Birth of Christ" in the Middle Byzantine period, see Introduction <ref type="introduction">IV. 4. D</ref>. The date suggests that the monument
+               originated in the Northern Black Sea region (see commentary to <ref type="inscription">V 315</ref><!--byz278--> and Vinogradov 2008). 
+               The palaeographic features are similar to those of <ref type="inscription">V 243</ref><!--byz229--> (906 C.E.) and <ref type="inscription">V 336</ref><!--byz320--> 
+               (912 C.E.?). Taking into consideration their origin in Bosporus (see commentary to <ref type="inscription">V 336</ref><!--byz320-->), 
+               we could hypothesize that if indeed this tombstone were from the Northern Black Sea region, then it could be associated with Bosporus. 
+               The fact that Latyshev was working with this monument in 1883 also supports the hypothesis of its Black Sea origin because it was
+               at exactly this time that Latyshev had been entrusted with the study of Northern Black Sea epigraphy by the Imperial Russian
+               Archaeological Society and made a trip to Crimea.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

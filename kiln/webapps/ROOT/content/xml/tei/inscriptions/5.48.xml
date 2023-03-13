@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение Николая, Никандра и Никона</title><title xml:lang="en">Invocation of Nicholas, Nikandros and Nikon</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.48</idno><idno type="PE">PE5000048</idno>
+            <idno type="AYV2012-number">byz048</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>80/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>80/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon9 #mon12">Подножье креста.</objectType>
+                           <objectType xml:lang="en">Base of cross.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Ноздреватый известняк желтоватого цвета.</material>
+                           <material xml:lang="en">Spongy yellowish limestone.</material>
+                           <p xml:lang="ru">Камень полукруглой формы с выпуклой рамкой (выс. 2 см) по краю, внутри рамки следы охры. Оббит со всех сторон 
+                              кроме нижней, сколота правая часть тыльной стороны, выщерблины по поверхности лицевой стороны.</p>
+                           <p xml:lang="en">Stone slab, its front cut in the shape of a semicircular niche, with a framing band in high relief (Depth 0.02m).
+                           There are traces of ochre inside the frame. Damaged on all sides except the bottom. The right of the back side is broken off. The front
+                           surface is worn and chipped.</p>
+                           <dimensions>
+                              <height>32,0</height>
+                              <width>47,0</width>
+                              <depth>16,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Бета позднеминускульная, лямбда и ню минускульные; сокращения.</seg>
+                        <seg xml:lang="en">Lapidary. Late minuscule beta, minuscule lambda and nu; abbreviations.</seg>
+                        <height unit="cm">1,5–3.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="1202" notAfter="1203" evidence="указание_надписи">
+                        <seg xml:lang="ru">1202–1203 гг.</seg>
+                        <seg xml:lang="en">1202–1203 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1906 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Некрополь у Загородного крестообразного храма, перед склепом № 2131, засыпь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1906, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Necropolis near the Extramural Cruciform Church, in front of Burial vault 2131, earth infill.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2013-10-24" who="TW">Added image codes</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+          <change when="2012-10-01" who="AL">small corrections</change>
+         <change when="2012-08-22" who="AG">1 line translated</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">1 line translated</change>
+         <change when="2012-07-02" who="AG">small corrections, app updated</change>
+         <change when="2012-05-15" who="AG">several lines translated</change>
+         <change when="2012-04-18" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG">apparatus marked up</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-16" who="AG">updated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.48-1">
+                <desc xml:lang="en">Photograph of face 1 (from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.48-2">
+                <desc xml:lang="en">Drawing of face 1 (from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1907 --><ptr target="bib:b0148"/>,  38–39, № <citedRange>21</citedRange></bibl>
+               <bibl n="2"><!-- Виноградов 2009a --><ptr target="bib:b0048"/>,  <citedRange>246–247</citedRange></bibl>
+               </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>έ</abbr></expan></name></persName>, 
+                <w lemma="βοηθέω"><expan><abbr>βοήθ</abbr><ex>ει</ex></expan></w>
+               <persName type="attested" ref="#person38"><name nymRef="Νικόλαος">Νι<supplied reason="lost">κ</supplied>όλ<supplied reason="lost">αον</supplied></name></persName> 
+                <w lemma="καί"><supplied reason="lost">κα</supplied>ὶ</w>
+               <persName type="attested" ref="#person39"><name nymRef="Νίκανδρος">Νί<supplied reason="lost">καν</supplied><lb n="2" break="no"/>δρον</name></persName> <w lemma="καί">καὶ</w>
+               <persName type="attested" ref="#person40"><name nymRef="Νίκων"><supplied reason="lost">Ν</supplied>ίκον<supplied reason="lost">α</supplied></name></persName>.
+               <gap reason="lost" quantity="3" unit="character"/> <date><num value="13">ιγ</num>.
+               <lb n="3"/><g ref="#stauros"/> <w lemma="ἔτος"><expan><abbr>Ἔτ</abbr><ex>ους</ex></expan></w>
+                  <num value="6711">ςψια</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"><lem>ιγ´</lem> <rdg source="bib:b0148"><note>om.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Христе, помоги Ни<supplied reason="lost">к</supplied>ол<supplied reason="lost">аю</supplied>, Ни<supplied reason="lost">кан</supplied>дру и <supplied reason="lost">Н</supplied>икон<supplied reason="lost">у</supplied>. 13-го … В 6711 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Christ, help Ni<supplied reason="lost">colaos</supplied>, Ni<supplied reason="lost">kandros</supplied> and N<supplied reason="lost">ikon</supplied>.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+                <p>1. Относительно формулы см. <ref type="introduction">IV.3.E.a</ref>. Несколько необычно ее нахождение у входа в склеп, однако, скорее всего, это не надгробие: 
+                   камень мог попасть сюда сверху, после того как склеп № 2131 был разрыт грабителями, тем паче, что камень сохранился не целиком. Видимо, он 
+                   случайно попал сюда из соседнего Загородного крестообразного храма.</p>
+            <p>Имя Николай встречается в Херсоне также в <ref type="inscription">V 4</ref><!--byz003-->, <ref type="inscription">V 67</ref><!--byz067-->, <ref type="inscription">V 82</ref><!--byz082-->.2, <ref type="inscription">V 90</ref><!--byz090-->.5.</p>
+                <p>2. Христианские имена Никандр и Никон в Крыму неизвестны. Сочетание имен инвокантов наталкивает на мысль о том, что они были монахами. 
+                   Вполне вероятно, что монастырь при Загородном крестообразном храме, о котором упоминается в «Мученичестве» папы Мартина (VII в.), существовал и 
+                   в начале XIII в. В любом случае, <!--это -->последнее датированное свидетельство, связанное с этой церковью.</p>
+            <p>2–3. Число 13 должно указывать день месяца (судя по размеру лакуны, обозначенный числом, ср. <ref type="inscription">V 60</ref><!--byz060-->, 
+               <ref type="inscription">V 89</ref><!--byz089-->.3, <ref type="inscription">V 151</ref><!--byz145-->), так как на 6711 год от сотворения 
+                   мира приходился не 13-й, а 6-й индикт.</p>
+            <p>По форме памятник близок к <ref type="inscription">V 45</ref><!--byz045-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1. On the formula, see <ref type="introduction">IV.3.E.a</ref>. Although the stone was found at the entrance to a burial vault, it is not a tombstone: the stone could have fallen in 
+               when Burial vault 2131 was dug up by robbers, and this scenario is the more likely because the stone is not preserved in full. It may well have been taken 
+            from the nearby Extramural Cruciform Church, and for some random reason, which we cannot guess.</p>     
+            <p>The name Nicholas occurs in Cherson also in <ref type="inscription">V 4</ref><!--byz003-->, <ref type="inscription">V 67</ref><!--byz067-->, <ref type="inscription">V 82</ref><!--byz082-->.2, <ref type="inscription">V 90</ref><!--byz090-->.5.</p>
+             <p>2. Christian names Nikandros and Nikon are not otherwise known in Crimea. The combination of names suggests a group of monks. It is possible that a 
+                monastery associated with the Extramural Cruciform Church and mentioned in the Passion of Pope Martin I (VIIth centiury) continued to exist up
+             to the early XIIIth century. In any case, <!--this inscription--> is the last piece of evidence connected to this particular church.</p>
+            <p>2-3. The numeral 13 should be the day of the month (apparently, judging by the size of lacuna, expressed by a numeral: cf. <ref type="inscription">V 60</ref><!--byz060-->,<ref type="inscription">V 89</ref><!--byz089-->.3, <ref type="inscription">V 151</ref><!--byz145-->), since the year
+             6711 since Creation corresponds to the 13th, not the 6th indiction.</p>
+             <p>The shape of the monument is similar to that of <ref type="inscription">V 45</ref><!--byz045-->.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

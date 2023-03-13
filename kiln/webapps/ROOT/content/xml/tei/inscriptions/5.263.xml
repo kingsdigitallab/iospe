@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Прошение</title><title xml:lang="en">Invocation</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.263</idno><idno type="PE">PE5000263</idno>
+            <idno type="AYV2012-number">byz250</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc3">
+                     <seg xml:lang="ru">Инвокативная надпись.</seg>
+                     <seg xml:lang="en">Invocative inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Стена с изображением крестов. Потеки на поверхности.</p>
+                           <p xml:lang="en">Wall with images of crosses. Water stains on the surface.</p>
+                           <dimensions>
+                              <height>8,0</height>
+                              <width>8,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>.</seg>
+                        <seg xml:lang="en">Graffito.</seg>
+                        <height unit="cm">0,5-1,5.</height>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p043">
+                        <seg xml:lang="ru">Ялита.</seg>
+                        <seg xml:lang="en">Jalita.</seg>
+                     </origPlace>
+                     <origDate notBefore="0999" notAfter="0999" cert="low" evidence="указание_надписи">
+                        <seg xml:lang="ru">999 г. (?).</seg>
+                        <seg xml:lang="en">999 C.E.(?).</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>, <date when="2012-07">июль 2012</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>, <date when="2012-07">July 2012</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#iografridge">Иограф, Хребет.</placeName>
+                        <rs type="circumstances">1998 г., обследования О.В. Каверина.</rs>
+                        <rs type="context">Пещера с храмом.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Iograf Ridge.</placeName>
+                        <rs type="circumstances">1998, survey of O.V. Kaverin.</rs>
+                        <rs type="context">Cave with a church.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2013-04-25" who="AG">inscription, comments and apparatus updated</change>
+         <change when="2012-08-14" who="AG">1 line translated</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-19" who="AG">several lines translated, small corrections</change>
+          <change when="2012-03-27" who="AL">original date tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.263-1">
+            <desc xml:lang="en">Photograph of face</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+         <graphic url="5.263-2">
+            <desc xml:lang="en">Photograph, detail of face</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p>
+               ined.
+            </p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>[В 6]507 (?) [году, в ию]не. Помоги, крест.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[In the year] 6]507 (?), [in Ju]ne. Help, cross.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись, любезно указанная Н.П. Туровой, выполнена на стене естественной пещеры, внутри которой стоял храм. Не исключено, что данная часть 
+               стены пещеры была включена в пространство храма, но также вероятно, что она была выполнена и до постройки храма, так как последний 
+               полностью заслонил бы от света ту стену, на которой выполнена надпись. Надпись, выполненная посреди других граффити (прежде всего, изображений 
+               креста), весьма плохо читается и практически не поддается фотографированию или калькированию.</p>
+                <p> Содержание ее связано, по-видимому, с изображениями крестов на стене, хотя вполне возможно, что в пещере, действительно, 
+                   был установлен какой-то крест. </p>
+            <p>Археологические раскопки Н.П. Туровой обнаружили материал, начинающийся с IX в. (Турова 2013).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription was kindly brought to our attention by N.P. Turova. It was made on the wall of a natural cave, inside which there was a church. It is possible 
+            that that section of the wall was part of the church, but equally possible is a scenario where the inscription had been made prior to the construction
+            of the church, since the latter would have completely blocked the wall with inscription from natural light. The text, which appears among other graffiti
+            (mainly, images of crosses), is very difficult to read and is impossible to photograph or trace on paper.</p>
+            <p>Its content is probably related to the images of crosses on the wall, but we cannot exclude the possibility that an actual cross was set up in the cave
+            as well.</p>
+            <p>Archaeological excavations carried out by N.P. Turova yielded archaeological material, which dates to the IXth century C.E. and later.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><date><w lemma="ἔτος"><supplied reason="lost">Ἔτους</supplied></w> <num value="6507"><supplied reason="lost">ς</supplied>φζ</num> <note>?</note>,
+               <lb n="2"/><w lemma="μήν"><supplied reason="lost">μηνὶ</supplied></w> <w lemma=" Ἰούνιος"><supplied reason="lost"> Ἰου</supplied>νίου</w></date>.
+               <lb n="3"/><w lemma="βοηθῶ">Βοήθη</w>, 
+               <lb n="4"/><w lemma="σταυρός"><expan><abbr>στ</abbr><ex>αυ</ex><abbr>ρόν</abbr></expan></w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

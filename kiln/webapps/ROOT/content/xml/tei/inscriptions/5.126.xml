@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Василия</title><title xml:lang="en">Epitaph of Basileios</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.126</idno><idno type="PE">PE5000126</idno>
+            <idno type="AYV2012-number">byz121</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                      <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Гробообразный памятник.</objectType>
+                           <objectType xml:lang="en">Casket-shaped tombstone.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Памятник в виде гроба с крышкой, с орнаментом на левом скате, 
+                              углублением на передней стороне и выдающимся уступом внизу. Буквы стерты.</p>
+                           <p xml:lang="en">Casket-shaped monument with saddleback lid, with ornament on the left side of the lid, a depression on the front, and a projecting ledge at the 
+                           bottom. Letters are effaced.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углублении и на выступе.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>In the depression and on the ledge.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate notBefore="1448" notAfter="1448" evidence="указание_надписи">
+                        <seg xml:lang="ru">1448 г.</seg>
+                        <seg xml:lang="en">1448 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#vysokoe">Высокое.</placeName>
+                        <rs type="circumstances">1915–1916 гг., обследования М.И. Скубетова.</rs>
+                        <rs type="context">К востоку от Юхары-Керменчика, урочище Сарча-кильсе 
+                            (Балабан-карагач-кильсе), храм свв. Сорока мучеников, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">1915-1916, survey of M.I. Skubetov.</rs>
+                        <rs type="context">East of Yukhary-Kermenchik, Sarcha-kilse Tract, Balaban-karagach-kilse, Church of Forty Martyrs, cemetery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">small corrections</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-24" who="AG">editor added, several lines translated</change>
+         <change when="2012-02-06" who="AG">tagged bibliography, apparatus, small corrections</change>
+          <change when="2012-02-29" who="AFS">tagged Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918а--><ptr target="bib:b0156"/>, 41–42, № <citedRange>10</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="4"><rdg source="bib:b0156">ΑΜΙΛΟΓΟΥ ......</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил блаженнейший раб Божий Василий <supplied reason="lost">..-го</supplied> авгу<supplied reason="lost">ста, в</supplied> 6956 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: the most blessed servant of God, Basileios, ... of August, in the year 6956.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Таблицы к статье Латышева остались неизданными, а сам камень пропал. Поэтому 
+                восстановление надписи чрезвычайно предположительное.  </p>
+                <p> 1–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. Эпитет «блаженнейший» в отношении мирян 
+                    встречается в византийской эпиграфике ок. 10 раз (согласно PHI7 Database) и обозначает 
+                    умершего (или давно умершего).  </p>
+            <p> 3. Имя Василий в Крыму встречается также в <ref type="inscription">V 44</ref><!--byz044-->.  </p>
+                <p>4–5. В большинстве надписей из Керменчика присутствует датировка по числу месяца — 
+                    логично восстановить ее с исправлениями схожих букв (альфа вм. лямбды и ипсилон вм. 
+                    омикрона у Латышева). Для предшествующей по времени керменчикской надписи <ref type="inscription">V 123</ref><!--byz119--> 
+                    (1400 г.) характерна датировочная формула ἐπὶ ἔτους (см. подр. <ref type="introduction">III.1.C.b</ref>), и поэтому мы ее здесь 
+                    с осторожностью восстанавливаем.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Because the plates for Latyshev's article were never published, and the stone disappeared, our reconstruction of this inscription remains rather hypothetical.</p>
+            <p>1-3. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>. The epithet "most blessed" with reference to secular individuals
+               is attested in Byzantine epigraphy about 10 times (according to PHI7 Database) and in such cases designates a deceased or long-deceased person.</p>
+            <p>3. The name Basileios (here spelled Basilis) is also known in Crimea from <ref type="inscription">V 44</ref><!--byz044-->.</p>
+            <p>4-5. In most inscriptions from Kermenchik we find a dating formula by the day of the month - it would be logical to restore it here, while correcting 
+               similar-looking letters (alpha instead of lambda and epsilon instead of omicron, as in Latyshev's edition), however, an earlier inscription from Kermenchik -
+               <ref type="inscription">V 123</ref><!--byz119--> - displays the dating formula ἐπὶ ἔτους (for more detail, see Introduction <ref type="introduction">III.1.C.b</ref>),
+            for which reason we are also cautiously restoring it here.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκυμίθι</w> <w lemma="ὁ">ὁ</w> <w lemma="μακάριος">μα<lb n="2" break="no"/>καριότατος</w>
+               <lb n="3"/><w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person157"><name nymRef="Βασίλης">Βασίλις</name></persName>
+               <lb n="4"/><orig>Α</orig> <date><w lemma="μήν"><expan><abbr>μι</abbr><ex>νὶ</ex></expan></w>
+                   <rs type="month" ref="aug"><w lemma="Αὔγουστος"><supplied reason="omitted">Αὐ</supplied>γου<supplied reason="lost">στοῦ</supplied></w></rs>
+                  <num><gap reason="lost" quantity="2" unit="character"/>,</num>
+                   <w lemma="ἐπί"><supplied reason="lost" cert="low">ἐπὶ</supplied></w>
+               <lb n="5"/><w lemma="ἔτος">ἔτους</w> <num value="6956">ςϠνς</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

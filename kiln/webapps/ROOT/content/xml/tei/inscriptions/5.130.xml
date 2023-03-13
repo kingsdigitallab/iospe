@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Хадсиминии <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Epitaph of Chadsyminia <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.130</idno><idno type="PE">PE5000130</idno>
+            <idno type="AYV2012-number">byz125</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray State Historical and Cultural Preserve</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне углубление с орнаментированной рамкой сложной формы, на задней стороне “коса” (выс. 1,1), на боковых 
+                              сторонах орнамент. Обломана сверху, сколы по поверхности.</p>
+                           <p xml:lang="en">On the front - inset panel with ornate border; on the back - interlace ornament (H. 1.1cm); the sides also bear
+                           ornaments; Broken on the bottom; the surface is chipped.</p>
+                           <dimensions>
+                              <height>56,0</height>
+                              <width>24,0</width>
+                              <depth>15,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the inset panel.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Мю с Y-образной серединой. Лигатуры омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Lapidary. Mu with Y-shaped middle. Ligature omicron-upsilon.</seg>
+                        <height unit="cm">0,4–2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate notBefore="1361" notAfter="1362" evidence="указание_надписи">
+                        <seg xml:lang="ru">1361–1362 г.</seg>
+                        <seg xml:lang="en">1361–1362 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#vysokoe">Высокое.</placeName>
+                        <rs type="circumstances">1968 г., обследование М.Я. Чорефа.</rs>
+                        <rs type="context">На дороге в Баштановку, храм.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">1968, survey of M.Ya. Choref.</rs>
+                        <rs type="context">On the road to Bashtanovka, church.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray,  Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">some corrections, 1 line translated, tag corrected</change>
+        <change when="2012-05-29" who="AG"> editor added</change>
+         <change when="2012-05-29" who="AG">small correction</change>
+         <change when="2012-03-07" who="AG">several lines translated, some corrections in metadata</change>
+         <change when="2012-03-07" who="AG">check, tags corrected</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.130">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐ<lb n="2" break="no"/>κοιμή<lb n="3" break="no"/>θη</w> <w lemma="ὁ">ἱ</w> <w lemma="δοῦλος">δούλοι</w> <w lemma="ὁ">τοῦ</w>
+               <lb n="4"/><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person163"><name nymRef="Χαδσυμινια" cert="low">Χα<unclear>δ</unclear>συμ<lb n="5" break="no"/>ινια</name></persName>, <w lemma="υἱός">υἱὸς</w> <surplus><orig>Τ
+               <lb n="6"/>Σ</orig></surplus> <w lemma="ὁ">τοῦ</w>
+               <persName type="attested" ref="#person164"><name nymRef="Ἰωαννίκιος">Ἰ<unclear>ω</unclear><supplied reason="lost">ανικ</supplied><lb n="7" break="no"/>έου</name></persName>, <w lemma="ἐπί">ἐπὶ</w>
+               <w lemma="ἔτος"><expan><abbr>ἔ<supplied reason="lost">τ</supplied></abbr><ex>ους</ex></expan></w> 
+               <num value="6870">ς<lb n="8" break="no"/>ωο</num> .
+               <w lemma="ἰνδικτιών"><expan><abbr>ἰ<unclear>ν</unclear><supplied reason="lost">δ</supplied></abbr><supplied reason="lost"><ex>ικτιῶνος</ex></supplied></expan></w>
+               <supplied reason="lost"><num value="15">ιε</num></supplied>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья Хадсиминия (?), дочь Ио<supplied reason="lost">анник</supplied>ия, в <supplied reason="lost">6</supplied>870 году, в <supplied reason="lost">15-й</supplied> ин<supplied reason="lost">дикт</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Chadsyminia (?), daughter of Io[annik]ios, in the year <supplied reason="lost">6</supplied>870, in the <supplied reason="lost">15th</supplied> in<supplied reason="lost">diction</supplied>.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1–4. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+                <!--<p> 4–5. Об имени Хадсиминия (?) см. прил. 2. </p>-->
+            <p> 5. Υἱὸς для обозначения дочери встречается также в <ref type="inscription">V 140</ref><!--byz135--> из Лак (1421 г.).  </p>
+            <p> 6–7. Имя Иоанникий известно в Северном Причерноморье по таманской надписи <ref type="inscription">V 340</ref><!--byz316--> 
+                    (1078 г.), правда, как монашеское.</p>
+                <p>7–8. Датировочная формула ἐπὶ ἔτους характерна именно для надписей из Керменчика 
+                    (см. подр. <ref type="introduction">III.1.C.b</ref>). Напротив, упоминание индикта уникально для керменчикских надписей.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1-4. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+            <!--<p>4-5. On the name Khadsyminia (?), see Appendix 2.</p>-->
+            <p>5. Υἱὸς in reference to a daughter is also attested in <ref type="inscription">V 140</ref><!--byz135--> from Laki (1421 C.E.)</p>
+            <p>6-7. The name Ioannikios (here Ioanikeos) is known in the Northern Black Sea region in one inscription from Taman - <ref type="inscription">V 340</ref><!--byz316--> 
+            (1078 C.E.), although is it a monk's name in that case.</p>
+            <p>7-8. The dating formula ἐπὶ ἔτους is typical for inscriptions from Kermenchik (for more detail, see Introduction <ref type="introduction">III.1.C.b</ref>),
+               while a reference to indiction is otherwise unknown in this location. 
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

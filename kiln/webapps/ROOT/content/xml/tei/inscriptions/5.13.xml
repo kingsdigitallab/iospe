@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Исаака и Мануила <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Building inscription of Isaac and Manouel <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.13</idno><idno type="PE">PE5000013</idno>
+            <idno type="AYV2012-number">byz012</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru">Неизвестен.</material>
+                           <material xml:lang="en">Unknown.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка, три монограммы в рамках и -растительный  орнамент между рамок.
+                              Состояние неизвестно.</p>
+                           <p xml:lang="en">On the front - relief border; in addition, three relief monograms set in a row within a rectangular relief frame and
+                              separated from one another by vegetative ornaments.</p> 
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Над монограммами.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>Above the monograms.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="1446" notAfter="1459" evidence="монограммы">
+                        <seg xml:lang="ru">1446–1459 гг.</seg>
+                        <seg xml:lang="en">1446–1459 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1798 г., обследования П.С. Палласа.</rs>
+                        <rs type="context">Башня XVII (?).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1798, survey of P.S. Pallas</rs>
+                        <rs type="context">Tower XVII (?).</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2012-11-11" who="AL">inserted toponyms in English commentary</change>
+         <change when="2012-08-16" who="AG">Greek lemma added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">small corrections, 1 line translated, apparatus upd</change>
+         <change when="2012-04-24" who="AG">several lines translated, bibliography and apparatus partly corrected</change>
+         <change when="2012-04-17" who="AG">bibliography corrected, editor added, 1 line translated</change>
+         <change when="2012-04-05" who="AG">bibliography and apparatus updated</change>
+         <change when="2012-03-20" who="AG">corrections in metadata</change>
+         <change when="2012-02-22" who="AG">bibliography tags tidied</change>
+         <change when="2012-02-20" who="AG">bibliography tagged</change>
+         <change when="2011-12-19" who="AG">update</change>
+         <change when="2011-12-12" who="AG">corrections, tagging</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.13">
+            <desc xml:lang="en">Drawing of face (from Latyshev 1896)</desc>
+            <desc xml:lang="ru">Рисунок из Latyshev 1896</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--CIG--><ptr target="bib:Kirchhof"/>  IV <citedRange>8851</citedRange></bibl>
+               <bibl n="1.1"><!--Сборник--><ptr target="bib:b0132"/>, 19–20, № <citedRange>9</citedRange></bibl>
+               <bibl n="1.1.1"><!--Millet 1900--><ptr target="bib:b0397"/></bibl>
+               <bibl n="1.2"><!--Малицкий 1933--><ptr target="bib:b0163"/>,  <citedRange>36–37</citedRange></bibl>
+               <bibl n="1.3"><!--Виноградов 2011a--><ptr target="bib:b0386"/>,  220–222 № <citedRange>3</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="βάλλω">Βαλλόμενον</w> <w lemma="εἰς"><expan><abbr>ε</abbr><ex cert="low">ἰς</ex></expan></w>
+               <w lemma="ὁ">τὸ</w> <w lemma="κάστρον"><expan><abbr>κάστρο</abbr><ex cert="low">ν</ex></expan></w> <w lemma="ὁ">τῖς</w>
+               <placeName key="cherson">Χερσονίας</placeName>.
+            </ab>
+         </div>
+         <div type="apparatus">
+           <listApp>
+              <app loc="1"><lem source="bib:Kirchhof">βαλλομέ<supplied reason="lost">ν</supplied>ου ᾿ς</lem>
+                <rdg source="bib:b0397">βαλλομένου ἐ<supplied reason="lost">ν</supplied></rdg></app>
+              <app loc="1">
+                <rdg source="bib:Kirchhof">Χερσ<supplied reason="lost">ῶνο</supplied>ς</rdg><note> et alii</note> 
+                <!-- Kirchhoff et alii. -->
+              </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Поставлено (?) в замке Херсонии.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Set up (?) in the Chersonia castle.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Паллас (Pallas 1801, 74) говорит о данной надписи после <ref type="inscription">V 6</ref><!--byz005--> и упоминает, что она найдена «там же», т.е. либо в стене башни XVII, либо где-то в 
+               Херсонесе вообще. Надпись известна по рисунку Дюбуа (Dubois de Montpéreux 1843, atl. sér. IV, pl. 24b, fig. 10).</p>
+                <p> По своему типу (три монограммы в картушах) надпись, несомненно, относится к памятникам феодоритской эпиграфики XV в. (ср. <ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214-->). 
+                   Наклон букв ясно показывает, что Паллас не перерисовывал буквы (вероятно, вязь), а передавал свою расшифровку надписи.  </p>
+                <p> 1. Наше чтение надписи предположительно. Относительно данного значения глагола βάλλω см. Lampe, s.v., C — вероятно, здесь следует видеть 
+                   аористную форму βαλ{λ}όμενον; в конце слова точно стоит ню, ибо так же оно изображается и четвертым от конца, в последнем слове, где его чтение 
+                   несомненно.</p>
+                <p>Ключевой для датировки надписи является расшифровка ее монограмм (Милле предлагал следующую расшифровку монограмм: ἰς κ᾿ μηνὸς Δεκεμβρίου). 
+                   В первой монограмме ясно читается имя Исаак; во второй читаются только буквы MAN (возможно, от имени Мануил); в третьей имя неясно. Известен 
+                   Исаак, правитель Феодоро (ум. в 1475 г.; см. Мыц 1991a, 183): его монограмма стоит на центральном месте в <ref type="inscription">V 238</ref><!--byz224--> (1459 г.), тогда как в данном 
+                   случае она занимает второе место (судя по надписям господаря Алексея (<ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214-->) главным является центральный символ, в то время как боковые — 
+                   второстепенными). Этот факт заставляет отнести нашу надпись ко времени до 1459 г., когда Исаак уже занял первенствующую позицию. Центральная 
+                   монограмма должна принадлежать старшему феодоритскому господарю, которым с 1446 по 1459 г. был, по всей видимости, Олобо 
+                   (см. Мыц, 2009, 401–404): в монограмме может быть отражено его христианское имя. Таким образом, данная надпись была поставлена, по всей 
+                   видимости, между 1446 и 1459 г. (см. также комм. к <ref type="inscription">V 14</ref><!--byz013-->). С этим согласуется и необычная для Феодоро форма картушей на рисунке Палласа: они и не 
+                   остроконечные, как в <ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214--> и еще на одном мангупском фрагменте с монограммой Алексия (Малицкий 1932, 35, рис. 11), и не круглые, как в более 
+                   позднем <ref type="inscription">V 238</ref><!--byz224--> и четко не датированном <ref type="inscription">V 148</ref><!--byz142-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+             <p>Pallas (1801, 74) discusses this inscription immediately after <ref type="inscription">V 6</ref><!--byz005--> and mentions that it was found "in the same area," that is, either in the wall of Tower
+                XVII, or somewhere in the general area of Chersonessos. The inscription is known from Pallas' drawing published by Dubois de Montpéreux (1843, atl. sér. IV, pl. 24b, fig. 10).</p>
+            <p>The form of the inscription (three monograms in cartouches) is decidedly representative of the Theodorite epigraphy of the XVth century (see, e.g. <ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214-->).
+                The uniform leaning of letters indicates that Pallas was not reproducing lettershapes in a facsimile style, but was presenting his own reading of the text.</p>
+            <p>1. Our reading of the inscription is rather tentative. On the specific meaning of βάλλω here, see Lampe, s.v. - we should probably identify this as the aorist
+               stem - βαλ{λ}όμενον; the letter at the end of the word is definitely a nu, as it is the same as the fourth letter from the end in the last word - Χερσονίας - 
+               where its reading is indisputable.</p>
+            <p>The decipherement of the monograms is key to the dating of the inscription (Millet offered the following interpretation: ἰς κ᾿ μηνὸς Δεκεμβρίου).
+               In the first monogram, the name Isaac is quite transparent; in the second - only the letters MAN are decipherable (perhaps from the name Manuel);
+               in the third, the name is unclear. We know of Isaac, the ruler of Theodoro (died in 1475 C.E.; see Myts 1991a, 183): his monogram occupies the central
+               position in <ref type="inscription">V 238</ref><!--byz224--> (1459 C.E.), while in this case it appears in a secondary position: if we can judge by the 
+               inscriptions of Authentes Alexios (<ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214-->),
+               the main monogram is the central one, while the lateral ones are secondary. This fact prompts us to date the inscription before 1459 C.E., since by then
+               Isaak had already acquired the leading role. The central monogram should refer to the senior Theodorite official, who from 1446 till 1459 was apparently
+               Olobo (Myts 2009, 401-404): in the monogram, we might be seeing a reflection of his Christian name. Overall, we can conclude that the inscription was 
+               most likely put up some time between 1446 and 1459 C.E. (see also commentary to <ref type="inscription">V 14</ref><!--byz013-->). This date fits well with the unusual shape of the cartouches on the 
+               drawing of Pallas: they are neither pointy, as in <ref type="inscription">V 179</ref><!--byz172--> and <ref type="inscription">V 180</ref><!--byz214-->, as well as on another fragment from Mangup with the monogram of Alexios (Malitsky 
+               1932, 35, drawing 11), nor are they rounded, as in the later <ref type="inscription">V 238</ref><!--byz224-->, and in <ref type="inscription">V 148</ref><!--byz142--> (of less certain date).</p>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

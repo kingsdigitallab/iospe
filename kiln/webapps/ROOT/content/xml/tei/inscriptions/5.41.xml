@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Демонстративная надпись</title><title xml:lang="en">Demonstrative inscription</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.41</idno><idno type="PE">PE5000041</idno>
+            <idno type="AYV2012-number">byz040</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>3496</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3496</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc4">
+                     <seg xml:lang="ru">Демонстративная надпись.</seg>
+                     <seg xml:lang="en">Demonstrative.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Проконесский мрамор.</material>
+                           <material xml:lang="en">Proconnesian marble.</material>
+                           <p xml:lang="ru">Лицевая сторона отполирована; на ней грубо вырезанный крест с раздваивающимися концами. Небольшие сколы на ребрах.</p>
+                           <p xml:lang="en">Polished front with crudely incised cross fourchée. Lightly chipped along the edges.</p>
+                           <dimensions>
+                              <height>38,0</height>
+                              <width>20,0</width>
+                              <depth>3,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Над концом верхнего и по сторонам нижнего рукава креста.</seg>
+                           <seg xml:lang="en">Above the top arm, and on either side of the bottom arm of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with broken crossbar.</seg>
+                        <height unit="cm">3,5–6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Cherson <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="low" evidence="форма_креста">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX–Xth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).<certainty locus="value" match=".." cert="low"/></placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).<certainty locus="value" match=".." cert="low"/></placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-20" who="CB">Andrey's corrections</change>
+         <change when="2012-10-02" who="AG">certainty tag added</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">character and tag in the text corrected</change>
+         <change when="2012-04-18" who="AG">one line translated</change>
+         <change when="2012-04-18" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-11" who="AG"> bibliography updated</change>
+         <change when="2012-02-22" who="AG">tags in bibliography tidied</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-18" who="AG">1 line translated</change>
+         <change when="2011-12-21" who="AG">corrections, updating, tagging</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.41">
+            <desc xml:lang="en">Photograph of face</desc>
+            <desc xml:lang="ru"/>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Сборник --><ptr target="bib:b0132"/>, 30, № <citedRange>22</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Монах (?). Иисус Христос побеждает.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>
+               Monk (?). Jesus Christ is victorious.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Назначение памятника неясно. Крест по форме близок к <ref type="inscription">V 46</ref><!--byz046-->, однако форма альфы с ломаной перекладиной указывает на несколько более раннее 
+               время (употреблялась до нач. Х в., см. <ref type="inscription">V 66</ref><!--byz066-->).</p>
+                <p> 1. Относительно сокращения см. Avi-Yonah 1941, 53.</p>
+                <p> 2–4. Относительно формулы см. <ref type="introduction">IV.3.C.e</ref>.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The function of this monument is unclear. The shape of the cross is similar to that on <ref type="inscription">V 46</ref><!--byz046-->, 
+               although the form of alpha (with broken crossbar) points
+            to a somewhat earlier period (it was in use up to the early Xth century, see <ref type="inscription">V 66</ref><!--byz066-->).</p>
+            <p>1. On the formula, see  Avi-Yonah 1941, 53.</p>
+            <p>2-4. On the formula, see <ref type="introduction">IV.3.C.e</ref>.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="μοναχός"><expan><ex>Μον</ex><abbr>αχ</abbr><ex cert="low">ός</ex></expan></w>.
+               <lb n="2"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἠ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name>
+               <lb n="3"/><w lemma="νικάω">νικᾷ</w>
+               <lb n="4"/><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστό</ex><abbr>ς</abbr></expan></name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

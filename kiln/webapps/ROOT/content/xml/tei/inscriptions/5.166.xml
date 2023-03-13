@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Татар-бея, Тансихи, Тини-бея и Тансихи</title><title xml:lang="en">Epitaph of Tatar-Pees, Tansicha, Tini-Pees and Tansicha</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.166</idno><idno type="PE">PE5000166</idno>
+            <idno type="AYV2012-number">byz159</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>М 1/63</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray State Historical and Cultural Preserve</repository>
+                     <idno>М 1/63</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Лицевая сторона заглажена, тыльная обработана. Подтесы по краю, обломан левый верхний угол.</p>
+                           <p xml:lang="en">The front is planed, and the back is worked. Cut along the edge; top left corner is missing. </p>
+                           <dimensions>
+                              <height>63,5</height>
+                              <width>52,0</width>
+                              <depth>21,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                 
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы вырезаны между линеек. Альфа с заостренной петлей и вертикальной 
+                           правой гастой, дельта и 
+                           лямбда с удлиненной правой гастой, каппа с удлиненной вертикалью, ню минускульное, пи в т.ч. с Т-образной перекладиной, тау апицированное, 
+                           ипсилон V-и Y-образный; разделительные знаки.</seg>
+                        <seg xml:lang="en">Lapidary; rows of letters are carved between incised horizontal lines. Alpha with pointy loop and vertical right hasta; delta and 
+                        lambda with projecting right hasta, kappa with elongated vertical, minuscule nu, some pi have a T-shaped horizontal, tau with serfs, V-shaped and Y-shaped upsilon;
+                        division marks.</seg>
+                        <height unit="cm">3,8–6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p017">
+                        <seg xml:lang="ru">Биюк-Каралез или Эски-Кермен.</seg>
+                        <seg xml:lang="en">Biyuk-Karalez or Eski-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1500" precision="low" evidence="палеография ономастика">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#krasnymak">Красный Мак.</placeName>
+                        <rs type="circumstances">1938 г., обследования Н.И. Репникова.</rs>
+                        <rs type="context">Неизвестны.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Krasny Mak.</placeName>
+                        <rs type="circumstances">1938. survey of N.I. Repnikov.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-26" who="AG">some corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-10" who="AFS">small changes in Greek text</change> 
+         <change when="2012-06-01" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-19" who="AG">metadata corrected, tags in the Greek text corrected</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.166">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Татар-бей, его супруга Тансиха, его сын Тини-бей и его супруга Тансиха.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Tatar-Pees, his wife Tansicha, his son Tini-Pees and his wife Tansicha.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись нашел Н.Д. Воскресенский. В БИКЗ надпись хранится без указания на место и 
+                обстоятельства находки — место находки указано в подписи под фотографией, которая хранится 
+                в домашнем архиве Е.В. Веймарна (любезно указана С.В. Харитоновым и предоставлена 
+                Т.Е. Сушиной).</p>
+            <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+                <p> 3–8. <!--Об именах см. прил. 2. -->Имя Татар в качестве личного носил предводитель тюрок-кунов, 
+                    пришедших в 1024 г. в Венгрию (см. Князький 2003, 74).</p>
+            <p>Ономастический элемент «бей» (ср. <ref type="inscription">V 224</ref><!--byz211-->), минускульная форма ню, а также поздняя 
+                    форма αὐτοῦ — του заставляют отнести надпись к XIII–XV вв. Данный камень — несомненно, 
+                    семейное надгробие. Учитывая уникальность находки надписи в Красном Маке (бывш. Биюк-Каралез), можно с 
+                    осторожностью предположить, что она происходит с соседнего Эски-Кермена (ср. <ref type="inscription">V 224</ref><!--byz211-->).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription was found by N.D. Voskresensky. At the Bakhchisaray Historical and Cultural Preserve, there is no independent record of the findspot or of the circumstances of find.
+               Information about the findspot is written on the photo that is preserved at the family archive of Ye.V. Veymarn (this information was kindly provided to me
+               by S.V. Kharitonov and the photograph was made available for consultation by T.E. Sushina).</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.  </p>
+             <p>3-8. <!--On the names, see Appendix 2. -->The name Tatar was used as a personal name by leaders of the Turkic tribe of Kuns (Cumanians) 
+                who arrived in Hungary in 1024 C.E. (see Knyazky 2003, 74).</p>
+            <p>The onomastic element "bei" (here -pees) (cf. <ref type="inscription">V 224</ref><!--byz211-->), minuscule nu, as well as the late form αὐτοῦ — του point to a date
+               in the XIIIth-XVth centuries. This monument is undoubtedly a tombstone. Considering that this is the only find from Krasny Mak (former 
+               Biyuk-Karalez), we could cautiously suggest that it had orginated in Eski-Kermen (cf. <ref type="inscription">V 224</ref><!--byz211-->).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω"><supplied reason="lost">Ἐ</supplied>κημίθη</w> <w lemma="ὁ">ὁ</w>
+               <lb n="2"/><w lemma="δοῦλος">δοῦλος</w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="3"/><persName type="attested" ref="#person211"><name nymRef="Ταταρ-πέης">Τ<unclear>α</unclear>ταρ-<unclear>π</unclear>έης</name></persName><g ref="#dipunct"/> <w lemma="καί">κὲ</w>
+               <lb n="4"/><w lemma="σύμβιος"><unclear>σ</unclear>η<unclear>νβ</unclear>ύου</w> <w lemma="αὐτός">αὐτ<supplied reason="omitted">ο</supplied>ῦ</w>
+               <lb n="5"/><persName type="attested" ref="#person214"><name nymRef="Τανσιχα">Τανσιχα</name></persName> <g ref="#dipunct"/> <w lemma="καί">καὶ</w> <w lemma="ὁ">ὁ</w> <w lemma="υἱός"><unclear>υἱ</unclear><supplied reason="lost">ὸς</supplied></w>
+               <lb n="6"/><w lemma="αὐτός">αὐτοῦ</w> <w lemma="τις">το<unclear>υ</unclear></w> <persName type="attested" ref="#person213"><name nymRef="Τινι-πέης">Τινι-πέ<supplied reason="lost">η</supplied><lb n="7" break="no"/><unclear>ς</unclear></name></persName><g ref="#dipunct"/> <w lemma="καί">καὶ</w> <w lemma="σύμβιος">σ<supplied reason="lost">υμ</supplied><unclear>βή</unclear><supplied reason="lost">ος</supplied></w> <w lemma="αὐτός">αὐτ<supplied reason="lost">ο</supplied><lb n="8" break="no"/>ῦ</w> <w lemma="τις">του</w> <persName type="attested" ref="#person212"><name nymRef="Τανσιχα">Τανσ<supplied reason="lost">ιχα</supplied></name></persName>.
+               <!--Ориг. :  4: ΑΥΤΣΥ--> <!--to be checked-->
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

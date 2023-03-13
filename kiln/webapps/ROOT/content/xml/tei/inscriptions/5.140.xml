@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Агаты</title><title xml:lang="en">Epitaph of Agathe</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.140</idno><idno type="PE">PE5000140</idno>
+            <idno type="AYV2012-number">byz135</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение креста в круге и двух кругов (солнце и луна?). Состояние неизвестно.</p>
+                           <p xml:lang="en">On the front - cross and two circles (sun and moon?). Condition unknown.</p>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки.</seg>
+                        <seg xml:lang="en">Laki.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#laki">Лаки.</placeName>
+                        <rs type="circumstances">Лето 1895 г., обследования Ю.А. Кулаковского.</rs>
+                        <rs type="context">Храм Cв. Троицы, средняя апсида, правая сторона, наружная сторона.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Laki.</placeName>
+                        <rs type="circumstances">Summer of 1895, survey of Yu. A. Kulakovsky.</rs>
+                        <rs type="context">Holy Trinity church, central apse, right side, exterior.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="1">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">На лицевой стороне.</seg>
+                              <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа и дельта с верхним  штрихом. 
+                              Лигатуры омикрон-ипсилон, тау-эта, ипсилон-йота.</seg>
+                           <seg xml:lang="en">Lapidary. Alpha and delta with capping horizontal bar pointing left. Ligature omicron-upsilon, tau-eta, upsilon-iota.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="1421" notAfter="1421" evidence="указание_надписи">
+                           <seg xml:lang="ru">1421 г.</seg>
+                           <seg xml:lang="en">1421 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="2">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="2.">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Слева от 4-й строки надписи 1.</seg>
+                              <seg xml:lang="en">To the left of the 4th line of  text 1.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">..........</seg>
+                           <seg xml:lang="en">See field 1.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate notBefore="1421" notAfter="1421" evidence="указание_надписи">
+                           <seg xml:lang="ru">1421 г.</seg>
+                           <seg xml:lang="en">1421 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-28" who="CB">Added layoutDesc where missing</change>
+         <change when="2015-04-30" who="CB">Textparts</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">small correction</change>
+         <change when="2012-05-30" who="AG">several lines translated, tags corrected, editor added, small correction</change>
+         <change when="2012-04-30" who="AG">several lines translated, bibliography corrected</change>
+         <change when="2012-03-07" who="AG">metadata small corrections, bibliography and apparatus tagged</change>
+         <change when="2012-03-05" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.140" n="1">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 70, № <citedRange>64</citedRange></bibl>
+               <bibl n="2"><!--Латышев 1898a--><ptr target="bib:b0134"/>, 232, № <citedRange>64</citedRange></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Латышев 1898a--><ptr target="bib:b0134"/>, 232, № <citedRange>64</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus" n="1">
+             <listApp>
+               <app loc="6"><rdg source="bib:b0132">ςϠκε</rdg></app>
+            </listApp>
+         </div>
+         <div type="apparatus" n="2">
+             <listApp>
+               <app><rdg source="bib:b0134">ΕΓΟΓΙΑ<hi rend="superscript">c</hi>ШИ</rdg></app> 
+            </listApp>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="κοιμάω">Ἐκημίθυ</w>
+                  <lb n="2"/><w lemma="ὁ">ἡ</w> <w lemma="δοῦλος"><expan><abbr>δούλ</abbr><ex>η</ex></expan></w>
+                  <w lemma="ὁ">τοῦ</w>
+                  <lb n="3"/><persName type="divine" key="theos"><roleName><w lemma="θεός">θεοῦ</w></roleName></persName>
+                  <persName type="attested" ref="#person181"><name nymRef="Ἀγάθη">Ἀ<unclear>γά</unclear>τη</name>,
+                  <lb n="4"/><w lemma="υἱός">υἱὸς</w> <w lemma="ὁ">τῆς</w>
+                     <persName type="attested" ref="#person182"><name nymRef="Παλκ—">Παλ<lb n="5" break="no"/>κου</name></persName></persName> <date><w lemma="ἔτος">ἔτους</w>
+                           <num value="6925">ς<lb n="6" break="no"/>Ϡκθ</num></date>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><g ref="#stauros"/> <w lemma="ἐγώ">Ἐγώ</w>, 
+                  <persName type="attested" cert="low" ref="#person183"><name nymRef="Ἰάσων">Γιάσων</name></persName>
+                  <g ref="#stauros"/>
+               </ab>
+            </div>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Почила раба Божья Агата, сын Палка, в 6925 году.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Я, Ясон.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Fell asleep: a servant of God, Agathe, son of Palkos(?), in the year 6925.</p> 
+            </div>
+            <div type="textpart" n="2">
+               <p>I, Jason (?)</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> В первый раз Латышев издавал надпись по копии Ю.А. Кулаковского, во второй — А.Л. Бертье-Делагарда. Несколько необычное 
+                  размещение надгробной надписи на стене апсиды, где обычно располагаются посвятительные или инвокативные тексты, 
+                  находит себе параллель в <ref type="inscription">V 206</ref><!--byz194-->.</p>
+                <p> 1–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+                <p> 3. Переход теты в тау в слове ἀγαθός засвидетельствован в христианской эпиграфике в 
+                    Lefebvre 1907, № 664 (Нубия, после 644 г.).  </p>
+               <p> 4. Сбивка в поле покойного засвидетельствована в <ref type="inscription">V 130</ref><!--byz125--> (1361–1362 гг.) и 
+                  Beševliev 1964, №213 (XII–XIV вв.): Ἐπιφανίου θυγατρός.  </p>
+                <p><!-- 4–5. --><!--Относительно имени Палк см. прил. 2.--></p>
+            </div>
+            <div type="textpart" n="2">
+              
+                <p>Имя Ясон трижды зафиксировано в христианских надписях: IK Iasos 284; Agnello 1953, № 60; 
+                    ICUR 24276; написание Για- вместо Ἰα — в SEG 2.883.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Latyshev's first edition was based on the transcription made by Yu.A. Kulakovsky, and the second on the transcription made by A.L. Bertye-Delagard. A somewhat 
+                  unusual placement of the epitaph on the wall of the apse where we normally find dedications or invocations, 
+                  has a parallel in <ref type="inscription">V 206</ref><!--byz194-->.</p>
+               <p>1-3. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+               <p>3. Interchange of theta and tau in the word ἀγαθός is attested in Christian epigraphy in Lefebvre 1907, № 664 (Nubia, after 644 C.E.). </p>
+               <p> 4. A similar mistake with the gender of the deceased is found in <ref type="inscription">V 130</ref><!--byz125--> (1361-1362 C.E.) and Beševliev 1964, № 213 (XII–XIVth century): 
+               Ἐπιφανίου θυγατρός. </p>
+               <p><!--On the name Palkos, see Appendix 2.--></p>
+            </div>
+            <div type="textpart" n="2">
+              
+               <p>The name Jason (here spelled Giason) is attested in Christian inscriptions three times: IK Iasos 284; Agnello 1953, № 60; 
+                  ICUR 24276; on the spelling Για- instead of Ἰα — see SEG 2.883.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

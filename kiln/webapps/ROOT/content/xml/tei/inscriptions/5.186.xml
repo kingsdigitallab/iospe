@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt><title xml:lang="ru">Прошение Константина</title><title xml:lang="en">Invocation of Constantine</title><editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+            <publicationStmt><authority>King's College London</authority>
+                <idno type="filename">5.186</idno><idno type="PE">PE5000186</idno>
+                <idno type="AYV2012-number">byz176a</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country/>
+                        <altIdentifier xml:lang="ru">
+                            <repository>Центральный музей Тавриды</repository>
+                            <idno>14630</idno>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Central Museum of Tavrida</repository>
+                            <idno>14630</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru">Cтела в виде круга.</objectType>
+                                    <objectType xml:lang="en">Circular stele.</objectType>
+                                    <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                                    <material xml:lang="en">Limestone.</material>
+                                    <p xml:lang="ru">По периметру идет рельефная рамка (выс. — 0,5 см), внутри
+                                        которой помещается рельефный крест с расширяющимися концами и кругом в центре. Сколота левая верхняя часть рамки.</p>
+                                    <p xml:lang="en">Relief border (H. 0.5cm) runs the perimeter; a relief cross with flaring arms and with a circle in the centre occupy 
+                                        the inset central area of the stele.
+                                  </p>
+                                    <dimensions>
+                                        <height>29.0</height>
+                                        <width>30.5</width>
+                                        <depth>9.3</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <!-- Происхождение текста -->
+                        <origPlace ref="origPlace.xml#p020">
+                            <seg xml:lang="ru">Феодоро.</seg>
+                            <seg xml:lang="en">Theodoro.</seg>
+                        </origPlace>
+                    </origin>
+                            <provenance type="observed" subtype="autopsy">
+                                <seg xml:lang="ru">Non vidi.</seg>
+                                <seg xml:lang="en">Non vidi.</seg>
+                            </provenance>
+                            <provenance type="found">
+                                <seg xml:lang="ru">
+                                    <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                                    <rs type="circumstances">1984 г., раскопки В.А. Сидоренко.</rs>
+                                    <rs type="context">Базилика у подножья, алтарь, центральное окно, закладка.</rs>
+                                </seg>
+                                <seg xml:lang="en">
+                                    <placeName type="ancientFindspot">Mangup.</placeName>
+                                    <rs type="circumstances">1984, excavations of V.A. Sidorenko.</rs>
+                                    <rs type="context">Basilica at the foot of the plateau, altar, central window, filled in with reused material.</rs>
+                                </seg>
+                            </provenance>
+                            <provenance type="observed">
+                                <seg xml:lang="ru">Симферополь, Крым.</seg>
+                                <seg xml:lang="en">Simferopol, Crimea.</seg>
+                            </provenance>
+                </history>
+                    <msPart n="1">
+                        <msIdentifier><idno/>
+                        </msIdentifier>
+                        <msContents><summary>
+                            <seg xml:lang="ru" n="1">Инвокативная надпись.</seg>
+                            <seg xml:lang="en" n="1">Invocative inscription.</seg>
+                        </summary></msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout ana="f1" n="1">
+                                        <seg xml:lang="ru">На концах рукавов креста.</seg>
+                                        <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>At tips of arms of the cross.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="1">
+                                    <seg xml:lang="ru">Лапидарный.</seg>
+                                    <seg xml:lang="en">Lapidary.</seg>
+                                    <height unit="cm">0,7–1,2.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="1" notBefore="0801" notAfter="1200" precision="low" evidence="палеография">
+                                    <seg xml:lang="ru">IХ–XI вв. </seg>
+                                    <seg xml:lang="en">IХ–XIth centuries C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
+                    <msPart n="2">
+                        <msIdentifier><idno/>
+                        </msIdentifier>
+                        <msContents><summary>
+                            <seg xml:lang="ru" n="2">Инвокативная надпись.</seg>
+                            <seg xml:lang="en" n="2">Invocative inscription.</seg>
+                        </summary></msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout ana="f1" n="2">
+                                        <seg xml:lang="ru">На концах рукавов креста, поверх букв надписи 1.</seg>
+                                        <seg xml:lang="en">At the tips of the arms of the cross, over the letters of Text 1.</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="2">
+                                    <seg xml:lang="ru">Лапидарный.</seg>
+                                    <seg xml:lang="en">Lapidary.</seg>
+                                    <height unit="cm">0,7–1,2.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="2" notBefore="0801" notAfter="1200" precision="low" evidence="палеография">
+                                    <seg xml:lang="ru">IХ–XI вв. </seg>
+                                    <seg xml:lang="en">IХ–XIth centuries C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
+                    <msPart n="3">
+                        <msIdentifier><idno/>
+                        </msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout ana="f1" n="3">
+                                        <seg xml:lang="ru">На верхней части рамки (1 строка) и в правом верхнем углу (1 строка).</seg>
+                                        <seg xml:lang="en">On the top part of the border (one line) and in the right top corner (one line).</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="3">
+                                    <seg xml:lang="ru">Лапидарный.</seg>
+                                    <seg xml:lang="en">Lapidary.</seg>
+                                    <height unit="cm">0,7–1,2.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="3" notBefore="0801" notAfter="1200" precision="low" evidence="палеография">
+                                    <seg xml:lang="ru">IХ–XI вв. </seg>
+                                    <seg xml:lang="en">IХ–XIth centuries C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart>
+                    <msPart n="4">
+                        <msIdentifier><idno/>
+                        </msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout ana="f1" n="4">
+                                        <seg xml:lang="ru">В левом верхнем углу (строки идут снизу вверх).</seg>
+                                        <seg xml:lang="en">In the top left corner (lines of text reads vertically from the bottom up).</seg>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote n="4">
+                                    <seg xml:lang="ru">Лапидарный. Буквы чуть вытянуты по вертикали, полукружия чуть заостренные. Крупная бета, прогнутое мю.</seg>
+                                    <seg xml:lang="en">Lapidary. Slightly elongated letters, with pointy semicircles. Large beta, mu with sagging cross-loop.</seg>
+                                    <height unit="cm">0,7–1,2.</height>
+                                </handNote>
+                            </handDesc>
+                        </physDesc>
+                        <history>
+                            <origin>
+                                <origDate n="4" notBefore="0801" notAfter="1200" precision="low" evidence="палеография">
+                                    <seg xml:lang="ru">IХ–XI вв. </seg>
+                                    <seg xml:lang="en">IХ–XIth centuries C.E.</seg>
+                                </origDate>
+                            </origin>
+                        </history>
+                    </msPart> 
+            </msDesc>
+            </sourceDesc>
+        </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+            <change when="2015-04-30" who="CB">Textparts</change>
+            <change when="2015-04-17" who="CB">Andrey's corrections</change>
+            <change when="2015-04-08" who="CB">Andrey's corrections</change>
+            <change when="2013-10-24" who="TW">Added image code</change>
+            <change when="2013-06-10" who="AG">bibliography and comments updated</change>
+            <change when="2013-04-26" who="AG">created from Word doc, marked up, translated several lines</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.186-1" n="1">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.186-2" n="1">
+                <desc xml:lang="en">Drawing of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>            
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="bibliography">
+                <listBibl n="1">
+                    <bibl n="L1"><!--Sidorenko 2010--><ptr target="bib:b0407"/>, № <citedRange>19</citedRange></bibl>
+                </listBibl>
+                <listBibl n="2">
+                    <bibl/>
+                </listBibl>
+                <listBibl n="3">
+                    <bibl n="L1"><!--Sidorenko 2010--><ptr target="bib:b0407"/>, № <citedRange>19</citedRange></bibl>
+                </listBibl>
+                <listBibl n="4">
+                    <bibl/>
+                </listBibl>
+            </div>
+
+        <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+            <ab>
+                <lb n="1"/><w lemma="φῶς">Φῶς</w>,
+                <lb n="2"/><w lemma="ζωή">Ζωή</w>.
+            </ab>
+        </div>
+            <div type="textpart" subtype="inscription" n="2">
+            <ab>
+                <lb n="1"/><persName type="divine"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name></persName>
+                <lb n="2"/><w lemma="νικάω">νικᾷ</w>.
+            </ab>
+        </div>
+            <div type="textpart" subtype="inscription" n="3">
+            <ab>
+                <lb n="1"/><w lemma="σώζω"><supplied reason="lost">Σῶσον</supplied></w> <w lemma="ὁ"><supplied reason="lost">τὸν</supplied></w> <w lemma="λαὀς">λαών</w> <w lemma="σύ">σου</w>,
+                <lb n="2"/><w lemma="καί">καὶ</w> <w lemma="ὁ">τόν</w>.
+            </ab>
+        </div>
+            <div type="textpart" subtype="inscription" n="4">
+            <ab>
+                <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>, <w lemma="βοηθέω">βοήθη</w>
+                <lb n="2"/><w lemma="ὁ">τὸν</w> <w lemma="δοῦλος">δοῦλόν</w> <w lemma="σύ">σου</w>
+                <lb n="3"/><persName type="attested" ref="#person438"><name nymRef="Κωνσταντῖνος">Κ<supplied reason="lost">ων</supplied>σταν
+                <lb n="4" break="no"/>τῆνον</name></persName> <w lemma="ἁμαρτωλός">ἁμα
+                <lb n="5" break="no"/>ρτολόν</w>.
+            </ab>
+        </div>
+        </div>
+            <div type="translation" xml:lang="ru">
+                <div type="textpart" n="1">
+                    <p>Свет, жизнь.</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>Иисус побеждает.</p>
+                </div>
+            <div type="textpart" n="3">
+                <p>Спаси людия твоя и.</p>
+            </div>
+            <div type="textpart" n="4">
+                <p>Господи, помоги рабу Твоему Константину грешнику.</p>
+            </div>
+            </div>
+            <div type="translation" xml:lang="en">
+                <div type="textpart" n="1">
+                    <p>Light, life.</p>
+                </div>
+                <div type="textpart" n="2">
+                    <p>Jesus is victorious.</p>
+                </div>
+                <div type="textpart" n="3">
+                    <p>Save Thine people and the.</p>
+                </div>
+                <div type="textpart" n="4">
+                    <p>Oh Lord, save your servant Constantine, a sinner.</p>
+                </div>
+            </div>
+
+        <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+                <p>Описание, прорисовка и частичная протирка надписи были любезно переданны автору Т.А. Матанцевой.</p>
+                <p>Первоначально на концах рукавов креста была выполнена надпись 1 с типичной формулой «свет, жизнь» (о ней см. <ref type="introduction">IV.3.C.b</ref>). Затем, поверх букв надписи 1, была
+                        вырезана надпись 2 с формулой «Иисус побеждает» (о ней см. <ref type="introduction">IV.3.C.e</ref>), причем резчик, судя по всему, забыл вырезать на нижнем рукаве хи.
+                        Одновременно с ней или позднее резчик стал наносить надпись 3: начав с верхнего поля рамки, он перешел на правый верхний угол, но затем оборвал надпись,
+                        содержащую начало заамвонной молитвы «Спаси, Господи, людия твоя» (встречается в IGLS 1508). Наконец, в левом верхнем углу он разместил инвокативную
+                        надпись 4, причем стал помещать строки  снизу вверх. Первоиздатель не прочел надписи 2 и 3 и ошибочно отнес последнюю строку надписи 3 к продолжению
+                        надписи 4.</p>
+                <p>Относительно формулы надписи 4 см. <ref type="introduction">IV.3.E.a</ref>. Имя Константин встречается в Горном Крыму также в Инкермане (<ref type="inscription">V 150</ref><!--byz144-->): добавление «грешник» при
+                    имени ср. в <ref type="inscription">V 47</ref><!--byz047-->, <ref type="inscription">V 183</ref><!--byz174-->, <ref type="inscription">V 236</ref><!--byz223-->.5, <ref type="inscription">V 325</ref><!--byz307-->.</p>
+                <p>Камень, очевидно, предназначался для закладки в стену. Первоиздатель датировал надпись, как и всю базилику, 2 пол. VI в., однако ее палеография ясно указывает
+                    на средневизантийский период.</p>
+            </div>
+            <div type="textpart" n="2">
+                <p>Смотри комм. к Тексту 1.</p>
+            </div>
+            <div type="textpart" n="3">
+                <p>Смотри комм. к Тексту 1.</p>
+            </div>
+            <div type="textpart" n="4">
+                <p>Смотри комм. к Тексту 1.</p>
+            </div>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <div type="textpart" n="1">
+                <p>The description, line drawing and a partial rubbing were kindly given to the author by Т.А. Matantseva.</p>
+                <p>Originally, Text 1 with a typical formula "Life, light" was inscribed on the tips of the arms of the cross (on the formula, see Introduction <ref type="introduction">IV.3.C.b</ref>). 
+                    Subsequently, over the letters of Text 1, a second inscription was cut, with the formula "Jesus is victorious (see Introduction <ref type="introduction">IV.3.C.e</ref>), 
+                    and it appears that the cutter forgot to carve a chi on the bottom arm of the cross. Either at the same time, or later, the cutter also started to carve Text 3:
+                    starting from the top part of the border, he then moved into the top right corner, but then interrupted the text, which contains the beginning of a
+                    opisthambonos prayer «Save, oh Lord, Thine people» (attested in IGLS 1508). Finally, in the top left corner, the cutter placed an invocative Text 4, arranging
+                    the lines vertically to be read from bottom up. The first editor did not read Texts 2-3 and mistakenly attributed the last line of Text 3 to the continuation of 
+                    Text 4.</p>
+                <p>On the formula of Text 4, see Introduction <ref type="introduction">IV.3.E.a</ref>. The name Constantine is elsewhere attested in Mountainous Crimea 
+                    at Inkerman (<ref type="inscription">V 150</ref><!--byz144-->): the epithet "sinner" used with a name can be compared with <ref type="inscription">V 47</ref><!--byz047-->, 
+                    <ref type="inscription">V 183</ref><!--byz174-->, <ref type="inscription">V 236</ref><!--byz223-->.5, <ref type="inscription">V 325</ref><!--byz307-->.</p>
+                <p>The stone was apparently meant for insertion into a wall. The first editor dates the inscription, as well as basilica as a whole, to the 2nd
+                    half of the VIth century, but its palaeographic features clearly indicate the Middle Byzantine period.</p>
+                <p/>
+            </div>
+            <div type="textpart" n="2">
+                <p>See commentary on Text 1.</p>
+            </div>
+            <div type="textpart" n="3">
+                <p>See commentary on Text 1.</p>
+            </div>
+            <div type="textpart" n="4">
+                <p>See commentary on Text 1.</p>
+            </div>
+        </div>
+        </body>
+    </text>
+</TEI>

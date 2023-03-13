@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Ионы</title><title xml:lang="en">Epitaph of Jonas</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.69</idno><idno type="PE">PE5000069</idno>
+            <idno type="AYV2012-number">byz069</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>85/36504</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>85/36504</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк сарматского яруса.</material>
+                           <material xml:lang="en">Sarmatian stage limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение круга, пересеченного косыми линиями, и плетенки. Небольшие сколы со всех сторон.</p>
+                           <p xml:lang="en">On the front - carved circle, crossed by slanting lines, and interlace design. Chipped all over.</p>
+                           <dimensions>
+                              <height>31,0</height>
+                              <width>39,5</width>
+                              <depth>16,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под кругом.</seg>
+                           <seg xml:lang="en">Below the circle.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы неровные, угловатые. Альфа с петлей, 
+                           бета с увеличенным нижним полукружием, эта И-образная.</seg>
+                        <seg xml:lang="en">Lapidary; uneven angular letters. Looped alpha, beta with enlarged bottom loop, И-shaped eta.</seg>
+                        <height unit="cm">1,3–2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1200" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X–XII вв.</seg>
+                        <seg xml:lang="en">X–XIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1906 г., раскопки К.К. Косцюшко-Валюжинича.</rs>
+                        <rs type="context">Некрополь у Загородного крестообразного храма, склеп № 2131, у входа.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1906, excavations of  K.K. Kostsyushko-Valyuzhinich.</rs>
+                        <rs type="context">Necropolis by the Extramural Cruciform Church, Burial vault 2131, near the entrance.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-03-24" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-02-25" who="NG">correction of Greek lemma</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-22" who="AG">translation of 'context' corrected</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">some corrections</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-30" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-16" who="AG">date corrected</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-10" who="AG">updating</change>
+         <change when="2011-12-06" who="AG">minor corrections, tags added to the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+       <surface>
+          <graphic url="5.69-2">
+             <desc xml:lang="en">Photograph of face</desc>
+             <desc xml:lang="ru">Фотография лицевой части</desc>
+          </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов 2009a--><ptr target="bib:b0048"/>, <citedRange>244-245</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Иоанн (?) в</supplied>ырыл; почил Иона.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[Io(annes)?] dug out. Jonas fell asleep.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Круг с косым крестом внутри выбит треугольным резцом, а плетенка и надпись процарапаны острым предметом. Возможно, резчик надписи использовал 
+               надгробный камень без надписи, на что нам любезно указал Д.Ю. Коробков.</p>
+                <p>Формула первой половины надписи уникальна и неуклюжа, что соответствует низкому уровню художественного исполнения самого памятника; 
+                   относительно второй см. <ref type="introduction">IV.3.F.e</ref>. В начале надписи остается место для имени из 2–3 букв. Имя Иона встречается также в 
+                   <ref type="inscription">V 202</ref><!--byz190-->; кроме того, его носил 
+                   в кон. IX в. отец херсонского стратига Симеона (Theophanes Continuatus. Chronographia, VI, 10).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The circle with a cross (inscribed criss cross within) was carved with triangular chisel, while additional ornamentation and inscription were incised 
+               with a sharp object. It is possible that the person who cut the inscription was reusing a tombstone that did not have one: this hypothesis was kindly
+               shared with us by D.Yu. Korobkov.</p>
+             <p>The formula of the first half of the inscription is unparalleled and awkward, which goes with the generally poor quality of the monument. On the second formula,
+                see Introduction <ref type="introduction">IV.3.F.e</ref>. At the start of the text there is room for 2-3 letters, perhaps a name. The name Jonas occurs in 
+                <ref type="inscription">V 202</ref><!--byz190-->; also, at the end of the IXth century, this was the name of a father of the Chersonian strategos Simeon 
+                (Theophanes Continuatus. Chronographia, VI, 10).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><supplied reason="lost"><persName type="attested" ref="#person71"><name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννης</ex></expan></name></persName>
+                  <note>e.g.</note> </supplied><w lemma="ἀναβάλλω"><supplied reason="lost">ἀ</supplied>νέβαλε</w>· <w lemma="κοιμάω">ἐκυμήθυ</w> <persName type="attested" ref="#person72"><name nymRef="Ἰωνᾶς">Υ̓ωνᾶς</name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

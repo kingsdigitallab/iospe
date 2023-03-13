@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Капускала</title><title xml:lang="en">Epitaph of Kapouskalos</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.116</idno><idno type="PE">PE5000116</idno>
+            <idno type="AYV2012-number">byz112</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>184/36994</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno>184/36994</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Сколы в центральной части лицевой стороны.</p>
+                           <p xml:lang="en">Notched in the centre of the front.</p>
+                           <dimensions>
+                              <height>70,0</height>
+                              <width>95,0</width>
+                              <depth>6,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                 <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы минускульные. Альфа с петлей, мю с приподнятой правой 
+                           частью, пи с удлиненной перекладиной.</seg>
+                        <seg xml:lang="en">Lapidary style; minuscule letters. Alpha with a loop, mu with curving right hasta, pi with extended horizontal.</seg>
+                        <height unit="cm">3,0–8,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p007">
+                        <seg xml:lang="ru">Бакла.</seg>
+                        <seg xml:lang="en">Bakla.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">XIII–XV вв.</seg>
+                        <seg xml:lang="en">XIII–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#bakla">Бакла.</placeName>
+                        <rs type="circumstances">1978 г., раскопки В.Е. Рудакова.</rs>
+                        <rs type="context">Крестообразный храм, могила № 5.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Bakla.</placeName>
+                        <rs type="circumstances">1978, excavations of V.E. Rudakov.</rs>
+                        <rs type="context">Cruciform church, grave 5.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2015-03-31" who="CB">Andrey's corrections</change>
+           <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-23" who="AG">editor added, two lines translated</change>
+         <change when="2012-03-06" who="AG">small corrections</change>
+         <change when="2012-02-28" who="AG">date and the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.116">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Могила Капускал<supplied reason="lost">а</supplied> пресв<supplied reason="lost">итера</supplied> Му<supplied reason="lost">…</supplied>...</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Grave of Kapouskal[os], presby[ter] of (?) Mou[...]</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1. Уникальная для Крыма формула надписи хорошо известна в христианской эпиграфике, в т.ч. и для пресвитеров (Thierry 1963, 91; IG XIV 255a).</p>
+                <p><!-- 2. <!-\-Относительно имени см. прил. 2.-\->-->  </p>
+            <p> 3–5. По аналогии с <ref type="inscription">V 122</ref><!--byz118-->, <ref type="inscription">V 201</ref><!--byz189-->.1 и <ref type="inscription">V 218</ref><!--byz206-->.1 
+               можно представить, что за словом «пресвитер» шло обозначение места пресвитерства. 
+                   Соблазнительно увидеть в 5-й строке остатки слова «Бакла», однако его древность неизвестна.</p>
+            <p> По своему типу надпись похожа на <ref type="inscription">V 118</ref><!--byz114-->, по шрифту — на <ref type="inscription">V 151</ref><!--byz145-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1. This formula, which is unique for Crimea, is well attested in Christian epigraphy, including with reference to presbyters (Thierry 1963, 91; IG XIV, № 255a).</p>
+          
+            <p>3-5. By analogy with <ref type="inscription">V 122</ref><!--byz118-->, <ref type="inscription">V 201</ref><!--byz189-->.1 and <ref type="inscription">V 218</ref><!--byz206-->.1
+               we can surmise that after the word "presbyter" followed an indication of the place of service. It is tempting to see traces of the word "Bakla" in line 5, but 
+               we do not know how far back this place name goes.</p>
+            <p>The type of inscription is similar to <ref type="inscription">V 118</ref><!--byz114-->, while the script resembles that of <ref type="inscription">V 151</ref><!--byz145-->.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="ὁ">Ὁ</w> <w lemma="τάφος">τάφος</w> <w lemma="ὁ">τοῦ</w>
+               <lb n="2"/><persName type="attested" ref="#person140"><name nymRef="Καπουσκαλος">Καπουσκαλ<supplied reason="lost">ου</supplied></name></persName>
+               <lb n="3"/><w lemma="πρεσβύτερος">πρεσ<unclear>β</unclear><supplied reason="lost">υτέρου</supplied></w>
+               <lb n="4"/><placeName><seg part="I">Μου</seg></placeName><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="5"/><w part="M">κλα</w><gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

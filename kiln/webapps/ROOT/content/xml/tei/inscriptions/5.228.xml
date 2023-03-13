@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Ком–исхи</title><title xml:lang="en">Epitaph of Kom–yscha</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.228</idno><idno type="PE">PE5000228</idno>
+            <idno type="AYV2012-number">byz321</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Одесский археологический музей</repository>
+                     <idno>50449</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Odessa Archaeological Museum</repository>
+                     <idno>50449</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефный крест, на боковых сторонах орнамент. Разбита на 2 части, обломана сверху и снизу, 
+                              сколы по поверхности.</p>
+                           <p xml:lang="en">On the front - relief cross, ornaments - on the sides. Broken in two parts, broken off at the top and bottom,
+                           the surface is chipped.</p>
+                           <dimensions>
+                              <height>49.0</height>
+                              <width>26.0</width>
+                              <depth>14.0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p054">
+                        <seg xml:lang="ru">Горный Крым <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Mountainous Crimea <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999 г</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Oдесса, Украина.</seg>
+                     <seg xml:lang="en">Odessa, Ukraine.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="1">Демонстративная надпись.</seg>
+                        <seg xml:lang="en" n="1">Demonstrative.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                              <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru">См. ниже.</seg>
+                           <seg xml:lang="en">See below.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1413" notAfter="1413" evidence="указание_надписи">
+                           <seg xml:lang="ru">1413 г.</seg>
+                           <seg xml:lang="en">1413 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier><idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc4 document-search.xml#doc2">
+                        <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="2">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Над и под крестом.</seg>
+                              <seg xml:lang="en">Above and below the cross.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="2">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Лигатуры пи-ро, ро-тау.</seg>
+                           <seg xml:lang="en">Lapidary. Ligatures: pi-rho, rho-tau.</seg>
+                           <height unit="cm">0,8–2,8.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1413" notAfter="1413" evidence="указание_надписи">
+                           <seg xml:lang="ru">1413 г.</seg>
+                           <seg xml:lang="en">1413 C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-01" who="CB">Textparts</change>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+         <change when="2012-09-11" who="AG">several lines translated, lemma added</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-28" who="AFS">adding metadata and tagging greek text</change>
+         <change when="2012-03-05" who="AG">corrections, several lines translated, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl/>
+            </listBibl>
+            <listBibl n="2">
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Иисус Христос побеждает.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Почила раба Божья Ком..исха пресвитерисса 28 марта 6921 года.</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Jesus Christ is victorious.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep: a servant of God, Kom..yscha, presbyterissa, on the 28th of March, in the year 6921.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> По своему облику камень похож на поздневизантийские надгробия Горного Крыма. Однако в 
+                   коллекции ООИД нет других памятников из этого региона. 
+                  Можно было бы предложить в качестве аналогий два боспорских надгробия поздневизантийского 
+                  времени (<ref type="inscription">V 318</ref><!--byz286-->, <ref type="inscription">V 320</ref><!--byz288-->). Но оба этих памятника 
+                  (кстати, так же женские надгробия) содержат греческие имена, в отличие от данной надписи 
+                  (см. ниже), которая схожа в этом с памятниками Горного Крыма. Поэтому вопрос о 
+                  происхождении плиты остается открытым.</p>
+                <p>Относительно формулы см. <ref type="introduction">IV.3.C.e</ref>.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 2–3. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+                <p> 3. Имя, хотя целиком и не сохранилось, очевидно, негреческое, что часто встречается в том 
+                   же Горном Крыму. С данным именем можно сблизить имя Икуманиса (<ref type="inscription">V 136</ref><!--byz131-->). </p>
+                <p>3–4. Пресвитериссой в Византии называлась жена пресвитера (Lampe, s.v.); она упоминается 
+                    в кипрской надписи XIV–XV вв. (Stylianou 1960, № 107).</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>The overall design of the monument is similar to Late Byzantine tombstones from Mountainous Crimea. At the same time, we should note that there 
+                  are no other monuments from this region in the collection of the Odessa Society for History and Antiquities. Two Late Byzantine tombstones 
+                  from Bosporus can be cited as parallels (<ref type="inscription">V 318</ref><!--byz286-->, <ref type="inscription">V 320</ref><!--byz288-->). The latter
+               (including those for women) contain only Greek names, in contrast to this inscription (see below), which in this respect is akin to monuments from 
+               Mountainous Crimea. Thus, the question of the panel's origin remains open. </p>
+               <p> On the formula, see Introduction <ref type="introduction">IV.3.C.e</ref>.</p>
+               <p/>
+            </div>
+            <div type="textpart" n="2">
+               <p>  2–3. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+                  <p> 3. Although the name is not fully preserved, it appears to be non-Greek, which is often the case in Mountainous Crimea. As a comparison, the name 
+                     Ekoumanes comes to mind (<ref type="inscription">V 136</ref><!--byz131-->).</p>
+               <p>3-4. In Byzantium, a presbyterissa was a wife of presbyter (Lampe, s.v.); one is mentioned in a Cyprian inscription of the XIV-XVth century
+                  (Stylianou 1960, № 107).</p>
+            </div>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name> <name nymRef="Χριστός">Χριστὸς</name></persName>
+                  <lb n="2"/><w lemma="νικάω">νικᾷ</w>
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="κοιμάω">Ἐκημήθυ</w> <w lemma="ὁ"><unclear>ἡ</unclear></w> <w lemma="δοῦλος">δούλ<supplied reason="lost">η</supplied></w> <w lemma="σύ">σου</w>
+                  <lb n="2"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> <persName type="attested" ref="#person421"><name nymRef="Κομ—υσχα">Κο<unclear>μ</unclear><gap reason="illegible" quantity="2" unit="character"/>υσχα</name></persName> <w lemma="πρεσβυτέρισσα">πρ<supplied reason="lost">ε</supplied>
+                   <lb n="3" break="no"/>σβητερίσα</w> <date><w lemma="μήν"><expan><abbr>μ</abbr><ex>ηνὸ</ex><abbr>ς</abbr></expan></w> <rs type="month" ref="mar"><w lemma="Μάρτιος">Μαρτίου</w></rs> <w lemma="εἰς">εἰς</w> <w lemma="ὁ">τ<supplied reason="lost">ὰ</supplied></w>
+                  <lb n="4"/><num value="28">κη</num>, <w lemma="ἔτος">ἔτους</w>
+                  <lb n="5"/><num value="6921">ςϠκα</num></date>.
+               </ab>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие неизвестных</title><title xml:lang="en">Epitaph of unknown persons</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.322</idno><idno type="PE">PE5000322</idno>
+            <idno type="AYV2012-number">byz322</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Серый мрамор.</material>
+                           <material xml:lang="en">Gray marble.</material>
+                           <p xml:lang="ru">Камень трапециевидной в сечении формы с прямоугольной выемкой по всей высоте задней стороны. 
+                              Во вторичном использовании (?). Обломан справа.</p>
+                           <p xml:lang="en">The panel is of trapezoid shape in cross-section, with a groove along the entire height of the back side.
+                           In secondary use (?). Broken on the left.</p>
+                           <dimensions>
+                              <height>16,0</height>
+                              <width>17,0</width>
+                              <depth>6,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Воспор <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Bosporus <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#unknown">Неизвестно.</placeName>
+                        <rs type="circumstances">До 1883 г.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Unknown.</placeName>
+                        <rs type="circumstances">Before 1883.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2">
+                        <seg xml:lang="ru" n="1">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="1">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">На лицевой стороне.</seg>
+                              <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, буквы немного маньеризованные. Альфа с наклонной перекладиной. Лигатуры мю-эта, омикрон-ипсилон, 
+                              надстрочные знаки, нерегулярная диакритика.</seg>
+                           <seg xml:lang="en">Lapidary, letters are somewhat ornate. Alpha with slanting crossbar. Ligatures: mu-eta, omicron-upsilon, 
+                              superscript diacritics, used irregularly.</seg>
+                           <height unit="cm">1,7–3,4.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1050" notAfter="1100" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">2 пол. XI в.</seg>
+                           <seg xml:lang="en">2nd half of the XIth century C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>    
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc2">
+                        <seg xml:lang="ru" n="2">Надгробная надпись.</seg>
+                        <seg xml:lang="en" n="2">Epitaph.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f3" n="2">
+                              <seg xml:lang="ru">....................</seg>
+                              <seg xml:lang="en">On face 3.</seg> 
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="2">
+                           <seg xml:lang="ru">Минускул. Лигатура омикрон-ипсилон, надстрочные знаки.</seg>
+                           <seg xml:lang="en">Minuscule. Ligature: omicron-upsilon, superscript diacritics.</seg>
+                           <height unit="cm">1,7–3,4.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1101" notAfter="1300" precision="low" evidence="палеография">
+                           <seg xml:lang="ru">XII–XIII вв.</seg>
+                           <seg xml:lang="en">XII–XIIIth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-01" who="CB">Textparts</change>
+         <change when="2015-04-09" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+          <change when="2013-04-23" who="NG">Greek lemmata corrected</change>
+          <change when="2013-02-13" who="AG">repository corrected</change>
+         <change when="2012-09-11" who="AG">small corrections, apparatus tagged</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+         <change when="2012-08-23" who="AL">checked metadata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+         <change when="2012-03-05" who="AG">corrections, several lines translated, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+       <surface>
+          <graphic url="5.322-1" n="1">
+             <desc xml:lang="en">Drawing of face 1</desc>
+             <desc xml:lang="ru"/>
+          </graphic>
+          <graphic url="5.322-2" n="2">
+             <desc xml:lang="en">Drawing of face 2</desc>
+             <desc xml:lang="ru"/>
+          </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 117–118, № <citedRange>109</citedRange></bibl>
+            </listBibl>
+            <listBibl n="2">
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 117–118, № <citedRange>109</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="κοιμάω">Ἐκυμήθη</w> <w lemma="ὁ">ὁ</w>
+                  <w lemma="δοῦλος">δοῦ<supplied reason="lost">λος</supplied></w> 
+                  <supplied reason="lost"><w lemma="ὁ">τοῦ</w>
+                     <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+                     <w lemma="ὁ">ὁ</w> <w lemma="δεῖνα">δεῖνα</w>, <w lemma="ὁ">ὁ</w></supplied>
+                  <lb n="2"/><w lemma="καί">καὶ</w>
+                  <w lemma="πρωτόπαπας"><expan><abbr>προτοπαπ</abbr><ex>ᾶ</ex><abbr>ς</abbr></expan></w>, 
+                  <date><supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied> 
+                     <gap reason="lost" extent="unknown" unit="character"/>
+                     <num><gap reason="lost" quantity="2" unit="character"/></num>,
+                     <supplied reason="lost"><w lemma="ἡμέρα">ἡμέρᾳ</w></supplied>
+                     <gap reason="lost" extent="unknown" unit="character"/>,
+                  <lb n="3"/><w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w>
+                     <num value="6">ς</num>, 
+                     <w lemma="ἔτος">ἔτου<supplied reason="lost">ς</supplied></w>
+                     <num atLeast="6001"><gap reason="lost" quantity="4" unit="character"/></num></date>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><w lemma="κοιμάω">Ἐκυμίθι</w> <w lemma="ὁ">ὡ</w> <w lemma="δοῦλος">δοῦλος</w>
+                  <w lemma="ὁ">τοῦ</w> 
+                  <supplied reason="lost"><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+                     <persName type="attested" ref="#person560"><w lemma="ὁ">ὁ</w>
+                        <w lemma="δεῖνα">δεῖνα</w></persName></supplied>
+                  <gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="2"/><w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w>
+                  <num value="2">β</num>, <w lemma="καί">κὲ</w> 
+                  <w lemma="ἕπομαι">ὥπου</w> <w part="I">π</w><gap reason="lost" extent="unknown" unit="character"/>
+                  <lb n="3"/><w part="M">κο</w><gap reason="lost" extent="unknown" unit="character"/>
+               </ab>
+            </div>
+         </div>
+         <div type="apparatus" n="1">
+             <listApp>
+                <app loc="2"><lem>μηνὶ ... ἡμέρα ...</lem><rdg source="bib:b0132"><note>om.</note></rdg></app>
+                <app loc="3"><rdg source="bib:b0132">ζ´</rdg> </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Почил раб Божий такой-то, протопоп, <supplied reason="lost">…, в …,</supplied> в 6-ой индикт, в … году.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Почил раб Божий такой-то, … во 2-ой индикт, и где…</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Fell asleep: a servant [of God, ...], chief priest, in the 6th indiction... in the year...</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Fell asleep: a servant of [God, ...]... in the 2nd indiction, and where...</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Надпись была списана Латышевым в 1883 г. в Музее Новороссийского университета; 
+                   сведений о ней в Одессе найти не удалось. Судя по облику камня, 
+                   это была вставка (возможно, старый карниз) в стену над могилой (см. комм. к <ref type="inscription">V 319</ref><!--byz287-->). Судя же по 
+                  расположению надписи 2, он был затем использован вторично.  </p>
+                <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>. Она появляется в Северном Причерноморье не 
+                    раньше Х в.  </p>
+               <p> 2. Сан покойного вводился, очевидно, выражением ὁ καί (ср. <ref type="inscription">V 340</ref><!--byz316-->).</p>
+               <p> По палеографии (ср. особенно форму стигмы), надпись очень близка к <ref type="inscription">V 340</ref><!--byz316--> (1078 г.). Это 
+                  сродство, а также сходство с <ref type="inscription">V 319</ref><!--byz287--> позволяет предположить, что надпись происходит с Боспора.  </p>
+            </div>
+            <div type="textpart" n="2">
+               <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+               <p>2. Вторичное использование надгробия-вставки известно на Боспоре по <ref type="inscription">V 336</ref><!--byz320-->.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>The text of the inscription was transcribed by Latyshev in 1883 at the Museum of Novorossiysky University. It was not possible to find any information about it in 
+               Odessa. Judging by the shape of the monument, it may have been an insert (possibly an old cornice) for a wall over a grave (see commentary for 
+                  <ref type="inscription">V 319</ref><!--byz287-->). The placement of Text 2 suggests that the stone was later reused again.</p>
+               <p>1. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>. It does not occur in the Northern Black Sea region before the Xth century C.E.
+               </p>
+               <p>2. The title of the deceased was apparently introduced with ὁ καί (cf. <ref type="inscription">V 340</ref><!--byz316-->).</p>
+               <p>The palaeographic features (cf. the shape of stigma) are very similar to those of <ref type="inscription">V 340</ref><!--byz316--> (1078 C.E.). This particular
+                  affinity, and also the similarity with <ref type="inscription">V 319</ref><!--byz287--> allow us to propose that the inscription originates in Bosporus.</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>1. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref></p>
+               <p>2. Secondary use of an insert-tombstone is known in Bosporus: <ref type="inscription">V 336</ref><!--byz320-->.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

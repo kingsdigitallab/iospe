@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Литургическая надпись</title><title xml:lang="en">Liturgical inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.92</idno><idno type="PE">PE5000092</idno>
+            <idno type="AYV2012-number">byz092</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>4545/09</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>4545/09</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc12">
+                     <seg xml:lang="ru">Литургическая надпись.</seg>
+                     <seg xml:lang="en">Liturgic inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon12">База.</objectType>
+                           <objectType xml:lang="en">Base.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Четырехгранная база центральной колонки окна с орнаментированным круглым валиком (выс. 4 см) и углублением наверху 
+                              (глубина 6 см). Обломана справа и сзади.</p>
+                           <p xml:lang="en">Cuboid base of a central window colonnette. The base is topped with a circular ornamented roll moulding (H. 4cm) and bears 
+                           a cavity (D. 6cm) in the centre. Broken on the right and back.</p>
+                           <dimensions>
+                              <height>11,0</height>
+                              <width>12,5</width>
+                              <depth>14,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1-f3, f6">
+                           <seg xml:lang="ru">На четырех гранях базы.</seg>
+                           <seg xml:lang="en">On all four faces of the cuboid base.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с петлей, фи с удлиненной вертикалью.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with a loop, phi with extended vertical.</seg>
+                        <height unit="cm">2,4–6,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1200" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X–XII вв.</seg>
+                        <seg xml:lang="en">X–XIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09">September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1909 г., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Северо-восток, квартал III, у подземного храма, засыпь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1909, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Northeast, Block III, by the underground church, infill.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-23" who="AG">several lines translated, smal corrections</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2012-01-04" who="AG">updated</change>
+         <change when="2011-12-07" who="AG">small corrections, tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.92-1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.92-2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Cвет<supplied reason="lost">одавче, Тебе сла</supplied>ва (?), ами<supplied reason="lost">нь</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Ligh[t-giver?], glory [to you?], amen.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись шла по четырем сторонам базы: она начиналась на передней стороне буквами φοτ (i.e. φωτ),т.е. словом φῶς «свет» в косвенном падеже или 
+               словом, производным от него, и заканчивалась на левой стороне словом «аминь». Перед последним видна альфа, а перед ней штрих, который может 
+               принадлежать лишь кси или дзете (для каппы он слишком пологий). Явно, что речь идет о какой-то литургической формуле. Наша реконструкция является 
+               гипотетической: хорошо известна литургическая формула «Светодавче, слава Тебе» (окончание тропаря на Богоявление). По всей видимости, эта формула 
+               со словом «свет» соотносится с функцией носителя — центральной колонки двух- или трехчастного окна, возможно, церковного.</p>
+                <p>Наиболее близким к месту находки храмом была церковь над подземным храмом в квартале III. Наличие в храме подземной части могло актуализировать 
+                   по контрасту тему света в верхнем храме.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The text was arranged on all four sides of the base: it started with letters φοτ (i.e. φωτ) on the front, that is,  φῶς in an oblique case or some other word, 
+               derivative of φῶς, and it ended with the word "amen" on the left face. Before "amen" there are traces of an alpha and a letter stroke before it, which might
+            belong to a ksi or zeta (the slant is too low for a kappa). It is clear that we are dealing with some liturgical formula. Our reconstruction is hypothetical, based
+            on the well-known liturgical formula "Light-giver, glory to you" (the end of Epiphany troparion). It is possible that the formula referring to "light" 
+            plays on the
+            associated function of the base - to support a central colonnette of a double- or triple-sectioned window, perhaps in a church.</p>
+            <p>The closest church to the findspot of this monument was the church that stood over an underground church in Block III. The presence of an underground church in this
+               complext might,
+                  by contrast, have made the theme of light particularly relevant in the structure immediately above it.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="φωτόδοτης">Φοτ<supplied reason="lost" cert="low">όδοτα,</supplied></w> <w lemma="σύ"><supplied reason="lost" cert="low">σοι</supplied></w> <w lemma="δόξα"><supplied reason="lost" cert="low">δο</supplied><unclear>ξ</unclear>α</w> <note>e.g.</note>, <w lemma="ἀμήν">ἀμή<supplied reason="lost">ν</supplied></w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

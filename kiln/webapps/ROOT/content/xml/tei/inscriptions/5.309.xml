@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надпись Космы</title><title xml:lang="en">Inscription of Kosmas</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.309</idno><idno type="PE">PE5000309</idno>
+            <idno type="AYV2012-number">byz303</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ (?)</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ (?)</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc8">
+                     <seg xml:lang="ru">Памятная надпись <certainty cert="low" locus="value" match=".."/>.</seg>
+                     <seg xml:lang="en">Commemoration<certainty cert="low" locus="value" match=".."/>.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Квадр свода кургана. Сохранился целиком.</p>
+                           <p xml:lang="en">Wall block from the tumulus vault. Fully preserved.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы слегка удлинены по вертикали. 
+                           Альфа с петлей.</seg>
+                        <seg xml:lang="en">Graffito; slightly elongated letters. Alpha with a loop.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p044">
+                        <seg xml:lang="ru">Воспор.</seg>
+                        <seg xml:lang="en">Bosporus.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="low" evidence="палеография окружающие_граффити">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX-Xth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kerch">Керчь.</placeName>
+                        <rs type="circumstances">1956 г., обследования А.А. Шалькевича.</rs>
+                        <rs type="context">Царский курган, дромос, свод.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kerch.</placeName>
+                        <rs type="circumstances">1956, survey of A.A. Shalkevich.</rs>
+                        <rs type="context">"Tsarski" (Royal) tumulus, dromos, vault.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Керчь.</seg>
+                     <seg xml:lang="en">Kerch.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-09-03" who="AG">several lines translated</change>
+          <change when="2012-08-23" who="AL">checked metadata</change>
+          <change when="2012-07-25" who="AL">small corrections in metadata and bibliography</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-23" who="AFS">corrections in metadata and greek text</change>
+         <change when="2012-03-13" who="AL">text tagged, original date tagged, bibliography tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.309">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+          <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Амелькин 2001--><ptr target="bib:b0006"/>, <citedRange>242</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Косма.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Kosmas.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись выполнена тогда, когда дромос Царского кургана был засыпан, в своде пробит ход и внутри устроен храм 
+               (см. Шалькевич 1976, 162–164). 
+               Надпись имеет памятный характер. Судя по форме альфы и изображению копья рядом (подр. см. в: Амелькин 2001), 
+               надпись выполнена в IX–X вв.</p>
+            <p> Относительно имени см. комм. к <ref type="inscription">V 237</ref><!--byz231-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The text was inscribed after the dromos of the Tsarksi tumulus had been filled, a new entrance cut through the vault and a church set up
+               inside (see Shalkevich 1976, 162–164).  The text is commemorative. The shape of alpha and a drawing of a spear nearby (for more
+               details, see Amelkin 2001) suggest that the inscription was made in the IX-Xth centuries.</p>
+            <p>On the name, see commentary to <ref type="inscription">V 237</ref><!--byz231-->.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person389"><name nymRef="Κοσμᾶς">Κοσμᾶς</name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Феодора и Цалбанды</title><title xml:lang="en">Epitaph of Theodore and Tzalbanda</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.115</idno><idno type="PE">PE5000115</idno>
+            <idno type="AYV2012-number">byz111</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon6">Блок.</objectType>
+                           <objectType xml:lang="en">Block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Грубо отесанный блок; на лицевой стороне изображение греческого креста. Разбит на 2 части, в настоящее время утрачен правый 
+                              нижний угол; сколы по поверхности.</p>
+                           <p xml:lang="en">Roughly worked block. On the front is an incised Greek cross. Broken in two parts. The bottom right corner is missing; the surface is chipped.</p>
+                           <dimensions>
+                              <height>80,0</height>
+                              <width>50,0</width>
+                              <depth>10,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа и с ломаной, и с наклоненной влево перекладиной, и с петлей, 
+                           омега с заостренными нижними петлями. Лигатуры альфа-ипсилон, омикрон-ипсилон; сокращение καί.</seg>
+                        <seg xml:lang="en">Lapidary. Alpha with broken crossbar, left-slanting crossbar, and with a loop. Omega with pointy loops. Ligatures: alpha-upslion, omicron-upsilon.
+                           Abbreviated καί.</seg>
+                        <height unit="cm">1,8–4,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p007">
+                        <seg xml:lang="ru">Бакла.</seg>
+                        <seg xml:lang="en">Bakla.</seg>
+                     </origPlace>
+                     <origDate notBefore="0701" notAfter="0900" precision="low" evidence="палеография археологический_контекст">
+                        <seg xml:lang="ru">VIII–IX вв.</seg>
+                        <seg xml:lang="en">VIII–IXth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#bakla">Бакла.</placeName>
+                        <rs type="circumstances">1984 г., обследования И.А. Баранова.</rs>
+                        <rs type="context">Подножье Баклинского городища, склеп, юго-западная стена, ниша.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Bakla.</placeName>
+                        <rs type="circumstances">1984, survey of I.A. Baranov.</rs>
+                        <rs type="context">Foot of the Bakla hill, burial vault, southwestern wall, niche.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Крым.</seg>
+                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-02-25" who="NG">corrections of Greek lemmata</change>
+         <change when="2012-08-22" who="AG">translation of 'context' corrected</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-17" who="AG">1 line translated</change>
+         <change when="2012-06-26" who="AG">bibl   app corrected</change>
+         <change when="2012-05-28" who="AG">several lines translated, tags corrected</change>
+         <change when="2012-04-23" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-06" who="AG">small corrections, checked</change>
+         <change when="2012-02-28" who="AG">date, bibliography and the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.115-1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.115-2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Баранов 1990--><ptr target="bib:b0014"/>, 129, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> 50, <citedRange>1</citedRange></bibl>
+               <bibl n="1.1"><!--Сидоренко 1997--><ptr target="bib:b0204"/>, <citedRange>642–645</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="2"> <rdg source="bib:b0014">δούλου θεοῦ</rdg></app>
+                <app loc="4"><rdg source="bib:b0014 bib:b0204">Τζὰλ βανδᾴ</rdg> </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>О памяти и упокоении раба Твоего Феодора и его супруги Цалбанды, аминь.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For remembrance and rest of your servant Theodore and his spouse Tzalbanda. Amen.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Разница в исполнении строк происходит, по верному замечанию Сидоренко, от неровной поверхности камня.  </p>
+                <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.a</ref>. В нашем случае она явно не посвятительная, а погребальная, о чем свидетельствует сам характер памятника.</p>
+            <p> 2. Смешение формул “раб Божий” и “раб Твой” характерно для христианской эпиграфики (см. <ref type="introduction">IV.3.E.a</ref>), однако считать 
+               такую формулу “популярной”, подобно Сидоренко, вряд ли стоит.  </p>
+                <p> 3–4. С выводом Сидоренко относительно приписки слов κ(αὶ) τῖς συβίου αὐτοῦ согласиться также сложно: ясная формула надписи если и позволяет 
+                   считать что-то припиской, то только весь конец текста после имени Феодор (как в <ref type="inscription">V 305</ref><!--byz299-->.4). Последнее вполне вероятно,
+                   так как это окончание не 
+                   симметрично относительно оси креста. Вышеуказанное ошибочное предположение привело к неправильному пониманию последней строки, что было 
+                   отмечено также К. Цукерманном в частной беседе с нами. Фантастический глагол βανδᾴ (sic!; без всякой ссылки на справочники) — конечно, lectio difficilior, но вряд ли предпочтительное. 
+                   Ввиду неясности вопроса об этнической принадлежности склепа мы передаем женское имя в форме Цалбанда, а не с  ч , как у Сидоренко<!-- (см. прил. 2)-->.</p>
+            <p> 4. Относительно слова “аминь” в конце формулы ср. <ref type="inscription">V 63</ref><!--byz063-->.</p>
+                <p> Шрифт надписи типичен для перехода от ранне- к средневизантийской эпохе: особенно характерно написание альфы в трех вариантах. 
+                   Альфа с ломанной гастой не встречается в Крыму позже нач. Х в. (<ref type="inscription">V 66</ref><!--byz066-->).</p>
+                <p>В ограбленном склепе при археологическом доследовании было обнаружено пять черепов и три погребения в деревянных ящиках. 
+                   Датировка погребального инвентаря (пряжка), по Баранову, — 2 пол. VIII – 1 пол. IX вв. Двое упоминаемых в надписи лиц были, по всей вероятности, 
+                   первыми владельцами склепа (вероятно, родового).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The difference in execution of lines is due, as Sidorenko rightly pointed out, to uneven stone surface.</p>
+            <p>1. On the formula, see Introduction <ref type="introduction">IV.3.F.a</ref>. In our case, it is not dedicatory, but funerary, which is confirmed by the 
+               physical characteristics of the monument. </p>
+            <p>2. Conflation of the formulae "servant of God" and "your servant" is typical for Christian epigraphy (see <ref type="introduction">IV.3.E.a</ref>), but it should
+            not be necessarily considered "popular," as Sidorenko describes it.</p>
+            <p>3-4. It is also difficult to agree with Sidorenko regarding the addition of the words κ(αὶ) τῖς συβίου αὐτοῦ: the formula used is not in doubt and the only
+               part of the text that can be considered a subsequent addition is the very end, after the name Theodore (as in <ref type="inscription">V 305</ref><!--byz299-->.4).
+               The latter is quite possible, since that segment of the text is not arranged symmetrically on either side of the cross. Sidorenko's mistaken conclusion
+               about an addition to the original text led to an incorrect understanding of the last line. This has been also  mentioned to me by C. Zuckermann in a private conversation. 
+               A remarkable verb βανδᾴ (sic!; without
+               any supporting reference) - is certainly lectio difficilior, which is not, however, a reason for accepting it. Due to the unknown ethnic identification of the person
+               buried here
+               we transcribe the female name as Tzalbanda, and not Chalbanda, as does Sidorenko<!-- (see Appendix 2)-->.</p>
+            <p>4. On the word "amen" at the formula, see <ref type="inscription">V 63</ref><!--byz063-->.</p>
+            <p>The script is typically transitional from the Early to Middle Byzantine: particularly characteristic is the simultaneous use of three forms of alpha.
+               Alpha with broken crossbar is not attested in Crimea after the early Xth century (<ref type="inscription">V 66</ref><!--byz066-->).</p>
+            <p>Archaeological investigation of the robbed burial vault revealed five skulls and three burials in wooden coffins. The date of burial goods (a buckle), according 
+               to Baranov, is 2nd half of the IXth century. The two persons named in the inscription were probably the original owners of the vault, which may have 
+            become their family tomb.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="ὑπέρ">Ὑπὲρ</w> <w lemma="μνήμη">μνήμης</w> <w lemma="καί"><expan><ex>καὶ</ex></expan></w> <w lemma="ἀνάπαυσις">ἀναπαύ<lb n="2" break="no"/>σεος</w> <w lemma="ὁ">τοῦ</w> <w lemma="δοῦλος">δούλου</w> <w lemma="σύ">σου</w>
+               <lb n="3"/><persName type="attested" ref="#person138"><name nymRef="Θεόδωρος">Θεωδόρου</name></persName> <w lemma="καί"><expan><ex>καὶ</ex></expan></w> <w lemma="ὁ">τῖς</w> <w lemma="σύμβιος ">συβίου</w> <w lemma="αὐτός">αὐτοῦ</w>
+               <lb n="4"/><persName type="attested" ref="#person139"><name nymRef="Τζαλβάνδα">Τζαλβάνδα</name></persName>, <w lemma="ἀμήν">ἀμήν</w> <g ref="#stauros"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

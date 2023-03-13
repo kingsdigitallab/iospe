@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие неизвестного</title><title xml:lang="en">Epitaph of an unknown</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.164</idno><idno type="PE">PE5000164</idno>
+            <idno type="AYV2012-number">byz157</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon16 #mon20">Скальная стена.</objectType>
+                           <objectType xml:lang="en">Rock wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m7 #m6">Темпера на штукатурке.</material>
+                           <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Сколы сверху и справа.</p>
+                           <p xml:lang="en">Chipped on the top and right.</p>
+                           <dimensions>
+                              <height>10,0</height>
+                              <width>15,0</width>
+                           </dimensions>
+                           </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Граффито</rs>; буквы слегка угловатые; мю с наклонными крайними гастами.
+                          </seg>
+                        <seg xml:lang="en">Graffito; letters slightly angular; mu with slanting hastae.</seg>
+                        <height unit="cm">1,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p015">
+                        <seg xml:lang="ru">Качи-Кальон.</seg>
+                        <seg xml:lang="en">Kachi-Kalyon.</seg>
+                     </origPlace>
+                     <origDate notBefore="1301" notAfter="1500" precision="low" evidence="палеография археологический_контекст">
+                        <seg xml:lang="ru">XIV–XV вв.</seg>
+                        <seg xml:lang="en">XIV–XVth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2008-09">Сентябрь 2008</date>.</seg>
+                     <seg xml:lang="en"><date when="2008-09">September 2008</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kachi-kalyon">Качи-Кальон.</placeName>
+                        <rs type="circumstances">1933 г., обследования Н.И. Репникова.</rs>
+                        <rs type="context">3-ий грот, полупещерный храм, апсида, северная (скальная) стена, на высоте 120 см от пола.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kachi-Kalyon.</placeName>
+                        <rs type="circumstances">1933, survey of N.I. Repnikov.</rs>
+                        <rs type="context">Third grotto, semi-cave church, apse, northern (rock) wall, at a height of 120cm from the floor.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-26" who="AG">some corrections, 1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-26" who="AG">metadata corr</change>
+         <change when="2012-06-01" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-19" who="AG">corrections in metadata, tags in the Greek text corrected</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.164">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/>
+               <w lemma="κοιμάω"><supplied reason="lost">Ἐκοι</supplied>μή<supplied reason="lost">θη</supplied></w>
+               <supplied reason="lost"><w lemma="ὁ">ὁ</w></supplied> <w lemma="δοῦλος"><supplied reason="lost">δοῦ</supplied><lb n="2" break="no"/>λος</w> <w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <gap reason="lost" extent="unknown" unit="character"/>
+               <persName type="attested"><name><seg part="F">ηο<supplied reason="lost">ς</supplied></seg></name></persName>.
+               <lb n="3"/><date> <w lemma="μήν">μηνὺ</w>
+                  <rs type="month" ref="sep"><w lemma="Σεπτέμβριος">Σεπτεβρ<supplied reason="lost">ίῳ</supplied></w></rs>
+               <lb n="4"/><w lemma="εἰς"><supplied reason="lost">εἰ</supplied>ς</w> <w lemma="ὁ">τὰ</w>
+                  <num><gap reason="lost" quantity="2" unit="character"/></num></date>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий …ий .. -го сентября.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, [...]ios... of September.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Контекст находки см. в Репников 1935, 108.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p> О датировке храма см. комм. к <ref type="inscription">V 161</ref><!--byz154-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>For the context of find, see Repnikov 1935, 108.</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>For the date, see commentary to <ref type="inscription">V 161</ref><!--byz154-->.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

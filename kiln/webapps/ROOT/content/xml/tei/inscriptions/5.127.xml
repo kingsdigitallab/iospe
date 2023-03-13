@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Каланицы</title><title xml:lang="en">Epitaph of Kalanitza</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.127</idno><idno type="PE">PE5000127</idno>
+            <idno type="AYV2012-number">byz122</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                      <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне латинский крест с расширяющимися концами на голгофе в аркообразном углублении с двумя орнаментальными 
+                              поясками и углублением (25х19 см) под ним; на тыльной стороне «коса». Разбита на 2 части.</p>
+                           <p xml:lang="en">On the front - Latin cross with flaring arms on the Golgotha within inset panel with two ormamental bands and another inset panel
+                           (25x19 cm) below. On the back - a "string" course. Broken in two parts.</p>
+                           <dimensions>
+                              <height>114,5</height>
+                              <width>31,5</width>
+                              <depth>8,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В нижнем углублении.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>In the bottom cavity.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                        <height unit="cm">1,5–1,7.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p009">
+                        <seg xml:lang="ru">Керменчик.</seg>
+                        <seg xml:lang="en">Kermenchik.</seg>
+                     </origPlace>
+                     <origDate notBefore="1347" notAfter="1347" evidence="указание_надписи">
+                        <seg xml:lang="ru">1347 г.</seg>
+                        <seg xml:lang="en">1347 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#vysokoe">Высокое.</placeName>
+                        <rs type="circumstances">1915–1916 гг., обследования М.И. Скубетова.</rs>
+                        <rs type="context">В 4 км от Ашага-Керменчика, храм св. Иоанна Предтечи, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Vysokoe.</placeName>
+                        <rs type="circumstances">1915-1916, survey of M.I. Skubetov.</rs>
+                        <rs type="context">4 km from Ashaga-Kermenchik, St. John the Baptist church, necropolis.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-29" who="AG">one line translated</change>
+         <change when="2012-05-28" who="AG">several lines translated</change>
+         <change when="2012-04-24" who="AG">editor added, several lines translated</change>
+         <change when="2012-03-06" who="AG">check, corrections, bibliography, apparatus tagged</change>
+         <change when="2012-03-01" who="AFS"/>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918а--><ptr target="bib:b0156"/>, 40, № <citedRange>9</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/><w lemma="κοιμάω"><expan><abbr>Ἐκοιμίθ</abbr><ex>η</ex></expan></w>
+               <lb n="2"/><w lemma="ὁ">ἱ</w> <w lemma="δοῦλος">δούλη</w>
+               <w lemma="τις">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <persName type="attested" ref="#person158"><name nymRef="Καλανιτζα">Κα<lb n="3" break="no"/>λανη<supplied reason="lost">τ</supplied>ζα</name></persName> <date><w lemma="μήν">μινὶ</w>
+               <lb n="4"/><rs type="month" ref="apr"><w lemma="Ἀπρίλιος">Ἀπρηλήο</w></rs> <w lemma="εἰς">εἰς</w> <num value="15">ιε</num>,
+               <lb n="5"/><w lemma="ἔτος">ἔτους</w> <num value="6855">ςωνε</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="4"><rdg source="bib:b0156">εἰς τὰ ιε´</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья Каланица 15 апреля 6855 года.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Kalanitza, on the 15th of April, in the year 6855.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Таблицы к статье Латышева остались неизданными.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+            <p> 2–3. Латышев указал, что Каланица (ср. <ref type="inscription">V 128</ref><!--byz123-->) — уменьшительная форма от имени 
+               Калана (ср. <ref type="inscription">V 128</ref><!--byz123-->). </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Plates for Latyshev's article were never published.</p>
+            <p>1-2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.   </p>
+            <p>2-3. Latyshev pointed out that Kalanitza (cf. <ref type="inscription">V 128</ref><!--byz123-->) was a diminutive form of the name Kalana 
+               (cf. <ref type="inscription">V 169</ref><!--byz162-->).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

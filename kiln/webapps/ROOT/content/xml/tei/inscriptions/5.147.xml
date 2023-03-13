@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Памятная надпись Иоанна</title><title xml:lang="en">Commemoration of John</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.147</idno><idno type="PE">PE5000147</idno>
+            <idno type="AYV2012-number">byz141</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc8">
+                     <seg xml:lang="ru">Памятная надпись.</seg>
+                     <seg xml:lang="en">Commemoration.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение шестиконечного креста на подножье. Состояние неизвестно.</p>
+                           <p xml:lang="en">On the front - patriarchal cross on a base. Condition unknown.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Под изображением креста.</seg>
+                           <seg xml:lang="en">Below the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Лигатуры.</seg>
+                        <seg xml:lang="en">Lapidary. Ligatures.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p012">
+                        <seg xml:lang="ru">Лаки.</seg>
+                        <seg xml:lang="en">Laki.</seg>
+                     </origPlace>
+                     <origDate notBefore="1413" notAfter="1413" evidence="указание_надписи">
+                        <seg xml:lang="ru">1413 г.</seg>
+                        <seg xml:lang="en">1413 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#laki">Лаки.</placeName>
+                        <rs type="circumstances">Лето 1895 г., обследования Ю.А. Кулаковского.</rs>
+                        <rs type="context">Храм Св. Троицы, юго-восточная апсида, наружная стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Laki.</placeName>
+                        <rs type="circumstances">Summer of 1895, survey of Yu. A. Kulakovsky.</rs>
+                        <rs type="context">Holy Trinity church, southeast apse, external wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">1 line translated</change>
+         <change when="2012-07-03" who="AG">apparatus upd after Vinogradov</change>
+         <change when="2012-05-30" who="AG">several lines translated, corrections in metadata, tags corrected</change>
+         <change when="2012-03-12" who="AG">some corrections in metadata, bibliography and apparatus tagged, tags in the Greek text corrected</change>
+         <change when="2012-03-06" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.147-1">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.147-2">
+                <desc xml:lang="en">Drawing of face 2(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 69, №<citedRange>63</citedRange></bibl>
+               <bibl n="1.1"><!--Millet 1900--><ptr target="bib:b0397"/>, № <citedRange>63</citedRange></bibl>
+               <bibl n="2"><!--Латышев 1898a--><ptr target="bib:b0134"/>, <citedRange>231</citedRange></bibl>
+               <bibl n="1.2"><!--Соломоник 1991--><ptr target="bib:b0212"/>, <citedRange>173</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app><rdg source="bib:b0132 bib:b0134">Ἠωά(ννης): ἔτου(ς)] ...</rdg> 
+                   <rdg source="bib:b0397">Ἰεσηιδου</rdg>
+                   <rdg source="bib:b0212">Λεόνδου</rdg>
+                </app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Иоанн. В 6921 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Ioa(nnes). In the year 6921.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Данная надпись, скорее всего, относится к разряду памятных графитти, оставляемых на 
+                священных объектах. Апсида храма, особенно ее южная сторона — 
+                излюбленное место для такого рода графитти (ср., напр., храм в Кудрино (бывш. Шуры)), в основном анэпиграфных (корабли, кони и т.п.). 
+               Впрочем, не исключено, что это может быть и надгробие с краткой формулой.</p>
+            <p> Чтение имени и у Милле, и у Соломоник основывается на копии Кулаковского (Латышев 1896) и не учитывает копии Бертье-Делагарда, 
+                   опубликованной Латышевым двумя годами позднее. На ней четко читаются и три первых буквы имени, и слово “год”. 
+                   Относительно имени Иоанн см. комм. к <ref type="inscription">V 108</ref><!--byz026-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>This inscription most likely belongs to the category of commemorative graffiti on sacred objects. The apse (especially its south side) 
+               of a church is a favorite place for such graffiti (see, e.g., the church in Kudrino (former Shury), which tend to be representational 
+               (ships, horses, etc.) rather than verbal. At the same time, we cannot exclude the possibility that in this case we might be dealing with
+               a funerary inscription consisting of a short formula.</p>
+            <p> The reading of the name, both in Millet and Solomonik is based on the transcription of 
+               Kulakovsky (Latyshev 1896), and does not take into account the transcription of Bertye-Delagard, published by Latyshev two years later. In the latter, 
+               the first three letters, as well as the word "year," can be clearly read. On the name John, see commentary to <ref type="inscription">V 108</ref><!--byz026-->.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <persName type="attested" ref="#person195"><name nymRef="Ἰωάννης"><expan><abbr>Ἠωά</abbr><ex>ννης</ex></expan></name></persName> <date><w lemma="ἔτος"><expan><abbr>ἔτου</abbr><ex>ς</ex></expan></w> <num value="6821">ςϠκα</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

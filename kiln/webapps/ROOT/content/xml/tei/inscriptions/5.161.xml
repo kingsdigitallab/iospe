@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Анфима</title><title xml:lang="en">Epitaph of Anthemos</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.161</idno><idno type="PE">PE5000161</idno>
+            <idno type="AYV2012-number">byz154</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m7 #m6">Темпера на штукатурке.</material>
+                           <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Специально вытесанная площадка в стене, покрытая штукатуркой серого цвета, с красной каймой, желтыми полосами и 
+                              изображением креста (?) в центре. Поверхность в сильных осыпях.</p>
+                           <p xml:lang="en">Shallow inset roughly quadrangular area, carved in the wall, covered with grey plaster. A red painted border runs the perimeter,
+                           inside of which several horizontal yellow lines and a cross (?) are painted. The surface has flaked considerably.</p>
+                           <dimensions>
+                              <height>28,0</height>
+                              <width>26,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within painted border.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>, белая краска на сером фоне; поздний минускул.</seg>
+                        <seg xml:lang="en">Dipinto, white paint over grey background; late minuscule.</seg>
+                        <height unit="cm">2,2–3,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p015">
+                        <seg xml:lang="ru">Качи-Кальон.</seg>
+                        <seg xml:lang="en">Kachi-Kalyon.</seg>
+                     </origPlace>
+                     <origDate notBefore="1407" notAfter="1408" evidence="указание_надписи">
+                        <seg xml:lang="ru">1407–1408 гг.</seg>
+                        <seg xml:lang="en">1407–1408 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2009-09">Сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kachi-kalyon">Качи-Кальон.</placeName>
+                        <rs type="circumstances">1933 гг., обследования Н.И. Репникова.</rs>
+                        <rs type="context">Третий грот, полупещерный храм, северная стена, восточная часть, рядом с алтарной преградой.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kachi-Kalyon.</placeName>
+                        <rs type="circumstances">1933, survey of N.I. Repnikov.</rs>
+                        <rs type="context">Third grotto, semi-cave church, north wall, eastern part, next to the chancel screen.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-09-26" who="AG">metadata updated</change>
+         <change when="2012-07-26" who="AG">small corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-31" who="AG">several lines translated, editor added</change>
+         <change when="2012-03-13" who="AG">corrections in metadata, tags in the Greek text corrected</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.161">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p>ined</p>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Поч</supplied>ил <supplied reason="lost">раб</supplied> Божий Анф<supplied reason="lost">им</supplied> 29-го …, в <supplied reason="lost">6</supplied>916 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, Anth[emos], 29th of .., in the year <supplied reason="lost">6</supplied>916.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Учитывая почетное место погребения в маленьком пространстве храма, кажется вполне 
+               возможным, что храм был устроен в связи с этим погребением (ср. <ref type="inscription">V 151</ref><!--byz145-->); кроме того, одинаково 
+               по технике с надписью выполнена и роспись на западной стене. О контексте находки см. Репников 1935, 108.</p>
+                <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+                <p> 3. Имя Анфим встречается в христианской эпиграфике 6 раз (согласно PHI7 Database), из них 5 — в Малой Азии.</p>
+                <p>5. Дате надписи не противоречит и литургическое устройство храма (см. Виноградов, Гайдуков, Желтов 2005, 75).  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Considering the prestigious location of the burial in the small space occupied by the church, it would appear logical to suppose that the church was in 
+               fact created in order to house the burial (cf. <ref type="inscription">V 151</ref><!--byz145-->); it might be significant that the inscription
+               is painted in the same manner as a fresco on the west wall. For the context of find, see Repnikov 1935, 108.</p>
+            <p> 1–2. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>The name Anthemos is attested in Christian epigraphy 6 times (according to PHI7 Database), of which 5 are in Asia Minor.</p>
+            <p>5. The liturgical design of the church (Vinogradov, Gaydukov, Zheltov 2005, 75) does not contradict the date of the inscription.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω"><supplied reason="lost">Ἐκοιμ</supplied>ήθι</w> <w lemma="ὁ">ὁ</w>
+               <lb n="2"/><w lemma="δοῦλος"><supplied reason="lost">δοῦλος</supplied></w> <w lemma="ὁ">τοῦ</w>
+               <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="3"/><persName type="attested" ref="#person205"><name nymRef="Ἄνθημος"><app type="alternative"><rdg>Ἄνθ<supplied reason="lost">ημος</supplied></rdg><rdg>Ἀνθ<supplied reason="lost">ήμιος</supplied></rdg></app></name></persName>
+               <date><supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied>
+                  <gap reason="lost" extent="unknown" unit="character"/><lb n="4" break="no"/><w part="F">ου</w> <supplied reason="lost"><w lemma="εἰς">εἰς</w>
+                     <w lemma="ὁ">τὰ</w></supplied>
+               <lb n="5"/><num value="29"><unclear>κ</unclear>θ</num>, <w lemma="ἔτος"><supplied reason="lost">ἔτ</supplied>ο<supplied reason="lost">υς</supplied></w>
+               <lb n="6"/><num value="6916"><supplied reason="lost">ς</supplied>Ϡις</num></date>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

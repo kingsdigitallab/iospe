@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Алексея</title><title xml:lang="en">Epitaph of Alexis</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.167</idno><idno type="PE">PE5000167</idno>
+            <idno type="AYV2012-number">byz160</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon30">Однорогое надгробие.</objectType>
+                           <objectType xml:lang="en">"Single-horned" tombstone.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Однорогое ступенчатое надгробие с нишкой на лицевой и розетками на лицевой и боковых сторонах рога. Поверхность повреждена.</p>
+                           <p xml:lang="en">"Single-horned" stepped tombstone with a small niche on the front and rosettes on the sides of the "horn." The surface is damaged.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Между розеткой и нишкой и по сторонам от нишки.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>Between rosette and niche and on either side of the niche.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                        <height unit="cm">2,0–3,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p018">
+                        <seg xml:lang="ru">Шуры.</seg>
+                        <seg xml:lang="en">Shury.</seg>
+                     </origPlace>
+                     <origDate notBefore="1392" notAfter="1392" evidence="указание_надписи">
+                        <seg xml:lang="ru">1392 г.</seg>
+                        <seg xml:lang="en">1392 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kudrino">Кудрино.</placeName>
+                        <rs type="circumstances">1915–1916 гг., обследования М.И. Скубетова.</rs>
+                        <rs type="context">Урочище Ай-Костанди, кладбище.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kudrino.</placeName>
+                        <rs type="circumstances">1915-1916, survey of M.I. Skubetov.</rs>
+                        <rs type="context">Ay-Kostandi Tract, cemetery.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-26" who="AG">small correction, 1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-01" who="AG">small correction, editor added, several lines translated</change>
+         <change when="2012-03-19" who="AG">corrections in metadata and in the tags in the Greek text, bibliography and apparatus marked up</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918а--><ptr target="bib:b0156"/>, 34, № <citedRange>1</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκοιμίθι</w> <w lemma="ὁ">ὁ</w> <w lemma="δοῦλος"><expan><abbr>δοῦλ</abbr><ex>ος</ex></expan></w> <w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+               <lb n="2"/><persName type="attested" ref="#person215"><name nymRef="Ἀλέξις"><supplied reason="lost">Ἀ</supplied>λέξις</name></persName>, <w lemma="υἱός">υ<supplied reason="lost">ἱὸ</supplied>ς</w> <w lemma="ὁ">τοῦ</w> <persName type="attested" ref="#person216"><name nymRef="Μπελαϊ">Μπελα<lb n="3" break="no"/>η</name></persName>,<date> <w lemma="μήν">μινὶ</w> <rs type="month" ref="ian"><w lemma="Ἰανουάριος">Ἰανου<supplied reason="lost">αρίῳ</supplied></w></rs>
+               <lb n="4"/><w lemma="εἰμί">ἠς</w> <w lemma="ὁ">τὰ</w> <num value="10">ι</num>, <w lemma="ἡμέρα">ἡμέ<supplied reason="lost">ρᾳ</supplied></w>
+               <lb n="5"/><num value="3">γ</num>, <w lemma="ἐπί">ἐπὶ</w> <w lemma="ἔτος">ἔτους</w> <num value="6900">ςϠ</num></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="4"><rdg source="bib:b0156">τά[ς]</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий <supplied reason="lost">А</supplied>лексей, с<supplied reason="lost">ы</supplied>н Белаи, 
+               10 янв<supplied reason="lost">аря</supplied>, в среду, в 6900 году.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God, <supplied reason="lost">A</supplied>lexis, son of Belaï, on the 10th of January, on Wednesday, in the year 6900.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись издана Латышевым по эстампажу и рисунку Скубетова. Таблицы не вышли из печати.</p>
+                <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p> 2. Имя Алексей в поздневизантийском Крыму известно по <ref type="inscription">V 179</ref><!--byz172--> и <ref type="inscription">V 180</ref><!--byz214-->.  </p>
+                <p> 2–3. Имя Белаи может быть тюркским<!-- (см. прил. 2)-->, но может происходить и от греческого корня ἄμπελος.</p>
+                <p>4–5. 10 января 1392 г. падало на среду — соответственно, «3-ий день» данной надписи оказывается средой, а не, как обычно в византийском счете дней недели, 
+                   вторником. 
+                   Очевидно, что в Горном Крыму в кон. XIV в. существовал альтернативный (подобный современному русскому) счет дней недели с понедельника, 
+                   что подтверждается и <ref type="inscription">V 124</ref><!--byz216--> из Высокого (?) 1387 г. (см. <ref type="introduction">IV.4.F</ref>).
+                   При этом <ref type="inscription">V 242</ref><!--byz228-->.1 1472 г. из 
+                   Партенита показывает наличие в поздневизантийском Крыму и традиционного счета дней недели (см. <ref type="introduction">IV.4.F</ref>).  </p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Latyshev's edition is based on the estampage and drawing of Skubetov. The tables were never published.</p>
+            
+            <p>1. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>2. The name Alexis is known in Late Byzantine Crimea from <ref type="inscription">V 179</ref><!--byz172--> and <ref type="inscription">V 180</ref><!--byz214-->.</p>
+            <p>2-3. The name Belaï (here Belae) could be Turkic<!-- (see Appendix 2)-->, but might also derive from the Greek root ἄμπελος.</p>
+            <p>4-5. January 10th 1392 was Wednesday, that is, the "third" day of this inscription turns out to be Wednesday, contrary to the Byzantine count of weekdays,
+               where the third day is Tuesday. Apparently, in the fourtheenth-century Mountainous Crimea, a different count of days was used, similar to the modern Russian count that
+               starts with Monday. This is supported also by <ref type="inscription">V 124</ref><!--byz216--> from Vysokoe (?) of 1387 C.E. (see Introduction <ref type="introduction">IV.4.F).</ref>.
+               At the same time, a traditional count of weekdays in Late Byzantine Crimea is demonstrated by <ref type="inscription">V 242</ref><!--byz228-->.1 from Partenit, 1472 C.E.
+               (see Introduction <ref type="introduction">IV.4.F</ref>).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

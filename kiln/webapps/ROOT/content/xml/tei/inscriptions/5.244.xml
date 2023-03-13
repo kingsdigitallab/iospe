@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Владельческая надпись Дамиана</title><title xml:lang="en">Ownership inscription of Damianos</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.244</idno><idno type="PE">PE5000244</idno>
+            <idno type="AYV2012-number">byz230</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc14">&gt;
+                     <seg xml:lang="ru">Владельческая надпись.</seg>
+                     <seg xml:lang="en">Ownership inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита <certainty cert="low" locus="value" match=".."/>.</objectType>
+                           <objectType xml:lang="en">Panel<certainty cert="low" locus="value" match=".."/>.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Круглой формы. Обломана справа.</p>
+                           <p xml:lang="en">Round. Broken off on the right.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В центре и по кругу.</seg>
+                           <seg xml:lang="en">In the centre and along the perimeter.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Лямбда с удлиненной вверх правой гастой, тау апицированное. Лигатура лямбда-йота, монограмма.</seg>
+                        <seg xml:lang="en">Lapidary. Lambda with protruding right hasta, tau with serifs. Ligature: lambda-iota; monogram.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p036">
+                        <seg xml:lang="ru">Партенит.</seg>
+                        <seg xml:lang="en">Partenit.</seg>
+                     </origPlace>
+                     <origDate notBefore="1427" notAfter="1427" precision="low" evidence="указание_надписи">
+                        <seg xml:lang="ru">ок. 1427 г.</seg>
+                        <seg xml:lang="en">ca. 1427 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#partenit">Партенит.</placeName>
+                        <rs type="circumstances">1871 г., раскопки Д.М. Струкова.</rs>
+                        <rs type="context">Базилика.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Partenit.</placeName>
+                        <rs type="circumstances">1871, excavations of D.M. Strukov.</rs>
+                        <rs type="context">Basilica.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-09-24" who="AG">key added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-05" who="AG">several lines translated, bibliography and apparatus tagged</change>
+          <change when="2012-06-20" who="AFS">added metadata and tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.244">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Мыц 1991a--><ptr target="bib:b0181"/>, 183–184, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>4.1</citedRange></bibl>
+               <bibl n="1.1"><!--Мыц 2009--><ptr target="bib:b0184"/>,  <citedRange>145–147</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="1"><rdg source="bib:b0181 bib:b0184">Δαμιαν(ὸς)</rdg></app> 
+               <app loc="2"><lem>ὁ</lem><rdg source="bib:b0181 bib:b0184"><note>om.</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Дамиан, митрополит города Феодоро.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Damianos, metropolitan of the city of Theodoro.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Рисунок Струкова хранится в РА ИИМК. 1872. Д. 53. Л. 10.  </p>
+            <p> 1. Имя Дамиан дано в монограмме. Это, очевидно, тот же Дамиан, что и в <ref type="inscription">V 241</ref><!--byz226-->.</p>
+                <p> 2. По предположению Мыца, данная надпись является ставропигиальной, однако ставропигия всегда бывает только патриаршей, и в Крыму известна только 
+                   для Ялты (Miklosich, Mueller 1862, 67–68, № 367) — точнее говорить о надписи, обозначающей принадлежность храма определенному архиерею: в 
+                   средне- и поздневизантийской эпиграфике ставропигия всегда указывается (например, Grégoire 1929, № 298 (о. Мегисти в Ликии, 1637 г.)). Наша же надпись 
+                   больше похоже на Feissel, Philippidis-Braat 1985, № 86 из Патр абсолютно того же времени (1426 г.), где патронат митрополита над храмом выражен 
+                   при помощи его герба и подписи к гербу.</p>
+            <p> Относительно исторического контекста см. Мыц 2009, 145–147 и комм. к <ref type="inscription">V 239</ref><!--byz225-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The drawing made by Strukov is preserved at the Manuscript Archive, Institute for  History of Material Culture, Russian Academy of Sciences 1872. Д. 53. Л. 10.</p>
+            <p>1. The name Damianos is given in a monogram. This is probably the same Damianos as in <ref type="inscription">V 241</ref><!--byz226-->.</p>
+            <p> 2. Myts identified this inscription as stauropegic, however, a stauropegic domain is always patriarchal, and in Crimea it is attested only at Yalta 
+               (Miklosich, Mueller 1862, 67–68, № 367) — rather we should consider the inscription as signifying the authority of a certain archiereus over that church:
+               in the Middle and Late Byzantine epigraphy, the stauropegic locality is always stated (e.g., Grégoire 1929, № 298 (Megiste island in Lycia, 1637 C.E.)). 
+               Our inscription rather resembles Feissel, Philippidis-Braat 1985, № 86 from Patrae, dated to the same period (1426 C.E.), 
+               where the metropolitan's patronage of a church is expressed by his coat of arms and accompanying inscription.</p>
+            <p>For the historical context, see Myts 2009, 145–147 and commentary to <ref type="inscription">V 239</ref><!--byz225-->.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person309"><name nymRef="Δαμιανός"><expan><abbr>Δαμη</abbr><ex>ανός</ex></expan></name></persName>,
+               <lb n="2"/><w lemma="ὁ"><unclear>ὁ</unclear></w> <w lemma="μητροπολίτης"><supplied reason="lost">μητρο</supplied><unclear>π</unclear>ολίτης</w> <w lemma="πόλις"><expan><abbr>πόλεο</abbr><ex>ς</ex></expan></w> <placeName key="theodoro"><expan><abbr>Θε</abbr><ex>οδώρους</ex></expan></placeName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

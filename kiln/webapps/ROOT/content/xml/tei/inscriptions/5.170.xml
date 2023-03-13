@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Нила</title><title xml:lang="en">Building inscription of Neilos</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.170</idno><idno type="PE">PE5000170</idno>
+            <idno type="AYV2012-number">byz163</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Центральный музей Тавриды</repository>
+                     <idno>А–20731</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Central Museum of Tavrida</repository>
+                     <idno>А–20731</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне рельефная рамка (высота 0,3cm). Обломана справа, сбита рамка.</p>
+                           <p xml:lang="en">On the front - inset panel with raised border (H. 0.3cm), which is heavily damaged. Broken off on the right.</p>
+                           <dimensions>
+                              <height>27,0</height>
+                              <width>26,0</width>
+                              <depth>11,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within inset area.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Альфа с ломаной перекладиной, альфа (местами) и лямбда 
+                           со слегка удлиненной вверх правой гастой, 
+                           тета местами с удлиненной перекладиной, йота местами укороченная и местами с диерезой, ипсилон У-и V-образный. 
+                           Лигатура омикрон-ипсилон. Нерегулярные ударения.</seg> 
+                        <seg xml:lang="en">Lapidary. Alpha with broken crossbar, lambda and some alphas - with a slightly projecting right hasta, some thetas
+                           have an extended horizontal, some iotas are shortened and sometimes with diaeresis, upsilon Y- and V-shaped. Ligature: omicron-upsilon. Occasional accents.</seg>
+                        <height unit="cm">1.0–1.4.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p019">
+                        <seg xml:lang="ru">Данильча-Коба (?).</seg>
+                        <seg xml:lang="en">Danilcha-Koba (?).</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">Х в.</seg>
+                        <seg xml:lang="en">Хth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#kuchuk-babugan">Кучук-Бабуган <certainty locus="value" match=".." cert="low"/> или Данильча‐Коба.</placeName>
+                        <rs type="circumstances">1910 г., случайная находка.</rs>
+                        <rs type="context">Монастырская балка, рядом с пещерой Данильча-Коба (?).</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Kuchuk-Babugan <certainty locus="value" match=".." cert="low"/>.</placeName>
+                        <rs type="circumstances">1910, chance find.</rs>
+                        <rs type="context">Monastyrskaya Gully, near Danilcha-Koba cave (?).</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Симферополь, Крым.</seg>
+                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-10-16" who="AL">small corrections in metadata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-26" who="AG">1 line translated, corrections</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-03" who="AG">apparatus upd after Vinogradov</change>
+         <change when="2012-06-01" who="AG">several lines translated, editor added, greek text, bibliography and apparatus tidied</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+         <change when="2012-03-19" who="AG">corrections in metadata, bibliography and apparatus tagged, tags in the Greek text corrected</change>
+          <change when="2012-03-12" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.170">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Латышев 1918a--><ptr target="bib:b0156"/>, 42–44, № <citedRange>12</citedRange></bibl>
+               <bibl n="2"><!--Виноградов 2011a--><ptr target="bib:b0386"/>,  236–239, № <citedRange>11</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="1"><rdg source="bib:b0156">Πα[ντοκράτορι ἔκτισε ?</rdg></app>
+               <app loc="2"><rdg source="bib:b0156">ταύτη[ν ἐκκλησίαν (?)</rdg></app>
+                <app loc="5-6"><rdg source="bib:b0156">Θεοδώ]ρους</rdg></app>
+               <app loc="6"><rdg source="bib:b0156">Ἰουνίῳ</rdg></app> 
+                <app loc="6"><lem>ἰνδ(ικτιῶνος) α´, <unclear>ἔ</unclear>[τους ...</lem><rdg source="bib:b0156"><note>om.</note></rdg></app> 
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Вс<supplied reason="lost">ю</supplied> эту святую <supplied reason="lost">церковь воздвиг (?)</supplied> худейший Нил
+               <supplied reason="lost">при содействии (?)</supplied> благочестивых жите<supplied reason="lost">лей</supplied> богохранимого 
+               гор<supplied reason="lost">ода До</supplied>роса (?) 1 июня, в 1-й индикт, в <supplied reason="lost"><gap reason="ellipsis"/>. 
+                  году</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>The en<supplied reason="lost">tire church</supplied>, this holy one, the unworthy Neilos <supplied reason="lost">erected</supplied><supplied reason="lost"> 
+               with the help</supplied> of pious inhabitants of the God-protected ci<supplied reason="lost">ty of Do</supplied>ros (?).
+           1st of June, in the 1st indction, in [the year...].</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Камень был взят для строительства «Чайного домика» в имении Коккоз кн. Ф.Ф. Юсупова 
+                (в совр. с. Соколиное). Однако в указании первоиздателя на место находки содержится 
+                противоречие: в качестве такового называется, со слов М.И. Скубетова, с одной стороны, 
+                Кучуг-Бабуган, а, с другой, значительно удаленная от него пещера Данильча-Коба. Возможно, 
+                Латышев перепутал Кучук-Бабуган как место постройки Чайного домика с местом находки надписи. 
+                Впрочем, неясно, зачем тогда было переносить надпись в Чайный домик, а не в само имение 
+                Коккоз, значительно более близкое к Данильча-Кобе.</p>
+                <p> Свободная нижняя часть плиты, вмурованной в стену, использовалась для нанесения граффити.</p>
+                <p> 1–2. Надпись относится, по-видимому, к храму перед пещерой Данильча-Коба.</p>
+                <p> 3. Судя по эпитету «худейший», ктитором могло быть лицо духовное, клирик или монах. 
+                    Имя Нил в Крыму более не встречается, однако хорошо известно по синаксарям 
+                    (см. Delehaye 1902, 1139) — скорее всего, оно монашеское.  </p>
+                <p> 4–6. Одним из важнейших вопросов надписи является восстановление имени города в 5–6-й 
+                    строках. Для предложенного Латышевым восстановления «Феодоро», которое поддерживается 
+                    также эпитетом «богохранимый» (см. <ref type="inscription">V 175</ref><!--byz168-->), не хватает, однако, места: ширина надписи 
+                    уверенно реконструируется по 4-й строке. Кроме того, Феодоро появляется в источниках не 
+                    ранее рубежа XIII–XIV вв. (см. комм. к <ref type="inscription">V 175</ref><!--byz168--> и <ref type="inscription">V 176</ref><!--byz169-->), так что ввиду вышеупомянутой причины, а 
+                    также датировки надписи (см. ниже) более логично реконструировать здесь имя «Дорос», 
+                   известное в VII–IX вв. (см. Пиоро 1990, 63–65).</p>
+                <p> 6. Cокращение μ(ηνί) из всех надписей Северного Причерноморья стоит ближе всего 
+                   (но не идентично) к <ref type="inscription">V 71</ref><!--byz071--> (V–VI вв.), а сокращение для слова «индикт» — к <ref type="inscription">V 103</ref><!--byz103--> (IX–X вв.).</p>
+                <p> Кроме типа сокращений, второй основой для датировки надписи является ее палеография. 
+                    Альфа с ломаной перекладиной в датированных надписях Крыма последний раз встречается в 
+                   <ref type="inscription">V 66</ref><!--byz066--> (915 г.). С другой стороны, йота с диерезой встречается в Крыму лишь начиная с Х в. (ср. 
+                   <ref type="inscription">V 89</ref><!--byz089-->), и равным образом для этого времени характерна суженная тета (ср. <ref type="inscription">V 172</ref><!--byz165-->), так что 
+                    данная надпись также относится скорее к Х в.</p>
+                <p> Точной археологической датировки храм у Данильча-Кобы не имеет: оттуда происходят 
+                    находки как VII–IX, так и XIII–XV вв. (см. Мыц 1991b).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The stone was reused in the construction of a Tea House at the estate Kokkoz of Prince F.F. Yusupov (modern village of Sokolinoe). There is a contradiction
+               in the information about the findspot provided by the first editor: referring to the testimony of M.I. Skubetov, he states, on the one hand, that the findspot 
+               was Kuchuk-Babugan, on the other hand, that it was a much more distant cave of Danilcha-Koba. It is possible that Latyshev had confused Kuchuk-Babugan as the site
+               of the Tea House with the original findspot of the monument. It is still unclear why the stone would have been transferred to the Tea House, and not to the Kokkoz estate,
+               which was much closer to Danilcha-Koba.</p>
+            <p>The uninscribed bottom half of the inset panel was used for graffiti.</p>
+            <p>1-2. The inscription probably relates to a church that had stood in front of the cave of Danilcha-Koba.</p>
+            <p>3. Judging by the epithet "unworthy," the ktitor might have been a cleric or monk. The name Neilos (here Nilos) is not otherwise attested in Crimea, but is well known from synaxaria
+               (see Delehaye 1902, 1139) — it was most likely a monk's name.</p>
+            <p>4-6. One of the most important questions concerning this inscription is the restoration of the city name in lines 5-6. The restoration of Latyshev "Theodoro"
+               is supported by the use of the epithet "God-protected" (see <ref type="inscription">V 175</ref><!--byz168-->), however, there is not enough space for that
+               word since the width of the text is securely determined by the length of line 4. In addition, Theodoro appears in our sources only at the turn of the XIIIth and XIVth
+               centuries (see commentary to <ref type="inscription">V 175</ref><!--byz168--> and <ref type="inscription">V 176</ref><!--byz169-->), and for this reason, as well as on the basis
+               of the inscription's date (see below) it is more plausible to restore the name Doros here, known in the VIIth-IXth centuries (Pioro 1990, 63–65).</p>
+            <p>6. Abbreviation μ(ηνί) is the closest (but not identical) to <ref type="inscription">V 71</ref><!--byz071--> (V-VIth centuries),
+               and the abbreviation of the word "indiction" is comprable with <ref type="inscription">V 103</ref><!--byz103--> (IX–Xth century).</p>
+            <p>Besides the typology of abbreviations, the second dating criterion of the inscription is its palaeographic features. Alpha with broken crossbar last occurs
+               in Crimea in 915 C.E.(<ref type="inscription">V 66</ref><!--byz066-->), at the same time, iota with diaeresis appears in Crimea only in the Xth century 
+               (cf. <ref type="inscription">V 89</ref><!--byz089-->), and a narrow theta is also characteristic of this period (<ref type="inscription">V 172</ref><!--byz165-->), so our inscription should
+            most likely date to Xth century.</p>
+            <p>The church at Danilcha-Koba has not been assigned a precise date: there are finds both of the VII-IXth centuries and of XIII-XVth centuries (see Myts 1991b).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><g ref="#stauros"/> <w lemma="">Πᾶ<unclear>σ</unclear><supplied reason="lost">αν</supplied></w>
+               <supplied reason="lost"><w lemma="ὁ">τὴν</w> <w lemma="ἐκκλησία">ἐκκλησίαν</w></supplied>
+               <lb n="2"/><w lemma="ἅγιος">ἁγίαν</w> <w lemma="οὗτος">ταύτι<unclear>ν</unclear></w>
+               <supplied reason="lost" cert="low"><w lemma="ἀνεγείρω">ἀνήγειρεν</w></supplied>
+               <lb n="3"/><w lemma="ὁ">ὁ</w> <w lemma="ἐλάχιστος">ἐλάχιστος</w>
+               <persName type="attested" ref="#person219"><name nymRef="Νεῖλος">Νῖλο<supplied reason="lost">ς</supplied></name></persName>
+               <w lemma="συνδρομή"><supplied reason="lost" cert="low">συνδρομῇ</supplied></w>
+               <lb n="4"/><w lemma="ὁ">το͂ν</w> <w lemma="εὐσεβής">εὐσεβῶν</w> <w lemma="οἰκήτωρ">οἰκι<unclear>τ</unclear><supplied reason="lost">όρων</supplied></w>
+               <supplied reason="lost"><w lemma="ὁ">τῆς</w></supplied>
+               <lb n="5"/><w lemma="θεοφύλακτος"><expan><abbr>θ</abbr><ex>ε</ex><abbr>ωφυλάκτου</abbr></expan></w>
+               <w lemma="πόλις">πώλ<supplied reason="lost">εως</supplied></w>
+               <placeName key="doros" nymRef="Δόρος"><supplied reason="lost">Δό</supplied><lb n="6" break="no"/>ρους <certainty locus="value" match=".." cert="low"/></placeName>
+               <date><w lemma="μήν"><expan><abbr>μ</abbr><ex>ηνὶ</ex></expan></w> <rs type="month" ref="iun"><w lemma="Ἰούνιος">Ἰουνήου</w></rs>
+                  <num value="1">α</num>, <w lemma="ἰνδικτιών"><expan><abbr>ἰνδ</abbr><ex>ικτιῶνος</ex></expan></w>
+                  <num value="1">α</num>, <w lemma="ἔτος"><unclear>ἔ</unclear><supplied reason="lost">τους</supplied></w>
+                  <num><gap reason="lost" quantity="3" unit="character"/></num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись архиепископа</title><title xml:lang="en">Building inscription of an archbishop</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.239</idno><idno type="PE">PE5000239</idno>
+            <idno type="AYV2012-number">byz225</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Ялтинский историко-литературный музей</repository>
+                     <idno>КП 5330/10-11, КП 5330/12</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Yalta Museum of History and Literature</repository>
+                     <idno>КП 5330/10-11, КП 5330/12</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon14">Аркосолий.</objectType>
+                           <objectType xml:lang="en">Arcosolium.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m7 #m6">Темпера на штукатурке.</material>
+                           <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Боковые стенки и свод аркосолия между пилястрами, покрытого штукатуркой с темперой; по краю живописная рамка. 
+                              Сохранилось 2 блока, причем первый распался надвое, осыпи краски.</p>
+                           <p xml:lang="en">Side walls and arch of an arcosolium between pilasters; plaster and tempera; ornamental border along the perimeter.
+                           Two blocks are preserved, but the first broke into two pieces; the paint has peeled in many places.</p>
+                           <dimensions n="1">
+                              <height>116,0</height>
+                              <width>59,0</width>
+                              <depth>24,0</depth>
+                           </dimensions>
+                           <dimensions n="2">
+                              <height>50,0</height>
+                              <width>42,0</width>
+                              <depth>21,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, 
+                           <rs type="execution" ref="execution.xml#pictura">Дипинто</rs>, буквы идут снизу вверх в обычном порядке.</seg>
+                        <seg xml:lang="en">Lapidary, dipinto. The direction of writing from bottom up.</seg>
+                        <height unit="cm">6,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p035">
+                        <seg xml:lang="ru">Массандра.</seg>
+                        <seg xml:lang="en">Massandra.</seg>
+                     </origPlace>
+                     <origDate notBefore="1101" notAfter="1300" precision="low" evidence="стиль_росписей исторический_контекст">
+                        <seg xml:lang="ru">XII–XIII вв.</seg>
+                        <seg xml:lang="en">XII–XIIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>, <date when="2009-09"> сентябрь 2009</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>, <date when="2009-09">September 2009</date>.</seg>
+                  </provenance>
+                  <provenance type="found" n="1">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#massandra">Массандра, Верхняя.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Храм, стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Massandra, Verkhniya.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Church, wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="found" n="2">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot">Массандра, Верхняя.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Храм, стена.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Massandra, Verkhniya.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Church, wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Ялта, Крым.</seg>
+                     <seg xml:lang="en">Yalta, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="AG">small corrections</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-06" who="AG">tag in the Greek text corrected</change>
+         <change when="2012-07-04" who="AG">tagged, several lines translated</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.239-1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.239-2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.239-3">
+                <desc xml:lang="en">Photograph of face 3(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+       </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов 2011a--><ptr target="bib:b0386"/>,  245–247, № <citedRange>15</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… милостью Господней архиепископ …</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>...by the grace of the Lord, archbishop...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись была любезно указана нам Н.П. Туровой. Точное местоположение аркосолия с надписью в храме неизвестно. Строительные надписи на
+               фресках известны в поздневизантийское время на Эски-Кермене (<ref type="inscription">V 219</ref><!--byz207-->) и в Судаке 
+               (<ref type="inscription">V 245</ref><!--byz232-->, <ref type="inscription">V 246</ref><!--byz233-->).</p>
+                <p> По всей видимости, речь в надписи идет об освящении храма каким-то архиепископом. Упоминание в надписи архиепископа указывает на время до
+                   конца XIII в., когда Херсон и Готия стали митрополиями: первый митрополит Готии известен под 1292 г. (Vasiliev 1936, 276). С другой стороны, Херсон
+                   как митрополия упоминается уже в Notitia episcopatuum 15, т.е. в кон. XII в. (Darrouzès 1981, 386). Таким образом, если фрески датируются XIII в., то в
+                   надписи может подразумеваться только архиепископ Готский. Датировке XII–XIII вв. соответствует и стиль росписей на пилястрах храма (любезное
+                   сообщение Е.А. Виноградовой): дающее основание для более точной датировки личное письмо утрачено, но арочное обрамление и несхожесть с
+                   известной нам живописью Горного Крыма XIII в. («храм Трех всадников» и «храм Успения» на Эски-Кермене) говорят скорее в пользу датировки XII в.</p>
+                <p> Причиной упоминания архиепископа в надписи может быть установление права на владение Массандровским храмом (ср. такого рода надпись
+                   митрополита Готского Дамиана из Партенита ок. 1427 г. — <ref type="inscription">V 244</ref><!--byz230-->). Этому соответствует и пассаж в решении патриарха от 
+                   1384 г.: «Еще поручает им наша мерность и относительно патриаршей области Ялиты, чтобы они расследовали о тамошних честных церквях, и сколько их они найдут
+                   посвященными как ставропигиальные, архиереем ли Готии или патриаршим экзархом, поставят их под патриаршую власть и управление…»
+                   (Miklosich, Mueller 1862, 67–68, № 367). Считается, что соседняя с Массандрой Никита была предметом спора между митрополитами Херсона и
+                   Готии в 1384 г. (Vasiliev 1936, 277–278), однако такое мнение основано на конъектуре — исправлении рукописного Сикита на Никита, и не может быть
+                   использовано как доказательство. При этом известно, что соседняя с Массандрой Ялта находилась в ведении патриарха (см. выше). Однако все равно
+                   остается неясным, к кому относились Ялта и Массандра в XII–XIII вв. Упоминание в связи с Ялтой митрополита Готии связано, с одной стороны, с тем,
+                   что он был патриаршим экзархом. С другой стороны, далее в том же акте 1384 г. говорится: «Но если есть и у Готского [архиерея] там место и он
+                   освятил храмы как свои собственные, то должен ими владеть». Таким образом, очевидно, что к 1384 г. в районе Ялты были храмы, принадлежавшие
+                   непосредственно Готской епархии. Полное молчание в связи с Ялтой о Херсонской епархии в акте 1384 г. заставляет предположить, что
+                   Массандровский храм был освящен также архиепископом Готии, возможно, еще до перехода Ялты под управление патриарха. В пользу этого говорит и
+                   передача Ялты в 1386 г. под управление, в качестве экзархата, митрополита Готии (Miklosich, Mueller 1862, 74–75, № 371). Возвращение патриаршим
+                   актом 1390 г. (Miklosich, Mueller 1862, 148–150, № 419) других мест из акта 1384 г. под власть Херсонского митрополита не затрагивает, что характерно,
+                   Ялту, хотя все остальные утраченные Херсоном территории (Фуна, Алания, Алушта, Лампад, Партенит, Кинсан и Элисс) в акте перечислены и даже
+                   прибавлена новая — Хрихари. Итак, наиболее вероятным кажется подчинение Массандры Готскому архиерею: вначале — напрямую, затем —
+                   в качестве патриаршего экзархата.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription was kindly brought to my attention by N.P. Turova. The exact position of the inscribed arcosolium in the church is unknown. 
+               Building inscriptions on frescoes are known in the Late Byzantine period from Eski-Kermen (<ref type="inscription">V 219</ref><!--byz207-->) 
+               and Sudak (<ref type="inscription">V 245</ref><!--byz232-->, <ref type="inscription">V 246</ref><!--byz233-->).</p>
+            <p>Apparently, the inscription mentioned the dedication of some church by an archbishop. The title of archbishop points to a date before the end of
+               the XIIIth century, when Cherson and Gotthia became metropoleis: the first metropolitan of Gotеhia is known in 1292 (Vasiliev 1936, 276).
+               Cherson is already mentioned as a metropolis in Notitia episcopatuum 15, that is, at the end of the XIIth century (Darrouzès 1981, 386).
+               Thus, if the frescoes in our case date to the XIIIth century, then the archbishop mentioned can oтly be that of Gotthia. A date in the XII-XIIIth century
+               fits well with the mural decoration on the pilasters of the church (kindly pointed out to me by E.A. Vinogradova): the rendering of facial features,
+               which would allow a more precise dating, is lost, but the treatment of arches and the dissimilarities with other known murals of the XIIIth century
+               in Mountainous Crimea ("Church of Three Horsemen" and "Dormition Church" at Eski-Kermen) suggest the XIIth century as a more likely date.</p>
+            <p>The reason for mentioning an archbishop in the inscription may have something to do with with the establishment of ownership
+               for the church at Massandra (cf. inscription of similar kind from Partenit, ca. 1427 C.E., made by the metropolitan Damianos of Gotthia, 
+                — <ref type="inscription">V 244</ref><!--byz230-->). It is corroborated by a passage in the Act of the patriarch (1384 C.E.):
+                «In addition, our mediocrity instructs them regarding the patriarchal district of Yalita - to find out about local venerable churches,
+               and as many of them as are found dedicated as stavropegial, either by an archiereus of Gotthia or by a patriarchal exarch, to bring them under the 
+               patriarchal authority and rule» (Miklosich, Mueller 1862, 67–68, № 367). The common opinion has it that a neighbor of Massandra, Nikita,
+               was a subject of dispute between the metropolitans of Cherson and Gotthia in 1384 (Vasiliev 1936, 277–278), however this opinion is based
+               on a conjecture - a correction of the manuscript reading Sikita to Nikita - and thus cannot be used as proof. In addition, it is known
+               that Yalta, also a neighbor of Massandra, was under the patriarchal authority (see above). Still, it is not clear under which ecclesiastical jurisdiction
+                Yalta and Massandra found themselves in the XII-XIIIth centuries. On the one hand, the mention of a metropolitan of Gotthia in connection with Yalta
+                has to do with his status as a patriarchal exarch. On the other hand, in the same Act of 1384 it says furthermore: "However, if an archiereus of Gotthia
+                has a seat there and had consecrated those churches as his own, then he should rule them." Thus, it appears that by 1384 in the region of Yalta
+                there were churches that were under the direct authority of the eparchy of Gotthia. Complete silence about the eparchy of Cherson with respect to Yalta
+                in the same act of 1384 firmly suggests that the church of Massandra had also been consecrated by the archbishop of Gotthia, possibly before the 
+                transfer of Yalta to the authority of the patriarch. This hypothesis is supported by the fact that in 1386 Yalta came as an exarchy under
+                the authority of the metropolitan of Gotthia (Miklosich, Mueller 1862, 74–75, № 371). The return, by a patriarchal Act of 1390 
+                (Miklosich, Mueller 1862, 148–150, № 419), of some other places addressed by the Act of 1384, under the authority of the metropolitan of Cherson
+                characteristically does not affect Yalta, although all other territories lost by Cherson (Phouna, Alania, Alushta, Lampad, Partenit, Kinsanos and Elissos)
+                are included in the Act and even one more territory is added, that of Chrichari. In sum, the most probable scenario seems to be the inclusion of 
+                Massandra in the oversight of the archiereus of Gotthia: initially - directly, and subsequently - as part of the patriarchal exarchy.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+               <ab>
+               <lb n="1"/><gap reason="illegible" quantity="1" unit="character"/> 
+                  <w lemma="ἔλεος">ἐλέη</w>
+                  <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>κ</abbr><ex>υρίο</ex><abbr>υ</abbr></expan></w></roleName></persName> 
+                  <w lemma="ἀρχιεπίσκοπος">ἀρχ<supplied reason="lost">ιε</supplied><unclear>π</unclear><supplied reason="lost">ίσκοπος</supplied></w> 
+                  <gap reason="lost" extent="unknown" unit="character"/><w part="F">η</w>· <w part="I">ν</w><gap reason="lost" extent="unknown" unit="character"/><orig>ΣΕ</orig><gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+            </div>
+      </body>
+   </text>
+</TEI>

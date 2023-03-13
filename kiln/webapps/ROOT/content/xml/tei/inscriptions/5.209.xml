@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Марии</title><title xml:lang="en">Building inscription of Mary</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.209</idno><idno type="PE">PE5000209</idno>
+            <idno type="AYV2012-number">byz197</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon14">Аркосолий.</objectType>
+                           <objectType xml:lang="en">Arcosolium.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m7 #m6">Темпера на штукатурке.</material>
+                           <material xml:lang="en">Tempera on plaser.</material>
+                           <p xml:lang="ru">Боковые стенки и свод плоского аркосолия; по краям красная полоса. Сколы по поверхности.</p>
+                           <p xml:lang="en">Side walls and arch of a flat arcosolium; red band along the perimeter. The surface is chipped.</p>
+                           <dimensions>
+                              <height>8,0</height>
+                              <width>191,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Внутри рамки.</seg>
+                           <seg xml:lang="en">Within a frame.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>, желтая краска с красным обводом по синему фону; плетеные буквы, 
+                           вытянутые по вертикали и заостренные на концах, крайне маньеризованные, снабженные дополнительными украшениями. Лигатура омикрон-ипсилон.</seg>
+                        <seg xml:lang="en">Dipinto in yellow paint with red outline against blue background. Letters are woven, elongated and pointy, very ornate, with many 
+                         decorative elements. Ligature: omicron-upsilon.</seg>
+                        <height unit="cm">7,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p025">
+                        <seg xml:lang="ru">Черкес-Кермен.</seg>
+                        <seg xml:lang="en">Cherkes-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1351" notAfter="1352" evidence="указание_надписи">
+                        <seg xml:lang="ru">1351–1352 или 1381–1382 гг.</seg>
+                        <seg xml:lang="en">1351–1352 or 1381–1382 C.E.</seg>
+                        <certainty locus="value" match="../@notBefore" assertedValue="1381"/>
+                        <certainty locus="value" match="../@notAfter" assertedValue="1382"/>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2006-09">Сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#cherkes-kermen">Черкес-Кермен.</placeName>
+                        <rs type="circumstances">2006 г., обследования А.Ю. Виноградова.</rs>
+                        <rs type="context">«Храм донаторов», северная стена, восточный аркосолий.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Cherkes-Kermen.</placeName>
+                        <rs type="circumstances">2006, survey of A.Yu. Vinogradov.</rs>
+                        <rs type="context">"Church of Donators," north wall, east arcosolium.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-25" who="AG">several lines translated, corrections in metadata</change>
+          <change when="2012-06-19" who="AL">editor tag inserted, small corrections</change>
+          <change when="2012-04-17" who="AL">translated a line, bibliography tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.209-1">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+             <graphic url="5.209-2">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+             <graphic url="5.209-3">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+             <graphic url="5.209-4">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!--Виноградов, Луковникова 2008--><ptr target="bib:b0055"/></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/>
+                <gap reason="lost" extent="unknown" unit="character"/><w lemma="θεμελιόω">ἐθεμ<supplied reason="lost">ηλιώθη</supplied></w>
+               <w lemma="συνδρομή"><supplied reason="lost">συ</supplied>ν<supplied reason="lost" cert="low">δρομῇ</supplied></w> 
+                <w lemma="ὁ"><supplied reason="lost">τῆς</supplied></w> <w lemma="δοῦλος"><unclear>δούλ</unclear><supplied reason="lost">η</supplied><unclear>ς</unclear></w>
+                <w lemma="ὁ"><unclear>τοῦ</unclear></w> <persName type="divine" key="iesous"><name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστο</ex><abbr>ῦ</abbr></expan></name></persName>
+                <persName type="attested" ref="#person265"><name nymRef="Μαρία"><unclear>Μ</unclear>αρύας</name></persName>·
+               <w lemma="ἐπί"><unclear>ἐ</unclear><supplied reason="lost">πὶ</supplied></w> 
+                <date><w lemma="ἔτος"><supplied reason="lost">ἔ</supplied><unclear>τ</unclear><supplied reason="lost">ους</supplied></w> 
+                <app type="alternative"><lem><num value="686"><supplied reason="lost">ς</supplied><unclear>ωϞ</unclear></num></lem> <rdg><num value="689"><supplied reason="lost">ς</supplied><unclear>ωξ</unclear></num></rdg></app></date>, <date><w lemma="ἰνδικτιών"><expan><abbr>ἠν</abbr><supplied reason="lost"><abbr>δ</abbr><ex>ικτιῶνος</ex></supplied></expan></w> <num value="5">ε</num></date> <gap reason="illegible" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… основан при содействии рабы Христовой Марии. В 6890 (или: 6860) году, в 5-й индикт.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... founded with the assistance of the servant of God, Mary. In the year 6890 (or: 6860), in the 5th indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись располагается на весьма почетном месте — над изображением св. Феодора, храмового святого. Аркосолий, в котором она помещена, 
+               продолжает ряд аркосолиев на западной и северной стене, где изображены ктиторы храма (судя по надписям, как минимум, трое из них 
+               скончались, см. <ref type="inscription">V 210</ref><!--byz198-->, <ref type="inscription">V 211</ref><!--byz199-->, 
+               <ref type="inscription">V 212</ref><!--byz200-->), и поэтому оказывается 
+               в некой мемориальной зоне храма. Эту связь с предыдущими аркосолиями подчеркивает и 
+               уподобление шрифта надписи орнаментальной плетенке в параллельном аркосолии на западе северной стены. Таким образом, надпись может 
+               иметь либо строительную/посвятительную, либо поминальную функцию (погребальные надписи расположены около отдельных фигур, см. <ref type="inscription">V 210</ref><!--byz198-->, 
+               <ref type="inscription">V 211</ref><!--byz199-->, <ref type="inscription">V 212</ref><!--byz200-->).</p>
+                <p> Из-за сильных выпадов штукатурки и повреждения красочного слоя ясно читаются лишь два фрагмента. Слева от центра свода видны буквы 
+                   ΕΘΕΜ, которые в выше установленном контексте принадлежат, скорее всего, слову ἐθεμηλιώθη. Упоминание о закладке оснований несколько 
+                   необычно для пещерного храма, однако, с одной стороны, его можно отнести на счет явно приглашенного издалека мастера, а с другой, для 
+                   пещерных храмов Крыма у нас есть лишь единственная чисто строительная надпись — с формулой «освящен» (<ref type="inscription">V 203</ref><!--byz191-->).</p>
+                <p> Второй фрагмент содержит выражение «рабы Христовой Марии», после чего стоит колон. В промежутке между фрагментами ясно читается 
+                   ню, что может указывать на формулу [συ]ν[δρομῇ] «при содействии» (ср. <ref type="inscription">V 176</ref><!--byz169-->). Выражение «раб Христов» в отличие от «раба Божьего» не
+                   столь десемантизировано: в крымских надписях оно (за исключением № 89, где статус его носителя неясен) относится к лицам духовного 
+                   звания (ср. <ref type="inscription">V 181</ref><!--byz173-->, <ref type="inscription">V 201</ref><!--byz189-->). В этой связи можно считать Марию 
+                   данной надписи монахиней и соотносить ее с женской фигурой в монашеском 
+                   одеянии (предложено С.В. Харитоновым в устной беседе), расположенной в процессии ктиторов последней, с самого запада, и лишенной, в 
+                   отличи от остальных, подписи с упоминанием о кончине. Итак, перед нами оказывается строительная надпись с упоминанием заказчика 
+                   храма — некоей знатной ктиторши Марии, по всей вероятности, ставшей монахиней.</p>
+                <p> Оставшаяся, после колона, часть надписи должна содержать (по многочисленным аналогиям с надписями Горного Крыма, 
+                   ср. <ref type="inscription">V 149</ref><!--byz143-->, <ref type="inscription">V 175</ref><!--byz168-->, 
+                   <ref type="inscription">V 177</ref><!--byz170-->, <ref type="inscription">V 178</ref><!--byz171-->, 
+                   <ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214-->, <ref type="inscription">V 219</ref><!--byz207-->) датировку по году. Следующий за колоном эпсилон дает две возможности для восстановления. Либо мы 
+                   реконструируем формулу ἔτους «года» и считаем тогда сохранившийся далее украшенный шариком правый апекс на перекладине своеобразным 
+                   вариантом стигмы — тогда весь конец надписи не восстанавливается, либо, в случае формулы ἐπὶ ἔτους «в году», считаем этот фрагмент 
+                   (что реальнее) остатком тау. В последнем случае следующий далее остаток вертикальной гасты может принадлежать только омеге (пси, дающее 
+                   дату 1191–1292, исключается по искусствоведческим основаниям), а вот за ней, очевидно, следует коппа (или, что менее вероятно, кси). После 
+                   нее видны следы двух слитых вместе вертикальных гаст, которые могут принадлежать лишь эте и ню из сокращения ἠνδ(ικτιῶνος) «в индикт». 
+                   Эпсилон за ними указывает на 5 индикт, на который, действительно, приходился 1381–1382 (или 1351–1352) гг.</p>
+                <p> Эта датировка поддерживается и искусствоведческим анализом (подр. см. Виноградов, Луковникова 2008).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription is prominently positioned - over the image of St. Theodore, the patron saint of the church. The arcosolium, in which it is placed,
+               is one in a row of other arcosolia on the west and north walls, where the church's ktitores are depicted (according to inscriptions, at least three
+               of them were deceased, see <ref type="inscription">V 210</ref><!--byz198-->, <ref type="inscription">V 211</ref><!--byz199-->, <ref type="inscription">V 212</ref><!--byz200-->), 
+               and for that reason they appear in what might be described as a memorial zone of the church. The connection with the other arcosolia is emphasised in the script of our
+               inscription by the imitation of the ornamental weave pattern, which characterizes the parellel arcosolium on the west side of the north wall. 
+               Therefore, the inscription might be identified as building/dedicatory, or commemorative (epitaphs are positioned next to specific figures:  
+               see <ref type="inscription">V 210</ref><!--byz198-->, <ref type="inscription">V 211</ref><!--byz199-->, <ref type="inscription">V 212</ref><!--byz200-->).</p>
+            <p>Due to the fact that multiple fragments of plaster have fallen off and the paintwork has been damaged, only two segments of the text can be read.
+              To the left of the point of the arch the letters ΕΘΕΜ can be read, which in this context probably belong to the word ἐθεμηλιώθη. A reference to the 
+              laying of foundations is unusual in a cave-church but it may have had to do with the master builder who had come from far away; at the same time,
+              we lack broader comparanda since there is only one other building inscription found in cave-churches of Crimea, and in that one the verb used is 
+              "dedicated" (<ref type="inscription">V 203</ref><!--byz191-->).</p>
+            <p>The second segment of the text contains the expression "servant of Christ, Mary" followed by a colon. In between the segments a nu is clearly visible
+               suggesting the possibility that the formula [συ]ν[δρομῇ] "with the assistance" had been used (cf. <ref type="inscription">V 175</ref><!--byz168-->). 
+               The expression "servant of Christ" maintains greater semantic specificity than the "servant of God": in Crimean inscriptions (with the exception of <ref type="inscription">V 89</ref><!--byz89-->, 
+               the identity of the person so described is unclear) it always indicates clergy (cf. <ref type="inscription">V 181</ref><!--byz173-->, <ref type="inscription">V 201</ref><!--byz89-->). 
+               It is therefore possible to hypothesize that Mary was a nun and might be identified with a female figure in a nun's garb depicted in the procession of ktitores
+               as the last figure, at the extreme west, and not accompanied (unlike all other figures) by a reference to her passing (the association between the text and the image
+               has been suggested to us by S.V. Kharitonov in a private conversation). Thus, we have an example of a building inscription mentioning the person who had commissioned
+               the construction of the church - a certain Mary who apparently later became a nun.</p>
+            <p>The rest of the text, following the colon, must have contained a dating formula by the year, by analogy with numerous inscriptions from Mountainous Crimea
+               (cf.  <ref type="inscription">V 149</ref><!--byz143-->, <ref type="inscription">V 175</ref><!--byz168-->, 
+               <ref type="inscription">V 177</ref><!--byz170-->, <ref type="inscription">V 178</ref><!--byz171-->, 
+               <ref type="inscription">V 179</ref><!--byz172-->, <ref type="inscription">V 180</ref><!--byz214-->, <ref type="inscription">V 219</ref><!--byz207-->). The epsilon that follows the colon offers two possibilities for reconstruction: either we could reconstruct
+               the formula ἔτους "the year" and then interpret the right serif decorated with a circle as a type of stigma - in that case, the end of the inscription cannot
+               be restored. Alternatively, if we reconstruct the formula ἐπὶ ἔτους "in the year," then we would interpret the following traces as remains of a tau (which is more likely). 
+               In that case, a trace of the vertical stroke that follows could only belong to an omega (psi, giving us the date 1191–1292,
+               is excluded on art-historical grounds), while what follows would be a koppa (or, less likely, a ksi). After that letter, there are traces of two vertical
+               strokes merged together, which would belong either to an eta or nu, representing an abbreviation ἠνδ(ικτιῶνος) "in the indiction." The following epsilon
+               would give us the 5th indiction, corresponding to the year 1381–1382 (or 1351–1352) C.E.</p>
+            <p>This date is supported by art-historical analysis (for more detail, see Vinogradov, Lukovnikova 2008).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

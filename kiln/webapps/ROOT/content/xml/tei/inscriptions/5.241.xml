@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Дамиана</title><title xml:lang="en">Building inscription of Damianos</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.241</idno><idno type="PE">PE5000241</idno>
+            <idno type="AYV2012-number">byz226</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Вторично использован, разбит на 3 части.</p>
+                           <p xml:lang="en">Reused, broken into 3 parts.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">По всей лицевой поверхности.</seg>
+                           <seg xml:lang="en">Entire front surface.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы рельефные, вырезаны между рельефных линеек, 
+                           вытянуты по вертикали, апицированы. 
+                           Альфа с наклонной перекладиной и верхним штрихом, эпсилон, тета, омикрон и сигма миндалевидные, ипсилон V-образный, омега маньеризованная; диакритика.</seg>
+                        <seg xml:lang="en">Lapidary; relief letters, cut between relief guiding lines, elongated, accentuated with serifs. Alpha with slanting crossbar
+                           and with capping horizontal bar pointing left, almond-shaped epsilon, theta, omicron and sigma, V-shaped upsilon, ornate omega; diacritic marks.</seg>
+                        <height unit="cm">2.5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p036">
+                        <seg xml:lang="ru">Партенит.</seg>
+                        <seg xml:lang="en">Partenit.</seg>
+                     </origPlace>
+                     <origDate notBefore="1427" notAfter="1427" evidence="указание_надписи">
+                        <seg xml:lang="ru">1427 г.</seg>
+                        <seg xml:lang="en">1427 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#partenit">Партенит.</placeName>
+                        <rs type="circumstances">октябрь 1871 г., раскопки Д.М. Струкова.</rs>
+                        <rs type="context">Базилика, предалтарная часть, в полу.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Partenit.</placeName>
+                        <rs type="circumstances">October 1871, excavations of D.M. Strukov.</rs>
+                        <rs type="context">Basilica, in front of the altar, in the floor.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2013-04-25" who="AG">comments updated</change>
+          <change when="2013-02-20" who="ΝG">corrected Greek lemata</change>
+         <change when="2012-09-24" who="AG">keys added</change>
+         <change when="2012-08-14" who="AFS">inserted key name</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-06" who="AG">several lines translated, bibliography and apparatus marked up</change>
+         <change when="2012-07-05" who="AFS">marking up Greek text,added metadata.</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.241">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Клопотович 1871--><ptr target="bib:b0088"/></bibl>
+               <bibl n="1.1"><!--Караулов 1872--><ptr target="bib:b0082"/>,  312–313</bibl>
+               <bibl n="2"><!--Латышев 1886--><ptr target="bib:b0123"/></bibl>
+               <bibl n="1.2"><!--Ермоген 1887--><ptr target="bib:b0071"/>,  <citedRange>150</citedRange></bibl>
+               <bibl n="2.1"><!--Сборник--><ptr target="bib:b0132"/>, 77–79, № <citedRange>70</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="divine" key="iesous"><name nymRef="Ἰησοῦς"><expan><abbr>Ἰ</abbr><ex>ησοῦ</ex><abbr>ς</abbr></expan></name> 
+                  <name nymRef="Χριστός"><expan><abbr>Χ</abbr><ex>ριστὸ</ex><abbr>ς</abbr></expan></name></persName> <w lemma="νικάω">νικᾷ</w>. 
+               <w lemma="ὁ">Ὁ</w> <w lemma="πάνσεπτος">πάνσεπτος</w> <w lemma="καί">καὶ</w> <w lemma="θεῖος">θεῖος</w> <w lemma="ναός">ναὸς</w> 
+               <w lemma="ὁ">τῶν</w> <w lemma="ἅγιος">ἁγίων</w> <w lemma="ἔνδοξος">ἐνδό<lb n="2" break="no"/>ξων</w>, 
+               <w lemma="πανεύφημος">πανε<unclear>υ</unclear>φήμων</w> <w lemma="καί">καὶ</w> <w lemma="πρωτοκορυφαῖος">πρωτοκορυφαίων</w> 
+               <w lemma="ἀπόστολος">ἀποστόλων</w>
+               <lb n="3"/><persName type="divine" key="stpeter"><name nymRef="Πέτρος"><supplied reason="lost">Πέτρου</supplied></name></persName> 
+               <w lemma="καί"><supplied reason="lost">κ</supplied>αὶ</w> 
+               <persName type="divine" key="stpaul"><name nymRef="Παῦλος">Π<unclear>α</unclear><supplied reason="lost">ύλ</supplied><unclear>ο</unclear><unclear>υ</unclear></name></persName> 
+               <w lemma="κτίζω">ἐκτήσθη<surplus>ν</surplus></w> <w lemma="ἐκ">ἐκ</w> <w lemma="βάθρον">βάθρων</w> <w lemma="πρό">πρὸ</w> 
+               <w lemma="χρόνος">χρόνων</w>
+               <lb n="4"/><w lemma="πολύς">πολλῶν</w> <w lemma="παρά">πα<supplied reason="lost">ρὰ</supplied></w> <w lemma="ὁ">τοῦ</w> <w lemma="ἐν">ἐν</w>
+               <w lemma="ἅγιος">ἁ<unclear>γ</unclear><supplied reason="lost">ίο</supplied><unclear>ι</unclear>ς</w> 
+               <w lemma="πατήρ"><expan><abbr>π</abbr><ex>ατ</ex><abbr>ρ</abbr><ex>ὸ</ex><abbr>ς</abbr></expan></w> <w lemma="ἐγώ">ἡμῶν</w> 
+               <w lemma="καί">καὶ</w> <w lemma="ἀρχιεπίσκοπος">ἀρχιεπισ<lb n="5" break="no"/>κόπου</w> <w lemma="πόλις">πόλεως</w> 
+               <placeName key="theodoro">Θε<supplied reason="lost">ο</supplied>δώρους</placeName> <w lemma="καί"><supplied reason="lost">καὶ</supplied></w> 
+               <w lemma="πᾶς"><unclear>π</unclear>άσης</w> <placeName key="gothia">Γοτθίας</placeName> 
+               <persName type="divine" key="stjohnarchbishop"><name nymRef="Ἰωάννης"><expan><abbr>Ἰω</abbr><ex>άννου</ex></expan></name>
+               <lb n="6"/><w lemma="ὁ">τοῦ</w> <w lemma="ὁμολογητής">ὁμολογητοῦ</w></persName>·
+               <w lemma="ἀνακαινίζω">ἀνεκαινί<supplied reason="lost">σθ</supplied>η</w> <w lemma="δέ">δὲ</w> 
+               <w lemma="νῦν">νῦν</w> <w lemma="καθώς">κα<lb n="7" break="no"/>θὼς</w> <w lemma="ὁράω">ὁρᾶται</w> <w lemma="παρά">παρὰ</w> 
+               <w lemma="ὁ">τοῦ</w> <w lemma="πανίερος">π<supplied reason="lost">α</supplied>νιε<supplied reason="lost">ρωτάτ</supplied><unclear>ο</unclear>υ</w> 
+               <w lemma="μητροπολίτης"><expan><abbr>μ</abbr><ex>ητ</ex><abbr>ροπο<lb n="8" break="no"/>λίτου</abbr></expan></w> <w lemma="πόλις">πόλεως</w> 
+               <placeName key="theodoro">Θεοδώρου<supplied reason="lost">ς</supplied></placeName> <w lemma="καί">κ<supplied reason="lost">αὶ</supplied></w> 
+               <w lemma="πᾶς">πάση<supplied reason="lost">ς</supplied></w> 
+               <placeName key="gothia"><supplied reason="lost">Γοτ</supplied><unclear>θ</unclear>ί<lb n="9" break="no"/>ας</placeName> <w lemma="κύριος">κυροῦ</w> 
+               <persName type="attested" ref="#person302"><name nymRef="Δαμιανός">Δαμιανοῦ</name></persName> 
+               <date><w lemma="ἔτος">ἔ<supplied reason="lost">τους</supplied></w> 
+                  <w lemma="ἑξακισχιλιοστός">ἑξακισ<unclear>χ</unclear><unclear>ι</unclear><lb n="10" break="no"/>λιοστοῦ</w> 
+                  <w lemma="ἐννακοσιοστός">ἐννακοσι<supplied reason="lost">ο</supplied>στοῦ</w> 
+                  <w lemma="τριακοστός">τριακοστοῦ</w> <w lemma="ἕκτος">ἕκ<lb n="11" break="no"/>του</w>, <w lemma="ἰνδικτιών">ἰνδικτιῶνος</w> 
+                  <w lemma="ἕκτος">ἕκτης</w>, <w lemma="μήν">μηνὶ</w> 
+                  <rs type="month" ref="sep"><w lemma="Σεπτέμβριος">Σεπτε<lb n="12" break="no"/><unclear>β</unclear>ρίῳ</w></rs> <w lemma="δέκατος">δεκάτῃ</w></date>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="2"><rdg source="bib:b0088 bib:b0082 bib:b0071">ΠΑΗΕΦΜΩΠ</rdg></app>
+               <app loc="3"><lem>[Πέτρου κ]αὶ Π<unclear>α</unclear>[ύλ]<unclear>ου</unclear></lem>
+                  <rdg source="bib:b0088 bib:b0082 bib:b0071"><note>om.</note></rdg></app> 
+               <app loc="5, 8"><rdg source="bib:b0123 bib:b0132">Θεοδωροῦς</rdg></app>
+              <app loc="11-12"><rdg source="bib:b0088 bib:b0082 bib:b0071">ΣΕΠΤΕ.ΒΡΙΩ</rdg>
+                 <rdg source="bib:b0123 bib:b0132">Σεπτε[μβ]ρίῳ</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Иисус Христос побеждает. Всечестной и божественный храм святых славных, всехвальных и первоверховных 
+               апостолов <supplied reason="lost">Петра</supplied> и Павла был воздвигнут от основания много лет назад иже во 
+               святых отцом нашим и архиепископом города Феодоро и всей Готии Иоанном Исповедником, а ныне обновлен в 
+               настоящем виде преосвященнейшим митрополитoм города Феодорo и всей Готии кир Дамианом в шесть тысяч девятьсот 
+               тридцать шестом году, шестого индикта, десятого сентября.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Jesus Christ is victorious. The all-revered and divine church of the holy, glorious, worthy of every praise and chief apostles <supplied reason="lost">Peter</supplied> 
+               and Paul was erected from the foundations a long time ago by our father, who is with the saints, and archbishop of the city of Theodoro and of all Gotthia, 
+               John the Confessor. And now it has been renovated in its present state by the most sacred metropolitan of the city of Theodoro and of all Gothia, lord 
+               Damianos, in the year six thousand nine hundred thirty sixth, in the sixth indiction, on the tenth of September.
+         </p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Относительно обстоятельств находки см. Караулов 1872.</p>
+                <p> 1. О формуле см. <ref type="introduction">IV.3.C.e</ref>.</p>
+                <p> 1–2. Эпитет храма πάνσεπτος καὶ θεῖος (или в обратном порядке) характерен для поздневизантийских строительных надписей (25 случаев, согласно 
+                   PHI7 Database), однако нигде он не сочетается с глаголом ἐκτίσθη. Редкий эпитет апостолов πρωτοκορυφαῖος характерен именно для 
+                   поздневизантийского времени и впервые зафиксирован в Miklosich, Mueller 1871, 107 (1274 г.).  </p>
+                <p> 1–6. Установка надписи связана с перестройкой Партенитской базилики, посвященной, как явствует из текста, свв. апп. Петру и Павлу. 
+                   Вероятно, базилика являлась кафоликоном описанного в <ref type="inscription">V 243</ref><!--byz229--> (906 г.) «монастыря святых апостолов» (не исключено и переосвящение храма). 
+                   Надпись приписывает строительство храма свт. Иоанну Готскому (кон. VIII в.), хотя авторы последних раскопок (Адаксина, Кирилко, Мыц 1999) 
+                   однозначно относят ее сооружение к Х в. Впрочем, см. критику этих выводов в Завадская 2006. Кроме того, в Житии Иоанна Готского прямо 
+                   сказано о строительстве им монастыря, но вряд ли тот был построен без храма — если партенитский храм все же относится к Х в., то значит, 
+                   монастырь к этому времени сменил свое местоположение. В любом случае, для митрополита Дамиана была важна апелляция к имени свт. 
+                   «Иоанна Исповедника», который был его самым знаменитым предшественником на Готской кафедре. Характерно, что в надписи не указан возраст 
+                   базилики («много лет назад»). Интересно, что вопреки «Житию Иоанна Готского» (BHG 891), главному источнику сведений о святом, в надписи 
+                   он назван не епископом, а архиепископом (при анахронистическом перенесении на него титулатуры Дамиана): вероятно, за этим кроется воспоминание о превращении Готии из архиепископии в митрополию в XIII в. 
+                   (см. комм. к <ref type="inscription">V 239</ref><!--byz225-->), где-то за полтора века до составления надписи.  </p>
+                <p> 6–9. По-видимому, Партенитский храм, в 906 г. связанный с монастырем, в 1427 г. находился в распоряжении митрополита Дамиана. Из других 
+                   источников он неизвестен (см. PLP, № 5071, где он неточно назван митрополитом Феодоруполя); вероятно, он упоминается в генуэзских документах 1442 
+                   и 1428–1429 гг. как «епископ Феодоро» (Vassiliev 1936, 278). С этой принадлежностью связан, по-видимому, и камень с монограммой митрополита 
+                   Дамиана (<ref type="inscription">V 244</ref><!--byz230-->). Глагол ἀνακαινίζω в данном случае означает, вероятней всего, новое освящение храма 
+                   после ремонта (см. комм. к <ref type="inscription">V 176</ref><!--byz169-->). Формулу καθὼς ὁρᾶται ср. с ὃ νῦν ὁρᾶται в <ref type="inscription">V 180</ref><!--byz214--> того же года — обе уникальны в византийской эпиграфике. 
+                   Ударение в названии Феодоро стоит на камне.  </p>
+            <p> 9–12. Полное или частичное написание даты словами известно и в поздней феодоритской эпиграфике (ср. <ref type="inscription">V 178</ref><!--byz171-->). 10 сентября в 1427 г. приходилось 
+                   на среду. Этого числа в Константинополе выносилось для поклонения Честное Древо (Delehaye 1902, 34), связанное со свв. Константином и Еленой, 
+                   чье имя носил, возможно, кафедральный храм Готской митрополии (см. комм. к <ref type="inscription">V 180</ref><!--byz214-->).</p>
+            <p> В полу базилики надпись, видимо, оказалась после еще одной  перестройки (см. комм. к <ref type="inscription">V 242</ref><!--byz228-->). 
+               Исторический комм. см. в Мыц 2009, 143–147, 
+               а также в комм. к <ref type="inscription">V 239</ref><!--byz225-->. В 1390 г. Партенит был передан от митрополита Готского митрополиту Херсонскому (Miklosich, Mueller 1862, 148–150, 
+                   № 419) — очевидно, что к 1427 г. он вернулся во владения Готской епархии: возможно, это связано с усилением княжества Феодоро — патронов 
+                   Готской митрополии, и их утверждением на Южном берегу Крыма (ср. титул «господарь Феодоро и Поморья» в <ref type="inscription">V 179</ref><!--byz172--> и <ref type="inscription">V 180</ref><!--byz214-->).</p>
+                <p> По своему облику (рельефные буквы, линейки между строк) данный памятник вроде бы является типичным представителем феодоритской эпиграфики 
+                   XV в. Следует, однако, отметить ее более скромное оформление (отсутствие рельефов), чем в близких ей по времени <ref type="inscription">V 179</ref><!--byz172--> и <ref type="inscription">V 180</ref><!--byz214--> (1425–1427 г.), 
+                   а также другой шрифт: буквы не вытянутые и менее маньеризованные. В связи с этим встает вопрос о происхождении резчика надписи: он вполне 
+                   мог быть и не феодоритского происхождения, хотя пользовался феодоритским формуляром (см. выше). С этим связан вопрос и о постоянном месте 
+                   пребывания митрополита Дамиана: за четверть века до этого (в 1399 г.) Готским митрополитом был Иоанн Оловол (Vassiliev 1936, 278), который, 
+                   по всей видимости, жил при этом в Константинополе (см. PLP, № 21044).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>On the circumstances of find, see Karaulov 1872.</p>
+            <p> 1. On the formula, see Introduction <ref type="introduction">IV.3.C.e</ref>.</p>
+            <p> 1–2. The epithet describing the church as πάνσεπτος καὶ θεῖος (or in reverse order) is typical of Late Byzantine building inscriptions
+               (25 cases, according to PHI7 Database), however it is nowhere combined with the verb ἐκτίσθη. A rare epithet of the apostles - 
+               πρωτοκορυφαῖος - is characteristic of the Late Byzantine period and is first recorded in Miklosich, Mueller 1871, 107 (1274 C.E.).  </p>
+            <p> 1–6. The inscription was set up in connection with the restoration of a basilica at Partenit, dedicated as is clear from the text
+               to the saint apostles Peter and Paul. The basilica was probably the katholikon of the "monastery of saint apostles" described in 
+               <ref type="inscription">V 243</ref><!--byz229--> (906 C.E.), although reconsecration is not to be excluded. The inscription attributes the construction of the church to St. John of Gothia (late VIIIth century), while the archaeologists
+               in charge of the latest excavations (Adaksina, Kirilko, Myts 1999) unambiguously date the construction to the Xth century, although Zavadskaya (2006)
+               critiques their conclusions. In addition, the Vita of John of Gothia mentions the construction of a monastery, and it is unlikely that it
+               would have been built without a church. If the church at Partenit is indeed as late as the Xth century, it would mean that the monastery 
+               had changed its location by then. In any case, what was important for metropolitan Damianos was an association with 
+               St. John the Confessor, who was his most famous predecessor among hierarchs of Gotthia. It is of note that the exact age of the basilica is not stated ("long time ago").
+               Also of note is that in contrast to Vita of St. John of Gothia (BHG 891), the main source on information about the saint, he is not called
+               a bishop, but archbishop (an anachronistic transfer of Damianos' titulature upon the saint): what stands behind this is probably
+               a recollection of the change in Gothia's status from an archbishopric to a metropolis in the XIIIth century 
+               (see commentary <ref type="inscription">V 239</ref><!--byz225-->), about a century and a half prior to the setting up of our inscription.  </p>
+            <p> 6–9. The church at Partenit, which had apparently been part of a monastery in 906, by 1427 has come under the supervision of 
+               metropolitan Damianos. Other sources are unaware of this ecclesiastical authority (see PLP 5071, where he is imprecisely titled
+               the metropolitan of Theodoropolis); he might be referred to in Genoese documents of 1442 and 1428–1429 as the "bishop of Theodoro" 
+               (Vassiliev 1936, 278).  The same attribution probably holds for the stone with a monogram of metropolitan Damianos 
+               (<ref type="inscription">V 244</ref><!--byz230-->). The verb ἀνακαινίζω in this case most likely carries the sense of reconsecration of the church
+               after a renovation (see commentary to <ref type="inscription">V 176</ref><!--byz169-->). The formula καθὼς ὁρᾶται is comparable with
+               ὃ νῦν ὁρᾶται in <ref type="inscription">V 180</ref><!--byz214--> of the same year - both are unique in Byzantine epigraphy.
+               An accent over the word Theodoro is marked on the stone. </p>
+            <p> 9–12. A full or partial spelling of the date is also known in late Theodorite epigraphy (cf. <ref type="inscription">V 282</ref><!--byz270-->). 
+               September 10th in 1427 fell on a Wednesday. This date in Constantinople was dedicated to the adoration of the Holy Cross (Delehaye 1902, 34), 
+               associated with St. Constantine and St. Helen, who were probably the patrons of the cathedral church of the Gotthian metropolis
+               (see commentary to <ref type="inscription">V 180</ref><!--byz214-->).</p>
+            <p> The inscription probably ended up in the floor of the basilica after yet another reconstruction (see commentary to <ref type="inscription">V 242</ref><!--byz228-->). 
+               For historical commentary, see Myts 2009, 143–147, as well as commentary to <ref type="inscription">V 239</ref><!--byz225-->. 
+               In 1390, Partenit had been transferred from the metropolitan of Gothia to the metropolitan of Cherson (Miklosich, Mueller 1862, 148–150, 
+               № 419) — but apparently by 1427 it came back under the authority of the former: it might have had something to do with the
+               rise of Theodoro who were patrons of the Gothian metropolis, with their control over the south coast of Crimea
+               (cf. the title "Ruler of Theodoro and the Coast" in <ref type="inscription">V 179</ref><!--byz172--> and <ref type="inscription">V 180</ref><!--byz214-->).</p>
+            <p> In its design (relief letters; relief guiding lines between lines of text) this monument seems to be a typical representative 
+               of Theodorite epigraphy of the XVth century. It is however less ostentatious (no reliefs) than some of its near contemporaries such as
+               <ref type="inscription">V 179</ref><!--byz172--> and <ref type="inscription">V 180</ref><!--byz214--> (1425–1427 C.E.), and uses a different
+               script: letters are not elongated and less ornate. The origin of the letter-cutter thus poses a question: he might well have been a non-Theodorite,
+               even though he employed Theodorite formulae (see above). In this regard, we should also ask about the permanent place of residence of metropolitan  
+               Damianos: a quarter century earlier (in 1399), the metropolitan of Gothia was Ioannes Holobolos (Vassiliev 1936, 278), who nevertheless resided at
+               Constantinople (see PLP 21044).</p>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

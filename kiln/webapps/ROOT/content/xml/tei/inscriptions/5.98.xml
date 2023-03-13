@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Календарная надпись</title><title xml:lang="en">Calendar inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.98</idno><idno type="PE">PE5000098</idno>
+            <idno type="AYV2012-number">byz098</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><region>Crimea</region><altIdentifier><idno/></altIdentifier></msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc13">
+                     <seg xml:lang="ru">Календарная надпись.</seg>
+                     <seg xml:lang="en">Calendar inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon2">Плитка.</objectType>
+                           <objectType xml:lang="en">Small panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Мрамор.</material>
+                           <material xml:lang="en">Marble.</material>
+                           <p xml:lang="ru">Разбита на части, сохранилось 2 фрагмента, обломанных со всех сторон, кроме нижней во фр. 2 (?).</p>
+                           <p xml:lang="en">Broken into pieces, two fragments survive. Fragment 1 is broken on all sides, Fragment 2 (?) preserves the bottom.</p>
+                           <dimensions>
+                              <height>12,5</height>
+                              <width>11,5</width>
+                              <depth>3,5</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1" n="2">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы апицированы. Альфа с наклонной перекладиной, 
+                           бета с нижним штрихом, дельта с удлиненной вверх правой гастой. Лигатура тау-омикрон, знак сокращения.</seg>
+                        <seg xml:lang="en">Lapidary style, letters with serifs. Alpha with slanting crossbar, beta with bottom underline, delta with projecting right diagonal.
+                        Ligature tau-omicron, abbreviation sign.</seg>
+                        <height unit="cm">1,2–1,8.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0975" notAfter="0976" cert="low" evidence="палеография указание_надписи">
+                        <seg xml:lang="ru">X - нач. XI в.</seg>
+                        <seg xml:lang="en">Xth - early XIth century C.E.</seg>
+                     </origDate>
+                  </origin>
+               </history>
+               <msPart n="1">
+                  <msIdentifier><country/>
+                     <altIdentifier xml:lang="ru" n="1">
+                        <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                        <idno>3347</idno>
+                     </altIdentifier>
+                     <altIdentifier xml:lang="en" n="1">
+                        <repository>National Preserve of Tauric Chersonesos</repository>
+                        <idno>3347</idno>
+                     </altIdentifier>
+                  </msIdentifier>
+                  <history>
+                        <provenance type="observed" subtype="autopsy" n="1">
+                           <seg xml:lang="ru">Май 1999, август 2001, сентябрь 2002, сентябрь 2003, сентябрь 2004, сентябрь 2005, сентябрь 2006, сентябрь 2007.</seg>
+                           <seg xml:lang="en">May 1999, August 2001, September 2002, September 2003, September 2004, September 2005, September 2006, September 2007.</seg>
+                        </provenance>
+                     <provenance type="found" n="1">
+                        <seg xml:lang="ru">
+                           <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                           <rs type="circumstances">До 1925 г.</rs>
+                           <rs type="context">Неизвестен.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                           <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                           <rs type="circumstances">Before 1925.</rs>
+                           <rs type="context">Unknown.</rs>
+                        </seg>
+                     </provenance>
+                     <provenance type="observed" n="1">
+                        <seg xml:lang="ru">Севастополь, Крым.</seg>
+                        <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                     </provenance>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                     <altIdentifier xml:lang="ru" n="2">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en" n="2">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+                  </msIdentifier>
+                  <history>
+                     <provenance type="observed" subtype="autopsy" n="2">
+                        <seg xml:lang="ru">Non vidi.</seg>
+                        <seg xml:lang="en">Non vidi.</seg>
+                     </provenance>
+                     <provenance type="found" n="2">
+                        <seg xml:lang="ru">
+                           <placeName type="ancientFindspot">Севастополь (Херсонес).</placeName>
+                           <rs type="circumstances">1970–90-е гг., раскопки И.А. Антоновой.</rs>
+                           <rs type="context">Цитадель (?), помещение I, завал.</rs>
+                        </seg>
+                        <seg xml:lang="en">
+                           <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                           <rs type="circumstances">1970s-1990s, excavations of I. A. Antonova.</rs>
+                           <rs type="context">Citadel (?), room I, rubble fill.</rs>
+                        </seg>
+                     </provenance>
+                     <provenance type="observed" n="2">
+                        <seg xml:lang="ru">Неизвестно.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                     </provenance>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-07-31" who="CB">Created fragments where previously missed</change>
+         <change when="2015-03-31" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AFS">added Greek lemmata</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">small corrections</change>  
+         <change when="2012-05-24" who="AG">several lines translated, corrections</change>  
+          <change when="2012-04-17" who="AL">original date corrected</change>  
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2012-01-03" who="AG">tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.98-1">
+                <desc xml:lang="en">Photograph of fragment 1</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.98-2">
+                <desc xml:lang="en">Photograph of fragment 2</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <!--<graphic url="5.98-3">
+                <desc xml:lang="en">Photograph of fragment 1</desc>
+                <desc xml:lang="ru"></desc>
+            </graphic>-->
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><date><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ὁ">τὸ</w>
+                  <w lemma="ἐπίγειος">ἐ<supplied reason="lost" cert="low">πίγειον</supplied></w>
+                  <gap reason="lost" extent="unknown" unit="character"/>,
+               <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/> <w lemma="ὁ">τὸ</w> ·
+                  <w lemma="ἐπίγειος">ἐ<supplied reason="lost" cert="low">πίγειον</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>,
+               <lb n="3"/><w lemma="ἡμέρα"><supplied reason="lost">ἡμέρ</supplied>ᾳ</w><num value="4">δ</num>· <supplied reason="lost" cert="low"><w lemma="ὁ">τὸ</w> 
+                  <w lemma="ἐπίγειος">ἐπίγειον</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>,
+               <lb n="4"/><gap reason="illegible" extent="3" unit="character"/> <num value="8">η</num>
+                  <gap reason="illegible" extent="3" unit="character"/>
+               <lb n="5"/><gap reason="illegible" extent="7" unit="character"/> <num value="8">η</num> 
+                  <gap reason="illegible" extent="3" unit="character"/> 
+               <lb n="6"/><gap reason="illegible" extent="2" unit="character"/>
+               <lb n="7"/><w lemma="ὁ"><supplied reason="lost">τῇ</supplied></w> 
+                  <w lemma="παρασκευή"><expan><abbr><supplied reason="lost">π</supplied>α</abbr><ex>ρασκευῇ</ex></expan></w> <space quantity="2" unit="character"/>
+                  <w lemma="ὁ">τὸ</w> <w lemma="ἐπίγειος">ἐ<supplied reason="lost" cert="low">πίγειον</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>,
+               <lb n="8"/><w lemma="ἡμέρα"><supplied reason="lost">ἡμέρ</supplied>ᾳ</w> <num value="5">ε</num> <w lemma="ὁ">τὸ</w> 
+                  <w lemma="ἐπίγειος">ἐ<supplied reason="lost" cert="low">πίγειον</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>,
+               <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="Σάββατον"><expan><abbr>σαββ</abbr><ex>άτῳ</ex></expan></w> ·
+                  <w lemma="ὁ">τὸ</w> <w lemma="ἐπίγειος">ἐ<supplied reason="lost" cert="low">πίγειον</supplied></w> 
+                  <gap reason="lost" extent="unknown" unit="character"/>,
+               <lb n="10"/><gap reason="lost" extent="unknown" unit="character"/> <w lemma="ὁ">τὸ</w>
+                  <w lemma="ὑπάγω">ἐπήγε<supplied reason="lost" cert="low">ιον</supplied></w> 
+                  <gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="11"/><w lemma="παρασκευή"><expan><abbr><supplied reason="lost">π</supplied>α</abbr><ex>ρασκευῇ</ex></expan></w>· <space quantity="2" unit="character"/>
+                  <w lemma="ἰνδικτιών"><expan><abbr>ἠν<supplied reason="lost">δ</supplied></abbr><supplied reason="lost"><ex cert="low">ικτιῶνος</ex></supplied></expan></w>
+                  <num atLeast="11"><gap reason="lost" quantity="2" unit="character"/></num></date>.
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>… э<supplied reason="lost">пигей (?)</supplied>
+               … э<supplied reason="lost">пигей (?) в</supplied> среду;
+               <supplied reason="lost">эпигей (?)</supplied> … 8, … 8, … 
+               э<supplied reason="lost">пигей (?) … в</supplied> пятницу; э<supplied reason="lost">пигей (?) … в</supplied> четверг;
+               э<supplied reason="lost">пигей (?)… в</supplied> субботу;
+               э<supplied reason="lost">пигей (?) … в …</supplied>]; эпиге<supplied reason="lost">й … в</supplied> пятницу в ин<supplied reason="lost">дикт</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>... e[pigeion (?)]... e[pigeion (?).., on] Wednesday, [epigeion (?)] ... 8.., ... 8 ... e[pigeion (?)... on] Friday; e[pigeion (?)... on]
+               Thursday; e[pigeion (?).. on] Saturday; e[pigeion (?)... on]; epige[ion... on] Friday in[diction].</p>
+         </div>
+         
+         <div type="commentary" xml:lang="ru">
+            
+            <p> Фотография фр. 2 была передана нам И. А. Антоновой. В фондах Национального заповедника "Херсонес Таврический" ни самой надписи, ни сведений о 
+               ней найти не удалось. На обороте фотографии имеется надпись: «Пом. I, завал», из чего можно заключить, что фрагмент найден вне слоя.</p>
+            <p> Надпись явно имеет календарный характер: упоминаются дни недели (среда, четверг, пятница, суббота). Вероятно, она составляла один комплекс с 
+               <ref type="inscription">V 30</ref><!--byz030-->.</p>
+                <p> 1–4. Данные строки состоят из повторения с разными днями недели слова τὸ ἐπήγε[..., для которого мы нашли единственное подходящее 
+                   восстановление — τὸ ἐπίγειον. Это слово известно как астрономический термин (см. Stephanus, s.v.). Однако собственный смысл надписи должен стать 
+                   предметом изучения специалистов по византийской астрономии.</p>
+                <p>Форма беты с нижним штрихом встречается в Крыму лишь в одной датированной надписи — <ref type="inscription">V 243</ref><!--byz229--> 
+                   (в прорисовке № 48 у Латышева она дана ошибочно) и типична именно для кон. IX – Х в.; с другой стороны в весьма близком 
+                   <ref type="inscription">V 30</ref><!--byz030--> есть палеографические параллели с XI в. (см. комм.).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The photograph of the inscription was kindly passed on to me by I. A. Antonova. At the National Preserve of Tauric Chersonesos, I could neither locate the monument, nor
+            any information about it. A note on the back of the photograph reads "Room I, rubble fill," which suggests that the monument was not found in a stratified deposit.</p>
+            <p>The text appears to be a calendar: days of the week (Wednesday, Thursday, Friday, Saturday) are mentioned. It probably belongs together with
+               <ref type="inscription">V 30</ref><!--byz030-->.</p>
+            <p>1-4. The first four lines consist of the repetition of the word τὸ ἐπήγε[... with different days of the week. For this word, the only suitable restoration is τὸ ἐπίγειον,
+               which is attested as an astronomical term (see Stephanus, s.v.). The specific meaning of this text could be illuminated by a specialist in Byzantine astronomy.
+           </p>
+            <p>Beta with bottom underline is attested in Crimea in only one dated inscription - <ref type="inscription">V 243</ref><!--byz229--> 
+               (in Latyshev's drawing of № 48 it is given incorrectly) and is typical for the end of IXth-Xth centuries; at the same time, in <ref type="inscription">V 30</ref><!--byz030-->, 
+               which is similar to our inscription, we find palaeographic parallels with inscriptions of the XIth century (see comm.).
+            </p>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

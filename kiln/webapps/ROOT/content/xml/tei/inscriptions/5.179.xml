@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Алексея</title><title xml:lang="en">Building inscription of Alexios</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.179</idno><idno type="PE">PE5000179</idno>
+            <idno type="AYV2012-number">byz172</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>А-В–1355</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray  State Historical and Cultural Preserve</repository>
+                     <idno>А-В–1355</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon32">Дверная притолока.</objectType>
+                           <objectType xml:lang="en">Door lintel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение 2 щитов с монограммой и гербом наверху и орнаментальной вставкой справа; справа внизу 
+                              орнаментальная розетка и фигурный угол проема. Расколота на 2 части, обломана слева.</p>
+                           <p xml:lang="en">On the front - relief shields, one with inset relief monogram, and another with inset relief coat of arms and ornamental
+                              design at the bottom right; below - an ornamental square rosette; the corner joint where the underside of the lintel meets the right door post
+                              is decorated with a sculpted ornament.
+                           </p>
+                           <dimensions>
+                              <height>36,5</height>
+                              <width>80,0</width>
+                              <depth>25,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Между щитами.</seg>
+                           <seg xml:lang="en">Between shields.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы рельефные, удлиненные и маньеризованные. 
+                           Альфа и лямбда с верхним штрихом, бета с несомкнутыми угловатыми полукружиями, тета с выступающей перекладиной, мю с Т-и Y-образной серединой.</seg>
+                        <seg xml:lang="en">Lapidary style; elongated, ornate relief letters. Alpha and lambda with capping horizontal bar pointing left, 
+                        beta with vertically spaced angular loops, theta with extended horizontal, mu with T-shaped and Y-shaped middle.</seg>
+                        <height unit="cm">5,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1425" notAfter="1425" evidence="указание_надписи">
+                        <seg xml:lang="ru">1425 г.</seg>
+                        <seg xml:lang="en">1425 C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2005-09">Сентябрь 2005</date>.</seg>
+                     <seg xml:lang="en"><date when="2005-09">September 2005</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">1912 г., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Дворец, башня, насыпь с южной стороны, верхний слой.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1912, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Palace, tower, soil heap on the south side, upper layer.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2012-10-30" who="AL">small corrections in Russian text</change>
+         <change when="2012-09-24" who="AG">keys added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-08-01" who="AG">1 line translated</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-11" who="AG">editor added</change>
+         <change when="2012-06-08" who="AG">several lines translated, tags corrected, small corrections in metadata</change>
+          <change when="2012-04-17" who="AL">translated a line, bibliography tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.179">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+                <bibl n="L1"><!-- Лепер 1913 --><ptr target="bib:b0160"/>, 78, № 6, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>6–7</citedRange></bibl>
+                <bibl n="1.1"><!-- Латышев 1918b --><ptr target="bib:b0157"/>, 10, № <citedRange>7</citedRange></bibl>
+                <bibl n="2"><!-- Бертье-Делагард 1918 --><ptr target="bib:b0029"/>, <citedRange>30–31</citedRange></bibl>
+                <bibl n="3"><!-- Малицкий 1933--><ptr target="bib:b0163"/>, <citedRange>33–35</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><supplied reason="lost" cert="low"><w lemma="κτίζω">Ἐκτίσθη</w> <w lemma="ὁ">ὁ</w>
+                  <w lemma="πύργος">πύργος</w></supplied> <w lemma="οὗτος"><supplied reason="lost">οὗ</supplied>τος</w>
+               <w lemma="μετά">μετὰ</w> <w lemma="ὁ">τοῦ</w> <w lemma="παλάτιον">παλατ<lb n="2" break="no"/><supplied reason="lost">ίου</supplied></w> <supplied reason="lost"><w lemma="καί">καὶ</w>
+                     <w lemma="σύν">σὺν</w> <w lemma="ὁ">τῷ</w></supplied>
+               <w lemma="εὐλογέω"><supplied reason="lost">εὐλ</supplied>ογημένῳ</w> <w lemma="κάστρον">κάστρ<lb n="3" break="no"/><supplied reason="lost">ῳ,</supplied></w><supplied reason="lost">
+                     <w lemma="ὁ">ὃ</w> <w lemma="νῦν">νῦν</w> <w lemma="ὁράω">ὁρᾶται</w>,
+                     <w lemma="ὑπό">ὑπὸ</w></supplied> <w lemma="ἡμέρα">ἡμερῶν</w> <w lemma="κύριος">κυροῦ</w>
+               <persName type="ruler" key="alexios1Th"><name nymRef="Ἀλέξιος">Ἀλ<lb n="4" break="no"/><supplied reason="lost">εξίου</supplied></name></persName>
+               <w lemma="αὐθέντης"><supplied reason="lost">αὐθέντου</supplied></w>
+               <w lemma="πόλις"><supplied reason="lost">πόλεω</supplied>ς</w>
+               <placeName key="theodoro">Θεοδώρους</placeName> <w lemma="καί">καὶ</w>
+               <w lemma="παραθαλάσσιος">πα<lb n="5" break="no"/><supplied reason="lost">ραθαλασσίας,</supplied></w>
+               <supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied>
+               <rs type="month" ref="oct"><w lemma="Ὀκτώβριος"><supplied reason="lost">Ὀκτ</supplied>οβρίῳ</w></rs>,
+               <w lemma="ἔτος">ἔτους</w> <num value="6934">ςϠλδ</num>.
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="1"><rdg source="bib:b0160">οἶκος</rdg><rdg source="bib:b0157"> πύργος (?)</rdg><note> et alii</note></app>
+               <app loc="2"><rdg source="bib:b0029 bib:b0163"><supplied reason="lost">καὶ σὺν</supplied> ἐν</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p><supplied reason="lost">Построена э</supplied>та <supplied reason="lost">башня (?)</supplied> вместе с двор<supplied reason="lost">цом и с 
+               благос</supplied>ловенной крепость<supplied reason="lost">ю, которая ныне видима, во</supplied> дни господина Ал<supplied reason="lost">ексея, 
+                  господаря город</supplied>а Феодоро и по<supplied reason="lost">морья, в окт</supplied>ябре 6934 года.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Th<supplied reason="lost">is tower was built</supplied> together with the palace <supplied reason="lost">and the bles</supplied>sed fortress, 
+               <supplied reason="lost">which can be seen today, in</supplied> the days of Lord Al[exios, Authentes of
+               the city of] Theodoro and the co[astline, in Oct]ober 6934.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Судя по форме камня, надпись находилась над входом здания, вероятно, самого дворца, о 
+                котором идет в ней речь. Возможно, что это был вход именно в башню-донжон дворца, около 
+                которой найден камень.   </p>
+            <p> 1. Формула восстановлена Лёпером по аналогии с <ref type="inscription">V 180</ref><!--byz214-->.</p>
+                <p> 2. Поправка Бертье-Делагарда не учитывает длины пропавшей части строки и противоречит 
+                   формуле надписи <ref type="inscription">V 180</ref><!--byz214-->. Наличие идентичного упоминания о 
+                   строительстве «крепости» в <ref type="inscription">V 180</ref><!--byz214--> 1427 г. (если только эта надпись — мангупская) заставляет предположить, 
+                   что в 1425 г. крепость была отстроена еще не целиком. Эпитет «благословенный» в византийской эпиграфике 
+                    прилагается к епископии (Feissel 1983, № 215) и дому (IGLS 21, 84); ср. эпитеты Пойки 
+                    «почтенная» (<ref type="inscription">V 176</ref><!--byz169-->) и Феодоро «богохранимый» (<ref type="inscription">V 14</ref><!--byz013-->, 
+                   <ref type="inscription">V 170</ref><!--byz163-->, <ref type="inscription">V 175</ref><!--byz168-->).</p>
+                <p> 3. Уточнение «который (или: как) ныне видим» является особенностью феодоритской 
+                   эпиграфики (см. <ref type="inscription">V 180</ref><!--byz214-->, <ref type="inscription">V 241</ref><!--byz226-->).</p>
+                <p> 3–4. Алексей, владетель Феодоро, известен из различных источников, в т.ч. с тем же титулом 
+                   из другой своей строительной надписи 1427 г. (<ref type="inscription">V 180</ref><!--byz214-->; так же, вероятно, дверная притолока) 
+                   Ударение в названии Феодоро реконструируется по <ref type="inscription">V 241</ref><!--byz226-->.</p>
+                <p> 5. Исторический анализ см. в Мыц 2009, 130–134.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The shape of the block suggests that the inscription was placed right over the entrance to the building, probably, of the palace that is mentioned
+            in the text. It is possible that this was the entrance to the keep, in whose vicinity the stone had been found.</p>
+            <p>1. Loeper reconstructed the formula by analogy with <ref type="inscription">V 180</ref><!--byz214--></p>
+            <p>2. In proposing a correction, Bertye-Delagard did not take into account the length of the missing line, and his correction also contradicts the formula - <ref type="inscription">V 180</ref><!--byz214-->.
+               An identical mention of a fortress' construction in <ref type="inscription">V 180</ref><!--byz214-->, dated to 1427 C.E. (if only this inscription 
+               is indeed from Mangup), suggests that in 1425, the fortress had not yet been fully built. The epithet "blessed" is used in Byzantine epigraphy with reference
+               to an episcopate (Feissel 1983, № 215) and a house (IGLS 21, 84); we may compare the epithet of Poika, "honourable" (<ref type="inscription">V 176</ref><!--byz169-->)
+               and Theodoro, "God-protected" (<ref type="inscription">V 14</ref><!--byz013-->, 
+               <ref type="inscription">V 170</ref><!--byz163-->, <ref type="inscription">V 175</ref><!--byz168-->).</p>
+            <p>3. Specification "which (or: as) can be seen today" is a feature of Theodorite epigraphy (see <ref type="inscription">V 180</ref><!--byz214-->, 
+               <ref type="inscription">V 241</ref><!--byz226-->).</p>
+            <p>3-4. Alexios, the authentes of Theodoro, is known from various sources, including another inscription of 1427 where he is addressed with the same title 
+               (<ref type="inscription">V 180</ref><!--byz214-->; this one could also be a lintel block). The accent in the word "Theodoro" is reconstructed from <ref type="inscription">V 241</ref><!--byz226-->.</p>
+            <p>5. For historical analysis, see Myts 2009, 130–134.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

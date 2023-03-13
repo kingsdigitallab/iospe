@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt><title xml:lang="ru">Надпись Кириака, Марии и Константина</title><title xml:lang="en">Inscription of Kyriakos, Mary and Constantine</title><editor xml:id="ayv2012">
+                    <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                    <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+                </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+            <publicationStmt><authority>King's College London</authority>
+                <idno type="filename">5.343</idno><idno type="PE">PE5000343</idno>
+                <idno type="AYV2012-number">byz319</idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country>Russia</country>
+                        <altIdentifier xml:lang="ru">
+                            <!-- Институт хранения -->
+                            <repository>Магнитогорский государственный университет (?)</repository>
+                            <idno/>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Magnitogorsk State University (?)</repository>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <summary corresp="document-search.xml#doc6">
+                        <!-- Характер документа -->
+                            <seg xml:lang="ru">Апотропеическая надпись.</seg>
+                            <seg xml:lang="en">Apotropaic inscription.</seg>
+                    </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <!-- Разновидность -->
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                                    <objectType xml:lang="en">Stele.</objectType>
+                                    <!-- Материал -->
+                                    <material xml:lang="ru" ref="material-search.xml#m9">Ракушечник.</material>
+                                    <material xml:lang="en">Shell-rock.</material>
+                                    <!-- Описание и состояние документа -->
+                                    <p xml:lang="ru">Стела с навершием в виде круга со сложно профилированным валиком по краю и углублением для креста в центре.
+                                        Обломана сверху и справа (?).</p>
+                                    <p xml:lang="en">Stele with the top in the shape of a circle with relief moulded border and inset centre; the latter shows a depression carved
+                                    to receive a cross.</p>
+                                    <!-- Размеры -->
+                                    <dimensions>
+                                        <height precision="low">0,22</height><!-- Высота  -->
+                                        <width precision="low">0,35</width><!-- ширина  -->
+                                        <depth>неизвестна</depth>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <!-- Местоположение -->
+                                <layout ana="f1"><!-- ana= Код фаса -->
+                                    <seg xml:lang="ru">Под рельефом.</seg>
+                                    <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/>Below the relief.</seg>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <!-- Стиль письма -->
+                            <handNote>
+                                <seg xml:lang="ru">Bouletée. Альфа с заостренной петлей и с ломанной перекладиной (строка 4), тета овальная и ромбовидная, 
+                                    каппа с удлиненной вертикалью, лямбда с удлиненной влево вверх диагональю, ипсилон Y-и У-образный. Лигатуры омикрон-ипсилон, 
+                                    сигма-тау, эпислон-сигма минускульная (?); знаки сокращений.</seg>
+                                <seg xml:lang="en">Bouletée. Alpha with pointy loop and broken crossbar (line 4), oval and diamond-shaped theta, kappa with extended
+                                    vertical, lambda with projecting right hasta, Y-shaped and У-shaped upsilon. Ligatures omicron-upslion, sigma-tau, epsilon-upsilon minuscule sigma (?);
+                                abbreviation marks.</seg>
+                                <height unit="cm" precision="low" min="1.5" max="2">1,5–2,0.</height><!-- Высота букв -->
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                <history>
+                    <origin>
+                        <!-- Происхождение текста -->
+                        <origPlace ref="origPlace.xml#p051">
+                            <seg xml:lang="ru">Таманский полуостров.</seg>
+                            <seg xml:lang="en">Taman peninsula.</seg>
+                        </origPlace>
+
+                        <!-- Датировка текста -->
+                        <origDate notBefore="0901" notAfter="1000" precision="low" evidence="палеография"><!-- evidence= Обоснование датировки -->
+                            <seg xml:lang="ru">IX–X вв.</seg>
+                            <seg xml:lang="en">IX-Xth centuries C.E.</seg>
+                        </origDate>
+                    </origin>
+
+
+                            <!-- Автопсия -->
+                            <provenance type="observed" subtype="autopsy">
+                                <seg xml:lang="ru">Non vidi.</seg>
+                                <seg xml:lang="en">Non vidi.</seg>
+                            </provenance>
+
+                            <!-- Место находки -->
+                            <provenance type="found">
+                                <seg xml:lang="ru">
+                                    <placeName type="ancientFindspot" ref="findspot.xml#tamanpeninsula">Таманский полуостров.</placeName>
+                                    <!-- Условия находки -->
+                                    <rs type="circumstances">1980–90 гг., случайная находка.</rs>
+                                    <!-- Контекст находки -->
+                                    <rs type="context">Неизвестен</rs>
+                                </seg>
+                                <seg xml:lang="en">
+                                    <placeName type="ancientFindspot">Taman peninsula.</placeName>
+                                    <rs type="circumstances">1980-90ies, chance find.</rs>
+                                    <rs type="context">Unknown.</rs>
+                                </seg>
+                            </provenance>
+
+                            <!-- Место хранения -->
+                            <provenance type="observed">
+                                <seg xml:lang="ru">Магнитогорск, Челябинская обл., Россия.</seg>
+                                <seg xml:lang="en">Magnitogorsk, Chelyabinsk region, Russia.</seg>
+                            </provenance>
+                </history>
+            </msDesc>
+            </sourceDesc>
+        </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+            <change when="2015-04-17" who="CB">Andrey's corrections</change>
+            <change when="2015-04-09" who="CB">Andrey's corrections</change>
+            <change when="2013-11-07" who="TW">Added image code</change>
+            <change when="2013-03-06" who="NG">translations in metadata, some corrections, lemmata added</change>
+            <change when="2012-11-27" who="AG">translations in metadata, some corrections, lemmata added</change>
+            <change when="2012-10-13" who="AL">added 'revisionDesc' tag; some metadata translated; small corrections in Russian text</change>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.343-1">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="5.343-2">
+                <desc xml:lang="en">Photograph of face 2(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+
+            <div type="bibliography">
+            <!-- Издания -->
+                <p/>
+            </div>
+
+        <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+                <lb n="1"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>
+                <choice><orig><w lemma="σύ"><expan><abbr>ὑ</abbr><ex cert="low">μῶν</ex></expan></w></orig>
+                    <reg cert="low"><w lemma="ἐγώ"><expan><abbr>ἡ</abbr><ex cert="low">μῶν</ex></expan></w></reg></choice>,
+                <w lemma="δεσπότης">δέσπωτα</w> <w lemma="κακός">κακοῦ</w>, <w lemma="φθόνος">πθόνου</w> <w lemma="καί">καὶ</w> <w lemma="ζῆλος">ζήλου</w>
+                <lb n="2"/><w lemma="καί">καὶ</w> <w lemma="πνευματικός">πνευματικοῦ</w> <w lemma="πρᾶγμα">πράγματος</w>· <persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>,
+                <w lemma="δόξα">δόξα</w> <w lemma="σύ">σ<supplied reason="lost">οι</supplied></w>.
+                <lb n="3"/><persName type="divine" key="theos"><roleName><w lemma="κύριος"><expan><abbr>Κ</abbr><ex>ύρι</ex><abbr>ε</abbr></expan></w></roleName></persName>
+                <w lemma="ὦ">ὦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εό</ex><abbr>ς</abbr></expan></w></roleName></persName>,
+                <w lemma="φυλάσσω">φύλαξον</w> <w lemma="ὁ">τοὺς</w> <w lemma="δοῦλος">δούλους</w>
+                <lb n="4"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName>
+                <persName type="attested" ref="#person418"><name nymRef="Κυριακός">Κυριακὸν</name></persName> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                <persName type="attested" ref="#person419"><name nymRef="Μαρία"><expan><abbr>Μα</abbr><ex>ρίαν</ex></expan></name></persName>
+                <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                <persName type="attested" ref="#person550"><name nymRef="Κωνσταντῖνος">Κοσταντίνου</name></persName>
+                <w lemma="ἀπό"><unclear>ἀ</unclear><supplied reason="lost">π</supplied><lb n="5" break="no"/>ὼ</w> <w lemma="φθόνος">πθόνον</w>, <w lemma="ψόφος">ψοφης</w> <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                <w lemma="μαγεία">μα<unclear>γ</unclear><supplied reason="lost">είας</supplied></w>,
+                <lb n="6"/><w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <w lemma="φθόνος">πθόνος</w> <w lemma="οὐ">οὐκ</w>
+                <w lemma="ἅπτω"><unclear>ἅ</unclear><supplied reason="lost">ψῃ</supplied></w>
+                <supplied reason="lost"><w lemma="αὐτός">αὐτούς</w> <note>e.g.</note></supplied>
+            </ab>
+        </div>
+
+            <div type="translation" xml:lang="ru">
+                <!-- Перевод -->
+                <p>Господи наш (?), Властный над злом, завистью, ревностью и действием духов; Господи, слава Т[ебе].
+                    Господи Боже, сохрани рабов Божьих Кириака, Марию и Константина от завистей,
+                    наговоров и колдовства, и зависть [да не коснется их (?)].</p>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p>Our (?) Lord, a Master over evil, envy, jealousy and spiritual matter; O Lord, glory is yours. O Lord God, protect the servants of God,
+                    Kyriakos, Mary, and Constantine from envy, slander, and sorcery; and may envy [not touch them (?)].</p>
+            </div>
+
+            <div type="commentary" xml:lang="ru">
+                <!-- Комментарий -->
+                <p>Фотография камня была любезно предоставлена нам С.Э. Андреевой. Камень представлял собой, по-видимому, стелу с круглым навершием, где внутри
+                    сложно профилированного валика рамки на плоском поле находилось углубление для вставки креста. Специально вставленный крест (возможно,
+                    содержавший реликвии или сам являвшийся святыней) имел, по всей вероятности, апотропеическую функцию. Схоже (изображение креста и текст)
+                    устроены апотропеические надписи Херсонеса (<ref type="inscription">V 42</ref><!--byz041-->, <ref type="inscription">V 109</ref><!--byz042-->).</p>
+                <p>1–2. Надпись восстанавливается местами с трудом. Это касается в т.ч. слов  в начале 1-й строки. Сложный третий знак в ней, представляющий собой
+                    перевернутую мю с вертикальной чертой посередине, является, по-видимому, комбинацией мю, омеги и ню. Не совсем обычно выглядит формула
+                    «Владыка зла и т.д.» — видимо, ее следует понимать в значении «Владыка (или: Властный) над злом и т.д.». Выражение πνευματικοῦ πράγματος следует
+                    понимать как «действие злых духов» (ср. Пс 90, 6) — в византийской эпиграфике оно уникально: прилагательное πνευματικὸς обычно употребляется здесь в
+                    положительном смысле или в смысле принадлежности к духовному званию.</p>
+                <p>4. Лигатура мю-альфа — сокращение имени Марии, встречающегося в таком написании на иконах. 
+                    Относительно имени Кириак см. комм. к <ref type="inscription">V 72</ref><!--byz072-->, Константин — к <ref type="inscription">V 32</ref><!--byz032-->.</p>
+                <p>5. Не совсем ясно также значение слова ψοφης: либо это dat. plur. слова ψόφος «пустой звук» (LSJ, s.v.), либо генетив от неизвестного из других
+                    источников существительного ψοφή с тем же примерно значением. Следует отметить необычную диссимиляцию в слове πθόνος — может, она
+                    объясняется написанием по слуху, а может, сознательным искажением слова с целью избежать дурного глаза. Такому написанию есть одна аналогия в
+                    папирусах — PRyl 2, №144. Именно это слово повторяется во всех трех частях текста в сочетании с другими отгоняемыми несчастьями: ревностью,
+                    воздействием злых духов, наговорами (?) и колдовством.</p>
+                <p>Форма теты и лямбды сближает шрифт надписи с памятниками средневизантийского времени (ср. <ref type="inscription">V 240</ref><!--byz227-->).</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>A photograph of the monument was kindly provided to me by S.E. Andreyeva. The monument was a stele with a circle-shaped top. The circular front bore an inset 
+                    centre surrounded by relief border, with a further cavity in the centre carved to receive a cross. The specially inserted cross (possibly containing
+                    relics, or perhaps a sacred item in itself) must have had an apotropaic function. There are similar (cross accompanied by text) apotropaic monuments from Cherson:
+                    <ref type="inscription">V 42</ref><!--byz041-->, <ref type="inscription">V 109</ref><!--byz042-->).</p>
+                <p>1-2. Reconstructions are difficult in some places, including the words at the beginning of line 1. A complex third sign in that line looks like an upside 
+                    down mu with a vertical line through the centre, and might be a combination of mu, omega and nu. The formula "master of evil etc." is somewhat unusual, and should
+                    probably be understood as "Master over evil etc." The expression πνευματικοῦ πράγματος should be understood as "action of evil spirits" (cf. Ps. 90.6) - in Byzantine
+                    epigraphy, such attestation is unique: the adjective πνευματικὸς is typically used in positive sense or in reference to clerical status.</p>
+                <p>4. Ligature mu-alpha is an abbreviation of the name Mary, which is commonly found in this form on icons. On the name Kyriakos, see commentary to <ref type="inscription">V 72</ref><!--byz072-->, on Konstantinos - see
+                    commentary to <ref type="inscription">V 32</ref><!--byz032-->.</p>
+                <p>5. The meaning of the word ψοφης is also not entirely clear: it is either dat. plur. of the word ψόφος "mere noise" (LSJ, s.v.), or gen. sing. of an otherwise
+                    unknown noun ψοφή with some similar meaning. We should also note an unusual dissimilation of consonants in the word πθόνος, which might be a reflection of 
+                    local pronunciation, or a deliberate misspelling in order to avoid the evil eye. There is one analogy for such spelling, found in a papyrus - PRyl 2, № 144. 
+                It is specifically this word that appears in different parts of the text in combination with various other calamities that need to be repelled: jealousy, action of 
+                evil spirits, malediction (?) and sorcery.</p>
+                <p>The shapes of theta and lambda in this text are similar to some monuments of the Middle Byzantine period (cf. <ref type="inscription">V 240</ref><!--byz227-->).</p>
+            </div>
+        </body>
+    </text>
+</TEI>

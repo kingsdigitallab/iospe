@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Граффити</title><title xml:lang="en">Graffiti</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.218</idno><idno type="PE">PE5000218</idno>
+            <idno type="AYV2012-number">byz206</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon20">Стена.</objectType>
+                           <objectType xml:lang="en">Wall.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Сохранилась целиком.</p>
+                           <p xml:lang="en">Fully preserved.</p>
+                           <dimensions>
+                              <height>30,0</height>
+                              <width>13,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p028">
+                        <seg xml:lang="ru">Шулдан.</seg>
+                        <seg xml:lang="en">Shuldan.</seg>
+                     </origPlace>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                      <seg xml:lang="ru"><date when="2004-09">Сентябрь 2004</date>.</seg>
+                     <seg xml:lang="en"><date when="2004-09">September 2004</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#shuldan">Шулдан.</placeName>
+                        <rs type="circumstances">2002 г., обследования А.Ю. Виноградова.</rs>
+                        <rs type="context">Храм, северная стена, над могилой в стене.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Shuldan.</placeName>
+                        <rs type="circumstances">2002, survey of A.Yu. Vinogradov.</rs>
+                        <rs type="context">Church, northern wall, above the grave in the wall.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                      <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+               <msPart n="1">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="1">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="1">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="1">
+                              <seg xml:lang="ru">На лицевой стороне.</seg>
+                              <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                           </layout>
+                        </layoutDesc> 
+                     </objectDesc>
+                     <handDesc>
+                        <handNote n="1">
+                           <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs>; буквы удлиненные; тау апицированное; 
+                              сокращение, надстрочный знак.</seg>
+                           <seg xml:lang="en">Graffito; letters elongated; tau with serifs; abbreviation; an overline.</seg>
+                           <height unit="cm">0,5–3,5.</height>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="1" notBefore="1301" notAfter="1500" precision="low" evidence="архитектурный_контекст">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV-XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="2">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="2">Памятная надпись.</seg>
+                        <seg xml:lang="en" n="2">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="2">
+                              <seg xml:lang="ru">Под надписью 1.</seg>
+                              <seg xml:lang="en">Below Text 1.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">См. эпиграфическое поле 1.</seg>
+                           <seg xml:lang="en">See field 1.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="2" notBefore="1301" notAfter="1500" precision="low" evidence="архитектурный_контекст">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV-XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+               <msPart n="3">
+                  <msIdentifier>
+                        <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <summary corresp="document-search.xml#doc3 document-search.xml#doc8">
+                        <seg xml:lang="ru" n="3">Инвокативная надпись.</seg>
+                        <seg xml:lang="en" n="3">Commemoration.</seg>
+                     </summary>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <layoutDesc>
+                           <layout ana="f1" n="3">
+                              <seg xml:lang="ru">Под надписью 2.</seg>
+                              <seg xml:lang="en">Below Text 2.</seg>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <handNote>
+                           <seg xml:lang="ru">См. эпиграфическое поле 1.</seg>
+                           <seg xml:lang="en">See field 1.</seg>
+                        </handNote>
+                     </handDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origDate n="3" notBefore="1301" notAfter="1500" precision="low" evidence="архитектурный_контекст">
+                           <seg xml:lang="ru">XIV–XV вв.</seg>
+                           <seg xml:lang="en">XIV-XVth centuries C.E.</seg>
+                        </origDate>
+                     </origin>
+                  </history>
+               </msPart>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-05-28" who="CB">Minor additions to textparts</change>
+         <change when="2015-05-01" who="CB">Textparts</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-09-24" who="AG">key added</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-27" who="AG">several lines translated, some corrections in metadata</change>
+          <change when="2012-06-19" who="AL">inserted object type, material and character; small corrections</change>
+          <change when="2012-06-06" who="AL">Greek text tags checked</change>
+          <change when="2012-04-24" who="AL">inserted editor tag</change>
+          <change when="2012-04-17" who="AL">original date tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.218" n="1">
+                <desc xml:lang="en">Photograph of text 1</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl n="1">
+               <bibl/>
+            </listBibl>
+            <listBibl n="2">
+               <bibl/>
+            </listBibl>
+            <listBibl n="3">
+               <bibl/>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="inscription" n="1">
+               <ab>
+                  <lb n="1"/><w lemma="πρωτοπρεσβύτερος"><expan><abbr>Πρ</abbr><ex>ωτ</ex><abbr>οπρ</abbr><ex>εσβύτερος</ex></expan></w>
+                   <w lemma="ὁ">τοῦ</w> <placeName key="dallos">Δαλ<note>?</note>λ<unclear>ου</unclear></placeName>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="2">
+               <ab>
+                  <lb n="1"/><persName type="attested" ref="#person272"><name nymRef="Σωφρόνιος">Σοφρ<supplied reason="lost">ό</supplied>ν<supplied reason="lost">ι</supplied>ος</name></persName>.
+               </ab>
+            </div>
+            <div type="textpart" subtype="inscription" n="3">
+               <ab>
+                  <lb n="1"/><w lemma="βοηθέω"><expan><abbr>Βωή<choice><corr>θ</corr><sic>Τ</sic></choice></abbr><ex cert="low">ει</ex></expan></w>
+              </ab>
+            </div>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p>Протопресвитер Далла (?).</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Софроний.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Помоги (?).</p>
+            </div>
+         </div>
+         <div type="translation" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>Protopresbyteros of Dallos (?).</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>Sophronios.</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Help (?).</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <div type="textpart" n="1">
+               <p> Данное граффито — самое раннее из трех и выполнено другой рукой, чем два других. Резчик, возможно, повторил вторую лямбду, 
+                  плохо вышедшую на камне, над строкой. Относительно протопресвитера см. комм. к <ref type="inscription">V 201</ref><!--byz189-->. 
+                  Возможно, что Далл — это 
+                  древнее название монастыря Шулдан или местности вокруг него. </p>
+                <p>Монастырь Шулдан датируется по археологическим материалам и литургическому устройству храма обители XIV–XV вв. 
+                   (см. Виноградов, Гайдуков, Желтов 2005, 76).</p>
+            </div>
+            <div type="textpart" n="2">
+               <p> Имя Софроний, возможно, связано с надписью 1; оно встречается также в <ref type="inscription">V 213</ref><!--byz201--> из соседней Чилтер-Мармары. 
+                  Возможно, данная надпись содержит имя погребенного в гробнице под ней (ср. <ref type="inscription">V 174</ref><!--byz167-->).</p>
+            </div>
+            <div type="textpart" n="3">
+               <p> Вероятно, здесь мы имеем дело в недописанной формулой «Господи, помоги».</p>
+                <p>Буквы ΓΡΗΓ в начале строки принадлежат, вероятно, некоему Григорию, чей автограф (XIX в.) виден у северного 
+                   портала "храма с аркадой" в Судаке.</p>
+            </div>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <div type="textpart" n="1">
+               <p>This graffito is the earliest of the three and made by a different hand than the other two. It is possible that the cutter repeated the second
+                  lambda above the line because his first attempt was not very successful. On the term 'presbyteros,' see commentary to <ref type="inscription">V 201</ref><!--byz189-->.
+                  It is possible that Dallos was the old name of the Shuldan Monastery or of the nearby area.</p>
+               <p>The date of the Shuldan Monastery is established on the basis of archaeological finds and the liturgical design of the church - XIV-XVth century
+                  (see Vinogradov, Gaydukov, Zheltov 2005, 76).</p>
+            </div>
+            <div type="textpart" n="2">
+               <p>The name Sophronios is possibly related to Text 1; it is also attested in <ref type="inscription">V 213</ref><!--byz201--> from nearby Chilter-Marmara.
+                  It might be the name of the person buried in tomb below (cf. <ref type="inscription">V 174</ref><!--byz167-->).</p>
+            </div>
+            <div type="textpart" n="3">
+               <p>Here we probably find an unfinished formula "Lord, help."</p>
+               <p>Letters ΓΡΗΓ at the start of the line probably belong to a certain Grigorios whose autograph (XIXth century) can be seen
+                  by the north portal of the "church with arcade" at Sudak.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

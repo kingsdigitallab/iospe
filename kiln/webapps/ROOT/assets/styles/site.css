@@ -1,0 +1,766 @@
+/* fonts */
+
+/* fonts come from http://ucbclassics.dreamhosters.com/djm/greekkeys/NAUdownload.html */
+
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathu405.woff);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathuBold405.woff);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathuItalic405.woff);
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "New Athena";
+  src: url(../fonts/newathuBoldItalic405.woff);
+  font-weight: bold;
+  font-style: italic, oblique;
+}
+
+@font-face {
+  font-family: "BukyVede";
+  src: url(../fonts/BukyVede-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* defaults */
+body {
+  background-color : white;
+  font             : 13px/1.231 arial,helvetica,clean,sans-serif;
+  color            : black;
+}
+
+h1 {
+  font          : bold 1.5em Georgia, Helvetica, sans-serif;
+  color         : #3e4c58;
+  border-bottom : 1px solid #8192A1;
+}
+h2 {
+  font  : bold 1.25em Arial, Helvetica, sans-serif;
+  color : #285072;
+}
+h3 {
+  font  : bold 1.05em Arial, Helvetica, sans-serif;
+  color : #7e8d9a;
+}
+h4 {
+  font  : bold 1em Arial, Helvetica, sans-serif;
+  color : #535a60;
+}
+h5 {
+  font  : bold .85em Arial, Helvetica, sans-serif;
+  color : #333333;
+}
+
+h6 {
+  font  : italic .85em Arial, Helvetica, sans-serif;
+  color: #999999;
+}
+
+.tei-content h1 {}
+
+.tei-content h2 {
+  font: 1.5em Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.tei-content h3 {
+  font: bold 1.4em Arial, Helvetica, sans-serif;
+}
+
+.tei-content h4 {
+  font: bold 1.2em Georgia, Helvetica, sans-serif;
+}
+
+.tei-content h5 {
+  font: 1.2em Georgia, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  color : #666666;
+}
+
+.tei-content h6 {
+  font: 1em Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color : #7e8d9a;
+}
+
+a:link {
+  color : #5a758c;
+}
+a:visited {
+  color : #800080;
+}
+a:hover {
+  background-color : #f1f1ff;;
+  color            : #8b9caa;
+}
+a:active {
+  color : #006666;
+}
+
+a.disabled:link,
+a.disabled:visited,
+a.disabled:hover,
+a.disabled:active {
+  cursor           : default;
+  background-color : transparent;
+  color            : #999999;
+
+  pointer-events   : none;
+}
+
+
+p {color: #333333;}
+
+.muted {
+  color : #999999;
+}
+
+/* grid adjustments */
+
+.row,
+.contain-to-grid .top-bar {
+  max-width     : 100%;
+  margin-bottom : inherit;
+}
+
+/* banner */
+
+#banner {
+  height     : 158px;
+  background : #356a94;
+}
+
+#sea_of_loneliness {
+  height     : 158px;
+  background : url(../images/bs.h3x.png) no-repeat scroll 0 0 transparent;
+}
+
+#sea_of_loneliness_the_second {
+  height : 158px;
+}
+
+
+#logo {
+  display    : block;
+
+  height     : 92px;
+  width      : 486px;
+  margin-top : 66px;
+}
+
+
+#logo img {
+  height : 92px;
+  width  : 486px;
+}
+
+a#logo:active,
+a#logo:hover {
+  background : transparent ;
+}
+
+#griffin {
+  display             : block;
+
+  height              : 143px;
+  margin-top          : -108px;
+
+  background          : url(../images/griffin.png) no-repeat scroll transparent;
+  background-position : right bottom;
+}
+
+@media only screen and (min-width: 1240px) {
+#griffin {
+background-position: left  bottom;
+}
+}
+
+
+#griffin_container {
+  padding-right  : 10px;
+  padding-bottom : 10px;
+  padding-left   : 0;
+
+  background     : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
+}
+
+a#griffin:hover,
+a#griffin:visited,
+a#griffin:active {
+  background-color : transparent;
+}
+
+/* navigation */
+
+.contain-to-grid {
+  background : transparent;
+}
+
+.top-bar,
+.top-bar.expanded .title-area {
+  background : url(../images/nvg.png) repeat-x scroll 0 100% transparent;
+  font-size  : 1.3rem;
+}
+
+.top-bar-section ul,
+.top-bar-section .has-form {
+  background : transparent;
+}
+
+.top-bar.expanded {
+  background : #f4f4f4;
+}
+
+.top-bar > section > ul > li {
+  background : url(../images/ns.li.png) no-repeat scroll 100% 48% transparent
+}
+
+.top-bar-section li a:not(.button) {
+  vertical-align : middle;
+  background     : transparent;
+  line-height    : 31px;
+}
+
+.top-bar-section li a:link,
+.top-bar-section li a:visited,
+.top-bar .toggle-topbar.menu-icon a:link,
+.top-bar .toggle-topbar.menu-icon a:visited {
+  font-weight : 700;
+  color       : #344f5f;
+}
+
+.top-bar-section ul li:hover>a,
+.top-bar-section ul li.active>a,
+.top-bar-section li a:not(.button):hover,
+.top-bar-section li a:not(.button):active,
+.top-bar-section li a:hover,
+.top-bar-section li a:active {
+  background : #e1e1e1;
+  color      : #344f5f;
+}
+
+.top-bar .toggle-topbar a {
+  text-transform : none;
+}
+
+.top-bar .toggle-topbar.menu-icon a:hover,
+.top-bar .toggle-topbar.menu-icon a:active{
+  background : transparent;
+  color      : #344f5f;
+}
+
+.top-bar .toggle-topbar.menu-icon a span {
+  box-shadow         : 0 10px 0 1px #344f5f, 0 16px 0 1px #344f5f, 0 22px 0 1px #344f5f;
+  -webkit-box-shadow : 0 10px 0 1px #344f5f, 0 16px 0 1px #344f5f, 0 22px 0 1px #344f5f;
+}
+
+.top-bar-section .dropdown  {
+  background : #f4f4f4;
+}
+
+.top-bar-section .dropdown li a {
+  font-size   : .7em;
+  font-weight : normal;
+  line-height : 1.35em;
+}
+
+/* this removes the dropdown arrows */
+.top-bar-section .has-dropdown>a  {
+  padding-right : 15px !important;
+}
+
+.top-bar-section .has-dropdown>a:after {
+  content : "";
+  border  : none;
+}
+
+
+.top-bar-section ul li>a {
+  padding-top    : 0;
+  padding-bottom : 0;
+}
+/* language menu */
+
+@media only screen and (min-width: 940px) {
+.top-bar-section .language-choice li.lang a {
+  /*padding-right         : .4rem;
+  padding-left          : .4rem;
+
+  background-color      : #555555;
+  font-family           : 'Times New Roman', serif;
+  font-size             : 1.5rem;
+  font-weight           : normal;
+  color                 : #9f9f9f;
+  border                : none;
+  border-radius         : 5px;
+
+  -webkit-border-radius : 5px;
+  -moz-border-radius    : 5px;*/
+}
+
+.top-bar-section .language-choice li.lang {
+  /*margin-right : 5px;
+  background   : transparent;*/
+}
+
+}
+
+/* menu icon */
+
+.top-bar .toggle-topbar.menu-icon {
+  margin-top : -24px;
+}
+
+.top-bar .toggle-topbar.menu-icon a {
+  font-size   : .7em;
+  font-weight : normal;
+  line-height : 33px;
+}
+
+
+
+
+/* jumpform */
+@media only screen and (min-width: 940px) {
+  .top-bar-section .has-form.jump-form-container {
+    width: 100px;
+  }
+}
+
+.top-bar input,
+.top-bar .button {
+  top              : 3px;
+
+  /*background-color : #e1e1e1;*/
+  background: rgb(240, 240, 240); /* Fall-back for browsers that don't support rgba */
+  background: rgba(240, 240, 240, .5);
+  font-size        : .8rem;
+  color            : #344f5f;
+  /* border           : 1px solid #555555;*/
+  border: none;
+
+}
+
+.top-bar .top-bar-section .has-form.jump-form-container input,
+.top-bar .top-bar-section .has-form.jump-form-container .button {
+  /*background: 555555;
+    background: rgba(240, 240, 240, 0);*/
+  border     : 1px solid #344f5f;
+}
+
+.top-bar input[type='submit'] {
+  background-color : #344f5f;
+
+  color            : #9f9f9f;
+  /* border-right     : 1px solid #555555;*/
+}
+
+.top-bar input:focus {
+  background: rgb(240, 240, 240); /* Fall-back for browsers that don't support rgba */
+  background: rgba(240, 240, 240, .8);
+}
+
+.top-bar input::-webkit-input-placeholder {
+  color : #344f5f;
+}
+
+.top-bar input:-moz-placeholder { /* Firefox 18- */
+  color : #344f5f;
+}
+
+.top-bar input::-moz-placeholder {  /* Firefox 19+ */
+  color : #344f5f;
+}
+
+/*.top-bar input:-ms-input-placeholder {
+  color : #344f5f;
+}
+
+.top-bar input:focus::-webkit-input-placeholder {
+  color : #344f5f;
+}
+
+//Firefox 18-
+.top-bar input:focus:-moz-placeholder {
+  color : #344f5f;
+}
+
+// Firefox 19+
+.top-bar input:focus::-moz-placeholder {
+  color : #344f5f;
+}
+
+.top-bar input:focus:-ms-input-placeholder {
+  color : #344f5f;
+}
+*/
+/* rock on the left */
+
+#rock {
+  min-height          : 690px;
+  margin-top          : -14px;
+
+  background          : url(../images/side_bg.png) no-repeat scroll transparent;
+  background-position : right -65px;
+}
+
+@media only screen and (min-width: 1240px) {
+#rock {
+background-position: left  -65px;
+}
+}
+
+#body-wrapper {
+}
+
+#main-content {
+}
+
+/* inscription  */
+
+.inscription h2.subpart,
+.inscription h2 em {
+  font-weight : normal;
+  font-style: italic;
+  color       : #285072;
+}
+
+.inscription .details {
+  margin-bottom : 1em;
+}
+
+.inscription .details h6 {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: normal;
+  color: #000;
+}
+.inscription .details h6,
+.inscription .details  p {
+  margin-top    : 0;
+  margin-bottom : 0;
+}
+
+.inscription .details p + p {
+  margin-top : 1em;
+}
+
+.row.inscription-data {
+  margin-top : 2em;
+}
+
+.section-container.tabs>section>.title a,
+.section-container.tabs>.section>.title a {
+  padding-top    : 2px;
+  padding-bottom : 2px;
+}
+
+.inscription-data .section-container section p.title {
+  border-top-right-radius         : 5px;
+  border-top-left-radius          : 5px;
+
+  -webkit-border-top-left-radius  : 5px;
+  -webkit-border-top-right-radius : 5px;
+  -moz-border-radius-topleft      : 5px;
+  -moz-border-radius-topright     : 5px;
+}
+
+.inscription-data .section-container section.active p.title,
+.inscription-data .section-container section.active div.content,
+.inscription-data .section-container section.active div.content code {
+  background : #ddd;
+}
+
+.inscription-data .section-container.tabs .content.epidoc_xml {
+  overflow   : auto;
+  max-height : 300px;
+}
+
+/* tei body */
+
+.tei.body ul, .tei.body ol {list-style-type: none}
+.tei.body ul.bulleted {list-style-type: disc; margin-left: 1em;}
+
+/* indices */
+
+dl.indices-person dd ul.inline-list,
+dl.indices-places dd ul.inline-list,
+dl.indices-abbrs dd ul.inline-list {
+  display        : inline-block;
+  vertical-align : top;
+}
+
+.link2inscription {
+}
+
+table.indices tr.index_row th.table_sub_heading {
+  padding-top    : 12px;
+  padding-bottom : 6px;
+
+  font-size      : 1.25em;
+  color          : #285072;
+  text-align     : left;
+}
+
+table.indices tr.index_row th,
+table.indices tr.index_row td {
+  vertical-align : top;
+
+  padding-top    : 4px;
+  padding-bottom : 2px;
+
+  font-size      : 1em;
+}
+
+table.indices tr.index_row th {
+  font-size  : 1em;
+  text-align : left;
+  min-width: 200px;
+}
+
+table.indices tr.index_row th small {
+  vertical-align : baseline;
+
+  font-size      : 1em;
+  font-weight    : normal;
+  color          : #999999;
+}
+
+table.indices tr.index_row td ul.inline-list {
+  margin-bottom : 0;
+}
+
+dl.indices dd {
+  padding-left : 1em;
+}
+
+
+.indices span.person_detail_label {
+  display     : block;
+
+  font-size   : 0.85em;
+  font-weight : bold;
+  color       : #666;
+}
+
+dl.indices.indices-locations  dd {
+  margin-bottom : 0;
+}
+
+li.concordance_item {
+  clear: both;
+}
+
+p.concordance_link {
+  padding-left: 3em;
+  clear: right;
+}
+
+table.concordance td {
+  vertical-align : top;
+
+  padding-top    : 4px;
+  padding-bottom : 2px;
+
+  font-size      : 1em;
+}
+
+table.concordance td.head {
+  padding-right : 3em;
+  font-weight   : bold;
+  border-left   : 1px solid #999;
+  line-height: 1.5em;
+}
+
+table.concordance td ul {
+  margin : 0;
+  line-height: 1.5em;
+}
+
+/* bibliography */
+
+p.reference {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+/* search */
+
+.section-container.accordion {
+  border-top : none;
+}
+
+.section-container.accordion>section>.title {
+  margin-top            : 3px;
+
+  background            : -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+  background            : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background            : -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background            : -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+  background            : -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+  background            : linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+  border                : 1px solid #ccc;
+  border-radius         : 5px;
+
+  -webkit-border-radius : 5px;
+  -moz-border-radius    : 5px;
+  filter                : progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+
+.section-container.accordion>section.active>.title {
+  background                         : #fff;
+  background                         : -moz-linear-gradient(top, #e5e5e5 0%, #ffffff 100%); /* FF3.6+ */
+  background                         : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background                         : -webkit-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background                         : -o-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* Opera 11.10+ */
+  background                         : -ms-linear-gradient(top, #e5e5e5 0%,#ffffff 100%); /* IE10+ */
+  background                         : linear-gradient(to bottom, #e5e5e5 0%,#ffffff 100%); /* W3C */
+  border-bottom                      : none;
+  border-bottom-right-radius         : 0px;
+  border-bottom-left-radius          : 0px;
+
+  -webkit-border-bottom-right-radius : 0px;
+  -moz-border-radius-bottomright     : 0px;
+  -webkit-border-bottom-left-radius  : 0px;
+  -moz-border-radius-bottomleft      : 0px;
+  filter                             : progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.section-container.accordion>section>[data-section-title] a {
+  padding-top    : 0;
+  padding-bottom : 0;
+
+  font-weight    : bold;
+  color          : #7e8d9a;
+  text-transform : uppercase;
+}
+
+
+
+
+/* CSS FOR INSCRIPTIONS */
+
+.latinnum {
+  border-top : thin black solid;
+}
+
+.supraline {
+  border-top : thin black solid;
+}
+
+.previouslyread {
+  text-decoration : underline;
+}
+
+/* language */
+
+/**[lang="la"] {
+  font-family : "GentiumAlt", "Gentium","Palatino Linotype", "Palatino", "Times New Roman", "Times", "Arial Unicode MS", serif;
+}*/
+
+*[lang="grc"] {
+  font-family                                                                                               : "New Athena",
+
+  "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode",
+  "Palatino Linotype", "Titus Cyberbit Basic", "Cardo", "Vusillus Old Face", "Alphabetum", "Galatia SIL",
+  "Code 2000", "GentiumAlt", "Gentium", "Minion Pro", "GeorgiaGreek", "Vusillus Old Face Italic",
+  "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon",
+  "Verdana", "Tahoma";
+  font-size: 1.1em;
+}
+
+*[lang="cu"] {
+  font-family: "BukyVede";
+  font-size: 1.3em;
+}
+
+.default-lang {
+  font-family: arial,helvetica,clean,sans-serif;
+  font-size: 1rem;
+  font-size: 13px;
+  font-style: normal !important;
+}
+
+
+.edition,
+.diplomatic {
+  font-family                                                                                               : "New Athena",
+
+  "Lucida Grande", "Arial Unicode MS","Galilee Unicode Gk", "New Athena Unicode", "Athena Unicode",
+  "Palatino Linotype", "Titus Cyberbit Basic", "Cardo", "Vusillus Old Face", "Alphabetum", "Galatia SIL",
+  "Code 2000", "GentiumAlt", "Gentium", "Minion Pro", "GeorgiaGreek", "Vusillus Old Face Italic",
+  "Everson Mono", "Aristarcoj", "Porson", "Legendum", "Aisa Unicode", "Hindsight Unicode", "Caslon",
+  "Verdana", "Tahoma";
+  font-size: 1.1em;
+}
+
+.textpart {
+  position      : relative;
+
+  margin-top    : 8px;
+  margin-bottom : 8px;
+  margin-left   : 4em;
+  padding-right : 2em;
+
+  line-height   : 1.4;
+
+  /*left        : 6em;*/
+}
+
+.textpartnumber {
+  position      : absolute;
+  padding-right : 0.2em;
+  font-weight   : bold;
+}
+
+.linenumber {
+  position      : absolute;
+
+  margin-left   : -2em;
+  padding-right : 0.2em;
+
+  /*left        : -4em;*/
+}
+
+.linenumberbroken {
+  position        : absolute;
+  left            : -4em;
+
+  padding-right   : 0.2em;
+
+  color           : red ;
+  text-decoration : blink ;
+}
+
+.petraeligature {
+  text-decoration : underline;
+}
+
+.underline {
+  text-decoration : underline;
+}
+
+.italic {
+  font-style : italic;
+}
+
+
+

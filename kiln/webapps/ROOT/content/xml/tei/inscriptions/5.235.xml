@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Марии</title><title xml:lang="en">Epitaph of Mary</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.235</idno><idno type="PE">PE5000235</idno>
+            <idno type="AYV2012-number">byz222</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon27">Гробообразный памятник.</objectType>
+                           <objectType xml:lang="en">Casket-shaped tombstone.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Неизвестно.</p>
+                           <p xml:lang="en">Unknown.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В правой части лицевой стороны.</seg>
+                           <seg xml:lang="en">Right half of the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы минускульные.</seg>
+                        <seg xml:lang="en">Lapidary; minuscule letters.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p033">
+                        <seg xml:lang="ru">Ласпи.</seg>
+                        <seg xml:lang="en">Laspi.</seg>
+                     </origPlace>
+                     <origDate notBefore="1201" notAfter="1800" precision="low" evidence="тип_надгробия шрифт">
+                        <seg xml:lang="ru">XIII–XVIII вв.</seg>
+                        <seg xml:lang="en">XIII–XVIIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#laspi">Ласпи.</placeName>
+                        <rs type="circumstances">1833 г., обследования Ф. Дюбуа де Монпере.</rs>
+                        <rs type="context">Приморское поселение (территория совр. пионерского лагеря «Ласпи»), некрополь.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Laspi.</placeName>
+                        <rs type="circumstances">1833, survey of F. Dubois de Montpéreux.</rs>
+                        <rs type="context">Littoral settlement (territory of modern pioneer camp "Laspi"), necropolis.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-17" who="CB">Andrey's corrections</change>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-05" who="AG">several lines translated, tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.235">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья Мария, дочь …</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: <supplied reason="lost">a servant</supplied> of God, <supplied reason="lost">Ma</supplied>rea, daughter of...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись и сведения о ее археологическом контексте любезно указаны нам А.В. Ивановым (см. также: Иванов 2004, 62)). Единственным источником 
+               сведений о надписи является рисунок Ф. Дубуа де Монперё (Dubois de Montpéreux 1843, atl. sér., IV, pl. 27, fig. 84; Dubois de Montpereux 1846, 238). 
+               Кладбище, откуда она происходит, относится по археологическим находкам к XII–XV вв. (Махнева 1968, 53). Не исключено, что надпись может быть и 
+               поствизантийского времени, однако поздневизантийские аналоги такого рода памятникам существуют в Горном Крыму (<ref type="inscription">V 126</ref><!--byz121-->, 
+               <ref type="inscription">V 131</ref><!--byz126-->).</p>
+            <p> 1. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.  </p>
+            <p> 2–3. Имя Мария встречается также в <ref type="inscription">V 62</ref><!--byz062-->, <ref type="inscription">V 209</ref><!--byz197-->, 
+               <ref type="inscription">V 227</ref><!--byz215-->, <ref type="inscription">V 343</ref><!--byz319-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p> We owe the knowledge of this inscription and of its archaeological context to A.V. Ivanov (see also Ivanov 2004, 62). The only source of 
+               information on the inscription is a drawing of F. Dubois de Montpéreux (1843, atl. sér., IV, pl. 27, fig. 84; Dubois de Montpereux 1846, 238).
+               The cemetery, from which it comes, is dated on the basis of archaeological finds to the XII-XVth centuries (Makhnyova 1968, 53).
+               There remains a possibility that the inscription is post-Byzantine, but Late Byzantine parallels for the monuments of this type are 
+               known in Mountainous Crimea (<ref type="inscription">V 126</ref><!--byz121-->, <ref type="inscription">V 131</ref><!--byz126-->).</p>
+            <p> 1. On the formula, see Introduction <ref type="introduction">IV.3.F.e</ref>.  </p>
+            <p> 2–3. The name Mary is also attested in <ref type="inscription">V 62</ref><!--byz062-->, <ref type="inscription">V 209</ref><!--byz197-->, 
+               <ref type="inscription">V 227</ref><!--byz215-->, <ref type="inscription">V 343</ref><!--byz319-->.</p>
+            <p/>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκημήθη</w> <supplied reason="lost"><w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w></supplied>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+               <persName type="attested" ref="#person293"><name nymRef="Μαρία"><supplied reason="lost">Μα</supplied><lb n="3" break="no"/>ρήα</name></persName> <w lemma="ὁ">τοῦ</w> <gap reason="lost" extent="unknown" unit="character"/>. 
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Космы</title><title xml:lang="en">Epitaph of Cosmas</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.70</idno><idno type="PE">PE5000070</idno>
+            <idno type="AYV2012-number">byz070</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>104/36961</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>104/36961</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Желтоватый известняк.</material>
+                           <material xml:lang="en">Yellowish limestone.</material>
+                           <p xml:lang="ru">Плита обломана сверху и снизу. Лицевая сторона заглажена. </p>
+                           <p xml:lang="en">The panel is missing its top and bottom. The front is planed.</p>
+                           <dimensions>
+                              <height>16,5</height>
+                              <width>27,0</width>
+                              <depth>9,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы неровные, угловатые. Альфа с петлей.</seg>
+                        <seg xml:lang="en">Lapidary; uneven, angular letters. Looped alpha.</seg>
+                        <height unit="cm">1,9–3,4.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1300" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X–XIII вв.</seg>
+                        <seg xml:lang="en">X–XIIIth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1978 г., раскопки А.И. Романчук.</rs>
+                        <rs type="context">Квартал II, помещение 2, слой 2.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1978, excavations of A.I. Romanchuk.</rs>
+                        <rs type="context">Residential Block II, enclosure 2, layer 2.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-01-15" who="AL">inserted English names in commentary</change>
+         <change when="2012-08-21" who="AFS">Greek lemmata added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-12" who="AG">small correction</change>
+         <change when="2012-05-21" who="AG">several lines translated</change>
+          <change when="2012-04-30" who="AFS">updated bibliography</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-04-16" who="AG">apparatus tagged</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-10" who="AG">updating, tags corrected in the Greek text</change>
+         <change when="2011-12-06" who="AG"> tags in the Greek text added, minor corrections</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.70">
+                <desc xml:lang="en">Photograph of face (from ??)</desc>
+                <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Соломоник 1986--><ptr target="bib:b0391"/>, 219, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>14</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+            <listApp>
+               <app loc="1"><rdg source="bib:b0391">ὁ [δοῦ]λ(ος)</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почил раб Божий Косма.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>A servant of God, Cosmas, fell asleep.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1–2. Относительно формулы см. <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p> 2. Относительно имени см. комм. к <ref type="inscription">V 237</ref><!--byz231-->. Имя покойного в генетиве вместо номинатива известно в Херсоне по
+               <ref type="inscription">V 66</ref><!--byz066-->. </p>
+                <p> Формула и форма альфы с петлей указывают на дату после IX в., однако грубый характер шрифта не позволяет ее уточнить.</p>
+                <p>По мнению Романчук (в Соломоник 1986), надгробие Космы, видимо, попало в квартал II еще в древности из соседнего квартала I, где около 
+                   храма Е (XII–XIV вв.) находилось кладбище, застроенное в сер. XIII в. жилой усадьбой.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1-2. On the formula, see <ref type="introduction">IV.3.F.e</ref>.</p>
+             <p>2. On the name, see commentary to <ref type="inscription">V 237</ref><!--byz231-->. The name of the deceased in the genitive instead of nominative is known
+                in Cherson from  <ref type="inscription">V 66</ref><!--byz066-->. </p>
+             <p>Both the formula and the shape of alpha with a loop point to a date after IXth century, but the generally crude character of the scrip does not allow us 
+             to affirm that.</p>
+             <p>It was Romanchuk's opinion (see Solomonik 1986) that the tombstone of Kosmas had been moved from the residential Block II to the neighbouring Block I already in 
+                antiquity, since there was a cemetery there, near Church E (XII–XIVth century), taken over, in the middle of the XIIIth century, by a private estate.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκυμήθη</w> <w lemma="ὁ"><supplied reason="lost">ὁ</supplied></w> <w lemma="δοῦλος"><expan><abbr><unclear>δ</unclear><supplied reason="lost">οῦ</supplied>λ</abbr><ex>ος</ex></expan></w>
+               <lb n="2"/><w lemma="ὁ"><expan><abbr>τ</abbr><ex>ο</ex><abbr>ῦ</abbr></expan></w> <persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>Θ</abbr><ex>ε</ex><abbr>οῦ</abbr></expan></w></roleName></persName> <persName type="attested" ref="#person73"><name nymRef="Κοσμᾶς">Κοσμᾶ</name></persName>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

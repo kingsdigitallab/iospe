@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надпись Афанасия (?)</title><title xml:lang="en">Inscription of Athanasios (?)</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.259</idno><idno type="PE">PE5000259</idno>
+            <idno type="AYV2012-number">byz246</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Музей "Судакская крепость"</repository>
+                     <idno>СК–86/№ 246</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Museum "Sudak Fortress"</repository>
+                     <idno>СК–86/№ 246</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>
+                     <seg xml:lang="ru">Неизвестен.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru">Неопределим.</objectType>
+                           <objectType xml:lang="en">Indeterminate.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломана со всех сторон, включая заднюю.</p>
+                           <p xml:lang="en">Broken on all sides, including the back.</p>
+                           <dimensions>
+                              <height>6,0</height>
+                              <width>5,0</width>
+                              <depth>5,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>, буквы слегка наклонные. Альфа с петлей, мю широкое.</seg>
+                        <seg xml:lang="en">Lapidary, letters lean slightly. Alpha with a loop, wide mu.</seg>
+                        <height unit="cm">1,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p039">
+                        <seg xml:lang="ru">Сугдея.</seg>
+                        <seg xml:lang="en">Sougdaia.</seg>
+                     </origPlace>
+                     <origDate notBefore="0901" notAfter="1500" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">X–XV вв.</seg>
+                        <seg xml:lang="en">X–XVth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sudak">Судак.</placeName>
+                        <rs type="circumstances">1986 г., раскопки И.А. Баранова</rs>
+                        <rs type="context">Куртина XIV, склеп № 1.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sudak.</placeName>
+                        <rs type="circumstances">1986, excavations of I.A. Baranov,</rs>
+                        <rs type="context">Curtain wall XIV, Burial vault 1.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Судак, Крым.</seg>
+                     <seg xml:lang="en">Sudak, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-11-07" who="TW">Added image code</change>
+         <change when="2012-08-22" who="AG">translation in 'context' corrected</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-09" who="AG">tags in the text corrected</change>
+         <change when="2012-05-08" who="AG">several lines translated, corrections</change>
+          <change when="2012-03-27" who="AL">original date tagged, bibliography tagged, text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.259">
+                <desc xml:lang="en">Drawing of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="1"><!-- Виноградов, Джанов, 2004 --><ptr target="bib:b0052"/>,  420–412, № <citedRange>12</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Афанас...</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Athanas...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> По оставшимся буквам трудно восстановить содержание надписи. Следует лишь отметить, что буквы первой строки, скорее всего, 
+               принадлежат имени 
+               Афанасий, а не слову типа ἀθάνατος “бессмертный”. </p>
+                <p>Надпись обнаружена при расчистке засыпи склепа № 1 VIII–IX вв. Вполне возможно, что обломок камня с граффито попал в склеп во время 
+                   строительства постройки XIV в., в процессе которого был проломан коробовый свод склепа.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Remaining letters are not sufficient for reconstructing the content of the inscription. We can only suggest that the initial letters of 
+            line 1 most likely belong to a name and not to some such word as ἀθάνατος "immortal." </p>
+            <p>The monument was found during the clearing of the fill of Vault tomb 1, dated to the VIII-IXth centuries. It is possible that the stone fragment
+            with graffito fell in during the construction works in the XIVth century when the barrel vault of the tomb was broken.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><persName type="attested" ref="#person318"><name nymRef="Ἀθανάσιος"><seg part="I">Ἀθανα<supplied reason="lost">σι</supplied></seg></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="2"/><orig>ΣΑΝΔΕΜ</orig><gap reason="illegible" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Демонстративная надпись</title><title xml:lang="en">Demonstrative inscription</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.36</idno><idno type="PE">PE5000036</idno>
+            <idno type="AYV2012-number">byz035</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country>Russia</country>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Государственный музей истории религии</repository>
+                     <idno>3493</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>The State Museum of the History of Religion</repository>
+                     <idno>3493</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc4">
+                     <seg xml:lang="ru">Демонстративная надпись.</seg>
+                     <seg xml:lang="en">Demonstrative.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon3">Стела.</objectType>
+                           <objectType xml:lang="en">Stele.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Инкерманский известняк.</material>
+                           <material xml:lang="en">Inkerman limestone.</material>
+                           <p xml:lang="ru">Круглой формы; на лицевой стороне рельефная рамка и вписанный в нее рельефный крест, покоящиеся на подставке со штырем внизу. 
+                              Отколота правая часть подставки; оббиты края рамки.</p>
+                           <p xml:lang="en">Circular stele resting on a support with a dowel underneath.  On the front is an inset circular panel with relief cross with flaring arms.
+                           The right half of the support is broken off. The edges are chipped.</p>
+                           <dimensions>
+                              <height>29,0</height>
+                              <width>25,0</width>
+                              <depth>11,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">В углах между рукавами креста.</seg>
+                           <seg xml:lang="en">In corners between the arms of the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Сигма и омега с заостренными окружностями, фи с 
+                           удлиненной вертикалью.</seg>
+                        <seg xml:lang="en">Lapidary. Sigma and omega with pointy loops; phi with elongated vertical.</seg>
+                        <height unit="cm">1,7–5,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">IX–X вв.</seg>
+                        <seg xml:lang="en">IX–Xth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-11">Ноябрь 2004</date>.</seg>
+                     <seg xml:lang="en"> <date when="2004-11">November 2004</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1904 г., перекопка сада.</rs>
+                        <rs type="context">Площадь у собора св. Владимира, южная часть.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1904, spudding of a garden.</rs>
+                        <rs type="context">Square by the cathedral of St. Vladimir, southern part.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                     <seg xml:lang="en">Saint Petersburg, Russia.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-01-15" who="AL">inserted toponyms in English commentary</change>
+          <change when="2012-10-01" who="AL">corrected Russian metadata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-11" who="AG">1 line translated</change>
+         <change when="2012-05-14" who="AG">several lines translated, small corrections</change>
+         <change when="2012-04-17" who="AG">editor added, several lines translated</change>
+         <change when="2012-02-22" who="AG">tags in bibliography corrected</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-18" who="AG">updated, 1 line translated, date corrected</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.36">
+            <desc xml:lang="en">Photograph of face (from ??)</desc>
+            <desc xml:lang="ru">Фотография лицевой части</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1908 --><ptr target="bib:b0149"/>,  32–33, № <citedRange>28</citedRange></bibl>
+            </listBibl>
+          </div>
+         <div type="translation" xml:lang="ru">
+            <p>Cвет, жизнь.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Light, life.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Относительно формулы см. <ref type="introduction">IV.3.C.b</ref>. По расположению букв относительно креста к нашему памятнику особенно близка надпись Grégoire 1929, no. 265 
+               (Афродисия Карийская).</p>
+            <p> Ближайшей аналогией данному памятнику по форме является <ref type="inscription">V 45</ref><!--byz045-->. Судя по штырю для крепления снизу, 
+               данная стела служила навершием. 
+               Сказать что-либо точнее о месте ее применения не представляется возможным. Мнение Сорочана о его надгробном характере никак не 
+               аргументировано (Сорочан 2005, 1053).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>For the formula, see <ref type="introduction">IV.3.C.b</ref>. With respect to the position of letters vis-a-vis the cross, a close parallel to our monument is
+               Grégoire 1929, № 265 (Aphrodisiás in Caria).</p>
+             <p>As far as the shape of the monument is concerned, the closest analogy is <ref type="inscription">V 45</ref><!--byz045-->. Judging by the dowel at the bottom, 
+                the stele served as a finial.
+                It is impossible to say anything more concrete about its use. The opinion of Sorochan (2005, 1053) about its funerary character finds no support.
+             </p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="φῶς">Φῶς</w>,
+               <lb n="2"/><w lemma="ζωή">ζωή</w>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

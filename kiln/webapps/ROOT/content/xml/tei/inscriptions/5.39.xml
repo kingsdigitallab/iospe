@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Демонстративная надпись</title><title xml:lang="en">Demonstrative inscription</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.39</idno><idno type="PE">PE5000039</idno>
+            <idno type="AYV2012-number">byz038</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>66/37363</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>66/37363</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc4">
+                     <seg xml:lang="ru">Демонстративная надпись.</seg>
+                     <seg xml:lang="en">Demonstrative.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon8">Квадр.</objectType>
+                           <objectType xml:lang="en">Wall block.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение креста с лучами в углах между рукавов. Обломан сверху (?), отбит правый нижний угол и 
+                              нижнее переднее ребро, выщербины по поверхности.</p>
+                           <p xml:lang="en">On the front is an incised cross with rays between the arms. Broken off at the top (?). The front right
+                           corner and the bottom front edge are also broken off; dents on the front surface.</p>
+                           <dimensions>
+                              <height>30,0</height>
+                              <width>20,0</width>
+                              <depth>15,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Вокруг креста.</seg>
+                           <seg xml:lang="en">Around the cross.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Каппа с удлиненной и изогнутой нижней диагональю, фи с удлиненной вертикалью.</seg>
+                        <seg xml:lang="en">Lapidary. Kappa with elongated curved lower diagonal; phi with elongated vertical.</seg>
+                        <height unit="cm">5,0–8,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон.</seg>
+                        <seg xml:lang="en">Cherson.</seg>
+                     </origPlace>
+                     <origDate notBefore="0868" notAfter="1133" precision="low" evidence="археологический_контекст">
+                        <seg xml:lang="ru">кон. XI – нач. XII вв.</seg>
+                        <seg xml:lang="en">late XI – early XIIth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">2001 г., раскопки Л.В. Седиковой.</rs>
+                        <rs type="context">Южный район, водохранилище, к северу от бассейна, пом. 7.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">2001, excavations of L.V. Sedikova.</rs>
+                        <rs type="context">Southern district, water reservoir, north of the reservoir, room 7.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2012-10-01" who="AL">corrected Russian metadata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-05-14" who="AG">several lines translated, small correction</change>
+         <change when="2012-04-18" who="AG">several lines translated, editor added</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+          <change when="2012-02-20" who="AL">tagged bibliography</change>
+         <change when="2012-01-18" who="AG">1 line translated, updated, tags corrected</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.39">
+            <desc xml:lang="en">Photograph of face (from ??)</desc>
+            <desc xml:lang="ru">Фотография лицевой части (из ??)</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <p/>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Свет.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Light.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> 1. Относительно формулы см. <ref type="introduction">IV.3.C.c</ref>.</p>
+            <p> 2. Что означает 2-я строка, неясно: возможно, что хи под фи как-то связано с традиционной формулой ΦΧΦΠ (см. <ref type="introduction">IV.3.C.a</ref>).</p>
+                <p> Памятник представляет собой замковый камень от арки частного дома кон. XI — нач. XII в., разрушенного в 1 пол. XIII в.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>1. On the formula, see <ref type="introduction">IV.3.C.c</ref>.</p>
+            <p>2. The meaning of the second line is not clear: perhaps chi under phi is connected with the traditional formula  ΦΧΦΠ (see <ref type="introduction">IV.3.C.a</ref>).</p>
+            <p>The monument is a keystone from an arch of a private house, dating to the end of the XIth - beginning of the XIIth century, and 
+            destroyed in the first half of the XIIIth century.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="φῶς"><expan><abbr>Φ</abbr><ex cert="low">ῶ</ex><abbr>ς</abbr></expan></w>.
+               <lb n="2"/><orig><unclear>Χ</unclear>Κ</orig>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

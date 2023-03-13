@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надпись на гербе</title><title xml:lang="en">Inscription on the coat of arms</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.158</idno><idno type="PE">PE5000158</idno>
+            <idno type="AYV2012-number">byz325</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru">Неизвестен.</material>
+                           <material xml:lang="en">Unknown.</material>
+                           <p xml:lang="ru">На лицевой стороне изображение герба Генуи и герба консула (?) (лев, идущий влево, со звездой в правой лапе) и латинская 
+                              надпись внизу. Состояние неизвестно.</p>
+                           <p xml:lang="en">On the front - Genoese coat of arms and consular coat of arms (?) (a lion facing left, with a star in the right claw)
+                           and Latin inscription below. Condition unknown.</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На гербе Генуи, в углах между рукавами креста (?).</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the Genoese coat of arms, in corners between the arms of the cross (?).</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru">Неизвестен.</seg>
+                        <seg xml:lang="en">Unknown.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита <certainty cert="low" locus="value" match=".."/>.</seg>
+                        <seg xml:lang="en">Kalamita <certainty cert="low" locus="value" match=".."/>.</seg>
+                     </origPlace>
+                     <origDate notBefore="1434" notAfter="1434" precision="medium" evidence="исторический_контекст">
+                        <seg xml:lang="ru">ок. 1434 г.</seg>
+                        <seg xml:lang="en">ca. 1434.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#inkerman">Инкерман.</placeName>
+                        <rs type="circumstances">Неизвестны.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">Unknown.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change> 
+         <change when="2013-04-17" who="ΝG">Greek lemmata corrected</change>
+          <change when="2013-02-13" who="AG">repository corrected</change>
+         <change when="2012-09-24" who="AG">key added</change>
+         <change when="2012-09-11" who="AG">several lines translated</change>
+          <change when="2012-09-03" who="AL">checked metadata</change>
+          <change when="2012-08-23" who="AL">checked metadata and bibliography</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+          <change when="2012-05-29" who="AFS">adding metadata</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-05" who="AG">tags tidied, bibliography, apparatus and the Greek text tagged</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="5.158">
+                <desc xml:lang="en">Drawing of coat of arms</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Oderico 1792--><ptr target="bib:b0344"/>, 212. tav. <citedRange>XV</citedRange></bibl>
+               <bibl n="1.1"><!--Сборник --><ptr target="bib:b0132"/>, 46–47, №<citedRange>42</citedRange></bibl>
+               <bibl n="1.2"><!--Латышев 1901--><ptr target="bib:b0138"/>, <citedRange>76</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <div type="textpart" subtype="part">
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="1"/><w lemma="ὁ">Τὰ</w> <w lemma="σημάδιον">σιμά<lb n="2" break="no"/>δια</w>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="1"/><w lemma="ὁ"><choice><corr>τ<corr>οῦ</corr>ς</corr><sic>ΤΙΣ</sic></choice></w>
+                     <placeName type="ethnic" key="genova"><w lemma="Γενουβέζος">Γενου<lb n="2" break="no"/>βέζους</w></placeName>,
+                  </ab>
+               </div>
+               </div>
+            <div type="textpart" subtype="part">
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="3"/><w lemma="ὁ"><choice><corr><corr>τ</corr>ὰ</corr><sic>ΠΑ</sic></choice></w>
+                     <w lemma="εἰς">ὐς</w> <w lemma="ὁ">τὸ</w>
+                     <lb n="4"/><w lemma="κάστρον">κάστρο</w>
+                  </ab>
+               </div>
+               <div type="textpart" subtype="column">
+                  <ab>
+                     <lb n="3"/><placeName key="inkerman">Ἰνκιρμά<supplied reason="lost">ν</supplied><lb n="4" break="no"/>ης</placeName>
+                  </ab>
+               </div>
+               </div>        
+         </div>
+         <div type="apparatus">
+             <listApp>
+                 <app loc="2"><rdg source="bib:b0344">“tolte”</rdg>
+                    <rdg source="bib:b0138">πὰ (i.e. (ἐ)πάνω) <note>Papapadopoulo-Krameus apud </note></rdg></app> 
+                 <app loc="2"><rdg source="bib:b0344">“di Kirma”</rdg></app> 
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Гербы генуэзцев в крепости Инкерман.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>The coats of arms of the Genoese at the Inkirman fortress.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> На свидетельство Одерико впервые обратил внимание Мурзакевич 1837, 61. Учитывая неясное происхождение надписи, можно предположить, что 
+               греческая надпись первоначально находилась под изображением гербов и лишь потом была механически перенесена Одорико или его предшественником 
+               на герб (соображение Д. Фейсселя, высказанное в частной беседе). С другой стороны, подписи по-гречески к западным гербам известны в поздневизантийской 
+               эпиграфике: Feissel, Philippidis-Braat 1985, № 86 (Патры, 1426 г.) и CIG IV 8774 (Эльбасан, 1358–1388), причем последняя с тем же словом σημάδια.  </p>
+                <p> Лев со звездой в лапе генуэзской эпиграфике не был знаком — можно предположить, что на самом деле это был другой предмет, 
+                   например, лилия. Судя по историческому контексту, генуэзская надпись в Инкермане могла появиться только в 1434 г., во время генуэзского захвата 
+                   феодоритской Каламиты флотом Карло Ломеллино.</p>
+            <p>1–2. Аккузатив вместо gen. possesivus см. в <ref type="inscription">V 243</ref><!--byz229-->.</p>
+                <p>3–4. По-видимому, Одерико производил ΠΑΥΣ от παύομαι, откуда перевод “tolte”, т.е. “взятые”. А.И. Пападопуло-Керамевс предложил в Латышев 1901 
+                   возможность, однако не слишком удачную, сохранить чтение оригинала в начале 2-й строки (см. крит. апп.).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Murzakevich (1837, 61) was the first to notice the testimony of Oderico. Considering the uncertain origin of the inscription, we could hypothesize that
+               the Greek text was originally inscribed under the images of the coats of arms and was then mechanically moved by Oderico or his predecessor onto the coat of
+               arms (suggestion of D. Feissel, expressed in personal communication). At the same time, Greek inscriptions on western coats of arms are known in Late Byzantine epigraphy:
+               Feissel, Philippidis-Braat 1985, № 86 (Patras, 1426 C.E.) и CIG IV 8774 (Elbasan, 1358–1388), and in the latter the same word σημάδια is used.</p>
+          
+            <p>Lion with a star is not attested in Genoese epigraphy, so we may hypothesize that originally a different object, for example, a lily was in the lion's claw.
+               In terms of historical probability, a Genoese inscription at Inkerman could appear only in 1434, during the Genoese capture of the Theodorite fortress Kalamita
+               by the fleet of Carlo Lomellino.</p>
+            <p> 1–2. On the use of accusative instead of possessive genitive, see <ref type="inscription">V 243</ref><!--byz229-->.</p>
+            <p>3-4. Apparently, Oderico understood ΠΑΥΣ as a form of παύομαι, whence his translation “tolte,” that is, "taken." A.I. Papadopoulo-Kerameus (see Latyshev 1901) proposed to 
+            preserve the beginning of line 2 as it is recorded in the original (see apparatus criticus), but this is not a very happy solution.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

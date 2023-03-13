@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробие Карамани-</title><title xml:lang="en">Epitaph of Karamani-</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.190</idno><idno type="PE">PE5000190</idno>
+            <idno type="AYV2012-number">byz180</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>3745</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>3745</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Мягкий известняк.</material>
+                           <material xml:lang="en">Soft limestone.</material>
+                           <p xml:lang="ru">На лицевой стороне снизу бортик (высота 1 см). Обломана со всех сторон.</p>
+                           <p xml:lang="en">On the bottom front - a raised border (H. 1cm). Broken off on all sides.</p>
+                           <dimensions>
+                              <height>17,0</height>
+                              <width>15,0</width>
+                              <depth>8,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">Над бортиком.</seg>
+                           <seg xml:lang="en">Above the border.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы вытянутые и маньеризованные. Альфа с заостренной петлей, 
+                           альфа и дельта с верхним штрихом, эпсилон сигма-образный, мю с Т-образной серединой.</seg>
+                        <seg xml:lang="en">Lapidary; elongated ornate letters. Alpha with pointy loop, alpha and delta with capping horizontal bar pointing left, four-bar sigma with parallel top and
+                        bottom bars, mu with T-shaped crossbar.</seg>
+                        <height unit="cm">4.0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1401" notAfter="1500" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">XV в.</seg>
+                        <seg xml:lang="en">XVth century C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"><date when="1999-05">May 1999</date>, <date when="2001-08">August 2001</date>, <date when="2002-09">September 2002</date>, <date when="2003-09">September 2003</date>, <date when="2004-09">September 2004</date>, <date when="2005-09">September 2005</date>, <date when="2006-09">September 2006</date>, <date when="2007-09">September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">1913–1914 гг., раскопки Р.Х. Лепера.</rs>
+                        <rs type="context">Около дворца, яма.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">1913-1914, excavations of R.Ch. Loeper.</rs>
+                        <rs type="context">Near the palace, in a pit.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-08" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-06-14" who="AG">corrected, tags added, several lines translated</change>
+          <change when="2012-06-12" who="AL">greek text tagging corrected, bibliography and original date tagged, apparatus inserted, editor tag inserted</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+          <change when="2012-03-19" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.190">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Латышев 1918b--><ptr target="bib:b0157"/>,  20, № <citedRange>4</citedRange></bibl>
+            </listBibl>
+         </div>
+          <div type="apparatus">
+              <listApp>
+                  <app loc="1-4"><rdg source="bib:b0157">Ἐνθάδε κατάκειται] ὁ δοῦλος</rdg></app>
+                 <app loc="5"> <rdg source="bib:b0157">ΡΑΜΑΝΙ</rdg></app>
+              </listApp>
+          </div>
+         <div type="translation" xml:lang="ru">
+            <p>[Упокоился (или: Почил) иже во блаженной памяти] и раб [Божий] Карамани[…]</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>[Fell asleep in blessed memory] and a servant <supplied reason="lost">of God</supplied>, [K]aramani[...]</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Место находки указано А.Л. Моисеевым со слов надсмотрщика Федорова.  </p>
+            <p> Дополнение «иже во блаженной памяти» известны в Северном Причерноморье при глаголах Κεκοίμηται (<ref type="inscription">V 68</ref><!--byz068-->) и Ἐκοιμήθη (<ref type="inscription">V 67</ref><!--byz067-->). 
+                   Относительно этих формул см.<ref type="introduction"> IV.3.F.c</ref> и <ref type="introduction">IV.3.F.e</ref>.  </p>
+                <p>Имя Карамани… — производное от хорошо известного византийцам тюркского имени Караман (PLP, № 11106–11110). Впрочем, если лакуна 
+                   перед этим именем была больше, то Карамани… могло быть не личным именем, а фамильным или указанием на происхождение почившего из 
+                   города Караман в Малой Азии (ср. <ref type="inscription">V 143</ref><!--byz138-->).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The findspot was pointed out to A.L. Moiseev by foreman Fedorov.</p> 
+            <p>The expression "in blessed memory" is used in the Northern Black Sea region with verbs Κεκοίμηται (<ref type="inscription">V 68</ref><!--byz068-->) and
+               Ἐκοιμήθη (<ref type="inscription">V 67</ref><!--byz067-->). On these formulae, see Introduction <ref type="introduction"> IV.3.F.c</ref> and <ref type="introduction">IV.3.F.e</ref>.</p>
+            <p>The name Karamani... is a derivative of the Turkic name Karaman, which was known to the Byzantines (PLP, № 11106–11110). If the lacuna before this name
+            was larger, then Karamani... might have been not a given name, but a surname, or a toponym indicating the origin of the deceased in the city of Karaman in 
+            Asia Minor (cf. <ref type="inscription">V 143</ref><!--byz138-->).</p>
+         </div> 
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><supplied reason="lost"><app type="alternative"><lem><w lemma="κοιμάω">Κεκοίμηται</w></lem> <rdg><w lemma="κοιμάω">Ἐκοιμήθη</w></rdg></app></supplied>
+               <lb n="2"/><supplied reason="lost"><w lemma="ὁ">ὁ</w> <w lemma="ἐν">ἐν</w> <w lemma="μακάριος">μακαρίᾳ</w></supplied>
+               <lb n="3"/><supplied reason="lost"><w lemma="ὁ">τῇ</w> <w lemma="μνήμη">μνήμῃ</w></supplied>
+               <lb n="4"/><w lemma="καί"><unclear>κ</unclear>ὲ</w> <w lemma="δοῦλος">δ<surplus>ο</surplus>οῦλος</w> <supplied reason="lost"><w lemma="ὁ">τοῦ</w> <persName type="divine" key="theos"><roleName><w lemma="θεός">Θεοῦ</w></roleName></persName></supplied>
+               <lb n="5"/><persName type="attested" ref="#person231"><name nymRef="Καραμάνι—"><supplied reason="lost">Κ</supplied><unclear>αρ</unclear>αμάνι</name></persName><gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

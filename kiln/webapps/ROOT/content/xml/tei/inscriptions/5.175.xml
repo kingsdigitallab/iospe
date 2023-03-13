@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись феодоритов</title><title xml:lang="en">Building inscription of Theodorites</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.175</idno><idno type="PE">PE5000175</idno>
+            <idno type="AYV2012-number">byz168</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Бахчисарайский историко-культурный заповедник</repository>
+                     <idno>AB I–1353</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Bakhchisaray State Historical and Cultural Preserve</repository>
+                     <idno>AB I–1353</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Строки перечеркнуты, поверхность выветрена.</p>
+                           <p xml:lang="en">Lines of text are crossed out; the surface is weathered.</p>
+                           <dimensions>
+                              <height>36,5</height>
+                              <width>66,5</width>
+                              <depth>12,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы не очень ровные. Альфа с наклонной перекладиной и верхним штрихом, 
+                           дельта с удлиненной вверх правой гастой, дзета минускульная, пси удлиненное. Лигатуры.</seg>
+                        <seg xml:lang="en">Lapidary; letters are somewhat uneven. Alpha with slanting crossbar and with capping horizontal bar pointing left, delta with projecting right hasta, 
+                        minuscule zeta, elongated psi. Ligatures.</seg>
+                        <height unit="cm">1,2–2,0.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p020">
+                        <seg xml:lang="ru">Феодоро.</seg>
+                        <seg xml:lang="en">Theodoro.</seg>
+                     </origPlace>
+                     <origDate notBefore="1302" notAfter="1303" evidence="указание_надписи">
+                        <seg xml:lang="ru">1282–1283 гг.</seg>
+                        <seg xml:lang="en">1282–1283 C. E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2004-09">Сентябрь 2004</date>, <date when="2006-09"> сентябрь 2006</date>.</seg>
+                     <seg xml:lang="en"><date when="2004-09">September 2004</date>, <date when="2006-09">September 2006</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#mangup">Мангуп.</placeName>
+                        <rs type="circumstances">До 1890 г., обследования А.И. Маркевича и А.Х. Стевена.</rs>
+                        <rs type="context">Табана-Дере, вторая линия обороны, одна из башен, на большой высоте.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Mangup.</placeName>
+                        <rs type="circumstances">Before 1890, survey of A.I. Markevich and A.Ch. Steven.</rs>
+                        <rs type="context">Tabana-Dere, second line of fortifications, one of the towers, high above ground.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Бахчисарай, Крым.</seg>
+                     <seg xml:lang="en">Bakhchisaray, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2015-04-08" who="CB">Andrey's corrections</change>
+         <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-09-24" who="AG">tags in the inscription corrected, key added</change>
+         <change when="2012-08-10" who="GB">inserted Greek lemmata (and normalized unicode)</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-03" who="AG">app updated after Vinogradov</change>
+         <change when="2012-06-26" who="AG">app bibl corrected</change>
+         <change when="2012-06-06" who="AG">several lines translated, bibliography and apparatus tagged, tags in the text corrected, editor added</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+         <change when="2012-03-13" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.175">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Сборник--><ptr target="bib:b0132"/>, 56–57, № <citedRange>47</citedRange></bibl>
+               <bibl n="1.1"><!--Латышев 1901a--><ptr target="bib:b0138"/>,   <citedRange>76</citedRange></bibl>
+               <bibl n="2"><!--Малицкий 1933--><ptr target="bib:b0163"/>, 15–19, <seg xml:lang="ru">рис.</seg><seg xml:lang="en">fig.</seg> <citedRange>3–4</citedRange></bibl>
+               <bibl n="3"><!--Виноградов 2005а--><ptr target="bib:b0043"/>, <citedRange>434–436</citedRange></bibl>
+               <bibl n="3.1"><!--Мыц 2009--><ptr target="bib:b0184"/>, <citedRange>31–32</citedRange></bibl>
+            </listBibl>
+         </div>
+         
+      <div type="edition" xml:lang="grc" xml:space="preserve">
+         <ab>
+               <lb n="1"/><persName type="attested" ref="#person501"><name><gap reason="lost" extent="unknown" unit="character"/><orig>θιθε<unclear>ι</unclear></orig></name></persName>,
+                     <w lemma="ὅς">ὃς</w> <w lemma="ἐκ">ἐκ</w> <placeName key="poeka">Ποήκα</placeName>,
+                     <w lemma="ὁ">ἡ</w> <surplus>υ</surplus>
+                     <placeName key="theodoro">Θεοδορ<supplied reason="lost">ῖτη</supplied></placeName>
+                     <supplied reason="lost"><w lemma="εἰς">εἰς</w></supplied>
+                     <w lemma="αἰώνιος"><supplied reason="lost">α</supplied>ἰώνιον</w>
+                     <w lemma="μνῆμα"><unclear>μ</unclear><lb n="2" break="no"/>νῆμα</w>. <w lemma="ἐπί">Ἐπὴ</w>
+                     <w lemma="καβαλλάριος">καβαλάρηο<supplied reason="lost">ι</supplied></w>
+                     <w lemma="πείρω">ἔπειραν</w> <num value="2">β</num> <w lemma="ζεῦγος">ζεύγη</w> 
+                     <w lemma="βοῦς">βωο͂ν</w>, <w lemma="ὁ">τὸν</w> <w lemma="ζευγηλάτης">ζευγελά<lb n="3" break="no"/><supplied reason="lost">τ</supplied>ην</w> <w lemma="φονεύω">ἐφώνεψαν</w>:
+                     <w lemma="καί">κὲ</w>
+                     <w lemma="ὅς">ὁς</w> <w lemma="ὁ">τὸ</w> <w lemma="ἀκούω">ἤκουσεν</w>, <w lemma="εἰς">ἠς</w>
+                     <placeName key="varzar">Βαρζάρους</placeName> <w>ἔξερε</w> <w lemma="ἀπό">ἀπὸ</w>
+                     <w lemma="μικρός">μη<lb n="4" break="no"/>κροῦ</w> <w lemma="ἕως">ἕος</w> <w lemma="μέγας">μεγάλου<surplus>ς</surplus></w>:
+                     <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <w lemma="διώκω">ἐδίωξαν</w>
+                     <w lemma="ὀπίσω">ὀπήσο</w> <w lemma="αὐτός">αὐτοὺς</w>
+                     <w lemma="ἕως">ἕος</w> <w lemma="ὁ">τοῦ</w> <w lemma="μέρος">μέρους</w>
+               <lb n="5"/><w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                     <w lemma="ἕως">τέο<supplied reason="lost">ς</supplied></w>
+                     <w lemma="ὁ">τοῦ</w> <w lemma="θεοφύλακτος">θεοφηλά<unclear>κ</unclear>του</w>
+                     <w lemma="κάστρον">κάστρου</w>
+                     <placeName key="theodoro">Θεοδόρου</placeName>: <w lemma="καί">κὲ</w>
+                     <w lemma="καταδιώκω">κατεδήο<lb n="6" break="no"/>ξαν</w> <w lemma="καί">κὲ</w> <w lemma="κατακόπτω">κατέκοψαν</w>
+                     <w lemma="αὐτός">αὐτοὺς</w> <w lemma="ἕως">ἕος</w> <w lemma="ὁ">τοῦ</w>
+                     <placeName key="zazale">Ζαζαλε</placeName>
+                     <w lemma="καί"><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w>
+                     <w lemma="μέρος">μέρους</w> <num value="11">ια</num>: <w lemma="ὁ"><unclear>το</unclear></w>
+               <lb n="7"/><w lemma="καί">κ<unclear>α</unclear><unclear>ὶ</unclear></w>
+                     <w lemma="ἀκούω">ἤκουσ<unclear>α</unclear><unclear>ν</unclear></w>
+                     <gap reason="lost" quantity="4" unit="character"/> <w lemma="καί">κὲ</w> <w lemma="ὁ">τὸν</w>
+                     <w lemma="καί">κε</w>
+                     <gap reason="lost" quantity="3" unit="character"/><orig>ον</orig><gap reason="illegible" quantity="1" unit="character"/><orig>κενη</orig><gap reason="illegible" quantity="1" unit="character"/><orig>ου</orig><gap reason="lost" extent="unknown" unit="character"/>
+               <lb n="8"/><w lemma="ἐπί">ἐ<unclear>π</unclear>ὶ</w> <date><w lemma="ἔτος">ἔτους</w>
+                     <num value="6811">ςψϞα</num>,</date>
+                     <gap reason="illegible" extent="unknown" unit="character"/>
+                     <orig>ε</orig><gap reason="lost" quantity="3" unit="character"/><orig>σι</orig><gap reason="illegible" extent="unknown" unit="character"/><orig>οσ</orig>.
+                     <w lemma="ἀκούω">ἴκουσαν</w> <w lemma="καί">κὲ</w>
+                     <gap reason="lost" quantity="6" unit="character"/><w part="F">μος</w>
+               <lb n="9"/><gap reason="illegible" extent="unknown" unit="character"/><orig>Υ</orig><gap reason="illegible" extent="unknown" unit="character"/>
+            </ab>
+         </div>
+         <div type="apparatus">
+             <listApp>
+                <app loc="1"><rdg source="bib:b0132 bib:b0138 bib:b0163">....ΘΕ....Α.ΝΘ..ΑΝ ὑ</rdg> <rdg source="bib:b0043">υ´ (?)</rdg></app>
+               <app loc="1"><rdg source="bib:b0163">...καν? <note>resp.</note> ...ψαν ? <note>resp.</note> ἐν Πόηκαν ?</rdg></app>
+               <app loc="1"><rdg source="bib:b0132 bib:b0138">ἰσ-</rdg></app>
+               <app loc="2"><rdg source="bib:b0132 bib:b0138">......ΚΑΒΑ.........</rdg> <rdg source="bib:b0163">.... η καβαλαρηα ....</rdg> <rdg source="bib:b0043">καβαλαρίων</rdg></app> 
+               <app loc="2"><rdg source="bib:b0043">ἔπειραν</rdg></app>
+               <app loc="2"><rdg source="bib:b0163">ι´</rdg></app>
+                <app loc="2"><rdg source="bib:b0132 bib:b0138">το͂ν</rdg></app>
+               <app loc="2-3"><rdg source="bib:b0132 bib:b0138">αην</rdg></app>
+               <app loc="3"><rdg source="bib:b0043">ὁς τὸ</rdg></app>
+               <app loc="3-4"><rdg source="bib:b0132 bib:b0138">σε ..ΚΑ ΕΝ.. βαρ[β]άρους ἐξε....ΟΜΗΤΟΥΣ ὡς</rdg></app> 
+                <app loc="4"><rdg source="bib:b0132 bib:b0138">μεγάλους ?</rdg></app>
+                <app loc="4"><rdg source="bib:b0132">ΟΡΗ.ΟΛΥ...</rdg><rdg source="bib:b0138"><note>corr.</note></rdg></app> 
+               <app loc="4"><rdg source="bib:b0132 bib:b0138">Νεώρου</rdg><rdg source="bib:b0163">Μηδηους</rdg></app>
+                <app loc="5"><rdg source="bib:b0043">κ(αὶ) τέο[ς]</rdg><rdg><note>om. alii</note></rdg></app>
+                <app loc="5-6"><rdg source="bib:b0132 bib:b0138">ΚΑΚ...ΙΣΟΑΝ</rdg> <rdg source="bib:b0043">καὶ ... ἤκουσεν</rdg></app>
+                <app loc="6"><rdg source="bib:b0132 bib:b0138">[κ]ατέ[κ]οψαν ? </rdg></app>
+                <app loc="6"><rdg source="bib:b0132 bib:b0138">ΕΟ.</rdg></app> 
+                <app loc="6"><rdg source="bib:b0132 bib:b0138">...ΑΛΕΙ ΜΕΡΗΣΙΑ...</rdg></app>
+               <app loc="6"><rdg source="bib:b0163">μερης</rdg></app>
+               <app loc="6"><rdg source="bib:b0163">κὲ ?</rdg></app>
+                <app loc="7"><rdg source="bib:b0132 bib:b0138"> ............... αὐτὸν ...........</rdg> <rdg source="bib:b0163">...</rdg></app>
+               <app loc="8"><rdg source="bib:b0043">ἐπὶ (?)</rdg><note>om. alii</note></app>
+                <app loc="8"><rdg source="bib:b0132 bib:b0138 bib:b0163">ςω.. ?</rdg> <rdg source="bib:b0043">ςωι(?)α</rdg> <rdg source="bib:b0184">ςωθ(?)α</rdg></app>
+                <app loc="8"><rdg source="bib:b0132 bib:b0138">........μος κὲ φανερὰς ..</rdg></app>
+                <app loc="9"><rdg source="bib:b0132 bib:b0138">... θ(εο)ῦ ..............ΤΟΡΕΟ..</rdg> <rdg source="bib:b0163">...</rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Такому-то, что из Пойки, феодориты в вечную память. Поскольку всадники захватили 2 упряжки волов, а погонщика волов убили, то, 
+               когда он услышал, в Варзарах поднял всех от мала до велика. И гнались за ними до Части и до богохранимой крепости Феодоро, 
+               и догнали их и рубили вплоть до Зазале и 11-й части. И услышали это … и … в 6791 (?) году… услышали и…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>For [...] who is from Poeka, Theodorites (set this up) for eternal commemoration. Because horsemen had apprehended two ox-carts and killed
+            the oxherd, so when he heard about this, he then alerted everyone in Barzaroi, from the young to the old. And they pursued them to the District and
+            to the God-protected fortress Theodoro, and they caught up with them and cut them down, to Zazale and the 11th District. And they heard this... and... 
+            in the year 6791... heard and...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись, торжественно помещенная в стену башни, была кем-то намеренно уничтожена 
+                (см. ниже): все ее строки перечеркнуты. Этот факт сильно осложняет ее чтение и объясняет то 
+                большое количество ошибок, которое допустили Латышев и Малицкий. К этой сложности 
+                добавляется и нелитературный характер языка, допускающего употребление диалектных 
+                (ἐφώνεψαν) и простонародных (το) форм. Надпись впервые упомянута первооткрывателем — 
+                Ф.А. Брауном, который разобрал только 3 предпоследних слова в 5-й строке (Браун 1893, 19).  </p>
+                <p> 1–2. Надпись имеет памятный характер и посвящена феодоритами какому-то уроженцу 
+                    Пойки, чье имя, к сожалению, не читается (судя по последним буквам, оно было негреческим). 
+                    Таким образом, мы имеем еще одно свидетельство значения Пойки на раннем этапе 
+                    существования Феодоро. Отсутствие упоминания о сооружении башни свидетельствует о том, 
+                    что надпись не строительная, а просто воздвигнута в память о пойкийце-благодетеле.</p>
+                <p> 2–7. Надпись повествует о нападении каких-то конных врагов, которые угнали две упряжки 
+                    волов и убили погонщика. Герой надписи пустился с собранными в Варзарах 
+                    (судя по <ref type="inscription">V 173</ref><!--byz166--> (1188 г.), это район к западу от Мангупа) людьми в погоню, нагнал врагов у 
+                    Части и Феодоро и преследовал их до Зазале и 11-й части. Эти части — несомненно, 
+                    территориальные единицы феодоритского государства, упомянутые в <ref type="inscription">V 224</ref><!--byz211-->. Причем, 11-я 
+                    часть выглядит здесь как крайний предел феодоритского государства, а Часть (τὸ μέρος), т.е., 
+                    по-видимому, 1-я часть, наоборот, совпадает с его центром — городом Феодоро.</p>
+                <p> 8. Цифры года сохранились плохо, поэтому были прочтены нами первоначально неверно. Надпись относится к 
+                   1282–1283 гг., т.е. к самому раннему этапу феодоритской истории. В связи с этим снова встает 
+                    вопрос о датировке надписи Хуитана из Пойки (<ref type="inscription">V 176</ref><!--byz169-->).  </p>
+            <p> Исторический комм. см. в Мыц 2009, 31–32.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>The inscription, which had been purposely placed in the wall of the tower, was later deliberately effaced (see below): the text was crossed out with 
+               lines cut across the letters. This fact complicates the reading of the text and explains the large number of mistakes made by Latyshev and Malitsky.
+               The colloquial language used in the text compounds the difficulty of its interpretation: there are dialectal (ἐφώνεψαν) and colloquial (το) forms. 
+               The inscription was first mentioned by its discoverer, F.A. Braun, who had worked out only the three words before last in line 5 (Braun 1893, 19).</p>
+            <p>1-2.  The inscription is commemorative and dedicated by Theodorites to a native of Poeka (Poika), whose name is unfortunately illegible (judging by the last letters, it was
+               non-Greek). Thus, we have another confirmation of the importance of Poika in the early period of Theodoro's existence. The absence of a mention of the tower's construction
+               suggests that the inscription was not a building inscription as such, but a commemoration of the benefactor from Poika.</p>
+            <p>2–7. The inscription reports a raid by some mounted enemies who stole two yokes of oxen and killed the driver. The hero of our inscription, together
+               with people from Barzaroi (judging by <ref type="inscription">V 173</ref><!--byz166--> (1188 C.E.), it was a region to the west of Mangup), pursued 
+               the raiders and caught up with them near the District and Theodoro, and then pursued them to Zazale and the 11th District. These districts
+               are certainly
+               territorial units of the Theodorite state, mentioned in <ref type="inscription">V 224</ref><!--byz211-->. The 11th district seems to be the furthermost one, 
+               while The District (τὸ μέρος), that is, apparently the 1st District, must coincide with the centre, that is the city of Theodoro.</p>
+            <p>8. The digits of the year are very hard to make out, and they were originally interpreted by me incorrectly. The inscription dates to 1282–1283 C.E., that is, 
+               the earliest period of Theodorite history. In connection with this, the date of the inscription
+               of Chuitanes from Poika (<ref type="inscription">V 176</ref><!--byz169-->) should also be considered. </p>
+            <p>For the historical commentary, see Myts 2009, 31–32.</p>
+         </div>
+         
+      </body>
+   </text>
+</TEI>

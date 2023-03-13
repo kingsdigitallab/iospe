@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Надгробная надпись донатора</title><title xml:lang="en">Epitaph of a donator</title><editor xml:id="ayv2012">
+                 <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+                 <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+             </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.211</idno><idno type="PE">PE5000211</idno>
+            <idno type="AYV2012-number">byz199</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>In situ</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc2">
+                     <seg xml:lang="ru">Надгробная надпись.</seg>
+                     <seg xml:lang="en">Epitaph.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon31">Фреска.</objectType>
+                           <objectType xml:lang="en">Fresco.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m7 #m6">Темпера на штукатурке.</material>
+                           <material xml:lang="en">Tempera on plaster.</material>
+                           <p xml:lang="ru">Оббита снизу.</p>
+                           <p xml:lang="en">Chipped at the bottom.</p>
+                           <dimensions>
+                              <height>3,5</height>
+                              <width>10,0</width>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#pictura">Дипинто</rs>, белая краска по синему фону; вытянутые по вертикали и заостренные на концах буквы.</seg>
+                        <seg xml:lang="en">Dipinto, white paint over blue background; elongated pointy letters.</seg>
+                        <height unit="cm">3,5.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p025">
+                        <seg xml:lang="ru">Черкес-Кермен.</seg>
+                        <seg xml:lang="en">Cherkes-Kermen.</seg>
+                     </origPlace>
+                     <origDate notBefore="1351" notAfter="1352" precision="medium" evidence="указание_№_V_209">
+                        <seg xml:lang="ru">ок. 1351–1352 или 1381–1382 гг.</seg>
+                        <seg xml:lang="en">ca. 1351–1352  or 1381–1382 C.E.</seg>
+                        <certainty locus="value" match="../@notBefore" assertedValue="1381"/>
+                        <certainty locus="value" match="../@notAfter" assertedValue="1382"/> 
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="2003-09">Сентябрь 2003</date>.</seg>
+                     <seg xml:lang="en"><date when="2003-09">September 2003</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#cherkes-kermen">Черкес-Кермен.</placeName>
+                        <rs type="circumstances">До 1896 г., обследования Ю.А. Кулаковского.</rs>
+                        <rs type="context">«Храм донаторов», северо-западный угол.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Cherkes-Kermen.</placeName>
+                        <rs type="circumstances">Before 1896, survey of Yu.A. Kulakovsky.</rs>
+                        <rs type="context">"Church of Donators," northwest corner.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">In situ.</seg>
+                     <seg xml:lang="en">In situ.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2013-04-17" who="AG">comments updated</change>
+         <change when="2012-08-29" who="AFS">added Greek lemmata</change>
+         <change when="2012-07-03" who="AG">apparatus upd after Vinogradov</change>
+         <change when="2012-06-26" who="AG">several lines translated, small corrections, apparatus tagged, tags corrected</change>
+          <change when="2012-06-19" who="AL">editor tag inserted, bibliography tagged</change>
+          <change when="2012-03-26" who="AFS">checked and corrected Greek text tags </change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.211">
+                <desc xml:lang="en">Photograph of face 1(from ??)</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!-- Сборник--><ptr target="bib:b0132"/>, 124–125, № <citedRange>43a-z</citedRange></bibl>
+               <bibl n="1.1"><!-- Латышев 1897--><ptr target="bib:b0133"/>, <citedRange>152</citedRange></bibl>
+                <bibl n="2"><!--Виноградов 2004--><ptr target="bib:b0042"/>, <citedRange>129</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="apparatus">
+             <listApp>
+               <app loc="1"><rdg source="bib:b0132 bib:b0133">Ἐκοιμήθη</rdg> </app>
+                <app loc="1-2"><lem>[ἡ ... δεῖνα</lem><rdg><note>om. Latyshev, Kulakovsky apud Latyshev</note></rdg></app>
+            </listApp>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Почила раба Божья такая-то…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>Fell asleep: a servant of God...</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p>Третья строка из копии Кулаковского вряд ли относится к этой надписи, скорее, это подпись к изображению св. Георгия. 
+               См. также комм. к <ref type="inscription">V 212</ref><!--byz200-->.</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Line 3 in the transcription of Kulakovsky most likely does not belong to this inscription. Rather it is an image-related inscription
+               accompanying the image of St. George. See also commentary to <ref type="inscription">V 212</ref><!--byz200-->.</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><w lemma="κοιμάω">Ἐκοιμήθη</w> <supplied reason="lost"><w lemma="ὁ">ἡ</w> <w lemma="δοῦλος">δούλη</w></supplied>
+               <lb n="2"/><w lemma="ὁ">τοῦ</w> 
+               <supplied reason="lost"><persName type="divine" key="theos"><roleName><w lemma="θεός"><expan><abbr>θ</abbr><ex>εο</ex><abbr>ῦ</abbr></expan></w></roleName></persName> 
+                  <w lemma="ὁ">ἡ</w> <w lemma="δεῖνα">δεῖνα</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>.
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>

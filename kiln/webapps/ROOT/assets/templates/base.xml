@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kiln:root xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+    <!-- Imports the default variables. -->
+    <xsl:import href="cocoon://_internal/template/xsl/stylesheets/defaults.xsl"/>
+
+    <!-- Imports the menu stylesheet -->
+    <xsl:import href="cocoon://_internal/template/xsl/stylesheets/menu/menu.xsl"/>
+
+    <kiln:block name="html">
+    <html class="no-js">
+      <kiln:block name="head">
+        <head>
+          <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+          <meta content="IE=edge,chrome=IE8" http-equiv="X-UA-Compatible"/>
+          <title>
+            <kiln:block name="title">IOSPE: </kiln:block>
+          </title>
+          <kiln:block name="css">
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/normalize.css"
+                rel="stylesheet" type="text/css"/>
+            <link href="{$kiln:assets-path}/scripts/vendor/bower-foundation/css/foundation.min.css"
+                rel="stylesheet" type="text/css"/>
+            <link href="{$kiln:assets-path}/scripts/vendor/font-awesome/css/font-awesome.min.css"
+                rel="stylesheet" type="text/css"/>
+
+            <link href="{$kiln:assets-path}/styles/base.css" rel="stylesheet" type="text/css"/>
+            <link href="{$kiln:assets-path}/styles/site.css" rel="stylesheet" type="text/css"/>
+          </kiln:block>
+          <kiln:block name="js">
+            <script src="{$kiln:assets-path}/scripts/vendor/modernizr/modernizr.js">&#160;</script>
+
+
+          </kiln:block>
+          <kiln:block name="head-extra"/>
+          <style type="text/css">
+            .hidden-content {
+            display: none;
+            }
+          </style>
+        </head>
+      </kiln:block>
+      <kiln:block name="body">
+        <body data-lang="{$lang}">
+          <div class="row">
+            <div class="large-12 columns">
+              <div id="banner" class="row">
+                <div id="sea_of_loneliness" class="large-12 columns">
+                  <a id="logo" class="right" href="{$kiln:context-path}/">
+                    <img src="{$kiln:assets-path}/images/bs.h4.en.png" title="IOSPE"/>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+
+                <div id="griffin_container" class="large-2 columns show-for-medium-up">
+                  <a id="griffin" title="IOSPE">&#160;</a>
+                </div>
+
+                <div class="large-10 columns">
+                  <div class="row">
+                    <div class="contain-to-grid sticky">
+                      <kiln:block name="navigation">
+                        <nav class="top-bar">
+                          <kiln:block name="main-navigation">
+                            <ul class="title-area">
+                              <li class="name"></li>
+                              <li class="toggle-topbar menu-icon right">
+                                <a href="#">
+                                  <span>Menu</span>
+                                </a>
+                              </li>
+                            </ul>
+                            <section class="top-bar-section">
+                              <ul class="left">
+
+                                <xsl:apply-templates mode="main-menu" select="/aggregation/kiln:nav"/>
+                                <xsl:call-template name="jump-to-inscription"/>
+                              </ul>
+
+                              <ul class="right language-choice">
+                                <xsl:call-template name="simple-search"/>
+                                <kiln:block name="menu-languages">
+                                  <xsl:call-template name="menu-languages"/>
+                                </kiln:block>
+                              </ul>
+                            </section>
+                          </kiln:block>
+                        </nav>
+                      </kiln:block>
+                    </div>
+                  </div>
+                </div>
+                <!-- fixed and contained to the grid -->
+
+              </div>
+              <div id="body-wrapper" class="row">
+                <div id="rock" class="large-2 columns show-for-medium-up">&#160;</div>
+
+                <div id="main-content" class="large-10 columns ">
+                  <kiln:block name="page-pre-header"/>
+                  <kiln:block name="page-header">
+                    <div class="row">
+                      <div class="large-12 columns">
+                        <h1>
+                          <kiln:block name="page-heading"/>
+                        </h1>
+                      </div>
+                    </div>
+                  </kiln:block>
+                  <kiln:block name="content-section">
+                    <main>
+                      <kiln:block name="content"/>
+                    </main>
+                  </kiln:block>
+                </div>
+              </div>
+              <kiln:block name="footer">
+                <footer>
+                  <p>
+                    <a href="#logo" title="#">
+                      <i18n:text>Top of Page</i18n:text>
+                    </a>
+                  </p>
+
+                  <xsl:choose>
+                    <xsl:when test="$lang='en'">
+                      <p>&#xa9; 2011-2017 King's College London</p>
+                    </xsl:when>
+                    <xsl:when test="$lang='ru'">
+                      <p>&#xa9; 2011-2017 Кингс Колледж Лондон</p>
+                    </xsl:when>
+                  </xsl:choose>
+                </footer>
+              </kiln:block>
+              <kiln:block name="end-js">
+                <!-- Since we make use of jQuery for other purposes, there
+                     is no reason to use Foundation's check whether to use
+                     jQuery or Zepto. -->
+                <script src="{$kiln:assets-path}/scripts/vendor/jquery/dist/jquery.js">&#160;</script>
+                <script
+                    src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation.min.js"
+                    >&#160;</script>
+                <script
+                    src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.dropdown.js"
+                    >&#160;</script>
+                <script
+                    src="{$kiln:assets-path}/scripts/vendor/bower-foundation/js/foundation/foundation.topbar.js"
+                    >&#160;</script>
+
+                <kiln:block name="mainjs">
+                  <script src="{$kiln:assets-path}/scripts/vendor/requirejs/require.js"
+                      data-main="{$kiln:assets-path}/scripts/base">&#160;</script>
+                </kiln:block>
+
+                <script>$(document).foundation();</script>
+                <!--<script type="text/javascript">
+                  $('a.toggler').bind("click", function() {
+                  $(this).next('div.expanded').slideToggle(400).removeClass('hidden-content');
+                  $("span", this).toggleClass("fa-caret-down fa-caret-right");
+                  return false;
+                  });
+                </script>-->
+                <script type="text/javascript">
+                  $('a.toggler').bind("click", function() {
+                  $(this).parent('p').next('div.expanded').slideToggle(400).removeClass('hidden-content');
+                  $("span", this).toggleClass("fa-caret-down fa-caret-right");
+                  return false;
+                  });
+                </script>
+              </kiln:block>
+            </div>
+            <!-- 12 (no columns) -->
+          </div>
+          <!-- row -->
+          <script defer="defer" src="https://kdl.kcl.ac.uk/sla-acpp/js/sla.js" type="text/javascript">&#160;</script>
+        </body>
+      </kiln:block>
+    </html>
+  </kiln:block>
+</kiln:root>

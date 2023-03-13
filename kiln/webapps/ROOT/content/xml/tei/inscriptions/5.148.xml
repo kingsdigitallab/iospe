@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись Алексея <certainty cert="low" locus="value" match=".."/></title><title xml:lang="en">Building inscription of Alexios <certainty cert="low" locus="value" match=".."/></title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.148</idno><idno type="PE">PE5000148</idno>
+            <idno type="AYV2012-number">byz142</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Неизвестен</repository>
+                     <idno/>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                     <repository>Unknown</repository>
+                     <idno/>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная надпись.</seg>
+                     <seg xml:lang="en">Building inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m2">Известняк.</material>
+                           <material xml:lang="en">Limestone.</material>
+                           <p xml:lang="ru">Обломана со всех сторон, кроме верхней (?).</p>
+                           <p xml:lang="en">Broken on all sides, except the top (?).</p>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>; буквы маньеризованные; эпсилон апицирован, ню с ломаной диагональю.  
+                           Стиль надписи:  буквы рельефные, вырезаны между линеек.</seg>
+                        <seg xml:lang="en">Lapidary. Ornate letters; epsilon accentuated with serifs, nu with broken diagonal.  Relief letters, carved between relief horizontal lines.</seg>
+                      </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p013">
+                        <seg xml:lang="ru">Каламита.</seg>
+                        <seg xml:lang="en">Kalamita.</seg>
+                     </origPlace>
+                     <origDate notBefore="1427" notAfter="1446" evidence="палеография монограммы" cert="low">
+                        <seg xml:lang="ru">1427–1446 гг.</seg>
+                        <seg xml:lang="en">1427–1446 C.E. </seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru">Non vidi.</seg>
+                     <seg xml:lang="en">Non vidi.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#inkerman">Инкерман.</placeName>
+                        <rs type="circumstances">1880-е гг., обследования А.Л. Бертье-Делагарда.</rs>
+                        <rs type="context">Монастырская скала, храм св. Георгия.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Inkerman.</placeName>
+                        <rs type="circumstances">1880s, survey of A.L. Bertye-Delagard.</rs>
+                        <rs type="context">Monastyrskaya rock, St. George church.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Неизвестно.</seg>
+                     <seg xml:lang="en">Unknown.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+         <change when="2015-04-01" who="CB">Andrey's corrections</change>
+          <change when="2013-10-24" who="TW">Added image code</change>
+          <change when="2013-04-11" who="NG"> corrections in Greek lemmata</change>
+          <change when="2012-10-16" who="AL">small corrections in Russian text</change>
+         <change when="2012-09-26" who="AG">small correction in the commentary</change>
+         <change when="2012-08-09" who="GB">inserted full Greek lemmata</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-18" who="AG">1 line translated, small corrections</change>
+         <change when="2012-05-30" who="AG">several lines translated, tags corrected, editor added</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+         <change when="2012-03-12" who="AG">corrections in metadata, bibliography tagged, tags in the Greek text corrected</change>
+         <change when="2012-03-06" who="AFS">tagged greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.148">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов 2011a--><ptr target="bib:b0386"/>, 232–234, № <citedRange>9</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><supplied reason="lost"><w lemma="κτίζω">Ἐκτίσθη</w> <note>e. g.</note> <w lemma="ὁ">τὸ</w></supplied>
+               <w lemma="κάστρον"><supplied reason="lost">κάστρ</supplied>ον</w> <w lemma="εἰς">εἰ<unclear>ς</unclear> <certainty match=".." locus="value" cert="low"/></w> 
+               <gap reason="illegible" quantity="3" unit="character"/>
+               <lb n="2"/> <gap reason="lost" extent="unknown" unit="character"/>
+               <w lemma="ὑπό"><unclear>ὑπ</unclear><supplied reason="lost">ὸ</supplied></w> 
+               <supplied reason="lost" cert="low"><w lemma="ἡμέρα">ἡμερῶν</w></supplied>
+               <lb n="3"/><supplied reason="lost"><persName type="ruler" key="alexios1Th"><roleName><w lemma="κύριος">κυροῦ</w></roleName> 
+                  <name nymRef="Ἀλέξιος">Ἀλεξίου</name> <w lemma="αὐθέντης">αὐθέντου</w> <w lemma="πόλις">πόλεως</w>
+                  <placeName key="theodoro">Θεοδώρους</placeName> <w lemma="καί">καὶ</w> <w lemma="παραθαλάσσιος">παραθαλασσίας</w></persName>,</supplied>
+                  <date><supplied reason="lost"><w lemma="μήν">μηνὶ</w></supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                     <supplied reason="lost"><w lemma="ἔτος">ἔτους</w></supplied> 
+                     <num><supplied reason="lost"><num atLeast="6900">ςϠ</num></supplied><gap reason="lost" quantity="2" unit="character"/></num></date>
+            </ab>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>Построена (?) эта крепос]ть в … во <supplied reason="lost">дни (?) господина Алексея, господаря города Феодоро и приморья, в … … года</supplied>.</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>This fortress was built (?)] in... in [the days (?) of Lord Alexios, Authentes of the city of Theodoro and the coastline, in month... year...].</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Бертье-Делагард нашел фрагмент в главном храме Георгиевского монастыря, куда тот был 
+                принесен «неизвестно откуда»; Латышев оставил его без чтения (Латышев 1897b, 151 № 34). 
+                Фотография надписи (ок. 1941 г.) была обнаружена нами в ФА ИИМК РАН (II–36780; O.1319.29). 
+                Вполне вероятно, что к этой же надписи относится и фрагмент плиты с монограммой Алексея, 
+                найденный в Каламите в 1926 г. (см. Малицкий 1933, 32, рис. 9). По указанию Малицкого, 
+                найденная в кладке Каламиты турецкого времени плита с монограммой была обломана только 
+                справа, где и была надпись. Если это действительно 2 фрагмента одного камня, то наша надпись 
+                первоначально была высотой 40 см и толщиной 16 см, и ее конструкция была сходна с <ref type="inscription">V 179</ref><!--byz172-->, 
+                однако монограммы здесь заключены в круглые картуши (см. ниже).</p>
+                <p> По оформлению данная надпись, действительно, стоит близко к надписям владетеля 
+                   Феодоро Алексея 1425–1427 гг. (<ref type="inscription">V 179</ref><!--byz172--> и <ref type="inscription">V 180</ref><!--byz214-->), что не удивительно, 
+                   учитывая возможное 
+                    инкерманское происхождение последней. По шрифту же (буквы хотя и маньеризованные, но не 
+                    удлиненные) она стоит ближе к <ref type="inscription">V 241</ref><!--byz226--> из Партенита 1427 г. По палеографии ее можно 
+                    осторожно отнести к 1 пол. XV в., так как в надписях 1450-х гг. формы букв вытягиваются 
+                    по вертикали (ср. <ref type="inscription">V 189</ref><!--byz179-->, <ref type="inscription">V 238</ref><!--byz224-->). С последней ее, впрочем, сближает круглый картуш монограммы 
+                   (см. выше и комм. к <ref type="inscription">V 13</ref><!--byz012-->), однако закругленный элемент в основании монограммы имеет здесь, 
+                   как и в остальных случаях, миндалевидную форму, а не круглую, как в <ref type="inscription">V 238</ref><!--byz224-->. То же самое 
+                    касается и остальных букв и украшений в монограмме. Таким образом, инкерманская 
+                    монограмма может представлять собой переходный этап между феодоритскими монограммами 
+                    1420-х гг. и 1459 г., подобно монограммам в <ref type="inscription">V 13</ref><!--byz012--> (см. комм.), и относиться, следовательно, ко 
+                    второй половине правления Алексея Мангупского (между 1427 и 1446 гг.).  </p>
+                <p>Формула надписи реконструируется предположительно, по аналогии с надписями князя 
+                    Алексея (см. выше). Даже если отрешиться от вышеописанной идентификации двух 
+                    инкерманских фрагментов, то, судя по характеру исполнения букв, это все равно была надпись 
+                    строительная. Мы знаем в Крыму только одну не строительную надпись, выполненную 
+                    рельефными буквами (да и то частично) — надгробие чтеца Стефана с Мангупа, к тому же, 
+                    более позднего времени — 1456 года (<ref type="inscription">V 189</ref><!--byz179-->). Фрагмент другой надписи в той же технике с 
+                   Мангупа (<ref type="inscription">V 187</ref><!--byz177-->) представляет собой, по всей видимости, обрамление какого-то предмета с 
+                    полукруглым верхом — скорее всего, иконы Богородицы из храма, т.е. родственен по своему 
+                    происхождению строительным надписям. Поскольку же других крупных наземных построек 
+                    феодоритского времени из Инкермана, кроме крепости Каламита, неизвестно, то логично 
+                    предположить, что она происходит именно оттуда. Таким образом, перед нами оказывается 
+                    еще одна феодоритская строительная надпись и первая несомненная — из Инкермана. 
+                    Постройка стен Каламиты могла быть связана с восстановительными работами после взятия 
+                    крепости генуэзским флотом Карло Ломеллино в 1434 г. (см. Мыц 2009, 123)</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Bertye-Delagard found this fragmentary epigraphic monument in the main church of St. George monastery, but it was not known where it had come from.
+               Latyshev (1897б, 151, № 34) did not offer a reading. I was able to find a photograph (taken ca. 1941) of the inscription at the Photo Archive, 
+               Institute for History of Material Culture, Russian Academy of Sciences (II–36780; O.1319.29). It is quite possible that another fragment can be associated
+               with the same monument - fragment of a panel with a monogram of Alexios, found at Kalamita in 1926 (Malitsky 1933, 32, fig. 9). According to Malitsky, that panel
+               was found in the masonry of the Turkish period, and only its right side, where the inscription would have been, was broken off. If indeed the two were fragments
+               of the same panel, then we would know that our monument was originally 40cm high and 16cm thick, and its design would be similar to <ref type="inscription">V 179</ref><!--byz172-->, 
+               although in the latter case monograms were inscribed inside round cartouches (see below).</p>
+            <p>The style of the inscription is indeed similar to other inscriptions associated with the ruler of Theodoro, Alexios, 1425–1427 C.E. (<ref type="inscription">V 179</ref><!--byz172--> and 
+               <ref type="inscription">V 180</ref><!--byz214-->), which is not surprising considering that the latter probably originates in Inkerman.
+               The script, however (the letters are ornate, but not elongated), has more affinity with <ref type="inscription">V 241</ref><!--byz226--> from Partenit, 1427 C.E. 
+               Palaeographic features thus indicate a date in the first half of the XVth century, since in the 1450s letters tend to become elongated (cf. <ref type="inscription">V 189</ref><!--byz179-->, 
+               <ref type="inscription">V 238</ref><!--byz224-->). The latter also shares with our inscription the round cartouche of the monogram 
+               (see above commentary to <ref type="inscription">V 13</ref><!--byz012-->), but the rounded element at the base of the monogram is more almond-shaped here, as well as 
+               in other cases mentioned above, rather than strictly round as in <ref type="inscription">V 238</ref><!--byz224-->. The same is true about other letters and decorative
+               elements in the monogram. Thus, the Inkerman monogram might be a transitional form of Theodorite monograms, in the period between 1420s and 1459 C.E., similar to 
+               the monograms in <ref type="inscription">V 13</ref><!--byz012--> (see commentary), and therefore belong to the second half of the reign of Alexios of Mangup (between
+               1427 and 1446 C.E.).</p>
+            <p>The formula of the inscription is restored hypothetically, by analogy with other inscriptions of prince Alexios (see above). Even if we were not to draw parallels with the Inkerman fragments,
+               we would still identify this text as a building inscription on the basis of lettering. We know of only one inscription in Crimea, with letters partially cut in relief, which is 
+               not a building inscription — this is a tombstone of Stephanos from Mangup, and it is of a later date - 1456 (<ref type="inscription">V 189</ref><!--byz179-->). 
+               A fragment of another inscription from Mangup carved in the same manner (<ref type="inscription">V 187</ref><!--byz177-->) probably represents a framing element of some object with rounded
+               top, most likely for the icon of the Mother of God from some church, that is, it would be in origin akin to building inscriptions. Since no large overground structures of the Theodorite
+               period are known in Inkerman except for the Kalamita fortress, it is logical to suppose that our inscription originates from there. Thus, we may conclude that 
+               we have yet another Theodorite building inscription and this one the first certainly originating from Inkerman. The construction of the walls of Kalamita might have 
+               been part of the renovations following the seizure of the fortress by the Genoese fleet of Carlo Lomellino in 1434 (see Myts 2009, 123).</p>
+         </div>
+      </body>
+   </text>
+</TEI>

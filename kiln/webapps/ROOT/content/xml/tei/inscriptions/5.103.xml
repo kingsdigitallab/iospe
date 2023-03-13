@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt><title xml:lang="ru">Строительная надпись</title><title xml:lang="en">Building inscription</title><editor xml:id="ayv2012">
+               <persName xml:lang="ru"><forename>А.Ю.</forename><surname>Виноградов</surname></persName>
+               <persName xml:lang="en"><forename>A.Yu.</forename><surname>Vinogradov</surname></persName>
+            </editor><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
+         <publicationStmt><authority>King's College London</authority>
+            <idno type="filename">5.103</idno><idno type="PE">PE5000103</idno>
+            <idno type="AYV2012-number">byz103</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier><country/>
+                  <altIdentifier xml:lang="ru">
+                     <repository>Национальный заповедник "Херсонес Таврический"</repository>
+                     <idno>34899</idno>
+                  </altIdentifier>
+                  <altIdentifier xml:lang="en">
+                      <repository>National Preserve of Tauric Chersonesos</repository>
+                     <idno>34899</idno>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary corresp="document-search.xml#doc1">
+                     <seg xml:lang="ru">Строительная <certainty cert="low" locus="value" match=".."/> надпись.</seg>
+                     <seg xml:lang="en">Building <certainty cert="low" locus="value" match=".."/> inscription.</seg>
+                  </summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <objectType xml:lang="ru" ref="monument-search.xml#mon1">Плита.</objectType>
+                           <objectType xml:lang="en">Panel.</objectType>
+                           <material xml:lang="ru" ref="material-search.xml#m1">Белый мрамор.</material>
+                           <material xml:lang="en">White marble.</material>
+                           <p xml:lang="ru">На тыльной стороне валик; во вторичном использовании. Обломана со всех сторон кроме правой.</p>
+                           <p xml:lang="en">Roll moulding on the back; in secondary use. Broken off on all sides, except the right.</p>
+                           <dimensions>
+                              <height>4,5</height>
+                              <width>9,0</width>
+                              <depth>4,0</depth>
+                           </dimensions>
+                        </support>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout ana="f1">
+                           <seg xml:lang="ru">На лицевой стороне.</seg>
+                           <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/> On the front.</seg>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote>
+                        <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scalpro">Лапидарный</rs>. Бета с несомкнутыми полукружиями, ипсилон V-образный с 
+                           изогнутой правой гастой. Сокращение.</seg>
+                        <seg xml:lang="en">Lapidary. Beta with vertically spaced loops, V-shaped upsilon with curved right hasta. Abbreviation.</seg>
+                        <height unit="cm">1,2.</height>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace ref="origPlace.xml#p003">
+                        <seg xml:lang="ru">Херсон или Болгария.</seg>
+                        <seg xml:lang="en">Chersonesos or Bulgaria.</seg>
+                     </origPlace>
+                     <origDate notBefore="0801" notAfter="1000" precision="low" evidence="палеография">
+                        <seg xml:lang="ru">IX–X в.</seg>
+                        <seg xml:lang="en">IX–Xth centuries C.E.</seg>
+                     </origDate>
+                  </origin>
+                  <provenance type="observed" subtype="autopsy">
+                     <seg xml:lang="ru"><date when="1999-05">Май 1999</date>, <date when="2001-08"> август 2001</date>, <date when="2002-09"> сентябрь 2002</date>, <date when="2003-09"> сентябрь 2003</date>, <date when="2004-09"> сентябрь 2004</date>, <date when="2005-09"> сентябрь 2005</date>, <date when="2006-09"> сентябрь 2006</date>, <date when="2007-09"> сентябрь 2007</date>.</seg>
+                     <seg xml:lang="en"> <date when="1999-05">May 1999</date>, <date when="2001-08"> August 2001</date>, <date when="2002-09"> September 2002</date>, <date when="2003-09"> September 2003</date>, <date when="2004-09"> September 2004</date>, <date when="2005-09"> September 2005</date>, <date when="2006-09"> September 2006</date>, <date when="2007-09"> September 2007</date>.</seg>
+                  </provenance>
+                  <provenance type="found">
+                     <seg xml:lang="ru">
+                        <placeName type="ancientFindspot" ref="findspot.xml#sevastopol">Севастополь (Херсонес).</placeName>
+                        <rs type="circumstances">1900 г., случайная находка.</rs>
+                        <rs type="context">Неизвестен.</rs>
+                     </seg>
+                     <seg xml:lang="en">
+                        <placeName type="ancientFindspot">Sevastopol (Chersonesos).</placeName>
+                        <rs type="circumstances">1900, chance find.</rs>
+                        <rs type="context">Unknown.</rs>
+                     </seg>
+                  </provenance>
+                  <provenance type="observed">
+                     <seg xml:lang="ru">Севастополь, Крым.</seg>
+                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+     <xi:include href="encoding-desc.xml">
+     <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
+     </xi:include>
+
+<revisionDesc>
+          <change when="2013-10-24" who="TW">Added image code</change>
+         <change when="2012-07-19" who="GB">lemmatized Greek</change>
+         <change when="2012-07-16" who="AG">1 line translated</change>
+         <change when="2012-04-23" who="AG">date corrected, several lines translated, editor added, bibliography updated</change>
+          <change when="2012-04-17" who="AL">translated a line</change>
+          <change when="2012-04-17" who="AFS">translated a line</change>
+         <change when="2012-02-22" who="AG">bibliography tagged</change>
+         <change when="2012-01-17" who="AG">1 line translated</change>
+         <change when="2011-12-21" who="AG">updated, tags correction</change>
+         <change when="2011-12-12" who="AG">small corrections, tagging of the Greek text</change>
+         <change when="2011-11-30" who="KFL">programmatically created from Word doc</change>
+      </revisionDesc>
+   </teiHeader>
+    <facsimile>
+        <surface>
+            <graphic url="5.103">
+                <desc xml:lang="en">Photograph of face</desc>
+                <desc xml:lang="ru"/>
+            </graphic>
+    </surface>
+    </facsimile>
+   <text>
+      <body>
+         <div type="bibliography">
+            <listBibl>
+               <bibl n="L1"><!--Виноградов 2011а--><ptr target="bib:b0386"/>, 229–230, № <citedRange>7</citedRange></bibl>
+            </listBibl>
+         </div>
+         <div type="translation" xml:lang="ru">
+            <p>…ивигий… 7-го, в <supplied reason="lost">…</supplied> индикт…</p>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p>...ybegis... on the 7th, in ... indiction.</p>
+         </div>
+         <div type="commentary" xml:lang="ru">
+            <p> Надпись была найдена М.И. Скубетовым в куче камней (Косцюшко-Валюжинич 1900, 33, № 1). Надпись была дважды приведена Латышевым, но без 
+               чтения (IOSPE IV 174; IOSPE I<hi rend="sup">2</hi> 627).</p>
+            <p> 1. Сохранившиеся буквы не могли образовывать ничего, кроме негреческого имени: в нем можно выделить тюркский титул «бег» (ср. <ref type="inscription">V 172</ref><!--byz165-->). 
+               Также здесь можно увидеть типичную титулатуру болгарских царей Омуртага и Маламира (IX в.) κανα συβίγι «великий хан» (Beševliev 1963, № 55–67; любезно 
+                   указано Д.В. Каштановым), с добавлением конечной сигмы для создания более греческой формы слова.  </p>
+                <p> 2. Здесь, очевидно, содержалась датировка. Семерка принадлежала либо числу года, либо обозначению дня месяца. Такое же сокращение для слова 
+                   «индикт» известно в <ref type="inscription">V 170</ref><!--byz163--> (Х в.). Среди вышеупомянутых болгарских надписей датировка по индикту встречается только в 
+                   строительной надписи 
+                   Омуртага 822 г. (Beševliev 1963, № 56). Нам ничего не известно ни о присутствии болгар в Херсоне IX в., ни, тем более, об их строительной деятельности. 
+                   Поэтому, если данная надпись — действительно болгарская, то можно предположить также, что этот фрагмент каким-то образом попал в Херсон из 
+                   Болгарии.</p>
+            <p>По форме букв (особенно ипсилона) надпись похожа на <ref type="inscription">V 67</ref><!--byz067--> и датируется IX-Х вв. Характерная форма беты с несомкнутыми полукружиями находит 
+                   параллель в одной из вышеупомянутых болгарских надписей, 827–829 гг. (Beševliev 1963, № 59).</p>
+         </div>
+         <div type="commentary" xml:lang="en">
+            <p>Skubetov found this inscription in a pile of stones (Kostsyushko-Valyuzhinich  1900, 33, № 1). Latyshev twice published this inscription without a reading (IOSPE IV 174; IOSPE I<hi rend="sup">2</hi> 627).</p>
+            <p>1. The preserved letters cannot be anything but a non-Greek name: we can discern a Turkic title "beg" (cf. <ref type="inscription">V 172</ref><!--byz165-->). We can also
+               detect here a typical titulature of Bulgarian kings Omurtag and Malamir (IXth century) κανα συβίγι "Great Khan" (Beševliev 1963, № 55–67; kindly pointed out
+               to us by D.V. Kashtanov), with the addition of a final sigma to create a more Greek-like form of the word.</p>
+            <p>2. Here was probably the date. Number 7 either indicated the year, or the day of the month. A similar abbreviation for the word "indiction" is know from 
+               <ref type="inscription">V 170</ref><!--byz163--> (Xth century). In the Bulgarian inscriptions cited above, a date by indiction is attested only in the building
+               inscription of Omurtag 822 C.E. (Beševliev 1963, № 56). We know nothing either about the presence of Bulgarians in Cherson in the IXth century, or about their
+            building activities. If this inscription is indeed Bulgarian, then we must assume that this fragment was brought to Cherson from Bulgaria.</p>
+            <p>The lettershapes, especially upsilon, resemble those of <ref type="inscription">V 67</ref><!--byz067--> and date to the IX-Xth centuries. The characteristic
+               shape of beta with separated loops is found in one of the Bulgarian inscriptions cited above, dated to 827-829 C.E. (Beševliev 1963, № 59).</p>
+         </div>
+         <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>
+               <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>
+               <persName type="ruler"><name nymRef="—συβηγις"><seg part="F"><supplied reason="lost" cert="low">σ</supplied>υβηγις</seg></name></persName>
+               <lb n="2"/><date><gap reason="lost" extent="unknown" unit="character"/><num value="7">ζ</num>·
+                  <w lemma="ἰνδικτιών"><expan><abbr>ἰ<supplied reason="lost">ν</supplied>δ</abbr><ex>ικτιῶνος</ex></expan></w>
+                  <num><gap reason="lost" quantity="2" unit="character"/></num></date>
+            </ab>
+         </div>
+      </body>
+   </text>
+</TEI>
