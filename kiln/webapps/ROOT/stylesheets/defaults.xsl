@@ -12,8 +12,14 @@
        language contexts in a multilingual site. -->
   <xsl:param name="language" select="''"/>
   <xsl:param name="lang" select="'en'"/>
-
-  <xsl:variable name="kiln:url-lang-suffix" select="if ($lang='ru') then '-ru' else()"/>
+  
+  <xsl:variable name="kiln:url-lang-suffix">
+    <xsl:choose>
+      <xsl:when test="$lang='ru'">-ru</xsl:when>
+      <xsl:when test="$lang='uk'">-uk</xsl:when>
+      <xsl:otherwise></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
 
   <!-- minimum and maximums years of inscriptions -->
@@ -75,7 +81,7 @@
   </xsl:variable>
 
   <xsl:template name="menu-languages">
-    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-ru)?(\.html)(#person[0-9]+)?$', '$1')"/>
+    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-ru | -uk)?(\.html)(#person[0-9]+)?$', '$1')"/>
     <xsl:variable name="url_suffix">
       <xsl:choose>
         <xsl:when test="contains($url, '#')">
@@ -89,6 +95,9 @@
     </li>
     <li class="lang py">
       <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
+    </li>
+    <li class="lang py">
+      <a class="py" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">ук</a>
     </li>
   </xsl:template>
 
