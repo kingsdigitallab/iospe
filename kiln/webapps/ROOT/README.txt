@@ -1,4 +1,4 @@
-This is documentation for the map app in iospe website.
+This is documentation for the map application in the iospe website.
 —————————————————
 
 Files Location:
