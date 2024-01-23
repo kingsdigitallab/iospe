@@ -79,7 +79,7 @@
     </xsl:if>
     <xsl:value-of select="$kiln:images-url"/>
   </xsl:variable>
-
+  
   <xsl:template name="menu-languages">
     <xsl:variable name="url_base">
       <xsl:choose>
@@ -112,7 +112,7 @@
       <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">ук</a>
     </li>
   </xsl:template>
-
+  
   <xsl:template name="jump-to-inscription">
     <!-- searchform -->
     <li class="has-form jump-form-container">
