@@ -81,7 +81,19 @@
   </xsl:variable>
 
   <xsl:template name="menu-languages">
-    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-uk | -ru)?(\.html)(#person[0-9]+)?$', '$1')"/>
+    <xsl:variable name="url_base">
+      <xsl:choose>
+        <xsl:when test="contains($url, '-ru')">
+          <xsl:value-of select="replace($url, '(^.+?)(-ru)(\.html)(#person[0-9]+)?$', '$1')"/>
+        </xsl:when>
+        <xsl:when test="contains($url, '-uk')">
+          <xsl:value-of select="replace($url, '(^.+?)(-uk)(\.html)(#person[0-9]+)?$', '$1')"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="replace($url, '(^.+?)(\.html)(#person[0-9]+)?$', '$1')"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="url_suffix">
       <xsl:choose>
         <xsl:when test="contains($url, '#')">
@@ -91,13 +103,13 @@
       </xsl:choose>
     </xsl:variable>
     <li class="lang en">
-      <a class="en" href="/{$url_base}.html{$url_suffix}" title="English">en</a>
+      <a class="en" href="/{$url_base}.html{$url_suffix}" title="English">XX</a>
     </li>
     <li class="lang py">
       <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
     </li>
-    <li class="lang py">
-      <a class="py" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">ук</a>
+    <li class="lang ук">
+      <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">ук</a>
     </li>
   </xsl:template>
 
