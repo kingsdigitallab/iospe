@@ -81,7 +81,7 @@
   </xsl:variable>
 
   <xsl:template name="menu-languages">
-    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-ru | -uk)?(\.html)(#person[0-9]+)?$', '$1')"/>
+    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-uk | -ru)?(\.html)(#person[0-9]+)?$', '$1')"/>
     <xsl:variable name="url_suffix">
       <xsl:choose>
         <xsl:when test="contains($url, '#')">
