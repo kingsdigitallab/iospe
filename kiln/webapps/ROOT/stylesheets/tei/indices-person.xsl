@@ -154,6 +154,7 @@
                     <th>
                       <xsl:choose>
                         <xsl:when test="$lang = 'ru'">Русский</xsl:when>
+                        <xsl:when test="$lang = 'uk'">Українська</xsl:when>
                         <xsl:otherwise>English</xsl:otherwise>
                       </xsl:choose>
                     </th>
