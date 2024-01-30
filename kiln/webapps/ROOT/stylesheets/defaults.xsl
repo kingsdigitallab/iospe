@@ -103,7 +103,7 @@
       </xsl:choose>
     </xsl:variable>
     <li class="lang en">
-      <a class="en" href="/{$url_base}.html{$url_suffix}" title="English">XX</a>
+      <a class="en" href="/{$url_base}.html{$url_suffix}" title="English">en</a>
     </li>
     <li class="lang py">
       <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
