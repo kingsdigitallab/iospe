@@ -109,7 +109,7 @@
       <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
     </li>
     <li class="lang ук">
-      <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">ук</a>
+      <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">укр</a>
     </li>
   </xsl:template>
   
