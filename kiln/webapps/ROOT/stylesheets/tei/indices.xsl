@@ -17,6 +17,19 @@
 
   
   <xsl:template match="/"/>
+  
+  <!-- THIS VARIABLE TO RESET THE LANG VALUES IS TEMPORARY MEASURE TO ENSURE THAT UKRAINIAN LINKS
+    ARE NOT CREATED AT THIS LEVEL. IT CAN BE REMOVED ONCE UKRAINIAN VERSIONS
+         OF THE INSCRIPTION FILES ARE IN PLACE -->
+  <xsl:variable name="temp-lang-suffix">
+    <xsl:choose>
+      <xsl:when test="$kiln:url-lang-suffix = '-ru'">
+        <xsl:value-of select="$kiln:url-lang-suffix"/>
+      </xsl:when>
+      <xsl:otherwise></xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>   
+  <!-- END TEMP VARIABLE -->
 
   <!-- Some indices require an upper-case grouping. Add the list here -->
   <!-- Pull the right transformation to keep the grouping key unchanged or make it uppercase -->
@@ -157,7 +170,7 @@
             <a>
               <xsl:attribute name="href">
                 <xsl:value-of select="$location"/>
-                <xsl:value-of select="$kiln:url-lang-suffix"/>
+                <xsl:value-of select="$temp-lang-suffix"/>
                 <xsl:text>.html</xsl:text>
               </xsl:attribute>
 
@@ -255,7 +268,7 @@
 
 
   <xsl:template name="link2inscription">
-    <a class="link2inscription" href="/{str[@name='tei-id']}{$kiln:url-lang-suffix}.html">
+    <a class="link2inscription" href="/{str[@name='tei-id']}{$temp-lang-suffix}.html">
       <xsl:if test="str[@name = 'sup']">
         <xsl:text>[</xsl:text>
       </xsl:if>
