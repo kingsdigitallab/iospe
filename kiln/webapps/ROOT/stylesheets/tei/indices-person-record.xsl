@@ -17,7 +17,7 @@
                 <xsl:value-of select="$lang"/>
             </xsl:when>
             <xsl:otherwise>   
-                <xsl:value-of select="'en'"/>
+                <xsl:value-of select="en"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>  
