@@ -108,10 +108,13 @@
       VERSIONS OF THE INSCRIPTION FILES ARE IN PLACE -->
     <xsl:variable name="include_ukr_lang_choice">
       <xsl:choose>
-        <xsl:when test="contains($url_base, 'indices') and contains($url_base, 'index.html')">
+        <xsl:when test="contains($url_base, 'indices') and contains($url_base, 'index')">
           <xsl:text>yes</xsl:text>
         </xsl:when>
-        <xsl:when test="contains($url_base, 'indices') and not(contains($url_base, 'index.html'))">
+        <xsl:when test="(contains($url_base, 'indices') and not(contains($url_base, 'index')))">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, 'toc')">
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:otherwise>
