@@ -32,31 +32,6 @@
   Text -->
 
   <xsl:template match="/"/>
-  
-  <!-- THESE VARIABLES TO RESET THE LANG VALUES ARE TEMPORARY MEASURES TO ENSURE THAT UKRAINIAN LINKS
-    ARE NOT CREATED AT THIS LEVEL. THEY CAN BE REMOVED ONCE UKRAINIAN VERSIONS
-         OF THE INSCRIPTION FILES ARE IN PLACE -->
-  <xsl:variable name="temp-lang-suffix">
-    <xsl:choose>
-      <xsl:when test="$kiln:url-lang-suffix = '-ru'">
-        <xsl:value-of select="$kiln:url-lang-suffix"/>
-      </xsl:when>
-      <xsl:otherwise></xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
-  
-  <xsl:variable name="temp-lang">
-    <xsl:choose>
-      <xsl:when test="$lang = 'ru'">
-        <xsl:value-of select="$lang"/>
-      </xsl:when>
-      <xsl:otherwise>   
-        <xsl:value-of select="en"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>  
-
-<!-- END TEMP VARIABLES -->
 
   <xsl:template name="inscriptionnav">
     <xsl:param name="next_inscr"/>
@@ -87,7 +62,7 @@
               <xsl:attribute name="href">
                 <xsl:if test="$prev">
                   <xsl:value-of select="$prev"/>
-                  <xsl:value-of select="$temp-lang-suffix"/>
+                  <xsl:value-of select="$kiln:url-lang-suffix"/>
                   <xsl:text>.html</xsl:text>
                 </xsl:if>
               </xsl:attribute>
@@ -107,7 +82,7 @@
               <xsl:attribute name="href">
                 <xsl:if test="$next">
                   <xsl:value-of select="$next"/>
-                  <xsl:value-of select="$temp-lang-suffix"/>
+                  <xsl:value-of select="$kiln:url-lang-suffix"/>
                   <xsl:text>.html</xsl:text>
                 </xsl:if>
               </xsl:attribute>
@@ -139,21 +114,21 @@
 
     <!-- origin -->
     <xsl:apply-templates
-      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang = $temp-lang]"/>
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang = $lang]"/>
     <xsl:text> </xsl:text>
 
     <!-- title -->
     <xsl:apply-templates
-      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $temp-lang]"/>
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $lang]"/>
 
 
     <!--<xsl:if
-      test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$temp-lang]/tei:certainty[@cert = 'low']">
+      test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]/tei:certainty[@cert = 'low']">
       <xsl:text> (?)</xsl:text>
     </xsl:if>-->
 
     <xsl:if
-      test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $temp-lang]//tei:origDate)">
+      test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $lang]//tei:origDate)">
 
       <xsl:choose>
         <xsl:when
@@ -164,7 +139,7 @@
           <xsl:text>, </xsl:text>
           <!-- origDate -->
           <xsl:value-of
-            select="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = $temp-lang]"
+            select="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = $lang]"
           />
         </xsl:otherwise>
       </xsl:choose>
@@ -272,7 +247,7 @@
       <div class="large-10 columns details">
         <!-- Type of monument (if exists) -->
         <xsl:if
-          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $temp-lang]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -282,7 +257,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $temp-lang]"/>
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -291,7 +266,7 @@
 
         <!-- Material (if exists) -->
         <xsl:if
-          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $temp-lang]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -301,7 +276,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $temp-lang]"/>
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -328,7 +303,7 @@
 
         <!-- Description and condition (if exists) -->
         <xsl:if
-          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $temp-lang) and (normalize-space(text()[1])!='')]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $lang) and (normalize-space(text()[1])!='')]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -338,7 +313,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang = $temp-lang]/node()"/>
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang = $lang]/node()"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -346,12 +321,12 @@
         </xsl:if>
 
         <xsl:if
-          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/(tei:objectType | tei:material | tei:dimensions | tei:p)[@xml:lang = $temp-lang]">
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/(tei:objectType | tei:material | tei:dimensions | tei:p)[@xml:lang = $lang]">
           <!-- DEBUG <br/> -->
         </xsl:if>
 
         <!-- Origin -->
-        <xsl:if test="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $temp-lang]">
+        <xsl:if test="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -361,7 +336,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $temp-lang]"/>
+                  select="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -380,7 +355,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:seg[@xml:lang = $temp-lang]/tei:placeName[@type = 'ancientFindspot']"/>
+                  select="tei:seg[@xml:lang = $lang]/tei:placeName[@type = 'ancientFindspot']"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -396,7 +371,7 @@
 
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:seg[@xml:lang = $temp-lang]/tei:rs[@type = 'context']"/>
+                <xsl:apply-templates select="tei:seg[@xml:lang = $lang]/tei:rs[@type = 'context']"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -413,7 +388,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:seg[@xml:lang = $temp-lang]/tei:rs[@type = 'circumstances']"/>
+                  select="tei:seg[@xml:lang = $lang]/tei:rs[@type = 'circumstances']"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -423,7 +398,7 @@
         <!-- Find place -->
         <xsl:if
           test="
-            tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $temp-lang]
+            tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $lang]
             | tei:history/tei:provenance[@type = 'found']">
           <!-- DEBUG <br/> -->
         </xsl:if>
@@ -440,7 +415,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:history/tei:provenance[@type = 'observed'][not(@subtype)]/tei:seg[@xml:lang = $temp-lang]"/>
+                  select="tei:history/tei:provenance[@type = 'observed'][not(@subtype)]/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -449,7 +424,7 @@
 
         <!-- Institution and Inventory -->
         <xsl:for-each
-          select="tei:msIdentifier/tei:altIdentifier[@xml:lang = $temp-lang or not(@xml:lang)]">
+          select="tei:msIdentifier/tei:altIdentifier[@xml:lang = $lang or not(@xml:lang)]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -490,7 +465,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="tei:history/tei:provenance[@type = 'observed'][@subtype = 'autopsy']/tei:seg[@xml:lang = $temp-lang]"/>
+                  select="tei:history/tei:provenance[@type = 'observed'][@subtype = 'autopsy']/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -792,8 +767,8 @@
               </div>
               <div class="large-9 columns">
                 <p>
-                  <xsl:if test="tei:seg[@xml:lang = $temp-lang][normalize-space(.) != '']">
-                    <xsl:apply-templates select="tei:seg[@xml:lang = $temp-lang]"/>
+                  <xsl:if test="tei:seg[@xml:lang = $lang][normalize-space(.) != '']">
+                    <xsl:apply-templates select="tei:seg[@xml:lang = $lang]"/>
                     <xsl:text>&#160;</xsl:text>
                   </xsl:if>
                   <xsl:if test="tei:dimensions">
@@ -816,7 +791,7 @@
             <div class="large-9 columns">
               <p>
                 <xsl:apply-templates
-                  select="$ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:seg[@xml:lang = $temp-lang]"/>
+                  select="$ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -838,7 +813,7 @@
                     test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
                     <xsl:value-of
                       select="
-                        if ($temp-lang = 'ru')
+                        if ($lang = 'ru')
                         then
                           $ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height
                         else
@@ -970,7 +945,7 @@
               <div class="large-9 columns">
                 <p>
                   <xsl:apply-templates
-                    select="$ms_context//tei:msContents/tei:summary/tei:seg[@xml:lang = $temp-lang]"/>
+                    select="$ms_context//tei:msContents/tei:summary/tei:seg[@xml:lang = $lang]"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
@@ -986,9 +961,9 @@
               <div class="large-9 columns">
                 <p>
                   <xsl:value-of
-                    select="upper-case(substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $temp-lang], 1, 1))"/>
+                    select="upper-case(substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $lang], 1, 1))"/>
                   <xsl:value-of
-                    select="substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $temp-lang], 2)"/>
+                    select="substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $lang], 2)"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
@@ -1005,7 +980,7 @@
                 <p>
                   <xsl:choose>
                     <xsl:when
-                      test="$temp-lang = 'ru' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      test="$lang = 'ru' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="token">
@@ -1027,7 +1002,7 @@
                       <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
                     <xsl:when
-                      test="$temp-lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:variable name="crit" select="/aggregation/crit"/>
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
@@ -1353,18 +1328,18 @@
           <div class="large-10 columns details">
             <!-- N.B. Leaving @n=none and @n=notyet even though they are not used in corpus yet -->
             <xsl:choose>
-              <xsl:when test="//tei:div[@type = 'translation'][@n = 'none'][@xml:lang = $temp-lang]">
+              <xsl:when test="//tei:div[@type = 'translation'][@n = 'none'][@xml:lang = $lang]">
                 <i18n:text>not usefully translatable</i18n:text>. </xsl:when>
-              <xsl:when test="//tei:div[@type = 'translation'][@n = 'notyet'][@xml:lang = $temp-lang]">
+              <xsl:when test="//tei:div[@type = 'translation'][@n = 'notyet'][@xml:lang = $lang]">
                 <i18n:text>No translation yet (2010)</i18n:text>. </xsl:when>
               <xsl:when test="@n">
                 <xsl:apply-templates mode="multipara"
-                  select="//tei:div[@type = 'translation'][@xml:lang = $temp-lang]/tei:div[@type = 'textpart'][@n = $fullN]"
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"
                 />
               </xsl:when>
               <xsl:when test="//tei:div[@type = 'translation']/tei:div[@type = 'textpart'][@n]">
                 <xsl:for-each
-                  select="//tei:div[@type = 'translation'][@xml:lang = $temp-lang]/tei:div[@type = 'textpart'][@n]">
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n]">
                   <span class="textpartnum">
                     <xsl:value-of select="@n"/>
                   </span>
@@ -1373,7 +1348,7 @@
               </xsl:when>
               <xsl:otherwise>
                 <xsl:apply-templates mode="multipara"
-                  select="//tei:div[@type = 'translation'][@xml:lang = $temp-lang]"/>
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]"/>
               </xsl:otherwise>
             </xsl:choose>
             <xsl:text>&#160;</xsl:text>
@@ -1387,7 +1362,7 @@
         <xsl:if test="not(contains(//tei:body/tei:div[@type='bibliography'][1]/tei:listBibl[1]/tei:bibl[1], 'Ineditum'))">
           <xsl:choose>
           <xsl:when
-            test="//tei:div[@type = 'commentary'][@xml:lang = $temp-lang]/tei:div[@type = 'textpart'][@n = $fullN]">
+            test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
             <div class="row">
               <div class="large-2 columns">
                 <h2>
@@ -1399,13 +1374,13 @@
               </div>
               <div class="large-10 columns details">
                 <xsl:apply-templates mode="multipara"
-                  select="//tei:div[@type = 'commentary'][@xml:lang = $temp-lang]/tei:div[@type = 'textpart'][@n = $fullN]"/>
+                  select="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"/>
                 <xsl:text>&#160;</xsl:text>
               </div>
             </div>
           </xsl:when>
           <xsl:when
-            test="not($fullN) and //tei:div[@type = 'commentary'][@xml:lang = $temp-lang]//tei:p/text()">
+            test="not($fullN) and //tei:div[@type = 'commentary'][@xml:lang = $lang]//tei:p/text()">
             <div class="row">
               <div class="large-2 columns">
                 <h2>
@@ -1417,7 +1392,7 @@
               </div>
               <div class="large-10 columns details">
                 <xsl:apply-templates mode="multipara"
-                  select="//tei:div[@type = 'commentary'][@xml:lang = $temp-lang]"/>
+                  select="//tei:div[@type = 'commentary'][@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </div>
             </div>
@@ -1475,7 +1450,7 @@
   </xsl:template>
 
   <xsl:template match="tei:bibl//tei:seg[@xml:lang]">
-    <xsl:if test="@xml:lang = $temp-lang">
+    <xsl:if test="@xml:lang = $lang">
       <xsl:apply-templates/>
     </xsl:if>
   </xsl:template>
@@ -1527,7 +1502,7 @@
             <xsl:otherwise>
               <xsl:value-of
                 select="
-                  if ($temp-lang = 'ru') then
+                  if ($lang = 'ru') then
                     tei:height
                   else
                     translate(tei:height, ',', '.')"
@@ -1553,7 +1528,7 @@
             <xsl:otherwise>
               <xsl:value-of
                 select="
-                  if ($temp-lang = 'ru') then
+                  if ($lang = 'ru') then
                     tei:width
                   else
                     translate(tei:width, ',', '.')"
@@ -1579,7 +1554,7 @@
             <xsl:otherwise>
               <xsl:value-of
                 select="
-                  if ($temp-lang = 'ru') then
+                  if ($lang = 'ru') then
                     tei:depth
                   else
                     translate(tei:depth, ',', '.')"
@@ -1605,7 +1580,7 @@
             <xsl:otherwise>
               <xsl:value-of
                 select="
-                  if ($temp-lang = 'ru') then
+                  if ($lang = 'ru') then
                     tei:dim[@type = 'diameter']
                   else
                     translate(tei:dim[@type = 'diameter'], ',', '.')"
@@ -1636,12 +1611,12 @@
         <!-- Thumbnail image -->
         <img src="https://loris.kdl.kcl.ac.uk/iospe2/webroot/images/inscriptions/{@url}.jp2/full/100,100/0/default.jpg">
           <!-- @alt info -->
-          <xsl:if test="string(tei:desc[@xml:lang = $temp-lang])">
+          <xsl:if test="string(tei:desc[@xml:lang = $lang])">
             <xsl:attribute name="alt">
-              <xsl:value-of select="tei:desc[@xml:lang = $temp-lang]"/>
+              <xsl:value-of select="tei:desc[@xml:lang = $lang]"/>
             </xsl:attribute>
             <xsl:attribute name="title">
-              <xsl:value-of select="tei:desc[@xml:lang = $temp-lang]"/>
+              <xsl:value-of select="tei:desc[@xml:lang = $lang]"/>
             </xsl:attribute>
           </xsl:if>
         </img>
@@ -1651,7 +1626,7 @@
     <!--
     <dl style="width: 112px;" xsl:exclude-result-prefixes="tei">
       <dt>
-        <xsl:value-of select="tei:desc[@xml:lang=$temp-lang]"/>
+        <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
       </dt>
       <dd style="height: 106px;">
         <!-\- Full size popup -\->
@@ -1661,9 +1636,9 @@
           <!-\- Thumbnail image -\->
           <img src="/iip/iipsrv.fcgi?FIF=inscriptions/{@url}.jp2&amp;WID=100&amp;HEI=100&amp;CVT=jpeg">
             <!-\- @alt info -\->
-            <xsl:if test="string(tei:desc[@xml:lang=$temp-lang])">
+            <xsl:if test="string(tei:desc[@xml:lang=$lang])">
               <xsl:attribute name="alt">
-                <xsl:value-of select="tei:desc[@xml:lang=$temp-lang]"/>
+                <xsl:value-of select="tei:desc[@xml:lang=$lang]"/>
               </xsl:attribute>
             </xsl:if>
           </img>
@@ -1758,7 +1733,7 @@
               />
             </xsl:variable>
             <xsl:value-of
-              select="$surnames/tei:person[@xml:id = $person_id]/tei:persName/tei:surname[@xml:lang = $temp-lang or not(@xml:lang)]"
+              select="$surnames/tei:person[@xml:id = $person_id]/tei:persName/tei:surname[@xml:lang = $lang or not(@xml:lang)]"
             />
           </xsl:when>
           <xsl:otherwise>
@@ -1767,7 +1742,7 @@
                 $author//tei:surname[if (not(@xml:lang)) then
                   true()
                 else
-                  @xml:lang = $temp-lang][1]"
+                  @xml:lang = $lang][1]"
             />
           </xsl:otherwise>
         </xsl:choose>
@@ -1778,7 +1753,7 @@
             normalize-space($author//tei:forename[if (not(@xml:lang)) then
               true()
             else
-              @xml:lang = $temp-lang][1])"
+              @xml:lang = $lang][1])"
         />
       </xsl:when>
       <xsl:otherwise>
@@ -1787,7 +1762,7 @@
             normalize-space($author//tei:*[if (not(@xml:lang)) then
               true()
             else
-              @xml:lang = $temp-lang][1])"
+              @xml:lang = $lang][1])"
         />
       </xsl:otherwise>
     </xsl:choose>
@@ -1818,13 +1793,13 @@
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ'">
           <xsl:text>НЭПХ I</xsl:text> 
-        <xsl:if test="$temp-lang = 'en'">  
+        <xsl:if test="$lang = 'en'">  
             <xsl:text> (Solomonik 1964)</xsl:text>
         </xsl:if>
         </xsl:when>
         <xsl:when test="@xml:id = 'НЭПХ2'">
           <xsl:text>НЭПХ II</xsl:text>
-          <xsl:if test="$temp-lang = 'en'">  
+          <xsl:if test="$lang = 'en'">  
             <xsl:text> (Solomonik 1973)</xsl:text>
           </xsl:if>
         </xsl:when>
