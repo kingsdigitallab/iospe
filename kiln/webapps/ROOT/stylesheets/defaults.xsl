@@ -167,9 +167,27 @@
   </xsl:template>
 
   <xsl:template name="simple-search">
+    <!-- THIS IS A TEMP VARIABLE REPLACING $LANG IN THE TEMPLATE BELOW
+          PURPOSE IS TO KEEP THE LANG INPUT TO ENGLISH OR RUSSIAN
+         THIS MAKESHIFT SOLUTION CAN GO ONCE UKRAINIAN INSCRIPTIONS ARE AVAILABLE-->
+    <xsl:variable name="temporary-lang">
+      <xsl:choose>
+        <xsl:when test="$lang = 'ru'">
+          <xsl:value-of select="$lang"/>
+        </xsl:when>
+        <xsl:when test="$lang = 'en'">
+          <xsl:value-of select="$lang"/>
+        </xsl:when>
+        <xsl:when test="$lang = 'uk'">
+          <xsl:text>en</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <!-- END OF TEMP VARIABLE -->
+    
     <!-- searchform -->
     <li class="has-form">
-      <form id="simpleSearchForm" method="get" action="{concat('/search/', $lang, '/-500/1800/')}">
+      <form id="simpleSearchForm" method="get" action="{concat('/search/', $temporary-lang, '/-500/1800/')}">
         <div class="row collapse">
           <div class="small-12 columns">
             <input id="query" name="query" type="text" placeholder="__search_box_placeholder"
