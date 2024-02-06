@@ -129,6 +129,9 @@
         <xsl:when test="contains($url_base, '5.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
+        <xsl:when test="contains($url_base, 'corpus/maps')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
         <xsl:otherwise>
           <xsl:text>yes</xsl:text>
         </xsl:otherwise>
