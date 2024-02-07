@@ -1,0 +1,76 @@
+name: iospe
+
+x-var: &VIRTUAL_HOST "iospe-os.kdl.kcl.ac.uk,iospe.app.cch.kcl.ac.uk,localhost,127.0.0.1"
+
+services:
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:1.4
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      PROXY_CONNECT_TIMEOUT: 300
+
+  tomcat:
+    image: tomcat:9-jdk17
+    restart: unless-stopped
+    expose:
+      - 8080
+    volumes:
+      - ../kiln/webapps/ROOT:/usr/local/tomcat/webapps/ROOT
+    environment:
+      CATALINA_OPTS: "-Xmx2048m"
+      VIRTUAL_HOST: *VIRTUAL_HOST
+      VIRTUAL_PATH: "/"
+      VIRTUAL_PROTO: http
+      VIRTUAL_PORT: 8080
+
+  solr:
+    image: solr:8-slim
+    restart: unless-stopped
+    expose:
+      - 8983
+    volumes:
+      - ../volumes/solr-conf:/solr-conf
+      - ../volumes/solr:/var/solr
+    command:
+      - /bin/sh
+      - -xc
+      - chown -R 8983:8983 /var/solr && solr-precreate collection /solr-conf
+
+  nginx:
+    build:
+      context: ..
+      dockerfile: ./compose/nginx/Dockerfile
+    restart: unless-stopped
+    expose:
+      - 8001
+    volumes:
+      - ../kiln/webapps/ROOT/assets:/usr/share/nginx/assets:ro
+      - ../kiln/webapps/ROOT/content/images:/usr/share/nginx/images:ro
+    environment:
+      VIRTUAL_HOST: *VIRTUAL_HOST
+      VIRTUAL_PATH: "~^/(assets/|images/|robots.txt)"
+      VIRTUAL_PROTO: http
+      VIRTUAL_PORT: 8001
+
+  cantaloupe:
+    image: islandora/cantaloupe:3
+    restart: unless-stopped
+    expose:
+      - 8182
+    volumes:
+      - ../volumes/images:/images:ro
+    environment:
+      CANTALOUPE_CACHE_SERVER_DERIVATIVE_ENABLED: true
+      CANTALOUPE_CACHE_SERVER_DERIVATIVE: FilesystemCache
+      CANTALOUPE_FILESYSTEMSOURCE_BASICLOOKUPSTRATEGY_PATH_PREFIX: "/images/"
+      CANTALOUPE_HEAP_MAX: 4G
+      CANTALOUPE_HEAP_MIN: 2G
+      CANTALOUPE_SOURCE_STATIC: FilesystemSource
+      VIRTUAL_HOST: *VIRTUAL_HOST
+      VIRTUAL_PATH: "/iiif/"
+      VIRTUAL_PROTO: http
+      VIRTUAL_PORT: 8182

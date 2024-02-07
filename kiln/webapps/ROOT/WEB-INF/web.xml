@@ -60,8 +60,7 @@
     <!--
     <init-param>
       <param-name>force-property</param-name>
-      <param-value>
-        org.apache.commons.logging.Log=org.apache.commons.logging.impl.LogKitLogger
+      <param-value> org.apache.commons.logging.Log=org.apache.commons.logging.impl.LogKitLogger
       </param-value>
     </init-param>
     -->
@@ -97,8 +96,7 @@
       This parameter indicates the category id of the logger from the LogKit
       management configuration for the Cocoon engine.
       This logger is used for all components described in the cocoon.xconf
-      and sitemap.xmap file not having specified a logger with the
-      logger="..." attribute in the component configuration file.
+      and sitemap.xmap file not having specified a logger with the logger="..." attribute in the component configuration file.
     -->
     <init-param>
       <param-name>cocoon-logger</param-name>
@@ -440,4 +438,8 @@
     <mime-type>text/plain</mime-type>
   </mime-mapping>
 
+  <welcome-file-list>
+    <!-- Prevent recent versions of Tomcat from appending index.html to / URLs. -->
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

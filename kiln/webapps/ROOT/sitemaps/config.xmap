@@ -24,11 +24,9 @@
     </map:transformers>
 
     <map:selectors>
-      <map:selector logger="sitemap.selector.exception" name="exception"
-        src="org.apache.cocoon.selection.ExceptionSelector">
+      <map:selector logger="sitemap.selector.exception" name="exception" src="org.apache.cocoon.selection.ExceptionSelector">
         <exception class="org.apache.cocoon.ResourceNotFoundException" name="not-found"/>
-        <exception class="org.apache.cocoon.components.flow.InvalidContinuationException"
-          name="invalid-continuation"/>
+        <exception class="org.apache.cocoon.components.flow.InvalidContinuationException" name="invalid-continuation"/>
         <exception class="java.lang.IllegalArgumentException" name="illegal-argument"/>
         <!-- The statement below tells the selector to unroll as much
              exceptions as possible -->
@@ -37,8 +35,7 @@
     </map:selectors>
 
     <map:serializers>
-      <map:serializer logger="sitemap.serializer.xml" mime-type="text/xml" name="xml_nodecl"
-        src="org.apache.cocoon.serialization.XMLSerializer">
+      <map:serializer logger="sitemap.serializer.xml" mime-type="text/xml" name="xml_nodecl" src="org.apache.cocoon.serialization.XMLSerializer">
         <omit-xml-declaration>yes</omit-xml-declaration>
       </map:serializer>
     </map:serializers>
@@ -59,7 +56,7 @@
         <rdf-base-uri/>
         <sesame-server>http://localhost:8080/openrdf-sesame/</sesame-server>
         <sesame-server-repository/>
-        <solr-server>http://127.0.0.1:8983/solr/liv/</solr-server>
+        <solr-server>http://solr:8983/solr/collection/</solr-server>
       </global-variables>
     </map:component-configurations>
 

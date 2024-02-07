@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-  xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
+  xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:local="http://www.cch.kcl.ac.uk/kiln/local/1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -25,9 +27,7 @@
 
   <xsl:variable name="file-path-end" select="substring-after($file-path, 'inscriptions/')"/>
 
-  <xsl:template
-    match="/aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]"
-    mode="identifier_fields">
+  <xsl:template match="/aggregation/document/tei:TEI[tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[@type = 'filename']]" mode="identifier_fields">
     <xsl:param name="idno" select="none"/>
     <xsl:param name="dt" select="'none'"/>
     <xsl:param name="suffix" select="''"/>
@@ -84,8 +84,7 @@
 
   <xsl:template name="make_inscription-has-date">
     <field name="inscription-has-date">
-      <xsl:if
-        test="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
+      <xsl:if test="ancestor::aggregation/document/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)]/tei:origDate">
         <xsl:text>yes</xsl:text>
       </xsl:if>
     </field>
@@ -149,10 +148,10 @@
 
       <xsl:for-each select="$document/tei:list/tei:item[@xml:id = $ref]">
         <field name="document-type">
-          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+          <xsl:value-of select="local:replace-spaces(tei:term[@xml:lang = 'uk'])"/>
         </field>
         <field name="document-type-ru">
-          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+          <xsl:value-of select="local:replace-spaces(tei:term[@xml:lang = 'ru'])"/>
         </field>
 
         <xsl:for-each select="tei:gloss">
@@ -179,8 +178,7 @@
       <field name="origin-ref">
         <xsl:value-of select="$ref"/>
       </field>
-      <xsl:for-each
-        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+      <xsl:for-each select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
@@ -205,8 +203,7 @@
       <field name="origin-ref">
         <xsl:value-of select="$ref"/>
       </field>
-      <xsl:for-each
-        select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+      <xsl:for-each select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
@@ -242,8 +239,7 @@
     <xsl:if test="normalize-space(@evidence)">
       <xsl:for-each select="tokenize(@evidence, ' ')">
         <xsl:variable name="evidence" select="translate(., '_', ' ')"/>
-        <xsl:variable name="evidence-en"
-          select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1][lower-case(.) = lower-case($evidence)]]"/>
+        <xsl:variable name="evidence-en" select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1][lower-case(.) = lower-case($evidence)]]"/>
 
         <field name="evidence">
           <xsl:value-of select="local:replace-spaces($evidence)"/>
@@ -292,9 +288,7 @@
     <!-- PC: 23 Aug 2016  added barebones field to provide a container for version of the inscription with all special characters stripped out; search strings coming in from the HTML will 
       get the same treatment so that a match should be possible even when the 'normal' text contains a lot of special chars-->
     <field name="barebones">
-      <xsl:value-of
-        select="translate(normalize-unicode(., 'NFD'), '&#x0300;&#x0301;&#x0308;&#x0313;&#x0314;&#x0323;&#x0342;&#x0345;&#x02bc;&#x02bd;&#x0302;&#x0340;&#x0341;&#x0343;&#x0344;', '')"
-      />
+      <xsl:value-of select="translate(normalize-unicode(., 'NFD'), '&#x0300;&#x0301;&#x0308;&#x0313;&#x0314;&#x0323;&#x0342;&#x0345;&#x02bc;&#x02bd;&#x0302;&#x0340;&#x0341;&#x0343;&#x0344;', '')" />
     </field>
     <!-- END TEST -->
     <field name="lemma">
@@ -304,16 +298,7 @@
             <xsl:apply-templates mode="#current"/>
     THE #current MODE WAS DOCUMENT BODY WHICH WE NO LONGER HAVE APPLYING TO OTHER TEMPLATES
     HOWEVER THERE WERE ONLY A FEW OTHER TEMPLATES WHICH BOTH (1) MATCH CHILDREN OF tei:div[@type = 'edition']
-    AND (2) ARE mode="document-body" AND THESE WERE:
-      
-    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']"
-    mode="document-body"
-    
-    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']"
-    mode="document-body"
-    
-    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']"
-    mode="document-body"
+    AND (2) ARE mode="document-body" AND THESE WERE: match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']" mode="document-body" match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']" mode="document-body" match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']" mode="document-body"
     
     SO IN OTHER WORDS WE WOULD ACHIEVE THE SAME THING BY ADDING HERE:
          <xsl:apply-templates mode="persnames_fields"/>
@@ -321,9 +306,7 @@
     -->
   </xsl:template>
 
-  <xsl:template
-    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']"
-    mode="persnames_fields">
+  <xsl:template match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'divine']" mode="persnames_fields">
     <field name="persnames">
       <xsl:value-of select="local:replace-spaces('divine, religious, or mythic figures')"/>
     </field>
@@ -335,9 +318,7 @@
     </field>
   </xsl:template>
 
-  <xsl:template
-    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']"
-    mode="persnames_fields">
+  <xsl:template match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'ruler']" mode="persnames_fields">
     <field name="persnames">
       <xsl:value-of select="local:replace-spaces('rulers')"/>
     </field>
@@ -349,9 +330,7 @@
     </field>
   </xsl:template>
 
-  <xsl:template
-    match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']"
-    mode="persnames_fields">
+  <xsl:template match="/aggregation/document/tei:TEI/tei:text/tei:body/tei:div[@type = 'edition']//tei:persName[@type = 'attested']" mode="persnames_fields">
     <field name="persnames">
       <xsl:value-of select="local:replace-spaces('attested persons')"/>
     </field>
@@ -394,7 +373,7 @@
 
   <xsl:template match="tei:w[@lemma]" mode="lemma">
     <xsl:value-of select="@lemma"/>
-    <xsl:text> </xsl:text>
+    <xsl:text></xsl:text>
   </xsl:template>
 
   <xsl:template match="tei:name[@nymRef] | tei:placeName[@nymRef]" mode="lemma">
@@ -406,19 +385,19 @@
         <xsl:value-of select="@nymRef"/>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:text> </xsl:text>
+    <xsl:text></xsl:text>
   </xsl:template>
 
 
   <xsl:template match="tei:app" mode="apparatus">
     <xsl:apply-templates mode="#current" select="tei:lem"/>
-    <xsl:text> </xsl:text>
+    <xsl:text></xsl:text>
     <xsl:apply-templates mode="#current" select="tei:rdg"/>
   </xsl:template>
 
   <xsl:template match="tei:rdg" mode="apparatus">
     <xsl:apply-templates mode="#current"/>
-    <xsl:text> </xsl:text>
+    <xsl:text></xsl:text>
   </xsl:template>
 
   <xsl:template match="tei:note" mode="apparatus"/>
