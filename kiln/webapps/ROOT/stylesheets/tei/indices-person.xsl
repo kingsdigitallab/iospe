@@ -16,14 +16,33 @@
   <!-- ************************************* -->
   <!-- ********** Global variables ********* -->
   <!-- ************************************* -->
-  <xsl:variable name="lang-suffix">
+  
+  <!-- THIS VARIABLE IS A TEMPORARY MEASURE TO ENSURE THAT NO UKRAINIAN LINKS ARE MADE 
+    AT THIS LEVEL. IT CAN BE REMOVED ONCE UKRAINIAN VERSIONS OF THE INSCRIPTION FILES ARE IN PLACE -->
+  <xsl:variable name="temp-lang-suffix">
+    <xsl:choose>
+      <xsl:when test="$lang = 'ru'">
+        <xsl:value-of select="concat('-', $lang)"/>
+      </xsl:when>
+      <xsl:otherwise>   
+        <xsl:value-of select="en"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>  
+  <!-- END -->
+  
+  <!-- Below is the usual version of the variable for setting the lang suffix -->
+  <!--<xsl:variable name="lang-suffix">
     <xsl:choose>
       <xsl:when test="$lang != 'en'">
         <xsl:value-of select="concat('-', $lang)"/>
       </xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
-  </xsl:variable>
+  </xsl:variable>-->
+  
+  
+  
   <!-- For display "sort by date" the following variables help us
     create the pagination list at top of table and to associate the
     correct Attested Person names with each era+century value -->
@@ -126,7 +145,7 @@
           </xsl:if>
         </xsl:attribute>
         <p class="title" data-section-title="true">
-          <a href="../letters/A{$lang-suffix}.html">
+          <a href="../letters/A{$temp-lang-suffix}.html">
 
             <i18n:text>Sort by name</i18n:text>
           </a>
@@ -154,6 +173,7 @@
                     <th>
                       <xsl:choose>
                         <xsl:when test="$lang = 'ru'">Русский</xsl:when>
+                        <xsl:when test="$lang = 'uk'">Українська</xsl:when>
                         <xsl:otherwise>English</xsl:otherwise>
                       </xsl:choose>
                     </th>
@@ -196,7 +216,7 @@
           </xsl:if>
         </xsl:attribute>
         <p class="title" data-section-title="true">
-          <a href="../dates/{$earliest_century}_{$earliest_era_prefix}{$lang-suffix}.html">
+          <a href="../dates/{$earliest_century}_{$earliest_era_prefix}{$temp-lang-suffix}.html">
             <i18n:text>Sort by date</i18n:text>
           </a>
         </p>
@@ -220,7 +240,7 @@
                             <xsl:text>current</xsl:text>
                           </xsl:if>
                         </xsl:attribute>
-                        <a href="{translate(., '-', '_')}{$lang-suffix}.html">
+                        <a href="{translate(., '-', '_')}{$temp-lang-suffix}.html">
                           <xsl:value-of select="substring-before(., '-')"/>
                         </a>
                       </li>
@@ -243,7 +263,7 @@
                           <xsl:text>current</xsl:text>
                         </xsl:if>
                       </xsl:attribute>
-                      <a href="{translate(., '-', '_')}{$lang-suffix}.html">
+                      <a href="{translate(., '-', '_')}{$temp-lang-suffix}.html">
                         <xsl:value-of select="substring-before(., '-')"/>
                       </a>
                     </li>

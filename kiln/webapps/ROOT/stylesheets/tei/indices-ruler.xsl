@@ -14,6 +14,20 @@
   <xsl:param name="lang"/>
 
   <xsl:template match="/"/>
+  
+  <!-- THIS VARIABLE IS A TEMPORARY MEASURE TO ENSURE THAT NO UKRAINIAN LINKS ARE MADE 
+    AT THIS LEVEL. IT CAN BE REMOVED ONCE UKRAINIAN VERSIONS OF THE INSCRIPTION FILES ARE IN PLACE -->
+  <xsl:variable name="temp-lang-suffix">
+    <xsl:choose>
+      <xsl:when test="$lang = 'ru'">
+        <xsl:value-of select="$lang"/>
+      </xsl:when>
+      <xsl:otherwise>   
+        <xsl:value-of select="en"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>  
+  <!-- END -->
 
   <!-- set title -->
   <xsl:template name="indexTitlePerson">
@@ -51,9 +65,9 @@
               <a>
                 <xsl:attribute name="name">
                   <xsl:text>date_</xsl:text>
-                  <xsl:value-of select="iospe:normalise_id(tei:head[@xml:lang = $lang])"/>
+                  <xsl:value-of select="iospe:normalise_id(tei:head[@xml:lang = $temp-lang-suffix])"/>
                 </xsl:attribute>
-                <xsl:value-of select="tei:head[@xml:lang = $lang]"/>
+                <xsl:value-of select="tei:head[@xml:lang = $temp-lang-suffix]"/>
               </a>
             </h3>
             <div class="row">
@@ -78,8 +92,8 @@
                   <xsl:for-each
                     select="tei:person[not(@xml:id) or @xml:id = (//result//doc/arr[@name = 'persName-key']/str)]">
                     <xsl:sort
-                      select="concat(tei:floruit[tei:seg[@xml:lang = $lang]]/@notBefore, 'X')"/>
-                    <xsl:sort select="tei:floruit[tei:seg[@xml:lang = $lang]]/@notAfter"/>
+                      select="concat(tei:floruit[tei:seg[@xml:lang = $temp-lang-suffix]]/@notBefore, 'X')"/>
+                    <xsl:sort select="tei:floruit[tei:seg[@xml:lang = $temp-lang-suffix]]/@notAfter"/>
                     <xsl:call-template name="character"/>
                   </xsl:for-each>
                 </tbody>
@@ -108,9 +122,9 @@
               <a>
                 <xsl:attribute name="name">
                   <xsl:text>name_</xsl:text>
-                  <xsl:value-of select="iospe:normalise_id(tei:head[@xml:lang = $lang])"/>
+                  <xsl:value-of select="iospe:normalise_id(tei:head[@xml:lang = $temp-lang-suffix])"/>
                 </xsl:attribute>
-                <xsl:value-of select="tei:head[@xml:lang = $lang]"/>
+                <xsl:value-of select="tei:head[@xml:lang = $temp-lang-suffix]"/>
               </a>
             </h3>
             <div class="row">
@@ -141,7 +155,7 @@
                         replace(
                         replace(
                         normalize-unicode(
-                        normalize-space(tei:persName[@xml:lang = $lang]),
+                        normalize-space(tei:persName[@xml:lang = $temp-lang-suffix]),
                         'NFKD'),
                         '[?\-\.]', '–'),
                         '[^A-Za-z0-9А-Яа-я ]', '')
@@ -170,7 +184,7 @@
 
     <xsl:choose>
       <xsl:when
-        test="($lang = 'ru' and self::node()[@type = 'wp-ru']) or ($lang = 'en' and self::node()[@type = 'wp'])">
+        test="($temp-lang-suffix = 'ru' and self::node()[@type = 'wp-ru']) or ($temp-lang-suffix = 'en' and self::node()[@type = 'wp'])">
         <sup>
           <a>
             <xsl:attribute name="href" select="text()"/>
@@ -207,7 +221,7 @@
     <xsl:variable name="person-xml-id" select="@xml:id"/>
 
     <xsl:variable name="persname_lang">
-      <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
+      <xsl:value-of select="tei:persName[@xml:lang = $temp-lang-suffix]"/>
       <xsl:text> </xsl:text>
     </xsl:variable>
 

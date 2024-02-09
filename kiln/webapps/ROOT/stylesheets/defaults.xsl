@@ -12,12 +12,12 @@
        language contexts in a multilingual site. -->
   <xsl:param name="language" select="''"/>
   <xsl:param name="lang" select="'en'"/>
-  
+
   <xsl:variable name="kiln:url-lang-suffix">
     <xsl:choose>
-      <xsl:when test="$lang='ru'">-ru</xsl:when>
-      <xsl:when test="$lang='uk'">-uk</xsl:when>
-      <xsl:otherwise></xsl:otherwise>
+      <xsl:when test="$lang = 'ru'">-ru</xsl:when>
+      <xsl:when test="$lang = 'uk'">-uk</xsl:when>
+      <xsl:otherwise/>
     </xsl:choose>
   </xsl:variable>
 
@@ -81,24 +81,78 @@
   </xsl:variable>
 
   <xsl:template name="menu-languages">
-    <xsl:variable name="url_base" select="replace($url, '(^.+?)(-ru | -uk)?(\.html)(#person[0-9]+)?$', '$1')"/>
+    <xsl:variable name="url_base">
+      <xsl:choose>
+        <xsl:when test="contains($url, '-ru')">
+          <xsl:value-of select="replace($url, '(^.+?)(-ru)(\.html)(#person[0-9]+)?$', '$1')"/>
+        </xsl:when>
+        <xsl:when test="contains($url, '-uk')">
+          <xsl:value-of select="replace($url, '(^.+?)(-uk)(\.html)(#person[0-9]+)?$', '$1')"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="replace($url, '(^.+?)(\.html)(#person[0-9]+)?$', '$1')"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:variable name="url_suffix">
       <xsl:choose>
         <xsl:when test="contains($url, '#')">
           <xsl:value-of select="substring-after($url, '.html')"/>
         </xsl:when>
-        <xsl:otherwise></xsl:otherwise>
+        <xsl:otherwise/>
       </xsl:choose>
     </xsl:variable>
+
+    <!-- THIS VARIABLE IS A TEMPORARY MEASURE TO ENSURE THAT A UKRAINIAN LANGUAGE
+      CHOICE DOESN'T APPEAR IN CERTAIN CONTEXTS. IT CAN BE REMOVED ONCE UKRAINIAN
+      VERSIONS OF THE INSCRIPTION FILES ARE IN PLACE -->
+    <xsl:variable name="include_ukr_lang_choice">
+      <xsl:choose>
+        <xsl:when test="contains($url_base, 'indices') and contains($url_base, 'index')">
+          <xsl:text>yes</xsl:text>
+        </xsl:when>
+        <xsl:when test="(contains($url_base, 'indices') and not(contains($url_base, 'index')))">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, 'toc')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, '1.')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, '2.')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, '3.')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, '5.')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, 'corpus/maps')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>yes</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <!-- END TEMP VARIABLE -->
+
     <li class="lang en">
       <a class="en" href="/{$url_base}.html{$url_suffix}" title="English">en</a>
     </li>
     <li class="lang py">
       <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
     </li>
-    <li class="lang py">
-      <a class="py" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">ук</a>
-    </li>
+    <xsl:choose>
+      <xsl:when test="$include_ukr_lang_choice = 'yes'">
+        <li class="lang ук">
+          <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">укр</a>
+        </li>
+      </xsl:when>
+      <xsl:otherwise></xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template name="jump-to-inscription">
@@ -116,12 +170,31 @@
   </xsl:template>
 
   <xsl:template name="simple-search">
+    <!-- THIS IS A TEMP VARIABLE REPLACING $LANG IN THE TEMPLATE BELOW
+          PURPOSE IS TO KEEP THE LANG INPUT TO ENGLISH OR RUSSIAN
+         THIS MAKESHIFT SOLUTION CAN GO ONCE UKRAINIAN INSCRIPTIONS ARE AVAILABLE-->
+    <xsl:variable name="temporary-lang">
+      <xsl:choose>
+        <xsl:when test="$lang = 'ru'">
+          <xsl:value-of select="$lang"/>
+        </xsl:when>
+        <xsl:when test="$lang = 'en'">
+          <xsl:value-of select="$lang"/>
+        </xsl:when>
+        <xsl:when test="$lang = 'uk'">
+          <xsl:text>en</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <!-- END OF TEMP VARIABLE -->
+    
     <!-- searchform -->
     <li class="has-form">
-      <form id="simpleSearchForm" method="get" action="{concat('/search/', $lang, '/-500/1800/')}">
+      <form id="simpleSearchForm" method="get" action="{concat('/search/', $temporary-lang, '/-500/1800/')}">
         <div class="row collapse">
           <div class="small-12 columns">
-            <input id="query" name="query" type="text" placeholder="__search_box_placeholder" i18n:attr="placeholder"/>
+            <input id="query" name="query" type="text" placeholder="__search_box_placeholder"
+              i18n:attr="placeholder"/>
             <input id="top-bar-search-dummy" name="top-bar-search-dummy" type="hidden" value="1"/>
           </div>
         </div>
@@ -133,7 +206,7 @@
   <!-- LINKS -->
   <xsl:template match="tei:ref">
     <xsl:choose>
-      <xsl:when test="@type='inscription'">
+      <xsl:when test="@type = 'inscription'">
 
 
         <xsl:analyze-string regex="([IV]{{1,3}})\s(\d{{1,3}}[a-z]?)" select="normalize-space(.)">
@@ -145,19 +218,19 @@
               <xsl:attribute name="href">
                 <xsl:text>/</xsl:text>
                 <xsl:choose>
-                  <xsl:when test="$volume='I'">
+                  <xsl:when test="$volume = 'I'">
                     <xsl:number value="1"/>
                   </xsl:when>
-                  <xsl:when test="$volume='II'">
+                  <xsl:when test="$volume = 'II'">
                     <xsl:number value="2"/>
                   </xsl:when>
-                  <xsl:when test="$volume='III'">
+                  <xsl:when test="$volume = 'III'">
                     <xsl:number value="3"/>
                   </xsl:when>
-                  <xsl:when test="$volume='IV'">
+                  <xsl:when test="$volume = 'IV'">
                     <xsl:number value="4"/>
                   </xsl:when>
-                  <xsl:when test="$volume='V'">
+                  <xsl:when test="$volume = 'V'">
                     <xsl:number value="5"/>
                   </xsl:when>
                 </xsl:choose>
@@ -182,7 +255,7 @@
           </xsl:non-matching-substring>
         </xsl:analyze-string>
       </xsl:when>
-      <xsl:when test="@type='introduction'">
+      <xsl:when test="@type = 'introduction'">
         <xsl:element name="a">
           <xsl:attribute name="href">
             <!-- this needs to be parametrized, and to cater for other "volumes" -->
@@ -190,13 +263,13 @@
             <xsl:text>corpora/byzantine/introduction</xsl:text>
             <xsl:value-of select="$kiln:url-lang-suffix"/>
             <xsl:text>.html#</xsl:text>
-            <xsl:value-of select="translate(normalize-space(.),'.','-')"/>
+            <xsl:value-of select="translate(normalize-space(.), '.', '-')"/>
             <xsl:text>-</xsl:text>
           </xsl:attribute>
           <xsl:apply-templates/>
         </xsl:element>
       </xsl:when>
-      <xsl:when test="@type  = 'external' or @rend = 'external'">
+      <xsl:when test="@type = 'external' or @rend = 'external'">
         <a href="{@target}">
           <xsl:call-template name="external-link"/>
           <xsl:apply-templates/>
@@ -265,7 +338,8 @@
         <xsl:text> </xsl:text>
       </i>
       <xsl:text> </xsl:text>
-      <i18n:text key="__indices_bracket_info">Square brackets [ ] indicate that the name/word is partially or completely restored in this inscription.</i18n:text>
+      <i18n:text key="__indices_bracket_info">Square brackets [ ] indicate that the name/word is
+        partially or completely restored in this inscription.</i18n:text>
     </div>
   </xsl:template>
 
@@ -282,34 +356,37 @@
         name.</i18n:text>
     </div>
   </xsl:template>
-  
+
   <xsl:template name="indices_apl_info">
     <div data-alert="data-alert" class="alert-box secondary">
       <p>
         <xsl:choose>
-        <xsl:when test="$lang='en'">
-          <i class="fa fa-info-circle">
-            <xsl:text> </xsl:text>
-          </i>
-          <xsl:text> </xsl:text>Emdash (—) in a name indicates missing letters at the beginning (see "—" in alphabet bar), middle or end.<br/>
-          <i class="fa fa-info-circle">
-            <xsl:text> </xsl:text>
-          </i>
-          <xsl:text> </xsl:text>Hyphen ( - ) indicates a hyphenated name.<br/>
-          <i class="fa fa-info-circle">
-            <xsl:text> </xsl:text>
-          </i>
-          <xsl:text> </xsl:text>Square brackets [ ] indicate that the name is partially or completely restored in this inscription.<br/>
-          <i class="fa fa-info-circle">
-            <xsl:text> </xsl:text>
-          </i>
-          <xsl:text> </xsl:text>Pilcrow (¶) links to a permanent web address for each person, for referencing in external prosopographical databases.
-        </xsl:when>
+          <xsl:when test="$lang = 'en'">
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Emdash (—) in a name indicates missing letters at the beginning
+            (see "—" in alphabet bar), middle or end.<br/>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Hyphen ( - ) indicates a hyphenated name.<br/>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Square brackets [ ] indicate that the name is partially or
+            completely restored in this inscription.<br/>
+            <i class="fa fa-info-circle">
+              <xsl:text> </xsl:text>
+            </i>
+            <xsl:text> </xsl:text>Pilcrow (¶) links to a permanent web address for each person, for
+            referencing in external prosopographical databases. </xsl:when>
           <xsl:otherwise>
             <i class="fa fa-info-circle">
               <xsl:text> </xsl:text>
             </i>
-            <xsl:text> </xsl:text>Длинное тире (—) в начале (см. алфавитную линейку), середине и конце имени обозначает потерянные буквы.<br/>
+            <xsl:text> </xsl:text>Длинное тире (—) в начале (см. алфавитную линейку), середине и
+            конце имени обозначает потерянные буквы.<br/>
             <i class="fa fa-info-circle">
               <xsl:text> </xsl:text>
             </i>
@@ -317,40 +394,41 @@
             <i class="fa fa-info-circle">
               <xsl:text> </xsl:text>
             </i>
-            <xsl:text> </xsl:text>Квадратные скобки [ ] означают, что имя частично или полностью восстановлено в тексте.<br/>
+            <xsl:text> </xsl:text>Квадратные скобки [ ] означают, что имя частично или полностью
+            восстановлено в тексте.<br/>
             <i class="fa fa-info-circle">
               <xsl:text> </xsl:text>
             </i>
-            <xsl:text> </xsl:text>Знак абзаца (¶) отсылает к постоянному адресу в сети, созданного для каждого лица, для ссылок в электронных базах данных.
-          </xsl:otherwise>
+            <xsl:text> </xsl:text>Знак абзаца (¶) отсылает к постоянному адресу в сети, созданного
+            для каждого лица, для ссылок в электронных базах данных. </xsl:otherwise>
         </xsl:choose>
       </p>
     </div>
   </xsl:template>
 
   <!-- GREEK -->
-  <xsl:template match="tei:foreign[@xml:lang='grc']|tei:term[@xml:lang='grc']">
+  <xsl:template match="tei:foreign[@xml:lang = 'grc'] | tei:term[@xml:lang = 'grc']">
     <span lang="grc" xsl:exclude-result-prefixes="tei">
       <xsl:apply-templates/>
     </span>
   </xsl:template>
 
   <!-- Old Church Slavonic -->
-  <xsl:template match="tei:foreign[@xml:lang='cu']|tei:term[@xml:lang='cu']">
+  <xsl:template match="tei:foreign[@xml:lang = 'cu'] | tei:term[@xml:lang = 'cu']">
     <span lang="cu" xsl:exclude-result-prefixes="tei">
       <xsl:apply-templates/>
     </span>
   </xsl:template>
 
   <!-- SUPERSCRIPT -->
-  <xsl:template match="tei:hi[@rend='superscript']">
+  <xsl:template match="tei:hi[@rend = 'superscript']">
     <sup>
       <xsl:apply-templates/>
     </sup>
   </xsl:template>
 
-  <xsl:template match="tei:divGen[@type='pleiadesmap']">
-    <div id="pleiadesmap" style="height:400px"></div>
+  <xsl:template match="tei:divGen[@type = 'pleiadesmap']">
+    <div id="pleiadesmap" style="height:400px"/>
     <br/>
     <small>
       <a

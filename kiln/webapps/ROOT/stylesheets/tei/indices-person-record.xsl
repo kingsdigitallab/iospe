@@ -9,10 +9,24 @@
     <xsl:param name="lang"/>
     
     
+    <!-- THIS VARIABLE IS A TEMPORARY MEASURE TO ENSURE THAT NO UKRAINIAN LINKS ARE MADE 
+    AT THIS LEVEL. IT CAN BE REMOVED ONCE UKRAINIAN VERSIONS OF THE INSCRIPTION FILES ARE IN PLACE -->
+    <xsl:variable name="temp-lang-suffix">
+        <xsl:choose>
+            <xsl:when test="$lang = 'ru'">
+                <xsl:value-of select="$lang"/>
+            </xsl:when>
+            <xsl:otherwise>   
+                <xsl:value-of select="en"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>  
+    <!-- END -->
+    
     <xsl:variable name="record_url">
         <xsl:choose>
-            <xsl:when test="$lang != 'en'">
-                <xsl:value-of select="concat('/indices/person/record/', $id, '-', $lang, '.html')"/>
+            <xsl:when test="$temp-lang-suffix != 'en'">
+                <xsl:value-of select="concat('/indices/person/record/', $id, '-', $temp-lang-suffix, '.html')"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="concat('/indices/person/record/', $id, '.html')"/>
@@ -20,7 +34,7 @@
         </xsl:choose>
     </xsl:variable>
     
-    <xsl:variable name="name" select="string-join(//tei:person[@xml:id = $id]/tei:persName[@xml:lang = $lang], ', ')"/>
+    <xsl:variable name="name" select="string-join(//tei:person[@xml:id = $id]/tei:persName[@xml:lang = $temp-lang-suffix], ', ')"/>
     
     <xsl:template name="personRecordTitle">
         <i18n:text>Person record</i18n:text>: <xsl:value-of select="$name"/>
@@ -73,7 +87,7 @@
         </td>
         <td class="floruit">
             <xsl:value-of
-                select="tei:floruit/tei:seg[@xml:lang = $lang]"/>
+                select="tei:floruit/tei:seg[@xml:lang = $temp-lang-suffix]"/>
         </td>
         <td class="relations">
             <xsl:for-each
@@ -126,8 +140,8 @@
                 <xsl:text> </xsl:text> <xsl:variable name="passives"
                     select="tokenize(substring-after(@passive, '#'), ' #')" as="xs:sequence"/>
                 <xsl:for-each select="//persons/descendant::tei:person[@xml:id = $passives]">
-                    <a href="../record/{@xml:id}-{$lang}.html" i18n:attr="title" title="Permalink">
-                    <xsl:value-of select="tei:persName[@xml:lang = $lang]"/>
+                    <a href="../record/{@xml:id}-{$temp-lang-suffix}.html" i18n:attr="title" title="Permalink">
+                    <xsl:value-of select="tei:persName[@xml:lang = $temp-lang-suffix]"/>
                     </a>
                     <xsl:if test="following::tei:person[@xml:id = $passives]">
                         <xsl:text>, </xsl:text>
