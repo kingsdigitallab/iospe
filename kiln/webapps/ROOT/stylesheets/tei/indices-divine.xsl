@@ -93,7 +93,7 @@
       <xsl:when test="@xml:id">
         <xsl:for-each-group
           select="//result//doc[arr[@name = 'persName-key']/str = current()/@xml:id]"
-          group-by="arr[@name = 'persName-full']/str">
+          group-by="str[@name = 'names-sort']">
           <tr class="index_row">
             <xsl:attribute name="data-group-index" select="position()"/>
             <xsl:if test="position() = 1">
