@@ -38,7 +38,10 @@ services:
     command:
       - /bin/sh
       - -xc
-      - chown -R 8983:8983 /var/solr && solr-precreate collection /solr-conf
+      - |
+        chown -R 8983:8983 /var/solr
+        cp /solr-conf/managed-schema /var/solr/data/collection || echo 'Core does not exist, creating...'
+        solr-precreate collection /solr-conf
 
   nginx:
     build:
