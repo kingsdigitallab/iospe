@@ -128,8 +128,7 @@
             </xsl:choose>
           </xsl:variable>
           
-          <!--<xsl:value-of select="concat($vol_sort_A,$ins_sort_A,$let_sort_A)"/>-->
-          <xsl:value-of select="123"/>
+          <xsl:value-of select="concat($vol_sort_A,$ins_sort_A,$let_sort_A)"/>
        
         </xsl:when>
         
@@ -259,8 +258,7 @@
             </xsl:choose>
           </xsl:variable>
           
-          <!--<xsl:value-of select="concat($vol_sort_B,$fasc_sort_B,$coll_sort_B,$ins_sort_B,$let_sort_B)"/>-->
-          <xsl:value-of select="123"/>
+          <xsl:value-of select="concat($vol_sort_B,$fasc_sort_B,$coll_sort_B,$ins_sort_B,$let_sort_B)"/>
           
         </xsl:when>
         
