@@ -10,8 +10,6 @@ services:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-    environment:
-      PROXY_CONNECT_TIMEOUT: 300
 
   tomcat:
     image: tomcat:9-jdk17
