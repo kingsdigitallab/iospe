@@ -1,13 +1,13 @@
 name: iospe
 
-x-var: &VIRTUAL_HOST "iospe-os.kdl.kcl.ac.uk,iospe.app.cch.kcl.ac.uk,localhost,127.0.0.1"
+x-var: &VIRTUAL_HOST "${VIRTUAL_HOST:-iospe-os.kdl.kcl.ac.uk,iospe.app.cch.kcl.ac.uk,localhost,127.0.0.1}"
 
 services:
   nginx-proxy:
     image: nginxproxy/nginx-proxy:1.4
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "${NGINX_PROXY_PORT:-80}:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
