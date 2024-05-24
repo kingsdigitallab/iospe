@@ -1,0 +1,24 @@
+loglevel: "warn"
+paths:
+  - source: "/"
+    maptype: "proxy"
+    target: "http://tomcat:8080/"
+
+  - source: "/admin/"
+    maptype: "proxy"
+    target: "http://tomcat:8080/admin/"
+    authgroups:
+      - "kdl-staff"
+      - "iospe"
+
+  - source: "/iiif/"
+    maptype: "proxy"
+    target: "http://cantaloupe:8182/iiif/"
+
+  - source: "/assets/"
+    maptype: "proxy"
+    target: "http://nginx:8001/assets/"
+
+  - source: "/images/"
+    maptype: "proxy"
+    target: "http://nginx:8001/images/"
