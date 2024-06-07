@@ -17,8 +17,12 @@ paths:
 
   - source: "/assets/"
     maptype: "proxy"
-    target: "http://nginx:8001/assets/"
+    target: "http://nginx:80/assets/"
 
   - source: "/images/"
     maptype: "proxy"
-    target: "http://nginx:8001/images/"
+    target: "http://nginx:80/images/"
+
+  - source: "/robots.txt"
+    maptype: "single-file"
+    target: "/www/robots.txt"
