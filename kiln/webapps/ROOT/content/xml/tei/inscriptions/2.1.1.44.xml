@@ -42,7 +42,7 @@
                                     <dimensions>
                                         <height unit="cm">16.9</height>
                                         <width unit="cm"/>
-                                        <depth unit="cm"></depth>
+                                        <depth unit="cm"/>
                                         <dim type="diameter" unit="cm">12.0</dim>
                                     </dimensions>
                                 </support>
@@ -98,15 +98,13 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <xi:include href="encoding-desc.xml">
-            <xi:fallback><!--encodingDesc should have been included here--></xi:fallback>
-        </xi:include>
+        
         <revisionDesc>
             <change when="2019-01-01" who="IP"/>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface>
+        <surface><graphic url="2010044"><desc xml:lang="en"/><desc xml:lang="ru"/></graphic></surface> <!-- <surface>
             <graphic url="2010044-a">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
@@ -116,7 +114,7 @@
                 <desc xml:lang="ru"/>
             </graphic>
             
-        </surface>
+        </surface> -->
     </facsimile>
     <text>
         <body>
