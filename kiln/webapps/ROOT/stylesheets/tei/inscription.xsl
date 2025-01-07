@@ -152,30 +152,73 @@
     <xsl:param name="num"/>
     <xsl:param name="printCorpus" select="false()"/>
     <xsl:param name="txt" select="false()"/>
-
-    <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
-      <xsl:matching-substring>
-        <xsl:if test="$printCorpus">
-          <xsl:number value="regex-group(1)" format="I"/>
-          <xsl:text>&#160;</xsl:text>
-        </xsl:if>
-        <xsl:choose>
-          <xsl:when test="$txt">
-            <xsl:number format="1"
-              value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-            <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <strong>
-              <xsl:number format="1"
-                value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-              <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-            </strong>
-          </xsl:otherwise>
-        </xsl:choose>
-
-      </xsl:matching-substring>
-    </xsl:analyze-string>
+<!-- choice here because the nums for vols 1, 3, and 5 are just two groups, i.e. x.x, whereas vol 2 nums are always four groups i.e. 2.x.x.x -->
+    <xsl:choose>
+      <xsl:when test="starts-with($num, '2')">   
+        <xsl:analyze-string regex="(\d+)\.(\d+)\.(\d+)\.(\d+[a-z]?)" select="$num">
+          <xsl:matching-substring>
+            <xsl:if test="$printCorpus">
+              <xsl:number value="regex-group(1)" format="I"/>
+              <xsl:text>.</xsl:text>
+            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="$txt">
+                <xsl:number format="1"
+                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                <xsl:text>.</xsl:text>
+                <xsl:number format="1"
+                  value="number(translate(regex-group(3), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(3), '0123456789', '')"/>
+                <xsl:text>.</xsl:text>
+                <xsl:number format="1"
+                  value="number(translate(regex-group(4), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(4), '0123456789', '')"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <strong>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                  <xsl:text>.</xsl:text>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(3), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(3), '0123456789', '')"/>
+                  <xsl:text>.</xsl:text>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(4), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(4), '0123456789', '')"/>
+                </strong>
+              </xsl:otherwise>
+            </xsl:choose>        
+          </xsl:matching-substring>
+        </xsl:analyze-string>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
+          <xsl:matching-substring>
+            <xsl:if test="$printCorpus">
+              <xsl:number value="regex-group(1)" format="I"/>
+              <xsl:text>&#160;</xsl:text>
+            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="$txt">
+                <xsl:number format="1"
+                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <strong>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                </strong>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:matching-substring>
+        </xsl:analyze-string>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="*" mode="copyEpidoc">
@@ -629,7 +672,8 @@
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '1'">© 2017 <i18n:text>Askold
               Ivantchik (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '2'">© 2024 <i18n:text>Irene Polinskaya (edition and translation)</i18n:text>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '2'">© 2024 <i18n:text>Irene
+              Polinskaya (edition and translation)</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
               Makarov (edition), Irene Polinskaya (translation)</i18n:text>
@@ -1044,13 +1088,13 @@
             <!-- PC, 20 Jun 2024:  IP does not want this field to display for volume 2 files, so for now we will wrap the 
               entire chunk of code (which starts with div class-"row") in a choice element to show or not to show depending 
               on what volume the inscription is in -->
-            
+
             <xsl:choose>
               <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
                 <!-- do nothing -->
               </xsl:when>
               <xsl:otherwise>
-                
+
                 <div class="row">
                   <div class="large-3 columns">
                     <h6>
@@ -1064,9 +1108,9 @@
                       </xsl:variable>
                       <xsl:choose>
                         <xsl:when test="
-                          normalize-space($fullN) = '' and
-                          (//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//text()[not(normalize-space(.) = '')]]
-                          or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//tei:ptr])">
+                            normalize-space($fullN) = '' and
+                            (//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//text()[not(normalize-space(.) = '')]]
+                            or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//tei:ptr])">
                           <xsl:for-each
                             select="//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')]/tei:listBibl">
                             <xsl:if test="@n">
@@ -1088,8 +1132,8 @@
                           </xsl:for-each>
                         </xsl:when>
                         <xsl:when test="
-                          //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
-                          or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
+                            //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
+                            or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
                           <xsl:apply-templates
                             select="//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')]/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
                           />
@@ -1102,11 +1146,11 @@
                     </p>
                   </div>
                 </div>
-                
+
               </xsl:otherwise>
             </xsl:choose>
-            
-            
+
+
             <!-- Actual Inscription Data -->
             <div class="row inscription-data">
               <!-- Creates the inscription views from preprocessed files aggregated in the sitemap -->
