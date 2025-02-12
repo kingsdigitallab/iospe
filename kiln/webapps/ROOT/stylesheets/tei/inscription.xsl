@@ -1654,7 +1654,7 @@
       style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
       <!-- Full size popup -->
       <a class="x87" target="_blank"
-        href="/iiif/2/inscriptions%2f{@url}.jp2/full/full/0/default.jpg">
+        href="/iiif/2/inscriptions%2f{@url}.jp2/full/max/0/default.jpg">
         <span>&#160;</span>
         <!-- Thumbnail image -->
         <img src="/iiif/2/inscriptions%2f{@url}.jp2/full/100,100/0/default.jpg">
