@@ -3,11 +3,11 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="ru"/>
-                <title xml:lang="en">Production(?) and unclassified marks</title>
+                <title xml:lang="en">Commercial(?) notation</title>
             </titleStmt>
             <publicationStmt>
                 <authority>King's College London</authority>
-                <idno type="PE">PE2010220</idno>
+                <idno type="PE">PE2010456</idno>
                 <tei:idno xmlns:tei="http://www.tei-c.org/ns/1.0" type="filename">2.1.1.189</tei:idno>
             </publicationStmt>
             <sourceDesc>
@@ -15,25 +15,30 @@
                     <msIdentifier><country/>
                         <altIdentifier xml:lang="ru">
                             <repository>Государственный Эрмитаж</repository>
-                            <idno>Б.75.314</idno>
+                            <idno>Б.87.150</idno>
                         </altIdentifier>
                         <altIdentifier xml:lang="en">
                             <repository>The State Hermitage Museum</repository>
-                            <idno>Б.75.314</idno>
+                            <idno>Б.87.150</idno>
                         </altIdentifier>
                     </msIdentifier>
-                    
+                    <msContents>
+                        <summary corresp="filename.xml#id">
+                            <seg xml:lang="ru"/>
+                            <seg xml:lang="en">Commercial(?) notation.</seg>
+                        </summary>
+                    </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
                                     <objectType xml:lang="ru" ref="monument-search.xml#mon52">Амфора.</objectType>
-                                    <objectType xml:lang="en">Wall fragment.</objectType>
+                                    <objectType xml:lang="en">Amphora handle fragment.</objectType>
                                     
                                     <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
                                     <material xml:lang="en">Clay.</material>
                                     <p xml:lang="ru"/>
-                                    <p xml:lang="en">Amphora, Chios(?), Classical period.</p>
+                                    <p xml:lang="en">Amphora, Attica, 1st half VI century B.C.E.</p>
                                     <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -42,31 +47,42 @@
                                     </dimensions>
                                 </support>
                             </supportDesc>
-                            
+                            <layoutDesc>
+                                <layout>
+                                    <seg xml:lang="ru"/>
+                                    <seg xml:lang="en">Handle, lower part, overside. Originally inscribed on complete vessel.</seg>
+                                </layout>
+                            </layoutDesc>
                         </objectDesc>
-                        
+                        <handDesc>
+                            <handNote>
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
+                                <seg xml:lang="en">Graffito.</seg>
+                                <height unit="cm">1.7</height>
+                            </handNote>
+                        </handDesc>
                     </physDesc>
                     <history>
                         <origin>
                             <origPlace ref="origPlace.xml#p066"/>
                             <seg xml:lang="ru">Борисфен.</seg>
                             <seg xml:lang="en">Borysthenes.</seg>
-                            <origDate notBefore="0001" notAfter="0001" evidence="Датировка_керамики">
+                            <origDate notBefore="0001" notAfter="0001" evidence="Типология керамики">
                                 <seg xml:lang="ru"/>
-                                <seg xml:lang="en">Classical period.</seg>
+                                <seg xml:lang="en">1st half VI century B.C.E.</seg>
                             </origDate>
                         </origin>
                         <provenance type="found">
                             <seg xml:lang="ru">
                                
                                 <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань.</placeName>
-                                <rs type="circumstances">Найден в 1975 г., раскопки Л.В. Копейкиной.</rs>
-                                <rs type="context">Западный участок, квадрат 75a, гумус 0-0.4.</rs>
+                                <rs type="circumstances">Найден в 1987 г., раскопки Я.В. Доманского.</rs>
+                                <rs type="context">Северно-западный участок, раскоп Б, помещение 5/IV.</rs>
                             </seg>
                             <seg xml:lang="en">
                                 <placeName type="ancientFindspot">Berezan.</placeName>
-                                <rs type="circumstances">Found in 1975, excavations of L.V. Kopeykina.</rs>
-                                <rs type="context">Western sector, grid square 75a, humus, 0-0.4 m.</rs>
+                                <rs type="circumstances">Found in 1987, excavations of Ya.V. Domansky.</rs>
+                                <rs type="context">Northwestern sector, Area Б, enclosure 5/IV.</rs>
                             </seg>
                         </provenance>
                         <provenance type="observed">
@@ -78,78 +94,6 @@
                             <seg xml:lang="en">August 2016.</seg>
                         </provenance>
                     </history>
-                    <msPart n="1">
-                        <msIdentifier>
-                            <idno/>
-                        </msIdentifier>
-                        <msContents>
-                            <summary corresp="filename.xml#id">
-                                <seg xml:lang="ru" n="1"/>
-                                <seg xml:lang="en" n="1">Production(?) mark, pre-firing(?).</seg>
-                            </summary>
-                        </msContents>
-                        <physDesc>
-                            <objectDesc>
-                                <layoutDesc>
-                                    <layout>
-                                        <seg xml:lang="ru"/>
-                                        <seg xml:lang="en"/>
-                                    </layout>
-                                </layoutDesc>
-                            </objectDesc>
-                            <handDesc>
-                                <handNote n="1">
-                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито</rs> 
-                                    </seg>
-                                    <seg xml:lang="en">Pre-firing(?) graffito.</seg>
-                                    <height unit="cm"/>
-                                </handNote>
-                            </handDesc>
-                        </physDesc>
-                        <history>
-                            <origin>
-                                <origDate n="1" precision="low" evidence="палеография">
-                                    <seg xml:lang="ru"/>
-                                    <seg xml:lang="en">575-550 B.C.E.</seg>
-                                </origDate>
-                            </origin>
-                        </history>
-                    </msPart>
-                    <msPart n="2">
-                        <msIdentifier>
-                            <idno/>
-                        </msIdentifier>
-                        <msContents>
-                            <summary corresp="filename.xml#id">
-                                <seg xml:lang="ru" n="2"/>
-                                <seg xml:lang="en" n="2">Unclassified (cross-shaped) mark.</seg>
-                            </summary>
-                        </msContents>
-                        <physDesc>
-                            <objectDesc>
-                                <layoutDesc>
-                                    <layout>
-                                        <seg xml:lang="ru"/>
-                                        <seg xml:lang="en">Base, underside.</seg>
-                                    </layout>
-                                </layoutDesc>
-                            </objectDesc>
-                            <handDesc>
-                                <handNote n="2">
-                                    <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
-                                    <seg xml:lang="en">Graffito.</seg>
-                                </handNote>
-                            </handDesc>
-                        </physDesc>
-                        <history>
-                            <origin>
-                                <origDate n="2" precision="low" evidence="палеография">
-                                    <seg xml:lang="ru"/>
-                                    <seg xml:lang="en">575-550 B.C.E.</seg>
-                                </origDate>
-                            </origin>
-                        </history>
-                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -159,20 +103,20 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface><graphic url="2010220-dr"><desc xml:lang="en"/><desc xml:lang="ru"/></graphic></surface> <!-- <surface>
-            <graphic url="2010200-a">
+        <surface><graphic url="2010456-dr"><desc xml:lang="en"/><desc xml:lang="ru"/></graphic></surface> <!-- <surface>
+            <graphic url="2010456-a">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
             </graphic>
-            <graphic url="2010200-b">
+            <graphic url="2010456-b">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
             </graphic>
-            <graphic url="2010200-c">
+            <graphic url="2010456-c">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
             </graphic>
-            <graphic url="2010200-d">
+            <graphic url="2010456-d">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
             </graphic>
@@ -194,55 +138,26 @@
                 
             </div>
             <div type="edition" xml:lang="grc" xml:space="preserve">
-            <div type="textpart" subtype="inscription" n="1">
-               <ab>
-                  <lb n="1"/>
-                   <lb n="2"/>
-               </ab>
-            </div>
-            <div type="textpart" subtype="inscription" n="2">
-               <ab>
-                  <lb n="1"/>
-                  <lb n="2"/>
-               </ab>
-            </div>
+            <ab>
+                        <lb n="1"/><orig>Α</orig><!--Greek text here  -->
+            </ab>
          </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note><!-- copy and paste from Word --></note></app>
+                    <app><note><!-- copy and paster from Word --></note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="ru">
-                <div type="textpart" n="1">
-                    <p/>
-                </div>
-                <div type="textpart" n="2">
-                    <p/>
-                </div>
+                <p/>
             </div>
             <div type="translation" xml:lang="en">
-                <div type="textpart" n="1">
-                    <p/>
-                </div>
-                <div type="textpart" n="2">
-                    <p/>
-                </div>
+                <p/>
             </div>
             <div type="commentary" xml:lang="ru">
-                <div type="textpart" n="1">
-                    <p> </p>
-                </div>
-                <div type="textpart" n="2">
-                    <p/>
-                </div>
+                <p/>
             </div>
             <div type="commentary" xml:lang="en">
-                <div type="textpart" n="1">
-                    <p/>
-                </div>
-                <div type="textpart" n="2">
-                    <p/>
-                </div>
+                <p/>
             </div>
         </body>
     </text>
