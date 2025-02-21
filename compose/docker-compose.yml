@@ -19,7 +19,7 @@ services:
     volumes:
       - ../kiln/webapps/ROOT:/usr/local/tomcat/webapps/ROOT
     environment:
-      CATALINA_OPTS: "-Xmx2048m"
+      CATALINA_OPTS: "${CATALINA_OPTS:--Xmx2048m}"
       VIRTUAL_HOST: *VIRTUAL_HOST
       VIRTUAL_PATH: "/"
       VIRTUAL_PROTO: http
