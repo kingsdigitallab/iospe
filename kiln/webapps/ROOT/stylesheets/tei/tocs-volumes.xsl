@@ -22,7 +22,7 @@
                 I. <i18n:text>Inscriptions of Tyras and vicinity</i18n:text>
             </xsl:when>
             <xsl:when test="starts-with($url, '2')">
-                II. <i18n:text>Inscriptions of Olbia and vicinity. Fascicle 1. Graffiti and Dipinti of Borysthenes/Berezan. Collection of the State Hermitage Museum.</i18n:text>
+                II.1 <i18n:text>Inscriptions of Borysthenes (Berezan)<br/>Part 1 Collection of the State Hermitage Museum</i18n:text>
             </xsl:when>
             <xsl:when test="starts-with($url, '3')">
                 III. <i18n:text>Inscriptions of Chersonesos and vicinity</i18n:text>

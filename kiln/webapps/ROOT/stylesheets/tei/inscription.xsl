@@ -154,6 +154,7 @@
     <xsl:param name="txt" select="false()"/>
 <!-- choice here because the nums for vols 1, 3, and 5 are just two groups, i.e. x.x, whereas vol 2 nums are always four groups i.e. 2.x.x.x -->
     <xsl:choose>
+      
       <xsl:when test="starts-with($num, '2')">   
         <xsl:analyze-string regex="(\d+)\.(\d+)\.(\d+)\.(\d+[a-z]?)" select="$num">
           <xsl:matching-substring>
@@ -170,7 +171,7 @@
                 <xsl:number format="1"
                   value="number(translate(regex-group(3), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
                 <xsl:value-of select="translate(regex-group(3), '0123456789', '')"/>
-                <xsl:text>.</xsl:text>
+                <xsl:text> </xsl:text>
                 <xsl:number format="1"
                   value="number(translate(regex-group(4), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
                 <xsl:value-of select="translate(regex-group(4), '0123456789', '')"/>
@@ -184,7 +185,7 @@
                   <xsl:number format="1"
                     value="number(translate(regex-group(3), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
                   <xsl:value-of select="translate(regex-group(3), '0123456789', '')"/>
-                  <xsl:text>.</xsl:text>
+                  <xsl:text> </xsl:text>
                   <xsl:number format="1"
                     value="number(translate(regex-group(4), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
                   <xsl:value-of select="translate(regex-group(4), '0123456789', '')"/>
@@ -194,6 +195,7 @@
           </xsl:matching-substring>
         </xsl:analyze-string>
       </xsl:when>
+      
       <xsl:otherwise>
         <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
           <xsl:matching-substring>
