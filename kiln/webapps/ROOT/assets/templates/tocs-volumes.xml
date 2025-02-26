@@ -203,6 +203,13 @@
                                 select="('2.1.1.67', '2.1.1.68', '2.1.1.69')"/>
                         </xsl:call-template>
                         <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Board Game</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.70')"/>
+                        </xsl:call-template>
+                        <dt>
                             <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Drawings and
                                 Doodles</i18n:text></strong>
                         </dt>
@@ -242,7 +249,7 @@
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values"
-                                select="('2.1.1.94', '2.1.1.70')"/>
+                                select="('2.1.1.94')"/>
                         </xsl:call-template>
                         <dt>
                             <br/><br/>
