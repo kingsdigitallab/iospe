@@ -91,7 +91,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Одесса.</seg>
-                     <seg xml:lang="en">Odessa.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Odessa.</tei:seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
@@ -135,18 +135,11 @@
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
                		<lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap
-               		   reason="illegible" quantity="1" unit="character"/><orig>Ο</orig><gap
-               		      reason="illegible" quantity="1" unit="character"/><gap
-               		         reason="lost" extent="unknown" unit="character"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig>Ο</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> 
-                                          <persName type="divine" key="sarapis"><name><supplied
-                                             reason="lost">Σ</supplied><unclear>α</unclear>ράπ<supplied
-                                                reason="lost">ιδι,</supplied></name></persName> 
-                                          <persName type="divine" key="isis"><name><supplied reason="lost"
-                                             >Ἴσιδι,</supplied></name></persName> 
-                                          <persName type="divine" key="anubis"><name><supplied reason="lost"
-                                             >Ἀνού</supplied>
+                                          <persName type="divine" key="sarapis"><name><supplied reason="lost">Σ</supplied><unclear>α</unclear>ράπ<supplied reason="lost">ιδι,</supplied></name></persName> 
+                                          <persName type="divine" key="isis"><name><supplied reason="lost">Ἴσιδι,</supplied></name></persName> 
+                                          <persName type="divine" key="anubis"><name><supplied reason="lost">Ἀνού</supplied>
                		<lb n="3" break="no"/><supplied reason="lost">βιδι</supplied></name></persName> <w>θεοῖς</w> 
                                              <w><unclear>σ</unclear><supplied reason="lost">υννάοις</supplied></w>
                		<lb n="4"/><persName type="attested"><name><supplied reason="lost">Δημ</supplied><unclear>ή</unclear>τριος</name> 

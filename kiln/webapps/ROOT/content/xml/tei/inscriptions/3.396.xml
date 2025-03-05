@@ -1,9 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -16,14 +11,14 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country></country>
+               <msIdentifier><country/>
                   <altIdentifier xml:lang="ru">
                      <repository>НЗХТ</repository>
                      <idno>23/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository></repository>
-                     <idno></idno>
+                     <repository/>
+                     <idno/>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
@@ -51,7 +46,7 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="ru"/>
                            <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/></seg>
                         </layout>
                      </layoutDesc>
@@ -89,7 +84,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en"></seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en"/>
                   </provenance>
                   
                </history>
@@ -109,7 +104,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -125,28 +120,22 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl></bibl>
+               <bibl/>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
-               	<lb n="1"/><orig>αθ</orig><gap reason="lost" extent="unknown" unit="character"
-               	/><gap reason="illegible" quantity="1" unit="character"
-               	/><orig><unclear>ων</unclear>ου</orig><gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="2"/><orig>ε</orig><gap reason="lost" extent="unknown" unit="character"/><gap 
-               	   reason="illegible" quantity="1" unit="character"/><w part="F">ορος</w>
+               	<lb n="1"/><orig>αθ</orig><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ων</unclear>ου</orig><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="2"/><orig>ε</orig><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><w part="F">ορος</w>
                                     <space quantity="1" unit="character"/> 
                                     <orig>κ<unclear>λ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>
                                      <w lemma="πολίτης"><supplied reason="lost" cert="high">π</supplied>ολείτης</w>
                	                   <space quantity="1" unit="character"/> 
-               	                   <gap reason="illegible" quantity="1" unit="character"
-               	                   /><gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="4"/><gap reason="lost" extent="unknown" unit="character"
-               	/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ε</unclear></orig>
+               	                   <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               	<lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ε</unclear></orig>
                	                   <w lemma="χαίρω">χαίροις</w> 
-               	                   <orig>ο</orig><gap reason="illegible" quantity="1" unit="character"
-               	                   /><gap reason="lost" extent="unknown" unit="character"/>
+               	                   <orig>ο</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                	<lb n="5"/><space extent="unknown" unit="character"/> 
                	                   <w lemma="γιγνώσκω"><unclear>γ</unclear>νούς</w>
                	                   <gap reason="lost" extent="unknown" unit="character"/>
@@ -174,7 +163,7 @@
             <p>1. перед Ω низ вертикальной линии; 2. перед Ο вертикальная линия — Соломоник.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>
