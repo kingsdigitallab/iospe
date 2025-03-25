@@ -7,7 +7,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:variable name="criteria">
-    <xsl:sequence select="/aggregation/criteria/tei:TEI/tei:text/tei:body/tei:list"/>
+    <xsl:sequence select="/aggregation/criteria/tei:TEI/tei:text/tei:body/tei:ab"/>
   </xsl:variable>
   <xsl:variable name="execution">
     <xsl:sequence select="/aggregation/execution/list"/>
@@ -239,19 +239,20 @@
     <xsl:if test="normalize-space(@evidence)">
       <xsl:for-each select="tokenize(@evidence, ' ')">
         <xsl:variable name="evidence" select="translate(., '_', ' ')"/>
-        <xsl:variable name="evidence-en" select="$criteria/tei:list/tei:item[preceding-sibling::tei:label[1][lower-case(.) = lower-case($evidence)]]"/>
-
-        <field name="evidence">
+        <xsl:variable name="evidence-en" select="$criteria/tei:ab/tei:ab[@type='entry']/tei:seg[@xml:lang='en'][following-sibling::tei:seg[1][lower-case(.) = lower-case($evidence)]]"/>
+        <xsl:variable name="evidence-uk" select="$criteria/tei:ab/tei:ab[@type='entry']/tei:seg[@xml:lang='uk'][preceding-sibling::tei:seg[1][lower-case(.) = lower-case($evidence)]]"/>
+<!-- PC, 24/03/2025: don't know why we need the non-lang-specific field, so commenting it out to see whether anything breaks -->
+        <!--<field name="evidence">
           <xsl:value-of select="local:replace-spaces($evidence)"/>
+        </field>-->
+        <field name="evidence-en">
+          <xsl:value-of select="local:replace-spaces($evidence-en)"/>
         </field>
         <field name="evidence-ru">
           <xsl:value-of select="local:replace-spaces($evidence)"/>
         </field>
-        <field name="evidence">
-          <xsl:value-of select="local:replace-spaces($evidence-en)"/>
-        </field>
-        <field name="evidence-en">
-          <xsl:value-of select="local:replace-spaces($evidence-en)"/>
+        <field name="evidence-uk">
+          <xsl:value-of select="local:replace-spaces($evidence-uk)"/>
         </field>
       </xsl:for-each>
     </xsl:if>
