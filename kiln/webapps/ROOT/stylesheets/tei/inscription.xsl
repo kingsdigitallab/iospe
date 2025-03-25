@@ -1054,7 +1054,11 @@
                     </xsl:when>
                     <xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
-                      <xsl:variable name="crit" select="/aggregation/crit"/>
+                      <xsl:variable name="envalue" select="/aggregation/evidence//arr[@name='evidence-en']/str"/>
+                      <xsl:value-of select="translate($envalue, '_', ' ')"/>
+                      
+                      
+                      <!--<xsl:variable name="crit" select="/aggregation/crit"/>
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="term" select="
@@ -1075,7 +1079,12 @@
                           <xsl:text>, </xsl:text>
                         </xsl:if>
                       </xsl:for-each>
-                      <xsl:text>.&#160;</xsl:text>
+                      <xsl:text>.&#160;</xsl:text>-->
+                    </xsl:when>
+                    <xsl:when
+                      test="$lang = 'uk' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      <xsl:variable name="ukvalue" select="/aggregation/evidence//arr[@name='evidence-uk']/str"/>
+                      <xsl:value-of select="translate($ukvalue, '_', ' ')"/>
                     </xsl:when>
                     <xsl:otherwise>
                       <i18n:text>Not applicable</i18n:text>
