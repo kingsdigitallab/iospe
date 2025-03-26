@@ -1052,19 +1052,16 @@
                       </xsl:for-each>
                       <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
-                    <xsl:when
+                    <!--<xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
-                      <xsl:variable name="envalue" select="/aggregation/evidence//arr[@name='evidence-en']/str"/>
-                      <xsl:value-of select="translate($envalue, '_', ' ')"/>
                       
-                      
-                      <!--<xsl:variable name="crit" select="/aggregation/crit"/>
+                      <xsl:variable name="crit" select="/aggregation/crit"/>
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="term" select="
-                            $crit//tei:label[
+                            $crit//tei:seg[
                             lower-case(.) = lower-case(normalize-space(translate(current(), '_', ' ')))
-                            ]/following-sibling::tei:item[1]"/>
+                            ]/preceding-sibling::tei:seg[1]"/>
 
                         <xsl:choose>
                           <xsl:when test="position() = 1">
@@ -1079,13 +1076,53 @@
                           <xsl:text>, </xsl:text>
                         </xsl:if>
                       </xsl:for-each>
-                      <xsl:text>.&#160;</xsl:text>-->
+                      <xsl:text>.&#160;</xsl:text>
+                    </xsl:when>-->
+                    
+                    <!-- PC, 26 March 2025: the 'when' templates below are what we will use if we can find a way to pass the tei-id as a variable in the solr query in the main.xmap template aggregation -->
+                    
+                    <xsl:when
+                      test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      <xsl:variable name="envalue" select="/aggregation/evidence//arr[@name='evidence-en']/str"/>
+                      <xsl:for-each
+                        select="tokenize(normalize-space($envalue), ' ')">
+                        
+                        <xsl:choose>
+                          <xsl:when test="position() = 1">
+                            <xsl:value-of select="upper-case(substring(current(), 1, 1))"/>
+                            <xsl:value-of select="translate(substring(current(), 2), '_', ' ')"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="translate(lower-case(current()), '_', ' ')"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
                     </xsl:when>
                     <xsl:when
                       test="$lang = 'uk' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:variable name="ukvalue" select="/aggregation/evidence//arr[@name='evidence-uk']/str"/>
-                      <xsl:value-of select="translate($ukvalue, '_', ' ')"/>
+                      <xsl:for-each
+                        select="tokenize(normalize-space($ukvalue), ' ')">
+                        
+                        <xsl:choose>
+                          <xsl:when test="position() = 1">
+                            <xsl:value-of select="upper-case(substring(current(), 1, 1))"/>
+                            <xsl:value-of select="translate(substring(current(), 2), '_', ' ')"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="translate(lower-case(current()), '_', ' ')"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
                     </xsl:when>
+                    
+
                     <xsl:otherwise>
                       <i18n:text>Not applicable</i18n:text>
                       <xsl:text>.&#160;</xsl:text>

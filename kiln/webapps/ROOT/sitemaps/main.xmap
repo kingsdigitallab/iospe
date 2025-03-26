@@ -317,7 +317,7 @@
                   src="cocoon://_internal/solr/query/q=dt:inscription&amp;fl=tei-id&amp;sort=sortable-id+asc&amp;start=0&amp;rows=1000"/>
               
               <map:part element="evidence"
-                  src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=tei-id:2.1.1.6&amp;fl=evidence-ru,evidence-en,evidence-uk&amp;rows=10"/>
+                  src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=tei-id:{1}&amp;fl=evidence-ru,evidence-en,evidence-uk&amp;rows=10"/>
               <map:part src="cocoon:/views/interpretive/{1}.xml/off" element="v_in"/>
               <map:part src="cocoon:/views/interpretive/{1}.xml/on" element="v_ve"/>
               <!-- verse -->
