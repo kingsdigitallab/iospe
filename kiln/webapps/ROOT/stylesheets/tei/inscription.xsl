@@ -1052,7 +1052,7 @@
                       </xsl:for-each>
                       <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
-                    <!--<xsl:when
+                    <xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       
                       <xsl:variable name="crit" select="/aggregation/crit"/>
@@ -1077,11 +1077,11 @@
                         </xsl:if>
                       </xsl:for-each>
                       <xsl:text>.&#160;</xsl:text>
-                    </xsl:when>-->
+                    </xsl:when>
                     
-                    <!-- PC, 26 March 2025: the 'when' templates below are what we will use if we can find a way to pass the tei-id as a variable in the solr query in the main.xmap template aggregation -->
+                    <!-- PC, 26 March 2025: Ideally the 'when' templates below are what we should use, but sadly there is a major inconvenience caused by having various ms parts -->
                     
-                    <xsl:when
+                    <!--<xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       
                       <xsl:for-each
@@ -1100,7 +1100,7 @@
                           <xsl:text>, </xsl:text>
                         </xsl:if>
                       </xsl:for-each>
-                    </xsl:when>
+                    </xsl:when>-->
                     <!--<xsl:when
                       test="$lang = 'uk' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:variable name="ukvalue" select="/aggregation/evidence//arr[@name='evidence-uk']/str"/>
