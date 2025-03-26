@@ -1083,9 +1083,9 @@
                     
                     <xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
-                      <xsl:variable name="envalue" select="/aggregation/evidence//arr[@name='evidence-en']/str"/>
+                      
                       <xsl:for-each
-                        select="tokenize(normalize-space($envalue), ' ')">
+                        select="/aggregation/evidence//arr[@name='evidence-en']/str">
                         
                         <xsl:choose>
                           <xsl:when test="position() = 1">
@@ -1101,11 +1101,11 @@
                         </xsl:if>
                       </xsl:for-each>
                     </xsl:when>
-                    <xsl:when
+                    <!--<xsl:when
                       test="$lang = 'uk' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:variable name="ukvalue" select="/aggregation/evidence//arr[@name='evidence-uk']/str"/>
                       <xsl:for-each
-                        select="tokenize(normalize-space($ukvalue), ' ')">
+                        select="tokenize($ukvalue, ' ')">
                         
                         <xsl:choose>
                           <xsl:when test="position() = 1">
@@ -1120,7 +1120,7 @@
                           <xsl:text>, </xsl:text>
                         </xsl:if>
                       </xsl:for-each>
-                    </xsl:when>
+                    </xsl:when>-->
                     
 
                     <xsl:otherwise>
