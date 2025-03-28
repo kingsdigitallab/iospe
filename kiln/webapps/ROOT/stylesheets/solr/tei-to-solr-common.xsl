@@ -104,7 +104,7 @@
       <xsl:variable name="ref" select="substring-after(., '#')"/>
 
       <xsl:for-each select="$monument/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
-        <field name="monument-type">
+        <field name="monument-type-en">
           <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
         <field name="monument-type-ru">
@@ -122,7 +122,7 @@
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
       <xsl:for-each select="$material/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
-        <field name="material">
+        <field name="material-en">
           <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
         <field name="material-ru">
@@ -257,7 +257,7 @@
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
       <xsl:for-each select="$execution/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
-        <field name="execution">
+        <field name="execution-en">
           <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
         <field name="execution-ru">
