@@ -1055,12 +1055,12 @@
                     <xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       
-                      <xsl:variable name="crit" select="/aggregation/crit"/>
+                      <xsl:variable name="crit" select="/aggregation/criteria"/>
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="term" select="
                             $crit//tei:seg[
-                            lower-case(.) = lower-case(normalize-space(translate(current(), '_', ' ')))
+                            lower-case(.) = lower-case(current())
                             ]/preceding-sibling::tei:seg[1]"/>
 
                         <xsl:choose>
