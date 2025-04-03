@@ -1059,9 +1059,9 @@
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="term" select="
-                            $crit//tei:seg[
+                            $crit//tei:seg[@xml:lang='ru'][
                             lower-case(.) = lower-case(current())
-                            ]/preceding-sibling::tei:seg[1]"/>
+                            ]/preceding-sibling::tei:seg[@xml:lang='en'][1]"/>
 
                         <xsl:choose>
                           <xsl:when test="position() = 1">
