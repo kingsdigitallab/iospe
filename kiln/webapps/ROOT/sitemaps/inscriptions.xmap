@@ -21,7 +21,7 @@
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
-            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=9999"/>
           <map:part src="../content/xml/tei/alists/surnames.xml" element="surnames"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/bibliography.xsl">
@@ -40,7 +40,7 @@
           <map:part src="cocoon://internal/metadata/files.xml"/>
           <map:part src="../content/xml/tei/alists/bibliography.xml" element="bib"/>
           <map:part element="concordance"
-            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=999"/>
+            src="cocoon://_internal/solr/query/q=dt:publication&amp;fq=publications:*&amp;sort=bibl-sort%20asc&amp;rows=9999"/>
           <map:part src="../content/xml/tei/alists/surnames.xml" element="surnames"/>
         </map:aggregate>
         <map:transform src="cocoon://_internal/template/bibliography.xsl">
