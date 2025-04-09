@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="https://raw.githubusercontent.com/EpiDoc/Source/main/schema/schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Декрет в честь посла (или стратега?) Митридата Евпатора</title><title xml:lang="en">Decree honouring a man in the service of Mithridates Eupator</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -97,7 +97,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Sevastopol.</tei:seg>
                   </provenance>
 
                </history>
@@ -161,8 +161,7 @@
                	<lb n="6"/><supplied reason="lost"><w>ἁμῶν</w> <w>ἐν</w> <w>πᾶσιν</w></supplied> <w>εὔνουν</w> <w>ἑ<supplied reason="lost">αυτὸν</supplied></w> <w><supplied reason="lost">πα</supplied>
                	<lb n="7" break="no"/><supplied reason="lost">ρέχεται</supplied></w> <supplied reason="lost"><w>καὶ</w></supplied>
                <w><supplied reason="undefined" evidence="previouseditor">πάν</supplied>τα</w> 
-                                 <w>τὰ</w> <gap reason="illegible" quantity="1" unit="character"/><gap
-                                    reason="lost" quantity="10" unit="character"/>
+                                 <w>τὰ</w> <gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="10" unit="character"/>
                 	<lb n="8"/><gap reason="lost" unit="character" quantity="7"/>
                <w><supplied reason="lost">κατα</supplied>σκευάζ<unclear>ε</unclear><supplied reason="lost">ι</supplied></w>
                <supplied reason="lost"><w>τάν</w> <w>τε</w></supplied> <w><supplied reason="lost">παρε</supplied>

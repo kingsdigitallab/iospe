@@ -2,97 +2,99 @@
 <kiln:root xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
-    
+
     <!-- Imports inscription stylesheet . -->
     <xsl:import href="cocoon://_internal/template/xsl/stylesheets/tei/tocs-volumes.xsl"/>
-    
+
     <xsl:param name="url"/>
-    
+
     <xsl:variable name="seq">
         <xsl:sequence select="/aggregation/toc/response/result"/>
     </xsl:variable>
-    
+
     <kiln:parent>
         <xi:include href="tocs.xml"/>
     </kiln:parent>
-    
-    
+
+
     <kiln:child>
-        
+
         <kiln:block name="title">
             <kiln:super/>
             <xsl:call-template name="tocVolumeTitle"/>
         </kiln:block>
-        
-        
+
+
         <kiln:block name="page-heading">
             <kiln:super/>
             <xsl:call-template name="tocVolumeTitle"/>
         </kiln:block>
-        
+
         <kiln:block name="content">
             <kiln:super/>
-            
+
             <xsl:choose>
                 <xsl:when test="starts-with($url, '1')">
                     <dl class="indices indices-locations tocs">
                         <dt>
-                            <i18n:text>State decrees</i18n:text><br /> &#x2014; <i18n:text>State decrees honouring citizens</i18n:text>
+                            <i18n:text>State decrees</i18n:text><br/> &#x2014; <i18n:text>State
+                                decrees honouring citizens</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.1', '1.2', '1.3', '1.4')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>State decrees honouring foreigners</i18n:text>
+                        <dt> &#x2014; <i18n:text>State decrees honouring foreigners</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.5')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; Varia
-                        </dt>
+                        <dt> &#x2014; Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('1.6', '1.7', '1.8', '1.9', '1.10', '1.11')"/>
+                            <xsl:with-param name="values"
+                                select="('1.6', '1.7', '1.8', '1.9', '1.10', '1.11')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Public Inscriptions other than decrees</i18n:text><br /> &#x2014; <i18n:text>Letters of state officials</i18n:text>
+                            <i18n:text>Public Inscriptions other than decrees</i18n:text><br/>
+                            &#x2014; <i18n:text>Letters of state officials</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.12', '1.13', '1.14')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Public inscriptions of uncertain type</i18n:text> (Varia)
-                        </dt>
+                        <dt> &#x2014; <i18n:text>Public inscriptions of uncertain type</i18n:text>
+                            (Varia) </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.15', '1.16')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Dedicatory and other inscriptions with religious content</i18n:text><br /> &#x2014; <i18n:text>Dedications of private individuals</i18n:text>
+                            <i18n:text>Dedicatory and other inscriptions with religious
+                                content</i18n:text><br/> &#x2014; <i18n:text>Dedications of private
+                                individuals</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('1.17', '1.18', '1.19', '1.20', '1.21', '1.22')"/>
+                            <xsl:with-param name="values"
+                                select="('1.17', '1.18', '1.19', '1.20', '1.21', '1.22')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Building inscriptions</i18n:text><br /> &#x2014; <i18n:text>Building inscriptions of rulers and officials</i18n:text>
+                            <i18n:text>Building inscriptions</i18n:text><br/> &#x2014;
+                                <i18n:text>Building inscriptions of rulers and officials</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.23', '1.24', '1.25')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Honorific inscriptions</i18n:text><br /> &#x2014; <i18n:text>Inscriptions honouring Roman emperors and their family members</i18n:text>
+                            <i18n:text>Honorific inscriptions</i18n:text><br/> &#x2014;
+                                <i18n:text>Inscriptions honouring Roman emperors and their family
+                                members</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.26', '1.27', '1.28')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Inscriptions honouring citizens</i18n:text>
+                        <dt> &#x2014; <i18n:text>Inscriptions honouring citizens</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.29')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Honorific inscriptions</i18n:text>. Varia
-                        </dt>
+                        <dt> &#x2014; <i18n:text>Honorific inscriptions</i18n:text>. Varia </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.30')"/>
                         </xsl:call-template>
@@ -106,7 +108,8 @@
                             <i18n:text>Epitaphs</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('1.32', '1.33', '1.34', '1.35', '1.36', '1.37')"/>
+                            <xsl:with-param name="values"
+                                select="('1.32', '1.33', '1.34', '1.35', '1.36', '1.37')"/>
                         </xsl:call-template>
                         <dt>
                             <i18n:text>Inscriptions on weights</i18n:text>
@@ -114,138 +117,528 @@
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('1.38', '1.39')"/>
                         </xsl:call-template>
-                        <dt>
-                            Varia
-                        </dt>
+                        <dt> Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('1.40', '1.41', '1.42', '1.43', '1.44', '1.45', '1.46', 
+                            <xsl:with-param name="values"
+                                select="('1.40', '1.41', '1.42', '1.43', '1.44', '1.45', '1.46', 
                                 '1.47', '1.48', '1.49', '1.50', '1.51', '1.52', '1.53', '1.54', '1.55', '1.56', '1.57', 
-                                '1.58', '1.59', '1.60', '1.61', '1.62', '1.63', '1.64', '1.65', '1.66', '1.67', '1.68', '1.69')"/>
+                                '1.58', '1.59', '1.60', '1.61', '1.62', '1.63', '1.64', '1.65', '1.66', '1.67', '1.68', '1.69')"
+                            />
                         </xsl:call-template>
                     </dl>
                 </xsl:when>
-                <xsl:when test="starts-with($url, '3')">
-                    
+
+
+
+                <xsl:when test="starts-with($url, '2')">
                     <dl class="indices indices-locations tocs">
                         <dt>
-                            <i18n:text>State decrees</i18n:text><br /> &#x2014; <i18n:text>State decrees honouring citizens</i18n:text>
+                            <span style="font-weight:normal; font-size:larger"><i18n:text>TITULI BORYSTHENIS</i18n:text></span>
+                            <br/><br/> &#x0009; <strong><i18n:text>GRAFFITI APPLIED TO WHOLE
+                                POTS</i18n:text></strong>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Speaking
+                                Objects</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.1')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014;
+                            <strong><i18n:text>Ownership</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.2', '2.1.1.3', '2.1.1.4', '2.1.1.5', '2.1.1.6', '2.1.1.7', '2.1.1.8', 
+                                '2.1.1.9', '2.1.1.10', '2.1.1.11', '2.1.1.12', '2.1.1.13', '2.1.1.14', '2.1.1.15')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <i18n:text>Sympotic</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.16')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <i18n:text>Dedications and Divine
+                                Ownership</i18n:text>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.17', '2.1.1.18', '2.1.1.19', '2.1.1.20', '2.1.1.21', '2.1.1.22', '2.1.1.23', '2.1.1.24', '2.1.1.25', '2.1.1.26', '2.1.1.27', '2.1.1.28')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Incerta (Ownership,
+                                Sympotic, or Dedications)</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.29', '2.1.1.30', '2.1.1.31', '2.1.1.32', '2.1.1.33', '2.1.1.34', '2.1.1.35', '2.1.1.36', '2.1.1.37', '2.1.1.38', '2.1.1.39', '2.1.1.40', '2.1.1.41', '2.1.1.42', '2.1.1.43', '2.1.1.44', '2.1.1.45', '2.1.1.46', 
+                                '2.1.1.47', '2.1.1.48', '2.1.1.49', '2.1.1.50', '2.1.1.51', '2.1.1.52', '2.1.1.53', '2.1.1.54', 
+                                '2.1.1.55', '2.1.1.56', '2.1.1.57', '2.1.1.58', '2.1.1.59', '2.1.1.60', '2.1.1.61', '2.1.1.62', 
+                                '2.1.1.63')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; <strong><i18n:text>VARIA GRAFFITI APPLIED TO FRAGMENTS (OF
+                                POTTERY, LEAD, AND BONE)</i18n:text></strong>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Lists of
+                                Names</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.64', '2.1.1.65')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014;
+                            <strong><i18n:text>Accounts</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.66')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Messages and
+                                Letters</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.67', '2.1.1.68', '2.1.1.69')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Board Game</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.70')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Drawings and
+                                Doodles</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.71', '2.1.1.72', '2.1.1.73', '2.1.1.74', '2.1.1.75', '2.1.1.76', '2.1.1.77', '2.1.1.78')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; <strong><i18n:text>INSCRIBED OBJECTS</i18n:text></strong>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Oval-Shaped Potsherds</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.79', '2.1.1.80', '2.1.1.81', '2.1.1.82', '2.1.1.83', '2.1.1.84', '2.1.1.85', '2.1.1.86')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Rectangle-Shaped Potsherds With Opposing Notches</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.87', '2.1.1.88')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Weights</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values" select="('2.1.1.89', '2.1.1.90')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Astragali</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.91', '2.1.1.92', '2.1.1.93')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; <strong><i18n:text>OTHER</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.94')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/><br/>
+                            <span style="font-weight:normal; font-size:larger"><i18n:text>TITULI ALIENI</i18n:text></span>
+                            <br/><br/> &#x0009; <strong><i18n:text>PRODUCTION MARKS</i18n:text></strong>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Pre-Firing Graffiti</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.95', 
+                                '2.1.1.96', '2.1.1.97', '2.1.1.98', '2.1.1.99', '2.1.1.100', '2.1.1.101', '2.1.1.102', '2.1.1.103', 
+                                '2.1.1.104', '2.1.1.105', '2.1.1.106', '2.1.1.107', '2.1.1.108', '2.1.1.109', '2.1.1.110', '2.1.1.111', 
+                                '2.1.1.112', '2.1.1.113', '2.1.1.114', '2.1.1.115', '2.1.1.116', '2.1.1.117', '2.1.1.118', '2.1.1.119', 
+                                '2.1.1.120', '2.1.1.121', '2.1.1.122', '2.1.1.123', '2.1.1.124', '2.1.1.125', '2.1.1.126', '2.1.1.127', 
+                                '2.1.1.128', '2.1.1.129', '2.1.1.130', '2.1.1.131', '2.1.1.132', '2.1.1.133', '2.1.1.134', '2.1.1.135', 
+                                '2.1.1.136', '2.1.1.137', '2.1.1.138', '2.1.1.139', '2.1.1.140', '2.1.1.141', '2.1.1.142', '2.1.1.143', 
+                                '2.1.1.144', '2.1.1.145', '2.1.1.146', '2.1.1.147', '2.1.1.148', '2.1.1.149', '2.1.1.150', '2.1.1.151', 
+                                '2.1.1.152')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/><br/>
+                            <span style="font-weight:normal; font-size:larger"><i18n:text>TITULI BORYSTHENIS VEL ALIENI (= APPLIED LOCALLY OR ELSEWHERE)</i18n:text></span>
+                            <br/><br/> &#x0009; <strong><i18n:text>PRODUCTION OR COMMERCIAL DIPINTI</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.153', '2.1.1.154', '2.1.1.155', '2.1.1.156', '2.1.1.157', '2.1.1.158', '2.1.1.159', 
+                                '2.1.1.160', '2.1.1.161', '2.1.1.162', '2.1.1.163', '2.1.1.164', '2.1.1.165', '2.1.1.166', '2.1.1.167', 
+                                '2.1.1.168', '2.1.1.169', '2.1.1.170', '2.1.1.171', '2.1.1.172', '2.1.1.173', '2.1.1.174', '2.1.1.175', 
+                                '2.1.1.176', '2.1.1.177', '2.1.1.178', '2.1.1.179', '2.1.1.180', '2.1.1.181', '2.1.1.182', '2.1.1.183', 
+                                '2.1.1.184', '2.1.1.185', '2.1.1.186', '2.1.1.187', '2.1.1.188')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/>&#x0009; <strong><i18n:text>COMMERCIAL GRAFFITI</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.189', '2.1.1.190', '2.1.1.191', 
+                                '2.1.1.192', '2.1.1.193', '2.1.1.194', '2.1.1.195', '2.1.1.196', '2.1.1.197', '2.1.1.198', '2.1.1.199', 
+                                '2.1.1.200', '2.1.1.201', '2.1.1.202', '2.1.1.203', '2.1.1.204', '2.1.1.205', '2.1.1.206', '2.1.1.207', 
+                                '2.1.1.208', '2.1.1.209', '2.1.1.210', '2.1.1.211', '2.1.1.212', '2.1.1.213', '2.1.1.214', '2.1.1.215', 
+                                '2.1.1.216', '2.1.1.217', '2.1.1.218', '2.1.1.219', '2.1.1.220', '2.1.1.221', '2.1.1.222', '2.1.1.223', 
+                                '2.1.1.224', '2.1.1.225', '2.1.1.226', '2.1.1.227', '2.1.1.228', '2.1.1.229', '2.1.1.230', '2.1.1.231', 
+                                '2.1.1.232', '2.1.1.233', '2.1.1.234', '2.1.1.235', '2.1.1.236', '2.1.1.237', '2.1.1.238', '2.1.1.239', 
+                                '2.1.1.240', '2.1.1.241', '2.1.1.242', '2.1.1.243', '2.1.1.244', '2.1.1.245', '2.1.1.246', '2.1.1.247', 
+                                '2.1.1.248', '2.1.1.249', '2.1.1.250', '2.1.1.251', '2.1.1.252', '2.1.1.253', '2.1.1.254', '2.1.1.255', 
+                                '2.1.1.256', '2.1.1.257', '2.1.1.258', '2.1.1.259', '2.1.1.260', '2.1.1.261', '2.1.1.262', '2.1.1.263', 
+                                '2.1.1.264', '2.1.1.265', '2.1.1.266', '2.1.1.267', '2.1.1.268', '2.1.1.269', '2.1.1.270', '2.1.1.271', 
+                                '2.1.1.272', '2.1.1.273', '2.1.1.274', '2.1.1.275', '2.1.1.276', '2.1.1.277', '2.1.1.278', '2.1.1.279', 
+                                '2.1.1.280', '2.1.1.281', '2.1.1.282', '2.1.1.283', '2.1.1.284', '2.1.1.285', '2.1.1.286', '2.1.1.287', 
+                                '2.1.1.288', '2.1.1.289', '2.1.1.290', '2.1.1.291', '2.1.1.292', '2.1.1.293', '2.1.1.294', '2.1.1.295', 
+                                '2.1.1.296', '2.1.1.297', '2.1.1.298', '2.1.1.299', '2.1.1.300', '2.1.1.301', '2.1.1.302', '2.1.1.303', 
+                                '2.1.1.304', '2.1.1.305', '2.1.1.306', '2.1.1.307', '2.1.1.308', '2.1.1.309', '2.1.1.310', '2.1.1.311', 
+                                '2.1.1.312', '2.1.1.313', '2.1.1.314', '2.1.1.315', '2.1.1.316', '2.1.1.317', '2.1.1.318', '2.1.1.319', 
+                                '2.1.1.320', '2.1.1.321', '2.1.1.322', '2.1.1.323', '2.1.1.324', '2.1.1.325')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; <strong><i18n:text>INCERTA (EITHER COMMERCIAL OR OWNERSHIP) GRAFFITI</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.326', '2.1.1.327', 
+                                '2.1.1.328', '2.1.1.329')"/>
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; <strong><i18n:text>INCERTA (POSSIBLY COMMERCIAL) GRAFFITI</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.330', '2.1.1.331', '2.1.1.332', '2.1.1.333', '2.1.1.334', '2.1.1.335', 
+                                '2.1.1.336', '2.1.1.337', '2.1.1.338', '2.1.1.339', '2.1.1.340', '2.1.1.341', '2.1.1.342', '2.1.1.343', 
+                                '2.1.1.344', '2.1.1.345', '2.1.1.346', '2.1.1.347', '2.1.1.348', '2.1.1.349', '2.1.1.350', '2.1.1.351', 
+                                '2.1.1.352', '2.1.1.353', '2.1.1.354', '2.1.1.355', '2.1.1.356', '2.1.1.357', '2.1.1.358', '2.1.1.359', 
+                                '2.1.1.360', '2.1.1.361', '2.1.1.362', '2.1.1.363', '2.1.1.364', '2.1.1.365', '2.1.1.366', '2.1.1.367', 
+                                '2.1.1.368', '2.1.1.369', '2.1.1.370', '2.1.1.371', '2.1.1.372', '2.1.1.373', '2.1.1.374', '2.1.1.375', 
+                                '2.1.1.376', '2.1.1.377', '2.1.1.378')"/>
+                        </xsl:call-template>
+                        <dt>
+                            
+                            <br/> &#x0009; <strong><i18n:text>UNCLASSIFIED MARKS - GRAFFITI AND DIPINTI</i18n:text></strong>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Branch-Shaped Marks</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.379', '2.1.1.380', '2.1.1.381', '2.1.1.382', '2.1.1.383', 
+                                '2.1.1.384', '2.1.1.385', '2.1.1.386')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Cross-Shaped Marks</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.387', '2.1.1.388', '2.1.1.389', '2.1.1.390', '2.1.1.391', 
+                                '2.1.1.392', '2.1.1.393', '2.1.1.394', '2.1.1.395', '2.1.1.396', '2.1.1.397', '2.1.1.398', '2.1.1.399', 
+                                '2.1.1.400', '2.1.1.401', '2.1.1.402', '2.1.1.403', '2.1.1.404', '2.1.1.405', '2.1.1.406', '2.1.1.407', 
+                                '2.1.1.408')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Chi-Shaped Marks</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.409', '2.1.1.410', '2.1.1.411', '2.1.1.412', '2.1.1.413', '2.1.1.414', '2.1.1.415', 
+                                '2.1.1.416', '2.1.1.417', '2.1.1.418', '2.1.1.419', '2.1.1.420', '2.1.1.421')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Heta-Shaped Marks</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.422', '2.1.1.423', 
+                                '2.1.1.424', '2.1.1.425')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Pentagram</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.426', '2.1.1.427', '2.1.1.428', '2.1.1.429', '2.1.1.430')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Star-Shaped Marks</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.431', 
+                                '2.1.1.432', '2.1.1.433', '2.1.1.434')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Swastika</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.435', '2.1.1.436', '2.1.1.437')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Anchor-Like Marks</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.438', '2.1.1.439', 
+                                '2.1.1.440', '2.1.1.441')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Bisected Angle</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.442', '2.1.1.443', '2.1.1.444', '2.1.1.445', '2.1.1.446', '2.1.1.447', 
+                                '2.1.1.448')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Rectangle with Diagonals</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.449', '2.1.1.450')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Triangles</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.451', '2.1.1.452', '2.1.1.453')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Hourglass</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.454', '2.1.1.455')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Crossed Radii</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="(
+                                '2.1.1.456', '2.1.1.457', '2.1.1.458', '2.1.1.459')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Vertical Plus</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.460', '2.1.1.461', '2.1.1.462', '2.1.1.463', 
+                                '2.1.1.464')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Zigzag</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.465', '2.1.1.466')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            
+                            
+                            <br/> &#x0009; &#x0009; &#x2014; <strong><i18n:text>Miscellanea</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.467', '2.1.1.468', '2.1.1.469')"
+                            />
+                        </xsl:call-template>
+                        <dt>
+                            <br/> &#x0009; <strong><i18n:text>INCERTA VARIA</i18n:text></strong>
+                        </dt>
+                        <xsl:call-template name="generateTOCItems">
+                            <xsl:with-param name="values"
+                                select="('2.1.1.470', '2.1.1.471', '2.1.1.472', '2.1.1.473', '2.1.1.474', '2.1.1.475', '2.1.1.476', '2.1.1.477', '2.1.1.478', '2.1.1.479', 
+                                '2.1.1.480', '2.1.1.481', '2.1.1.482', '2.1.1.483', '2.1.1.484', '2.1.1.485', '2.1.1.486', '2.1.1.487', 
+                                '2.1.1.488', '2.1.1.489', '2.1.1.490', '2.1.1.491', '2.1.1.492', '2.1.1.493', '2.1.1.494', '2.1.1.495', 
+                                '2.1.1.496', '2.1.1.497', '2.1.1.498', '2.1.1.499', '2.1.1.500', '2.1.1.501', '2.1.1.502', '2.1.1.503', 
+                                '2.1.1.504', '2.1.1.505', '2.1.1.506', '2.1.1.507', '2.1.1.508', '2.1.1.509', '2.1.1.510', '2.1.1.511', 
+                                '2.1.1.512', '2.1.1.513', '2.1.1.514', '2.1.1.515', '2.1.1.516', '2.1.1.517', '2.1.1.518', '2.1.1.519', 
+                                '2.1.1.520', '2.1.1.521', '2.1.1.522', '2.1.1.523', '2.1.1.524', '2.1.1.525', '2.1.1.526', '2.1.1.527', 
+                                '2.1.1.528', '2.1.1.529', '2.1.1.530', '2.1.1.531', '2.1.1.532', '2.1.1.533', '2.1.1.534', '2.1.1.535',
+                                '2.1.1.536', '2.1.1.537')"/>
+                        </xsl:call-template>
+                    </dl>
+                    
+                  
+                    
+                    
+
+                </xsl:when>
+
+
+
+                <xsl:when test="starts-with($url, '3')">
+
+                    <dl class="indices indices-locations tocs">
+                        <dt>
+                            <i18n:text>State decrees</i18n:text><br/> &#x2014; <i18n:text>State
+                                decrees honouring citizens</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.1', '3.2')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>State decrees honouring foreigners</i18n:text>
+                        <dt> &#x2014; <i18n:text>State decrees honouring foreigners</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', 
+                            <xsl:with-param name="values"
+                                select="('3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10', 
                                 '3.11', '3.12', '3.13', '3.14', '3.15', '3.16', '3.17', '3.18', '3.19', '3.20', '3.21', '3.22',
                                 '3.23', '3.24', '3.25', '3.26', '3.27', '3.28', '3.29', '3.30', '3.31', '3.32', '3.33', '3.34', 
-                                '3.35', '3.36', '3.37', '3.38', '3.39', '3.40', '3.41', '3.42', '3.43', '3.44')"/>
+                                '3.35', '3.36', '3.37', '3.38', '3.39', '3.40', '3.41', '3.42', '3.43', '3.44')"
+                            />
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>State honorific decrees</i18n:text>
+                        <dt> &#x2014; <i18n:text>State honorific decrees</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.45', '3.46', '3.47', '3.49', '3.50')"/>
+                            <xsl:with-param name="values"
+                                select="('3.45', '3.46', '3.47', '3.49', '3.50')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>State decrees</i18n:text>. Varia
-                        </dt>
+                        <dt> &#x2014; <i18n:text>State decrees</i18n:text>. Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.51', '3.52', '3.53', '3.54', '3.55', '3.56', '3.57', '3.58', 
+                            <xsl:with-param name="values"
+                                select="('3.51', '3.52', '3.53', '3.54', '3.55', '3.56', '3.57', '3.58', 
                                 '3.59', '3.60', '3.61', '3.62', '3.63', '3.64', '3.65', '3.66', '3.67', '3.68', '3.69', '3.70', 
                                 '3.71', '3.72')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>State decrees</i18n:text>. <i18n:text>Fragments of preambles</i18n:text>
+                        <dt> &#x2014; <i18n:text>State decrees</i18n:text>. <i18n:text>Fragments of
+                                preambles</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.73', '3.74', '3.75', '3.76', '3.77', '3.78', '3.79', '3.80', '3.81')"/>
+                            <xsl:with-param name="values"
+                                select="('3.73', '3.74', '3.75', '3.76', '3.77', '3.78', '3.79', '3.80', '3.81')"
+                            />
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>State decrees listing 'those who applied their seals'</i18n:text>
+                        <dt> &#x2014; <i18n:text>State decrees listing 'those who applied their
+                                seals'</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.82', '3.83', '3.84', '3.85', '3.86', '3.87', '3.88', '3.89', '3.90', 
-                                '3.91', '3.92', '3.93', '3.94', '3.95', '3.96', '3.97', '3.98', '3.99')"/>
+                            <xsl:with-param name="values"
+                                select="('3.82', '3.83', '3.84', '3.85', '3.86', '3.87', '3.88', '3.89', '3.90', 
+                                '3.91', '3.92', '3.93', '3.94', '3.95', '3.96', '3.97', '3.98', '3.99')"
+                            />
                         </xsl:call-template>
                         <dt>
                             <i18n:text>Public Inscriptions other than decrees</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.100', '3.101', '3.103', '3.104', '3.105', '3.106', '3.107', 
+                            <xsl:with-param name="values"
+                                select="('3.100', '3.101', '3.103', '3.104', '3.105', '3.106', '3.107', 
                                 '3.108', '3.109', '3.110')"/>
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Dedicatory and other inscriptions with religious content</i18n:text><br /> &#x2014; <i18n:text>Dedications of private individuals</i18n:text>
+                            <i18n:text>Dedicatory and other inscriptions with religious
+                                content</i18n:text><br/> &#x2014; <i18n:text>Dedications of private
+                                individuals</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.111', '3.112', '3.113')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Dedications of officials and rulers</i18n:text>
+                        <dt> &#x2014; <i18n:text>Dedications of officials and rulers</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.114', '3.115', '3.116', '3.117', '3.118')"/>
+                            <xsl:with-param name="values"
+                                select="('3.114', '3.115', '3.116', '3.117', '3.118')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Dedications</i18n:text>. Varia
-                        </dt>
+                        <dt> &#x2014; <i18n:text>Dedications</i18n:text>. Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.119', '3.120', '3.121', '3.122', '3.123', '3.124', '3.125', '3.126', 
-                                '3.127', '3.128', '3.129', '3.130')"/>
+                            <xsl:with-param name="values"
+                                select="('3.119', '3.120', '3.121', '3.122', '3.123', '3.124', '3.125', '3.126', 
+                                '3.127', '3.128', '3.129', '3.130')"
+                            />
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Building inscriptions</i18n:text><br /> &#x2014; <i18n:text>Building inscriptions of rulers and officials</i18n:text>
+                            <i18n:text>Building inscriptions</i18n:text><br/> &#x2014;
+                                <i18n:text>Building inscriptions of rulers and officials</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.131', '3.132')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Building inscriptions</i18n:text>. Varia
-                        </dt>
+                        <dt> &#x2014; <i18n:text>Building inscriptions</i18n:text>. Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.133', '3.135', '3.136', '3.137', '3.138', '3.139', '3.140', 
-                                '3.141', '3.142', '3.143', '3.145', '3.146', '3.147', '3.148', '3.149', '3.150')"/>
+                            <xsl:with-param name="values"
+                                select="('3.133', '3.135', '3.136', '3.137', '3.138', '3.139', '3.140', 
+                                '3.141', '3.142', '3.143', '3.145', '3.146', '3.147', '3.148', '3.149', '3.150')"
+                            />
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Honorific inscriptions</i18n:text><br /> &#x2014; <i18n:text>Inscriptions honouring citizens</i18n:text>
+                            <i18n:text>Honorific inscriptions</i18n:text><br/> &#x2014;
+                                <i18n:text>Inscriptions honouring citizens</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.151', '3.152', '3.153', '3.154', '3.155', '3.156', '3.157', '3.158', 
-                                '3.159', '3.160', '3.161', '3.162', '3.163', '3.164')"/>
+                            <xsl:with-param name="values"
+                                select="('3.151', '3.152', '3.153', '3.154', '3.155', '3.156', '3.157', '3.158', 
+                                '3.159', '3.160', '3.161', '3.162', '3.163', '3.164')"
+                            />
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Inscriptions honouring foreigners and Roman officials</i18n:text>
+                        <dt> &#x2014; <i18n:text>Inscriptions honouring foreigners and Roman
+                                officials</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.165', '3.166', '3.167', '3.168')"/>
+                            <xsl:with-param name="values"
+                                select="('3.165', '3.166', '3.167', '3.168')"/>
                         </xsl:call-template>
                         <dt>
                             <i18n:text>Agonistic inscriptions</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.169', '3.170', '3.171', '3.172', '3.173', '3.174', '3.175', '3.176')"/>
+                            <xsl:with-param name="values"
+                                select="('3.169', '3.170', '3.171', '3.172', '3.173', '3.174', '3.175', '3.176')"
+                            />
                         </xsl:call-template>
                         <dt>
                             <i18n:text>Lists of names</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.177', '3.178', '3.179', '3.180', '3.181', '3.182', '3.183', '3.184', 
-                                '3.185', '3.186', '3.187', '3.188', '3.189', '3.190', '3.191')"/>
+                            <xsl:with-param name="values"
+                                select="('3.177', '3.178', '3.179', '3.180', '3.181', '3.182', '3.183', '3.184', 
+                                '3.185', '3.186', '3.187', '3.188', '3.189', '3.190', '3.191')"
+                            />
                         </xsl:call-template>
                         <dt>
-                            <i18n:text>Epitaphs</i18n:text><br /> &#x2014; <i18n:text>Metrical epitaphs</i18n:text>
+                            <i18n:text>Epitaphs</i18n:text><br/> &#x2014; <i18n:text>Metrical
+                                epitaphs</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.192', '3.193', '3.194', '3.195', '3.196', '3.197', '3.198', '3.199', 
-                                '3.200', '3.201', '3.202', '3.203', '3.204', '3.205', '3.206', '3.207')"/>
+                            <xsl:with-param name="values"
+                                select="('3.192', '3.193', '3.194', '3.195', '3.196', '3.197', '3.198', '3.199', 
+                                '3.200', '3.201', '3.202', '3.203', '3.204', '3.205', '3.206', '3.207')"
+                            />
                         </xsl:call-template>
-                        <dt>
-                            &#x2014; <i18n:text>Prose epitaphs</i18n:text><br /> &#x2014;&#x2014; <i18n:text>Epitaphs of citizens</i18n:text>
+                        <dt> &#x2014; <i18n:text>Prose epitaphs</i18n:text><br/> &#x2014;&#x2014;
+                                <i18n:text>Epitaphs of citizens</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.208', '3.209', '3.210', '3.211', '3.212', '3.213', '3.214', '3.215', 
+                            <xsl:with-param name="values"
+                                select="('3.208', '3.209', '3.210', '3.211', '3.212', '3.213', '3.214', '3.215', 
                                 '3.216', '3.217', '3.218', '3.219', '3.220', '3.221', '3.222', '3.223', '3.224', '3.225', '3.226', '3.227', 
                                 '3.228', '3.229', '3.230', '3.231', '3.232', '3.233', '3.234', '3.235', '3.236', '3.237', '3.238', '3.239', 
                                 '3.240', '3.241', '3.242', '3.243', '3.244', '3.245', '3.246', '3.247', '3.248', '3.249', '3.250', '3.251', 
@@ -264,18 +657,17 @@
                                  '3.397', '3.398', '3.399', '3.400', '3.401', '3.402', '3.403', '3.404', '3.405', '3.406', '3.407', 
                                  '3.409')"/>
                         </xsl:call-template>
-                        <dt>
-                            &#x2014;&#x2014; <i18n:text>Epitaphs of foreigners</i18n:text>
+                        <dt> &#x2014;&#x2014; <i18n:text>Epitaphs of foreigners</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.410', '3.411', '3.412', '3.413', '3.414', '3.415', '3.416', '3.417', 
+                            <xsl:with-param name="values"
+                                select="('3.410', '3.411', '3.412', '3.413', '3.414', '3.415', '3.416', '3.417', 
                                 '3.418', '3.419')"/>
                         </xsl:call-template>
-                        <dt>
-                            Varia
-                        </dt>
+                        <dt> Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.420', '3.421', '3.422', '3.423', '3.424', '3.425', '3.426', '3.427', 
+                            <xsl:with-param name="values"
+                                select="('3.420', '3.421', '3.422', '3.423', '3.424', '3.425', '3.426', '3.427', 
                                 '3.428', '3.429', '3.430', '3.431', '3.432', '3.433', '3.434', '3.435', '3.436', '3.437', '3.438', '3.439', 
                                 '3.440', '3.441', '3.442', '3.443', '3.444', '3.445', '3.446', '3.447', '3.448', '3.449', '3.450', '3.451', 
                                 '3.452', '3.453', '3.454', '3.455', '3.456', '3.457', '3.458', '3.459', '3.460', '3.461', '3.462', '3.463', 
@@ -287,96 +679,100 @@
                                 '3.524', '3.525', '3.526', '3.527', '3.528', '3.529', '3.530', '3.531',  '3.533', '3.534', '3.535', 
                                 '3.536', '3.537', '3.538', '3.539', '3.540', '3.541', '3.542', '3.543', '3.544', '3.545', '3.546', '3.547', 
                                 '3.548', '3.549', '3.550', '3.551', '3.552', '3.553', '3.554', '3.555', '3.556', '3.557', '3.558', '3.559', 
-                                '3.560', '3.562', '3.564', '3.565', '3.566', '3.567', '3.568', '3.569', '3.570', '3.571')"/>
+                                '3.560', '3.562', '3.564', '3.565', '3.566', '3.567', '3.568', '3.569', '3.570', '3.571')"
+                            />
                         </xsl:call-template>
-                        
+
                         <dt>
-                            <span style="font-size: larger;"><i18n:text>Inscriptions from the vicinity of Chersonesos</i18n:text></span><br /><i18n:text>Isthmus of Saki</i18n:text><br /> &#x2014; <i18n:text>Dedications</i18n:text>
+                            <span style="font-size: larger;"><i18n:text>Inscriptions from the
+                                    vicinity of
+                                Chersonesos</i18n:text></span><br/><i18n:text>Isthmus of
+                                Saki</i18n:text><br/> &#x2014; <i18n:text>Dedications</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.573', '3.574', '3.575', '3.576')"/>
+                            <xsl:with-param name="values"
+                                select="('3.573', '3.574', '3.575', '3.576')"/>
                         </xsl:call-template>
-                        
-                        <dt>
-                             &#x2014; Varia
-                        </dt>
+
+                        <dt> &#x2014; Varia </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.577', '3.578', '3.579', '3.580', '3.581')"/>
+                            <xsl:with-param name="values"
+                                select="('3.577', '3.578', '3.579', '3.580', '3.581')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Kara-Tobe</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.582', '3.583', '3.584')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Kerkinitis</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.585')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Belyaus</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.586')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Kulchuk</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.587')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Marfino (Djan-baba)</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.588')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Kalos Limen</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.589', '3.590')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Panskoye</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.591')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
                             <i18n:text>Golubinka (Foti-Sala)</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.592')"/>
                         </xsl:call-template>
-                        
+
                         <dt>
-                            <i18n:text>Neapolis Scythica</i18n:text><br /> &#x2014; <i18n:text>Dedications</i18n:text>
+                            <i18n:text>Neapolis Scythica</i18n:text><br/> &#x2014;
+                                <i18n:text>Dedications</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
-                            <xsl:with-param name="values" select="('3.593', '3.594', '3.595', '3.596', '3.597', '3.598', '3.599')"/>
+                            <xsl:with-param name="values"
+                                select="('3.593', '3.594', '3.595', '3.596', '3.597', '3.598', '3.599')"
+                            />
                         </xsl:call-template>
-                        
-                        <dt>
-                            &#x2014; <i18n:text>Epitaphs</i18n:text>
+
+                        <dt> &#x2014; <i18n:text>Epitaphs</i18n:text>
                         </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.600', '3.601')"/>
                         </xsl:call-template>
-                        
-                        <dt>
-                            &#x2014; Incerta
-                        </dt>
+
+                        <dt> &#x2014; Incerta </dt>
                         <xsl:call-template name="generateTOCItems">
                             <xsl:with-param name="values" select="('3.602')"/>
                         </xsl:call-template>
@@ -384,10 +780,9 @@
                 </xsl:when>
             </xsl:choose>
 
-            
-        </kiln:block>
-        
-    </kiln:child>
-    
-</kiln:root>
 
+        </kiln:block>
+
+    </kiln:child>
+
+</kiln:root>
