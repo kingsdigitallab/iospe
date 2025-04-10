@@ -675,7 +675,7 @@
               Ivantchik (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '2'">© 2024 <i18n:text>Irene
-              Polinskaya (edition and translation)</i18n:text>
+              Polinskaya</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
               Makarov (edition), Irene Polinskaya (translation)</i18n:text>
@@ -1133,16 +1133,6 @@
             </div>
 
             <!-- Editions -->
-            <!-- PC, 20 Jun 2024:  IP does not want this field to display for volume 2 files, so for now we will wrap the 
-              entire chunk of code (which starts with div class-"row") in a choice element to show or not to show depending 
-              on what volume the inscription is in -->
-
-            <xsl:choose>
-              <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
-                <!-- do nothing -->
-              </xsl:when>
-              <xsl:otherwise>
-
                 <div class="row">
                   <div class="large-3 columns">
                     <h6>
@@ -1194,9 +1184,6 @@
                     </p>
                   </div>
                 </div>
-
-              </xsl:otherwise>
-            </xsl:choose>
 
 
             <!-- Actual Inscription Data -->
@@ -1931,7 +1918,7 @@
       </xsl:if>
 
       <xsl:if test="descendant::tei:imprint[1]/tei:date[1]">
-        <xsl:text/>
+        <xsl:text>&#x0020;</xsl:text>
         <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
       </xsl:if>
     </xsl:for-each>
