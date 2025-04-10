@@ -1918,7 +1918,7 @@
       </xsl:if>
 
       <xsl:if test="descendant::tei:imprint[1]/tei:date[1]">
-        <xsl:text/>
+        <xsl:text>&#x0020;</xsl:text>
         <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
       </xsl:if>
     </xsl:for-each>
