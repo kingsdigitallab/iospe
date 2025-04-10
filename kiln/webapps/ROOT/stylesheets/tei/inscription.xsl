@@ -675,7 +675,7 @@
               Ivantchik (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '2'">© 2024 <i18n:text>Irene
-              Polinskaya (edition and translation)</i18n:text>
+              Polinskaya</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
               Makarov (edition), Irene Polinskaya (translation)</i18n:text>
