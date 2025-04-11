@@ -1,9 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -16,14 +11,14 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country></country>
+               <msIdentifier><country/>
                   <altIdentifier xml:lang="ru">
                      <repository>НЗХТ</repository>
                      <idno>3342</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository></repository>
-                     <idno></idno>
+                     <repository/>
+                     <idno/>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
@@ -54,7 +49,7 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="ru"/>
                            <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/></seg>
                         </layout>
                      </layoutDesc>
@@ -94,7 +89,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Sevastopol.</tei:seg>
                   </provenance>
                   
                </history>
@@ -113,7 +108,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -146,15 +141,12 @@
                      <supplied reason="lost"><w lemma="πρόεδρος">πρόεδροι</w>
                         <w lemma="χερσονησίτης">Χερσονασειτᾶν</w> <w lemma="ὁ">τῶν</w></supplied> 
                	   <supplied reason="lost"><w lemma="ποτί">ποτὶ</w> <w lemma="ὁ">τᾶι</w></supplied>
-               <placeName><supplied reason="lost">Ταυρ</supplied>ικᾶ<supplied 
-               	      reason="lost">ι</supplied></placeName>
+               <placeName><supplied reason="lost">Ταυρ</supplied>ικᾶ<supplied reason="lost">ι</supplied></placeName>
                <w lemma="εἶπον">εἶ<unclear>πα</unclear><supplied reason="lost">ν</supplied></w>
                	<lb n="2"/>	
                <supplied reason="lost"><w lemma="ἐπειδή">ἐπειδὴ</w> <placeName>Διόφαντος</placeName></supplied>
-               <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"
-               /><orig><unclear>σ</unclear></orig> 
-               <w lemma="ναύκληρος">να<supplied reason="lost">ύ</supplied>κλα<unclear>ρ</unclear><supplied 
-                  reason="lost">ος</supplied></w>
+               <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>σ</unclear></orig> 
+               <w lemma="ναύκληρος">να<supplied reason="lost">ύ</supplied>κλα<unclear>ρ</unclear><supplied reason="lost">ος</supplied></w>
                <lb n="3"/>
                <gap reason="lost" extent="unknown" unit="character"/>
               <supplied reason="lost"><w lemma="ποτί">ποτὶ</w></supplied> <w lemma="ὁ"><unclear>τ</unclear>ὰν</w> 
@@ -178,28 +170,24 @@
                <gap reason="lost" extent="unknown" unit="character"/> 
                <w lemma="αὐτός"><supplied reason="lost">αὐ</supplied><unclear>τ</unclear>ὸς</w> <w lemma="ὡς">ὡς</w> 
                   <w lemma="ἐγώ">ἁμὲς</w> <w lemma="διακομίζω">διεκό<unclear>μ</unclear>ισεν</w>
-               <orig>προσ</orig><gap reason="illegible" quantity="1" unit="character"
-               /><gap reason="lost" quantity="2" unit="character"/>
+               <orig>προσ</orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/>
                	<lb n="9"/>	<gap reason="lost" extent="unknown" unit="character"/><w part="F">αται</w>
                <w lemma="ὑπέρ">ὑπὲρ</w> <w lemma="ὁ">τᾶς</w> <w lemma="εἰς">ἐς</w> 
                   <w lemma="αὐτός">αὐτὸν</w> <orig>δ</orig><gap reason="illegible" quantity="2" unit="character"/><orig>τα</orig>
                	<lb n="10"/>
                <gap reason="lost" extent="unknown" unit="character"/>
-               <w lemma="καθήκω"><supplied reason="lost">κ</supplied>αθ<supplied
-                  reason="lost">ᾶκο</supplied><unclear>ν</unclear></w> <w lemma="εἰμί">ἔμμεν</w> <w lemma="διά">διά</w>
+               <w lemma="καθήκω"><supplied reason="lost">κ</supplied>αθ<supplied reason="lost">ᾶκο</supplied><unclear>ν</unclear></w> <w lemma="εἰμί">ἔμμεν</w> <w lemma="διά">διά</w>
                <w lemma="τε">τε</w> <w lemma="ὁ">τὰν</w> 
                   <w lemma="εἰς">ἐς</w>               
                   <lb n="11"/>
                <gap reason="lost" extent="unknown" unit="character"/> <w lemma="τιμή">τειμάν</w> <w lemma="διά">διά</w>
                <w lemma="τε">τε</w> <w lemma="ὁ">τὰν</w> <w lemma="αὐτός">αὐ
                   <lb n="12" break="no"/><supplied reason="lost">τοῦ</supplied></w>
-               <gap reason="lost" extent="unknown" unit="character"/><supplied reason="undefined" evidence="previouseditor"><orig>α</orig></supplied><gap 
-                  reason="lost" extent="unknown" unit="character"/>  <w lemma="εὔνοια">εὔνοιαν</w> 
+               <gap reason="lost" extent="unknown" unit="character"/><supplied reason="undefined" evidence="previouseditor"><orig>α</orig></supplied><gap reason="lost" extent="unknown" unit="character"/>  <w lemma="εὔνοια">εὔνοιαν</w> 
                   <w lemma="ὁ">τᾶι</w> <w lemma="πρέπω">πρεπο<supplied reason="lost">ύ</supplied>
                	<lb n="13" break="no"/>
                      <supplied reason="lost">σαι</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
-               <supplied reason="lost"><w 
-               	   lemma="ἀντιτιμάω">ἀντιτειμαθῆναι</w></supplied> <g ref="#stop"/> <w lemma="διά">δι’</w>
+               <supplied reason="lost"><w lemma="ἀντιτιμάω">ἀντιτειμαθῆναι</w></supplied> <g ref="#stop"/> <w lemma="διά">δι’</w>
                <w lemma="ὅς">ἃ</w> <w type="δοκέω">δεδόχθαι</w> 
                   <w lemma="ὁ">τᾶι</w> <w lemma="βουλή">βου
                	<lb n="14" break="no"/><supplied reason="lost">λᾶι</supplied></w> 
@@ -299,10 +287,10 @@
             these Diophan[tos and gra]nt him [citizenship on the basis] of proxen[y - - -]</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

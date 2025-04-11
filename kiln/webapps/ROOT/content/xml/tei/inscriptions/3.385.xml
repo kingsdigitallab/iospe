@@ -1,9 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -16,14 +11,14 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country></country>
+               <msIdentifier><country/>
                   <altIdentifier xml:lang="ru">
                      <repository>НЗХТ</repository>
                      <idno>69/36504</idno>
                   </altIdentifier>
                   <altIdentifier xml:lang="en">
-                     <repository></repository>
-                     <idno></idno>
+                     <repository/>
+                     <idno/>
                   </altIdentifier>
                </msIdentifier>
                <msContents>
@@ -52,7 +47,7 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="ru"/>
                            <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/></seg>
                         </layout>
                      </layoutDesc>
@@ -90,7 +85,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь, Крым.</seg>
-                     <seg xml:lang="en">Sevastopol, Crimea.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Sevastopol, Crimea.</tei:seg>
                   </provenance>
                   
                </history>
@@ -110,7 +105,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -127,7 +122,7 @@
          <div type="bibliography" subtype="commentaries">
             <!-- Комментарии -->
             <listBibl>
-               <bibl></bibl>
+               <bibl/>
             </listBibl>
          </div>
          <div type="edition" xml:lang="grc" xml:space="preserve">
@@ -153,10 +148,10 @@
             <p>- - - [of Cor]nelius - - -</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

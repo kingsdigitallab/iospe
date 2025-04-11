@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="https://raw.githubusercontent.com/EpiDoc/Source/main/schema/schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Фрагменты общественной надписи</title><title xml:lang="en">Public inscription</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -109,7 +109,7 @@
                      <provenance type="observed" n="1">
                         <seg xml:lang="ru">Неизвестно с 1963 г., до 1941 г. хранился в Одесском
                            археологическом музее.</seg>
-                        <seg xml:lang="en">Unkown since 1963; prior to 1941 - at the Odessa Archaeological Museum.</seg>
+                        <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Unkown since 1963; prior to 1941 - at the Odessa Archaeological Museum.</tei:seg>
                      </provenance>
                      <provenance type="observed" subtype="autopsy" n="1">
                         <seg xml:lang="ru">Non vidi.</seg>
@@ -174,7 +174,7 @@
                      </provenance>
                      <provenance type="observed" n="2">
                         <seg xml:lang="ru">Белгород-Днестровский.</seg>
-                        <seg xml:lang="en">Belgorod-Dnestrovsky.</seg>
+                        <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Belgorod-Dnestrovsky.</tei:seg>
                      </provenance>
                      <provenance type="observed" subtype="autopsy" n="2">
                         <seg xml:lang="ru">А.И. Иванчик, <date when="2006-08">август 2006</date>.</seg>
@@ -254,8 +254,7 @@
                		
             <div type="textpart" subtype="fragment" n="2">
                <ab>   		
-               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ε</unclear>ΙΤ<unclear>ΕΛΕ</unclear></orig><gap
-                                                reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
+               		<lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ε</unclear>ΙΤ<unclear>ΕΛΕ</unclear></orig><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w><unclear>ἐ</unclear>ν</w> 
                                              <w>τῷ</w> <w>ἐπιφανε<unclear>στ</unclear><supplied reason="lost">ά</supplied>
                		<lb n="3" break="no"/><supplied reason="lost">τῳ</supplied></w> <supplied reason="lost"><w>τόπῳ</w></supplied><gap reason="lost" extent="unknown" unit="character"/><w part="F">σα</w> 
@@ -268,8 +267,7 @@
                		<lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐ</supplied><unclear>π</unclear>ειδὲ</w>
                		<lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">σεται</w> <w>τ<unclear>ὸν</unclear></w><gap reason="lost" extent="unknown" unit="character"/>
                		<lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>ς</unclear></w> 
-                                             <w part="I">πα<unclear>ρευ</unclear></w><gap reason="illegible" quantity="1" unit="character"/><gap
-                                                reason="lost" quantity="2" unit="character"/><orig><unclear>Θ</unclear>Α<unclear>Ι</unclear></orig><gap reason="lost" quantity="3" unit="character"/><orig><unclear>Η</unclear>Τ</orig> 
+                                             <w part="I">πα<unclear>ρευ</unclear></w><gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" quantity="2" unit="character"/><orig><unclear>Θ</unclear>Α<unclear>Ι</unclear></orig><gap reason="lost" quantity="3" unit="character"/><orig><unclear>Η</unclear>Τ</orig> 
                                              <gap reason="lost" quantity="4" unit="character"/>
                		<lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/> 
                                              <orig>Σ</orig><gap reason="lost" quantity="2" unit="character"/><orig>Ρ</orig><gap reason="lost" quantity="1" unit="character"/><gap reason="illegible" quantity="1" unit="character"/><orig><unclear>ΙΥ</unclear></orig> 
