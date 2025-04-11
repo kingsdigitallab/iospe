@@ -684,6 +684,16 @@
               Vinogradov (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
         </xsl:choose>
+        
+        <!-- PC, 11 Apr 2025:  IP does not want this message about downloading the TEI XML to display for volume 2 files until the TEI encoding of the edition content is Epidoc conformant, so for now we will wrap the 
+              entire chunk of code in a choice element to show or not to show depending 
+              on what volume the inscription is in -->
+        
+        <xsl:choose>
+          <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
+            <!-- do nothing -->
+          </xsl:when>
+          <xsl:otherwise>
         <br/>
         <i18n:text>You may download this</i18n:text>
         <xsl:text>&#160;</xsl:text>
@@ -703,6 +713,9 @@
           <i18n:text>EpiDoc schema</i18n:text>
         </a>
         <xsl:text>.)</xsl:text>
+        
+          </xsl:otherwise>
+        </xsl:choose>
       </p>
     </div>
   </xsl:template>
@@ -1133,6 +1146,16 @@
             </div>
 
             <!-- Editions -->
+            
+            <!-- PC, 11 Apr 2025:  IP does not want this field to display for volume 2 files until the bibliographic references are closer to being finished, so for now we will wrap the 
+              entire chunk of code (which starts with div class-"row") in a choice element to show or not to show depending 
+              on what volume the inscription is in -->
+            
+            <xsl:choose>
+              <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
+                <!-- do nothing -->
+              </xsl:when>
+              <xsl:otherwise>
                 <div class="row">
                   <div class="large-3 columns">
                     <h6>
@@ -1184,6 +1207,9 @@
                     </p>
                   </div>
                 </div>
+                
+              </xsl:otherwise>
+            </xsl:choose>
 
 
             <!-- Actual Inscription Data -->
