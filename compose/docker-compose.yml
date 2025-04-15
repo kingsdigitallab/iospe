@@ -10,7 +10,7 @@ services:
       - ../volumes/proxy/pathmap.yml:/maps/pathmap.yaml:ro
       - ./nginx/robots.txt:/www/robots.txt:ro
     ports:
-      - "80:80"
+      - "${NGINX_PROXY_PORT:-80}"
     restart: always
 
   tomcat:
