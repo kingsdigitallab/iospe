@@ -10,19 +10,19 @@
     <xsl:sequence select="/aggregation/criteria/tei:TEI/tei:text/tei:body/tei:ab"/>
   </xsl:variable>
   <xsl:variable name="execution">
-    <xsl:sequence select="/aggregation/execution/list"/>
+    <xsl:sequence select="/aggregation/execution/tei:TEI/tei:text/tei:body/tei:ab"/>
   </xsl:variable>
   <xsl:variable name="location">
     <xsl:sequence select="/aggregation/location/tei:TEI/tei:text/tei:body/tei:listPlace"/>
   </xsl:variable>
   <xsl:variable name="material">
-    <xsl:sequence select="/aggregation/material/tei:TEI/tei:text/tei:body/tei:list"/>
+    <xsl:sequence select="/aggregation/material/tei:TEI/tei:text/tei:body/tei:ab"/>
   </xsl:variable>
   <xsl:variable name="monument">
-    <xsl:sequence select="/aggregation/monument/tei:TEI/tei:text/tei:body/tei:list"/>
+    <xsl:sequence select="/aggregation/monument/tei:TEI/tei:text/tei:body/tei:ab"/>
   </xsl:variable>
   <xsl:variable name="document">
-    <xsl:sequence select="/aggregation/document/tei:TEI/tei:text/tei:body/tei:list"/>
+    <xsl:sequence select="/aggregation/document/tei:TEI/tei:text/tei:body/tei:ab"/>
   </xsl:variable>
 
   <xsl:variable name="file-path-end" select="substring-after($file-path, 'inscriptions/')"/>
@@ -103,20 +103,16 @@
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
 
-      <xsl:for-each select="$monument/tei:list/tei:item[@xml:id = $ref]">
-        <field name="monument-type">
-          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+      <xsl:for-each select="$monument/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
+        <field name="monument-type-en">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
-        <field name="monument-type-{tei:term/@xml:lang}">
-          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+        <field name="monument-type-ru">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='ru'])"/>
         </field>
-
-        <xsl:for-each select="tei:gloss">
-          <field name="monument-type-{@xml:lang}">
-            <xsl:value-of select="local:replace-spaces(.)"/>
-          </field>
-        </xsl:for-each>
-
+        <field name="monument-type-uk">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='uk'])"/>
+        </field>
       </xsl:for-each>
 
     </xsl:for-each>
@@ -125,19 +121,16 @@
   <xsl:template match="tei:material[@xml:lang = 'ru']" mode="material_fields">
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
-      <xsl:for-each select="$material/tei:list/tei:item[@xml:id = $ref]">
-        <field name="material">
-          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+      <xsl:for-each select="$material/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
+        <field name="material-en">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
-        <field name="material-{tei:term/@xml:lang}">
-          <xsl:value-of select="local:replace-spaces(tei:term)"/>
+        <field name="material-ru">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='ru'])"/>
         </field>
-
-        <xsl:for-each select="tei:gloss">
-          <field name="material-{@xml:lang}">
-            <xsl:value-of select="local:replace-spaces(.)"/>
-          </field>
-        </xsl:for-each>
+        <field name="material-uk">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='uk'])"/>
+        </field>
       </xsl:for-each>
     </xsl:for-each>
   </xsl:template>
@@ -145,20 +138,16 @@
   <xsl:template match="tei:summary[@corresp]" mode="document-type_fields">
     <xsl:for-each select="tokenize(@corresp, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
-
-      <xsl:for-each select="$document/tei:list/tei:item[@xml:id = $ref]">
-        <field name="document-type">
-          <xsl:value-of select="local:replace-spaces(tei:term[@xml:lang = 'uk'])"/>
+      <xsl:for-each select="$document/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
+        <field name="document-type-en">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
         <field name="document-type-ru">
-          <xsl:value-of select="local:replace-spaces(tei:term[@xml:lang = 'ru'])"/>
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='ru'])"/>
         </field>
-
-        <xsl:for-each select="tei:gloss">
-          <field name="document-type-{@xml:lang}">
-            <xsl:value-of select="local:replace-spaces(.)"/>
-          </field>
-        </xsl:for-each>
+        <field name="document-type-uk">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='uk'])"/>
+        </field>
       </xsl:for-each>
     </xsl:for-each>
   </xsl:template>
@@ -173,12 +162,15 @@
     <field name="origin-ru">
       <xsl:apply-templates select="tei:seg[@xml:lang = 'ru']" mode="origin"/>
     </field>
+    <field name="origin-uk">
+      <xsl:apply-templates select="tei:seg[@xml:lang = 'uk']" mode="origin"/>
+    </field>
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
       <field name="origin-ref">
         <xsl:value-of select="$ref"/>
       </field>
-      <xsl:for-each select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+      <xsl:for-each select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru', 'uk')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
@@ -198,12 +190,15 @@
     <field name="origin-ru">
       <xsl:apply-templates select="tei:seg[@xml:lang = 'ru']" mode="origin"/>
     </field>
+    <field name="origin-uk">
+      <xsl:apply-templates select="tei:seg[@xml:lang = 'uk']" mode="origin"/>
+    </field>
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
       <field name="origin-ref">
         <xsl:value-of select="$ref"/>
       </field>
-      <xsl:for-each select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru')]">
+      <xsl:for-each select="$location/tei:listPlace/tei:listPlace/tei:place[@xml:id = $ref]/tei:placeName[@xml:lang = ('en', 'ru', 'uk')]">
         <field name="location">
           <xsl:value-of select="local:replace-spaces(.)"/>
         </field>
@@ -261,13 +256,15 @@
   <xsl:template match="tei:rs[@type = 'execution']" mode="execution_fields">
     <xsl:for-each select="tokenize(@ref, ' ')">
       <xsl:variable name="ref" select="substring-after(., '#')"/>
-
-      <xsl:for-each select="$execution/list/item[@xml:id = $ref]/term">
-        <field name="execution">
-          <xsl:value-of select="local:replace-spaces(.)"/>
+      <xsl:for-each select="$execution/tei:ab/tei:ab[@type='entry'][@xml:id = $ref]">
+        <field name="execution-en">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='en'])"/>
         </field>
-        <field name="execution-{@xml:lang}">
-          <xsl:value-of select="local:replace-spaces(.)"/>
+        <field name="execution-ru">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='ru'])"/>
+        </field>
+        <field name="execution-uk">
+          <xsl:value-of select="local:replace-spaces(tei:seg[@xml:lang='uk'])"/>
         </field>
       </xsl:for-each>
     </xsl:for-each>

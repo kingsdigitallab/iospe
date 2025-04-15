@@ -14,7 +14,7 @@
   </xsl:template>
 
   <xsl:variable name="surnames" select="/aggregation/surnames"/>
-vo
+
   <xsl:function name="iospe:sort-bibliography">
     <xsl:param name="node"/>
     <xsl:variable name="normalised_author"

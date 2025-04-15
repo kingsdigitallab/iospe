@@ -675,7 +675,7 @@
               Ivantchik (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '2'">© 2024 <i18n:text>Irene
-              Polinskaya (edition and translation)</i18n:text>
+              Polinskaya</i18n:text>
           </xsl:when>
           <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
               Makarov (edition), Irene Polinskaya (translation)</i18n:text>
@@ -684,6 +684,16 @@
               Vinogradov (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
         </xsl:choose>
+        
+        <!-- PC, 11 Apr 2025:  IP does not want this message about downloading the TEI XML to display for volume 2 files until the TEI encoding of the edition content is Epidoc conformant, so for now we will wrap the 
+              entire chunk of code in a choice element to show or not to show depending 
+              on what volume the inscription is in -->
+        
+        <xsl:choose>
+          <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
+            <!-- do nothing -->
+          </xsl:when>
+          <xsl:otherwise>
         <br/>
         <i18n:text>You may download this</i18n:text>
         <xsl:text>&#160;</xsl:text>
@@ -703,6 +713,9 @@
           <i18n:text>EpiDoc schema</i18n:text>
         </a>
         <xsl:text>.)</xsl:text>
+        
+          </xsl:otherwise>
+        </xsl:choose>
       </p>
     </div>
   </xsl:template>
@@ -1054,17 +1067,14 @@
                     </xsl:when>
                     <xsl:when
                       test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
-                      <xsl:variable name="envalue" select="/aggregation/evidence//arr[@name='evidence-en']/str"/>
-                      <xsl:value-of select="translate($envalue, '_', ' ')"/>
                       
-                      
-                      <!--<xsl:variable name="crit" select="/aggregation/crit"/>
+                      <xsl:variable name="crit" select="/aggregation/criteria"/>
                       <xsl:for-each
                         select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="term" select="
-                            $crit//tei:label[
-                            lower-case(.) = lower-case(normalize-space(translate(current(), '_', ' ')))
-                            ]/following-sibling::tei:item[1]"/>
+                            $crit//tei:seg[@xml:lang='ru'][
+                            lower-case(.) = lower-case(current())
+                            ]/preceding-sibling::tei:seg[@xml:lang='en'][1]"/>
 
                         <xsl:choose>
                           <xsl:when test="position() = 1">
@@ -1079,13 +1089,53 @@
                           <xsl:text>, </xsl:text>
                         </xsl:if>
                       </xsl:for-each>
-                      <xsl:text>.&#160;</xsl:text>-->
+                      <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
-                    <xsl:when
+                    
+                    <!-- PC, 26 March 2025: Ideally the 'when' templates below are what we should use, but sadly there is a major inconvenience caused by having various ms parts -->
+                    
+                    <!--<xsl:when
+                      test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      
+                      <xsl:for-each
+                        select="/aggregation/evidence//arr[@name='evidence-en']/str">
+                        
+                        <xsl:choose>
+                          <xsl:when test="position() = 1">
+                            <xsl:value-of select="upper-case(substring(current(), 1, 1))"/>
+                            <xsl:value-of select="translate(substring(current(), 2), '_', ' ')"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="translate(lower-case(current()), '_', ' ')"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                    </xsl:when>-->
+                    <!--<xsl:when
                       test="$lang = 'uk' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
                       <xsl:variable name="ukvalue" select="/aggregation/evidence//arr[@name='evidence-uk']/str"/>
-                      <xsl:value-of select="translate($ukvalue, '_', ' ')"/>
-                    </xsl:when>
+                      <xsl:for-each
+                        select="tokenize($ukvalue, ' ')">
+                        
+                        <xsl:choose>
+                          <xsl:when test="position() = 1">
+                            <xsl:value-of select="upper-case(substring(current(), 1, 1))"/>
+                            <xsl:value-of select="translate(substring(current(), 2), '_', ' ')"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="translate(lower-case(current()), '_', ' ')"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                    </xsl:when>-->
+                    
+
                     <xsl:otherwise>
                       <i18n:text>Not applicable</i18n:text>
                       <xsl:text>.&#160;</xsl:text>
@@ -1096,16 +1146,16 @@
             </div>
 
             <!-- Editions -->
-            <!-- PC, 20 Jun 2024:  IP does not want this field to display for volume 2 files, so for now we will wrap the 
+            
+            <!-- PC, 11 Apr 2025:  IP does not want this field to display for volume 2 files until the bibliographic references are closer to being finished, so for now we will wrap the 
               entire chunk of code (which starts with div class-"row") in a choice element to show or not to show depending 
               on what volume the inscription is in -->
-
+            
             <xsl:choose>
               <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
                 <!-- do nothing -->
               </xsl:when>
               <xsl:otherwise>
-
                 <div class="row">
                   <div class="large-3 columns">
                     <h6>
@@ -1157,7 +1207,7 @@
                     </p>
                   </div>
                 </div>
-
+                
               </xsl:otherwise>
             </xsl:choose>
 
@@ -1894,7 +1944,7 @@
       </xsl:if>
 
       <xsl:if test="descendant::tei:imprint[1]/tei:date[1]">
-        <xsl:text/>
+        <xsl:text>&#x0020;</xsl:text>
         <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
       </xsl:if>
     </xsl:for-each>
