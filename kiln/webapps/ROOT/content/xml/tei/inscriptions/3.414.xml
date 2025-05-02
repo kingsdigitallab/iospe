@@ -1,9 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -16,7 +11,7 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country></country>
+               <msIdentifier><country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Национальный заповедник "Херсонес Таврический"</repository>
                      <idno>35/36504</idno>
@@ -51,7 +46,7 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="ru"/>
                            <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/></seg>
                         </layout>
                      </layoutDesc>
@@ -82,14 +77,14 @@
                         <rs type="context">Нет данных.</rs>
                      </seg>
                      <seg xml:lang="en">
-                        <placeName type="ancientFindspot"></placeName>
+                        <placeName type="ancientFindspot"/>
                         <rs type="circumstances">Unknown.</rs>
                         <rs type="context">Unknown.</rs>
                      </seg>
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Севастополь.</seg>
-                     <seg xml:lang="en">Sevastopol.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Sevastopol.</tei:seg>
                   </provenance>
                   
                </history>
@@ -109,8 +104,8 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
-            <desc xml:lang="ru"></desc>
+            <desc xml:lang="en"/>
+            <desc xml:lang="ru"/>
          </graphic>
       </surface>
    </facsimile>
@@ -132,8 +127,7 @@
             <ab>
                	<lb n="1"/><persName type="attested"><name>Οὐλπία</name></persName>
                <orig>ε</orig><gap reason="lost" extent="unknown" unit="character"/>
-               	<lb n="2" break="no"/><w part="F">χου</w> <gap reason="illegible" quantity="2" unit="character"/><gap
-               	   reason="lost" extent="unknown" unit="character"/>
+               	<lb n="2" break="no"/><w part="F">χου</w> <gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
             </ab>
          </div>
          <div type="apparatus">
@@ -151,10 +145,10 @@
             <p>Ulpia E[- - -], [wife of] - - -</p>
          </div>
          <div type="commentary" xml:lang="ru">
-            <p></p>
+            <p/>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

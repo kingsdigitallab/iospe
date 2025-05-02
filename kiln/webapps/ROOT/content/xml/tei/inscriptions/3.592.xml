@@ -1,9 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.21/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -16,7 +11,7 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier><country></country>
+               <msIdentifier><country/>
                   <altIdentifier xml:lang="ru">
                      <repository>Центральный музей Тавриды</repository>
                      <idno>КП-1161</idno>
@@ -51,7 +46,7 @@
                      </supportDesc>
                      <layoutDesc>
                         <layout>
-                           <seg xml:lang="ru"></seg>
+                           <seg xml:lang="ru"/>
                            <seg xml:lang="en"><rs type="execution" ref="execution.xml#scalpro"/></seg>
                         </layout>
                      </layoutDesc>
@@ -89,7 +84,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Симферополь, Крым.</seg>
-                     <seg xml:lang="en">Simferopol, Crimea.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Simferopol, Crimea.</tei:seg>
                   </provenance>
                   
                </history>
@@ -107,7 +102,7 @@
    <facsimile>
       <surface>
          <graphic url="">
-            <desc xml:lang="en"></desc>
+            <desc xml:lang="en"/>
             <desc xml:lang="ru"/>
          </graphic>
       </surface>
@@ -152,7 +147,7 @@
             <p>Ed. pr. предполагает род. п. личного имени Ἄπφος или зват. п. имени Ἀπφοῦς.</p>
          </div>
          <div type="commentary" xml:lang="en">
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

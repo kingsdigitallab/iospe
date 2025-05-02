@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.23/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="https://raw.githubusercontent.com/EpiDoc/Source/main/schema/schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt><title xml:lang="ru">Надпись на алтарной плите</title><title xml:lang="en">Dedication (?) on an altar</title><editor xml:id="ip" role="translator"><persName xml:lang="ru">Ирина<forename/><surname>Полинская</surname></persName><persName xml:lang="en"><forename>Irene</forename><surname>Polinskaya</surname></persName></editor></titleStmt>
@@ -49,7 +49,7 @@
                            ню с укороченной правой вертикалью и сигма с горизонтальными верхней и нижней гастами.</seg>
                         <seg xml:lang="en">Judging by a drawing in the report of K.K. Kostsyushko-Valyuzhinich (see Strzheletsky 1948, 103, fig. 3), the script 
                         had nu with short right vertical and sigma with horizontal top and bottom bars.</seg>
-                        <height unit="cm"></height>
+                        <height unit="cm"/>
                      </handNote>
                   </handDesc>
                </physDesc>
@@ -83,7 +83,7 @@
                   </provenance>
                   <provenance type="observed">
                      <seg xml:lang="ru">Неизвестно.</seg>
-                     <seg xml:lang="en">Unknown.</seg>
+                     <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Unknown.</tei:seg>
                   </provenance>
                   <provenance type="observed" subtype="autopsy">
                      <seg xml:lang="ru">Non vidi. Камень, вероятно, исчез вскоре после обнаружения (ср. Стржелецкий 1948, 103).</seg>

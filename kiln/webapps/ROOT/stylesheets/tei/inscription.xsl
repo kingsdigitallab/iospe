@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet exclude-result-prefixes="#all" version="2.0"
-  xmlns:tei="http://www.tei-c.org/ns/1.0"
+<xsl:stylesheet exclude-result-prefixes="#all" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
   xmlns:kiln="http://www.kcl.ac.uk/artshums/depts/ddh/kiln/ns/1.0"
-  xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:import href="inscription-apparatus.xsl"/>
 
@@ -43,8 +41,10 @@
       <xsl:value-of select="//tei:idno[@type = 'filename']"/>
     </xsl:variable>
 
-    <xsl:variable name="prev" select="/aggregation/order//result/doc[str[@name = 'tei-id' and text() = $filename]]/preceding-sibling::doc[1]/str/text()"/>
-    <xsl:variable name="next" select="/aggregation/order//result/doc[str[@name = 'tei-id' and text() = $filename]]/following-sibling::doc[1]/str/text()"/>
+    <xsl:variable name="prev"
+      select="/aggregation/order//result/doc[str[@name = 'tei-id' and text() = $filename]]/preceding-sibling::doc[1]/str/text()"/>
+    <xsl:variable name="next"
+      select="/aggregation/order//result/doc[str[@name = 'tei-id' and text() = $filename]]/following-sibling::doc[1]/str/text()"/>
 
 
     <div class="row">
@@ -113,27 +113,33 @@
     <xsl:text>. </xsl:text>
 
     <!-- origin -->
-    <xsl:apply-templates select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang = $lang]"/>
-    <xsl:text></xsl:text>
+    <xsl:apply-templates
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc/tei:history/tei:origin/tei:origPlace[1]/tei:seg[@xml:lang = $lang]"/>
+    <xsl:text/>
 
     <!-- title -->
-    <xsl:apply-templates select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $lang]"/>
+    <xsl:apply-templates
+      select="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $lang]"/>
 
 
     <!--<xsl:if test="/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang=$lang]/tei:certainty[@cert = 'low']">
       <xsl:text> (?)</xsl:text>
     </xsl:if>-->
 
-    <xsl:if test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $lang]//tei:origDate)">
+    <xsl:if
+      test="not(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[not(@type)][@xml:lang = $lang]//tei:origDate)">
 
       <xsl:choose>
-        <xsl:when test="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = 'en'] = 'Unknown.'">
+        <xsl:when
+          test="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = 'en'] = 'Unknown.'">
           <xsl:text>.</xsl:text>
         </xsl:when>
         <xsl:otherwise>
           <xsl:text>, </xsl:text>
           <!-- origDate -->
-          <xsl:value-of select="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = $lang]" />
+          <xsl:value-of
+            select="(/aggregation/inscription/tei:TEI/tei:teiHeader/tei:fileDesc/tei:sourceDesc/tei:msDesc//tei:history/tei:origin/tei:origDate)[1]/tei:seg[@xml:lang = $lang]"
+          />
         </xsl:otherwise>
       </xsl:choose>
 
@@ -146,28 +152,75 @@
     <xsl:param name="num"/>
     <xsl:param name="printCorpus" select="false()"/>
     <xsl:param name="txt" select="false()"/>
-
-    <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
-      <xsl:matching-substring>
-        <xsl:if test="$printCorpus">
-          <xsl:number value="regex-group(1)" format="I"/>
-          <xsl:text>&#160;</xsl:text>
-        </xsl:if>
-        <xsl:choose>
-          <xsl:when test="$txt">
-            <xsl:number format="1" value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-            <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <strong>
-              <xsl:number format="1" value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
-              <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
-            </strong>
-          </xsl:otherwise>
-        </xsl:choose>
-
-      </xsl:matching-substring>
-    </xsl:analyze-string>
+<!-- choice here because the nums for vols 1, 3, and 5 are just two groups, i.e. x.x, whereas vol 2 nums are always four groups i.e. 2.x.x.x -->
+    <xsl:choose>
+      
+      <xsl:when test="starts-with($num, '2')">   
+        <xsl:analyze-string regex="(\d+)\.(\d+)\.(\d+)\.(\d+[a-z]?)" select="$num">
+          <xsl:matching-substring>
+            <xsl:if test="$printCorpus">
+              <xsl:number value="regex-group(1)" format="I"/>
+              <xsl:text>.</xsl:text>
+            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="$txt">
+                <xsl:number format="1"
+                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                <xsl:text>.</xsl:text>
+                <xsl:number format="1"
+                  value="number(translate(regex-group(3), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(3), '0123456789', '')"/>
+                <xsl:text> </xsl:text>
+                <xsl:number format="1"
+                  value="number(translate(regex-group(4), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(4), '0123456789', '')"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <strong>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                  <xsl:text>.</xsl:text>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(3), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(3), '0123456789', '')"/>
+                  <xsl:text> </xsl:text>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(4), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(4), '0123456789', '')"/>
+                </strong>
+              </xsl:otherwise>
+            </xsl:choose>        
+          </xsl:matching-substring>
+        </xsl:analyze-string>
+      </xsl:when>
+      
+      <xsl:otherwise>
+        <xsl:analyze-string regex="(\d+)\.(\d+[a-z]?)" select="$num">
+          <xsl:matching-substring>
+            <xsl:if test="$printCorpus">
+              <xsl:number value="regex-group(1)" format="I"/>
+              <xsl:text>&#160;</xsl:text>
+            </xsl:if>
+            <xsl:choose>
+              <xsl:when test="$txt">
+                <xsl:number format="1"
+                  value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <strong>
+                  <xsl:number format="1"
+                    value="number(translate(regex-group(2), 'abcdefghijklmnopqrstuvwxyz', ''))"/>
+                  <xsl:value-of select="translate(regex-group(2), '0123456789', '')"/>
+                </strong>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:matching-substring>
+        </xsl:analyze-string>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="*" mode="copyEpidoc">
@@ -215,7 +268,7 @@
         <h2>
           <xsl:attribute name="class">
             <xsl:choose>
-              <xsl:when test="$n and $nestedTitles and $specialFrag"></xsl:when>
+              <xsl:when test="$n and $nestedTitles and $specialFrag"/>
               <xsl:when test="$n and $nestedTitles">
                 <xsl:text>subpart</xsl:text>
               </xsl:when>
@@ -225,7 +278,7 @@
           <xsl:choose>
             <xsl:when test="$n">
               <i18n:text>Fragment</i18n:text>
-              <xsl:text></xsl:text>
+              <xsl:text/>
               <xsl:value-of select="$n"/>
             </xsl:when>
             <xsl:otherwise>
@@ -237,7 +290,8 @@
 
       <div class="large-10 columns details">
         <!-- Type of monument (if exists) -->
-        <xsl:if test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $lang]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -246,7 +300,8 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $lang]"/>
+                <xsl:apply-templates
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:objectType[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -254,7 +309,8 @@
         </xsl:if>
 
         <!-- Material (if exists) -->
-        <xsl:if test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $lang]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $lang]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -263,14 +319,16 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $lang]"/>
+                <xsl:apply-templates
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:material[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
           </div>
         </xsl:if>
         <!-- Dimensions -->
-        <xsl:for-each select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:dimensions">
+        <xsl:for-each
+          select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:dimensions">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -288,7 +346,8 @@
         </xsl:for-each>
 
         <!-- Description and condition (if exists) -->
-        <xsl:if test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $lang) and (normalize-space(text()[1])!='')]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[(@xml:lang = $lang) and (normalize-space(text()[1]) != '')]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -297,14 +356,16 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang = $lang]/node()"/>
+                <xsl:apply-templates
+                  select="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/tei:p[@xml:lang = $lang]/node()"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
           </div>
         </xsl:if>
 
-        <xsl:if test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/(tei:objectType | tei:material | tei:dimensions | tei:p)[@xml:lang = $lang]">
+        <xsl:if
+          test="tei:physDesc/tei:objectDesc/tei:supportDesc/tei:support/(tei:objectType | tei:material | tei:dimensions | tei:p)[@xml:lang = $lang]">
           <!-- DEBUG <br/> -->
         </xsl:if>
 
@@ -318,7 +379,8 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $lang]"/>
+                <xsl:apply-templates
+                  select="tei:history/tei:origin/tei:origPlace/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -336,7 +398,8 @@
 
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:seg[@xml:lang = $lang]/tei:placeName[@type = 'ancientFindspot']"/>
+                <xsl:apply-templates
+                  select="tei:seg[@xml:lang = $lang]/tei:placeName[@type = 'ancientFindspot']"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -368,7 +431,8 @@
 
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:seg[@xml:lang = $lang]/tei:rs[@type = 'circumstances']"/>
+                <xsl:apply-templates
+                  select="tei:seg[@xml:lang = $lang]/tei:rs[@type = 'circumstances']"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -393,7 +457,8 @@
 
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:history/tei:provenance[@type = 'observed'][not(@subtype)]/tei:seg[@xml:lang = $lang]"/>
+                <xsl:apply-templates
+                  select="tei:history/tei:provenance[@type = 'observed'][not(@subtype)]/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -401,7 +466,8 @@
         </xsl:if>
 
         <!-- Institution and Inventory -->
-        <xsl:for-each select="tei:msIdentifier/tei:altIdentifier[@xml:lang = $lang or not(@xml:lang)]">
+        <xsl:for-each
+          select="tei:msIdentifier/tei:altIdentifier[@xml:lang = $lang or not(@xml:lang)]">
           <div class="row">
             <div class="large-3 columns">
               <h6>
@@ -440,7 +506,8 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="tei:history/tei:provenance[@type = 'observed'][@subtype = 'autopsy']/tei:seg[@xml:lang = $lang]"/>
+                <xsl:apply-templates
+                  select="tei:history/tei:provenance[@type = 'observed'][@subtype = 'autopsy']/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -459,8 +526,10 @@
 
     <xsl:choose>
       <!-- PC JULY 2015: this first case is to deal with complex cases like V.236 (see comment at top) -->
-      <xsl:when test="//tei:msDesc/tei:msPart[(@ana = 'fragment') and (child::tei:msPart[@ana = 'text'])]">
-        <xsl:for-each select="//tei:msDesc/tei:msPart[(@ana = 'fragment') and (child::tei:msPart[@ana = 'text'])]">
+      <xsl:when
+        test="//tei:msDesc/tei:msPart[(@ana = 'fragment') and (child::tei:msPart[@ana = 'text'])]">
+        <xsl:for-each
+          select="//tei:msDesc/tei:msPart[(@ana = 'fragment') and (child::tei:msPart[@ana = 'text'])]">
           <xsl:variable name="fragNum" select="@n"/>
           <xsl:apply-templates select="." mode="do_fragment_or_monument">
             <xsl:with-param name="n" select="$fragNum"/>
@@ -486,7 +555,8 @@
 
       <!-- Render metadata about physical object; either whole or in fragments (tei:div[@subtype='fragment']) -->
 
-      <xsl:when test="//tei:div[@type = 'edition'][descendant::tei:div[@subtype = 'fragment'][descendant::tei:div[@subtype = 'inscription']]]">
+      <xsl:when
+        test="//tei:div[@type = 'edition'][descendant::tei:div[@subtype = 'fragment'][descendant::tei:div[@subtype = 'inscription']]]">
 
         <xsl:for-each select="//tei:div[@type = 'edition']//tei:div[@subtype = 'fragment']">
           <!-- Render metadata about inscriptions in current fragment, if any -->
@@ -524,7 +594,7 @@
             </xsl:otherwise>
           </xsl:choose>
 
-          <xsl:text></xsl:text>
+          <xsl:text/>
 
         </xsl:for-each>
       </xsl:when>
@@ -546,7 +616,8 @@
         </xsl:for-each>
 
         <xsl:choose>
-          <xsl:when test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n][descendant::tei:origDate][descendant::tei:msContents]">
+          <xsl:when
+            test="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n][descendant::tei:origDate][descendant::tei:msContents]">
             <!-- multiple epigraphic fields, each with its corresponding textpart -->
             <xsl:for-each select="//tei:msDesc/tei:msPart[descendant::tei:layoutDesc][@n]">
               <xsl:call-template name="do_epigraphic_field">
@@ -577,7 +648,7 @@
 
         </xsl:choose>
 
-        <xsl:text></xsl:text>
+        <xsl:text/>
 
       </xsl:otherwise>
 
@@ -597,17 +668,33 @@
       <p>
         <a href="http://creativecommons.org/licenses/by/2.0/uk/" title="Creative Commons license">
           <img alt="(cc)" border="0" src="{$kiln:assets-path}/images/80x15.png"/>
-          <xsl:text></xsl:text>
+          <xsl:text/>
         </a>
         <xsl:choose>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='1'">© 2017 <i18n:text>Askold Ivantchik (edition), Irene Polinskaya (translation)</i18n:text>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '1'">© 2017 <i18n:text>Askold
+              Ivantchik (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='3'">© 2017 <i18n:text>Igor Makarov (edition), Irene Polinskaya (translation)</i18n:text>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '2'">© 2024 <i18n:text>Irene
+              Polinskaya</i18n:text>
           </xsl:when>
-          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1)='5'">© 2015 <i18n:text>Andrey Vinogradov (edition), Irene Polinskaya (translation)</i18n:text>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '3'">© 2017 <i18n:text>Igor
+              Makarov (edition), Irene Polinskaya (translation)</i18n:text>
+          </xsl:when>
+          <xsl:when test="substring(//tei:idno[@type = 'PE'], 3, 1) = '5'">© 2015 <i18n:text>Andrey
+              Vinogradov (edition), Irene Polinskaya (translation)</i18n:text>
           </xsl:when>
         </xsl:choose>
-        <br />
+        
+        <!-- PC, 11 Apr 2025:  IP does not want this message about downloading the TEI XML to display for volume 2 files until the TEI encoding of the edition content is Epidoc conformant, so for now we will wrap the 
+              entire chunk of code in a choice element to show or not to show depending 
+              on what volume the inscription is in -->
+        
+        <xsl:choose>
+          <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
+            <!-- do nothing -->
+          </xsl:when>
+          <xsl:otherwise>
+        <br/>
         <i18n:text>You may download this</i18n:text>
         <xsl:text>&#160;</xsl:text>
         <a href="{$filename}">
@@ -618,7 +705,7 @@
         </a>
         <xsl:text>. (</xsl:text>
         <i18n:text>This file should validate to the</i18n:text>
-        <xsl:text></xsl:text>
+        <xsl:text/>
         <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
           <xsl:attribute name="title">
             <i18n:text>Right-click to save this file</i18n:text>
@@ -626,6 +713,9 @@
           <i18n:text>EpiDoc schema</i18n:text>
         </a>
         <xsl:text>.)</xsl:text>
+        
+          </xsl:otherwise>
+        </xsl:choose>
       </p>
     </div>
   </xsl:template>
@@ -641,7 +731,9 @@
       <xsl:choose>
         <xsl:when test="normalize-space($fragNum)">
           <!-- for cases like V.236 -->
-          <xsl:sequence select="//tei:msPart[(@ana = 'fragment') and (@n = $fragNum)]/tei:msPart[(@ana = 'text') and (@n = substring-after($fullN, '.'))]" />
+          <xsl:sequence
+            select="//tei:msPart[(@ana = 'fragment') and (@n = $fragNum)]/tei:msPart[(@ana = 'text') and (@n = substring-after($fullN, '.'))]"
+          />
         </xsl:when>
         <xsl:when test="not(normalize-space($fragNum)) and normalize-space($fullN)">
           <xsl:sequence select="//tei:msPart[@n = $fullN]"/>
@@ -764,7 +856,8 @@
             </div>
             <div class="large-9 columns">
               <p>
-                <xsl:apply-templates select="$ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:seg[@xml:lang = $lang]"/>
+                <xsl:apply-templates
+                  select="$ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:seg[@xml:lang = $lang]"/>
                 <xsl:text>&#160;</xsl:text>
               </p>
             </div>
@@ -782,13 +875,15 @@
             <div class="large-9 columns">
               <p>
                 <xsl:choose>
-                  <xsl:when test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
+                  <xsl:when
+                    test="string($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height)">
                     <xsl:value-of select="
                         if ($lang = 'ru')
                         then
                           $ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height
                         else
-                          translate($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height, ',', '.')" />
+                          translate($ms_context//tei:physDesc/tei:handDesc/tei:handNote/tei:height, ',', '.')"
+                    />
                   </xsl:when>
                   <xsl:otherwise>
                     <i18n:text>Unknown_lh</i18n:text>
@@ -823,7 +918,9 @@
     <xsl:variable name="ms_context">
       <xsl:choose>
         <xsl:when test="normalize-space($fragNum)">
-          <xsl:sequence select="//tei:msPart[(@ana = 'fragment') and (@n = $fragNum)]/tei:msPart[(@ana = 'text') and (@n = substring-after($fullN, '.'))]" />
+          <xsl:sequence
+            select="//tei:msPart[(@ana = 'fragment') and (@n = $fragNum)]/tei:msPart[(@ana = 'text') and (@n = substring-after($fullN, '.'))]"
+          />
         </xsl:when>
         <xsl:when test="not(normalize-space($fragNum)) and normalize-space($fullN)">
           <xsl:sequence select="//tei:msPart[@n = $fullN]"/>
@@ -911,7 +1008,8 @@
               </div>
               <div class="large-9 columns">
                 <p>
-                  <xsl:apply-templates select="$ms_context//tei:msContents/tei:summary/tei:seg[@xml:lang = $lang]"/>
+                  <xsl:apply-templates
+                    select="$ms_context//tei:msContents/tei:summary/tei:seg[@xml:lang = $lang]"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
@@ -926,8 +1024,10 @@
               </div>
               <div class="large-9 columns">
                 <p>
-                  <xsl:value-of select="upper-case(substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $lang], 1, 1))"/>
-                  <xsl:value-of select="substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $lang], 2)"/>
+                  <xsl:value-of
+                    select="upper-case(substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $lang], 1, 1))"/>
+                  <xsl:value-of
+                    select="substring($ms_context//tei:history/tei:origin/tei:origDate/tei:seg[@xml:lang = $lang], 2)"/>
                   <xsl:text>&#160;</xsl:text>
                 </p>
               </div>
@@ -943,8 +1043,10 @@
               <div class="large-9 columns">
                 <p>
                   <xsl:choose>
-                    <xsl:when test="$lang = 'ru' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
-                      <xsl:for-each select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
+                    <xsl:when
+                      test="$lang = 'ru' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      <xsl:for-each
+                        select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="token">
                           <xsl:value-of select="translate(., '_', ' ')"/>
                         </xsl:variable>
@@ -963,13 +1065,16 @@
                       </xsl:for-each>
                       <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
-                    <xsl:when test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
-                      <xsl:variable name="crit" select="/aggregation/crit"/>
-                      <xsl:for-each select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
+                    <xsl:when
+                      test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      
+                      <xsl:variable name="crit" select="/aggregation/criteria"/>
+                      <xsl:for-each
+                        select="tokenize(normalize-space($ms_context//tei:history/tei:origin/tei:origDate/@evidence), ' ')">
                         <xsl:variable name="term" select="
-                            $crit//tei:label[
-                            lower-case(.) = lower-case(normalize-space(translate(current(), '_', ' ')))
-                            ]/following-sibling::tei:item[1]"/>
+                            $crit//tei:seg[@xml:lang='ru'][
+                            lower-case(.) = lower-case(current())
+                            ]/preceding-sibling::tei:seg[@xml:lang='en'][1]"/>
 
                         <xsl:choose>
                           <xsl:when test="position() = 1">
@@ -986,6 +1091,51 @@
                       </xsl:for-each>
                       <xsl:text>.&#160;</xsl:text>
                     </xsl:when>
+                    
+                    <!-- PC, 26 March 2025: Ideally the 'when' templates below are what we should use, but sadly there is a major inconvenience caused by having various ms parts -->
+                    
+                    <!--<xsl:when
+                      test="$lang = 'en' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      
+                      <xsl:for-each
+                        select="/aggregation/evidence//arr[@name='evidence-en']/str">
+                        
+                        <xsl:choose>
+                          <xsl:when test="position() = 1">
+                            <xsl:value-of select="upper-case(substring(current(), 1, 1))"/>
+                            <xsl:value-of select="translate(substring(current(), 2), '_', ' ')"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="translate(lower-case(current()), '_', ' ')"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                    </xsl:when>-->
+                    <!--<xsl:when
+                      test="$lang = 'uk' and $ms_context//tei:history/tei:origin/tei:origDate/@evidence">
+                      <xsl:variable name="ukvalue" select="/aggregation/evidence//arr[@name='evidence-uk']/str"/>
+                      <xsl:for-each
+                        select="tokenize($ukvalue, ' ')">
+                        
+                        <xsl:choose>
+                          <xsl:when test="position() = 1">
+                            <xsl:value-of select="upper-case(substring(current(), 1, 1))"/>
+                            <xsl:value-of select="translate(substring(current(), 2), '_', ' ')"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:value-of select="translate(lower-case(current()), '_', ' ')"/>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="position() != last()">
+                          <xsl:text>, </xsl:text>
+                        </xsl:if>
+                      </xsl:for-each>
+                    </xsl:when>-->
+                    
+
                     <xsl:otherwise>
                       <i18n:text>Not applicable</i18n:text>
                       <xsl:text>.&#160;</xsl:text>
@@ -996,53 +1146,70 @@
             </div>
 
             <!-- Editions -->
-            <div class="row">
-              <div class="large-3 columns">
-                <h6>
-                  <i18n:text>Editions</i18n:text>
-                </h6>
-              </div>
-              <div class="large-9 columns">
-                <p>
-                  <xsl:variable name="surnames">
-                    <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
-                  </xsl:variable>
-                  <xsl:choose>
-                    <xsl:when test="
-                        normalize-space($fullN) = '' and
-                        (//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//text()[not(normalize-space(.) = '')]]
-                        or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//tei:ptr])">
-                      <xsl:for-each select="//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')]/tei:listBibl">
-                        <xsl:if test="@n">
-                          <em>
-                            <i18n:text>Fr.</i18n:text>
-                            <xsl:text></xsl:text>
-                            <xsl:value-of select="@n"/>
-                            <xsl:text>.&#160;</xsl:text>
-                          </em>
-                        </xsl:if>
-                        <xsl:apply-templates select="tei:bibl"/>
-                        <xsl:if test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
+            
+            <!-- PC, 11 Apr 2025:  IP does not want this field to display for volume 2 files until the bibliographic references are closer to being finished, so for now we will wrap the 
+              entire chunk of code (which starts with div class-"row") in a choice element to show or not to show depending 
+              on what volume the inscription is in -->
+            
+            <xsl:choose>
+              <xsl:when test="starts-with(//tei:publicationStmt/tei:idno[@type = 'filename'], '2')">
+                <!-- do nothing -->
+              </xsl:when>
+              <xsl:otherwise>
+                <div class="row">
+                  <div class="large-3 columns">
+                    <h6>
+                      <i18n:text>Editions</i18n:text>
+                    </h6>
+                  </div>
+                  <div class="large-9 columns">
+                    <p>
+                      <xsl:variable name="surnames">
+                        <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
+                      </xsl:variable>
+                      <xsl:choose>
+                        <xsl:when test="
+                            normalize-space($fullN) = '' and
+                            (//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//text()[not(normalize-space(.) = '')]]
+                            or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl//tei:ptr])">
+                          <xsl:for-each
+                            select="//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')]/tei:listBibl">
+                            <xsl:if test="@n">
+                              <em>
+                                <i18n:text>Fr.</i18n:text>
+                                <xsl:text/>
+                                <xsl:value-of select="@n"/>
+                                <xsl:text>.&#160;</xsl:text>
+                              </em>
+                            </xsl:if>
+                            <xsl:apply-templates select="tei:bibl"/>
+                            <xsl:if
+                              test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
+                              <i18n:text>Unpublished</i18n:text>
+                            </xsl:if>
+                            <xsl:if test="position() != last()">
+                              <xsl:text>.&#160;</xsl:text>
+                            </xsl:if>
+                          </xsl:for-each>
+                        </xsl:when>
+                        <xsl:when test="
+                            //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
+                            or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
+                          <xsl:apply-templates
+                            select="//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')]/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
+                          />
+                        </xsl:when>
+                        <xsl:otherwise>
                           <i18n:text>Unpublished</i18n:text>
-                        </xsl:if>
-                        <xsl:if test="position() != last()">
-                          <xsl:text>.&#160;</xsl:text>
-                        </xsl:if>
-                      </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="
-                        //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
-                        or //tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
-                      <xsl:apply-templates select="//tei:div[@type = 'bibliography'][not(@subtype = 'commentaries')]/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl" />
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <i18n:text>Unpublished</i18n:text>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                  <xsl:text>.&#160;</xsl:text>
-                </p>
-              </div>
-            </div>
+                        </xsl:otherwise>
+                      </xsl:choose>
+                      <xsl:text>.&#160;</xsl:text>
+                    </p>
+                  </div>
+                </div>
+                
+              </xsl:otherwise>
+            </xsl:choose>
 
 
             <!-- Actual Inscription Data -->
@@ -1058,19 +1225,30 @@
                         <i18n:text>Edition</i18n:text>
                       </a>
                     </p>
-                    <div id="edition{if (@n) then @n else '1'}" class="content edition" data-section-content="true">
+                    <div id="edition{if (@n) then @n else '1'}" class="content edition"
+                      data-section-content="true">
                       <!-- Only get current text part (inscription) if necessary -->
                       <xsl:choose>
                         <xsl:when test="$f_n and $tx_n and $tx_n != '0'">
-                          <xsl:apply-templates select="//v_in//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $f_n, '-', $tx_n, '-'))]" mode="copyEpidoc"/>
-                          <xsl:apply-templates select="//v_in//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-', $tx_n, '-'))]" mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:when test="$f_n and (not($tx_n) or $tx_n = '0')">
-                          <xsl:apply-templates select="//v_in//div[@id = 'edition'][1]//div[@class = 'textpart'][child::span[@class = 'ab'][starts-with(@id, concat('div', $f_n, '-'))]]" mode="copyEpidoc"/>
-                          <xsl:apply-templates select="//v_in//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-'))]" mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id = 'edition'][1]//div[@class = 'textpart'][child::span[@class = 'ab'][starts-with(@id, concat('div', $f_n, '-'))]]"
+                            mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-'))]"
+                            mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:otherwise>
-                          <xsl:apply-templates select="//v_in//div[@id = 'edition'][1]/*[not(self::h2)]" mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_in//div[@id = 'edition'][1]/*[not(self::h2)]"
+                            mode="copyEpidoc"/>
                         </xsl:otherwise>
                       </xsl:choose>
                     </div>
@@ -1083,18 +1261,29 @@
                         <i18n:text>Diplomatic</i18n:text>
                       </a>
                     </p>
-                    <div id="diplomatic{if (@n) then @n else '1'}" class="content diplomatic" data-section-content="true">
+                    <div id="diplomatic{if (@n) then @n else '1'}" class="content diplomatic"
+                      data-section-content="true">
                       <xsl:choose>
                         <xsl:when test="$f_n and $tx_n and $tx_n != '0'">
-                          <xsl:apply-templates select="//v_di//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $f_n, '-', $tx_n, '-'))]" mode="copyEpidoc"/>
-                          <xsl:apply-templates select="//v_di//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-', $tx_n, '-'))]" mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-', $tx_n, '-'))]"
+                            mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:when test="$f_n and (not($tx_n) or $tx_n = '0')">
-                          <xsl:apply-templates select="//v_di//div[@id = 'edition'][1]//div[@class = 'textpart'][child::span[@class = 'ab'][starts-with(@id, concat('div', $f_n, '-'))]]" mode="copyEpidoc"/>
-                          <xsl:apply-templates select="//v_di//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-'))]" mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id = 'edition'][1]//div[@class = 'textpart'][child::span[@class = 'ab'][starts-with(@id, concat('div', $f_n, '-'))]]"
+                            mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id = 'edition'][1]//p[starts-with(@id, concat('miniapp', $f_n, '-'))]"
+                            mode="copyEpidoc"/>
                         </xsl:when>
                         <xsl:otherwise>
-                          <xsl:apply-templates select="//v_di//div[@id = 'edition'][1]/*[not(self::h2)]" mode="copyEpidoc"/>
+                          <xsl:apply-templates
+                            select="//v_di//div[@id = 'edition'][1]/*[not(self::h2)]"
+                            mode="copyEpidoc"/>
                         </xsl:otherwise>
                       </xsl:choose>
 
@@ -1108,7 +1297,8 @@
                         <i18n:text>EpiDoc (XML)</i18n:text>
                       </a>
                     </p>
-                    <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml epidoc" data-section-content="true">
+                    <div id="epidoc{if (@n) then @n else '1'}" class="content epidoc_xml epidoc"
+                      data-section-content="true">
                       <pre>
                         <code class="language-xml">
                           <xsl:choose>
@@ -1122,7 +1312,7 @@
                               <xsl:copy-of select="/aggregation/v_ep/node()"/>
                             </xsl:otherwise>
                           </xsl:choose>
-                          <xsl:text></xsl:text>
+                          <xsl:text/>
                         </code>
                       </pre>
                     </div>
@@ -1136,14 +1326,19 @@
                           <i18n:text>Edition in Verse</i18n:text>
                         </a>
                       </p>
-                      <div id="verse{if (@n) then @n else '1'}" class="content" data-section-content="true">
+                      <div id="verse{if (@n) then @n else '1'}" class="content"
+                        data-section-content="true">
                         <xsl:choose>
                           <xsl:when test="@n">
                             <xsl:variable name="tet" select="@n"/>
-                            <xsl:apply-templates select="//v_ve//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $tet))]" mode="copyEpidoc"/>
+                            <xsl:apply-templates
+                              select="//v_ve//div[@id = 'edition'][1]//div[starts-with(@id, concat('div', $tet))]"
+                              mode="copyEpidoc"/>
                           </xsl:when>
                           <xsl:otherwise>
-                            <xsl:apply-templates select="//v_ve//div[@id = 'edition'][1]/*[not(self::h2)]" mode="copyEpidoc"/>
+                            <xsl:apply-templates
+                              select="//v_ve//div[@id = 'edition'][1]/*[not(self::h2)]"
+                              mode="copyEpidoc"/>
                           </xsl:otherwise>
                         </xsl:choose>
                       </div>
@@ -1155,7 +1350,8 @@
             </div>
 
             <!-- Commentaries -->
-            <xsl:if test="normalize-space($fullN) = '' and (//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')]))">
+            <xsl:if
+              test="normalize-space($fullN) = '' and (//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')]))">
               <div class="row">
                 <div class="large-3 columns">
                   <h6>
@@ -1172,17 +1368,19 @@
                           normalize-space($fullN) = '' and
                           (//tei:div[@type = 'bibliography'][@subtype = 'commentaries'][tei:listBibl//text()[not(normalize-space(.) = '')]]
                           or //tei:div[@type = 'bibliography'][@subtype = 'commentaries'][tei:listBibl//tei:ptr])">
-                        <xsl:for-each select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries']/tei:listBibl">
+                        <xsl:for-each
+                          select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries']/tei:listBibl">
                           <xsl:if test="@n">
                             <em>
                               <i18n:text>Fr.</i18n:text>
-                              <xsl:text></xsl:text>
+                              <xsl:text/>
                               <xsl:value-of select="@n"/>
                               <xsl:text>.&#160;</xsl:text>
                             </em>
                           </xsl:if>
                           <xsl:apply-templates select="tei:bibl"/>
-                          <xsl:if test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
+                          <xsl:if
+                            test="not(string(normalize-space(self::tei:listBibl))) and not(descendant::tei:ptr)">
                             <i18n:text>Unpublished</i18n:text>
                           </xsl:if>
                           <xsl:if test="position() != last()">
@@ -1193,7 +1391,9 @@
                       <xsl:when test="
                           //tei:div[@type = 'bibliography'][@subtype = 'commentaries'][tei:listBibl[@n = $fullN or not(@n)]//(text()[not(normalize-space(.) = '')])]
                           or //tei:div[@type = 'bibliography'][@subtype = 'commentaries'][tei:listBibl[@n = $fullN or not(@n)]//tei:ptr]">
-                        <xsl:apply-templates select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl" />
+                        <xsl:apply-templates
+                          select="//tei:div[@type = 'bibliography'][@subtype = 'commentaries']/tei:listBibl[@n = $fullN or not(@n)]/tei:bibl"
+                        />
                       </xsl:when>
                       <xsl:otherwise>
                         <i18n:text>Unpublished</i18n:text>
@@ -1209,7 +1409,8 @@
 
         <!-- Apparatus Criticus -->
 
-        <xsl:if test="//tei:div[@type = 'apparatus'][@n = $fullN or not(@n)][descendant::tei:app[descendant::text() or descendant::tei:*]]">
+        <xsl:if
+          test="//tei:div[@type = 'apparatus'][@n = $fullN or not(@n)][descendant::tei:app[descendant::text() or descendant::tei:*]]">
           <div class="row">
             <div class="large-2 columns">
               <xsl:text>&#160;</xsl:text>
@@ -1222,7 +1423,8 @@
                   </h6>
                 </div>
                 <div class="large-9 columns">
-                  <xsl:apply-templates mode="multipara" select="//tei:div[@type = 'apparatus'][@n = $fullN or not(@n)]"/>
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type = 'apparatus'][@n = $fullN or not(@n)]"/>
 
                 </div>
               </div>
@@ -1245,16 +1447,17 @@
             <!-- N.B. Leaving @n=none and @n=notyet even though they are not used in corpus yet -->
             <xsl:choose>
               <xsl:when test="//tei:div[@type = 'translation'][@n = 'none'][@xml:lang = $lang]">
-                <i18n:text>not usefully translatable</i18n:text>. 
-              </xsl:when>
+                <i18n:text>not usefully translatable</i18n:text>. </xsl:when>
               <xsl:when test="//tei:div[@type = 'translation'][@n = 'notyet'][@xml:lang = $lang]">
-                <i18n:text>No translation yet (2010)</i18n:text>. 
-              </xsl:when>
+                <i18n:text>No translation yet (2010)</i18n:text>. </xsl:when>
               <xsl:when test="@n">
-                <xsl:apply-templates mode="multipara" select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]" />
+                <xsl:apply-templates mode="multipara"
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"
+                />
               </xsl:when>
               <xsl:when test="//tei:div[@type = 'translation']/tei:div[@type = 'textpart'][@n]">
-                <xsl:for-each select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n]">
+                <xsl:for-each
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n]">
                   <span class="textpartnum">
                     <xsl:value-of select="@n"/>
                   </span>
@@ -1262,7 +1465,8 @@
                 </xsl:for-each>
               </xsl:when>
               <xsl:otherwise>
-                <xsl:apply-templates mode="multipara" select="//tei:div[@type = 'translation'][@xml:lang = $lang]"/>
+                <xsl:apply-templates mode="multipara"
+                  select="//tei:div[@type = 'translation'][@xml:lang = $lang]"/>
               </xsl:otherwise>
             </xsl:choose>
             <xsl:text>&#160;</xsl:text>
@@ -1273,9 +1477,11 @@
         <!-- Commentary -->
         <!-- PC  31 OCT 2017:  put in the 'if' condition as temporary measure to hide from display editor's 
           commentary section for those vol 3 files for which the bibliography says 'Ineditum' -->
-        <xsl:if test="not(contains(//tei:body/tei:div[@type='bibliography'][1]/tei:listBibl[1]/tei:bibl[1], 'Ineditum'))">
+        <xsl:if
+          test="not(contains(//tei:body/tei:div[@type = 'bibliography'][1]/tei:listBibl[1]/tei:bibl[1], 'Ineditum'))">
           <xsl:choose>
-            <xsl:when test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
+            <xsl:when
+              test="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]">
               <div class="row">
                 <div class="large-2 columns">
                   <h2>
@@ -1286,12 +1492,14 @@
 
                 </div>
                 <div class="large-10 columns details">
-                  <xsl:apply-templates mode="multipara" select="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"/>
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type = 'commentary'][@xml:lang = $lang]/tei:div[@type = 'textpart'][@n = $fullN]"/>
                   <xsl:text>&#160;</xsl:text>
                 </div>
               </div>
             </xsl:when>
-            <xsl:when test="not($fullN) and //tei:div[@type = 'commentary'][@xml:lang = $lang]//tei:p/text()">
+            <xsl:when
+              test="not($fullN) and //tei:div[@type = 'commentary'][@xml:lang = $lang]//tei:p/text()">
               <div class="row">
                 <div class="large-2 columns">
                   <h2>
@@ -1302,7 +1510,8 @@
 
                 </div>
                 <div class="large-10 columns details">
-                  <xsl:apply-templates mode="multipara" select="//tei:div[@type = 'commentary'][@xml:lang = $lang]"/>
+                  <xsl:apply-templates mode="multipara"
+                    select="//tei:div[@type = 'commentary'][@xml:lang = $lang]"/>
                   <xsl:text>&#160;</xsl:text>
                 </div>
               </div>
@@ -1316,7 +1525,8 @@
 
         <!-- Images -->
 
-        <xsl:if test="//tei:facsimile//tei:graphic[contains(concat(' ', @n, ' '), $fullN) or not(@n)]">
+        <xsl:if
+          test="//tei:facsimile//tei:graphic[contains(concat(' ', @n, ' '), $fullN) or not(@n)]">
           <div class="row">
             <div class="large-2 columns">
               <h2>
@@ -1326,7 +1536,9 @@
               </h2>
             </div>
             <div class="large-10 columns details">
-              <xsl:apply-templates select="//tei:facsimile//tei:graphic[contains(concat(' ', @n, ' '), $fullN) or not(@n)]" mode="photograph"/>
+              <xsl:apply-templates
+                select="//tei:facsimile//tei:graphic[contains(concat(' ', @n, ' '), $fullN) or not(@n)]"
+                mode="photograph"/>
 
             </div>
           </div>
@@ -1352,7 +1564,8 @@
 
   <!-- BIBLIOGRAPHY (pointers) -->
   <xsl:template match="tei:bibl//tei:ptr">
-    <xsl:apply-templates select="//bib//tei:bibl[@id = substring-after(current()/@target, 'bib:')]" />
+    <xsl:apply-templates select="//bib//tei:bibl[@id = substring-after(current()/@target, 'bib:')]"
+    />
   </xsl:template>
 
   <xsl:template match="tei:bibl//tei:seg[@xml:lang]">
@@ -1390,7 +1603,7 @@
   </xsl:template>
 
 
-  <xsl:template match="tei:div/tei:head" mode="multipara"></xsl:template>
+  <xsl:template match="tei:div/tei:head" mode="multipara"/>
 
   <xsl:template match="tei:dimensions">
     <xsl:choose>
@@ -1400,7 +1613,7 @@
       <xsl:otherwise>
         <xsl:if test="tei:height">
           <i18n:text key="__Height">H.</i18n:text>
-          <xsl:text></xsl:text>
+          <xsl:text/>
           <xsl:choose>
             <xsl:when test="tei:height[. = '?']">
               <i18n:text>unknown</i18n:text>
@@ -1410,7 +1623,7 @@
                   if ($lang = 'ru') then
                     tei:height
                   else
-                    translate(tei:height, ',', '.')" />
+                    translate(tei:height, ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -1424,7 +1637,7 @@
               <i18n:text key="__Width">W.</i18n:text>
             </xsl:otherwise>
           </xsl:choose>
-          <xsl:text></xsl:text>
+          <xsl:text/>
           <xsl:choose>
             <xsl:when test="tei:width[. = '?']">
               <i18n:text>unknown</i18n:text>
@@ -1434,7 +1647,7 @@
                   if ($lang = 'ru') then
                     tei:width
                   else
-                    translate(tei:width, ',', '.')" />
+                    translate(tei:width, ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -1448,7 +1661,7 @@
               <i18n:text key="__Depth">Th.</i18n:text>
             </xsl:otherwise>
           </xsl:choose>
-          <xsl:text></xsl:text>
+          <xsl:text/>
           <xsl:choose>
             <xsl:when test="tei:depth[. = '?']">
               <i18n:text>unknown</i18n:text>
@@ -1458,7 +1671,7 @@
                   if ($lang = 'ru') then
                     tei:depth
                   else
-                    translate(tei:depth, ',', '.')" />
+                    translate(tei:depth, ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -1472,7 +1685,7 @@
               <i18n:text key="__Diameter">Diam.</i18n:text>
             </xsl:otherwise>
           </xsl:choose>
-          <xsl:text></xsl:text>
+          <xsl:text/>
           <xsl:choose>
             <xsl:when test="tei:dim[@type = 'diameter'][. = '?']">
               <i18n:text>unknown</i18n:text>
@@ -1482,7 +1695,7 @@
                   if ($lang = 'ru') then
                     tei:dim[@type = 'diameter']
                   else
-                    translate(tei:dim[@type = 'diameter'], ',', '.')" />
+                    translate(tei:dim[@type = 'diameter'], ',', '.')"/>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -1498,9 +1711,11 @@
   </xsl:template>
   <!-- FIGURES -->
   <xsl:template match="tei:facsimile//tei:graphic" mode="photograph">
-    <span style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
+    <span
+      style="height: 100%; min-height: 106px; min-width: 106px; text-align: center; vertical-align: middle;">
       <!-- Full size popup -->
-      <a class="x87" target="_blank" href="/iiif/2/inscriptions%2f{@url}.jp2/full/full/0/default.jpg">
+      <a class="x87" target="_blank"
+        href="/iiif/2/inscriptions%2f{@url}.jp2/full/max/0/default.jpg">
         <span>&#160;</span>
         <!-- Thumbnail image -->
         <img src="/iiif/2/inscriptions%2f{@url}.jp2/full/100,100/0/default.jpg">
@@ -1586,7 +1801,8 @@
 
 
 
-  <xsl:template match="tei:author[ancestor::tei:bibl[@rend = 'primary']][not(preceding-sibling::tei:author)]">
+  <xsl:template
+    match="tei:author[ancestor::tei:bibl[@rend = 'primary']][not(preceding-sibling::tei:author)]">
     <xsl:text>&#8226;</xsl:text>
     <xsl:apply-templates/>
   </xsl:template>
@@ -1599,16 +1815,19 @@
         <xsl:choose>
           <xsl:when test="$author/tei:surname[@corresp]">
             <xsl:variable name="person_id">
-              <xsl:value-of select="substring-after($author/tei:surname/@corresp, 'surnames.xml#')" />
+              <xsl:value-of select="substring-after($author/tei:surname/@corresp, 'surnames.xml#')"
+              />
             </xsl:variable>
-            <xsl:value-of select="$surnames/tei:person[@xml:id = $person_id]/tei:persName/tei:surname[@xml:lang = $lang or not(@xml:lang)]" />
+            <xsl:value-of
+              select="$surnames/tei:person[@xml:id = $person_id]/tei:persName/tei:surname[@xml:lang = $lang or not(@xml:lang)]"
+            />
           </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="
                 $author//tei:surname[if (not(@xml:lang)) then
                   true()
                 else
-                  @xml:lang = $lang][1]" />
+                  @xml:lang = $lang][1]"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:when>
@@ -1617,14 +1836,14 @@
             normalize-space($author//tei:forename[if (not(@xml:lang)) then
               true()
             else
-              @xml:lang = $lang][1])" />
+              @xml:lang = $lang][1])"/>
       </xsl:when>
       <xsl:otherwise>
         <xsl:value-of select="
             normalize-space($author//tei:*[if (not(@xml:lang)) then
               true()
             else
-              @xml:lang = $lang][1])" />
+              @xml:lang = $lang][1])"/>
       </xsl:otherwise>
     </xsl:choose>
 
@@ -1640,7 +1859,8 @@
       <xsl:sequence select="//surnames//tei:listPerson/tei:person"/>
     </xsl:variable>
     <xsl:variable name="target" select="substring-after(tei:ptr/@target, 'bib:')"/>
-    <xsl:for-each select="//bib//tei:biblStruct[@xml:id = $target] | //bib//tei:bibl[@xml:id = $target]">
+    <xsl:for-each
+      select="//bib//tei:biblStruct[@xml:id = $target] | //bib//tei:bibl[@xml:id = $target]">
       <xsl:choose>
         <xsl:when test="@xml:id = 'IOSPE'">
           <xsl:text>IOSPE</xsl:text>
@@ -1699,14 +1919,16 @@
             <xsl:with-param name="surnames" select="$surnames"/>
           </xsl:call-template>
         </xsl:when>
-        <xsl:when test="not(descendant::tei:analytic//tei:author) and descendant::tei:monogr//tei:author[2]">
+        <xsl:when
+          test="not(descendant::tei:analytic//tei:author) and descendant::tei:monogr//tei:author[2]">
           <xsl:text>, </xsl:text>
           <xsl:call-template name="editions_author_name">
             <xsl:with-param name="author" select="descendant::tei:monogr//tei:author[2]"/>
             <xsl:with-param name="surnames" select="$surnames"/>
           </xsl:call-template>
         </xsl:when>
-        <xsl:when test="not(descendant::tei:analytic//tei:author) and not(descendant::tei:monogr//tei:author) and descendant::tei:author[2]">
+        <xsl:when
+          test="not(descendant::tei:analytic//tei:author) and not(descendant::tei:monogr//tei:author) and descendant::tei:author[2]">
           <xsl:text>, </xsl:text>
           <xsl:call-template name="editions_author_name">
             <xsl:with-param name="author" select="descendant::tei:author[2]"/>
@@ -1722,7 +1944,7 @@
       </xsl:if>
 
       <xsl:if test="descendant::tei:imprint[1]/tei:date[1]">
-        <xsl:text></xsl:text>
+        <xsl:text>&#x0020;</xsl:text>
         <xsl:apply-templates select="descendant::tei:imprint[1]/tei:date[1]"/>
       </xsl:if>
     </xsl:for-each>
@@ -1840,7 +2062,8 @@
 
   <xsl:template match="tei:abbr">
     <xsl:apply-templates/>
-    <xsl:if test="not(parent::tei:expan) and not(following-sibling::tei:supplied[@reason = 'abbreviation'])">
+    <xsl:if
+      test="not(parent::tei:expan) and not(following-sibling::tei:supplied[@reason = 'abbreviation'])">
       <xsl:text>(?)</xsl:text>
     </xsl:if>
   </xsl:template>
@@ -1849,7 +2072,7 @@
 
   <xsl:template match="tei:orig">
     <xsl:choose>
-      <xsl:when test="ancestor::tei:expan and not(contains(@n, 'unresolved'))"></xsl:when>
+      <xsl:when test="ancestor::tei:expan and not(contains(@n, 'unresolved'))"/>
       <xsl:when test="contains(@n, 'unresolved')">
         <span style="text-transform: uppercase ;" xsl:exclude-result-prefixes="tei">
           <xsl:apply-templates/>
@@ -1890,7 +2113,8 @@
           </em>
           <xsl:text>)</xsl:text>
         </xsl:when>
-        <xsl:when test="parent::tei:div[@type = 'translation'] or parent::tei:div[@type = 'textpart'][parent::tei:div[@type = 'translation']]">
+        <xsl:when
+          test="parent::tei:div[@type = 'translation'] or parent::tei:div[@type = 'textpart'][parent::tei:div[@type = 'translation']]">
           <xsl:apply-templates/>
         </xsl:when>
         <xsl:when test="ancestor::tei:ab">
@@ -1927,8 +2151,9 @@
         <xsl:apply-templates/>
         <em xsl:exclude-result-prefixes="tei">
           <sup>
-            <xsl:text></xsl:text>
-            <xsl:if test="following-sibling::tei:certainty[@target = current()/@xml:id and @degree = 'low']">
+            <xsl:text/>
+            <xsl:if
+              test="following-sibling::tei:certainty[@target = current()/@xml:id and @degree = 'low']">
               <xsl:text>?</xsl:text>
             </xsl:if>
             <xsl:text>v. </xsl:text>
@@ -1941,7 +2166,8 @@
         <xsl:text>&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;</xsl:text>
         <em xsl:exclude-result-prefixes="tei">
           <span class="smaller">
-            <xsl:if test="following-sibling::tei:certainty[@target = current()/@xml:id and @degree = 'low']">
+            <xsl:if
+              test="following-sibling::tei:certainty[@target = current()/@xml:id and @degree = 'low']">
               <xsl:text>?</xsl:text>
             </xsl:if>
             <xsl:text>vacat </xsl:text>
@@ -1953,8 +2179,9 @@
         <xsl:apply-templates/>
         <em xsl:exclude-result-prefixes="tei">
           <span class="smaller">
-            <xsl:text></xsl:text>
-            <xsl:if test="following-sibling::tei:certainty[@target = current()/@xml:id and @degree = 'low']">
+            <xsl:text/>
+            <xsl:if
+              test="following-sibling::tei:certainty[@target = current()/@xml:id and @degree = 'low']">
               <xsl:text>?</xsl:text>
             </xsl:if>
             <xsl:text>vac. </xsl:text>
@@ -1970,7 +2197,7 @@
     <xsl:text>}</xsl:text>
   </xsl:template>
 
-  <xsl:template match="tei:choice[@type = 'correction']/tei:sic"></xsl:template>
+  <xsl:template match="tei:choice[@type = 'correction']/tei:sic"/>
 
   <xsl:template match="tei:choice[@type = 'correction']/tei:corr">
     <xsl:text>&#x231C;</xsl:text>
@@ -2124,7 +2351,8 @@
 ```````x`````x
       -->
       <xsl:when test="preceding-sibling::tei:*[1][@reason = 'lost']">
-        <xsl:if test="preceding-sibling::text() and preceding-sibling::tei:*[1][following-sibling::text()]">
+        <xsl:if
+          test="preceding-sibling::text() and preceding-sibling::tei:*[1][following-sibling::text()]">
           <xsl:variable name="curr-prec" select="generate-id(preceding-sibling::text()[1])"/>
           <xsl:for-each select="preceding-sibling::tei:*[1][@reason = 'lost']">
             <xsl:choose>
@@ -2133,7 +2361,7 @@
                   <xsl:text>[</xsl:text>
                 </xsl:if>
               </xsl:when>
-              <xsl:otherwise></xsl:otherwise>
+              <xsl:otherwise/>
             </xsl:choose>
           </xsl:for-each>
         </xsl:if>
@@ -2146,7 +2374,8 @@
 ```````x``|`````|
 ``````````x
       -->
-      <xsl:when test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1][@reason = 'lost']]]"></xsl:when>
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1][@reason = 'lost']]]"/>
 
 
       <!--3.
@@ -2155,7 +2384,8 @@
 ````|`````|``x
 ``````````x
       -->
-      <xsl:when test="preceding-sibling::tei:*[1]/tei:*[not(following-sibling::node())][@reason = 'lost']">
+      <xsl:when
+        test="preceding-sibling::tei:*[1]/tei:*[not(following-sibling::node())][@reason = 'lost']">
         <xsl:if test="preceding-sibling::node()[1]/self::text()">
           <xsl:if test="preceding-sibling::node()[1][not(normalize-space(.) = '')]">
             <xsl:text>[</xsl:text>
@@ -2170,7 +2400,8 @@
 ````|`````|```|`````|
 ``````````x```x
       -->
-      <xsl:when test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']]]"></xsl:when>
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']]]"/>
 
 
       <!--5.
@@ -2180,7 +2411,8 @@
 ```````|`````|
 `````````````x
       -->
-      <xsl:when test="preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']"></xsl:when>
+      <xsl:when
+        test="preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']"/>
 
 
       <!--6.
@@ -2190,7 +2422,8 @@
 ```````|`````|x
 `````````````x
       -->
-      <xsl:when test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']]]"></xsl:when>
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']]]"/>
 
 
       <!--7.
@@ -2202,7 +2435,8 @@
       -->
 
 
-      <xsl:when test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']]]]"></xsl:when>
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())]/tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][@reason = 'lost']]]]"/>
 
 
       <!--8.
@@ -2212,7 +2446,8 @@
 ```````````````|`````|
 ```````````````x
       -->
-      <xsl:when test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1][@reason = 'lost']]]]"></xsl:when>
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1][@reason = 'lost']]]]"/>
 
 
 
@@ -2223,30 +2458,36 @@
 ``````````x````|`````|
 ```````````````x
       -->
-      <xsl:when test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::node())][@reason = 'lost']]]]">
+      <xsl:when
+        test="current()[not(preceding-sibling::node())][parent::tei:*[not(preceding-sibling::node())][parent::tei:*[preceding-sibling::tei:*[1]/tei:*[not(following-sibling::node())][@reason = 'lost']]]]">
         <xsl:if test="parent::tei:*[parent::tei:*[preceding-sibling::node()[1]/self::text()]]">
-          <xsl:if test="parent::tei:*[parent::tei:*[normalize-space(preceding-sibling::node()[1]) != '']]">[</xsl:if>
+          <xsl:if
+            test="parent::tei:*[parent::tei:*[normalize-space(preceding-sibling::node()[1]) != '']]"
+            >[</xsl:if>
         </xsl:if>
       </xsl:when>
 
 
       <!-- 10. -->
-      <xsl:when test="preceding-sibling::tei:*[1][local-name() = 'lb'] and preceding-sibling::tei:*[2][local-name() = 'supplied' and @reason = 'lost']">
+      <xsl:when
+        test="preceding-sibling::tei:*[1][local-name() = 'lb'] and preceding-sibling::tei:*[2][local-name() = 'supplied' and @reason = 'lost']">
 
         <xsl:variable name="curr-prec-txt" select="generate-id(preceding-sibling::text()[1])"/>
         <xsl:for-each select="preceding-sibling::tei:*[1][local-name() = 'lb']">
           <xsl:choose>
-            <xsl:when test="following-sibling::text() and generate-id(following-sibling::text()[1]) = $curr-prec-txt and not(following-sibling::text()[1] = ' ')">
+            <xsl:when
+              test="following-sibling::text() and generate-id(following-sibling::text()[1]) = $curr-prec-txt and not(following-sibling::text()[1] = ' ')">
               <xsl:text>[</xsl:text>
             </xsl:when>
             <xsl:otherwise>
               <xsl:variable name="lb-prec-txt" select="generate-id(preceding-sibling::text()[1])"/>
               <xsl:for-each select="preceding-sibling::tei:*[1][@reason = 'lost']">
                 <xsl:choose>
-                  <xsl:when test="following-sibling::text() and generate-id(following-sibling::text()[1]) = $lb-prec-txt and not(following-sibling::text()[1] = ' ')">
+                  <xsl:when
+                    test="following-sibling::text() and generate-id(following-sibling::text()[1]) = $lb-prec-txt and not(following-sibling::text()[1] = ' ')">
                     <xsl:text>[</xsl:text>
                   </xsl:when>
-                  <xsl:otherwise></xsl:otherwise>
+                  <xsl:otherwise/>
                 </xsl:choose>
               </xsl:for-each>
             </xsl:otherwise>
@@ -2263,59 +2504,75 @@
     <xsl:choose>
       <!-- 1. -->
       <xsl:when test="following-sibling::tei:*[1][@reason = 'lost']">
-        <xsl:if test="following-sibling::text() and following-sibling::tei:*[1][preceding-sibling::text()]">
+        <xsl:if
+          test="following-sibling::text() and following-sibling::tei:*[1][preceding-sibling::text()]">
           <xsl:variable name="curr-foll" select="generate-id(following-sibling::text()[1])"/>
           <xsl:for-each select="following-sibling::tei:*[1][@reason = 'lost']">
             <xsl:choose>
-              <xsl:when test="generate-id(preceding-sibling::text()[1]) = $curr-foll and not(preceding-sibling::text()[1] = ' ')">
+              <xsl:when
+                test="generate-id(preceding-sibling::text()[1]) = $curr-foll and not(preceding-sibling::text()[1] = ' ')">
                 <xsl:text>]</xsl:text>
               </xsl:when>
-              <xsl:otherwise></xsl:otherwise>
+              <xsl:otherwise/>
             </xsl:choose>
           </xsl:for-each>
         </xsl:if>
       </xsl:when>
       <!-- 2. -->
-      <xsl:when test="following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason = 'lost']"></xsl:when>
+      <xsl:when
+        test="following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason = 'lost']"/>
       <!-- 3. -->
-      <xsl:when test="current()[not(following-sibling::node())][parent::node()[following-sibling::tei:*[1][@reason = 'lost']]]">
+      <xsl:when
+        test="current()[not(following-sibling::node())][parent::node()[following-sibling::tei:*[1][@reason = 'lost']]]">
         <xsl:variable name="curr-foll-txt" select="generate-id(following-sibling::text()[1])"/>
         <xsl:choose>
-          <xsl:when test="parent::node()/following-sibling::tei:*[1][@reason = 'lost'][generate-id(preceding-sibling::text()[1]) = $curr-foll-txt]">]</xsl:when>
+          <xsl:when
+            test="parent::node()/following-sibling::tei:*[1][@reason = 'lost'][generate-id(preceding-sibling::text()[1]) = $curr-foll-txt]"
+            >]</xsl:when>
         </xsl:choose>
       </xsl:when>
       <!-- 4. -->
-      <xsl:when test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason = 'lost']]]"></xsl:when>
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason = 'lost']]]"/>
       <!-- 5. -->
-      <xsl:when test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1][@reason = 'lost']]]]"></xsl:when>
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1][@reason = 'lost']]]]"/>
       <!-- 6. -->
-      <xsl:when test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason = 'lost']]]]"></xsl:when>
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())][@reason = 'lost']]]]"/>
       <!-- 7. -->
-      <xsl:when test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())]/tei:*[not(preceding-sibling::node())][@reason = 'lost']]]]"></xsl:when>
+      <xsl:when
+        test="current()[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[not(following-sibling::tei:*)][not(following-sibling::text())][parent::tei:*[following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())]/tei:*[not(preceding-sibling::node())][@reason = 'lost']]]]"/>
       <!-- 8. -->
-      <xsl:when test="following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())]/tei:*[not(preceding-sibling::node())][@reason = 'lost']"></xsl:when>
+      <xsl:when
+        test="following-sibling::tei:*[1]/tei:*[not(preceding-sibling::node())]/tei:*[not(preceding-sibling::node())][@reason = 'lost']"/>
       <!-- 9. -->
-      <xsl:when test="current()[not(following-sibling::node())][parent::tei:*[following-sibling::tei:*[1]/child::node()[1]/child::node()[1][@reason = 'lost']]]">
+      <xsl:when
+        test="current()[not(following-sibling::node())][parent::tei:*[following-sibling::tei:*[1]/child::node()[1]/child::node()[1][@reason = 'lost']]]">
         <xsl:if test="parent::tei:*[following-sibling::node()[1]/self::text()]">
-          <xsl:if test="parent::tei:*[normalize-space(following-sibling::node()[1]) != '']">]</xsl:if>
+          <xsl:if test="parent::tei:*[normalize-space(following-sibling::node()[1]) != '']"
+            >]</xsl:if>
         </xsl:if>
       </xsl:when>
       <!-- 10. -->
-      <xsl:when test="following-sibling::tei:*[1][local-name() = 'lb'] and following-sibling::tei:*[2][local-name() = 'supplied' and @reason = 'lost']">
+      <xsl:when
+        test="following-sibling::tei:*[1][local-name() = 'lb'] and following-sibling::tei:*[2][local-name() = 'supplied' and @reason = 'lost']">
         <xsl:variable name="curr-prec-txt" select="generate-id(following-sibling::text()[1])"/>
         <xsl:for-each select="following-sibling::*[1][local-name() = 'lb']">
           <xsl:choose>
-            <xsl:when test="preceding-sibling::text() and generate-id(preceding-sibling::text()[1]) = $curr-prec-txt and not(preceding-sibling::text()[1] = ' ')">
+            <xsl:when
+              test="preceding-sibling::text() and generate-id(preceding-sibling::text()[1]) = $curr-prec-txt and not(preceding-sibling::text()[1] = ' ')">
               <xsl:text>]</xsl:text>
             </xsl:when>
             <xsl:otherwise>
               <xsl:variable name="lb-prec-txt" select="generate-id(following-sibling::text()[1])"/>
               <xsl:for-each select="following-sibling::tei:*[1][@reason = 'lost']">
                 <xsl:choose>
-                  <xsl:when test="preceding-sibling::text() and generate-id(preceding-sibling::text()[1]) = $lb-prec-txt and not(preceding-sibling::text()[1] = ' ')">
+                  <xsl:when
+                    test="preceding-sibling::text() and generate-id(preceding-sibling::text()[1]) = $lb-prec-txt and not(preceding-sibling::text()[1] = ' ')">
                     <xsl:text>]</xsl:text>
                   </xsl:when>
-                  <xsl:otherwise></xsl:otherwise>
+                  <xsl:otherwise/>
                 </xsl:choose>
               </xsl:for-each>
             </xsl:otherwise>
@@ -2342,7 +2599,7 @@
   <xsl:template match="tei:hi[@rend = 'sup']">
     <sup>
       <xsl:apply-templates/>
-      <xsl:text></xsl:text>
+      <xsl:text/>
     </sup>
   </xsl:template>
 
