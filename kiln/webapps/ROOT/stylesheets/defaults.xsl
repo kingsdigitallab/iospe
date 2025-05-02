@@ -149,7 +149,16 @@
         <xsl:when test="contains($url_base, 'corpus/maps')">
           <xsl:text>no</xsl:text>
         </xsl:when>
+        <xsl:when test="contains($url_base, 'corpora/tyras')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
         <xsl:when test="contains($url_base, 'corpora/olbia')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, 'corpora/chersonesos')">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="contains($url_base, 'corpora/byzantine')">
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:otherwise>
@@ -162,19 +171,16 @@
     <li class="lang en">
       <a class="en" href="/{$url_base}.html{$url_suffix}" title="English">en</a>
     </li>
-    <xsl:choose>
-      <xsl:when test="$include_ru_lang_choice = 'yes'">   
-        <li class="lang py">
-          <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
-        </li> 
-      </xsl:when>
-      <xsl:when test="$include_ukr_lang_choice = 'yes'">
-        <li class="lang ук">
-          <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">укр</a>
-        </li>
-      </xsl:when>
-      <xsl:otherwise></xsl:otherwise>
-    </xsl:choose>
+    <xsl:if test="$include_ru_lang_choice = 'yes'">   
+      <li class="lang py">
+        <a class="py" href="/{$url_base}-ru.html{$url_suffix}" title="Русский">py</a>
+      </li> 
+    </xsl:if>
+    <xsl:if test="$include_ukr_lang_choice = 'yes'">
+      <li class="lang ук">
+        <a class="ук" href="/{$url_base}-uk.html{$url_suffix}" title="Українська">укр</a>
+      </li>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="jump-to-inscription">
