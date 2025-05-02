@@ -5,7 +5,6 @@ x-var: &VIRTUAL_HOST "${VIRTUAL_HOST:-iospe-os.kdl.kcl.ac.uk,iospe.app.cch.kcl.a
 services:
   kdl-apache-proxy:
     image: gitlab.kdl.kcl.ac.uk:5050/docker-images/core/kdl-apache-proxy
-    container_name: kdl-apache-proxy
     volumes:
       - ../volumes/proxy/pathmap.yml:/maps/pathmap.yaml:ro
       - ./nginx/robots.txt:/www/robots.txt:ro
