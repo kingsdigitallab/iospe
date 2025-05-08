@@ -3,6 +3,7 @@
         <fileDesc>
             <titleStmt>
                 <title xml:lang="ru">Incertum</title>
+                <title xml:lang="uk">Incertum</title>
                 <title xml:lang="en">Incertum</title>
             </titleStmt>
             <publicationStmt>
@@ -17,6 +18,10 @@
                             <repository>Государственный Эрмитаж</repository>
                             <idno>Б.77.99</idno>
                         </altIdentifier>
+                        <altIdentifier xml:lang="uk">
+                            <repository>Державний Ермітаж</repository>
+                            <idno>Б.77.99</idno>
+                        </altIdentifier>
                         <altIdentifier xml:lang="en">
                             <repository>The State Hermitage Museum</repository>
                             <idno>Б.77.99</idno>
@@ -25,6 +30,7 @@
                     <msContents>
                         <summary corresp="filename.xml#id">
                             <seg xml:lang="ru">Incertum</seg>
+                            <seg xml:lang="uk">Incertum</seg>
                             <seg xml:lang="en">Incertum</seg>
                         </summary>
                     </msContents>
@@ -33,11 +39,14 @@
                             <supportDesc>
                                 <support>
                                     <objectType xml:lang="ru" ref="#">Фрагмент.</objectType>
-                                    <objectType xml:lang="en">Wall fragment.</objectType>
+                                    <objectType xml:lang="uk" ref="#">фрагмент.</objectType>
+                                    <objectType xml:lang="en">Wall fragment of plate.</objectType>
                                     
                                     <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
+                                    <material xml:lang="uk" ref="material-search.xml#m10">Глина.</material>
                                     <material xml:lang="en">Clay.</material>
                                     <p xml:lang="ru"/>
+                                    <p xml:lang="uk"/>
                                     <p xml:lang="en">Redware, plate(?), date uncertain.</p>
                                     <dimensions>
                                         <height unit="cm"/>
@@ -50,6 +59,7 @@
                             <layoutDesc>
                                 <layout>
                                     <seg xml:lang="ru"/>
+                                    <seg xml:lang="uk"/>
                                     <seg xml:lang="en"/>
                                 </layout>
                             </layoutDesc>
@@ -57,6 +67,7 @@
                         <handDesc>
                             <handNote>
                                 <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
+                                <seg xml:lang="uk"><rs type="execution" ref="execution.xml#scariphatis">графіті</rs></seg>
                                 <seg xml:lang="en">Graffito.</seg>
                                 <height unit="cm"/>
                             </handNote>
@@ -66,9 +77,11 @@
                         <origin>
                             <origPlace ref="origPlace.xml#p066"/>
                             <seg xml:lang="ru">Борисфен.</seg>
+                            <seg xml:lang="uk">Борисфен</seg>
                             <seg xml:lang="en">Borysthenes.</seg>
                             <origDate notBefore="0001" notAfter="0001" evidence="">
                                 <seg xml:lang="ru"/>
+                                <seg xml:lang="uk"/>
                                 <seg xml:lang="en">Uncertain date.</seg>
                             </origDate>
                         </origin>
@@ -79,6 +92,11 @@
                                 <rs type="circumstances">Найден в 1977 г., раскопки Л.В. Копейкиной.</rs>
                                 <rs type="context">Участок Б, квадрат 24, южная половина, римское углубление.</rs>
                             </seg>
+                            <seg xml:lang="uk">
+                                <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань</placeName>
+                                <rs type="circumstances">Знайдено в 1977 р., розкопки Л.В. Копєйкіної.</rs>
+                                <rs type="context">Ділянка Б, квадрат 24, південна половина, римське заглиблення.</rs>
+                            </seg>
                             <seg xml:lang="en">
                                 <placeName type="ancientFindspot">Berezan.</placeName>
                                 <rs type="circumstances">Found in 1977, excavations of L.V. Kopeykina.</rs>
@@ -86,11 +104,13 @@
                             </seg>
                         </provenance>
                         <provenance type="observed">
-                            <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                            <seg xml:lang="ru">Санкт-Петербург, Российская Федерация.</seg>
+                            <seg xml:lang="uk">Санкт-Петербург, Росія.</seg>
                             <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Saint Petersburg, Russian Federation.</tei:seg>
                         </provenance>
                         <provenance type="observed" subtype="autopsy">
                             <seg xml:lang="ru">Август 2016.</seg>
+                            <seg xml:lang="uk">Серпень 2016 року.</seg>
                             <seg xml:lang="en">August 2016.</seg>
                         </provenance>
                     </history>
@@ -103,7 +123,7 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface><graphic url="2010244-dr"><desc xml:lang="en"/><desc xml:lang="ru"/></graphic></surface> <!-- <surface>
+        <surface><graphic url="2010244-dr"><desc xml:lang="en"/><desc xml:lang="ru"/><desc xml:lang="uk"/></graphic></surface> <!-- <surface>
             <graphic url="2010244-a">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
@@ -149,13 +169,13 @@
             </div>
             <div type="translation" xml:lang="ru">
                 <p/>
-            </div>
+            </div><div xml:lang="uk" type="translation"><p/></div>
             <div type="translation" xml:lang="en">
                 <p/>
             </div>
             <div type="commentary" xml:lang="ru">
                 <p/>
-            </div>
+            </div><div xml:lang="uk" type="commentary"><p/></div>
             <div type="commentary" xml:lang="en">
                 <p/>
             </div>

@@ -243,7 +243,7 @@
         </xsl:if>
 
         <field name="findspot-ref">
-          <xsl:value-of select="normalize-space(tei:seg/tei:placeName[@ref]/@ref)"/>
+          <xsl:value-of select="normalize-space(descendant::tei:placeName[@ref][position()=1]/@ref)"/>
         </field>
 
         <!-- Indexed Item Value(s) -->
