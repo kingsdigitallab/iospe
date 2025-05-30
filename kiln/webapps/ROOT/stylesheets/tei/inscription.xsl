@@ -278,7 +278,7 @@
           <xsl:choose>
             <xsl:when test="$n">
               <i18n:text>Fragment</i18n:text>
-              <xsl:text/>
+              <xsl:text>&#x0020;</xsl:text>
               <xsl:value-of select="$n"/>
             </xsl:when>
             <xsl:otherwise>
