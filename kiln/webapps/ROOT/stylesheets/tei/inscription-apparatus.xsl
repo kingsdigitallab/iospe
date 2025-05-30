@@ -76,11 +76,11 @@
       <xsl:text></xsl:text>
       <xsl:apply-templates select="tei:name/node()"/>
       <xsl:if test="tei:date and normalize-space(tei:date/text()) != ''">
-        <xsl:text></xsl:text>
+        <xsl:text>&#x0020;</xsl:text>
         <xsl:apply-templates select="tei:date/node()"/>
       </xsl:if>
       <xsl:if test="not(position() = last())">
-        <xsl:text>,</xsl:text>
+        <xsl:text>,&#x0020;</xsl:text>
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
@@ -153,9 +153,12 @@
 
   <xsl:template match="tei:div[@type='apparatus']" mode="multipara">
     <div id="apparatus">
+    <xsl:for-each select="child::tei:listApp">
+      
       <p>
         <xsl:apply-templates/>
       </p>
+    </xsl:for-each>
     </div>
   </xsl:template>
 
