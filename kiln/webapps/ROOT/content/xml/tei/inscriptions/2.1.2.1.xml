@@ -1,0 +1,204 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="https://raw.githubusercontent.com/EpiDoc/Source/main/schema/schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="ru"></title>
+                <title xml:lang="uk"/>
+                <title xml:lang="en"></title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>King's College London</authority>
+                <idno type="PE">PE2020001</idno>
+                <tei:idno xmlns:tei="http://www.tei-c.org/ns/1.0" type="filename">2.1.2.1</tei:idno>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><country/>
+                        <altIdentifier xml:lang="ru">
+                            <repository>Οдесский Археологический Музей</repository>
+                            <idno>Б.368</idno>
+                        </altIdentifier><altIdentifier xml:lang="uk"><repository/><idno/></altIdentifier>
+                        <altIdentifier xml:lang="en">
+                            <repository>Odesa Archaeological Museum</repository>
+                            <idno>AБ </idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <summary corresp="document-search.xml#doc32">
+                            <seg xml:lang="ru"></seg>
+                            <seg xml:lang="uk"></seg>
+                            <seg xml:lang="en"></seg>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <objectType xml:lang="ru" ref="monument-search.xml#mon46">.</objectType>
+                                    <objectType xml:lang="uk" ref="monument-search.xml#mon46"/>
+                                    <objectType xml:lang="en">.</objectType>
+                                    
+                                    <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
+                                    <material xml:lang="uk" ref="material-search.xml#m10"/>
+                                    <material xml:lang="en">Clay.</material>
+                                    <p xml:lang="ru"/>
+                                    <p xml:lang="uk"></p>
+                                    <p xml:lang="en"></p>
+                                    <dimensions>
+                                        <height unit="cm"></height>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                        <dim type="diameter" unit="cm"></dim>
+                                        
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <seg xml:lang="ru"/>
+                                    <seg xml:lang="uk"/>
+                                    <seg xml:lang="en"></seg>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
+                                <seg xml:lang="uk"><rs type="execution" ref="execution.xml#scariphatis"/></seg>
+                                <seg xml:lang="en">Graffito.</seg>
+                                <height unit="cm"></height>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace ref="origPlace.xml#p066"/>
+                            <seg xml:lang="ru">Борисфен.</seg><seg xml:lang="uk"/>
+                            <seg xml:lang="en">Borysthenes.</seg>
+                            <origDate notBefore="-0550" notAfter="-0550" precision="medium" evidence="Датировка_керамики">
+                                <seg xml:lang="ru"></seg>
+                                <seg xml:lang="uk"/>
+                                <seg xml:lang="en"></seg>
+                            </origDate>
+                        </origin>
+                        <provenance type="found">
+                            <seg xml:lang="ru">
+                                
+                                <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань.</placeName>
+                                <rs type="circumstances">Найден в  г., раскопки .</rs>
+                                <rs type="context">.</rs>
+                            </seg><seg xml:lang="uk">
+                                <placeName type="ancientFindspot" ref="findspot.xml#berezan"/>
+                                <rs type="circumstances"/>
+                                <rs type="context"/></seg>
+                            <seg xml:lang="en">
+                                <placeName type="ancientFindspot">Berezan, Ukraine.</placeName>
+                                <rs type="circumstances">Found in , excavations of .</rs>
+                                <rs type="context">.</rs>
+                            </seg>
+                        </provenance>
+                        <provenance type="observed">
+                            <seg xml:lang="ru">/seg><
+                                seg xml:lang="uk"/>
+                            <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en"></tei:seg>
+                        </provenance>
+                        <provenance type="observed" subtype="autopsy">
+                            <seg xml:lang="ru">.</seg>
+                            <seg xml:lang="uk"/>
+                            <seg xml:lang="en">.</seg>
+                        </provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        
+        <revisionDesc>
+            <change when="2019-01-01" who="IP"/>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface><graphic url="2020001"><desc xml:lang="en"/><desc xml:lang="ru"/><desc xml:lang="uk"/></graphic></surface> <!-- <surface>
+            <graphic url="2010034-a">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-b">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-c">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-d">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-e">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-f">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-g">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-h">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-i">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+            <graphic url="2010034-j">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+            </graphic>
+        </surface> -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl>><ptr target="bib:b0000000"/><citedRange></citedRange></bibl>
+                    <bibl><ptr target="bib:b"/></bibl>
+                    <bibl><ptr target="bib:b"/><citedRange></citedRange>.</bibl>
+                    
+                    
+                    <bibl n="L1"><!-- --><ptr target="#"/>, <citedRange/>, </bibl>
+                </listBibl>
+            </div>
+            <div type="bibliography" subtype="commentaries">
+                <!-- Комментарии -->
+                
+            </div>
+            <div type="edition" xml:lang="grc" xml:space="preserve">
+            <ab>>
+            </ab>
+         </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note></note></app>
+                </listApp> 
+            </div>
+            <div type="translation" xml:lang="ru">
+                <p></p>
+            </div><div xml:lang="uk" type="translation"><p/></div>
+            <div type="translation" xml:lang="en"><p/></div>
+            <div type="commentary" xml:lang="ru">
+                <p/>
+            </div><div xml:lang="uk" type="commentary"><p/></div>
+            <div type="commentary" xml:lang="en">
+                
+                <p></p>
+            </div>
+        </body>
+    </text>
+    
+</TEI>
