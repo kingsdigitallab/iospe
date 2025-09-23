@@ -706,7 +706,7 @@
         <xsl:text>. (</xsl:text>
         <i18n:text>This file should validate to the</i18n:text>
         <xsl:text/>
-        <a href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng">
+        <a href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng">
           <xsl:attribute name="title">
             <i18n:text>Right-click to save this file</i18n:text>
           </xsl:attribute>
