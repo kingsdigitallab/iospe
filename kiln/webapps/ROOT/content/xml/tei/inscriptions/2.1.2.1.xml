@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="https://raw.githubusercontent.com/EpiDoc/Source/main/schema/schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="https://raw.githubusercontent.com/EpiDoc/Source/main/schema/schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title xml:lang="ru"></title>
+                <title xml:lang="ru"/>
                 <title xml:lang="uk"/>
-                <title xml:lang="en"></title>
+                <title xml:lang="en"/>
             </titleStmt>
             <publicationStmt>
                 <authority>King's College London</authority>
@@ -13,43 +14,57 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><country/>
+                    <msIdentifier>
+                        <country/>
                         <altIdentifier xml:lang="ru">
-                            <repository>Οдесский Археологический Музей</repository>
+                            <!-- the @corresp value in <repository> should be institution.xml + # + an ID from an <org> element in  /alists/institution.xml -->
+                            <repository corresp="institution.xml#OAM"></repository>
                             <idno>Б.368</idno>
-                        </altIdentifier><altIdentifier xml:lang="uk"><repository/><idno/></altIdentifier>
+                        </altIdentifier>
+                        <altIdentifier xml:lang="uk">
+                            <repository corresp="institution.xml#OAM"></repository>
+                            <idno/>
+                        </altIdentifier>
                         <altIdentifier xml:lang="en">
-                            <repository>Odesa Archaeological Museum</repository>
+                            <repository corresp="institution.xml#OAM"></repository>
                             <idno>AБ </idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
+                        <!-- the @corresp value in <summary> should be document-search.xml + # + an ID from an <ab type="entry"> element in  /alists/document-search.xml -->
                         <summary corresp="document-search.xml#doc32">
                             <seg xml:lang="ru"></seg>
                             <seg xml:lang="uk"></seg>
-                            <seg xml:lang="en"></seg>
+                            <seg xml:lang="en">Speaking object.</seg>
                         </summary>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <objectType xml:lang="ru" ref="monument-search.xml#mon46">.</objectType>
-                                    <objectType xml:lang="uk" ref="monument-search.xml#mon46"/>
-                                    <objectType xml:lang="en">.</objectType>
-                                    
-                                    <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
-                                    <material xml:lang="uk" ref="material-search.xml#m10"/>
-                                    <material xml:lang="en">Clay.</material>
+                                    <!-- the @corresp value in <objectType> should be monument-search.xml + # + an ID from an <ab type="entry"> element in  /alists/monument-search.xml -->
+                                    <objectType xml:lang="ru" corresp="monument-search.xml#mon46"
+                                        ></objectType>
+                                    <objectType xml:lang="uk" corresp="monument-search.xml#mon46"
+                                        >світильник</objectType>
+                                    <objectType xml:lang="en" corresp="monument-search.xml#mon46"
+                                        >oil lamp</objectType>
+                                    <!-- the @corresp value in <material> should be material-search.xml + # + an ID from an <ab type="entry"> element in  /alists/material-search.xml -->
+                                    <material xml:lang="ru" corresp="material-search.xml#m10"
+                                        >Глина.</material>
+                                    <material xml:lang="uk" corresp="material-search.xml#m10"
+                                        >глина</material>
+                                    <material xml:lang="en" corresp="material-search.xml#m10"
+                                        >Clay.</material>
                                     <p xml:lang="ru"/>
-                                    <p xml:lang="uk"></p>
-                                    <p xml:lang="en"></p>
+                                    <p xml:lang="uk"/>
+                                    <p xml:lang="en"/>
                                     <dimensions>
-                                        <height unit="cm"></height>
+                                        <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
-                                        <dim type="diameter" unit="cm"></dim>
-                                        
+                                        <dim type="diameter" unit="cm"/>
+
                                     </dimensions>
                                 </support>
                             </supportDesc>
@@ -57,35 +72,40 @@
                                 <layout>
                                     <seg xml:lang="ru"/>
                                     <seg xml:lang="uk"/>
-                                    <seg xml:lang="en"></seg>
+                                    <seg xml:lang="en"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
-                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
-                                <seg xml:lang="uk"><rs type="execution" ref="execution.xml#scariphatis"/></seg>
+                            <!-- the @corresp value in <handNote> should be execution.xml + # + an ID from an <ab type="entry"> element in  /alists/execution.xml -->
+                            <handNote corresp="execution.xml#scariphatis">
+                                <seg xml:lang="ru"><rs type="execution">Граффито.</rs></seg>
+                                <seg xml:lang="uk"><rs type="execution"/></seg>
                                 <seg xml:lang="en">Graffito.</seg>
-                                <height unit="cm"></height>
+                                <height unit="cm"/>
                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace ref="origPlace.xml#p066"/>
-                            <seg xml:lang="ru">Борисфен.</seg><seg xml:lang="uk"/>
+                            <!-- the @corresp value in <origPlace> should be origPlace.xml + # + an ID from a <place> element in  /alists/origPlace.xml -->
+                            <origPlace corresp="origPlace.xml#p066"/>
+                            <seg xml:lang="ru">Борисфен.</seg>
+                            <seg xml:lang="uk"/>
                             <seg xml:lang="en">Borysthenes.</seg>
-                            <origDate notBefore="-0550" notAfter="-0550" precision="medium" evidence="Датировка_керамики">
-                                <seg xml:lang="ru"></seg>
+                            <origDate notBefore="-0550" notAfter="-0550" precision="medium"
+                                evidence="Датировка_керамики">
+                                <seg xml:lang="ru"/>
                                 <seg xml:lang="uk"/>
-                                <seg xml:lang="en"></seg>
+                                <seg xml:lang="en"/>
                             </origDate>
                         </origin>
-                        <provenance type="found">
+                        <!-- the @corresp value in <provenance type="found"> should be findspot.xml + # + an ID from a <place> element in  /alists/findspot.xml -->
+                        <provenance type="found" corresp="findspot.xml#berezan">
                             <seg xml:lang="ru">
-                                
-                                <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань.</placeName>
-                                <rs type="circumstances">Найден в  г., раскопки .</rs>
+                                <placeName type="ancientFindspot" ref="findspot.xml#berezan"
+                                    >Березань.</placeName>
+                                <rs type="circumstances">Найден в г., раскопки .</rs>
                                 <rs type="context">.</rs>
                             </seg><seg xml:lang="uk">
                                 <placeName type="ancientFindspot" ref="findspot.xml#berezan"/>
@@ -100,7 +120,7 @@
                         <provenance type="observed">
                             <seg xml:lang="ru"/>
                             <seg xml:lang="uk"/>
-                            <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en"></tei:seg>
+                            <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en"/>
                         </provenance>
                         <provenance type="observed" subtype="autopsy">
                             <seg xml:lang="ru">.</seg>
@@ -111,13 +131,20 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        
+
         <revisionDesc>
             <change when="2019-01-01" who="IP"/>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface><graphic url="2020001"><desc xml:lang="en"/><desc xml:lang="ru"/><desc xml:lang="uk"/></graphic></surface> <!-- <surface>
+        <surface>
+            <graphic url="2020001">
+                <desc xml:lang="en"/>
+                <desc xml:lang="ru"/>
+                <desc xml:lang="uk"/>
+            </graphic>
+        </surface>
+        <!-- <surface>
             <graphic url="2010034-a">
                 <desc xml:lang="en"/>
                 <desc xml:lang="ru"/>
@@ -164,17 +191,16 @@
         <body>
             <div type="bibliography">
                 <listBibl>
-                    <bibl>><ptr target="bib:b0000000"/><citedRange></citedRange></bibl>
+                    <bibl>><ptr target="bib:b0000000"/><citedRange/></bibl>
                     <bibl><ptr target="bib:b"/></bibl>
-                    <bibl><ptr target="bib:b"/><citedRange></citedRange>.</bibl>
-                    
-                    
+                    <bibl><ptr target="bib:b"/><citedRange/>.</bibl>
+
+
                     <bibl n="L1"><!-- --><ptr target="#"/>, <citedRange/>, </bibl>
                 </listBibl>
             </div>
             <div type="bibliography" subtype="commentaries">
                 <!-- Комментарии -->
-                
             </div>
             <div type="edition" xml:lang="grc" xml:space="preserve">
             <ab>
@@ -183,21 +209,31 @@
          </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note></note></app>
-                </listApp> 
+                    <app>
+                        <note/>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="ru">
-                <p></p>
-            </div><div xml:lang="uk" type="translation"><p/></div>
-            <div type="translation" xml:lang="en"><p/></div>
+                <p/>
+            </div>
+            <div xml:lang="uk" type="translation">
+                <p/>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p/>
+            </div>
             <div type="commentary" xml:lang="ru">
                 <p/>
-            </div><div xml:lang="uk" type="commentary"><p/></div>
+            </div>
+            <div xml:lang="uk" type="commentary">
+                <p/>
+            </div>
             <div type="commentary" xml:lang="en">
-                
-                <p></p>
+
+                <p/>
             </div>
         </body>
     </text>
-    
+
 </TEI>
