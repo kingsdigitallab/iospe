@@ -10,7 +10,7 @@
 
       <!-- Match for non-XML (binary) resources. -->
       <map:match pattern="**">
-        <map:read src="{global:fedora-url}{1}?{request:queryString}"
+        <map:generate src="{global:fedora-url}{1}?{request:queryString}"
                   mime-type="application/octet-stream" />
       </map:match>
     </map:pipeline>
