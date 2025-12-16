@@ -16,7 +16,10 @@
                         <altIdentifier xml:lang="ru">
                             <repository>Государственный Эрмитаж</repository>
                             <idno>Б.76.424</idno>
-                        </altIdentifier><altIdentifier xml:lang="uk"><repository/><idno/></altIdentifier>
+                        </altIdentifier><altIdentifier xml:lang="uk">
+                            <repository>Державний Ермітаж</repository>
+                            <idno>Б.76.424</idno>
+                        </altIdentifier>
                         <altIdentifier xml:lang="en">
                             <repository>The State Hermitage Museum</repository>
                             <idno>Б.76.424</idno>
@@ -32,12 +35,15 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <objectType xml:lang="ru" ref="#">Фрагмент.</objectType><objectType xml:lang="uk" ref="#"/>
+                                    <objectType xml:lang="ru" ref="#">Фрагмент.</objectType>
+                                    <objectType xml:lang="uk" ref="#">фрагмент.</objectType>
                                     <objectType xml:lang="en">Amphora.</objectType>
                                     
-                                    <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material><material xml:lang="uk" ref="material-search.xml#m10"/>
+                                    <material xml:lang="ru" ref="material-search.xml#m10">Глина.</material>
+                                    <material xml:lang="uk" ref="material-search.xml#m10">Глина.</material>
                                     <material xml:lang="en">Clay.</material>
-                                    <p xml:lang="ru"/><p xml:lang="uk"/>
+                                    <p xml:lang="ru"/>
+                                    <p xml:lang="uk"/>
                                     <p xml:lang="en">North Aegean (Proto-Thasos), 575-550 B.C.E. Restored from multiple fragments, 
                                         with some parts missing, including part of wall and all of foot.</p>
                                     <dimensions>
@@ -50,14 +56,16 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <seg xml:lang="ru"/><seg xml:lang="uk"/>
+                                    <seg xml:lang="ru"/>
+                                    <seg xml:lang="uk"/>
                                     <seg xml:lang="en">Neck, exterior. Originally inscribed on complete vessel.</seg>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg><seg xml:lang="uk"><rs type="execution" ref="execution.xml#scariphatis"/></seg>
+                                <seg xml:lang="ru"><rs type="execution" ref="execution.xml#scariphatis">Граффито.</rs></seg>
+                                <seg xml:lang="uk"><rs type="execution" ref="execution.xml#scariphatis">Графіто.</rs></seg>
                                 <seg xml:lang="en">Graffito.</seg>
                                 <height unit="cm"/>
                             </handNote>
@@ -66,10 +74,12 @@
                     <history>
                         <origin>
                             <origPlace ref="origPlace.xml#p066"/>
-                            <seg xml:lang="ru">Борисфен.</seg><seg xml:lang="uk"/>
+                            <seg xml:lang="ru">Борисфен.</seg>
+                            <seg xml:lang="uk"/>
                             <seg xml:lang="en">Borysthenes.</seg>
                             <origDate notBefore="0001" notAfter="0001" evidence="Датировка_керамики">
-                                <seg xml:lang="ru"/><seg xml:lang="uk"/>
+                                <seg xml:lang="ru"/>
+                                <seg xml:lang="uk">575–550 рр. до н. е.</seg>
                                 <seg xml:lang="en">575-550 B.C.E.</seg>
                             </origDate>
                         </origin>
@@ -81,7 +91,14 @@
                                 <rs type="context">Участок северо-западный, A, квадрат 109, яма 46, полуземлянка XX, дно. 
                                     В землянке - расписная керамика 1 пол.-середины 6 века. В заполнении ямы 46 преобладают обломки керам. 
                                     тары включая три амфоры 1ой пол. 6 века.</rs>
-                            </seg><seg xml:lang="uk"><placeName type="ancientFindspot" ref="findspot.xml#berezan"/><rs type="circumstances"/><rs type="context"/></seg>
+                            </seg>
+                            <seg xml:lang="uk">
+                                <placeName type="ancientFindspot" ref="findspot.xml#berezan">Березань.</placeName>
+                                <rs type="circumstances">Знайдено 1976 р., під час розкопок Л.В. Копєйкіної.</rs>
+                                <rs type="context">Ділянка північно-західна, А, квадрат 109, яма 46, напівземлянка ХХ, дно.
+                                    У напівземлянці — розписна кераміка І пол. – середини VI ст.
+                                    У заповненні ями 46 переважають уламки керамічного посуду, зокрема три амфори І пол. VI ст.</rs>
+                            </seg>
                             <seg xml:lang="en">
                                 <placeName type="ancientFindspot">Berezan.</placeName>
                                 <rs type="circumstances">Found in 1976, excavations of L.V. Kopeykina.</rs>
@@ -91,11 +108,13 @@
                             </seg>
                         </provenance>
                         <provenance type="observed">
-                            <seg xml:lang="ru">Санкт-Петербург, Россия.</seg><seg xml:lang="uk"/>
+                            <seg xml:lang="ru">Санкт-Петербург, Россия.</seg>
+                            <seg xml:lang="uk">Санкт-Петербург, Росія.</seg>
                             <tei:seg xmlns:tei="http://www.tei-c.org/ns/1.0" xml:lang="en">Saint Petersburg, Russian Federation.</tei:seg>
                         </provenance>
                         <provenance type="observed" subtype="autopsy">
-                            <seg xml:lang="ru">Non vidi.</seg><seg xml:lang="uk"/>
+                            <seg xml:lang="ru">Non vidi.</seg>
+                            <seg xml:lang="uk">Non vidi.</seg>
                             <seg xml:lang="en">Non vidi.</seg>
                         </provenance>
                     </history>

@@ -132,13 +132,13 @@
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, 'toc')">
-          <xsl:text>no</xsl:text>
+          <xsl:text>yes</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, '1.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, '2.')">
-          <xsl:text>no</xsl:text>
+          <xsl:text>yes</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, '3.')">
           <xsl:text>no</xsl:text>
@@ -153,7 +153,7 @@
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, 'corpora/olbia')">
-          <xsl:text>no</xsl:text>
+          <xsl:text>yes</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, 'corpora/chersonesos')">
           <xsl:text>no</xsl:text>
