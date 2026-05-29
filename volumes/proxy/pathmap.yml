@@ -4,12 +4,12 @@ paths:
     maptype: "proxy"
     target: "http://tomcat:8080/"
 
-#  - source: "/admin/"
-#    maptype: "proxy"
-#    target: "http://tomcat:8080/admin/"
-#    authgroups:
-#      - "kdl-staff"
-#      - "iospe"
+  - source: "/admin/"
+    maptype: "proxy"
+    target: "http://tomcat:8080/admin/"
+    authgroups:
+      - "kdl-staff"
+      - "iospe"
 
   - source: "/iiif/"
     maptype: "proxy"
