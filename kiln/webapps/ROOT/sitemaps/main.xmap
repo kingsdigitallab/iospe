@@ -96,6 +96,28 @@
           </map:transform>
           <map:serialize type="xhtml"/>
       </map:match>
+      
+      <map:match pattern="2.1.2/toc.html">
+          <map:aggregate element="aggregation" label="content">
+              <map:part src="cocoon://_internal/menu/main.xml?url=2.1.2/toc.html"/>
+              <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+              <map:part element="toc"
+                  src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:2.1.2&amp;fl=pe-number,tei-id,sortable-id,file,origin-ref,origin-en,origDate-en,inscription-title-en,inscription-has-date&amp;rows=999"/>
+          </map:aggregate>
+          <!-- TESTING -->
+          <!--<map:serialize type="xml"/>-->
+          <!-- END TESTING -->
+          <map:transform src="cocoon://_internal/template/tocs-volumes.xsl">
+              <map:parameter name="url" value="2.1.2/toc.html"/>
+              <map:parameter name="lang" value="en"/>
+              <map:parameter name="toc" value="volumes"/>
+              <map:parameter name="volNum" value="2"/>
+          </map:transform>
+          <map:transform type="i18n">
+              <map:parameter name="locale" value="en"/>
+          </map:transform>
+          <map:serialize type="xhtml"/>
+      </map:match>
 
       <map:match pattern="3/toc.html">
           <map:aggregate element="aggregation" label="content">
@@ -155,6 +177,29 @@
               <map:parameter name="url" value="1/toc-{1}.html"/>
               <map:parameter name="lang" value="{1}"/>
               <map:parameter name="volNum" value="1"/>
+          </map:transform>
+          <map:transform type="i18n">
+              <map:parameter name="locale" value="{1}"/>
+          </map:transform>
+          <map:serialize type="xhtml"/>
+      </map:match>
+      
+      
+      <map:match pattern="2.1.1/toc-*.html">
+          <map:aggregate element="aggregation" label="content">
+              <map:part src="cocoon://_internal/menu/main.{1}.xml?url=2.1.1/toc-{1}.html"/>
+              <map:part src="../content/xml/tei/alists/origPlace.xml" element="AL"/>
+              <map:part element="toc"
+                  src="cocoon://_internal/solr/query/q=dt:inscription&amp;fq=volume:2.1.1&amp;fl=pe-number,tei-id,sortable-id,file,origin-ref,origin-{1},origDate-{1},inscription-title-{1},inscription-has-date&amp;rows=999"/>
+          </map:aggregate>
+          <!-- TESTING -->
+          <!--<map:serialize type="xml"/>-->
+          <!-- END TESTING -->
+          <map:transform src="cocoon://_internal/template/tocs-volumes.xsl">
+              <map:parameter name="url" value="2.1.1/toc-{1}.html"/>
+              <map:parameter name="lang" value="{1}"/>
+              <map:parameter name="toc" value="volumes"/>
+              <map:parameter name="volNum" value="2"/>
           </map:transform>
           <map:transform type="i18n">
               <map:parameter name="locale" value="{1}"/>
