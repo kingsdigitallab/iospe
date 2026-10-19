@@ -73,7 +73,8 @@
                    
                    <xsl:text> </xsl:text>
                    
-                <xsl:choose>
+                <!-- ORIGINAL TEMPLATE CODE --> 
+                    <!--<xsl:choose>
                     <xsl:when
                         test="translate(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
                         <xsl:text>[</xsl:text>
@@ -84,7 +85,40 @@
                         <xsl:value-of
                             select="$seq/node()/doc[str[@name='tei-id']=$number]/str[@name=concat('inscription-title-', $lang)]"/>
                     </xsl:otherwise>
-                </xsl:choose>
+                </xsl:choose>-->
+                   
+                <!-- MODIFIED CODE PUT IN BY PC ON 19 OCT 2026 TO ACCOUNT FOR INSTANCES WHERE THE inscription-title-* VALUE IS IN A STR INSIDE AN ARR -->   
+                   <xsl:if test="$seq/node()/doc[str[@name='tei-id']=$number][child::arr[contains(@name, 'inscription-title-')]]">
+                       <xsl:choose>
+                           <xsl:when
+                               test="translate(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/arr[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
+                               <xsl:text>[</xsl:text>
+                               <i18n:text>no title</i18n:text>
+                               <xsl:text>]</xsl:text>
+                           </xsl:when>
+                           <xsl:otherwise>
+                               <xsl:value-of
+                                   select="$seq/node()/doc[str[@name='tei-id']=$number]/arr[@name=concat('inscription-title-', $lang)]/str"/>
+                           </xsl:otherwise>
+                       </xsl:choose>
+                   </xsl:if>
+                   <xsl:if test="$seq/node()/doc[str[@name='tei-id']=$number][child::str[contains(@name, 'inscription-title-')]]">
+                       <xsl:choose>
+                           <xsl:when
+                               test="translate(normalize-space($seq/node()/doc[str[@name='tei-id']=$number]/str[@name=concat('inscription-title-', $lang)]), ' ', '') = ''">
+                               <xsl:text>[</xsl:text>
+                               <i18n:text>no title</i18n:text>
+                               <xsl:text>]</xsl:text>
+                           </xsl:when>
+                           <xsl:otherwise>
+                               <xsl:value-of
+                                   select="$seq/node()/doc[str[@name='tei-id']=$number]/str[@name=concat('inscription-title-', $lang)]"/>
+                           </xsl:otherwise>
+                       </xsl:choose>
+                   </xsl:if>
+                   
+                   <!-- END OF MODIFIED CODE FROM 19 OCT 2026 -->
+                   
                    <xsl:if test="not($seq/node()/doc[str[@name='tei-id']=$number]/str[@name='inscription-has-date'] = 'yes')">
                        <xsl:choose>
                            <xsl:when
