@@ -21,7 +21,7 @@ services:
     volumes:
       - ../kiln/webapps/ROOT:/usr/local/tomcat/webapps/ROOT
     environment:
-      CATALINA_OPTS: "${CATALINA_OPTS:--Xmx2048m}"
+      CATALINA_OPTS: "${CATALINA_OPTS:--Xmx2048m} -Dfile.encoding=UTF-8"
       VIRTUAL_HOST: *VIRTUAL_HOST
       VIRTUAL_PATH: "/"
       VIRTUAL_PROTO: http
@@ -35,13 +35,8 @@ services:
     volumes:
       - ../volumes/solr-conf:/solr-conf
       - ../volumes/solr:/var/solr
-    command:
-      - /bin/sh
-      - -xc
-      - |
-        chown -R 8983:8983 /var/solr
-        cp /solr-conf/managed-schema /var/solr/data/collection || echo 'Core does not exist, creating...'
-        solr-precreate collection /solr-conf
+      - ./solr/entrypoint.sh:/entrypoint.sh:ro
+    entrypoint: ["/bin/bash", "/entrypoint.sh"]
 
   nginx:
     build:

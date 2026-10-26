@@ -12,6 +12,8 @@
        language contexts in a multilingual site. -->
   <xsl:param name="language" select="''"/>
   <xsl:param name="lang" select="'en'"/>
+  <xsl:param name="volNum" select="''"/>
+  <xsl:param name="inscNum" select="''"/>
 
   <xsl:variable name="kiln:url-lang-suffix">
     <xsl:choose>
@@ -107,10 +109,13 @@
       CHOICE DOESN'T APPEAR IN CERTAIN VOLUME 2 CONTEXTS. IT CAN BE REMOVED LATER -->
     <xsl:variable name="include_ru_lang_choice">
       <xsl:choose>
-        <xsl:when test="contains($url_base, '2.')">
+        <xsl:when test="contains($url_base, 'corpora/olbia')">
           <xsl:text>no</xsl:text>
         </xsl:when>
-        <xsl:when test="contains($url_base, 'corpora/olbia')">
+        <xsl:when test="$volNum = '2'">
+          <xsl:text>no</xsl:text>
+        </xsl:when>
+        <xsl:when test="starts-with($inscNum, '2.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:otherwise>
@@ -131,19 +136,22 @@
         <xsl:when test="(contains($url_base, 'indices') and not(contains($url_base, 'index')))">
           <xsl:text>no</xsl:text>
         </xsl:when>
-        <xsl:when test="contains($url_base, 'toc')">
+        <xsl:when test="$volNum = '2'">
+          <xsl:text>yes</xsl:text>
+        </xsl:when>
+        <xsl:when test="starts-with($inscNum, '1.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
-        <xsl:when test="contains($url_base, '1.')">
+        <xsl:when test="starts-with($inscNum, '2.')">
+          <xsl:text>yes</xsl:text>
+        </xsl:when>
+        <xsl:when test="starts-with($inscNum, '3.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
-        <xsl:when test="contains($url_base, '2.')">
+        <xsl:when test="starts-with($inscNum, '4.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
-        <xsl:when test="contains($url_base, '3.')">
-          <xsl:text>no</xsl:text>
-        </xsl:when>
-        <xsl:when test="contains($url_base, '5.')">
+        <xsl:when test="starts-with($inscNum, '5.')">
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, 'corpus/maps')">
@@ -153,7 +161,7 @@
           <xsl:text>no</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, 'corpora/olbia')">
-          <xsl:text>no</xsl:text>
+          <xsl:text>yes</xsl:text>
         </xsl:when>
         <xsl:when test="contains($url_base, 'corpora/chersonesos')">
           <xsl:text>no</xsl:text>

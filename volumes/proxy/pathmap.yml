@@ -11,6 +11,12 @@ paths:
       - "kdl-staff"
       - "iospe"
 
+  - source: "/solr/"
+    maptype: "proxy"
+    target: "http://solr:8983/"
+    authgroups:
+      - "kdl-staff"
+
   - source: "/iiif/"
     maptype: "proxy"
     target: "http://cantaloupe:8182/iiif/"
