@@ -37,6 +37,8 @@ services:
       - ../volumes/solr:/var/solr
       - ./solr/entrypoint.sh:/entrypoint.sh:ro
     entrypoint: ["/bin/bash", "/entrypoint.sh"]
+    environment:
+      SOLR_OPTS: "-XX:-UseBASE64Intrinsics -XX:UseAVX=2"
 
   nginx:
     build:
@@ -62,6 +64,7 @@ services:
     volumes:
       - ../volumes/images:/images:ro
     environment:
+      CANTALOUPE_JAVA_OPTS: "-XX:-UseBASE64Intrinsics -XX:UseAVX=2"
       CANTALOUPE_CACHE_SERVER_DERIVATIVE_ENABLED: true
       CANTALOUPE_CACHE_SERVER_DERIVATIVE: FilesystemCache
       CANTALOUPE_FILESYSTEMSOURCE_BASICLOOKUPSTRATEGY_PATH_PREFIX: "/images/"
